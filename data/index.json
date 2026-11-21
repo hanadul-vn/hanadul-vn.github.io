@@ -99,6 +99,38 @@
           "ko": "날씨",
           "summary": "-고 · 부터~까지 · -(으)ㄹ 거예요 · bất quy tắc ㅂ",
           "icon": "🌤️"
+        },
+        {
+          "id": "sc1-12",
+          "no": "12",
+          "title": "Điện thoại",
+          "ko": "전화",
+          "summary": "에게·한테·께 · -지만 · -(으)려고 하다",
+          "icon": "📞"
+        },
+        {
+          "id": "sc1-13",
+          "no": "13",
+          "title": "Sinh nhật",
+          "ko": "생일",
+          "summary": "-아/어서 · -(으)ㄹ까요? · 못",
+          "icon": "🎂"
+        },
+        {
+          "id": "sc1-14",
+          "no": "14",
+          "title": "Sở thích",
+          "ko": "취미",
+          "summary": "-(으)ㄹ 수 있다/없다 · -기/-는 것 · bất quy tắc ㄷ",
+          "icon": "🎨"
+        },
+        {
+          "id": "sc1-15",
+          "no": "15",
+          "title": "Giao thông",
+          "ko": "교통",
+          "summary": "에서~까지 · (으)로 · -(으)러 가다",
+          "icon": "🚇"
         }
       ],
       "subtitle": "Làm quen chữ Hangeul và những câu giao tiếp đầu tiên"
