@@ -90,13 +90,7 @@
     {
       "pattern": "Số Hán Hàn",
       "title": "일, 이, 삼… dùng cho ngày tháng, số điện thoại, tầng, phòng",
-      "note": [
-        "1–10: 일, 이, 삼, 사, 오, 육, 칠, 팔, 구, 십. Số lớn ghép như tiếng Việt: 11 = 십일, 20 = 이십, 35 = 삼십오.",
-        "100 = 백, 1.000 = 천, 10.000 = 만. Không nói 일백, 일천, 일만.",
-        "Dùng cho năm (년), tháng (월), ngày (일), số điện thoại, tầng (층), số phòng (호), tiền.",
-        "Hai tháng đọc khác: tháng 6 là 유월 (không phải 육월), tháng 10 là 시월 (không phải 십월).",
-        "Số điện thoại đọc từng số; dấu gạch ngang thường đọc là 에. Số 0 đọc là 공."
-      ],
+      "note": ["1–10: 일, 이, 삼, 사, 오, 육, 칠, 팔, 구, 십. Số lớn ghép như tiếng Việt: 11 = 십일, 20 = 이십, 35 = 삼십오.", "100 = 백, 1.000 = 천, 10.000 = 만. Không nói 일백, 일천, 일만.", "Dùng cho năm (년), tháng (월), ngày (일), số điện thoại, tầng (층), số phòng (호), tiền.", "Hai tháng đọc khác: tháng 6 là 유월 (không phải 육월), tháng 10 là 시월 (không phải 십월).", "Số điện thoại đọc từng số; dấu gạch ngang thường đọc là 에. Số 0 đọc là 공."],
       "examples": [
         ["제 생일은 오월 구 일입니다.", "Sinh nhật tôi là ngày 9 tháng 5."],
         ["교실은 삼 층에 있습니다.", "Lớp học ở tầng 3."],
@@ -132,16 +126,18 @@
           "q": "Ngày 14 tháng 2 nói là?",
           "options": ["이월 십사 일", "십사월 이 일", "이월 사십 일", "이 일 십사월"],
           "explain": "Tiếng Hàn đọc tháng trước, ngày sau: 이월 (tháng 2) + 십사 일 (ngày 14)."
+        },
+        {
+          "q": "「공일공에 이삼사오에 육칠팔구」 là số điện thoại nào?",
+          "options": ["010-2345-6789", "010-2345-6798", "100-2345-6789", "010-3245-6789"],
+          "explain": "공 = 0, 에 đọc thay dấu gạch ngang; đọc lần lượt từng số."
         }
       ]
     },
     {
       "pattern": "N와/과",
       "title": "và (nối hai danh từ)",
-      "note": [
-        "Nối hai danh từ, nghĩa là 'và'. Danh từ trước kết thúc bằng nguyên âm → 와. Có patchim → 과.",
-        "Hay dùng trong văn viết và câu trang trọng."
-      ],
+      "note": ["Nối hai danh từ, nghĩa là 'và'. Danh từ trước kết thúc bằng nguyên âm → 와. Có patchim → 과.", "Hay dùng trong văn viết và câu trang trọng."],
       "examples": [
         ["우유와 빵을 삽니다.", "Tôi mua sữa và bánh mì."],
         ["토요일과 일요일은 주말입니다.", "Thứ bảy và chủ nhật là cuối tuần."],
@@ -172,16 +168,18 @@
           "q": "Câu nào viết đúng?",
           "options": ["시험과 숙제가 많습니다.", "시험와 숙제가 많습니다.", "시험과 숙제과 많습니다.", "시험와 숙제와 많습니다."],
           "explain": "시험 có patchim → 과. Danh từ cuối nhận tiểu từ chủ ngữ 가, không nhận 와/과."
+        },
+        {
+          "q": "「책과 공책이 있습니다.」 nghĩa là gì?",
+          "options": ["Có sách và vở.", "Có sách của vở.", "Sách ở trong vở.", "Không có sách và vở."],
+          "explain": "과 nối hai danh từ = và."
         }
       ]
     },
     {
       "pattern": "N에 (thời gian)",
       "title": "vào lúc, vào ngày",
-      "note": [
-        "Gắn sau danh từ chỉ thời gian để nói việc xảy ra khi nào: 월요일에, 오월 오 일에, 주말에.",
-        "Không dùng 에 sau 그저께, 어제, 오늘, 내일, 모레, 지금, 언제."
-      ],
+      "note": ["Gắn sau danh từ chỉ thời gian để nói việc xảy ra khi nào: 월요일에, 오월 오 일에, 주말에.", "Không dùng 에 sau 그저께, 어제, 오늘, 내일, 모레, 지금, 언제."],
       "examples": [
         ["토요일에 친구를 만납니다.", "Thứ bảy tôi gặp bạn."],
         ["삼월 이 일에 학교에 갑니다.", "Ngày 2 tháng 3 tôi đến trường."],
@@ -212,8 +210,106 @@
           "q": "Chỗ nào KHÔNG cần 에?",
           "options": ["오늘 ___ 공부합니다.", "금요일 ___ 공부합니다.", "삼월 ___ 공부합니다.", "주말 ___ 공부합니다."],
           "explain": "오늘 không dùng 에; các từ còn lại đều cần 에."
+        },
+        {
+          "q": "\"Tôi gặp bạn vào thứ bảy.\" nói thế nào?",
+          "options": ["토요일에 친구를 만납니다.", "토요일에서 친구를 만납니다.", "토요일을 친구를 만납니다.", "토요일 친구에 만납니다."],
+          "explain": "Thời gian + 에: 토요일에."
         }
       ]
     }
-  ]
+  ],
+  "usage": [
+    {
+      "q": "____은 토요일과 일요일입니다.",
+      "options": ["주말", "평일", "방학", "명절"],
+      "explain": "주말 = cuối tuần (thứ bảy và chủ nhật)."
+    },
+    {
+      "q": "오늘은 수요일입니다. 내일은 ____입니다.",
+      "options": ["목요일", "화요일", "금요일", "월요일"],
+      "explain": "Sau thứ tư (수요일) là thứ năm (목요일)."
+    },
+    {
+      "q": "오늘은 금요일입니다. 어제는 ____입니다.",
+      "options": ["목요일", "토요일", "수요일", "일요일"],
+      "explain": "어제 = hôm qua → trước thứ sáu là thứ năm."
+    },
+    {
+      "q": "Hôm nay là ngày 15. 모레 là ngày mấy?",
+      "options": ["십칠 일", "십육 일", "십사 일", "십삼 일"],
+      "explain": "모레 = ngày kia (sau 2 ngày) → 17 = 십칠 일."
+    },
+    {
+      "q": "십이월 이십오 일은 ____입니다.",
+      "options": ["크리스마스", "설날", "한글날", "주말"],
+      "explain": "Ngày 25/12 là Giáng sinh (크리스마스)."
+    },
+    {
+      "q": "사무실은 오 ____에 있습니다. (Văn phòng ở tầng 5.)",
+      "options": ["층", "호", "월", "일"],
+      "explain": "층 = tầng; 호 là số phòng."
+    },
+    {
+      "q": "작년 → 올해 → ____",
+      "options": ["내년", "다음 달", "지난주", "모레"],
+      "explain": "작년 (năm ngoái), 올해 (năm nay), 내년 (năm sau)."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "오늘은 시월 구 일입니다.",
+      "options": ["Ngày 9 tháng 10", "Ngày 10 tháng 9", "Ngày 9 tháng 6", "Ngày 6 tháng 9"],
+      "explain": "시월 = tháng 10, 구 일 = ngày 9.",
+      "q": "Hôm nay là ngày mấy?"
+    },
+    {
+      "listen": "가: 생일이 언제입니까? 나: 삼월 이십일 일입니다.",
+      "options": ["Ngày 21 tháng 3", "Ngày 12 tháng 3", "Ngày 20 tháng 3", "Ngày 21 tháng 4"],
+      "explain": "삼월 = tháng 3, 이십일 일 = ngày 21.",
+      "q": "Sinh nhật là ngày nào?"
+    },
+    {
+      "listen": "토요일과 일요일에 아르바이트를 합니다.",
+      "options": ["Tôi làm thêm vào thứ bảy và chủ nhật.", "Tôi chỉ làm thêm vào thứ bảy.", "Thứ bảy và chủ nhật tôi nghỉ.", "Tôi làm thêm vào ngày thường."],
+      "explain": "토요일과 일요일에 = vào thứ bảy và chủ nhật; 아르바이트 = làm thêm."
+    },
+    {
+      "listen": "가: 시험이 언제입니까? 나: 다음 주 월요일입니다.",
+      "options": ["Thứ hai tuần sau", "Thứ hai tuần này", "Thứ hai tuần trước", "Chủ nhật tuần sau"],
+      "explain": "다음 주 = tuần sau, 월요일 = thứ hai.",
+      "q": "Kỳ thi vào lúc nào?"
+    },
+    {
+      "listen": "제 방은 오백삼 호입니다.",
+      "options": ["Phòng 503", "Phòng 530", "Phòng 305", "Phòng 350"],
+      "explain": "오백삼 = 500 + 3 = 503.",
+      "q": "Phòng của người nói là phòng số mấy?"
+    }
+  ],
+  "reading": {
+    "passage": "다음 주 토요일은 제 생일입니다. 저는 토요일에 커피숍에서 생일 파티를 합니다. 그리고 일요일에 친구와 산에 갑니다. 등산을 합니다. 산이 아주 아름답습니다.",
+    "passageVi": "Thứ bảy tuần sau là sinh nhật tôi. Thứ bảy tôi tổ chức tiệc sinh nhật ở tiệm cà phê. Rồi chủ nhật tôi đi núi với bạn. Chúng tôi leo núi. Núi rất đẹp.",
+    "questions": [
+      {
+        "q": "Tiệc sinh nhật tổ chức ở đâu, khi nào?",
+        "options": ["Ở tiệm cà phê, thứ bảy tuần sau", "Ở tiệm cà phê, chủ nhật tuần sau", "Ở nhà, thứ bảy tuần này", "Trên núi, thứ bảy tuần sau"],
+        "explain": "다음 주 토요일 … 커피숍에서 생일 파티를 합니다."
+      },
+      {
+        "q": "Chủ nhật người viết làm gì?",
+        "options": ["Leo núi với bạn", "Tổ chức tiệc sinh nhật", "Đi làm thêm", "Đi ngắm biển"],
+        "explain": "일요일에 친구와 산에 갑니다. 등산을 합니다."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3 câu về lịch của bạn: sinh nhật, và tuần này ngày nào làm gì. Dùng số Hán Hàn, 와/과, N에.",
+    "samples": [
+      ["제 생일은 오월 십 일입니다.", "Sinh nhật tôi là ngày 10 tháng 5."],
+      ["월요일과 수요일에 한국어를 공부합니다.", "Thứ hai và thứ tư tôi học tiếng Hàn."],
+      ["토요일에 친구를 만납니다.", "Thứ bảy tôi gặp bạn."]
+    ],
+    "tips": "Không dùng 에 sau 오늘, 내일, 어제 (내일 친구를 만납니다)."
+  }
 }

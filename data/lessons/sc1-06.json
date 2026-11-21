@@ -81,12 +81,7 @@
     {
       "pattern": "-았/었-",
       "title": "đã (thì quá khứ)",
-      "note": [
-        "Gắn vào gốc động từ, tính từ để nói việc đã xảy ra. Nguyên âm cuối của gốc là ㅏ, ㅗ → -았어요. Nguyên âm khác → -었어요. 하다 → 했어요.",
-        "Gốc kết thúc bằng nguyên âm thì gộp như -아/어요: 가다 → 갔어요, 보다 → 봤어요, 마시다 → 마셨어요.",
-        "Danh từ: có patchim → 이었어요 (학생이었어요), không patchim → 였어요 (의사였어요).",
-        "Dạng trang trọng: -았/었습니다 (먹었습니다)."
-      ],
+      "note": ["Gắn vào gốc động từ, tính từ để nói việc đã xảy ra. Nguyên âm cuối của gốc là ㅏ, ㅗ → -았어요. Nguyên âm khác → -었어요. 하다 → 했어요.", "Gốc kết thúc bằng nguyên âm thì gộp như -아/어요: 가다 → 갔어요, 보다 → 봤어요, 마시다 → 마셨어요.", "Danh từ: có patchim → 이었어요 (학생이었어요), không patchim → 였어요 (의사였어요).", "Dạng trang trọng: -았/었습니다 (먹었습니다)."],
       "examples": [
         ["어제 뭐 했어요? — 도서관에서 숙제했어요.", "Hôm qua bạn làm gì? — Tôi làm bài tập ở thư viện."],
         ["지난 주말에 바다에 갔어요.", "Cuối tuần trước tôi đi biển."],
@@ -122,16 +117,18 @@
           "q": "작년에 저는 학생___.",
           "options": ["이었어요", "였어요", "이에요", "있었어요"],
           "explain": "학생 có patchim → 이었어요."
+        },
+        {
+          "q": "「지난 주말에 바다에 갔어요.」 nghĩa là gì?",
+          "options": ["Cuối tuần trước tôi đã đi biển.", "Cuối tuần này tôi đi biển.", "Cuối tuần tôi muốn đi biển.", "Cuối tuần chúng ta đi biển nhé."],
+          "explain": "갔어요 = đã đi (가다 + 았어요)."
         }
       ]
     },
     {
       "pattern": "N하고",
       "title": "và; cùng với",
-      "note": [
-        "Nối hai danh từ, nghĩa là 'và'. Giống 와/과 nhưng dùng nhiều khi nói, và không cần xét patchim.",
-        "Cũng có nghĩa 'cùng với (ai)', hay đi với 같이: 친구하고 같이."
-      ],
+      "note": ["Nối hai danh từ, nghĩa là 'và'. Giống 와/과 nhưng dùng nhiều khi nói, và không cần xét patchim.", "Cũng có nghĩa 'cùng với (ai)', hay đi với 같이: 친구하고 같이."],
       "examples": [
         ["빵하고 우유를 샀어요.", "Tôi đã mua bánh mì và sữa."],
         ["친구하고 같이 영화를 봤어요.", "Tôi đã xem phim cùng bạn."],
@@ -157,17 +154,18 @@
           "q": "Câu nào dùng 하고 với nghĩa 'cùng với'?",
           "options": ["동생하고 같이 수영했어요.", "딸기하고 포도를 샀어요.", "커피하고 차를 마셔요.", "개하고 고양이가 있어요."],
           "explain": "동생하고 같이: làm việc gì đó cùng em. Các câu còn lại 하고 là 'và'."
+        },
+        {
+          "q": "「동생하고 같이 요리했어요.」 nghĩa là gì?",
+          "options": ["Tôi đã nấu ăn cùng em.", "Em tôi nấu ăn một mình.", "Tôi đã nấu cho em ăn.", "Em và tôi muốn nấu ăn."],
+          "explain": "N하고 같이 = cùng với N."
         }
       ]
     },
     {
       "pattern": "-(으)ㅂ시다",
       "title": "chúng ta hãy… (rủ rê)",
-      "note": [
-        "Rủ người ngang hàng hoặc nhỏ hơn cùng làm gì. Chỉ dùng với động từ, hay đi với 같이.",
-        "Gốc kết thúc bằng nguyên âm → -ㅂ시다 (가다 → 갑시다). Có patchim → -읍시다 (먹다 → 먹읍시다).",
-        "Gốc có patchim ㄹ thì bỏ ㄹ rồi thêm -ㅂ시다 (만들다 → 만듭시다)."
-      ],
+      "note": ["Rủ người ngang hàng hoặc nhỏ hơn cùng làm gì. Chỉ dùng với động từ, hay đi với 같이.", "Gốc kết thúc bằng nguyên âm → -ㅂ시다 (가다 → 갑시다). Có patchim → -읍시다 (먹다 → 먹읍시다).", "Gốc có patchim ㄹ thì bỏ ㄹ rồi thêm -ㅂ시다 (만들다 → 만듭시다)."],
       "examples": [
         ["우리 같이 영화를 봅시다.", "Chúng ta cùng xem phim nhé."],
         ["점심을 같이 먹읍시다.", "Cùng ăn trưa nhé."],
@@ -198,8 +196,105 @@
           "q": "Câu nào là lời rủ?",
           "options": ["같이 산책합시다.", "어제 산책했어요.", "저는 산책 안 해요.", "산책을 좋아해요."],
           "explain": "-(으)ㅂ시다 là đuôi rủ rê."
+        },
+        {
+          "q": "\"Chúng ta cùng đi bơi nhé.\" nói thế nào?",
+          "options": ["같이 수영합시다.", "같이 수영했어요.", "저는 수영 안 해요.", "수영을 좋아합니다."],
+          "explain": "Rủ rê dùng -(으)ㅂ시다: 수영합시다."
         }
       ]
     }
-  ]
+  ],
+  "usage": [
+    {
+      "q": "테니스를 ____.",
+      "options": ["쳐요", "춰요", "봐요", "마셔요"],
+      "explain": "치다 dùng cho môn đánh bằng vợt, gậy: 테니스를 쳐요."
+    },
+    {
+      "q": "춤을 ____.",
+      "options": ["춰요", "쳐요", "봐요", "읽어요"],
+      "explain": "춤을 추다 = nhảy múa → 춰요."
+    },
+    {
+      "q": "피곤해요. 집에서 ____.",
+      "options": ["쉬어요", "등산해요", "수영해요", "외식해요"],
+      "explain": "Mệt (피곤하다) thì nghỉ ngơi (쉬다)."
+    },
+    {
+      "q": "____ 영화를 좋아해요? — 액션 영화를 좋아해요.",
+      "options": ["무슨", "어디", "누구", "언제"],
+      "explain": "무슨 + danh từ = … gì, loại gì: 무슨 영화."
+    },
+    {
+      "q": "오늘은 식당에서 ____해요. (Hôm nay ăn ngoài.)",
+      "options": ["외식", "요리", "빨래", "산책"],
+      "explain": "외식하다 = ăn ngoài."
+    },
+    {
+      "q": "생일에 ____을 받았어요.",
+      "options": ["선물", "동물", "나무", "바다"],
+      "explain": "선물 = quà tặng; 받다 = nhận."
+    },
+    {
+      "q": "저는 고양이를 좋아해요. 개는 ____.",
+      "options": ["싫어해요", "좋아해요", "피곤해요", "요리해요"],
+      "explain": "So sánh với 좋아해요 → 싫어해요 = ghét, không thích."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "어제 친구하고 영화를 봤어요.",
+      "options": ["Hôm qua tôi đã xem phim với bạn.", "Hôm qua bạn tôi xem phim một mình.", "Ngày mai tôi xem phim với bạn.", "Hôm qua tôi đọc sách với bạn."],
+      "explain": "어제 = hôm qua; 친구하고 = với bạn; 봤어요 = đã xem."
+    },
+    {
+      "listen": "가: 주말에 뭐 했어요? 나: 집에서 쉬었어요.",
+      "options": ["Nghỉ ở nhà", "Đi leo núi", "Ăn ngoài", "Dọn dẹp nhà"],
+      "explain": "집에서 쉬었어요 = đã nghỉ ở nhà.",
+      "q": "Cuối tuần người thứ hai đã làm gì?"
+    },
+    {
+      "listen": "같이 점심을 먹읍시다.",
+      "options": ["Chúng ta cùng ăn trưa nhé.", "Tôi đã ăn trưa rồi.", "Bạn có ăn trưa không?", "Tôi muốn ăn tối."],
+      "explain": "먹읍시다 = cùng ăn nhé (rủ rê)."
+    },
+    {
+      "listen": "가: 무슨 운동을 좋아해요? 나: 야구하고 축구를 좋아해요.",
+      "options": ["Bóng chày và bóng đá", "Bóng rổ và bóng đá", "Bóng chày và bóng rổ", "Quần vợt và gôn"],
+      "explain": "야구 = bóng chày, 축구 = bóng đá.",
+      "q": "Người thứ hai thích môn gì?"
+    },
+    {
+      "listen": "어제 피곤했어요. 일찍 잤어요.",
+      "options": ["Hôm qua tôi mệt, tôi đã ngủ sớm.", "Hôm qua tôi không mệt, tôi ngủ muộn.", "Hôm nay tôi mệt, tôi muốn ngủ sớm.", "Hôm qua tôi dậy sớm."],
+      "explain": "피곤했어요 = đã mệt; 일찍 잤어요 = đã ngủ sớm."
+    }
+  ],
+  "reading": {
+    "passage": "지난 주말에 친구하고 같이 바다에 갔어요. 토요일에는 바다에서 수영했어요. 저녁에는 식당에서 외식했어요. 갈비하고 김밥을 먹었어요. 일요일에는 낚시를 했어요. 아주 재미있었어요.",
+    "passageVi": "Cuối tuần trước tôi đi biển cùng bạn. Thứ bảy chúng tôi bơi ở biển. Buổi tối chúng tôi ăn ngoài ở nhà hàng. Chúng tôi ăn galbi và gimbap. Chủ nhật chúng tôi câu cá. Rất vui.",
+    "questions": [
+      {
+        "q": "Thứ bảy người viết đã làm gì?",
+        "options": ["Bơi ở biển và ăn ngoài", "Câu cá và ăn ngoài", "Bơi ở biển và câu cá", "Leo núi và bơi"],
+        "explain": "토요일에는 바다에서 수영했어요. 저녁에는 … 외식했어요. Câu cá là chủ nhật."
+      },
+      {
+        "q": "Người viết đã ăn món gì?",
+        "options": ["Galbi và gimbap", "Bulgogi và gimbap", "Galbi và bibimbap", "Mì gói và cá"],
+        "explain": "갈비하고 김밥을 먹었어요."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3 câu kể cuối tuần trước bạn đã làm gì, rồi 1 câu rủ bạn làm gì đó cuối tuần này. Dùng -았/었-, 하고, -(으)ㅂ시다.",
+    "samples": [
+      ["지난 주말에 친구하고 영화를 봤어요.", "Cuối tuần trước tôi xem phim với bạn."],
+      ["일요일에는 집에서 쉬었어요.", "Chủ nhật tôi nghỉ ở nhà."],
+      ["저녁에 불고기를 먹었어요.", "Buổi tối tôi ăn bulgogi."],
+      ["이번 주말에 같이 등산합시다.", "Cuối tuần này mình cùng leo núi nhé."]
+    ],
+    "tips": "Gốc có ㅏ/ㅗ → -았-, còn lại → -었-, 하다 → 했-."
+  }
 }

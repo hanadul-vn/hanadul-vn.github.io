@@ -2,7 +2,7 @@
 
 **Hana Dul** (하나 둘, “một, hai”): học tiếng Hàn từng bước.
 
-Website miễn phí cho người Việt học tiếng Hàn từ sơ cấp: mỗi bài có bảng từ vựng, ghi chú ngữ pháp và bài trắc nghiệm bấm chọn có giải thích. Không cần đăng ký, tiến độ chỉ lưu trên trình duyệt của người học.
+Website miễn phí cho người Việt học tiếng Hàn từ sơ cấp: mỗi bài có bảng từ vựng, ghi chú ngữ pháp, bài trắc nghiệm bấm chọn có giải thích (từ vựng, ngữ pháp, nghe, đọc hiểu), luyện viết có câu mẫu và sổ câu sai để ôn lại. Không cần đăng ký, tiến độ chỉ lưu trên trình duyệt của người học.
 
 ## Chạy thử trên máy
 
@@ -25,6 +25,10 @@ python3 -m http.server 8000
 1. Tạo `data/lessons/<id>.json` theo mẫu các bài có sẵn:
    - `vocab`: các nhóm từ, mỗi từ là `["từ tiếng Hàn", "nghĩa tiếng Việt"]` (phần tử thứ 3 tùy chọn là chữ đem đi đọc to). Câu hỏi từ vựng được sinh tự động, mỗi từ 1 câu, đáp án nhiễu lấy từ các từ khác trong bài.
    - `grammar`: mỗi mẫu có `pattern`, `title`, `note`, `examples` và `questions`. Trong mỗi câu hỏi, **đáp án đúng đặt ở vị trí đầu tiên** của `options`; web tự xáo thứ tự khi hiển thị.
+   - `usage` (tùy chọn): câu "từ trong câu", cùng dạng câu hỏi như ngữ pháp (`q`, `options` với đáp án đúng đứng đầu, `explain`).
+   - `listening` (tùy chọn): câu nghe, có `listen` (câu để máy đọc), `options`, `explain`, và `q` tùy chọn (mặc định "Nghe và chọn nghĩa đúng.").
+   - `reading` (tùy chọn): `passage`, `passageVi` và `questions`.
+   - `writing` (tùy chọn): `prompt`, `samples` (cặp `["câu mẫu", "nghĩa"]`) và `tips`.
 2. Thêm bài vào `data/index.json`.
 3. Chạy `python3 tools/check_data.py`.
 

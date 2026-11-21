@@ -3,8 +3,18 @@
 
   var app = document.getElementById('app');
   var STORE_KEY = 'hanadul:v2';
-  var QUICK_VOCAB = 15;
-  var QUICK_PER_PATTERN = 3;
+  var QUICK_VOCAB = 10;
+  var QUICK_USAGE = 3;
+  var QUICK_PER_PATTERN = 2;
+  var QUICK_LISTEN = 3;
+  var REVIEW_MAX = 20;
+  var SECTIONS = {
+    vocab: { tag: '📚 Từ vựng', cls: '' },
+    usage: { tag: '📝 Từ trong câu', cls: '' },
+    grammar: { tag: '🧩', cls: ' g' },
+    listen: { tag: '🎧 Nghe', cls: ' l' },
+    read: { tag: '📖 Đọc hiểu', cls: ' r' }
+  };
   var cache = {};
   var indexData = null;
 
@@ -54,6 +64,8 @@
     s.xp = s.xp || 0;
     s.days = s.days || [];
     s.last = s.last || null;
+    s.wrong = s.wrong || {};
+    s.writing = s.writing || {};
     return s;
   }
   function writeStore(s) {
@@ -70,6 +82,21 @@
     while (set[key(d)]) { n++; d.setDate(d.getDate() - 1); }
     return n;
   }
+  // Mã ổn định cho mỗi câu hỏi, dùng cho Sổ câu sai.
+  function qid(q) {
+    var str = q.lid + '|' + q.kind + '|' + (q.listen || '') + '|' + q.q + '|' + q.answer;
+    var h = 5381;
+    for (var i = 0; i < str.length; i++) h = ((h * 33) ^ str.charCodeAt(i)) >>> 0;
+    return h.toString(36);
+  }
+  function snapshot(q) {
+    var o = {};
+    ['lid', 'kind', 'pattern', 'q', 'options', 'answer', 'explain', 'say', 'sayAnswer', 'listen', 'passage', 'passageVi'].forEach(function (k) {
+      if (q[k] != null) o[k] = q[k];
+    });
+    return o;
+  }
+  function wrongCount(s) { return Object.keys(s.wrong).length; }
   function starsFor(pct) { return pct >= 90 ? 3 : pct >= 70 ? 2 : pct >= 50 ? 1 : 0; }
   function starsHtml(n) {
     var h = '';
@@ -81,7 +108,8 @@
     var streak = streakOf(s.days);
     document.getElementById('stats').innerHTML =
       '<span class="stat fire" title="Chuỗi ngày học liên tiếp">🔥 ' + streak + '</span>' +
-      '<span class="stat xp" title="Điểm kinh nghiệm">⭐ ' + s.xp + '</span>';
+      '<span class="stat xp" title="Điểm kinh nghiệm">⭐ ' + s.xp + '</span>' +
+      (wrongCount(s) ? '<a class="stat book" href="#/so-cau-sai" title="Sổ câu sai">📒 ' + wrongCount(s) + '</a>' : '');
   }
 
   // ---------- speech ----------
@@ -92,12 +120,12 @@
   }
   if ('speechSynthesis' in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
   var warnedVoice = false;
-  function speak(text) {
+  function speak(text, rate) {
     if (!('speechSynthesis' in window)) { toast('Trình duyệt này không hỗ trợ đọc to.'); return; }
     if (!koVoice) pickVoice();
     speechSynthesis.cancel();
     var u = new SpeechSynthesisUtterance(text);
-    u.lang = 'ko-KR'; u.rate = 0.85;
+    u.lang = 'ko-KR'; u.rate = rate || 0.85;
     if (koVoice) u.voice = koVoice;
     else if (!warnedVoice) { warnedVoice = true; toast('Máy chưa có giọng đọc tiếng Hàn, âm có thể không chuẩn.'); }
     speechSynthesis.speak(u);
@@ -119,6 +147,7 @@
     window.scrollTo(0, 0);
     renderStats();
     if (parts[0] === 'bai' && parts[1]) return renderLesson(parts[1], parts[2] || 'hoc');
+    if (parts[0] === 'so-cau-sai') return renderWrongBook();
     return renderHome();
   }
   window.addEventListener('hashchange', route);
@@ -173,6 +202,12 @@
           '<span><span class="label">Bài gần nhất' + (lp ? ' · đúng ' + lp.best + '%' : '') + '</span><br><span class="title">' + esc(lessonName(lastId.lesson)) + '</span></span><span class="go">→</span></a>';
       }
 
+      var nw = wrongCount(s);
+      if (nw) {
+        h += '<a class="continue book" href="#/so-cau-sai"><span class="emoji">📒</span>' +
+          '<span><span class="label">Sổ câu sai</span><br><span class="title">' + nw + ' câu cần ôn lại</span></span><span class="go">→</span></a>';
+      }
+
       idx.levels.forEach(function (lv) {
         var done = lv.lessons.filter(function (l) { return s.lessons[l.id] && s.lessons[l.id].best >= 70; }).length;
         h += '<div class="section-head" id="lo-trinh"><div><h2>' + esc(lv.name) + '</h2>' + (lv.subtitle ? '<p>' + esc(lv.subtitle) + '</p>' : '') + '</div>' +
@@ -194,7 +229,8 @@
       h += '<div class="features">' +
         feature('🎯', 'var(--primary-soft)', 'Làm từng câu một', 'Chọn đáp án là biết đúng sai ngay, kèm giải thích ngắn gọn. Câu sai được hỏi lại cuối bài.') +
         feature('🔥', 'var(--sun-soft)', 'Giữ chuỗi ngày học', 'Học mỗi ngày để giữ lửa. Điểm, sao và chuỗi ngày được lưu ngay trên máy bạn.') +
-        feature('🔊', 'var(--accent-soft)', 'Nghe phát âm', 'Bấm loa để nghe từ và câu ví dụ bằng giọng đọc tiếng Hàn của máy.') +
+        feature('🎧', 'var(--accent-soft)', 'Nghe, đọc, viết', 'Mỗi bài có phần nghe, đoạn đọc hiểu và bài tập viết câu kèm câu mẫu để tự so.') +
+        feature('📒', 'var(--sky-soft)', 'Sổ câu sai', 'Câu làm sai được lưu lại để ôn. Trả lời đúng 2 lần liên tiếp thì câu rời khỏi sổ.') +
         '</div></div>';
       app.innerHTML = h;
     }).catch(fail);
@@ -252,10 +288,12 @@
       h += '<div class="study-tools"><h2>Ngữ pháp</h2></div>';
       data.grammar.forEach(function (g) { h += grammarNote(g); });
     }
+    if (data.writing) h += '<div class="study-tools"><h2>Luyện viết</h2></div>' + writingBox(data);
     h += '<div class="cta-bar"><div><strong>Sẵn sàng chưa?</strong><br><span class="muted">Làm bài trắc nghiệm để nhận sao và điểm ⭐</span></div>' +
       '<a class="btn" href="#/bai/' + esc(data.id) + '/lam-bai">Làm bài →</a></div></div>';
     app.innerHTML = h;
 
+    bindWriting(data);
     var vocab = document.getElementById('vocab');
     document.getElementById('hideVi').addEventListener('change', function (e) {
       vocab.classList.toggle('hide-vi', e.target.checked);
@@ -282,6 +320,11 @@
   }
 
   // ---------- quiz ----------
+  function mcq(lid, kind, q, extra) {
+    var o = { lid: lid, kind: kind, q: q.q, options: shuffle(q.options), answer: q.options[0], explain: q.explain, say: q.say };
+    if (extra) Object.keys(extra).forEach(function (k) { o[k] = extra[k]; });
+    return o;
+  }
   function buildQuestions(data, quick) {
     var words = [], seen = {};
     data.vocab.forEach(function (g) { g.words.forEach(function (w) { if (!seen[w[0]]) { seen[w[0]] = 1; words.push(w); } }); });
@@ -292,21 +335,37 @@
       var pool = shuffle(words.filter(function (o) { return o[0] !== w[0] && o[1] !== w[1]; })).slice(0, 3);
       var koToVi = data.vocabDirection === 'ko' ? true : (i % 2 === 0);
       if (koToVi) {
-        return { section: 'Từ vựng', q: (p.koToVi || 'Nghĩa của {ko} là gì?').replace('{ko}', w[0]), say: w[2] || w[0],
+        return { lid: data.id, kind: 'vocab', q: (p.koToVi || 'Nghĩa của {ko} là gì?').replace('{ko}', w[0]), say: w[2] || w[0],
           options: shuffle([w[1]].concat(pool.map(function (o) { return o[1]; }))), answer: w[1], explain: w[0] + ' = ' + w[1] };
       }
-      return { section: 'Từ vựng', q: (p.viToKo || '“{vi}” trong tiếng Hàn là gì?').replace('{vi}', w[1]),
+      return { lid: data.id, kind: 'vocab', q: (p.viToKo || '“{vi}” trong tiếng Hàn là gì?').replace('{vi}', w[1]),
         options: shuffle([w[0]].concat(pool.map(function (o) { return o[0]; }))), answer: w[0], explain: w[0] + ' = ' + w[1], sayAnswer: w[2] || w[0] };
     });
+    var usage = shuffle(data.usage || []);
+    if (quick) usage = usage.slice(0, QUICK_USAGE);
+    usage.forEach(function (q) { qs.push(mcq(data.id, 'usage', q, { sayAnswer: q.sayAnswer })); });
     (data.grammar || []).forEach(function (g) {
       var gq = shuffle(g.questions);
       if (quick) gq = gq.slice(0, QUICK_PER_PATTERN);
-      gq.forEach(function (q, i) {
-        qs.push({ section: 'Ngữ pháp', pattern: g.pattern, grammar: i === 0 ? g : null, q: q.q, say: q.say,
-          options: shuffle(q.options), answer: q.options[0], explain: q.explain });
-      });
+      gq.forEach(function (q, i) { qs.push(mcq(data.id, 'grammar', q, { pattern: g.pattern, grammar: i === 0 ? g : null })); });
     });
+    var listen = shuffle(data.listening || []);
+    if (quick) listen = listen.slice(0, QUICK_LISTEN);
+    listen.forEach(function (q) {
+      qs.push(mcq(data.id, 'listen', { q: q.q || 'Nghe và chọn nghĩa đúng.', options: q.options, explain: q.explain }, { listen: q.listen }));
+    });
+    if (data.reading) {
+      data.reading.questions.forEach(function (q) {
+        qs.push(mcq(data.id, 'read', q, { passage: data.reading.passage, passageVi: data.reading.passageVi }));
+      });
+    }
     return qs;
+  }
+  function sectionCounts(data) {
+    var parts = [];
+    if (data.listening && data.listening.length) parts.push('nghe');
+    if (data.reading) parts.push('đọc hiểu');
+    return parts.length ? ' + ' + parts.join(', ') : '';
   }
 
   function renderQuizStart(data, found) {
@@ -320,35 +379,63 @@
       '<h2>Chọn cách làm bài</h2>' +
       (p ? '<p class="muted">Kết quả tốt nhất: <b>' + p.best + '%</b> <span class="stars">' + starsHtml(p.stars) + '</span></p>' : '<p class="muted">Trả lời từng câu, câu sai sẽ được hỏi lại ở cuối.</p>') +
       '<div class="modes">' +
-      '<button type="button" class="mode" data-mode="quick"><span class="tag">Gợi ý</span><b>⚡ Luyện nhanh</b><span>' + quick + ' câu · khoảng 5 phút · từ vựng chọn ngẫu nhiên</span></button>' +
-      '<button type="button" class="mode" data-mode="full"><b>🏆 Ôn đầy đủ</b><span>' + full + ' câu · toàn bộ từ vựng và ngữ pháp của bài</span></button>' +
-      '</div><p class="muted" style="font-size:.88rem;margin:12px 0 0">Mẹo: trên máy tính, bấm phím 1–4 để chọn và Enter để tiếp tục.</p></div></div>';
+      '<button type="button" class="mode" data-mode="quick"><span class="tag">Gợi ý</span><b>⚡ Luyện nhanh</b><span>' + quick + ' câu · khoảng 5–8 phút · mỗi phần lấy vài câu' + sectionCounts(data) + '</span></button>' +
+      '<button type="button" class="mode" data-mode="full"><b>🏆 Ôn đầy đủ</b><span>' + full + ' câu · toàn bộ từ vựng, ngữ pháp' + sectionCounts(data) + '</span></button>' +
+      '</div><p class="muted" style="font-size:.88rem;margin:12px 0 0">Mẹo: trên máy tính, bấm phím 1–4 để chọn và Enter để tiếp tục. Phần nghe cần bật loa.</p></div></div>';
     app.querySelectorAll('.mode').forEach(function (b) {
-      b.addEventListener('click', function () { runQuiz(data, found, b.getAttribute('data-mode') === 'quick'); });
+      b.addEventListener('click', function () {
+        runQuiz({ data: data, found: found, quick: b.getAttribute('data-mode') === 'quick', questions: buildQuestions(data, b.getAttribute('data-mode') === 'quick') });
+      });
     });
   }
 
-  function runQuiz(data, found, quick) {
+  // Ghi kết quả một câu vào Sổ câu sai: sai thì thêm vào sổ, đúng 2 lần liên tiếp thì bỏ ra.
+  function recordAnswer(q, ok) {
+    var s = readStore();
+    var id = qid(q);
+    var e = s.wrong[id];
+    if (!ok) {
+      s.wrong[id] = { item: snapshot(q), n: (e ? e.n : 0) + 1, ok: 0, t: today() };
+    } else if (e) {
+      e.ok++;
+      if (e.ok >= 2) delete s.wrong[id];
+    } else return;
+    writeStore(s);
+  }
+
+  function runQuiz(opt) {
+    var data = opt.data, found = opt.found, quick = opt.quick, review = !!opt.review;
     document.body.classList.add('quiz-mode');
     window.scrollTo(0, 0);
-    var queue = buildQuestions(data, quick);
+    var queue = opt.questions;
     var total = queue.length;
     var firstTry = 0, answeredFirst = 0, combo = 0, bestCombo = 0;
     var wrongList = [];
     var pos = 0;
     var state = null; // null = đang chọn, object = đã trả lời
+    var exitHref = review ? '#/so-cau-sai' : '#/bai/' + esc(data.id);
 
     function progressPct() { return Math.round(answeredFirst / total * 100); }
 
     function show() {
       var q = queue[pos];
       state = null;
-      var h = '<div class="quiz"><div class="qbar"><a class="qclose" href="#/bai/' + esc(data.id) + '" aria-label="Thoát bài">✕</a>' +
+      var sec = SECTIONS[q.kind] || SECTIONS.vocab;
+      var h = '<div class="quiz"><div class="qbar"><a class="qclose" href="' + exitHref + '" aria-label="Thoát bài">✕</a>' +
         '<div class="qprog" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + progressPct() + '"><span style="width:' + progressPct() + '%"></span></div>' +
         '<div class="combo" id="combo">' + (combo >= 2 ? '🔥 ' + combo : '') + '</div></div>' +
-        '<span class="qsection' + (q.section === 'Ngữ pháp' ? ' g' : '') + '">' + (q.section === 'Ngữ pháp' ? '🧩 ' + ko(q.pattern) : '📚 Từ vựng') + '</span>' +
+        '<span class="qsection' + sec.cls + '">' + (q.kind === 'grammar' ? '🧩 ' + ko(q.pattern) : sec.tag) + '</span>' +
         (q.retry ? '<span class="retry-tag">Làm lại câu sai</span>' : '') +
-        '<div class="qcard"><div class="qtext"><span style="flex:1">' + ko(q.q) + '</span>' + (q.say ? speakBtn(q.say) : '') + '</div>' +
+        (review && q.lessonName ? '<span class="retry-tag">' + esc(q.lessonName) + '</span>' : '') +
+        '<div class="qcard">';
+      if (q.kind === 'listen') {
+        h += '<div class="listen-box"><button type="button" class="play" data-say="' + esc(q.listen) + '" aria-label="Nghe lại">🔊</button>' +
+          '<div><b>Bấm loa để nghe</b><br><button type="button" class="slow" data-slow="1">🐢 Nghe chậm</button></div></div>';
+      }
+      if (q.kind === 'read') {
+        h += '<div class="passage ko-block">' + ko(q.passage) + '</div>';
+      }
+      h += '<div class="qtext"><span style="flex:1">' + ko(q.q) + '</span>' + (q.say ? speakBtn(q.say) : '') + '</div>' +
         (q.grammar ? '<details class="hint"><summary>💡 Xem ghi chú ngữ pháp</summary>' + grammarNote(q.grammar) + '</details>' : '') +
         '<div class="opts" role="group" aria-label="Các đáp án">';
       q.options.forEach(function (o, i) {
@@ -356,7 +443,8 @@
       });
       h += '</div></div><div id="fb"></div></div>';
       app.innerHTML = h;
-      if (q.say && q.section === 'Từ vựng') speak(q.say);
+      if (q.kind === 'listen') speak(q.listen);
+      else if (q.say && q.kind === 'vocab') speak(q.say);
     }
 
     function choose(i) {
@@ -373,6 +461,7 @@
       });
       if (!q.retry) {
         answeredFirst++;
+        recordAnswer(q, ok);
         if (ok) firstTry++;
         else { wrongList.push(q); queue.push(Object.assign({}, q, { retry: true, options: shuffle(q.options), grammar: null })); }
       } else if (!ok) {
@@ -385,10 +474,14 @@
       var c = document.getElementById('combo');
       c.textContent = combo >= 2 ? '🔥 ' + combo : '';
       if (combo >= 2) { c.classList.remove('bump'); void c.offsetWidth; c.classList.add('bump'); }
+      renderStats();
       var praise = ['Chính xác!', 'Tuyệt vời!', 'Giỏi lắm!', 'Đúng rồi!', '잘했어요!'];
+      var extra = '';
+      if (q.kind === 'listen') extra = '<span class="transcript">🗣️ <span class="ko">' + esc(q.listen) + '</span> ' + speakBtn(q.listen) + '</span>';
+      if (q.kind === 'read' && q.passageVi) extra = '<details class="trans"><summary>Xem bản dịch đoạn văn</summary>' + ko(q.passageVi) + '</details>';
       var fb = document.getElementById('fb');
       fb.innerHTML = '<div class="feedback ' + (ok ? 'ok' : 'bad') + '" role="alert"><div>' +
-        '<div class="fb-title">' + (ok ? '✅ ' + praise[Math.floor(Math.random() * praise.length)] : '❌ Chưa đúng') + '</div>' +
+        '<div class="fb-title">' + (ok ? '✅ ' + praise[Math.floor(Math.random() * praise.length)] : '❌ Chưa đúng') + '</div>' + extra +
         '<p class="fb-text">' + (ok ? '' : 'Đáp án: <b>' + ko(q.answer) + '</b>. ') + (q.explain ? ko(q.explain) : '') + (q.sayAnswer ? ' ' + speakBtn(q.sayAnswer) : '') + '</p>' +
         '</div><button type="button" class="btn ' + (ok ? 'green' : 'red') + '" id="next">Tiếp tục</button></div>';
       document.getElementById('next').focus({ preventScroll: true });
@@ -407,9 +500,14 @@
       var o = e.target.closest('.opt');
       if (o && !o.disabled) return choose(+o.getAttribute('data-o'));
       if (e.target.closest('#next')) return next();
+      if (e.target.closest('[data-slow]')) {
+        var q = queue[pos];
+        if (q && q.listen) speak(q.listen, 0.6);
+      }
     }
     function onKey(e) {
       if (e.altKey || e.ctrlKey || e.metaKey) return;
+      if (e.target && /^(TEXTAREA|INPUT)$/.test(e.target.tagName)) return;
       if (!state && /^[1-4]$/.test(e.key)) { var b = app.querySelector('.opt[data-o="' + (+e.key - 1) + '"]'); if (b) { e.preventDefault(); choose(+e.key - 1); } }
       else if (state && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); next(); }
     }
@@ -425,42 +523,131 @@
       document.body.classList.remove('quiz-mode');
       var pct = Math.round(firstTry / total * 100);
       var stars = starsFor(pct);
-      var xp = firstTry * 10 + (quick ? 0 : 20) + (stars === 3 ? 30 : 0);
+      var xp = review ? firstTry * 5 : firstTry * 10 + (quick ? 0 : 20) + (stars === 3 ? 30 : 0);
       var s = readStore();
-      var prev = s.lessons[data.id] || { best: 0, stars: 0 };
-      s.lessons[data.id] = { best: Math.max(prev.best, pct), stars: Math.max(prev.stars, stars), last: today() };
+      if (!review) {
+        var prev = s.lessons[data.id] || { best: 0, stars: 0 };
+        s.lessons[data.id] = { best: Math.max(prev.best, pct), stars: Math.max(prev.stars, stars), last: today() };
+        s.last = data.id;
+      }
       s.xp += xp;
       if (s.days.indexOf(today()) < 0) s.days.push(today());
       s.days = s.days.slice(-400);
-      s.last = data.id;
       writeStore(s);
       renderStats();
       var streak = streakOf(s.days);
       var title = stars === 3 ? 'Xuất sắc!' : stars === 2 ? 'Làm tốt lắm!' : stars === 1 ? 'Khá ổn!' : 'Cố lên nhé!';
       var emoji = stars === 3 ? '🏆' : stars === 2 ? '🎉' : stars === 1 ? '👍' : '💪';
-      var next = found && found.next;
-      var h = '<div class="container narrow" style="padding-top:22px"><div class="panel"><div class="big-emoji">' + emoji + '</div>' +
-        '<h2>' + title + '</h2><div class="result-stars">' + starsHtml(stars) + '</div>' +
+      var nextL = !review && found && found.next;
+      var left = wrongCount(s);
+      var h = '<div class="container narrow" style="padding-top:22px"><div class="panel"><div class="big-emoji">' + (review ? '📒' : emoji) + '</div>' +
+        '<h2>' + (review ? 'Ôn xong!' : title) + '</h2>' + (review ? '' : '<div class="result-stars">' + starsHtml(stars) + '</div>') +
         '<p class="muted">Đúng ngay lần đầu ' + firstTry + '/' + total + ' câu' + (bestCombo >= 3 ? ' · chuỗi đúng dài nhất ' + bestCombo : '') + '</p>' +
         '<div class="result-grid"><div class="rbox xp"><b>+' + xp + '</b><span>⭐ XP</span></div>' +
         '<div class="rbox acc"><b>' + pct + '%</b><span>🎯 Chính xác</span></div>' +
         '<div class="rbox fire"><b>' + streak + '</b><span>🔥 Ngày liên tiếp</span></div></div>';
       if (wrongList.length) {
-        h += '<details class="review"' + (wrongList.length <= 5 ? ' open' : '') + '><summary>📝 Ôn lại ' + wrongList.length + ' câu đã sai</summary><ul>';
-        wrongList.forEach(function (q) { h += '<li>' + ko(q.q) + ' → <b>' + ko(q.answer) + '</b></li>'; });
+        h += '<details class="review"' + (wrongList.length <= 5 ? ' open' : '') + '><summary>📝 ' + wrongList.length + ' câu đã sai (đã lưu vào Sổ câu sai)</summary><ul>';
+        wrongList.forEach(function (q) { h += '<li>' + ko(q.kind === 'listen' ? q.listen : q.q) + ' → <b>' + ko(q.answer) + '</b></li>'; });
         h += '</ul></details>';
       }
-      h += '<div class="actions"><a class="btn ghost" href="#/bai/' + esc(data.id) + '">📖 Xem lại bài</a>' +
-        '<button type="button" class="btn ghost" id="again">🔁 Làm lại</button>' +
-        (next ? '<a class="btn" href="#/bai/' + esc(next.id) + '">Bài tiếp theo →</a>' : '<a class="btn" href="#/">Về trang chủ</a>') +
-        '</div></div></div>';
+      if (left) h += '<p class="muted" style="margin-top:14px">📒 Sổ câu sai còn <b>' + left + '</b> câu.</p>';
+      h += '<div class="actions">' + (review
+        ? '<a class="btn ghost" href="#/so-cau-sai">📒 Về sổ câu sai</a><a class="btn" href="#/">Về trang chủ</a>'
+        : '<a class="btn ghost" href="#/bai/' + esc(data.id) + '">📖 Xem lại bài</a>' +
+          '<button type="button" class="btn ghost" id="again">🔁 Làm lại</button>' +
+          (nextL ? '<a class="btn" href="#/bai/' + esc(nextL.id) + '">Bài tiếp theo →</a>' : '<a class="btn" href="#/">Về trang chủ</a>')) +
+        '</div></div>';
+      if (!review && data.writing) h += '<div class="panel write-panel"><h2>✍️ Luyện viết</h2>' + writingBox(data) + '</div>';
+      h += '</div>';
       app.innerHTML = h;
       window.scrollTo(0, 0);
-      document.getElementById('again').addEventListener('click', function () { renderQuizStart(data, found); });
+      if (!review) {
+        document.getElementById('again').addEventListener('click', function () { renderQuizStart(data, found); });
+        bindWriting(data);
+      }
       if (stars >= 2) confetti();
     }
 
     show();
+  }
+
+  // ---------- writing ----------
+  function writingBox(data) {
+    var w = data.writing;
+    var s = readStore();
+    var h = '<div class="writing" id="writing"><p class="w-prompt">' + ko(w.prompt) + '</p>' +
+      '<textarea id="wtext" rows="4" lang="ko" placeholder="Viết câu của bạn ở đây (bàn phím tiếng Hàn)…">' + esc(s.writing[data.id] || '') + '</textarea>' +
+      '<div class="w-actions"><button type="button" class="btn ghost" id="wshow">👀 Xem câu mẫu</button><span class="muted" id="wsaved"></span></div>' +
+      '<div class="w-samples" id="wsamples" hidden><p class="muted">So câu của bạn với câu mẫu: đã dùng đúng mẫu ngữ pháp chưa, tiểu từ và đuôi câu có khớp không?</p><ul class="ex">';
+    w.samples.forEach(function (e) {
+      h += '<li><span class="txt"><span class="ex-ko">' + esc(e[0]) + '</span><br><span class="ex-vi">' + ko(e[1]) + '</span></span>' + speakBtn(e[0]) + '</li>';
+    });
+    return h + '</ul>' + (w.tips ? '<p class="w-tip">💡 ' + ko(w.tips) + '</p>' : '') + '</div></div>';
+  }
+  function bindWriting(data) {
+    var t = document.getElementById('wtext');
+    if (!t) return;
+    var timer;
+    t.addEventListener('input', function () {
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        var s = readStore();
+        s.writing[data.id] = t.value.slice(0, 2000);
+        writeStore(s);
+        document.getElementById('wsaved').textContent = 'Đã lưu trên máy';
+      }, 500);
+    });
+    document.getElementById('wshow').addEventListener('click', function () {
+      var box = document.getElementById('wsamples');
+      box.hidden = !box.hidden;
+      this.textContent = box.hidden ? '👀 Xem câu mẫu' : '🙈 Ẩn câu mẫu';
+    });
+  }
+
+  // ---------- wrong book ----------
+  function renderWrongBook() {
+    document.title = 'Sổ câu sai – Hana Dul';
+    getIndex().then(function (idx) {
+      var s = readStore();
+      var names = {};
+      allLessons(idx).forEach(function (x) { names[x.lesson.id] = lessonName(x.lesson); });
+      var ids = Object.keys(s.wrong);
+      var h = '<div class="container narrow"><div class="lesson-hero"><div class="crumbs"><a href="#/">Trang chủ</a></div>' +
+        '<h1><span class="emoji">📒</span>Sổ câu sai</h1>' +
+        '<p>Câu bạn trả lời sai ở lần đầu được lưu tại đây. Trả lời đúng 2 lần liên tiếp thì câu rời khỏi sổ. Dữ liệu chỉ lưu trên máy này.</p></div>';
+      if (!ids.length) {
+        h += '<div class="panel" style="margin-top:14px"><div class="big-emoji">🎉</div><h2>Sổ đang trống</h2><p class="muted">Làm bài, câu nào sai sẽ hiện ở đây để bạn ôn lại.</p>' +
+          '<div class="actions"><a class="btn" href="#/">Về trang chủ</a></div></div></div>';
+        app.innerHTML = h;
+        return;
+      }
+      var items = ids.map(function (id) { return s.wrong[id]; })
+        .sort(function (a, b) { return (b.n - a.n) || (a.t < b.t ? -1 : 1); });
+      var n = Math.min(REVIEW_MAX, items.length);
+      h += '<div class="panel" style="margin-top:14px"><h2>' + ids.length + ' câu cần ôn</h2><p class="muted">Mỗi lượt ôn tối đa ' + REVIEW_MAX + ' câu, ưu tiên câu sai nhiều lần. Bấm tên bài bên dưới để xem từng câu.</p>' +
+        '<div class="actions"><button type="button" class="btn" id="startReview">Ôn ' + n + ' câu →</button></div></div>';
+      var byLesson = {};
+      items.forEach(function (e) { (byLesson[e.item.lid] = byLesson[e.item.lid] || []).push(e); });
+      Object.keys(byLesson).forEach(function (lid) {
+        h += '<details class="wb-group"><summary class="group-title">' + esc(names[lid] || lid) + ' · ' + byLesson[lid].length + ' câu</summary><ul class="wb-list">';
+        byLesson[lid].forEach(function (e) {
+          var it = e.item;
+          h += '<li><span class="wb-q">' + ko(it.kind === 'listen' ? '🎧 ' + it.listen : it.q) + '</span><span class="wb-a">→ ' + ko(it.answer) + '</span>' +
+            '<span class="wb-n">sai ' + e.n + ' lần' + (e.ok ? ' · đã đúng ' + e.ok + '/2' : '') + '</span></li>';
+        });
+        h += '</ul></details>';
+      });
+      h += '</div>';
+      app.innerHTML = h;
+      document.getElementById('startReview').addEventListener('click', function () {
+        var qs = items.slice(0, n).map(function (e) {
+          var q = Object.assign({}, e.item, { options: shuffle(e.item.options), lessonName: names[e.item.lid] || '' });
+          return q;
+        });
+        runQuiz({ review: true, questions: shuffle(qs) });
+      });
+    }).catch(fail);
   }
 
   function confetti() {

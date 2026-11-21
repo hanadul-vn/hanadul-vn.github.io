@@ -7,40 +7,83 @@
     {
       "group": "Động từ",
       "words": [
-        ["가다", "đi"], ["오다", "đến"], ["자다", "ngủ"], ["먹다", "ăn"],
-        ["마시다", "uống"], ["이야기하다", "nói chuyện"], ["읽다", "đọc"], ["듣다", "nghe"],
-        ["보다", "xem, nhìn"], ["일하다", "làm việc"], ["공부하다", "học"], ["운동하다", "tập thể dục"],
-        ["쉬다", "nghỉ ngơi"], ["만나다", "gặp"], ["사다", "mua"], ["좋아하다", "thích"]
+        ["가다", "đi"],
+        ["오다", "đến"],
+        ["자다", "ngủ"],
+        ["먹다", "ăn"],
+        ["마시다", "uống"],
+        ["이야기하다", "nói chuyện"],
+        ["읽다", "đọc"],
+        ["듣다", "nghe"],
+        ["보다", "xem, nhìn"],
+        ["일하다", "làm việc"],
+        ["공부하다", "học"],
+        ["운동하다", "tập thể dục"],
+        ["쉬다", "nghỉ ngơi"],
+        ["만나다", "gặp"],
+        ["사다", "mua"],
+        ["좋아하다", "thích"]
       ]
     },
     {
       "group": "Tính từ",
       "words": [
-        ["크다", "to, lớn"], ["작다", "nhỏ"], ["많다", "nhiều"], ["적다", "ít"],
-        ["좋다", "tốt"], ["나쁘다", "xấu, tệ"], ["재미있다", "hay, thú vị"], ["재미없다", "không hay, chán"]
+        ["크다", "to, lớn"],
+        ["작다", "nhỏ"],
+        ["많다", "nhiều"],
+        ["적다", "ít"],
+        ["좋다", "tốt"],
+        ["나쁘다", "xấu, tệ"],
+        ["재미있다", "hay, thú vị"],
+        ["재미없다", "không hay, chán"]
       ]
     },
     {
       "group": "Đồ dùng, hoạt động hằng ngày",
       "words": [
-        ["차", "trà"], ["커피", "cà phê"], ["빵", "bánh mì"], ["우유", "sữa"],
-        ["영화", "phim"], ["음악", "âm nhạc"], ["신문", "báo"], ["친구", "bạn bè"]
+        ["차", "trà"],
+        ["커피", "cà phê"],
+        ["빵", "bánh mì"],
+        ["우유", "sữa"],
+        ["영화", "phim"],
+        ["음악", "âm nhạc"],
+        ["신문", "báo"],
+        ["친구", "bạn bè"]
       ]
     },
     {
       "group": "Từ để hỏi",
       "words": [
-        ["무엇", "cái gì"], ["어디", "đâu, ở đâu"], ["누구", "ai"], ["언제", "khi nào"]
+        ["무엇", "cái gì"],
+        ["어디", "đâu, ở đâu"],
+        ["누구", "ai"],
+        ["언제", "khi nào"]
       ]
     },
     {
       "group": "Từ khác trong bài",
       "words": [
-        ["공원", "công viên"], ["시장", "chợ"], ["시내", "trung tâm thành phố"], ["카페", "quán cà phê"],
-        ["헬스클럽", "phòng tập gym"], ["방", "phòng"], ["노래", "bài hát"], ["사과", "quả táo"],
-        ["아이스크림", "kem"], ["옷", "quần áo"], ["여행", "du lịch"], ["이메일", "email"],
-        ["산책하다", "đi dạo"], ["쇼핑하다", "mua sắm"], ["식사하다", "dùng bữa"], ["전화하다", "gọi điện thoại"],
-        ["축구를 하다", "đá bóng"], ["아주", "rất"], ["자주", "thường xuyên"], ["지금", "bây giờ"], ["위", "trên"]
+        ["공원", "công viên"],
+        ["시장", "chợ"],
+        ["시내", "trung tâm thành phố"],
+        ["카페", "quán cà phê"],
+        ["헬스클럽", "phòng tập gym"],
+        ["방", "phòng"],
+        ["노래", "bài hát"],
+        ["사과", "quả táo"],
+        ["아이스크림", "kem"],
+        ["옷", "quần áo"],
+        ["여행", "du lịch"],
+        ["이메일", "email"],
+        ["산책하다", "đi dạo"],
+        ["쇼핑하다", "mua sắm"],
+        ["식사하다", "dùng bữa"],
+        ["전화하다", "gọi điện thoại"],
+        ["축구를 하다", "đá bóng"],
+        ["아주", "rất"],
+        ["자주", "thường xuyên"],
+        ["지금", "bây giờ"],
+        ["위", "trên"]
       ]
     }
   ],
@@ -48,82 +91,256 @@
     {
       "pattern": "-ㅂ니다 / -습니다",
       "title": "đuôi câu trần thuật trang trọng",
-      "note": [
-        "Bỏ 다 ở động từ, tính từ rồi thêm đuôi. Gốc kết thúc bằng nguyên âm → -ㅂ니다 (가다 → 갑니다). Gốc có patchim → -습니다 (먹다 → 먹습니다).",
-        "Gốc có patchim ㄹ thì bỏ ㄹ rồi thêm -ㅂ니다 (만들다 → 만듭니다)."
-      ],
+      "note": ["Bỏ 다 ở động từ, tính từ rồi thêm đuôi. Gốc kết thúc bằng nguyên âm → -ㅂ니다 (가다 → 갑니다). Gốc có patchim → -습니다 (먹다 → 먹습니다).", "Gốc có patchim ㄹ thì bỏ ㄹ rồi thêm -ㅂ니다 (만들다 → 만듭니다)."],
       "examples": [
         ["저는 학교에 갑니다.", "Tôi đi đến trường."],
         ["빵을 먹습니다.", "Tôi ăn bánh mì."],
         ["영화가 재미있습니다.", "Phim hay."]
       ],
       "questions": [
-        { "q": "자다 → ?", "options": ["잡니다", "자습니다", "잡습니다", "자니다"], "explain": "자 kết thúc bằng nguyên âm → thêm ㅂ니다: 잡니다." },
-        { "q": "읽다 → ?", "options": ["읽습니다", "읽ㅂ니다", "읽니다", "익습니다"], "explain": "읽 có patchim → 읽습니다." },
-        { "q": "저는 커피를 ___. (마시다)", "options": ["마십니다", "마시습니다", "마시다", "마십니까"], "explain": "마시 kết thúc bằng nguyên âm → 마십니다." },
-        { "q": "가방이 아주 ___. (작다)", "options": ["작습니다", "작ㅂ니다", "작니다", "잡니다"], "explain": "작 có patchim ㄱ → 작습니다." },
-        { "q": "Câu nào viết đúng?", "options": ["친구를 만납니다.", "친구를 만나습니다.", "친구를 만납습니다.", "친구를 만나니다."], "explain": "만나다 → 만나 + ㅂ니다 = 만납니다." }
+        {
+          "q": "자다 → ?",
+          "options": ["잡니다", "자습니다", "잡습니다", "자니다"],
+          "explain": "자 kết thúc bằng nguyên âm → thêm ㅂ니다: 잡니다."
+        },
+        {
+          "q": "읽다 → ?",
+          "options": ["읽습니다", "읽ㅂ니다", "읽니다", "익습니다"],
+          "explain": "읽 có patchim → 읽습니다."
+        },
+        {
+          "q": "저는 커피를 ___. (마시다)",
+          "options": ["마십니다", "마시습니다", "마시다", "마십니까"],
+          "explain": "마시 kết thúc bằng nguyên âm → 마십니다."
+        },
+        {
+          "q": "가방이 아주 ___. (작다)",
+          "options": ["작습니다", "작ㅂ니다", "작니다", "잡니다"],
+          "explain": "작 có patchim ㄱ → 작습니다."
+        },
+        {
+          "q": "Câu nào viết đúng?",
+          "options": ["친구를 만납니다.", "친구를 만나습니다.", "친구를 만납습니다.", "친구를 만나니다."],
+          "explain": "만나다 → 만나 + ㅂ니다 = 만납니다."
+        },
+        {
+          "q": "「저는 빵을 먹습니다.」 nghĩa là gì?",
+          "options": ["Tôi ăn bánh mì.", "Tôi mua bánh mì.", "Bạn ăn bánh mì không?", "Tôi không ăn bánh mì."],
+          "explain": "먹다 = ăn; -습니다 là câu trần thuật."
+        }
       ]
     },
     {
       "pattern": "-ㅂ니까? / -습니까?",
       "title": "đuôi câu hỏi trang trọng",
-      "note": [
-        "Cách chia giống -ㅂ니다/-습니다, chỉ đổi 다 cuối thành 까?: 갑니까?, 먹습니까?",
-        "Trả lời bằng đuôi -ㅂ니다/-습니다."
-      ],
+      "note": ["Cách chia giống -ㅂ니다/-습니다, chỉ đổi 다 cuối thành 까?: 갑니까?, 먹습니까?", "Trả lời bằng đuôi -ㅂ니다/-습니다."],
       "examples": [
         ["무엇을 합니까?", "Bạn làm gì?"],
         ["어디에서 공부합니까?", "Bạn học ở đâu?"],
         ["음악을 좋아합니까?", "Bạn có thích âm nhạc không?"]
       ],
       "questions": [
-        { "q": "보다 → (câu hỏi)", "options": ["봅니까?", "보습니까?", "봅니다", "보니까?"], "explain": "보 kết thúc bằng nguyên âm → 봅니까?" },
-        { "q": "A: 무엇을 ___? (먹다)  B: 사과를 먹습니다.", "options": ["먹습니까", "먹ㅂ니까", "먹습니다", "먹니까"], "explain": "먹 có patchim → 먹습니까?" },
-        { "q": "A: 지금 공부합니까?  B: ___", "options": ["네, 공부합니다.", "네, 공부합니까?", "네, 공부입니다.", "네, 공부합습니다."], "explain": "Trả lời đồng ý bằng đuôi trần thuật -ㅂ니다." },
-        { "q": "“Bạn có nghe nhạc không?”", "options": ["음악을 듣습니까?", "음악을 듣습니다.", "음악이 듭니까?", "음악을 들습니까?"], "explain": "듣다 có patchim ㄷ → 듣습니까?" },
-        { "q": "Câu nào là câu hỏi?", "options": ["어디에 갑니까?", "시장에 갑니다.", "친구를 만납니다.", "옷을 삽니다."], "explain": "Đuôi -ㅂ니까? là đuôi câu hỏi." }
+        {
+          "q": "보다 → (câu hỏi)",
+          "options": ["봅니까?", "보습니까?", "봅니다", "보니까?"],
+          "explain": "보 kết thúc bằng nguyên âm → 봅니까?"
+        },
+        {
+          "q": "A: 무엇을 ___? (먹다)  B: 사과를 먹습니다.",
+          "options": ["먹습니까", "먹ㅂ니까", "먹습니다", "먹니까"],
+          "explain": "먹 có patchim → 먹습니까?"
+        },
+        {
+          "q": "A: 지금 공부합니까?  B: ___",
+          "options": ["네, 공부합니다.", "네, 공부합니까?", "네, 공부입니다.", "네, 공부합습니다."],
+          "explain": "Trả lời đồng ý bằng đuôi trần thuật -ㅂ니다."
+        },
+        {
+          "q": "“Bạn có nghe nhạc không?”",
+          "options": ["음악을 듣습니까?", "음악을 듣습니다.", "음악이 듭니까?", "음악을 들습니까?"],
+          "explain": "듣다 có patchim ㄷ → 듣습니까?"
+        },
+        {
+          "q": "Câu nào là câu hỏi?",
+          "options": ["어디에 갑니까?", "시장에 갑니다.", "친구를 만납니다.", "옷을 삽니다."],
+          "explain": "Đuôi -ㅂ니까? là đuôi câu hỏi."
+        },
+        {
+          "q": "\"Bạn đọc báo không?\" nói thế nào?",
+          "options": ["신문을 읽습니까?", "신문을 읽습니다.", "신문이 읽습니까?", "신문을 읽읍니까?"],
+          "explain": "읽 có patchim → -습니까?; tân ngữ 신문 + 을."
+        }
       ]
     },
     {
       "pattern": "N을/를",
       "title": "trợ từ tân ngữ",
-      "note": [
-        "Gắn sau danh từ là đối tượng của hành động (ăn cái gì, xem cái gì…). Có patchim dùng 을, không có patchim dùng 를.",
-        "Ví dụ: 빵을 먹습니다, 커피를 마십니다."
-      ],
+      "note": ["Gắn sau danh từ là đối tượng của hành động (ăn cái gì, xem cái gì…). Có patchim dùng 을, không có patchim dùng 를.", "Ví dụ: 빵을 먹습니다, 커피를 마십니다."],
       "examples": [
         ["신문을 읽습니다.", "Tôi đọc báo."],
         ["영화를 봅니다.", "Tôi xem phim."],
         ["무엇을 좋아합니까?", "Bạn thích gì?"]
       ],
       "questions": [
-        { "q": "우유___ 마십니다.", "options": ["를", "을", "가", "에서"], "explain": "우유 không có patchim → 를." },
-        { "q": "음악___ 듣습니다.", "options": ["을", "를", "이", "는"], "explain": "음악 có patchim ㄱ → 을." },
-        { "q": "친구___ 만납니다.", "options": ["를", "을", "에", "가"], "explain": "친구 không có patchim → 를." },
-        { "q": "옷___ 삽니다.", "options": ["을", "를", "이", "에"], "explain": "옷 có patchim ㅅ → 을." },
-        { "q": "Cụm nào viết đúng?", "options": ["빵을 먹습니다", "빵를 먹습니다", "커피을 마십니다", "영화을 봅니다"], "explain": "빵 có patchim → 을. 커피, 영화 không có patchim phải dùng 를." }
+        {
+          "q": "우유___ 마십니다.",
+          "options": ["를", "을", "가", "에서"],
+          "explain": "우유 không có patchim → 를."
+        },
+        {
+          "q": "음악___ 듣습니다.",
+          "options": ["을", "를", "이", "는"],
+          "explain": "음악 có patchim ㄱ → 을."
+        },
+        {
+          "q": "친구___ 만납니다.",
+          "options": ["를", "을", "에", "가"],
+          "explain": "친구 không có patchim → 를."
+        },
+        {
+          "q": "옷___ 삽니다.",
+          "options": ["을", "를", "이", "에"],
+          "explain": "옷 có patchim ㅅ → 을."
+        },
+        {
+          "q": "Cụm nào viết đúng?",
+          "options": ["빵을 먹습니다", "빵를 먹습니다", "커피을 마십니다", "영화을 봅니다"],
+          "explain": "빵 có patchim → 을. 커피, 영화 không có patchim phải dùng 를."
+        }
       ]
     },
     {
       "pattern": "N에서",
       "title": "tại N (nơi diễn ra hành động)",
-      "note": [
-        "Gắn sau danh từ nơi chốn để chỉ hành động xảy ra ở đó: 도서관에서 공부합니다.",
-        "Khác với 에: 에 đi với 있다/없다 và động từ di chuyển (가다, 오다); 에서 đi với các hành động khác."
-      ],
+      "note": ["Gắn sau danh từ nơi chốn để chỉ hành động xảy ra ở đó: 도서관에서 공부합니다.", "Khác với 에: 에 đi với 있다/없다 và động từ di chuyển (가다, 오다); 에서 đi với các hành động khác."],
       "examples": [
         ["카페에서 커피를 마십니다.", "Tôi uống cà phê ở quán cà phê."],
         ["공원에서 산책합니다.", "Tôi đi dạo ở công viên."],
         ["어디에서 일합니까?", "Bạn làm việc ở đâu?"]
       ],
       "questions": [
-        { "q": "도서관___ 책을 읽습니다.", "options": ["에서", "에", "을", "는"], "explain": "Đọc sách là hành động diễn ra tại thư viện → 에서." },
-        { "q": "시장___ 갑니다.", "options": ["에", "에서", "을", "이"], "explain": "가다 là động từ di chuyển đến đâu → dùng 에." },
-        { "q": "헬스클럽___ 운동합니다.", "options": ["에서", "에", "를", "가"], "explain": "Tập thể dục tại phòng gym → 에서." },
-        { "q": "“Tôi ăn ở nhà ăn.”", "options": ["식당에서 먹습니다.", "식당에 먹습니다.", "식당을 먹습니다.", "식당에서 먹습니까?"], "explain": "Hành động ăn diễn ra tại nhà ăn → 식당에서 먹습니다." },
-        { "q": "A: 어디에서 친구를 만납니까?  B: ___", "options": ["카페에서 만납니다.", "카페에 있습니다.", "카페를 만납니다.", "카페가 만납니다."], "explain": "Trả lời nơi diễn ra hành động gặp: 카페에서 만납니다." }
+        {
+          "q": "도서관___ 책을 읽습니다.",
+          "options": ["에서", "에", "을", "는"],
+          "explain": "Đọc sách là hành động diễn ra tại thư viện → 에서."
+        },
+        {
+          "q": "시장___ 갑니다.",
+          "options": ["에", "에서", "을", "이"],
+          "explain": "가다 là động từ di chuyển đến đâu → dùng 에."
+        },
+        {
+          "q": "헬스클럽___ 운동합니다.",
+          "options": ["에서", "에", "를", "가"],
+          "explain": "Tập thể dục tại phòng gym → 에서."
+        },
+        {
+          "q": "“Tôi ăn ở nhà ăn.”",
+          "options": ["식당에서 먹습니다.", "식당에 먹습니다.", "식당을 먹습니다.", "식당에서 먹습니까?"],
+          "explain": "Hành động ăn diễn ra tại nhà ăn → 식당에서 먹습니다."
+        },
+        {
+          "q": "A: 어디에서 친구를 만납니까?  B: ___",
+          "options": ["카페에서 만납니다.", "카페에 있습니다.", "카페를 만납니다.", "카페가 만납니다."],
+          "explain": "Trả lời nơi diễn ra hành động gặp: 카페에서 만납니다."
+        },
+        {
+          "q": "「시내에서 친구를 만납니다.」 nghĩa là gì?",
+          "options": ["Tôi gặp bạn ở trung tâm thành phố.", "Tôi đi trung tâm thành phố.", "Bạn tôi ở trung tâm thành phố.", "Tôi gọi điện cho bạn."],
+          "explain": "에서 chỉ nơi diễn ra hành động gặp."
+        }
       ]
     }
-  ]
+  ],
+  "usage": [
+    {
+      "q": "저는 카페에서 커피를 ____.",
+      "options": ["마십니다", "먹습니다", "읽습니다", "듣습니다"],
+      "explain": "커피 (cà phê) → 마시다 (uống)."
+    },
+    {
+      "q": "도서관에서 신문을 ____.",
+      "options": ["읽습니다", "듣습니다", "마십니다", "만납니다"],
+      "explain": "신문 (báo) → 읽다 (đọc)."
+    },
+    {
+      "q": "공원에서 친구를 ____.",
+      "options": ["만납니다", "마십니다", "읽습니다", "잡니다"],
+      "explain": "친구를 만나다 = gặp bạn."
+    },
+    {
+      "q": "시장에서 사과를 ____.",
+      "options": ["삽니다", "마십니다", "듣습니다", "잡니다"],
+      "explain": "시장 (chợ) + 사다 (mua)."
+    },
+    {
+      "q": "음악을 ____.",
+      "options": ["듣습니다", "읽습니다", "마십니다", "만납니다"],
+      "explain": "음악 (âm nhạc) → 듣다 (nghe)."
+    },
+    {
+      "q": "이 영화는 아주 ____. (Phim này rất hay.)",
+      "options": ["재미있습니다", "재미없습니다", "적습니다", "작습니다"],
+      "explain": "재미있다 = hay, thú vị; 재미없다 là ngược lại."
+    },
+    {
+      "q": "Từ trái nghĩa với 많다 là?",
+      "options": ["적다", "작다", "크다", "나쁘다"],
+      "explain": "많다 (nhiều) ↔ 적다 (ít). 작다 là nhỏ."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "카페에서 커피를 마십니다.",
+      "options": ["Tôi uống cà phê ở quán cà phê.", "Tôi mua cà phê ở chợ.", "Quán cà phê có cà phê.", "Tôi uống trà ở quán cà phê."],
+      "explain": "카페에서 = ở quán cà phê; 마십니다 = uống."
+    },
+    {
+      "listen": "가: 지금 무엇을 합니까? 나: 음악을 듣습니다.",
+      "options": ["Nghe nhạc", "Xem phim", "Đọc báo", "Hát"],
+      "explain": "음악을 듣습니다 = nghe nhạc.",
+      "q": "Người thứ hai đang làm gì?"
+    },
+    {
+      "listen": "가: 어디에서 운동합니까? 나: 공원에서 운동합니다.",
+      "options": ["Công viên", "Phòng tập gym", "Trường học", "Quán cà phê"],
+      "explain": "공원에서 = ở công viên.",
+      "q": "Người thứ hai tập thể dục ở đâu?"
+    },
+    {
+      "listen": "영화가 재미없습니다.",
+      "options": ["Phim không hay.", "Phim rất hay.", "Không có phim.", "Tôi xem phim."],
+      "explain": "재미없다 = không hay, chán."
+    },
+    {
+      "listen": "저는 아이스크림을 좋아합니다.",
+      "options": ["Tôi thích kem.", "Tôi ăn kem.", "Tôi mua kem.", "Tôi không thích kem."],
+      "explain": "좋아하다 = thích."
+    }
+  ],
+  "reading": {
+    "passage": "저는 회사원입니다. 저는 자주 시내에 갑니다. 시내에 카페가 많습니다. 저는 카페에서 친구를 만납니다. 커피를 마십니다. 이야기합니다. 아주 좋습니다.",
+    "passageVi": "Tôi là nhân viên công ty. Tôi thường đến trung tâm thành phố. Ở trung tâm có nhiều quán cà phê. Tôi gặp bạn ở quán cà phê. Chúng tôi uống cà phê và nói chuyện. Rất vui.",
+    "questions": [
+      {
+        "q": "Người viết thường gặp bạn ở đâu?",
+        "options": ["Quán cà phê ở trung tâm", "Công viên", "Chợ", "Văn phòng công ty"],
+        "explain": "시내에 … 카페에서 친구를 만납니다 = gặp bạn ở quán cà phê trong trung tâm."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": ["Ở trung tâm có nhiều quán cà phê.", "Người viết là sinh viên.", "Người viết uống trà với bạn.", "Người viết ít khi đến trung tâm."],
+        "explain": "시내에 카페가 많습니다. Người viết là 회사원, uống 커피, và 자주 (thường) đến trung tâm."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3 câu về việc bạn thường làm: ở đâu, làm gì. Dùng N에서, N을/를 và -ㅂ/습니다.",
+    "samples": [
+      ["저는 도서관에서 책을 읽습니다.", "Tôi đọc sách ở thư viện."],
+      ["카페에서 커피를 마십니다.", "Tôi uống cà phê ở quán cà phê."],
+      ["공원에서 친구를 만납니다.", "Tôi gặp bạn ở công viên."]
+    ],
+    "tips": "Nơi diễn ra hành động + 에서; tân ngữ có patchim + 을, không patchim + 를."
+  }
 }

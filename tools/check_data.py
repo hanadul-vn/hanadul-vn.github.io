@@ -35,16 +35,41 @@ for lid in ids:
     for w in words:
         if len(w) < 2 or not w[0].strip() or not w[1].strip():
             err(f"{lid}: từ thiếu nghĩa: {w}")
+    def check_q(where, q, need_q=True):
+        opts = q.get("options", [])
+        label = q.get("q") or q.get("listen")
+        if need_q and not q.get("q"):
+            err(f"{lid} / {where}: thiếu câu hỏi")
+        if len(opts) != 4:
+            err(f"{lid} / {where}: câu cần đúng 4 đáp án: {label}")
+        if len(set(opts)) != len(opts):
+            err(f"{lid} / {where}: đáp án trùng nhau: {label}")
+        if not q.get("explain"):
+            err(f"{lid} / {where}: thiếu giải thích: {label}")
+
     for g in d.get("grammar", []):
         for q in g.get("questions", []):
-            opts = q.get("options", [])
-            if len(opts) != 4:
-                err(f"{lid} / {g['pattern']}: câu cần đúng 4 đáp án: {q.get('q')}")
-            if len(set(opts)) != len(opts):
-                err(f"{lid} / {g['pattern']}: đáp án trùng nhau: {q.get('q')}")
-            if not q.get("explain"):
-                err(f"{lid} / {g['pattern']}: thiếu giải thích: {q.get('q')}")
-    print(f"{lid}: {len(words)} từ, {sum(len(g.get('questions', [])) for g in d.get('grammar', []))} câu ngữ pháp")
+            check_q(g["pattern"], q)
+    for q in d.get("usage", []):
+        check_q("Từ trong câu", q)
+    for q in d.get("listening", []):
+        if not q.get("listen"):
+            err(f"{lid} / Nghe: thiếu câu cho máy đọc (listen)")
+        check_q("Nghe", q, need_q=False)
+    r = d.get("reading")
+    if r:
+        if not r.get("passage") or not r.get("passageVi"):
+            err(f"{lid} / Đọc hiểu: thiếu đoạn văn hoặc bản dịch")
+        if not r.get("questions"):
+            err(f"{lid} / Đọc hiểu: chưa có câu hỏi")
+        for q in r.get("questions", []):
+            check_q("Đọc hiểu", q)
+    w = d.get("writing")
+    if w and (not w.get("prompt") or not w.get("samples")):
+        err(f"{lid} / Luyện viết: thiếu đề hoặc câu mẫu")
+    nq = sum(len(g.get('questions', [])) for g in d.get('grammar', []))
+    print(f"{lid}: {len(words)} từ, {len(d.get('usage', []))} câu từ trong câu, {nq} câu ngữ pháp, "
+          f"{len(d.get('listening', []))} câu nghe, {len(r['questions']) if r else 0} câu đọc, viết: {'có' if w else 'không'}")
 
 if errors:
     print("\nLỖI:")

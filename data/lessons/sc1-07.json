@@ -85,11 +85,7 @@
     {
       "pattern": "N은/는 (đối chiếu)",
       "title": "còn…, thì… (so sánh hai thứ)",
-      "note": [
-        "Ngoài chỉ chủ đề (Bài 1), 은/는 còn dùng để đối chiếu hai người, hai vật: 라면은 싸요. 불고기는 비싸요.",
-        "Danh từ có patchim → 은, không patchim → 는.",
-        "Có thể gắn sau tiểu từ khác: 한국에는, 주말에는."
-      ],
+      "note": ["Ngoài chỉ chủ đề (Bài 1), 은/는 còn dùng để đối chiếu hai người, hai vật: 라면은 싸요. 불고기는 비싸요.", "Danh từ có patchim → 은, không patchim → 는.", "Có thể gắn sau tiểu từ khác: 한국에는, 주말에는."],
       "examples": [
         ["라면은 싸요. 불고기는 비싸요.", "Mì gói thì rẻ. Bulgogi thì đắt."],
         ["수박은 커요. 귤은 작아요.", "Dưa hấu thì to. Quýt thì nhỏ."],
@@ -120,18 +116,18 @@
           "q": "평일에는 바빠요. 주말___ 안 바빠요.",
           "options": ["에는", "에은", "는에", "은"],
           "explain": "주말에 + 는 → 주말에는 (에 kết thúc bằng nguyên âm)."
+        },
+        {
+          "q": "「사과는 싸요. 망고는 비싸요.」 nghĩa là gì?",
+          "options": ["Táo thì rẻ, còn xoài thì đắt.", "Táo và xoài đều rẻ.", "Táo và xoài đều đắt.", "Táo đắt, còn xoài rẻ."],
+          "explain": "은/는 đối chiếu hai thứ: 사과는 싸요 (táo rẻ), 망고는 비싸요 (xoài đắt)."
         }
       ]
     },
     {
       "pattern": "Lược ㅡ",
       "title": "gốc có ㅡ gặp -아/어 thì bỏ ㅡ",
-      "note": [
-        "Gốc kết thúc bằng ㅡ (크다, 바쁘다…) khi gặp -아/어요, -았/었어요 thì bỏ ㅡ.",
-        "Gốc một âm tiết → -어요: 크다 → 커요, 쓰다 → 써요.",
-        "Âm tiết trước ㅡ có ㅏ hoặc ㅗ → -아요: 바쁘다 → 바빠요, 아프다 → 아파요, 고프다 → 고파요. Còn lại → -어요: 예쁘다 → 예뻐요.",
-        "Quá khứ theo cùng quy tắc: 바빴어요, 아팠어요, 예뻤어요."
-      ],
+      "note": ["Gốc kết thúc bằng ㅡ (크다, 바쁘다…) khi gặp -아/어요, -았/었어요 thì bỏ ㅡ.", "Gốc một âm tiết → -어요: 크다 → 커요, 쓰다 → 써요.", "Âm tiết trước ㅡ có ㅏ hoặc ㅗ → -아요: 바쁘다 → 바빠요, 아프다 → 아파요, 고프다 → 고파요. Còn lại → -어요: 예쁘다 → 예뻐요.", "Quá khứ theo cùng quy tắc: 바빴어요, 아팠어요, 예뻤어요."],
       "examples": [
         ["배가 너무 고파요.", "Tôi đói bụng quá."],
         ["민준 씨는 키가 커요.", "Anh Min-jun cao."],
@@ -167,17 +163,18 @@
           "q": "이메일을 ___. (쓰다)",
           "options": ["써요", "쓰어요", "싸요", "쓰요"],
           "explain": "Một âm tiết → bỏ ㅡ + 어요: 써요."
+        },
+        {
+          "q": "「동생이 아파요.」 nghĩa là gì?",
+          "options": ["Em tôi bị ốm.", "Em tôi bận.", "Em tôi đói bụng.", "Em tôi xinh."],
+          "explain": "아파요 ← 아프다 (đau, ốm)."
         }
       ]
     },
     {
       "pattern": "-고 싶다",
       "title": "muốn (làm gì)",
-      "note": [
-        "Gắn vào gốc động từ để nói mong muốn của người nói: 가고 싶어요, 먹고 싶어요.",
-        "Hỏi người nghe: 뭐 하고 싶어요?",
-        "Nói về mong muốn của người thứ ba dùng -고 싶어 하다: 동생은 카메라를 사고 싶어 해요."
-      ],
+      "note": ["Gắn vào gốc động từ để nói mong muốn của người nói: 가고 싶어요, 먹고 싶어요.", "Hỏi người nghe: 뭐 하고 싶어요?", "Nói về mong muốn của người thứ ba dùng -고 싶어 하다: 동생은 카메라를 사고 싶어 해요."],
       "examples": [
         ["저는 한국에 가고 싶어요.", "Tôi muốn đi Hàn Quốc."],
         ["뭐 먹고 싶어요? — 비빔밥을 먹고 싶어요.", "Bạn muốn ăn gì? — Tôi muốn ăn bibimbap."],
@@ -208,8 +205,110 @@
           "q": "\"Tôi muốn nghỉ ngơi\" là câu nào?",
           "options": ["저는 쉬고 싶어요.", "저는 쉬었어요.", "같이 쉽시다.", "저는 안 쉬어요."],
           "explain": "-고 싶어요 diễn tả mong muốn."
+        },
+        {
+          "q": "\"Tôi muốn mua một cái mũ.\" nói thế nào?",
+          "options": ["모자 한 개를 사고 싶어요.", "모자 한 개를 샀어요.", "모자 한 개를 삽시다.", "모자 한 개를 안 사요."],
+          "explain": "Muốn làm gì → -고 싶어요."
         }
       ]
     }
-  ]
+  ],
+  "usage": [
+    {
+      "q": "커피 두 ____ 주세요.",
+      "options": ["잔", "병", "권", "장"],
+      "explain": "Đồ uống trong cốc, ly → 잔: 커피 두 잔."
+    },
+    {
+      "q": "책 세 ____을 샀어요.",
+      "options": ["권", "장", "대", "마리"],
+      "explain": "Sách đếm bằng 권 (quyển)."
+    },
+    {
+      "q": "구두 한 ____ 주세요.",
+      "options": ["켤레", "개", "잔", "명"],
+      "explain": "Giày, tất đếm bằng 켤레 (đôi)."
+    },
+    {
+      "q": "고양이가 두 ____ 있어요.",
+      "options": ["마리", "명", "개", "대"],
+      "explain": "Động vật đếm bằng 마리 (con)."
+    },
+    {
+      "q": "(Khách bước vào cửa hàng) 주인: ____",
+      "options": ["어서 오세요.", "다음에 또 오세요.", "깎아 주세요.", "너무 비싸요."],
+      "explain": "어서 오세요 = Xin mời vào, câu chào khách."
+    },
+    {
+      "q": "Muốn hỏi giá, bạn nói gì?",
+      "options": ["이거 얼마예요?", "이거 두 개 주세요.", "여기 있어요.", "뭘 찾으세요?"],
+      "explain": "얼마 = bao nhiêu (tiền)."
+    },
+    {
+      "q": "____에서 카메라를 사요.",
+      "options": ["전자상가", "문구점", "서점", "노래방"],
+      "explain": "전자상가 = khu bán đồ điện tử."
+    },
+    {
+      "q": "Muốn được bớt giá, bạn nói gì?",
+      "options": ["깎아 주세요.", "어서 오세요.", "여기 있어요.", "다음에 또 오세요."],
+      "explain": "깎다 = bớt giá → 깎아 주세요."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "이 티셔츠 얼마예요?",
+      "options": ["Áo phông này bao nhiêu tiền?", "Cho tôi áo phông này.", "Áo phông này đắt quá.", "Có áo phông không?"],
+      "explain": "얼마예요? = bao nhiêu tiền?"
+    },
+    {
+      "listen": "가: 사과 있어요? 나: 네, 한 개에 이천 원이에요.",
+      "options": ["2.000 won", "1.000 won", "200 won", "20.000 won"],
+      "explain": "한 개에 이천 원 = 2.000 won một quả.",
+      "q": "Một quả táo giá bao nhiêu?"
+    },
+    {
+      "listen": "커피 한 잔하고 주스 두 병 주세요.",
+      "options": ["1 cốc cà phê và 2 chai nước ép", "2 cốc cà phê và 1 chai nước ép", "1 chai cà phê và 2 cốc nước ép", "2 cốc cà phê và 2 chai nước ép"],
+      "explain": "커피 한 잔 = 1 cốc cà phê; 주스 두 병 = 2 chai nước ép.",
+      "q": "Khách mua gì?"
+    },
+    {
+      "listen": "너무 비싸요. 깎아 주세요.",
+      "options": ["Đắt quá. Bớt cho tôi đi.", "Rẻ quá. Cho tôi hai cái.", "Đắt quá. Tôi không mua.", "Bao nhiêu tiền? Bớt cho tôi đi."],
+      "explain": "너무 비싸요 = đắt quá; 깎아 주세요 = bớt cho tôi."
+    },
+    {
+      "listen": "저는 카메라를 사고 싶어요.",
+      "options": ["Tôi muốn mua máy ảnh.", "Tôi đã mua máy ảnh.", "Tôi không mua máy ảnh.", "Máy ảnh này đắt."],
+      "explain": "-고 싶어요 = muốn."
+    }
+  ],
+  "reading": {
+    "passage": "어제 동생하고 같이 시장에 갔어요. 시장에서 과일을 샀어요. 사과는 쌌어요. 망고는 비쌌어요. 저는 사과 다섯 개를 샀어요. 동생은 수박을 먹고 싶어 했어요. 수박 한 개를 샀어요.",
+    "passageVi": "Hôm qua tôi đi chợ cùng em. Ở chợ chúng tôi mua hoa quả. Táo thì rẻ. Xoài thì đắt. Tôi mua 5 quả táo. Em tôi muốn ăn dưa hấu. Chúng tôi mua 1 quả dưa hấu.",
+    "questions": [
+      {
+        "q": "Ở chợ, quả gì đắt?",
+        "options": ["Xoài", "Táo", "Dưa hấu", "Quýt"],
+        "explain": "망고는 비쌌어요 = xoài thì đắt."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": ["Người viết đã mua 5 quả táo.", "Người viết muốn ăn dưa hấu.", "Người viết đã mua xoài.", "Người viết đi chợ một mình."],
+        "explain": "사과 다섯 개를 샀어요. Người muốn ăn dưa hấu là em (동생), không mua xoài, đi cùng em."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết một đoạn hội thoại mua hàng 3–4 câu: hỏi giá, mặc cả, mua theo số lượng. Dùng đơn vị đếm, 은/는, -고 싶다.",
+    "samples": [
+      ["이 모자 얼마예요?", "Cái mũ này bao nhiêu tiền?"],
+      ["만 원이에요.", "10.000 won."],
+      ["모자는 비싸요. 펜은 싸요. 펜 세 개 주세요.", "Mũ thì đắt. Bút thì rẻ. Cho tôi 3 cái bút."],
+      ["저는 카메라를 사고 싶어요.", "Tôi muốn mua máy ảnh."]
+    ],
+    "tips": "Số đếm thuần Hàn đứng trước đơn vị: 한 개, 두 잔, 세 권."
+  }
 }
