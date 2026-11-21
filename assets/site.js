@@ -84,6 +84,11 @@
       var on = need === 'form' ? HD.hasForm : need === 'zalo' ? HD.hasZalo : need === 'facebook' ? HD.hasFacebook : HD.hasContact;
       el.hidden = !on;
     });
+    // Nội dung khác nhau khi có / chưa có tài khoản (assets/account.js).
+    var acctOn = !!(cfg.supabaseUrl && cfg.supabaseKey);
+    root.querySelectorAll('[data-acct]').forEach(function (el) {
+      el.hidden = (el.getAttribute('data-acct') === 'on') !== acctOn;
+    });
     root.querySelectorAll('[data-hide-if]').forEach(function (el) {
       if (el.getAttribute('data-hide-if') === 'contact') el.hidden = HD.hasContact;
     });

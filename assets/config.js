@@ -12,5 +12,12 @@ window.HANADUL_CONFIG = {
 
   // Link nhóm Zalo / trang Facebook. Trống = ẩn nút.
   zaloUrl: '',
-  facebookUrl: ''
+  facebookUrl: '',
+
+  // Tài khoản (đăng nhập Google/email, đồng bộ tiến độ) qua Supabase. Hướng dẫn: supabase/README.md.
+  // supabaseUrl: "Project URL", dạng https://xxxx.supabase.co
+  // supabaseKey: khóa CÔNG KHAI (Publishable key "sb_publishable_…" hoặc anon key). KHÔNG BAO GIỜ dán secret / service_role key.
+  // Để trống = không có nút đăng nhập, tiến độ chỉ lưu trên máy như cũ.
+  supabaseUrl: '',
+  supabaseKey: ''
 };
