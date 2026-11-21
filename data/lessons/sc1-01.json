@@ -7,18 +7,37 @@
     {
       "group": "Quốc gia",
       "words": [
-        ["한국", "Hàn Quốc"], ["베트남", "Việt Nam"], ["말레이시아", "Malaysia"], ["일본", "Nhật Bản"],
-        ["미국", "Mỹ"], ["중국", "Trung Quốc"], ["태국", "Thái Lan"], ["호주", "Úc"],
-        ["몽골", "Mông Cổ"], ["인도네시아", "Indonesia"], ["필리핀", "Philippines"], ["인도", "Ấn Độ"],
-        ["영국", "Anh"], ["독일", "Đức"], ["프랑스", "Pháp"], ["러시아", "Nga"]
+        ["한국", "Hàn Quốc"],
+        ["베트남", "Việt Nam"],
+        ["말레이시아", "Malaysia"],
+        ["일본", "Nhật Bản"],
+        ["미국", "Mỹ"],
+        ["중국", "Trung Quốc"],
+        ["태국", "Thái Lan"],
+        ["호주", "Úc"],
+        ["몽골", "Mông Cổ"],
+        ["인도네시아", "Indonesia"],
+        ["필리핀", "Philippines"],
+        ["인도", "Ấn Độ"],
+        ["영국", "Anh"],
+        ["독일", "Đức"],
+        ["프랑스", "Pháp"],
+        ["러시아", "Nga"]
       ]
     },
     {
       "group": "Nghề nghiệp",
       "words": [
-        ["학생", "học sinh"], ["회사원", "nhân viên công ty"], ["은행원", "nhân viên ngân hàng"], ["선생님", "giáo viên, thầy cô"],
-        ["의사", "bác sĩ"], ["공무원", "công chức"], ["관광 가이드", "hướng dẫn viên du lịch"], ["주부", "nội trợ"],
-        ["약사", "dược sĩ"], ["운전기사", "tài xế"]
+        ["학생", "học sinh"],
+        ["회사원", "nhân viên công ty"],
+        ["은행원", "nhân viên ngân hàng"],
+        ["선생님", "giáo viên, thầy cô"],
+        ["의사", "bác sĩ"],
+        ["공무원", "công chức"],
+        ["관광 가이드", "hướng dẫn viên du lịch"],
+        ["주부", "nội trợ"],
+        ["약사", "dược sĩ"],
+        ["운전기사", "tài xế"]
       ]
     },
     {
@@ -35,12 +54,28 @@
     {
       "group": "Từ khác trong bài",
       "words": [
-        ["사람", "người"], ["저", "tôi (khiêm nhường)"], ["제", "của tôi"], ["이름", "tên"],
-        ["국적", "quốc tịch"], ["직업", "nghề nghiệp"], ["씨", "anh/chị (đặt sau tên)"], ["네", "vâng, dạ"],
-        ["아니요", "không"], ["대학교", "trường đại học"], ["대학생", "sinh viên"], ["학과", "khoa, ngành học"],
-        ["한국어", "tiếng Hàn"], ["한국어과", "khoa tiếng Hàn"], ["국어국문학과", "khoa ngữ văn Hàn"], ["학번", "mã số sinh viên"],
-        ["학생증", "thẻ sinh viên"], ["은행", "ngân hàng"], ["전화", "điện thoại"], ["이메일", "email"],
-        ["주소", "địa chỉ"], ["이", "này (đứng trước danh từ)"]
+        ["사람", "người"],
+        ["저", "tôi (khiêm nhường)"],
+        ["제", "của tôi"],
+        ["이름", "tên"],
+        ["국적", "quốc tịch"],
+        ["직업", "nghề nghiệp"],
+        ["씨", "anh/chị (đặt sau tên)"],
+        ["네", "vâng, dạ"],
+        ["아니요", "không"],
+        ["대학교", "trường đại học"],
+        ["대학생", "sinh viên"],
+        ["학과", "khoa, ngành học"],
+        ["한국어", "tiếng Hàn"],
+        ["한국어과", "khoa tiếng Hàn"],
+        ["국어국문학과", "khoa ngữ văn Hàn"],
+        ["학번", "mã số sinh viên"],
+        ["학생증", "thẻ sinh viên"],
+        ["은행", "ngân hàng"],
+        ["전화", "điện thoại"],
+        ["이메일", "email"],
+        ["주소", "địa chỉ"],
+        ["이", "này (đứng trước danh từ)"]
       ]
     }
   ],
@@ -48,62 +83,222 @@
     {
       "pattern": "N입니다",
       "title": "là N (câu trần thuật, trang trọng)",
-      "note": [
-        "Gắn 입니다 ngay sau danh từ để nói “là …”. Dùng khi giới thiệu, phát biểu, nói với người lạ hoặc người trên.",
-        "입니다 đọc là [임니다]."
-      ],
+      "note": ["Gắn 입니다 ngay sau danh từ để nói “là …”. Dùng khi giới thiệu, phát biểu, nói với người lạ hoặc người trên.", "입니다 đọc là [임니다]."],
       "examples": [
         ["저는 투이입니다.", "Tôi là Thủy."],
         ["저는 베트남 사람입니다.", "Tôi là người Việt Nam."],
         ["제 직업은 의사입니다.", "Nghề của tôi là bác sĩ."]
       ],
       "questions": [
-        { "q": "저는 대학생___.", "options": ["입니다", "입니까?", "은", "는"], "explain": "Câu trần thuật “Tôi là sinh viên” dùng 입니다." },
-        { "q": "“Tôi là người Việt Nam.” là câu nào?", "options": ["저는 베트남 사람입니다.", "저는 베트남 사람입니까?", "저는 사람 베트남입니다.", "저 베트남 사람는."], "explain": "Quốc gia + 사람 = người nước đó; kết thúc bằng 입니다." },
-        { "q": "제 이름은 민수___.", "options": ["입니다", "입니까?", "는", "이"], "explain": "“Tên tôi là Minsu.” → 민수입니다." },
-        { "q": "Câu nào viết đúng?", "options": ["회사원입니다.", "회사원입니다까.", "회사원는입니다.", "회사원입다."], "explain": "Danh từ + 입니다, không thêm gì giữa hai phần." },
-        { "q": "입니다 được đọc là gì?", "say": "입니다", "options": ["[임니다]", "[입니다]", "[이니다]", "[임미다]"], "explain": "ㅂ đứng trước ㄴ đọc thành ㅁ nên 입니다 đọc là [임니다]." }
+        {
+          "q": "저는 대학생___.",
+          "options": ["입니다", "입니까?", "은", "는"],
+          "explain": "Câu trần thuật “Tôi là sinh viên” dùng 입니다."
+        },
+        {
+          "q": "“Tôi là người Việt Nam.” là câu nào?",
+          "options": ["저는 베트남 사람입니다.", "저는 베트남 사람입니까?", "저는 사람 베트남입니다.", "저 베트남 사람는."],
+          "explain": "Quốc gia + 사람 = người nước đó; kết thúc bằng 입니다."
+        },
+        {
+          "q": "제 이름은 민수___.",
+          "options": ["입니다", "입니까?", "는", "이"],
+          "explain": "“Tên tôi là Minsu.” → 민수입니다."
+        },
+        {
+          "q": "Câu nào viết đúng?",
+          "options": ["회사원입니다.", "회사원입니다까.", "회사원는입니다.", "회사원입다."],
+          "explain": "Danh từ + 입니다, không thêm gì giữa hai phần."
+        },
+        {
+          "q": "입니다 được đọc là gì?",
+          "say": "입니다",
+          "options": ["[임니다]", "[입니다]", "[이니다]", "[임미다]"],
+          "explain": "ㅂ đứng trước ㄴ đọc thành ㅁ nên 입니다 đọc là [임니다]."
+        },
+        {
+          "q": "「저는 의사입니다.」 nghĩa là gì?",
+          "options": ["Tôi là bác sĩ.", "Tôi là dược sĩ.", "Bạn là bác sĩ phải không?", "Tôi không phải bác sĩ."],
+          "explain": "의사 = bác sĩ; 입니다 là đuôi khẳng định 'là'."
+        }
       ]
     },
     {
       "pattern": "N입니까?",
       "title": "có phải là N không? (câu hỏi, trang trọng)",
-      "note": [
-        "Đổi 입니다 thành 입니까? để hỏi. Trả lời bằng 네, …입니다 (vâng) hoặc 아니요, … (không).",
-        "Với từ để hỏi: 이름이 무엇입니까? (Tên là gì?), 국적이 어디입니까? (Quốc tịch ở đâu?)."
-      ],
+      "note": ["Đổi 입니다 thành 입니까? để hỏi. Trả lời bằng 네, …입니다 (vâng) hoặc 아니요, … (không).", "Với từ để hỏi: 이름이 무엇입니까? (Tên là gì?), 국적이 어디입니까? (Quốc tịch ở đâu?)."],
       "examples": [
         ["학생입니까?", "Bạn là học sinh phải không?"],
         ["네, 학생입니다.", "Vâng, tôi là học sinh."],
         ["이름이 무엇입니까?", "Tên bạn là gì?"]
       ],
       "questions": [
-        { "q": "선생님___? (Bạn là giáo viên phải không?)", "options": ["입니까", "입니다", "은", "는"], "explain": "Câu hỏi trang trọng dùng 입니까?" },
-        { "q": "A: 회사원입니까?  B: ___", "options": ["네, 회사원입니다.", "네, 회사원입니까?", "아니요, 회사원입니다.", "네, 회사원는."], "explain": "Đồng ý thì trả lời 네 + câu trần thuật 입니다." },
-        { "q": "“Anh là người Hàn Quốc phải không?” là câu nào?", "options": ["한국 사람입니까?", "한국 사람입니다.", "한국입니까 사람?", "사람 한국입니까?"], "explain": "한국 사람 + 입니까?" },
-        { "q": "이름이 무엇입니까? hỏi điều gì?", "say": "이름이 무엇입니까?", "options": ["Tên", "Quốc tịch", "Nghề nghiệp", "Địa chỉ"], "explain": "이름 = tên, 무엇 = cái gì." },
-        { "q": "Câu nào là câu hỏi?", "options": ["의사입니까?", "의사입니다.", "저는 의사입니다.", "제 직업은 의사입니다."], "explain": "Chỉ câu kết thúc bằng 입니까? là câu hỏi." }
+        {
+          "q": "선생님___? (Bạn là giáo viên phải không?)",
+          "options": ["입니까", "입니다", "은", "는"],
+          "explain": "Câu hỏi trang trọng dùng 입니까?"
+        },
+        {
+          "q": "A: 회사원입니까?  B: ___",
+          "options": ["네, 회사원입니다.", "네, 회사원입니까?", "아니요, 회사원입니다.", "네, 회사원는."],
+          "explain": "Đồng ý thì trả lời 네 + câu trần thuật 입니다."
+        },
+        {
+          "q": "“Anh là người Hàn Quốc phải không?” là câu nào?",
+          "options": ["한국 사람입니까?", "한국 사람입니다.", "한국입니까 사람?", "사람 한국입니까?"],
+          "explain": "한국 사람 + 입니까?"
+        },
+        {
+          "q": "이름이 무엇입니까? hỏi điều gì?",
+          "say": "이름이 무엇입니까?",
+          "options": ["Tên", "Quốc tịch", "Nghề nghiệp", "Địa chỉ"],
+          "explain": "이름 = tên, 무엇 = cái gì."
+        },
+        {
+          "q": "Câu nào là câu hỏi?",
+          "options": ["의사입니까?", "의사입니다.", "저는 의사입니다.", "제 직업은 의사입니다."],
+          "explain": "Chỉ câu kết thúc bằng 입니까? là câu hỏi."
+        },
+        {
+          "q": "\"Anh Min-su là người Hàn Quốc phải không?\" nói thế nào?",
+          "options": ["민수 씨는 한국 사람입니까?", "민수 씨는 한국 사람입니다.", "민수 씨는 한국 사람은 입니까?", "민수 씨 한국 사람입니까는?"],
+          "explain": "Câu hỏi dùng 입니까?, chủ đề đánh dấu bằng 는: 민수 씨는 … 입니까?"
+        }
       ]
     },
     {
       "pattern": "N은/는",
       "title": "trợ từ chủ đề (còn … thì)",
-      "note": [
-        "Gắn sau danh từ để nêu chủ đề của câu. Danh từ kết thúc bằng phụ âm (có patchim) dùng 은, kết thúc bằng nguyên âm dùng 는.",
-        "Ví dụ: 이름 (có patchim ㅁ) → 이름은; 저 (nguyên âm) → 저는."
-      ],
+      "note": ["Gắn sau danh từ để nêu chủ đề của câu. Danh từ kết thúc bằng phụ âm (có patchim) dùng 은, kết thúc bằng nguyên âm dùng 는.", "Ví dụ: 이름 (có patchim ㅁ) → 이름은; 저 (nguyên âm) → 저는."],
       "examples": [
         ["저는 베트남 사람입니다.", "Tôi là người Việt Nam."],
         ["제 이름은 란입니다.", "Tên tôi là Lan."],
         ["선생님은 한국 사람입니다.", "Thầy giáo là người Hàn Quốc."]
       ],
       "questions": [
-        { "q": "저___ 학생입니다.", "options": ["는", "은", "이", "을"], "explain": "저 kết thúc bằng nguyên âm nên dùng 는." },
-        { "q": "제 이름___ 민호입니다.", "options": ["은", "는", "가", "를"], "explain": "이름 có patchim ㅁ nên dùng 은." },
-        { "q": "선생님___ 한국 사람입니다.", "options": ["은", "는", "가", "를"], "explain": "님 có patchim ㅁ nên dùng 은." },
-        { "q": "흐엉 씨___ 의사입니까?", "options": ["는", "은", "을", "에"], "explain": "씨 kết thúc bằng nguyên âm nên dùng 는." },
-        { "q": "Cụm nào viết đúng?", "options": ["직업은", "직업는", "저은", "주부은"], "explain": "직업 có patchim ㅂ → 은. Còn 저, 주부 kết thúc bằng nguyên âm phải dùng 는." }
+        {
+          "q": "저___ 학생입니다.",
+          "options": ["는", "은", "이", "을"],
+          "explain": "저 kết thúc bằng nguyên âm nên dùng 는."
+        },
+        {
+          "q": "제 이름___ 민호입니다.",
+          "options": ["은", "는", "가", "를"],
+          "explain": "이름 có patchim ㅁ nên dùng 은."
+        },
+        {
+          "q": "선생님___ 한국 사람입니다.",
+          "options": ["은", "는", "가", "를"],
+          "explain": "님 có patchim ㅁ nên dùng 은."
+        },
+        {
+          "q": "흐엉 씨___ 의사입니까?",
+          "options": ["는", "은", "을", "에"],
+          "explain": "씨 kết thúc bằng nguyên âm nên dùng 는."
+        },
+        {
+          "q": "Cụm nào viết đúng?",
+          "options": ["직업은", "직업는", "저은", "주부은"],
+          "explain": "직업 có patchim ㅂ → 은. Còn 저, 주부 kết thúc bằng nguyên âm phải dùng 는."
+        },
+        {
+          "q": "「제 이름은 마이입니다.」 nghĩa là gì?",
+          "options": ["Tên tôi là Mai.", "Tên bạn là Mai phải không?", "Mai là tên của bạn.", "Tôi không phải là Mai."],
+          "explain": "제 이름 = tên tôi; 은 đánh dấu chủ đề."
+        }
       ]
     }
-  ]
+  ],
+  "usage": [
+    {
+      "q": "처음 뵙겠습니다. 저는 투이입니다. — ____. (Đáp lại lời chào lần đầu)",
+      "options": ["반갑습니다", "안녕히 가세요", "안녕히 계세요", "아니요"],
+      "explain": "반갑습니다 = rất vui được gặp, dùng để đáp lại khi làm quen."
+    },
+    {
+      "q": "Bạn tiễn khách ra về. Bạn nói gì với khách?",
+      "options": ["안녕히 가세요", "안녕히 계세요", "처음 뵙겠습니다", "반갑습니다"],
+      "explain": "Người ở lại nói 안녕히 가세요 (đi bình an) với người ra về."
+    },
+    {
+      "q": "Bạn rời văn phòng về nhà. Bạn nói gì với người ở lại?",
+      "options": ["안녕히 계세요", "안녕히 가세요", "안녕하십니까?", "처음 뵙겠습니다"],
+      "explain": "Người ra về nói 안녕히 계세요 (ở lại bình an) với người ở lại."
+    },
+    {
+      "q": "제 ____은 민수입니다. (Tên tôi là Min-su.)",
+      "options": ["이름", "국적", "직업", "학번"],
+      "explain": "이름 = tên. 국적 là quốc tịch, 직업 là nghề nghiệp."
+    },
+    {
+      "q": "가: 베트남 사람입니까? 나: ____, 베트남 사람입니다.",
+      "options": ["네", "아니요", "씨", "저"],
+      "explain": "Câu sau khẳng định là người Việt Nam → trả lời 네 (vâng)."
+    },
+    {
+      "q": "투이 ____, 학생입니까? (Chị Thủy là học sinh phải không?)",
+      "options": ["씨", "저", "제", "네"],
+      "explain": "씨 đặt sau tên để gọi lịch sự: 투이 씨."
+    },
+    {
+      "q": "Người làm việc ở ngân hàng là ____.",
+      "options": ["은행원", "회사원", "공무원", "약사"],
+      "explain": "은행 (ngân hàng) + 원 (người làm) = 은행원."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "안녕하세요? 저는 민수입니다.",
+      "options": ["Xin chào, tôi là Min-su.", "Xin chào, anh là Min-su phải không?", "Tạm biệt, tôi là Min-su.", "Min-su là học sinh."],
+      "explain": "저는 민수입니다 = Tôi là Min-su."
+    },
+    {
+      "listen": "가: 학생입니까? 나: 네, 학생입니다.",
+      "options": ["Học sinh", "Giáo viên", "Nhân viên công ty", "Bác sĩ"],
+      "explain": "네, 학생입니다 = Vâng, tôi là học sinh.",
+      "q": "Người thứ hai là ai?"
+    },
+    {
+      "listen": "저는 베트남 사람입니다.",
+      "options": ["Tôi là người Việt Nam.", "Tôi là người Hàn Quốc.", "Bạn là người Việt Nam phải không?", "Tôi không phải người Việt Nam."],
+      "explain": "베트남 사람 = người Việt Nam."
+    },
+    {
+      "listen": "안녕히 계세요.",
+      "options": ["Khi mình ra về, chào người ở lại", "Khi tiễn người khác ra về", "Khi gặp nhau lần đầu", "Khi muốn hỏi tên"],
+      "explain": "안녕히 계세요 do người ra về nói với người ở lại.",
+      "q": "Câu vừa nghe dùng khi nào?"
+    },
+    {
+      "listen": "가: 마이 씨는 의사입니까? 나: 아니요, 약사입니다.",
+      "options": ["Dược sĩ", "Bác sĩ", "Học sinh", "Nội trợ"],
+      "explain": "아니요, 약사입니다 = Không, tôi là dược sĩ.",
+      "q": "Chị Mai làm nghề gì?"
+    }
+  ],
+  "reading": {
+    "passage": "안녕하십니까? 제 이름은 남입니다. 저는 베트남 사람입니다. 저는 대학생입니다. 한국어과 학생입니다. 반갑습니다.",
+    "passageVi": "Xin chào. Tên tôi là Nam. Tôi là người Việt Nam. Tôi là sinh viên đại học. Tôi là sinh viên khoa tiếng Hàn. Rất vui được gặp các bạn.",
+    "questions": [
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": ["Nam là sinh viên khoa tiếng Hàn.", "Nam là người Hàn Quốc.", "Nam là giáo viên tiếng Hàn.", "Nam là nhân viên công ty."],
+        "explain": "대학생 + 한국어과 학생 → sinh viên khoa tiếng Hàn. Nam là người Việt Nam (베트남 사람)."
+      },
+      {
+        "q": "Nam giới thiệu những gì về mình?",
+        "options": ["Tên, quốc tịch, ngành học", "Tên, tuổi, địa chỉ", "Quốc tịch, số điện thoại, nghề", "Tên, email, địa chỉ"],
+        "explain": "이름 (tên), 베트남 사람 (quốc tịch), 한국어과 학생 (ngành học)."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3 câu giới thiệu bản thân: tên, quốc tịch, nghề nghiệp. Dùng 은/는 và -입니다.",
+    "samples": [
+      ["안녕하세요? 제 이름은 투이입니다.", "Xin chào. Tên tôi là Thủy."],
+      ["저는 베트남 사람입니다.", "Tôi là người Việt Nam."],
+      ["저는 회사원입니다.", "Tôi là nhân viên công ty."]
+    ],
+    "tips": "Sau 이름 (có patchim) dùng 은, sau 저 (không patchim) dùng 는."
+  }
 }
