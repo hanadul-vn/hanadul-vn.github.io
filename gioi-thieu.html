@@ -243,7 +243,7 @@
           lv.lessons.forEach(function (l) { total++; if (lv.id === 'sc1' && l.no !== '0') sc1++; });
         });
         document.querySelectorAll('[data-fill="lessons"]').forEach(function (el) { el.textContent = total; });
-        document.querySelectorAll('[data-fill="sc1"]').forEach(function (el) { el.textContent = 'Đang mở ' + sc1 + ' bài'; });
+        document.querySelectorAll('[data-fill="sc1"]').forEach(function (el) { el.textContent = sc1 >= 15 ? 'Đủ ' + sc1 + ' bài' : 'Đang mở ' + sc1 + ' bài'; });
       }).catch(function () {});
       // Cảm nhận thật của người học (data/cam-nhan.json). Chưa có thì giữ khung mời gửi.
       fetch('data/cam-nhan.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (list) {

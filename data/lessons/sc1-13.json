@@ -1,0 +1,637 @@
+{
+  "id": "sc1-13",
+  "title": "Sinh nhật",
+  "ko": "생일",
+  "goal": "Chúc mừng sinh nhật, tặng quà, rủ bạn làm gì đó, nói lý do và việc không làm được.",
+  "vocab": [
+    {
+      "group": "Sinh nhật",
+      "words": [
+        [
+          "축하 노래",
+          "bài hát chúc mừng"
+        ],
+        [
+          "잔치",
+          "bữa tiệc lớn"
+        ],
+        [
+          "돌잔치",
+          "tiệc thôi nôi"
+        ],
+        [
+          "카드",
+          "thiệp"
+        ],
+        [
+          "초대",
+          "lời mời"
+        ],
+        [
+          "초대하다",
+          "mời"
+        ],
+        [
+          "축하하다",
+          "chúc mừng"
+        ],
+        [
+          "나이",
+          "tuổi"
+        ],
+        [
+          "세",
+          "tuổi (đi với số Hán Hàn, trang trọng)"
+        ],
+        [
+          "미역국",
+          "canh rong biển"
+        ],
+        [
+          "촛불",
+          "ngọn nến"
+        ],
+        [
+          "켜다",
+          "bật, thắp (đèn, nến)"
+        ],
+        [
+          "끄다",
+          "tắt"
+        ]
+      ]
+    },
+    {
+      "group": "Quà tặng",
+      "words": [
+        [
+          "지갑",
+          "cái ví"
+        ],
+        [
+          "화장품",
+          "mỹ phẩm"
+        ],
+        [
+          "손수건",
+          "khăn tay"
+        ],
+        [
+          "넥타이",
+          "cà vạt"
+        ],
+        [
+          "귀걸이",
+          "bông tai"
+        ],
+        [
+          "목걸이",
+          "dây chuyền"
+        ],
+        [
+          "반지",
+          "nhẫn"
+        ],
+        [
+          "꽃다발",
+          "bó hoa"
+        ],
+        [
+          "향수",
+          "nước hoa"
+        ],
+        [
+          "인형",
+          "búp bê, thú bông"
+        ]
+      ]
+    },
+    {
+      "group": "Tặng và nhận",
+      "words": [
+        [
+          "주다",
+          "cho, tặng"
+        ],
+        [
+          "드리다",
+          "biếu, dâng (kính ngữ của 주다)"
+        ],
+        [
+          "고르다",
+          "chọn"
+        ],
+        [
+          "포장하다",
+          "gói (quà)"
+        ]
+      ]
+    },
+    {
+      "group": "Cảm xúc và lý do",
+      "words": [
+        [
+          "기쁘다",
+          "vui mừng"
+        ],
+        [
+          "고맙다",
+          "cảm ơn, biết ơn"
+        ],
+        [
+          "감사하다",
+          "cảm ơn (trang trọng)"
+        ],
+        [
+          "미안하다",
+          "xin lỗi (thân mật)"
+        ],
+        [
+          "죄송하다",
+          "xin lỗi (lịch sự)"
+        ],
+        [
+          "늦다",
+          "muộn, trễ"
+        ],
+        [
+          "감기에 걸리다",
+          "bị cảm"
+        ],
+        [
+          "왜",
+          "tại sao"
+        ],
+        [
+          "모두",
+          "tất cả, mọi người"
+        ],
+        [
+          "함께",
+          "cùng nhau"
+        ]
+      ]
+    },
+    {
+      "group": "Câu chúc",
+      "words": [
+        [
+          "생일 축하해요!",
+          "Chúc mừng sinh nhật!"
+        ],
+        [
+          "정말 고마워요.",
+          "Thật sự cảm ơn bạn."
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "-아/어서",
+      "title": "vì … nên …",
+      "note": [
+        "Nói lý do, nguyên nhân: 늦어서 죄송합니다 (Xin lỗi vì đến muộn). Hay dùng để trả lời câu hỏi 왜?",
+        "Nguyên âm cuối ㅏ, ㅗ → 아서: 좋아서, 와서. Còn lại → 어서: 늦어서, 걸려서. 하다 → 해서.",
+        "Bất quy tắc vẫn áp dụng: 바쁘다 → 바빠서, 춥다 → 추워서.",
+        "Không gắn quá khứ trước -아/어서: 늦었어서 ✗ → 늦어서 ✓ (thì đặt ở vế sau: 늦어서 못 갔어요).",
+        "Vế sau không dùng -(으)세요, -(으)ㅂ시다, -(으)ㄹ까요: 예뻐서 사세요 ✗.",
+        "Danh từ: có patchim → 이라서, không patchim → 라서: 생일이라서, 친구라서."
+      ],
+      "examples": [
+        [
+          "늦어서 죄송합니다.",
+          "Xin lỗi vì tôi đến muộn."
+        ],
+        [
+          "감기에 걸려서 학교에 안 갔어요.",
+          "Tôi bị cảm nên đã không đi học."
+        ],
+        [
+          "생일이라서 미역국을 먹어요.",
+          "Vì là sinh nhật nên tôi ăn canh rong biển."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "___ 죄송합니다. (늦다)",
+          "options": [
+            "늦어서",
+            "늦아서",
+            "늦었어서",
+            "늦고서"
+          ],
+          "explain": "늦 (ㅡ) → 어서: 늦어서. Không dùng quá khứ trước -어서."
+        },
+        {
+          "q": "감기에 ___ 병원에 갔어요. (걸리다)",
+          "options": [
+            "걸려서",
+            "걸리아서",
+            "걸렸어서",
+            "걸리서"
+          ],
+          "explain": "걸리 + 어서 → 걸려서."
+        },
+        {
+          "q": "오늘은 ___ 파티에 못 가요. (바쁘다)",
+          "options": [
+            "바빠서",
+            "바쁘어서",
+            "바뻐서",
+            "바빴어서"
+          ],
+          "explain": "Lược ㅡ: 바쁘 + 아서 → 바빠서."
+        },
+        {
+          "q": "날씨가 ___ 집에 있었어요. (춥다)",
+          "options": [
+            "추워서",
+            "춥어서",
+            "추와서",
+            "추웠어서"
+          ],
+          "explain": "Bất quy tắc ㅂ: 춥 + 어서 → 추워서."
+        },
+        {
+          "q": "오늘은 제 생일___ 친구들이 집에 와요.",
+          "options": [
+            "이라서",
+            "라서",
+            "이어서",
+            "해서"
+          ],
+          "explain": "생일 có patchim → 생일이라서."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "선물이 예뻐서 기뻐요.",
+            "선물이 예뻐서 사세요.",
+            "선물이 예뻤어서 기뻐요.",
+            "선물이 예쁘어서 기뻐요."
+          ],
+          "explain": "예쁘 → 예뻐서; vế sau không dùng -(으)세요; không dùng quá khứ trước -어서."
+        }
+      ]
+    },
+    {
+      "pattern": "-(으)ㄹ까요?",
+      "title": "… nhé? (rủ, hỏi ý kiến)",
+      "note": [
+        "Rủ người khác cùng làm: 같이 영화를 볼까요? (Mình cùng xem phim nhé?). Trả lời: 좋아요, 같이 봐요 / 봅시다.",
+        "Hỏi ý kiến người nghe về việc mình làm: 제가 케이크를 살까요? (Tôi mua bánh kem nhé?).",
+        "Gốc có patchim → 을까요: 먹을까요. Gốc không patchim → ㄹ까요: 갈까요.",
+        "Gốc có patchim ㄹ → giữ nguyên + 까요: 만들까요. Bất quy tắc ㅂ: 돕다 → 도울까요."
+      ],
+      "examples": [
+        [
+          "같이 생일 선물을 살까요?",
+          "Mình cùng mua quà sinh nhật nhé?"
+        ],
+        [
+          "제가 케이크를 만들까요?",
+          "Tôi làm bánh kem nhé?"
+        ],
+        [
+          "무슨 선물을 고를까요?",
+          "Mình chọn quà gì nhỉ?"
+        ]
+      ],
+      "questions": [
+        {
+          "q": "같이 생일 선물을 ___? (사다)",
+          "options": [
+            "살까요",
+            "사을까요",
+            "살을까요",
+            "사겠을까요"
+          ],
+          "explain": "사 không patchim → 살까요."
+        },
+        {
+          "q": "점심에 뭘 ___? (먹다)",
+          "options": [
+            "먹을까요",
+            "먹까요",
+            "머을까요",
+            "먹을가요"
+          ],
+          "explain": "먹 có patchim → 먹을까요."
+        },
+        {
+          "q": "제가 케이크를 ___? (만들다)",
+          "options": [
+            "만들까요",
+            "만들을까요",
+            "만드을까요",
+            "만들어까요"
+          ],
+          "explain": "Gốc có ㄹ → 만들까요."
+        },
+        {
+          "q": "가: 같이 노래방에 갈까요? 나: 좋아요. ___.",
+          "options": [
+            "같이 가요",
+            "같이 갔어요",
+            "같이 가세요?",
+            "같이 갈까요?"
+          ],
+          "explain": "Đồng ý lời rủ → 같이 가요 / 같이 갑시다."
+        },
+        {
+          "q": "\"Tôi giúp bạn nhé?\" (돕다) là câu nào?",
+          "options": [
+            "제가 도울까요?",
+            "제가 돕을까요?",
+            "제가 도와까요?",
+            "제가 돕까요?"
+          ],
+          "explain": "Bất quy tắc ㅂ: 돕 → 도우 + ㄹ까요 → 도울까요."
+        },
+        {
+          "q": "\"Mình mời Minsu nhé?\" là câu nào?",
+          "options": [
+            "민수 씨를 초대할까요?",
+            "민수 씨를 초대했어요?",
+            "민수 씨를 초대하을까요?",
+            "민수 씨를 초대하려고 해요."
+          ],
+          "explain": "Rủ, hỏi ý kiến → 초대할까요?"
+        }
+      ]
+    },
+    {
+      "pattern": "못",
+      "title": "không thể, không … được",
+      "note": [
+        "못 + động từ = muốn nhưng không làm được (vì không có khả năng hoặc vì hoàn cảnh): 바빠서 못 가요.",
+        "안 = không làm (do mình không muốn, hoặc chỉ phủ định). So sánh: 안 가요 (không đi) ↔ 못 가요 (không đi được).",
+        "Động từ N하다 → N 못 하다: 공부 못 해요, 숙제를 못 했어요. Đọc 못 해요 là [모태요].",
+        "Dạng dài: -지 못하다: 가지 못해요.",
+        "Không dùng 못 với tính từ: 못 추워요 ✗."
+      ],
+      "examples": [
+        [
+          "감기에 걸려서 파티에 못 가요.",
+          "Tôi bị cảm nên không đi tiệc được."
+        ],
+        [
+          "저는 김치를 못 먹어요.",
+          "Tôi không ăn được kimchi."
+        ],
+        [
+          "어제 숙제를 못 했어요.",
+          "Hôm qua tôi không làm được bài tập."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "바빠서 생일 파티에 ___.",
+          "options": [
+            "못 가요",
+            "가 못요",
+            "못 가세요?",
+            "안 못 가요"
+          ],
+          "explain": "Không đi được → 못 가요."
+        },
+        {
+          "q": "어제 아파서 ___. (숙제하다)",
+          "options": [
+            "숙제를 못 했어요",
+            "못 숙제했어요",
+            "숙제했 못어요",
+            "숙제를 못 했어서요"
+          ],
+          "explain": "N하다 → N(를) 못 하다: 숙제를 못 했어요."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "시간이 없어서 못 만났어요.",
+            "날씨가 못 추워요.",
+            "못 시간이 없어요.",
+            "시간이 없었어서 못 만났어요."
+          ],
+          "explain": "못 đi với động từ, không đi với tính từ hay 없다; không dùng quá khứ trước -어서."
+        },
+        {
+          "q": "\"Tôi không uống được cà phê\" là câu nào?",
+          "options": [
+            "커피를 못 마셔요.",
+            "커피를 마셔 못요.",
+            "못 커피를 마셔요.",
+            "커피를 못 마셨어서요."
+          ],
+          "explain": "못 đứng ngay trước động từ: 못 마셔요."
+        },
+        {
+          "q": "「저는 수영을 못 해요.」 nghĩa là gì?",
+          "options": [
+            "Tôi không biết bơi.",
+            "Tôi không thích bơi.",
+            "Tôi đã bơi xong.",
+            "Tôi bơi giỏi."
+          ],
+          "explain": "못 하다 = không làm được → không biết bơi."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "생일에 한국 사람들은 ____을 먹어요.",
+      "options": [
+        "미역국",
+        "손수건",
+        "넥타이",
+        "향수"
+      ],
+      "explain": "Sinh nhật người Hàn ăn canh rong biển (미역국)."
+    },
+    {
+      "q": "케이크에 ____을 켜요.",
+      "options": [
+        "촛불",
+        "미역국",
+        "귀걸이",
+        "지갑"
+      ],
+      "explain": "Thắp nến → 촛불을 켜요."
+    },
+    {
+      "q": "이 ____는 귀에 해요. 아주 예뻐요.",
+      "options": [
+        "귀걸이",
+        "반지",
+        "목걸이",
+        "넥타이"
+      ],
+      "explain": "Đeo ở tai → bông tai (귀걸이)."
+    },
+    {
+      "q": "____에 돈이 있어요.",
+      "options": [
+        "지갑",
+        "손수건",
+        "꽃다발",
+        "인형"
+      ],
+      "explain": "Tiền để trong ví → 지갑."
+    },
+    {
+      "q": "친구들을 제 생일 파티에 ____.",
+      "options": [
+        "초대했어요",
+        "포장했어요",
+        "껐어요",
+        "골랐어요"
+      ],
+      "explain": "Mời bạn tới tiệc → 초대했어요."
+    },
+    {
+      "q": "노래가 끝났어요. 이제 촛불을 ____.",
+      "options": [
+        "꺼요",
+        "켜요",
+        "골라요",
+        "드려요"
+      ],
+      "explain": "Hát xong thì thổi tắt nến → 꺼요 (← 끄다)."
+    },
+    {
+      "q": "선생님께 꽃다발을 ____.",
+      "options": [
+        "드렸어요",
+        "받으셨어요",
+        "고르셨어요",
+        "끄셨어요"
+      ],
+      "explain": "Tặng bậc trên → 드리다: 드렸어요."
+    },
+    {
+      "q": "친구가 선물을 줬어요. 정말 ____.",
+      "options": [
+        "고마워요",
+        "미안해요",
+        "죄송해요",
+        "늦어요"
+      ],
+      "explain": "Được tặng quà → cảm ơn: 고마워요 (고맙다 bất quy tắc ㅂ)."
+    },
+    {
+      "q": "가: ____ 어제 안 왔어요? 나: 감기에 걸려서 못 왔어요.",
+      "options": [
+        "왜",
+        "모두",
+        "함께",
+        "나이"
+      ],
+      "explain": "Hỏi lý do → 왜 (tại sao).",
+      "sayAnswer": "왜"
+    }
+  ],
+  "listening": [
+    {
+      "listen": "생일 축하해요! 이거 선물이에요.",
+      "options": [
+        "Chúc mừng sinh nhật! Đây là quà.",
+        "Cảm ơn bạn đã tặng quà.",
+        "Hôm nay là sinh nhật tôi.",
+        "Bạn chọn quà gì?"
+      ],
+      "explain": "생일 축하해요 = chúc mừng sinh nhật; 선물 = quà."
+    },
+    {
+      "listen": "늦어서 미안해요. 일이 많았어요.",
+      "options": [
+        "Xin lỗi vì đến muộn. Tôi có nhiều việc.",
+        "Xin lỗi, hôm nay tôi không đến được.",
+        "Tôi đến sớm vì ít việc.",
+        "Cảm ơn vì đã đợi tôi."
+      ],
+      "explain": "늦어서 미안해요 = xin lỗi vì muộn."
+    },
+    {
+      "listen": "가: 내일 같이 선물을 고를까요? 나: 미안해요. 내일은 바빠서 못 가요.",
+      "options": [
+        "Bận nên không đi được",
+        "Sẽ đi chọn quà cùng",
+        "Bị cảm nên ở nhà",
+        "Đi dự tiệc sinh nhật"
+      ],
+      "explain": "바빠서 못 가요 = bận nên không đi được.",
+      "q": "Ngày mai người thứ hai thế nào?"
+    },
+    {
+      "listen": "저는 어머니 생신에 향수를 드리려고 해요.",
+      "options": [
+        "Nước hoa",
+        "Mỹ phẩm",
+        "Bó hoa",
+        "Dây chuyền"
+      ],
+      "explain": "향수 = nước hoa; 드리려고 해요 = định biếu.",
+      "q": "Người nói định tặng mẹ gì?"
+    },
+    {
+      "listen": "한국에서는 생일에 미역국을 먹어요.",
+      "options": [
+        "Ở Hàn Quốc, người ta ăn canh rong biển vào ngày sinh nhật.",
+        "Ở Hàn Quốc, người ta ăn bánh kem vào ngày Tết.",
+        "Tôi không ăn được canh rong biển.",
+        "Sinh nhật tôi, mẹ nấu canh."
+      ],
+      "explain": "생일에 미역국을 먹어요 = sinh nhật ăn canh rong biển."
+    }
+  ],
+  "reading": {
+    "passage": "어제는 제 생일이었어요. 친구들을 집에 초대했어요. 민수 씨는 저에게 지갑을 줬어요. 수진 씨는 귀걸이를 줬어요. 정말 기뻤어요. 우리는 함께 미역국을 먹고 노래방에 갔어요. 그런데 동생은 감기에 걸려서 파티에 못 왔어요. 다음 주에 동생하고 같이 영화를 보려고 해요.",
+    "passageVi": "Hôm qua là sinh nhật tôi. Tôi đã mời bạn bè đến nhà. Minsu tặng tôi một cái ví. Suchin tặng bông tai. Tôi thật sự rất vui. Chúng tôi cùng ăn canh rong biển rồi đi hát karaoke. Nhưng em tôi bị cảm nên không đến dự tiệc được. Tuần sau tôi định đi xem phim cùng em.",
+    "questions": [
+      {
+        "q": "Minsu tặng người viết gì?",
+        "options": [
+          "Cái ví",
+          "Bông tai",
+          "Bánh kem",
+          "Bó hoa"
+        ],
+        "explain": "민수 씨는 저에게 지갑을 줬어요."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Em của người viết bị cảm nên không đến dự tiệc.",
+          "Tiệc tổ chức ở nhà hàng.",
+          "Suchin tặng cái ví.",
+          "Mọi người đi xem phim sau khi ăn."
+        ],
+        "explain": "동생은 감기에 걸려서 파티에 못 왔어요. Tiệc ở nhà, Suchin tặng bông tai, ăn xong đi karaoke."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu về một sinh nhật đáng nhớ: ai mời ai, tặng gì, có ai không đến được. Dùng -아/어서, -(으)ㄹ까요? và 못.",
+    "samples": [
+      [
+        "친구 생일이라서 목걸이를 샀어요.",
+        "Vì là sinh nhật bạn nên tôi mua dây chuyền."
+      ],
+      [
+        "같이 케이크를 만들까요?",
+        "Mình cùng làm bánh kem nhé?"
+      ],
+      [
+        "동생은 바빠서 파티에 못 왔어요.",
+        "Em tôi bận nên không đến tiệc được."
+      ],
+      [
+        "선물이 예뻐서 정말 기뻤어요.",
+        "Quà đẹp nên tôi rất vui."
+      ]
+    ],
+    "tips": "Không viết quá khứ trước -아/어서 (늦었어서 ✗). 못 đứng ngay trước động từ: 못 가요, 공부 못 해요."
+  }
+}

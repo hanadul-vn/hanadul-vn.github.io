@@ -1,0 +1,647 @@
+{
+  "id": "sc1-12",
+  "title": "Điện thoại",
+  "ko": "전화",
+  "goal": "Gọi và nghe điện thoại, để lại lời nhắn, nói việc mình định làm và nối hai ý trái ngược.",
+  "vocab": [
+    {
+      "group": "Điện thoại",
+      "words": [
+        [
+          "휴대폰",
+          "điện thoại di động (cách nói thường ngày)"
+        ],
+        [
+          "집 전화",
+          "điện thoại bàn ở nhà"
+        ],
+        [
+          "공중전화",
+          "điện thoại công cộng"
+        ],
+        [
+          "국제전화",
+          "cuộc gọi quốc tế"
+        ],
+        [
+          "연락처",
+          "số liên lạc"
+        ],
+        [
+          "전화 요금",
+          "cước điện thoại"
+        ],
+        [
+          "국가 번호",
+          "mã quốc gia"
+        ],
+        [
+          "지역 번호",
+          "mã vùng"
+        ],
+        [
+          "문자",
+          "tin nhắn"
+        ],
+        [
+          "답장",
+          "tin nhắn trả lời, hồi âm"
+        ],
+        [
+          "메모",
+          "lời nhắn ghi lại"
+        ],
+        [
+          "통화",
+          "cuộc gọi, việc nói chuyện điện thoại"
+        ]
+      ]
+    },
+    {
+      "group": "Gọi điện",
+      "words": [
+        [
+          "전화를 걸다",
+          "gọi điện (bấm số gọi đi)"
+        ],
+        [
+          "전화를 받다",
+          "nghe máy"
+        ],
+        [
+          "전화를 끊다",
+          "cúp máy"
+        ],
+        [
+          "전화가 오다",
+          "có điện thoại gọi đến"
+        ],
+        [
+          "전화를 바꾸다",
+          "chuyển máy cho người khác"
+        ],
+        [
+          "통화 중이다",
+          "máy đang bận"
+        ],
+        [
+          "문자를 보내다",
+          "gửi tin nhắn"
+        ],
+        [
+          "연락하다",
+          "liên lạc"
+        ],
+        [
+          "전하다",
+          "chuyển (lời), truyền đạt"
+        ],
+        [
+          "남기다",
+          "để lại"
+        ]
+      ]
+    },
+    {
+      "group": "Câu nói khi gọi điện",
+      "words": [
+        [
+          "여보세요?",
+          "A lô?"
+        ],
+        [
+          "실례지만 누구세요?",
+          "Xin lỗi, ai đấy ạ?"
+        ],
+        [
+          "지금 안 계세요.",
+          "Bây giờ người đó không có ở đây."
+        ],
+        [
+          "다시 전화하겠습니다.",
+          "Tôi sẽ gọi lại sau."
+        ],
+        [
+          "말씀 좀 전해 주세요.",
+          "Nhờ chuyển lời giúp tôi."
+        ],
+        [
+          "전화 잘못 거셨어요.",
+          "Anh/chị gọi nhầm số rồi."
+        ]
+      ]
+    },
+    {
+      "group": "Người và việc",
+      "words": [
+        [
+          "그분",
+          "vị ấy, người ấy (kính trọng)"
+        ],
+        [
+          "사장님",
+          "giám đốc"
+        ],
+        [
+          "부장님",
+          "trưởng phòng"
+        ],
+        [
+          "대사관",
+          "đại sứ quán"
+        ],
+        [
+          "약속",
+          "cuộc hẹn, lời hứa"
+        ],
+        [
+          "소리",
+          "âm thanh, tiếng"
+        ]
+      ]
+    },
+    {
+      "group": "Từ khác",
+      "words": [
+        [
+          "깨우다",
+          "đánh thức"
+        ],
+        [
+          "들어오다",
+          "đi vào, về (nhà, văn phòng)"
+        ],
+        [
+          "정하다",
+          "quyết định, định ra"
+        ],
+        [
+          "맞다",
+          "đúng"
+        ],
+        [
+          "늦게",
+          "muộn, trễ (trạng từ)"
+        ],
+        [
+          "나중에",
+          "lát nữa, sau này"
+        ],
+        [
+          "바로",
+          "ngay, liền"
+        ],
+        [
+          "잠깐",
+          "một lát"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "N에게 · N한테 · N께",
+      "title": "cho, tới (ai)",
+      "note": [
+        "Gắn sau danh từ chỉ người (hoặc con vật) nhận hành động: 친구에게 문자를 보내요 (Gửi tin nhắn cho bạn).",
+        "에게 dùng khi viết hoặc nói trang trọng, 한테 dùng khi nói chuyện thường ngày. Nghĩa giống nhau.",
+        "Người nhận là bậc trên (ông bà, bố mẹ, thầy cô) → 께: 할머니께 전화해요. Đừng nhầm với 께서 (chủ ngữ kính trọng, Bài 10).",
+        "Nhận TỪ ai → 에게서 / 한테서: 친구한테서 답장을 받았어요.",
+        "Nơi chốn, cơ quan dùng 에, không dùng 에게: 회사에 전화해요."
+      ],
+      "examples": [
+        [
+          "친구에게 문자를 보내요.",
+          "Tôi gửi tin nhắn cho bạn."
+        ],
+        [
+          "동생한테 전화했어요.",
+          "Tôi đã gọi điện cho em."
+        ],
+        [
+          "할머니께 전화를 해요.",
+          "Tôi gọi điện cho bà."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "친구___ 문자를 보냈어요.",
+          "options": [
+            "에게",
+            "에",
+            "께서",
+            "을"
+          ],
+          "explain": "Người nhận tin nhắn là bạn → 친구에게."
+        },
+        {
+          "q": "어머니가 저___ 전화했어요. (nói thường ngày)",
+          "options": [
+            "한테",
+            "에서",
+            "한테서",
+            "께"
+          ],
+          "explain": "Mẹ gọi CHO tôi → 저한테. 한테서 = từ ai."
+        },
+        {
+          "q": "할아버지___ 전화를 했어요. (kính trọng người nhận)",
+          "options": [
+            "께",
+            "께서",
+            "한테서",
+            "에"
+          ],
+          "explain": "Người nhận là bậc trên → 께. 께서 dùng cho chủ ngữ."
+        },
+        {
+          "q": "회사___ 전화를 걸었어요.",
+          "options": [
+            "에",
+            "에게",
+            "한테",
+            "께"
+          ],
+          "explain": "Công ty là nơi chốn → 에, không dùng 에게/한테."
+        },
+        {
+          "q": "어제 친구___ 답장을 받았어요. (từ bạn)",
+          "options": [
+            "한테서",
+            "한테",
+            "께",
+            "에"
+          ],
+          "explain": "Nhận TỪ ai → 한테서 / 에게서."
+        },
+        {
+          "q": "\"Tôi gửi tin nhắn cho em gái\" là câu nào?",
+          "options": [
+            "여동생에게 문자를 보내요.",
+            "여동생에서 문자를 보내요.",
+            "여동생을 문자를 보내요.",
+            "여동생께서 문자를 보내요."
+          ],
+          "explain": "Cho em gái → 여동생에게."
+        }
+      ]
+    },
+    {
+      "pattern": "-지만",
+      "title": "nhưng",
+      "note": [
+        "Nối hai vế trái ngược nhau: 한국어는 어렵지만 재미있어요 (Tiếng Hàn khó nhưng thú vị).",
+        "Gắn thẳng vào gốc động từ, tính từ: 비싸다 → 비싸지만, 맵다 → 맵지만 (gặp phụ âm nên giữ ㅂ).",
+        "Quá khứ: 았/었지만 — 전화했지만, 걸었지만.",
+        "Danh từ có patchim → 이지만, không patchim → 지만 hoặc 이지만: 학생이지만, 친구지만."
+      ],
+      "examples": [
+        [
+          "한국어는 어렵지만 재미있어요.",
+          "Tiếng Hàn khó nhưng thú vị."
+        ],
+        [
+          "전화를 걸었지만 친구가 안 받았어요.",
+          "Tôi đã gọi nhưng bạn không nghe máy."
+        ],
+        [
+          "휴대폰은 편리하지만 비싸요.",
+          "Điện thoại di động tiện nhưng đắt."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "한국어는 ___ 재미있어요. (어렵다)",
+          "options": [
+            "어렵지만",
+            "어려워지만",
+            "어렵어지만",
+            "어렵고지만"
+          ],
+          "explain": "Gốc 어렵 + 지만 → 어렵지만 (gặp phụ âm, giữ ㅂ)."
+        },
+        {
+          "q": "어제 전화를 ___ 친구가 안 받았어요. (걸다, quá khứ)",
+          "options": [
+            "걸었지만",
+            "걸지만었어요",
+            "거지만",
+            "걸었고만"
+          ],
+          "explain": "Quá khứ: 걸었 + 지만 → 걸었지만."
+        },
+        {
+          "q": "김치는 ___ 맛있어요. (맵다)",
+          "options": [
+            "맵지만",
+            "매워지만",
+            "매웁지만",
+            "맵어지만"
+          ],
+          "explain": "-지만 bắt đầu bằng phụ âm → giữ ㅂ: 맵지만."
+        },
+        {
+          "q": "저는 학생___ 아르바이트도 해요.",
+          "options": [
+            "이지만",
+            "지만이",
+            "이고만",
+            "은지만"
+          ],
+          "explain": "학생 có patchim → 학생이지만."
+        },
+        {
+          "q": "\"Hôm qua tôi gọi điện nhưng máy bận\" là câu nào?",
+          "options": [
+            "어제 전화했지만 통화 중이었어요.",
+            "어제 전화했고 통화 중이었어요.",
+            "어제 전화하려고 통화 중이었어요.",
+            "어제 전화하지 않고 통화 중이었어요."
+          ],
+          "explain": "Hai ý trái ngược (gọi ↔ máy bận) → 전화했지만."
+        },
+        {
+          "q": "「집 전화는 싸지만 휴대폰은 비싸요.」 nghĩa là gì?",
+          "options": [
+            "Điện thoại bàn rẻ nhưng điện thoại di động đắt.",
+            "Điện thoại bàn và di động đều đắt.",
+            "Vì điện thoại bàn rẻ nên di động đắt.",
+            "Điện thoại di động rẻ hơn điện thoại bàn."
+          ],
+          "explain": "-지만 = nhưng."
+        }
+      ]
+    },
+    {
+      "pattern": "-(으)려고 하다",
+      "title": "định (làm gì)",
+      "note": [
+        "Nói ý định, dự định của mình: 주말에 부모님께 전화하려고 해요 (Cuối tuần tôi định gọi cho bố mẹ).",
+        "Gốc có patchim → 으려고 하다: 먹으려고 해요. Gốc không patchim → 려고 하다: 가려고 해요.",
+        "Gốc có patchim ㄹ → giữ ㄹ + 려고: 만들려고 해요. Viết 할려고, 갈려고 là sai chính tả (chỉ là cách nói bồi).",
+        "Quá khứ 했어요 = đã định (nhưng chưa làm được): 전화하려고 했지만 시간이 없었어요.",
+        "-(으)ㄹ 거예요 (Bài 11) nói kế hoạch chắc chắn; -(으)려고 하다 nhấn vào ý định."
+      ],
+      "examples": [
+        [
+          "주말에 부모님께 전화하려고 해요.",
+          "Cuối tuần tôi định gọi điện cho bố mẹ."
+        ],
+        [
+          "점심에 김밥을 먹으려고 해요.",
+          "Bữa trưa tôi định ăn kimbap."
+        ],
+        [
+          "친구를 만나려고 했지만 시간이 없었어요.",
+          "Tôi đã định gặp bạn nhưng không có thời gian."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "저녁에 친구한테 ___ 해요. (전화하다)",
+          "options": [
+            "전화하려고",
+            "전화하으려고",
+            "전화할려고",
+            "전화해려고"
+          ],
+          "explain": "하 không patchim → 하려고. 할려고 là cách viết sai."
+        },
+        {
+          "q": "점심에 비빔밥을 ___ 해요. (먹다)",
+          "options": [
+            "먹으려고",
+            "먹려고",
+            "먹을려고",
+            "먹어려고"
+          ],
+          "explain": "먹 có patchim → 먹으려고."
+        },
+        {
+          "q": "주말에 케이크를 ___ 해요. (만들다)",
+          "options": [
+            "만들려고",
+            "만들으려고",
+            "만드려고",
+            "만들을려고"
+          ],
+          "explain": "Gốc có ㄹ → giữ ㄹ + 려고: 만들려고."
+        },
+        {
+          "q": "친구를 ___ 했지만 시간이 없었어요. (만나다)",
+          "options": [
+            "만나려고",
+            "만나으려고",
+            "만났으려고",
+            "만나고려고"
+          ],
+          "explain": "만나 không patchim → 만나려고 했지만 = đã định gặp nhưng…"
+        },
+        {
+          "q": "\"Tôi định học tiếng Hàn ở Hàn Quốc\" là câu nào?",
+          "options": [
+            "한국에서 한국어를 공부하려고 해요.",
+            "한국에서 한국어를 공부하려고 있어요.",
+            "한국에 한국어를 공부하려고 해요.",
+            "한국에서 한국어를 공부하고 해요."
+          ],
+          "explain": "Học ở đâu → 에서; định học → 공부하려고 해요."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "친구가 전화를 안 받아요. 친구는 지금 ____ 중이에요.",
+      "options": [
+        "통화",
+        "문자",
+        "메모",
+        "답장"
+      ],
+      "explain": "통화 중이다 = máy đang bận."
+    },
+    {
+      "q": "다른 나라에 전화해요. ____를 해요.",
+      "options": [
+        "국제전화",
+        "공중전화",
+        "집 전화",
+        "지역 번호"
+      ],
+      "explain": "Gọi sang nước khác → 국제전화."
+    },
+    {
+      "q": "친구한테 문자를 보냈지만 ____이 없어요.",
+      "options": [
+        "답장",
+        "연락처",
+        "지역 번호",
+        "소리"
+      ],
+      "explain": "Chưa có tin trả lời → 답장이 없어요."
+    },
+    {
+      "q": "베트남의 ____는 84예요.",
+      "options": [
+        "국가 번호",
+        "지역 번호",
+        "전화 요금",
+        "연락처"
+      ],
+      "explain": "84 là mã quốc gia của Việt Nam → 국가 번호."
+    },
+    {
+      "q": "전화가 와요. 전화를 ____.",
+      "options": [
+        "받아요",
+        "끊어요",
+        "남겨요",
+        "깨워요"
+      ],
+      "explain": "Có điện thoại đến → nghe máy: 전화를 받아요."
+    },
+    {
+      "q": "이야기가 끝났어요. 전화를 ____.",
+      "options": [
+        "끊어요",
+        "받아요",
+        "바꿔요",
+        "정해요"
+      ],
+      "explain": "Nói xong → cúp máy: 전화를 끊어요."
+    },
+    {
+      "q": "아침 일곱 시예요. 동생이 아직 자요. 동생을 ____.",
+      "options": [
+        "깨워요",
+        "남겨요",
+        "전해요",
+        "정해요"
+      ],
+      "explain": "Em còn ngủ → đánh thức: 깨워요."
+    },
+    {
+      "q": "사장님이 지금 안 계세요. 메모를 ____.",
+      "options": [
+        "남기세요",
+        "깨우세요",
+        "끊으세요",
+        "바꾸세요"
+      ],
+      "explain": "Để lại lời nhắn → 메모를 남기세요."
+    },
+    {
+      "q": "제 ____는 010-1234-5678이에요. 문자 주세요.",
+      "options": [
+        "연락처",
+        "약속",
+        "대사관",
+        "소리"
+      ],
+      "explain": "Số điện thoại để liên lạc → 연락처."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "여보세요? 거기 민수 씨 집이에요?",
+      "options": [
+        "A lô? Đó có phải nhà anh Minsu không?",
+        "A lô? Anh Minsu có khỏe không?",
+        "Anh Minsu đang ở công ty à?",
+        "Đây là số điện thoại của tôi."
+      ],
+      "explain": "여보세요 = A lô; 민수 씨 집이에요? = nhà anh Minsu phải không?"
+    },
+    {
+      "listen": "가: 김 선생님 계세요? 나: 지금 안 계세요. 메모를 남기시겠어요?",
+      "options": [
+        "Thầy Kim không có ở đây",
+        "Thầy Kim đang bận máy",
+        "Người gọi gọi nhầm số",
+        "Thầy Kim sẽ gọi lại ngay"
+      ],
+      "explain": "지금 안 계세요 = bây giờ không có ở đây.",
+      "q": "Người nghe máy nói gì?"
+    },
+    {
+      "listen": "저는 주말에 고향 친구에게 전화하려고 해요.",
+      "options": [
+        "Gọi điện cho bạn ở quê",
+        "Về quê thăm bạn",
+        "Gửi tin nhắn cho bạn",
+        "Gặp bạn ở quê"
+      ],
+      "explain": "고향 친구에게 전화하려고 해요 = định gọi cho bạn ở quê.",
+      "q": "Cuối tuần người nói định làm gì?"
+    },
+    {
+      "listen": "휴대폰은 편리하지만 전화 요금이 비싸요.",
+      "options": [
+        "Điện thoại di động tiện nhưng cước đắt.",
+        "Điện thoại di động rẻ và tiện.",
+        "Điện thoại di động bất tiện nhưng rẻ.",
+        "Cước điện thoại bàn đắt."
+      ],
+      "explain": "편리하지만 = tiện nhưng; 전화 요금이 비싸요 = cước đắt."
+    },
+    {
+      "listen": "죄송합니다. 전화 잘못 거셨어요.",
+      "options": [
+        "Xin lỗi, anh/chị gọi nhầm số rồi.",
+        "Xin lỗi, máy đang bận.",
+        "Xin lỗi, tôi sẽ gọi lại sau.",
+        "Xin lỗi, người đó không có ở đây."
+      ],
+      "explain": "전화 잘못 거셨어요 = gọi nhầm số."
+    }
+  ],
+  "reading": {
+    "passage": "저는 서울에서 한국어를 공부해요. 부모님은 하노이에 계세요. 저는 일요일에 부모님께 전화를 해요. 국제전화는 비싸지만 인터넷 전화는 싸요. 저는 보통 인터넷 전화를 해요. 어제는 어머니 생신이었어요. 어머니께 전화를 걸었지만 어머니는 전화를 안 받으셨어요. 오늘 다시 전화하려고 해요.",
+    "passageVi": "Tôi học tiếng Hàn ở Seoul. Bố mẹ tôi ở Hà Nội. Chủ nhật tôi gọi điện cho bố mẹ. Gọi quốc tế thì đắt nhưng điện thoại internet thì rẻ. Tôi thường gọi bằng điện thoại internet. Hôm qua là sinh nhật mẹ. Tôi đã gọi cho mẹ nhưng mẹ không nghe máy. Hôm nay tôi định gọi lại.",
+    "questions": [
+      {
+        "q": "Người viết thường gọi cho bố mẹ bằng gì?",
+        "options": [
+          "Điện thoại internet",
+          "Điện thoại công cộng",
+          "Gọi quốc tế thông thường",
+          "Tin nhắn"
+        ],
+        "explain": "저는 보통 인터넷 전화를 해요."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Hôm qua mẹ không nghe máy.",
+          "Hôm nay người viết sẽ về Hà Nội.",
+          "Bố mẹ sống ở Seoul.",
+          "Điện thoại internet đắt."
+        ],
+        "explain": "어머니는 전화를 안 받으셨어요. Bố mẹ ở Hà Nội, điện thoại internet rẻ."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu về một cuộc gọi hoặc tin nhắn gần đây của bạn. Dùng 에게/한테/께, -지만 và -(으)려고 하다.",
+    "samples": [
+      [
+        "어제 친구한테 문자를 보냈어요.",
+        "Hôm qua tôi gửi tin nhắn cho bạn."
+      ],
+      [
+        "친구에게 전화를 걸었지만 통화 중이었어요.",
+        "Tôi gọi cho bạn nhưng máy bận."
+      ],
+      [
+        "저녁에 할머니께 전화하려고 해요.",
+        "Buổi tối tôi định gọi cho bà."
+      ],
+      [
+        "국제전화는 비싸지만 자주 해요.",
+        "Gọi quốc tế đắt nhưng tôi gọi thường xuyên."
+      ]
+    ],
+    "tips": "Người nhận là bậc trên → 께. Gốc có patchim: 먹으려고; không patchim: 하려고 (không viết 할려고)."
+  }
+}

@@ -1,0 +1,636 @@
+{
+  "id": "sc1-14",
+  "title": "Sở thích",
+  "ko": "취미",
+  "goal": "Nói về sở thích, việc mình làm được hay không làm được, và làm việc đó thường xuyên đến mức nào.",
+  "vocab": [
+    {
+      "group": "Thể thao",
+      "words": [
+        [
+          "족구",
+          "bóng chuyền bằng chân (jokgu)"
+        ],
+        [
+          "탁구",
+          "bóng bàn"
+        ],
+        [
+          "배드민턴",
+          "cầu lông"
+        ],
+        [
+          "태권도",
+          "Taekwondo"
+        ],
+        [
+          "요가",
+          "yoga"
+        ],
+        [
+          "마라톤",
+          "chạy marathon"
+        ],
+        [
+          "스케이트",
+          "trượt băng"
+        ],
+        [
+          "볼링",
+          "bowling"
+        ],
+        [
+          "조깅",
+          "chạy bộ (jogging)"
+        ]
+      ]
+    },
+    {
+      "group": "Sở thích",
+      "words": [
+        [
+          "취미",
+          "sở thích"
+        ],
+        [
+          "독서",
+          "đọc sách (sở thích)"
+        ],
+        [
+          "사진을 찍다",
+          "chụp ảnh"
+        ],
+        [
+          "그림을 그리다",
+          "vẽ tranh"
+        ],
+        [
+          "음악 감상",
+          "nghe nhạc (thưởng thức âm nhạc)"
+        ],
+        [
+          "우표 수집",
+          "sưu tầm tem"
+        ],
+        [
+          "게임",
+          "trò chơi điện tử, game"
+        ],
+        [
+          "피아노를 치다",
+          "chơi piano"
+        ],
+        [
+          "기타를 치다",
+          "chơi đàn ghi-ta"
+        ],
+        [
+          "노래를 부르다",
+          "hát"
+        ],
+        [
+          "악기",
+          "nhạc cụ"
+        ],
+        [
+          "동호회",
+          "câu lạc bộ (theo sở thích)"
+        ]
+      ]
+    },
+    {
+      "group": "Tần suất",
+      "words": [
+        [
+          "언제나",
+          "luôn luôn, bao giờ cũng"
+        ],
+        [
+          "가끔",
+          "thỉnh thoảng"
+        ],
+        [
+          "거의 안",
+          "hầu như không"
+        ],
+        [
+          "전혀",
+          "hoàn toàn (không)"
+        ],
+        [
+          "매일",
+          "mỗi ngày"
+        ],
+        [
+          "일주일에 한 번",
+          "một tuần một lần"
+        ],
+        [
+          "한 달에 두 번",
+          "một tháng hai lần"
+        ]
+      ]
+    },
+    {
+      "group": "Khả năng",
+      "words": [
+        [
+          "잘하다",
+          "giỏi, làm tốt"
+        ],
+        [
+          "못하다",
+          "kém, không giỏi"
+        ],
+        [
+          "보통이다",
+          "bình thường, tạm được"
+        ],
+        [
+          "조금",
+          "một chút"
+        ],
+        [
+          "연습하다",
+          "luyện tập"
+        ],
+        [
+          "가르치다",
+          "dạy"
+        ],
+        [
+          "관심이 있다",
+          "quan tâm, có hứng thú"
+        ]
+      ]
+    },
+    {
+      "group": "Từ khác",
+      "words": [
+        [
+          "걷다",
+          "đi bộ"
+        ],
+        [
+          "묻다",
+          "hỏi"
+        ],
+        [
+          "걷기",
+          "đi bộ (môn thể dục)"
+        ],
+        [
+          "수영장",
+          "bể bơi"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "-(으)ㄹ 수 있다/없다",
+      "title": "có thể / không thể",
+      "note": [
+        "Nói khả năng hoặc điều kiện cho phép: 저는 피아노를 칠 수 있어요 (Tôi chơi được piano).",
+        "Gốc có patchim → 을 수 있다: 먹을 수 있어요. Gốc không patchim → ㄹ 수 있다: 갈 수 있어요.",
+        "Gốc có patchim ㄹ → giữ nguyên: 만들 수 있어요. Bất quy tắc: 돕다 → 도울 수 있어요, 걷다 → 걸을 수 있어요.",
+        "Không thể → -(으)ㄹ 수 없다 (gần nghĩa với 못): 갈 수 없어요 ≈ 못 가요.",
+        "Quá khứ: 갈 수 없었어요 (đã không thể đi)."
+      ],
+      "examples": [
+        [
+          "저는 한국 노래를 부를 수 있어요.",
+          "Tôi hát được bài hát Hàn Quốc."
+        ],
+        [
+          "오늘은 바빠서 운동할 수 없어요.",
+          "Hôm nay bận nên tôi không thể tập thể thao."
+        ],
+        [
+          "기타를 칠 수 있어요?",
+          "Bạn chơi được ghi-ta không?"
+        ]
+      ],
+      "questions": [
+        {
+          "q": "저는 기타를 ___ 있어요. (치다)",
+          "options": [
+            "칠 수",
+            "치을 수",
+            "칠을 수",
+            "쳐 수"
+          ],
+          "explain": "치 không patchim → 칠 수 있어요."
+        },
+        {
+          "q": "매운 음식을 ___ 있어요? (먹다)",
+          "options": [
+            "먹을 수",
+            "먹 수",
+            "먹어 수",
+            "먹는 수"
+          ],
+          "explain": "먹 có patchim → 먹을 수 있어요."
+        },
+        {
+          "q": "김치찌개를 ___ 있어요. (만들다)",
+          "options": [
+            "만들 수",
+            "만들을 수",
+            "만드을 수",
+            "만들어 수"
+          ],
+          "explain": "Gốc có ㄹ → 만들 수 있어요."
+        },
+        {
+          "q": "다리가 아파서 많이 ___ 없어요. (걷다)",
+          "options": [
+            "걸을 수",
+            "걷을 수",
+            "걸 수",
+            "걷 수"
+          ],
+          "explain": "Bất quy tắc ㄷ: 걷 + 을 → 걸을 수 없어요."
+        },
+        {
+          "q": "\"Tôi bận nên không thể đi\" là câu nào?",
+          "options": [
+            "바빠서 갈 수 없어요.",
+            "바빠서 갈 수 있어요.",
+            "바빠서 가을 수 없어요.",
+            "바빠서 갈 수 안 있어요."
+          ],
+          "explain": "Không thể đi → 갈 수 없어요."
+        },
+        {
+          "q": "가: 수영할 수 있어요? 나: 아니요, ___.",
+          "options": [
+            "수영할 수 없어요",
+            "수영할 수 있어요",
+            "수영하을 수 없어요",
+            "수영 수 없어요"
+          ],
+          "explain": "Trả lời phủ định → 수영할 수 없어요 (hoặc 수영 못 해요)."
+        }
+      ]
+    },
+    {
+      "pattern": "-기 · -는 것",
+      "title": "việc … (biến động từ thành danh từ)",
+      "note": [
+        "Biến động từ thành danh từ để làm chủ ngữ, tân ngữ: 제 취미는 사진을 찍는 것이에요 = 제 취미는 사진 찍기예요.",
+        "-는 것: gắn vào gốc động từ — 읽는 것, 보는 것. Gốc có ㄹ thì bỏ ㄹ: 만들다 → 만드는 것.",
+        "-기: gắn vào gốc, không bỏ ㄹ — 읽기, 걷기, 만들기. Hay dùng làm tên sở thích, môn học: 그림 그리기, 책 읽기.",
+        "Với 좋아하다, 싫어하다 thường dùng -는 것을: 저는 노래하는 것을 좋아해요."
+      ],
+      "examples": [
+        [
+          "제 취미는 사진을 찍는 것이에요.",
+          "Sở thích của tôi là chụp ảnh."
+        ],
+        [
+          "저는 그림 그리기를 좋아해요.",
+          "Tôi thích vẽ tranh."
+        ],
+        [
+          "저는 음식을 만드는 것을 좋아해요.",
+          "Tôi thích nấu ăn."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "제 취미는 책을 ___이에요. (읽다)",
+          "options": [
+            "읽는 것",
+            "읽은 것",
+            "읽을 것",
+            "읽기 것"
+          ],
+          "explain": "Sở thích (thói quen) → 읽는 것이에요."
+        },
+        {
+          "q": "저는 음식을 ___ 것을 좋아해요. (만들다)",
+          "options": [
+            "만드는",
+            "만들는",
+            "만들은",
+            "만드기"
+          ],
+          "explain": "Gốc có ㄹ + 는 → bỏ ㄹ: 만드는 것."
+        },
+        {
+          "q": "제 취미는 그림 ___예요. (그리다)",
+          "options": [
+            "그리기",
+            "그리는",
+            "그려기",
+            "그리기를"
+          ],
+          "explain": "Tên sở thích → 그림 그리기예요."
+        },
+        {
+          "q": "저는 노래___ 좋아해요.",
+          "options": [
+            "하는 것을",
+            "하는 것이",
+            "하기가",
+            "해는 것을"
+          ],
+          "explain": "좋아하다 cần tân ngữ → 노래하는 것을."
+        },
+        {
+          "q": "\"Sở thích của tôi là chụp ảnh\" là câu nào?",
+          "options": [
+            "제 취미는 사진을 찍는 것이에요.",
+            "제 취미는 사진을 찍어요.",
+            "제 취미는 사진을 찍는 것을 해요.",
+            "제 취미가 사진을 찍기 있어요."
+          ],
+          "explain": "N은/는 V-는 것이에요 = N là việc V."
+        }
+      ]
+    },
+    {
+      "pattern": "Bất quy tắc ㄷ",
+      "title": "gốc có patchim ㄷ gặp nguyên âm thì ㄷ → ㄹ",
+      "note": [
+        "Một số động từ có patchim ㄷ (듣다, 걷다, 묻다) khi gặp nguyên âm thì ㄷ đổi thành ㄹ.",
+        "듣다 → 들어요, 들었어요, 들을 수 있어요. 걷다 → 걸어요, 걸을까요. 묻다 → 물어요.",
+        "Gặp phụ âm thì giữ ㄷ: 듣고, 걷지만, 듣는 것, 걷기.",
+        "Một số động từ có ㄷ vẫn chia bình thường: 받다 → 받아요, 닫다 → 닫아요."
+      ],
+      "examples": [
+        [
+          "저는 매일 음악을 들어요.",
+          "Tôi nghe nhạc mỗi ngày."
+        ],
+        [
+          "주말에 공원에서 걸어요.",
+          "Cuối tuần tôi đi bộ ở công viên."
+        ],
+        [
+          "선생님께 물었어요.",
+          "Tôi đã hỏi thầy giáo."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "저는 매일 한국 노래를 ___. (듣다)",
+          "options": [
+            "들어요",
+            "듣어요",
+            "드러요",
+            "들러요"
+          ],
+          "explain": "듣 + 어요 → ㄷ thành ㄹ: 들어요."
+        },
+        {
+          "q": "어제 공원에서 한 시간 ___. (걷다)",
+          "options": [
+            "걸었어요",
+            "걷었어요",
+            "걸렀어요",
+            "거었어요"
+          ],
+          "explain": "걷 + 었어요 → 걸었어요."
+        },
+        {
+          "q": "모르는 것을 선생님께 ___. (묻다, quá khứ)",
+          "options": [
+            "물었어요",
+            "묻었어요",
+            "무었어요",
+            "물렀어요"
+          ],
+          "explain": "묻 + 었어요 → 물었어요."
+        },
+        {
+          "q": "친구한테서 선물을 ___. (받다)",
+          "options": [
+            "받았어요",
+            "발았어요",
+            "바랐어요",
+            "받었어요"
+          ],
+          "explain": "받다 chia bình thường: 받았어요."
+        },
+        {
+          "q": "음악을 ___ 공부해요. (듣다 + -고)",
+          "options": [
+            "듣고",
+            "들고",
+            "들으고",
+            "듯고"
+          ],
+          "explain": "-고 bắt đầu bằng phụ âm → giữ ㄷ: 듣고."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "같이 공원을 걸을까요?",
+            "같이 공원을 걷을까요?",
+            "같이 공원을 걸까요?",
+            "같이 공원을 걸으을까요?"
+          ],
+          "explain": "걷 + 을까요 → 걸을까요. 걸까요 là của 걸다 (treo, gọi điện)."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "제 취미는 ____이에요. 책을 많이 읽어요.",
+      "options": [
+        "독서",
+        "우표 수집",
+        "요가",
+        "볼링"
+      ],
+      "explain": "Đọc nhiều sách → 독서."
+    },
+    {
+      "q": "우표가 아주 많아요. 제 취미는 ____이에요.",
+      "options": [
+        "우표 수집",
+        "음악 감상",
+        "독서",
+        "조깅"
+      ],
+      "explain": "Có rất nhiều tem → sưu tầm tem."
+    },
+    {
+      "q": "저는 운동을 ____ 안 해요. 일 년에 한 번 해요.",
+      "options": [
+        "거의",
+        "언제나",
+        "매일",
+        "자주"
+      ],
+      "explain": "Một năm một lần → hầu như không (거의 안)."
+    },
+    {
+      "q": "저는 고기를 ____ 안 먹어요. 고기를 정말 싫어해요.",
+      "options": [
+        "전혀",
+        "언제나",
+        "자주",
+        "매일"
+      ],
+      "explain": "Hoàn toàn không ăn → 전혀 안."
+    },
+    {
+      "q": "저는 아침에 ____ 커피를 마셔요. 커피를 아주 좋아해요.",
+      "options": [
+        "언제나",
+        "전혀",
+        "거의",
+        "조금도"
+      ],
+      "explain": "Luôn luôn uống → 언제나. 전혀, 거의 đi với phủ định."
+    },
+    {
+      "q": "한국어를 ____ 해요. 아직 잘 못해요.",
+      "options": [
+        "조금",
+        "언제나",
+        "아주 잘",
+        "전혀"
+      ],
+      "explain": "Nói được một chút → 조금 해요."
+    },
+    {
+      "q": "민수 씨는 축구를 정말 ____. 학교에서 가장 잘해요.",
+      "options": [
+        "잘해요",
+        "못해요",
+        "보통이에요",
+        "싫어해요"
+      ],
+      "explain": "Giỏi nhất trường → 잘해요.",
+      "sayAnswer": "잘해요"
+    },
+    {
+      "q": "피아노하고 기타는 ____예요.",
+      "options": [
+        "악기",
+        "동호회",
+        "우표",
+        "요가"
+      ],
+      "explain": "Piano, ghi-ta là nhạc cụ (악기)."
+    },
+    {
+      "q": "토요일에 사진 ____ 사람들하고 같이 사진을 찍어요.",
+      "options": [
+        "동호회",
+        "악기",
+        "독서",
+        "수영장"
+      ],
+      "explain": "Câu lạc bộ nhiếp ảnh → 사진 동호회."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "제 취미는 그림을 그리는 것이에요.",
+      "options": [
+        "Sở thích của tôi là vẽ tranh.",
+        "Sở thích của tôi là chụp ảnh.",
+        "Tôi không biết vẽ tranh.",
+        "Tôi thích xem tranh."
+      ],
+      "explain": "그림을 그리는 것 = việc vẽ tranh."
+    },
+    {
+      "listen": "저는 피아노를 칠 수 있지만 기타는 못 쳐요.",
+      "options": [
+        "Piano",
+        "Ghi-ta",
+        "Cả piano và ghi-ta",
+        "Không chơi được nhạc cụ nào"
+      ],
+      "explain": "피아노를 칠 수 있지만 기타는 못 쳐요 = chơi được piano nhưng không chơi được ghi-ta.",
+      "q": "Người nói chơi được nhạc cụ nào?"
+    },
+    {
+      "listen": "가: 운동을 자주 해요? 나: 아니요, 가끔 해요. 일주일에 한 번 요가를 해요.",
+      "options": [
+        "Một tuần một lần",
+        "Mỗi ngày",
+        "Hầu như không tập",
+        "Một tháng hai lần"
+      ],
+      "explain": "일주일에 한 번 = một tuần một lần.",
+      "q": "Người thứ hai tập thể thao bao lâu một lần?"
+    },
+    {
+      "listen": "저는 매일 공원에서 한 시간 걸어요.",
+      "options": [
+        "Mỗi ngày tôi đi bộ một tiếng ở công viên.",
+        "Mỗi ngày tôi chạy bộ một tiếng.",
+        "Cuối tuần tôi đi bộ ở công viên.",
+        "Tôi đến công viên mất một tiếng."
+      ],
+      "explain": "걸어요 ← 걷다 (đi bộ)."
+    },
+    {
+      "listen": "가: 주말에 같이 볼링을 칠까요? 나: 미안해요. 저는 볼링을 칠 수 없어요.",
+      "options": [
+        "Không chơi bowling được",
+        "Cuối tuần bận",
+        "Rất thích bowling",
+        "Muốn chơi cầu lông"
+      ],
+      "explain": "볼링을 칠 수 없어요 = không chơi bowling được.",
+      "q": "Người thứ hai nói gì?"
+    }
+  ],
+  "reading": {
+    "passage": "제 취미는 사진을 찍는 것이에요. 주말에 사진 동호회 사람들하고 같이 산에 가요. 저는 사진은 잘 찍지만 그림은 잘 못 그려요. 제 친구 수진 씨는 그림을 아주 잘 그려요. 수진 씨는 매일 그림을 그려요. 그리고 수영도 할 수 있어요. 다음 달에 우리는 같이 바다에 가려고 해요. 저는 사진을 찍고 수진 씨는 그림을 그릴 거예요.",
+    "passageVi": "Sở thích của tôi là chụp ảnh. Cuối tuần tôi cùng những người trong câu lạc bộ nhiếp ảnh lên núi. Tôi chụp ảnh giỏi nhưng vẽ tranh không giỏi. Bạn tôi là Suchin vẽ tranh rất giỏi. Suchin vẽ tranh mỗi ngày. Và cô ấy cũng biết bơi. Tháng sau chúng tôi định cùng đi biển. Tôi sẽ chụp ảnh còn Suchin sẽ vẽ tranh.",
+    "questions": [
+      {
+        "q": "Sở thích của người viết là gì?",
+        "options": [
+          "Chụp ảnh",
+          "Vẽ tranh",
+          "Bơi",
+          "Leo núi"
+        ],
+        "explain": "제 취미는 사진을 찍는 것이에요."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Suchin vẽ tranh mỗi ngày.",
+          "Người viết vẽ tranh rất giỏi.",
+          "Suchin không biết bơi.",
+          "Tháng sau hai người sẽ lên núi."
+        ],
+        "explain": "수진 씨는 매일 그림을 그려요. Người viết vẽ không giỏi, Suchin biết bơi, tháng sau đi biển."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu về sở thích của bạn: thích làm gì, làm được gì, bao lâu làm một lần. Dùng -기/-는 것, -(으)ㄹ 수 있다/없다 và một động từ bất quy tắc ㄷ.",
+    "samples": [
+      [
+        "제 취미는 음악을 듣는 것이에요.",
+        "Sở thích của tôi là nghe nhạc."
+      ],
+      [
+        "저는 기타를 칠 수 있지만 피아노는 못 쳐요.",
+        "Tôi chơi được ghi-ta nhưng không chơi được piano."
+      ],
+      [
+        "일주일에 한 번 공원에서 걸어요.",
+        "Mỗi tuần một lần tôi đi bộ ở công viên."
+      ],
+      [
+        "저는 요리하는 것을 좋아해요.",
+        "Tôi thích nấu ăn."
+      ]
+    ],
+    "tips": "듣다 → 들어요, 걷다 → 걸어요 nhưng 듣고, 걷기. 만들다 + 는 것 → 만드는 것."
+  }
+}

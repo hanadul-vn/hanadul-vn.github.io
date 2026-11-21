@@ -19,6 +19,7 @@ python3 -m http.server 8000
 | `data/index.json` | Danh sách cấp độ và bài |
 | `data/lessons/<id>.json` | Nội dung từng bài |
 | `tools/check_data.py` | Kiểm tra dữ liệu bài, chạy trong CI trên mỗi PR |
+| `tools/e2e/run.js` | Kiểm thử đầu-cuối bằng Playwright (chạy tay trước khi mở PR) |
 | `assets/account.js`, `assets/merge.js` | Tài khoản (Supabase) và cách gộp tiến độ giữa các máy |
 | `supabase/` | SQL tạo bảng và hướng dẫn bật tài khoản |
 | `tests/` | Test gộp tiến độ, test SQL, test giao diện tài khoản |
@@ -34,6 +35,7 @@ python3 -m http.server 8000
    - `writing` (tùy chọn): `prompt`, `samples` (cặp `["câu mẫu", "nghĩa"]`) và `tips`.
 2. Thêm bài vào `data/index.json`.
 3. Chạy `python3 tools/check_data.py`.
+4. Kiểm thử đầu-cuối (Playwright): chạy `python3 -m http.server 8765` ở thư mục gốc rồi `node tools/e2e/run.js`. Script làm hết mọi bài (Ôn đầy đủ, Luyện nhanh), sổ câu sai, trang giới thiệu, điện thoại 375px, giao diện tối; in PASS/FAIL từng case.
 
 ## Trang giới thiệu, đăng ký và thống kê
 
