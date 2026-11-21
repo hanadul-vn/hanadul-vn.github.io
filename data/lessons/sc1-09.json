@@ -1,0 +1,682 @@
+{
+  "id": "sc1-09",
+  "title": "Nhà cửa",
+  "ko": "집",
+  "goal": "Tả vị trí đồ vật trong nhà, chỉ đường, nói đi bằng phương tiện gì và rủ, hỏi ý muốn của người khác.",
+  "vocab": [
+    {
+      "group": "Vị trí và phương hướng",
+      "words": [
+        [
+          "아래",
+          "dưới"
+        ],
+        [
+          "안",
+          "trong, bên trong"
+        ],
+        [
+          "밖",
+          "ngoài, bên ngoài"
+        ],
+        [
+          "옆",
+          "bên cạnh"
+        ],
+        [
+          "사이",
+          "giữa"
+        ],
+        [
+          "앞",
+          "trước"
+        ],
+        [
+          "뒤",
+          "sau"
+        ],
+        [
+          "왼쪽",
+          "bên trái"
+        ],
+        [
+          "오른쪽",
+          "bên phải"
+        ],
+        [
+          "양쪽",
+          "hai bên"
+        ],
+        [
+          "건너편",
+          "phía đối diện"
+        ],
+        [
+          "똑바로",
+          "thẳng"
+        ],
+        [
+          "동쪽",
+          "phía đông"
+        ],
+        [
+          "서쪽",
+          "phía tây"
+        ],
+        [
+          "남쪽",
+          "phía nam"
+        ],
+        [
+          "북쪽",
+          "phía bắc"
+        ]
+      ]
+    },
+    {
+      "group": "Nhà và các phòng",
+      "words": [
+        [
+          "주택",
+          "nhà riêng"
+        ],
+        [
+          "아파트",
+          "chung cư"
+        ],
+        [
+          "안방",
+          "phòng ngủ chính"
+        ],
+        [
+          "침실",
+          "phòng ngủ"
+        ],
+        [
+          "공부방",
+          "phòng học"
+        ],
+        [
+          "거실",
+          "phòng khách"
+        ],
+        [
+          "부엌",
+          "bếp"
+        ],
+        [
+          "현관",
+          "lối vào, sảnh cửa"
+        ],
+        [
+          "베란다",
+          "ban công"
+        ],
+        [
+          "세탁실",
+          "phòng giặt"
+        ],
+        [
+          "기숙사",
+          "ký túc xá"
+        ],
+        [
+          "하숙집",
+          "nhà trọ (có nấu cơm)"
+        ]
+      ]
+    },
+    {
+      "group": "Đồ đạc trong nhà",
+      "words": [
+        [
+          "침대",
+          "giường"
+        ],
+        [
+          "책장",
+          "tủ sách"
+        ],
+        [
+          "옷장",
+          "tủ quần áo"
+        ],
+        [
+          "소파",
+          "ghế sofa"
+        ],
+        [
+          "탁자",
+          "bàn nhỏ"
+        ],
+        [
+          "식탁",
+          "bàn ăn"
+        ],
+        [
+          "화장대",
+          "bàn trang điểm"
+        ],
+        [
+          "신발장",
+          "tủ giày"
+        ]
+      ]
+    },
+    {
+      "group": "Nơi chốn, đi lại",
+      "words": [
+        [
+          "경찰서",
+          "đồn cảnh sát"
+        ],
+        [
+          "세탁소",
+          "tiệm giặt là"
+        ],
+        [
+          "박물관",
+          "bảo tàng"
+        ],
+        [
+          "슈퍼마켓",
+          "siêu thị nhỏ"
+        ],
+        [
+          "지하철역",
+          "ga tàu điện ngầm"
+        ],
+        [
+          "버스 정류장",
+          "trạm xe buýt"
+        ],
+        [
+          "빵집",
+          "tiệm bánh"
+        ],
+        [
+          "꽃집",
+          "tiệm hoa"
+        ],
+        [
+          "미용실",
+          "tiệm làm tóc"
+        ],
+        [
+          "지하철",
+          "tàu điện ngầm"
+        ],
+        [
+          "버스",
+          "xe buýt"
+        ]
+      ]
+    },
+    {
+      "group": "Tính từ, từ khác",
+      "words": [
+        [
+          "편하다",
+          "thoải mái"
+        ],
+        [
+          "불편하다",
+          "bất tiện, không thoải mái"
+        ],
+        [
+          "편리하다",
+          "tiện lợi"
+        ],
+        [
+          "복잡하다",
+          "phức tạp, đông đúc"
+        ],
+        [
+          "친절하다",
+          "thân thiện, tử tế"
+        ],
+        [
+          "혼자",
+          "một mình"
+        ],
+        [
+          "정원",
+          "vườn"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "N(으)로",
+      "title": "về phía… · bằng (phương tiện)",
+      "note": [
+        "Chỉ hướng di chuyển: 오른쪽으로 가세요 (Hãy đi về bên phải), 어디로 가요?",
+        "Chỉ phương tiện: 버스로 가요 (đi bằng xe buýt), 지하철로 와요.",
+        "Danh từ có patchim → 으로: 왼쪽으로, 집으로.",
+        "Danh từ không patchim hoặc có patchim ㄹ → 로: 버스로, 어디로, 지하철로."
+      ],
+      "examples": [
+        [
+          "똑바로 가세요. 그리고 왼쪽으로 가세요.",
+          "Đi thẳng, rồi rẽ trái."
+        ],
+        [
+          "저는 지하철로 학교에 가요.",
+          "Tôi đi học bằng tàu điện ngầm."
+        ],
+        [
+          "어디로 가요? — 집으로 가요.",
+          "Bạn đi đâu đấy? — Tôi về nhà."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "오른쪽___ 가세요.",
+          "options": [
+            "으로",
+            "로",
+            "을",
+            "에서"
+          ],
+          "explain": "오른쪽 có patchim ㄱ → 으로."
+        },
+        {
+          "q": "학교에 버스___ 가요.",
+          "options": [
+            "로",
+            "으로",
+            "를",
+            "에서"
+          ],
+          "explain": "버스 không patchim → 로 (bằng xe buýt)."
+        },
+        {
+          "q": "저는 지하철___ 왔어요.",
+          "options": [
+            "로",
+            "으로",
+            "을",
+            "이"
+          ],
+          "explain": "지하철 có patchim ㄹ → 로, không dùng 으로."
+        },
+        {
+          "q": "어디___ 가요? — 집으로 가요.",
+          "options": [
+            "로",
+            "으로",
+            "를",
+            "이"
+          ],
+          "explain": "어디 không patchim → 로."
+        },
+        {
+          "q": "「저기에서 왼쪽으로 가세요.」 nghĩa là gì?",
+          "options": [
+            "Đến chỗ kia thì rẽ trái.",
+            "Đến chỗ kia thì rẽ phải.",
+            "Bên trái chỗ kia có nhà.",
+            "Hãy đi thẳng đến chỗ kia."
+          ],
+          "explain": "왼쪽으로 = về phía bên trái."
+        },
+        {
+          "q": "\"Tôi đi làm bằng tàu điện ngầm\" là câu nào?",
+          "options": [
+            "지하철로 회사에 가요.",
+            "지하철에서 회사에 가요.",
+            "지하철을 회사에 가요.",
+            "지하철으로 회사에 가요."
+          ],
+          "explain": "Phương tiện → (으)로; 지하철 có patchim ㄹ → 로."
+        }
+      ]
+    },
+    {
+      "pattern": "-(으)ㄹ래요",
+      "title": "muốn…, sẽ… (hỏi và nói ý muốn, thân mật)",
+      "note": [
+        "Dùng để nói mình muốn làm gì, hoặc hỏi ý muốn của người nghe: 뭐 먹을래요? — 냉면 먹을래요.",
+        "Gốc có patchim → 을래요: 먹다 → 먹을래요, 앉다 → 앉을래요.",
+        "Gốc không patchim → ㄹ래요: 가다 → 갈래요, 마시다 → 마실래요, 보다 → 볼래요.",
+        "Chỉ dùng cho tôi (câu kể) và bạn (câu hỏi), không dùng cho người thứ ba. Dùng với bạn bè, người thân quen."
+      ],
+      "examples": [
+        [
+          "뭐 마실래요? — 저는 녹차 마실래요.",
+          "Bạn muốn uống gì? — Mình uống trà xanh."
+        ],
+        [
+          "주말에 같이 영화 볼래요?",
+          "Cuối tuần đi xem phim cùng nhau không?"
+        ],
+        [
+          "저는 소파에 앉을래요.",
+          "Mình ngồi ghế sofa nhé."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "뭐 ___? (먹다)",
+          "options": [
+            "먹을래요",
+            "먹래요",
+            "먹을레요",
+            "먹었래요"
+          ],
+          "explain": "먹 có patchim → 을래요. Chú ý viết 래 chứ không phải 레."
+        },
+        {
+          "q": "저는 커피를 ___. (마시다)",
+          "options": [
+            "마실래요",
+            "마시을래요",
+            "마셜래요",
+            "마실레요"
+          ],
+          "explain": "마시 không patchim → ㄹ래요: 마실래요."
+        },
+        {
+          "q": "같이 영화 ___? (보다)",
+          "options": [
+            "볼래요",
+            "보을래요",
+            "봘래요",
+            "볼레요"
+          ],
+          "explain": "보 không patchim → 볼래요."
+        },
+        {
+          "q": "저는 소파에 ___. (앉다)",
+          "options": [
+            "앉을래요",
+            "앉래요",
+            "앉을레요",
+            "앉아을래요"
+          ],
+          "explain": "앉 có patchim → 앉을래요."
+        },
+        {
+          "q": "「주말에 집에서 쉴래요.」 nghĩa là gì?",
+          "options": [
+            "Cuối tuần tôi muốn nghỉ ở nhà.",
+            "Cuối tuần tôi đã nghỉ ở nhà.",
+            "Cuối tuần hãy nghỉ ở nhà đi.",
+            "Cuối tuần tôi không ở nhà."
+          ],
+          "explain": "쉬다 + ㄹ래요 = muốn nghỉ."
+        },
+        {
+          "q": "Hỏi bạn: \"Bạn muốn uống gì?\"",
+          "options": [
+            "뭐 마실래요?",
+            "뭐 마셨어요?",
+            "뭐 마십시다?",
+            "뭐 마시지 않아요?"
+          ],
+          "explain": "Hỏi ý muốn → -(으)ㄹ래요?"
+        }
+      ]
+    },
+    {
+      "pattern": "N도",
+      "title": "cũng",
+      "note": [
+        "도 = cũng, đứng thay vào chỗ 이/가, 은/는, 을/를: 저도, 사과도.",
+        "Với tiểu từ khác thì gắn sau: 에 + 도 → 에도, 에서 + 도 → 에서도.",
+        "Không viết 가도, 는도, 를도."
+      ],
+      "examples": [
+        [
+          "저는 학생이에요. 친구도 학생이에요.",
+          "Tôi là học sinh. Bạn tôi cũng là học sinh."
+        ],
+        [
+          "사과를 샀어요. 귤도 샀어요.",
+          "Tôi mua táo. Tôi cũng mua quýt."
+        ],
+        [
+          "거실에 소파가 있어요. 침실에도 소파가 있어요.",
+          "Phòng khách có sofa. Phòng ngủ cũng có sofa."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "저는 학생이에요. 친구___ 학생이에요.",
+          "options": [
+            "도",
+            "는도",
+            "가도",
+            "를"
+          ],
+          "explain": "Cũng → 도, thay cho 은/는/이/가."
+        },
+        {
+          "q": "사과를 샀어요. 귤___ 샀어요.",
+          "options": [
+            "도",
+            "을도",
+            "를도",
+            "와"
+          ],
+          "explain": "도 thay cho 을/를: 귤도."
+        },
+        {
+          "q": "거실에 소파가 있어요. 침실___ 소파가 있어요.",
+          "options": [
+            "에도",
+            "도에",
+            "에서도",
+            "를도"
+          ],
+          "explain": "Chỉ nơi có đồ vật dùng 에, thêm 도 phía sau → 에도."
+        },
+        {
+          "q": "Câu nào viết ĐÚNG?",
+          "options": [
+            "저도 아파트에 살아요.",
+            "저가도 아파트에 살아요.",
+            "저는도 아파트에 살아요.",
+            "저도를 아파트에 살아요."
+          ],
+          "explain": "도 đứng một mình thay cho 은/는: 저도."
+        },
+        {
+          "q": "「저도 커피 마실래요.」 nghĩa là gì?",
+          "options": [
+            "Tôi cũng muốn uống cà phê.",
+            "Tôi chỉ uống cà phê.",
+            "Tôi không uống cà phê.",
+            "Cà phê cũng ngon."
+          ],
+          "explain": "저도 = tôi cũng; 마실래요 = muốn uống."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "책이 책상 ____에 있어요. (trên mặt bàn)",
+      "options": [
+        "위",
+        "아래",
+        "뒤",
+        "밖"
+      ],
+      "explain": "위 = trên."
+    },
+    {
+      "q": "(Chỉ đường) ____ 가세요. 은행이 있어요.",
+      "options": [
+        "똑바로",
+        "혼자",
+        "양쪽",
+        "아래"
+      ],
+      "explain": "똑바로 = thẳng."
+    },
+    {
+      "q": "옷은 ____에 있어요.",
+      "options": [
+        "옷장",
+        "신발장",
+        "책장",
+        "식탁"
+      ],
+      "explain": "옷장 = tủ quần áo."
+    },
+    {
+      "q": "____에서 밥을 만들어요.",
+      "options": [
+        "부엌",
+        "침실",
+        "현관",
+        "베란다"
+      ],
+      "explain": "부엌 = bếp."
+    },
+    {
+      "q": "____에서 버스를 기다려요.",
+      "options": [
+        "버스 정류장",
+        "지하철역",
+        "빵집",
+        "세탁소"
+      ],
+      "explain": "버스 정류장 = trạm xe buýt."
+    },
+    {
+      "q": "빵집 ____에 꽃집이 있어요. (phía đối diện)",
+      "options": [
+        "건너편",
+        "사이",
+        "안",
+        "아래"
+      ],
+      "explain": "건너편 = phía đối diện."
+    },
+    {
+      "q": "기숙사가 학교 안에 있어요. 아주 ____.",
+      "options": [
+        "편리해요",
+        "불편해요",
+        "복잡해요",
+        "혼자예요"
+      ],
+      "explain": "Ở ngay trong trường → tiện lợi (편리하다)."
+    },
+    {
+      "q": "교실 ____에 학생이 없어요. 모두 밖에 있어요.",
+      "options": [
+        "안",
+        "밖",
+        "위",
+        "뒤"
+      ],
+      "explain": "Mọi người ở ngoài → trong lớp (안) không có ai."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "오른쪽으로 가세요.",
+      "options": [
+        "Hãy đi về bên phải.",
+        "Hãy đi về bên trái.",
+        "Hãy đi thẳng.",
+        "Hãy quay lại."
+      ],
+      "explain": "오른쪽 = bên phải; 으로 = về phía."
+    },
+    {
+      "listen": "가: 화장실이 어디에 있어요? 나: 거실 옆에 있어요.",
+      "options": [
+        "Cạnh phòng khách",
+        "Trong phòng ngủ",
+        "Sau bếp",
+        "Trước lối vào"
+      ],
+      "explain": "거실 옆 = cạnh phòng khách.",
+      "q": "Nhà vệ sinh ở đâu?"
+    },
+    {
+      "listen": "저는 지하철로 학교에 가요.",
+      "options": [
+        "Tôi đi học bằng tàu điện ngầm.",
+        "Tôi đi học bằng xe buýt.",
+        "Trường tôi ở cạnh ga tàu.",
+        "Tôi đi bộ đến trường."
+      ],
+      "explain": "지하철로 = bằng tàu điện ngầm."
+    },
+    {
+      "listen": "가: 뭐 마실래요? 나: 저는 녹차 마실래요.",
+      "options": [
+        "Trà xanh",
+        "Cà phê",
+        "Sữa",
+        "Nước ép"
+      ],
+      "explain": "녹차 = trà xanh.",
+      "q": "Người thứ hai muốn uống gì?"
+    },
+    {
+      "listen": "제 동생도 기숙사에 살아요.",
+      "options": [
+        "Em tôi cũng sống ở ký túc xá.",
+        "Em tôi sống ở nhà trọ.",
+        "Em tôi không sống ở ký túc xá.",
+        "Tôi sống một mình ở ký túc xá."
+      ],
+      "explain": "동생도 = em tôi cũng; 기숙사 = ký túc xá."
+    }
+  ],
+  "reading": {
+    "passage": "제 집은 아파트예요. 집에 방이 두 개 있어요. 침실하고 공부방이에요. 거실에는 소파가 있어요. 소파 앞에 탁자가 있어요. 부엌은 작아요. 거실은 커요. 집 앞에 버스 정류장이 있어요. 아주 편리해요. 제 친구도 이 아파트에 살아요.",
+    "passageVi": "Nhà tôi là căn hộ chung cư. Nhà có hai phòng: phòng ngủ và phòng học. Phòng khách có ghế sofa. Trước sofa có cái bàn nhỏ. Bếp thì nhỏ. Phòng khách thì rộng. Trước nhà có trạm xe buýt. Rất tiện lợi. Bạn tôi cũng sống ở chung cư này.",
+    "questions": [
+      {
+        "q": "Trước ghế sofa có gì?",
+        "options": [
+          "Bàn nhỏ",
+          "Tủ sách",
+          "Giường",
+          "Tủ giày"
+        ],
+        "explain": "소파 앞에 탁자가 있어요."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Trước nhà có trạm xe buýt.",
+          "Phòng khách nhỏ.",
+          "Nhà có ba phòng.",
+          "Bạn của người viết sống ở nhà riêng."
+        ],
+        "explain": "집 앞에 버스 정류장이 있어요. Phòng khách to, nhà có 2 phòng, bạn cũng sống ở chung cư này."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Tả nhà hoặc phòng của bạn 3–4 câu: có phòng gì, đồ gì nằm ở đâu, bạn đi đến trường/công ty bằng gì. Dùng từ chỉ vị trí, (으)로, 도.",
+    "samples": [
+      [
+        "제 방에는 침대하고 책상이 있어요.",
+        "Phòng tôi có giường và bàn học."
+      ],
+      [
+        "책상 위에 컴퓨터가 있어요.",
+        "Trên bàn có máy tính."
+      ],
+      [
+        "침대 옆에 옷장도 있어요.",
+        "Cạnh giường cũng có tủ quần áo."
+      ],
+      [
+        "저는 버스로 학교에 가요.",
+        "Tôi đi học bằng xe buýt."
+      ]
+    ],
+    "tips": "Vị trí: N + 위/아래/옆/앞/뒤 + 에 있어요. Phương tiện: 버스로, 지하철로."
+  }
+}

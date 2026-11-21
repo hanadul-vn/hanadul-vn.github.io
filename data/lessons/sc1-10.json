@@ -1,0 +1,771 @@
+{
+  "id": "sc1-10",
+  "title": "Gia đình",
+  "ko": "가족",
+  "goal": "Giới thiệu các thành viên trong gia đình, nói tuổi và nghề nghiệp, nói kính trọng về người lớn tuổi.",
+  "vocab": [
+    {
+      "group": "Gia đình",
+      "words": [
+        [
+          "가족",
+          "gia đình"
+        ],
+        [
+          "할아버지",
+          "ông nội"
+        ],
+        [
+          "할머니",
+          "bà nội"
+        ],
+        [
+          "외할아버지",
+          "ông ngoại"
+        ],
+        [
+          "외할머니",
+          "bà ngoại"
+        ],
+        [
+          "아버지",
+          "bố"
+        ],
+        [
+          "어머니",
+          "mẹ"
+        ],
+        [
+          "오빠",
+          "anh trai (em gái gọi)"
+        ],
+        [
+          "형",
+          "anh trai (em trai gọi)"
+        ],
+        [
+          "언니",
+          "chị gái (em gái gọi)"
+        ],
+        [
+          "누나",
+          "chị gái (em trai gọi)"
+        ],
+        [
+          "남동생",
+          "em trai"
+        ],
+        [
+          "여동생",
+          "em gái"
+        ],
+        [
+          "남편",
+          "chồng"
+        ],
+        [
+          "아내",
+          "vợ"
+        ],
+        [
+          "아들",
+          "con trai"
+        ],
+        [
+          "딸",
+          "con gái"
+        ],
+        [
+          "삼촌",
+          "chú, cậu"
+        ],
+        [
+          "고모",
+          "cô (em/chị của bố)"
+        ],
+        [
+          "사촌",
+          "anh chị em họ"
+        ]
+      ]
+    },
+    {
+      "group": "Nghề nghiệp",
+      "words": [
+        [
+          "교수",
+          "giáo sư"
+        ],
+        [
+          "연구원",
+          "nhà nghiên cứu"
+        ],
+        [
+          "군인",
+          "quân nhân, bộ đội"
+        ],
+        [
+          "사업가",
+          "doanh nhân"
+        ],
+        [
+          "변호사",
+          "luật sư"
+        ],
+        [
+          "경찰관",
+          "cảnh sát"
+        ],
+        [
+          "통역사",
+          "phiên dịch viên"
+        ],
+        [
+          "농부",
+          "nông dân"
+        ],
+        [
+          "사업을 하다",
+          "kinh doanh"
+        ],
+        [
+          "장사를 하다",
+          "buôn bán"
+        ],
+        [
+          "출장을 가다",
+          "đi công tác"
+        ]
+      ]
+    },
+    {
+      "group": "Từ kính trọng",
+      "words": [
+        [
+          "진지",
+          "cơm (kính trọng)"
+        ],
+        [
+          "댁",
+          "nhà (kính trọng)"
+        ],
+        [
+          "연세",
+          "tuổi (kính trọng)"
+        ],
+        [
+          "성함",
+          "tên (kính trọng)"
+        ],
+        [
+          "생신",
+          "sinh nhật (kính trọng)"
+        ],
+        [
+          "분 (người)",
+          "vị, người (kính trọng)",
+          "분"
+        ],
+        [
+          "계시다",
+          "có, ở (kính trọng)"
+        ],
+        [
+          "드시다",
+          "ăn, uống (kính trọng)"
+        ],
+        [
+          "주무시다",
+          "ngủ (kính trọng)"
+        ],
+        [
+          "말씀하시다",
+          "nói (kính trọng)"
+        ]
+      ]
+    },
+    {
+      "group": "Số đếm hàng chục",
+      "words": [
+        [
+          "서른",
+          "ba mươi (30)"
+        ],
+        [
+          "마흔",
+          "bốn mươi (40)"
+        ],
+        [
+          "쉰",
+          "năm mươi (50)"
+        ],
+        [
+          "예순",
+          "sáu mươi (60)"
+        ],
+        [
+          "일흔",
+          "bảy mươi (70)"
+        ],
+        [
+          "여든",
+          "tám mươi (80)"
+        ],
+        [
+          "아흔",
+          "chín mươi (90)"
+        ],
+        [
+          "살",
+          "tuổi"
+        ]
+      ]
+    },
+    {
+      "group": "Từ khác",
+      "words": [
+        [
+          "결혼식",
+          "lễ cưới"
+        ],
+        [
+          "강아지",
+          "chó con"
+        ],
+        [
+          "열심히",
+          "chăm chỉ"
+        ],
+        [
+          "전공하다",
+          "học chuyên ngành"
+        ],
+        [
+          "근처",
+          "gần, lân cận"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "Số thuần Hàn hàng chục",
+      "title": "열, 스물, 서른… và tuổi",
+      "note": [
+        "Hàng chục thuần Hàn: 열 (10), 스물 (20), 서른 (30), 마흔 (40), 쉰 (50), 예순 (60), 일흔 (70), 여든 (80), 아흔 (90). 100 dùng số Hán Hàn: 백.",
+        "Nói tuổi dùng số thuần Hàn + 살: 서른 살, 마흔다섯 살.",
+        "Ghép như Bài 5: 스물 + 하나 → 스물한 살, 스물 + 둘 → 스물두 살.",
+        "Đứng ngay trước đơn vị đếm, 스물 đổi thành 스무: 스무 살, 스무 개."
+      ],
+      "examples": [
+        [
+          "저는 스무 살이에요.",
+          "Tôi 20 tuổi."
+        ],
+        [
+          "형은 서른두 살이에요.",
+          "Anh tôi 32 tuổi."
+        ],
+        [
+          "할머니는 여든 살이세요.",
+          "Bà tôi 80 tuổi."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "Tôi 20 tuổi: 저는 ___ 살이에요.",
+          "options": [
+            "스무",
+            "스물",
+            "이십",
+            "스물이"
+          ],
+          "explain": "Trước đơn vị đếm, 스물 → 스무: 스무 살."
+        },
+        {
+          "q": "Anh tôi 30 tuổi: 형은 ___ 살이에요.",
+          "options": [
+            "서른",
+            "삼십",
+            "세른",
+            "마흔"
+          ],
+          "explain": "30 thuần Hàn = 서른."
+        },
+        {
+          "q": "마흔 = ?",
+          "options": [
+            "40",
+            "30",
+            "50",
+            "14"
+          ],
+          "explain": "마흔 = 40."
+        },
+        {
+          "q": "Tôi 22 tuổi: 저는 ___이에요.",
+          "options": [
+            "스물두 살",
+            "스무두 살",
+            "스물둘 살",
+            "이십둘 살"
+          ],
+          "explain": "스물 + 두 → 스물두 살 (chỉ 20 tròn mới là 스무)."
+        },
+        {
+          "q": "「할머니는 올해 여든 살이세요.」 Bà bao nhiêu tuổi?",
+          "options": [
+            "80",
+            "18",
+            "70",
+            "90"
+          ],
+          "explain": "여든 = 80."
+        },
+        {
+          "q": "55 tuổi nói thế nào?",
+          "options": [
+            "쉰다섯 살",
+            "오십다섯 살",
+            "다섯쉰 살",
+            "쉰닷 살"
+          ],
+          "explain": "쉰 (50) + 다섯 (5) → 쉰다섯 살."
+        }
+      ]
+    },
+    {
+      "pattern": "N께서 / N께서는",
+      "title": "kính trọng của 이/가 và 은/는",
+      "note": [
+        "Khi chủ ngữ là người bề trên (ông bà, bố mẹ, thầy cô), thay 이/가 bằng 께서, thay 은/는 bằng 께서는.",
+        "할아버지가 → 할아버지께서, 선생님은 → 선생님께서는.",
+        "Đi kèm động từ có -(으)시-: 아버지께서 회사에 가세요.",
+        "Không nói về mình bằng 께서."
+      ],
+      "examples": [
+        [
+          "아버지께서 회사에 가세요.",
+          "Bố đi làm."
+        ],
+        [
+          "선생님께서 책을 읽으세요.",
+          "Thầy giáo đọc sách."
+        ],
+        [
+          "할머니께서는 부산에 사세요.",
+          "Bà tôi thì sống ở Busan."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "할아버지___ 책을 읽으세요.",
+          "options": [
+            "께서",
+            "가",
+            "께",
+            "에서"
+          ],
+          "explain": "Chủ ngữ là ông → 께서."
+        },
+        {
+          "q": "아버지___ 회사에 가세요.",
+          "options": [
+            "께서",
+            "이",
+            "에게",
+            "는께서"
+          ],
+          "explain": "Kính trọng của 이/가 → 께서."
+        },
+        {
+          "q": "선생님___ 한국 사람이세요. 저는 베트남 사람이에요.",
+          "options": [
+            "께서는",
+            "께서가",
+            "는께서",
+            "께는"
+          ],
+          "explain": "Đối chiếu, kính trọng của 은/는 → 께서는."
+        },
+        {
+          "q": "Câu nào viết ĐÚNG?",
+          "options": [
+            "어머니께서 요리하세요.",
+            "어머니께서가 요리하세요.",
+            "어머니께 요리하세요.",
+            "어머니는께서 요리하세요."
+          ],
+          "explain": "께서 đứng một mình thay cho 이/가."
+        },
+        {
+          "q": "「할머니께서 주무세요.」 nghĩa là gì?",
+          "options": [
+            "Bà đang ngủ.",
+            "Bà đang ăn.",
+            "Bà đang nói.",
+            "Bà ở nhà."
+          ],
+          "explain": "주무시다 = ngủ (kính trọng)."
+        }
+      ]
+    },
+    {
+      "pattern": "-(으)시-",
+      "title": "kính trọng người làm hành động",
+      "note": [
+        "Gắn vào gốc động từ/tính từ khi chủ ngữ là người bề trên.",
+        "Gốc có patchim → 으시: 읽다 → 읽으세요 / 읽으셨어요 / 읽으십니다.",
+        "Gốc không patchim → 시: 가다 → 가세요 / 가셨어요 / 가십니다.",
+        "Danh từ + 이다 → (이)세요: 선생님이세요, 변호사세요.",
+        "Từ đặc biệt: 먹다/마시다 → 드시다, 자다 → 주무시다, 있다 (ở) → 계시다, 말하다 → 말씀하시다."
+      ],
+      "examples": [
+        [
+          "아버지께서 신문을 읽으세요.",
+          "Bố đọc báo."
+        ],
+        [
+          "할머니께서 어제 시장에 가셨어요.",
+          "Hôm qua bà đi chợ."
+        ],
+        [
+          "할아버지께서 방에 계세요.",
+          "Ông đang ở trong phòng."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "아버지께서 지금 신문을 ___. (읽다)",
+          "options": [
+            "읽으세요",
+            "읽세요",
+            "읽어세요",
+            "읽시세요"
+          ],
+          "explain": "읽 có patchim → 읽으세요."
+        },
+        {
+          "q": "할머니께서 어제 시장에 ___. (가다, quá khứ)",
+          "options": [
+            "가셨어요",
+            "갔으세요",
+            "가셨세요",
+            "가세었어요"
+          ],
+          "explain": "Gốc + 시 + 었어요 → 가셨어요."
+        },
+        {
+          "q": "할아버지께서 진지를 ___. (먹다)",
+          "options": [
+            "드세요",
+            "먹으세요",
+            "먹세요",
+            "드셔세요"
+          ],
+          "explain": "먹다 dạng kính trọng là 드시다 → 드세요."
+        },
+        {
+          "q": "할아버지께서 방에 ___. (있다: ở)",
+          "options": [
+            "계세요",
+            "있으세요",
+            "있세요",
+            "계셔세요"
+          ],
+          "explain": "있다 (ở đâu) dạng kính trọng là 계시다 → 계세요."
+        },
+        {
+          "q": "어머니께서 지금 ___. (자다)",
+          "options": [
+            "주무세요",
+            "자세요",
+            "자으세요",
+            "주무셔세요"
+          ],
+          "explain": "자다 dạng kính trọng là 주무시다 → 주무세요."
+        },
+        {
+          "q": "선생님께서 ___. (말하다)",
+          "options": [
+            "말씀하세요",
+            "말하으세요",
+            "말씀해세요",
+            "말해세요"
+          ],
+          "explain": "말하다 dạng kính trọng là 말씀하시다 → 말씀하세요."
+        }
+      ]
+    },
+    {
+      "pattern": "Lược ㄹ",
+      "title": "gốc có patchim ㄹ gặp ㄴ, ㅂ, ㅅ thì bỏ ㄹ",
+      "note": [
+        "Gốc có patchim ㄹ (살다, 만들다, 알다…) khi gặp ㄴ, ㅂ, ㅅ thì ㄹ rơi mất.",
+        "-ㅂ니다: 살다 → 삽니다, 만들다 → 만듭니다, 알다 → 압니다.",
+        "-(으)세요: không thêm 으 và bỏ ㄹ → 사세요, 만드세요, 아세요.",
+        "Gặp -아/어요 thì giữ ㄹ: 살아요, 만들어요, 알아요."
+      ],
+      "examples": [
+        [
+          "저는 하노이에 삽니다.",
+          "Tôi sống ở Hà Nội."
+        ],
+        [
+          "어머니께서 김치를 만드세요.",
+          "Mẹ làm kim chi."
+        ],
+        [
+          "그 사람을 압니까?",
+          "Bạn có biết người đó không?"
+        ]
+      ],
+      "questions": [
+        {
+          "q": "어디에 ___? (살다, -(으)세요)",
+          "options": [
+            "사세요",
+            "살으세요",
+            "살세요",
+            "사으세요"
+          ],
+          "explain": "Gốc ㄹ + 세요 → bỏ ㄹ: 사세요."
+        },
+        {
+          "q": "저는 하노이에 ___. (살다, -ㅂ니다)",
+          "options": [
+            "삽니다",
+            "살습니다",
+            "살읍니다",
+            "사습니다"
+          ],
+          "explain": "살 + ㅂ니다 → bỏ ㄹ: 삽니다."
+        },
+        {
+          "q": "어머니께서 김치를 ___. (만들다, -(으)세요)",
+          "options": [
+            "만드세요",
+            "만들으세요",
+            "만들세요",
+            "만드으세요"
+          ],
+          "explain": "만들 + 세요 → bỏ ㄹ: 만드세요."
+        },
+        {
+          "q": "그 사람을 ___? (알다, -ㅂ니까)",
+          "options": [
+            "압니까",
+            "알습니까",
+            "알읍니까",
+            "아습니까"
+          ],
+          "explain": "알 + ㅂ니까 → bỏ ㄹ: 압니까."
+        },
+        {
+          "q": "Câu nào viết ĐÚNG?",
+          "options": [
+            "저는 서울에 살아요.",
+            "저는 서울에 사아요.",
+            "저는 서울에 삽아요.",
+            "저는 서울에 살으아요."
+          ],
+          "explain": "Gặp -아/어요 thì giữ ㄹ: 살아요."
+        },
+        {
+          "q": "「할머니께서 부산에 사세요.」 nghĩa là gì?",
+          "options": [
+            "Bà sống ở Busan.",
+            "Bà đi Busan.",
+            "Bà làm việc ở Busan.",
+            "Bà mua đồ ở Busan."
+          ],
+          "explain": "사세요 ← 살다 + 세요 (bỏ ㄹ); 부산에 + 살다 = sống ở Busan."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "Bố của mẹ gọi là ____.",
+      "options": [
+        "외할아버지",
+        "할아버지",
+        "삼촌",
+        "남편"
+      ],
+      "explain": "Bên ngoại thêm 외: 외할아버지 = ông ngoại."
+    },
+    {
+      "q": "Em trai gọi chị gái là ____.",
+      "options": [
+        "누나",
+        "언니",
+        "오빠",
+        "여동생"
+      ],
+      "explain": "Em trai gọi chị là 누나; em gái gọi chị là 언니."
+    },
+    {
+      "q": "Em gái gọi anh trai là ____.",
+      "options": [
+        "오빠",
+        "형",
+        "누나",
+        "남동생"
+      ],
+      "explain": "Em gái gọi anh là 오빠; em trai gọi anh là 형."
+    },
+    {
+      "q": "우리 아버지는 ____예요. 대학교에서 일하세요.",
+      "options": [
+        "교수",
+        "농부",
+        "군인",
+        "경찰관"
+      ],
+      "explain": "Làm ở trường đại học → 교수 (giáo sư)."
+    },
+    {
+      "q": "할아버지, ____ 드세요.",
+      "options": [
+        "진지",
+        "성함",
+        "연세",
+        "댁"
+      ],
+      "explain": "진지 = cơm (kính trọng); 진지 드세요 = mời ông dùng cơm."
+    },
+    {
+      "q": "아버지께서 다음 주에 일본에 ____을 가세요.",
+      "options": [
+        "출장",
+        "사업",
+        "장사",
+        "결혼식"
+      ],
+      "explain": "출장을 가다 = đi công tác."
+    },
+    {
+      "q": "할머니 ____은 부산에 있어요. (nhà của bà)",
+      "options": [
+        "댁",
+        "진지",
+        "생신",
+        "성함"
+      ],
+      "explain": "Nhà của người lớn tuổi → 댁."
+    },
+    {
+      "q": "오늘은 할아버지 ____이에요. 케이크를 샀어요.",
+      "options": [
+        "생신",
+        "성함",
+        "연세",
+        "결혼식"
+      ],
+      "explain": "Sinh nhật của người lớn tuổi nói 생신 (kính trọng của 생일)."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "우리 가족은 다섯 명이에요.",
+      "options": [
+        "5 người",
+        "4 người",
+        "6 người",
+        "3 người"
+      ],
+      "explain": "다섯 명 = 5 người.",
+      "q": "Gia đình có mấy người?"
+    },
+    {
+      "listen": "할아버지께서 진지를 드세요.",
+      "options": [
+        "Ông đang dùng cơm.",
+        "Ông đang ngủ.",
+        "Ông đang nói chuyện.",
+        "Ông đang ở nhà."
+      ],
+      "explain": "진지를 드세요 = dùng cơm (kính trọng)."
+    },
+    {
+      "listen": "가: 형이 몇 살이에요? 나: 서른두 살이에요.",
+      "options": [
+        "32 tuổi",
+        "23 tuổi",
+        "42 tuổi",
+        "30 tuổi"
+      ],
+      "explain": "서른두 = 32.",
+      "q": "Anh trai bao nhiêu tuổi?"
+    },
+    {
+      "listen": "우리 어머니는 변호사세요.",
+      "options": [
+        "Mẹ tôi là luật sư.",
+        "Mẹ tôi là cảnh sát.",
+        "Mẹ tôi là giáo sư.",
+        "Mẹ tôi là phiên dịch viên."
+      ],
+      "explain": "변호사 = luật sư."
+    },
+    {
+      "listen": "아버지께서 지금 방에서 주무세요.",
+      "options": [
+        "Bố đang ngủ trong phòng.",
+        "Bố đang ăn trong phòng.",
+        "Bố đang làm việc trong phòng.",
+        "Bố không ở trong phòng."
+      ],
+      "explain": "주무세요 = ngủ (kính trọng)."
+    }
+  ],
+  "reading": {
+    "passage": "우리 가족은 네 명이에요. 아버지께서는 쉰다섯 살이세요. 아버지께서는 회사에서 일하세요. 어머니께서는 선생님이세요. 누나는 스물여덟 살이에요. 누나는 통역사예요. 저는 대학생이에요. 주말에 우리 가족은 할머니 댁에 가요. 할머니께서는 부산에 사세요.",
+    "passageVi": "Gia đình tôi có 4 người. Bố tôi 55 tuổi. Bố làm việc ở công ty. Mẹ tôi là giáo viên. Chị tôi 28 tuổi. Chị là phiên dịch viên. Tôi là sinh viên. Cuối tuần cả nhà tôi đến nhà bà. Bà tôi sống ở Busan.",
+    "questions": [
+      {
+        "q": "Bố của người viết bao nhiêu tuổi?",
+        "options": [
+          "55",
+          "28",
+          "45",
+          "65"
+        ],
+        "explain": "쉰다섯 살 = 55 tuổi."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Bà sống ở Busan.",
+          "Mẹ là phiên dịch viên.",
+          "Chị gái là giáo viên.",
+          "Gia đình có 5 người."
+        ],
+        "explain": "할머니께서는 부산에 사세요. Mẹ là giáo viên, chị là phiên dịch viên, nhà có 4 người."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Giới thiệu gia đình bạn 3–4 câu: có mấy người, mỗi người bao nhiêu tuổi, làm nghề gì. Nói về bố mẹ, ông bà bằng 께서 và -(으)시-.",
+    "samples": [
+      [
+        "우리 가족은 다섯 명이에요.",
+        "Gia đình tôi có 5 người."
+      ],
+      [
+        "아버지께서는 쉰 살이세요. 회사원이세요.",
+        "Bố tôi 50 tuổi. Bố là nhân viên công ty."
+      ],
+      [
+        "어머니께서는 김치를 아주 잘 만드세요.",
+        "Mẹ tôi làm kim chi rất giỏi."
+      ],
+      [
+        "남동생은 스무 살이에요. 대학생이에요.",
+        "Em trai tôi 20 tuổi. Em là sinh viên."
+      ]
+    ],
+    "tips": "Nói về mình và em thì không dùng kính trọng. Tuổi: số thuần Hàn + 살 (스무 살, 서른 살)."
+  }
+}
