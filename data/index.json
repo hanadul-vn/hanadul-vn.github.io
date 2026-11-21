@@ -67,6 +67,38 @@
           "ko": "물건 사기",
           "summary": "Đơn vị đếm · 은/는 đối chiếu · lược ㅡ · -고 싶다",
           "icon": "🛍️"
+        },
+        {
+          "id": "sc1-08",
+          "no": "8",
+          "title": "Món ăn",
+          "ko": "음식",
+          "summary": "-겠- · -지 않다 · -(으)세요",
+          "icon": "🍲"
+        },
+        {
+          "id": "sc1-09",
+          "no": "9",
+          "title": "Nhà cửa",
+          "ko": "집",
+          "summary": "(으)로 · -(으)ㄹ래요 · 도",
+          "icon": "🏠"
+        },
+        {
+          "id": "sc1-10",
+          "no": "10",
+          "title": "Gia đình",
+          "ko": "가족",
+          "summary": "Số đếm hàng chục · 께서 · -(으)시- · lược ㄹ",
+          "icon": "👨‍👩‍👧"
+        },
+        {
+          "id": "sc1-11",
+          "no": "11",
+          "title": "Thời tiết",
+          "ko": "날씨",
+          "summary": "-고 · 부터~까지 · -(으)ㄹ 거예요 · bất quy tắc ㅂ",
+          "icon": "🌤️"
         }
       ],
       "subtitle": "Làm quen chữ Hangeul và những câu giao tiếp đầu tiên"

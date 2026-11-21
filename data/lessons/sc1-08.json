@@ -1,0 +1,700 @@
+{
+  "id": "sc1-08",
+  "title": "Món ăn",
+  "ko": "음식",
+  "goal": "Gọi món ở quán ăn, nói về mùi vị, đoán món ăn có ngon không và đưa ra lời mời, yêu cầu lịch sự.",
+  "vocab": [
+    {
+      "group": "Món ăn Hàn Quốc",
+      "words": [
+        [
+          "국",
+          "canh"
+        ],
+        [
+          "김치",
+          "kim chi"
+        ],
+        [
+          "된장찌개",
+          "canh tương đậu"
+        ],
+        [
+          "냉면",
+          "mì lạnh"
+        ],
+        [
+          "떡",
+          "bánh gạo tteok"
+        ],
+        [
+          "삼겹살",
+          "thịt ba chỉ nướng"
+        ],
+        [
+          "김치찌개",
+          "canh kim chi"
+        ],
+        [
+          "갈비탕",
+          "canh sườn bò"
+        ],
+        [
+          "삼계탕",
+          "gà hầm sâm"
+        ],
+        [
+          "볶음밥",
+          "cơm rang"
+        ],
+        [
+          "국수",
+          "mì sợi, bún"
+        ],
+        [
+          "반찬",
+          "món ăn kèm"
+        ],
+        [
+          "음식",
+          "thức ăn, món ăn"
+        ]
+      ]
+    },
+    {
+      "group": "Mùi vị",
+      "words": [
+        [
+          "맛",
+          "vị"
+        ],
+        [
+          "맛있다",
+          "ngon"
+        ],
+        [
+          "맛없다",
+          "không ngon"
+        ],
+        [
+          "달다",
+          "ngọt"
+        ],
+        [
+          "짜다",
+          "mặn"
+        ],
+        [
+          "맵다",
+          "cay"
+        ],
+        [
+          "시다",
+          "chua"
+        ],
+        [
+          "쓰다 (vị)",
+          "đắng",
+          "쓰다"
+        ],
+        [
+          "싱겁다",
+          "nhạt"
+        ]
+      ]
+    },
+    {
+      "group": "Ở quán ăn",
+      "words": [
+        [
+          "숟가락",
+          "thìa"
+        ],
+        [
+          "젓가락",
+          "đũa"
+        ],
+        [
+          "메뉴",
+          "thực đơn"
+        ],
+        [
+          "컵",
+          "cốc"
+        ],
+        [
+          "테이블",
+          "bàn (ở quán)"
+        ],
+        [
+          "종업원",
+          "nhân viên phục vụ"
+        ],
+        [
+          "흡연석",
+          "chỗ được hút thuốc"
+        ],
+        [
+          "금연석",
+          "chỗ cấm hút thuốc"
+        ],
+        [
+          "영수증",
+          "hóa đơn"
+        ],
+        [
+          "주문하다",
+          "gọi món"
+        ],
+        [
+          "계산하다",
+          "tính tiền, thanh toán"
+        ],
+        [
+          "물",
+          "nước"
+        ],
+        [
+          "소금",
+          "muối"
+        ],
+        [
+          "고추",
+          "ớt"
+        ]
+      ]
+    },
+    {
+      "group": "Đồ uống, món khác",
+      "words": [
+        [
+          "녹차",
+          "trà xanh"
+        ],
+        [
+          "인삼차",
+          "trà sâm"
+        ],
+        [
+          "콜라",
+          "cô-ca"
+        ],
+        [
+          "케이크",
+          "bánh kem"
+        ],
+        [
+          "레몬",
+          "chanh vàng"
+        ]
+      ]
+    },
+    {
+      "group": "Từ hay dùng",
+      "words": [
+        [
+          "기다리다",
+          "chờ, đợi"
+        ],
+        [
+          "앉다",
+          "ngồi"
+        ],
+        [
+          "만들다",
+          "làm, nấu"
+        ],
+        [
+          "더",
+          "thêm, hơn"
+        ],
+        [
+          "좀",
+          "một chút (làm lời nhờ mềm hơn)"
+        ],
+        [
+          "항상",
+          "luôn luôn"
+        ],
+        [
+          "특히",
+          "đặc biệt là"
+        ],
+        [
+          "보통",
+          "thường thì, bình thường"
+        ]
+      ]
+    },
+    {
+      "group": "Câu dùng khi ăn",
+      "words": [
+        [
+          "여기요!",
+          "Anh/chị ơi! (gọi phục vụ)"
+        ],
+        [
+          "잠깐만 기다리세요.",
+          "Xin chờ một chút."
+        ],
+        [
+          "맛있게 드세요.",
+          "Chúc ăn ngon miệng."
+        ],
+        [
+          "잘 먹겠습니다.",
+          "Tôi xin phép ăn ạ. (trước bữa ăn)"
+        ],
+        [
+          "잘 먹었습니다.",
+          "Cảm ơn vì bữa ăn. (sau bữa ăn)"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "-겠-",
+      "title": "ý định của người nói · đoán",
+      "note": [
+        "Gắn vào gốc động từ/tính từ: 먹겠습니다, 맛있겠어요.",
+        "Chủ ngữ là tôi + động từ → nói ý định, quyết định ngay lúc nói: 저는 냉면을 먹겠습니다 (Tôi sẽ ăn mì lạnh).",
+        "Nhìn/nghe thấy điều gì rồi đoán → tính từ + 겠어요: 와, 맛있겠어요! (Ồ, chắc ngon lắm!)",
+        "Câu quen thuộc: 처음 뵙겠습니다, 잘 먹겠습니다, 알겠습니다 (Tôi hiểu rồi ạ)."
+      ],
+      "examples": [
+        [
+          "저는 비빔밥을 먹겠습니다.",
+          "Tôi sẽ ăn bibimbap."
+        ],
+        [
+          "고추가 많아요. 맵겠어요.",
+          "Nhiều ớt quá. Chắc cay lắm."
+        ],
+        [
+          "내일 다시 오겠습니다.",
+          "Ngày mai tôi sẽ quay lại."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "와, 이 불고기 정말 ___. (nhìn món ăn rồi đoán)",
+          "options": [
+            "맛있겠어요",
+            "맛있읍시다",
+            "맛있고 싶어요",
+            "맛있겠습니까"
+          ],
+          "explain": "Đoán dựa trên điều mình thấy → 맛있다 + 겠어요."
+        },
+        {
+          "q": "(Gọi món) 저는 냉면을 ___.",
+          "options": [
+            "먹겠습니다",
+            "먹읍시다",
+            "먹겠습니까",
+            "먹겠어습니다"
+          ],
+          "explain": "Nói quyết định của mình → 먹겠습니다."
+        },
+        {
+          "q": "(Trước khi ăn) 잘 ___.",
+          "options": [
+            "먹겠습니다",
+            "먹었습니다",
+            "먹읍시다",
+            "먹고 싶어요"
+          ],
+          "explain": "Trước bữa ăn nói 잘 먹겠습니다, ăn xong nói 잘 먹었습니다."
+        },
+        {
+          "q": "고추가 많이 있어요. 아주 ___.",
+          "options": [
+            "맵겠어요",
+            "맵읍시다",
+            "맵고 싶어요",
+            "맵겠습니까"
+          ],
+          "explain": "Thấy nhiều ớt rồi đoán → 맵다 + 겠어요."
+        },
+        {
+          "q": "내일은 주말이에요. 공원에 사람이 ___.",
+          "options": [
+            "많겠어요",
+            "많읍시다",
+            "많고 싶어요",
+            "많겠니까"
+          ],
+          "explain": "Đoán chuyện sắp xảy ra → 많겠어요."
+        },
+        {
+          "q": "「내일 다시 오겠습니다.」 nghĩa là gì?",
+          "options": [
+            "Ngày mai tôi sẽ quay lại.",
+            "Hôm qua tôi đã quay lại.",
+            "Ngày mai chúng ta cùng quay lại nhé.",
+            "Ngày mai tôi không quay lại."
+          ],
+          "explain": "-겠- với chủ ngữ là tôi → ý định: tôi sẽ."
+        }
+      ]
+    },
+    {
+      "pattern": "-지 않다",
+      "title": "không (phủ định dạng dài)",
+      "note": [
+        "Gốc động từ/tính từ + 지 않아요 / 지 않습니다 = không …, cùng nghĩa với 안 (Bài 5).",
+        "맵다 → 맵지 않아요 = 안 매워요; 먹다 → 먹지 않아요 = 안 먹어요.",
+        "Quá khứ: -지 않았어요 (먹지 않았어요).",
+        "Dạng này không đổi gốc nên dễ chia: 달다 → 달지 않아요, 싱겁다 → 싱겁지 않아요."
+      ],
+      "examples": [
+        [
+          "김치찌개가 맵지 않아요.",
+          "Canh kim chi không cay."
+        ],
+        [
+          "저는 아침을 먹지 않습니다.",
+          "Tôi không ăn sáng."
+        ],
+        [
+          "어제 커피를 마시지 않았어요.",
+          "Hôm qua tôi không uống cà phê."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "김치찌개가 ___. (맵다, phủ định)",
+          "options": [
+            "맵지 않아요",
+            "맵 않아요",
+            "맵지 안아요",
+            "않아 맵지요"
+          ],
+          "explain": "Gốc 맵 + 지 않아요. Chú ý viết 않아요 (có ㅎ)."
+        },
+        {
+          "q": "저는 아침을 ___. (먹다, phủ định)",
+          "options": [
+            "먹지 않아요",
+            "먹지 안아요",
+            "먹 않아요",
+            "안 먹지 않아요"
+          ],
+          "explain": "Gốc 먹 + 지 않아요."
+        },
+        {
+          "q": "Câu nào cùng nghĩa với 「안 비싸요」?",
+          "options": [
+            "비싸지 않아요",
+            "비싸고 싶어요",
+            "비쌌어요",
+            "비쌉시다"
+          ],
+          "explain": "안 + A/V = A/V + 지 않다."
+        },
+        {
+          "q": "어제 커피를 ___. (마시다, quá khứ phủ định)",
+          "options": [
+            "마시지 않았어요",
+            "마셨지 않아요",
+            "마시 않았어요",
+            "마시지 않아요"
+          ],
+          "explain": "Thì quá khứ gắn vào 않다: -지 않았어요."
+        },
+        {
+          "q": "「이 국은 짜지 않아요.」 nghĩa là gì?",
+          "options": [
+            "Canh này không mặn.",
+            "Canh này mặn quá.",
+            "Canh này rất ngọt.",
+            "Canh này không ngon."
+          ],
+          "explain": "짜다 = mặn; -지 않아요 = không."
+        },
+        {
+          "q": "Câu nào viết ĐÚNG?",
+          "options": [
+            "케이크가 달지 않아요.",
+            "케이크가 단지 않아요.",
+            "케이크가 달 않아요.",
+            "케이크가 않아 달아요."
+          ],
+          "explain": "Gốc 달 + 지 않아요, gốc giữ nguyên."
+        }
+      ]
+    },
+    {
+      "pattern": "-(으)세요",
+      "title": "hãy…, mời… (yêu cầu lịch sự)",
+      "note": [
+        "Dùng để mời hoặc nhờ người khác làm gì một cách lịch sự.",
+        "Gốc có patchim → 으세요: 앉다 → 앉으세요, 읽다 → 읽으세요.",
+        "Gốc không có patchim → 세요: 오다 → 오세요, 기다리다 → 기다리세요, 주문하다 → 주문하세요.",
+        "Mời ăn/uống dùng từ kính trọng 드세요 (từ 드시다), không nói 먹으세요. Bạn đã gặp dạng này ở 안녕히 가세요, 어서 오세요."
+      ],
+      "examples": [
+        [
+          "여기 앉으세요.",
+          "Mời ngồi đây ạ."
+        ],
+        [
+          "잠깐만 기다리세요.",
+          "Xin chờ một chút."
+        ],
+        [
+          "맛있게 드세요.",
+          "Chúc ăn ngon miệng."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "여기 ___. (앉다)",
+          "options": [
+            "앉으세요",
+            "앉세요",
+            "앉아세요",
+            "앉으요"
+          ],
+          "explain": "앉 có patchim → 으세요."
+        },
+        {
+          "q": "잠깐만 ___. (기다리다)",
+          "options": [
+            "기다리세요",
+            "기다리으세요",
+            "기다렸세요",
+            "기다리읍시다"
+          ],
+          "explain": "기다리 không patchim → 세요."
+        },
+        {
+          "q": "이 책을 ___. (읽다)",
+          "options": [
+            "읽으세요",
+            "읽세요",
+            "읽어세요",
+            "읽읍세요"
+          ],
+          "explain": "읽 có patchim → 으세요."
+        },
+        {
+          "q": "뭐 먹고 싶어요? 메뉴를 보고 ___. (주문하다)",
+          "options": [
+            "주문하세요",
+            "주문하으세요",
+            "주문해세요",
+            "주문하세요다"
+          ],
+          "explain": "Gốc 주문하 không patchim → 세요."
+        },
+        {
+          "q": "Mời khách ăn, bạn nói gì?",
+          "options": [
+            "맛있게 드세요.",
+            "잘 먹었습니다.",
+            "맛없어요.",
+            "계산하세요."
+          ],
+          "explain": "Mời người khác ăn dùng 드세요: 맛있게 드세요."
+        },
+        {
+          "q": "「물 좀 주세요.」 nghĩa là gì?",
+          "options": [
+            "Cho tôi xin chút nước.",
+            "Nước đây ạ.",
+            "Tôi không uống nước.",
+            "Nước ngon quá."
+          ],
+          "explain": "주세요 = cho tôi; 좀 làm lời nhờ nhẹ nhàng hơn."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "(Ngồi vào bàn, muốn xem các món) ____ 좀 주세요.",
+      "options": [
+        "메뉴",
+        "영수증",
+        "소금",
+        "젓가락"
+      ],
+      "explain": "메뉴 = thực đơn."
+    },
+    {
+      "q": "레몬은 ____.",
+      "options": [
+        "셔요",
+        "달아요",
+        "짜요",
+        "맵습니다"
+      ],
+      "explain": "Chanh thì chua: 시다 → 셔요."
+    },
+    {
+      "q": "음식이 싱겁습니다. ____ 좀 주세요.",
+      "options": [
+        "소금",
+        "우유",
+        "녹차",
+        "컵"
+      ],
+      "explain": "Nhạt thì thêm muối (소금)."
+    },
+    {
+      "q": "Chỗ CẤM hút thuốc ở quán ăn gọi là gì?",
+      "options": [
+        "금연석",
+        "흡연석",
+        "테이블",
+        "식당"
+      ],
+      "explain": "금연석 = chỗ cấm hút thuốc; 흡연석 = chỗ được hút thuốc."
+    },
+    {
+      "q": "열두 시에 ____을 먹어요.",
+      "options": [
+        "점심",
+        "아침",
+        "저녁",
+        "반찬"
+      ],
+      "explain": "12 giờ trưa → 점심 (bữa trưa)."
+    },
+    {
+      "q": "한국 식당에는 밥하고 김치 같은 ____이 있어요.",
+      "options": [
+        "반찬",
+        "메뉴",
+        "영수증",
+        "음료수"
+      ],
+      "explain": "반찬 = món ăn kèm (kim chi, rau…)."
+    },
+    {
+      "q": "밥이 맛있어요. 밥 ____ 주세요. (thêm)",
+      "options": [
+        "더",
+        "항상",
+        "특히",
+        "보통"
+      ],
+      "explain": "더 = thêm."
+    },
+    {
+      "q": "(Ăn xong, ra quầy) 여기서 ____.",
+      "options": [
+        "계산해요",
+        "주문해요",
+        "기다려요",
+        "앉아요"
+      ],
+      "explain": "Trả tiền → 계산하다."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "여기요! 메뉴 좀 주세요.",
+      "options": [
+        "Xin thực đơn",
+        "Xin hóa đơn",
+        "Gọi thêm cơm",
+        "Muốn tính tiền"
+      ],
+      "explain": "메뉴 = thực đơn.",
+      "q": "Người nói cần gì?"
+    },
+    {
+      "listen": "가: 뭐 먹고 싶어요? 나: 저는 비빔밥을 먹겠어요.",
+      "options": [
+        "Bibimbap",
+        "Mì lạnh",
+        "Canh kim chi",
+        "Gà hầm sâm"
+      ],
+      "explain": "비빔밥을 먹겠어요 = sẽ ăn bibimbap.",
+      "q": "Người thứ hai sẽ ăn gì?"
+    },
+    {
+      "listen": "이 김치찌개는 맵지 않아요.",
+      "options": [
+        "Canh kim chi này không cay.",
+        "Canh kim chi này cay quá.",
+        "Canh kim chi này mặn.",
+        "Canh kim chi này nhạt."
+      ],
+      "explain": "맵지 않아요 = không cay."
+    },
+    {
+      "listen": "잠깐만 기다리세요.",
+      "options": [
+        "Xin chờ một chút.",
+        "Mời ngồi.",
+        "Chúc ăn ngon miệng.",
+        "Lần sau lại đến nhé."
+      ],
+      "explain": "기다리다 = chờ; -세요 = xin hãy."
+    },
+    {
+      "listen": "불고기 하나하고 콜라 두 병 주세요.",
+      "options": [
+        "1 bulgogi và 2 chai cô-ca",
+        "2 bulgogi và 1 chai cô-ca",
+        "1 bulgogi và 1 chai cô-ca",
+        "2 bulgogi và 2 chai cô-ca"
+      ],
+      "explain": "불고기 하나 = 1 phần bulgogi; 콜라 두 병 = 2 chai cô-ca.",
+      "q": "Khách gọi gì?"
+    }
+  ],
+  "reading": {
+    "passage": "어제 친구하고 한국 식당에 갔어요. 저는 비빔밥을 주문했어요. 친구는 김치찌개를 먹었어요. 김치찌개는 맵지 않았어요. 비빔밥은 아주 맛있었어요. 우리는 녹차를 마셨어요. 다음 주에 또 가겠어요.",
+    "passageVi": "Hôm qua tôi đi quán ăn Hàn Quốc với bạn. Tôi gọi bibimbap. Bạn tôi ăn canh kim chi. Canh kim chi không cay. Bibimbap thì rất ngon. Chúng tôi uống trà xanh. Tuần sau tôi sẽ lại đi.",
+    "questions": [
+      {
+        "q": "Người viết đã gọi món gì?",
+        "options": [
+          "Bibimbap",
+          "Canh kim chi",
+          "Bulgogi",
+          "Mì lạnh"
+        ],
+        "explain": "저는 비빔밥을 주문했어요."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Canh kim chi không cay.",
+          "Người viết ăn canh kim chi.",
+          "Họ uống cà phê.",
+          "Người viết đi một mình."
+        ],
+        "explain": "김치찌개는 맵지 않았어요. Người ăn canh kim chi là bạn, họ uống trà xanh, đi cùng bạn."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu ở quán ăn: gọi món, nhận xét mùi vị, nhờ phục vụ. Dùng -겠-, -지 않다, -(으)세요.",
+    "samples": [
+      [
+        "여기요! 메뉴 좀 주세요.",
+        "Anh ơi! Cho tôi xin thực đơn."
+      ],
+      [
+        "저는 삼계탕을 먹겠습니다.",
+        "Tôi sẽ ăn gà hầm sâm."
+      ],
+      [
+        "삼계탕은 맵지 않아요. 맛있겠어요.",
+        "Gà hầm sâm không cay. Chắc ngon lắm."
+      ],
+      [
+        "물 좀 더 주세요.",
+        "Cho tôi thêm chút nước."
+      ]
+    ],
+    "tips": "Gọi phục vụ: 여기요! Nhờ lịch sự: N 좀 주세요. Phủ định dài: gốc + 지 않아요."
+  }
+}
