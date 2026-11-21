@@ -71,6 +71,21 @@ for lid in ids:
     print(f"{lid}: {len(words)} từ, {len(d.get('usage', []))} câu từ trong câu, {nq} câu ngữ pháp, "
           f"{len(d.get('listening', []))} câu nghe, {len(r['questions']) if r else 0} câu đọc, viết: {'có' if w else 'không'}")
 
+# Cảm nhận người học: chỉ đăng khi người gửi đã đồng ý.
+fb_path = ROOT / "data/cam-nhan.json"
+if fb_path.exists():
+    try:
+        fb = json.loads(fb_path.read_text(encoding="utf-8"))
+        if not isinstance(fb, list):
+            err("cam-nhan.json: phải là danh sách")
+        else:
+            for i, q in enumerate(fb):
+                if not isinstance(q, dict) or not q.get("name") or not q.get("text"):
+                    err(f"cam-nhan.json #{i + 1}: thiếu name hoặc text")
+            print(f"cam-nhan.json: {len(fb)} cảm nhận")
+    except json.JSONDecodeError as e:
+        err(f"cam-nhan.json: JSON lỗi: {e}")
+
 if errors:
     print("\nLỖI:")
     for e in errors:
