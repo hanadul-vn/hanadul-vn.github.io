@@ -2,7 +2,7 @@
 
 **Hana Dul** (하나 둘, “một, hai”): học tiếng Hàn từng bước.
 
-Website miễn phí cho người Việt học tiếng Hàn từ sơ cấp: mỗi bài có bảng từ vựng, ghi chú ngữ pháp, bài trắc nghiệm bấm chọn có giải thích (từ vựng, ngữ pháp, nghe, đọc hiểu), luyện viết có câu mẫu và sổ câu sai để ôn lại. Không cần đăng ký, tiến độ chỉ lưu trên trình duyệt của người học.
+Website miễn phí cho người Việt học tiếng Hàn từ sơ cấp: mỗi bài có bảng từ vựng, ghi chú ngữ pháp, bài trắc nghiệm bấm chọn có giải thích (từ vựng, ngữ pháp, nghe, đọc hiểu), luyện viết có câu mẫu và sổ câu sai để ôn lại. Không cần đăng ký: tiến độ lưu trên trình duyệt của người học; ai muốn học trên nhiều máy thì đăng nhập Google/email (không bắt buộc) để đồng bộ.
 
 ## Chạy thử trên máy
 
@@ -20,6 +20,9 @@ python3 -m http.server 8000
 | `data/lessons/<id>.json` | Nội dung từng bài |
 | `tools/check_data.py` | Kiểm tra dữ liệu bài, chạy trong CI trên mỗi PR |
 | `tools/e2e/run.js` | Kiểm thử đầu-cuối bằng Playwright (chạy tay trước khi mở PR) |
+| `assets/account.js`, `assets/merge.js` | Tài khoản (Supabase) và cách gộp tiến độ giữa các máy |
+| `supabase/` | SQL tạo bảng và hướng dẫn bật tài khoản |
+| `tests/` | Test gộp tiến độ, test SQL, test giao diện tài khoản |
 
 ## Thêm một bài
 
@@ -43,6 +46,23 @@ python3 -m http.server 8000
   - `form`: nơi nhận email đăng ký và cảm nhận (Formspree hoặc Google Form).
   - `zaloUrl`, `facebookUrl`: link nhóm/trang.
 - `data/cam-nhan.json`: cảm nhận được đăng lên trang giới thiệu, dạng `[{"name": "Lan", "note": "sinh viên", "text": "…"}]`. Chỉ thêm cảm nhận thật mà người gửi đã đánh dấu đồng ý đăng.
+
+## Tài khoản
+
+Không bắt buộc. Bật bằng `supabaseUrl` + `supabaseKey` (khóa công khai) trong `assets/config.js`, làm theo [`supabase/README.md`](supabase/README.md). Để trống thì không có nút đăng nhập.
+
+- Đăng nhập Google hoặc email (link + mã 6 số, không mật khẩu). Màn `#/tai-khoan`: đồng bộ, đăng xuất, xóa tài khoản.
+- Đồng bộ toàn bộ `hanadul:v2` (bài, sao, XP, chuỗi ngày, Sổ câu sai, câu tự viết) vào bảng `progress`. Lần đầu đăng nhập, tiến độ khách trên máy được gộp vào tài khoản.
+- Gộp ([`assets/merge.js`](assets/merge.js)): điểm/sao lấy cao nhất, ngày học hợp lại, XP cộng phần mỗi máy kiếm thêm, Sổ câu sai theo thay đổi mới nhất (có dấu "đã gỡ" để máy khác gỡ theo), câu viết lấy bản sửa sau cùng.
+- Đăng xuất xóa tiến độ khỏi máy đó (vẫn còn trên tài khoản). Thư viện `assets/vendor/supabase-2.118.0.js` (MIT) chỉ tải khi đã bật.
+
+## Kiểm thử
+
+```bash
+node tests/merge.test.js                       # gộp tiến độ
+psql -d <db trống> -f tests/schema_test.sql    # SQL + phân quyền (giả lập auth của Supabase)
+python3 -m http.server 8765 & SHOTS=/tmp node tests/e2e_account.js   # giao diện tài khoản (cần playwright)
+```
 
 ## Nội dung
 
