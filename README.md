@@ -16,7 +16,7 @@ python3 -m http.server 8000
 | `index.html`, `assets/` | Giao diện (HTML, CSS, JS thuần, không cần build) |
 | `data/index.json` | Danh sách cấp độ và bài |
 | `data/lessons/<id>.json` | Nội dung từng bài |
-| `tools/check_data.py` | Kiểm tra dữ liệu bài, chạy trong CI trước khi deploy |
+| `tools/check_data.py` | Kiểm tra dữ liệu bài, chạy trong CI trên mỗi PR |
 
 ## Thêm một bài
 
@@ -32,4 +32,4 @@ Câu hỏi, ví dụ và giải thích đều tự soạn. Lộ trình chủ đ�
 
 ## Deploy
 
-Mỗi lần merge vào `main`, workflow `.github/workflows/pages.yml` kiểm tra dữ liệu rồi đăng lên GitHub Pages. Lần đầu cần bật: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+Web được GitHub Pages đăng trực tiếp từ nhánh `main` (Settings → Pages → Source: Deploy from a branch → `main` / `(root)`), mỗi lần merge là web tự cập nhật. Workflow `.github/workflows/check.yml` chạy `tools/check_data.py` trên mỗi PR.
