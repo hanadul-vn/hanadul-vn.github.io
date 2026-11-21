@@ -160,16 +160,25 @@
     if (cleanup) { cleanup(); cleanup = null; }
     document.body.classList.remove('quiz-mode');
     var parts = location.hash.replace(/^#\/?/, '').split('/');
-    if (silent !== true) window.scrollTo(0, 0);
+    if (silent !== true && !/^lo-trinh/.test(parts[0])) window.scrollTo(0, 0);
     renderStats();
     // Đợi trang đặt document.title rồi mới ghi lượt xem.
     if (silent !== true) setTimeout(function () { HD.pageview(document.title); }, 400);
     if (parts[0] === 'tai-khoan' && HD.renderAccountPage) return HD.renderAccountPage(app);
     if (parts[0] === 'bai' && parts[1]) return renderLesson(parts[1], parts[2] || 'hoc');
     if (parts[0] === 'so-cau-sai') return renderWrongBook();
-    return renderHome();
+    return renderHome(/^lo-trinh/.test(parts[0]) ? parts[0] : null);
   }
   window.addEventListener('hashchange', function () { route(); });
+  // Nút "Xem lộ trình" và nút chọn cấp: đang ở trang chủ thì cuộn thẳng tới khối, không vẽ lại trang.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#lo-trinh"]');
+    if (!a) return;
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
 
   function getIndex() {
     if (indexData) return Promise.resolve(indexData);
@@ -186,12 +195,14 @@
     return null;
   }
   function lessonName(l) { return l.no === '0' ? l.title : 'Bài ' + l.no + ': ' + l.title; }
+  // Tên kèm cấp độ (từ Sơ cấp 2 trở đi) để không nhầm "Bài 1" của hai cấp.
+  function fullName(x) { return x.level && x.level.prefix ? x.level.name + ' · ' + lessonName(x.lesson) : lessonName(x.lesson); }
   function fail(err) {
     app.innerHTML = '<div class="container narrow" style="padding:40px 16px"><h1>Không tải được nội dung</h1><p class="muted">' + esc(err.message || err) + '</p><p><a href="#/">Về trang chủ</a></p></div>';
   }
 
   // ---------- home ----------
-  function renderHome() {
+  function renderHome(jump) {
     document.title = 'Hana Dul – Học tiếng Hàn miễn phí';
     getIndex().then(function (idx) {
       var s = readStore();
@@ -219,7 +230,7 @@
       if (lastId) {
         var lp = s.lessons[lastId.lesson.id];
         h += '<a class="continue" href="#/bai/' + esc(lastId.lesson.id) + '/lam-bai"><span class="emoji">' + esc(lastId.lesson.icon || '📘') + '</span>' +
-          '<span><span class="label">Bài gần nhất' + (lp ? ' · đúng ' + lp.best + '%' : '') + '</span><br><span class="title">' + esc(lessonName(lastId.lesson)) + '</span></span><span class="go">→</span></a>';
+          '<span><span class="label">Bài gần nhất' + (lp ? ' · đúng ' + lp.best + '%' : '') + '</span><br><span class="title">' + esc(fullName(lastId)) + '</span></span><span class="go">→</span></a>';
       }
 
       var nw = wrongCount(s);
@@ -229,9 +240,18 @@
       }
       if (HD.accountHomeCard) h += HD.accountHomeCard(!!(s.xp || s.days.length));
 
-      idx.levels.forEach(function (lv) {
+      if (idx.levels.length > 1) {
+        h += '<div id="lo-trinh" class="level-jump" aria-label="Chọn cấp độ">' + idx.levels.map(function (lv) {
+          return '<a href="#lo-trinh-' + esc(lv.id) + '"><span>' + esc(lv.icon || '📘') + '</span>' + esc(lv.name) + '</a>';
+        }).join('') + '</div>';
+      }
+      idx.levels.forEach(function (lv, li) {
         var done = lv.lessons.filter(function (l) { return s.lessons[l.id] && s.lessons[l.id].best >= 70; }).length;
-        h += '<div class="section-head" id="lo-trinh"><div><h2>' + esc(lv.name) + '</h2>' + (lv.subtitle ? '<p>' + esc(lv.subtitle) + '</p>' : '') + '</div>' +
+        var last = li === idx.levels.length - 1;
+        h += '<section class="level level-' + esc(lv.id) + '" id="lo-trinh-' + esc(lv.id) + '"' + (idx.levels.length > 1 ? '' : ' data-only="1"') + '>' +
+          '<div class="section-head level-head"' + (idx.levels.length > 1 ? '' : ' id="lo-trinh"') + '><div>' +
+          '<span class="level-badge">' + esc(lv.icon || '📘') + ' Cấp ' + (li + 1) + (lv.status ? ' · ' + esc(lv.status) : '') + '</span>' +
+          '<h2>' + esc(lv.name) + '</h2>' + (lv.subtitle ? '<p>' + esc(lv.subtitle) + '</p>' : '') + '</div>' +
           '<span class="level-progress">' + done + '/' + lv.lessons.length + ' bài</span></div><ol class="path">';
         lv.lessons.forEach(function (l) {
           var p = s.lessons[l.id];
@@ -243,8 +263,8 @@
             '<span class="node-sum">' + ko(l.summary || '') + '</span></span>' +
             '<span class="stars" aria-label="' + (p ? p.stars : 0) + ' sao">' + starsHtml(p ? p.stars : 0) + '</span></a></li>';
         });
-        h += '<li class="soon"><div class="node"><span class="ring"><span>🚧</span></span><span class="node-body"><span class="node-title">Bài tiếp theo</span><br><span class="node-sum">Đang soạn, sẽ cập nhật sớm</span></span></div></li>';
-        h += '</ol>';
+        if (last) h += '<li class="soon"><div class="node"><span class="ring"><span>🚧</span></span><span class="node-body"><span class="node-title">Bài tiếp theo</span><br><span class="node-sum">Đang soạn, sẽ cập nhật sớm</span></span></div></li>';
+        h += '</ol></section>';
       });
 
       h += '<div class="features">' +
@@ -254,6 +274,8 @@
         feature('📒', 'var(--sky-soft)', 'Sổ câu sai', 'Câu làm sai được lưu lại để ôn. Trả lời đúng 2 lần liên tiếp thì câu rời khỏi sổ.') +
         '</div>' + HD.signupHtml('trang-chu') + '</div>';
       app.innerHTML = h;
+      var target = jump && document.getElementById(jump === 'lo-trinh' ? 'lo-trinh' : jump);
+      if (target) target.scrollIntoView({ behavior: 'instant', block: 'start' });
     }).catch(fail);
   }
   function feature(ic, bg, title, text) {
@@ -292,7 +314,7 @@
   }
 
   function renderStudy(data, found) {
-    document.title = (found ? lessonName(found.lesson) : data.title) + ' – Hana Dul';
+    document.title = (found ? fullName(found) : data.title) + ' – Hana Dul';
     var h = '<div class="container narrow">' + lessonHero(data, found) + seg(data.id, 'hoc');
     h += '<div class="study-tools"><h2>Từ vựng</h2><label class="toggle"><input type="checkbox" id="hideVi"> Che nghĩa để tự kiểm tra</label></div>' +
       '<p class="muted" style="margin:0">Bấm vào thẻ để nghe phát âm' + ' (khi che nghĩa, bấm để mở nghĩa).</p><div id="vocab">';
@@ -390,7 +412,7 @@
   }
 
   function renderQuizStart(data, found) {
-    document.title = 'Làm bài · ' + (found ? lessonName(found.lesson) : data.title) + ' – Hana Dul';
+    document.title = 'Làm bài · ' + (found ? fullName(found) : data.title) + ' – Hana Dul';
     var full = buildQuestions(data, false).length;
     var quick = buildQuestions(data, true).length;
     var s = readStore();
@@ -640,7 +662,7 @@
     getIndex().then(function (idx) {
       var s = readStore();
       var names = {};
-      allLessons(idx).forEach(function (x) { names[x.lesson.id] = lessonName(x.lesson); });
+      allLessons(idx).forEach(function (x) { names[x.lesson.id] = fullName(x); });
       var ids = Object.keys(s.wrong);
       var h = '<div class="container narrow"><div class="lesson-hero"><div class="crumbs"><a href="#/">Trang chủ</a></div>' +
         '<h1><span class="emoji">📒</span>Sổ câu sai</h1>' +

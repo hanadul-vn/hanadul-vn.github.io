@@ -1,0 +1,596 @@
+{
+ "id": "sc2-03",
+ "title": "Mua sắm (2)",
+ "ko": "물건 사기 (2)",
+ "goal": "So sánh hai món đồ, miêu tả đồ vật bằng định ngữ, đổi hoặc trả hàng khi mua sắm.",
+ "vocab": [
+  {
+   "group": "Đơn vị đếm (2)",
+   "words": [
+    [
+     "벌",
+     "bộ (quần áo)"
+    ],
+    [
+     "쌍",
+     "đôi, cặp (khuyên tai…)"
+    ],
+    [
+     "송이",
+     "bông, đóa (hoa)"
+    ],
+    [
+     "바구니",
+     "giỏ, rổ"
+    ],
+    [
+     "상자",
+     "hộp, thùng"
+    ],
+    [
+     "봉지",
+     "túi (ni-lông, giấy)"
+    ]
+   ]
+  },
+  {
+   "group": "Khi mua sắm",
+   "words": [
+    [
+     "찾다",
+     "tìm"
+    ],
+    [
+     "마음에 들다",
+     "vừa ý, ưng"
+    ],
+    [
+     "어울리다",
+     "hợp (với ai)"
+    ],
+    [
+     "교환하다",
+     "đổi (hàng)"
+    ],
+    [
+     "환불하다",
+     "trả hàng, lấy lại tiền"
+    ],
+    [
+     "팔다",
+     "bán"
+    ],
+    [
+     "신다",
+     "đi, mang (giày, tất)"
+    ],
+    [
+     "유행하다",
+     "thịnh hành, hợp mốt"
+    ],
+    [
+     "할인점",
+     "cửa hàng giảm giá"
+    ],
+    [
+     "쇼핑몰",
+     "trung tâm mua sắm"
+    ],
+    [
+     "제품",
+     "sản phẩm"
+    ],
+    [
+     "핸드백",
+     "túi xách tay"
+    ],
+    [
+     "노트북",
+     "máy tính xách tay"
+    ],
+    [
+     "샤프",
+     "bút chì kim"
+    ]
+   ]
+  },
+  {
+   "group": "Trạng thái của đồ vật",
+   "words": [
+    [
+     "짧다",
+     "ngắn"
+    ],
+    [
+     "길다",
+     "dài"
+    ],
+    [
+     "두껍다",
+     "dày"
+    ],
+    [
+     "얇다",
+     "mỏng"
+    ],
+    [
+     "무겁다",
+     "nặng"
+    ],
+    [
+     "가볍다",
+     "nhẹ"
+    ],
+    [
+     "화려하다",
+     "sặc sỡ, lộng lẫy"
+    ],
+    [
+     "단순하다",
+     "đơn giản"
+    ],
+    [
+     "튼튼하다",
+     "chắc chắn, bền"
+    ],
+    [
+     "다양하다",
+     "đa dạng"
+    ],
+    [
+     "빠르다",
+     "nhanh"
+    ]
+   ]
+  },
+  {
+   "group": "Từ khác",
+   "words": [
+    [
+     "기능",
+     "chức năng"
+    ],
+    [
+     "기분",
+     "tâm trạng"
+    ],
+    [
+     "누구나",
+     "ai cũng"
+    ],
+    [
+     "단어",
+     "từ (vựng)"
+    ],
+    [
+     "쉽게",
+     "một cách dễ dàng"
+    ]
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "pattern": "N보다 (더)",
+   "title": "hơn (so sánh)",
+   "note": [
+    "N1이/가 N2보다 (더) A: N1 … hơn N2. 지하철이 버스보다 더 편리해요.",
+    "보다 gắn ngay sau cái đem ra so; vị trí có thể đổi: 버스보다 지하철이 더 편리해요 (nghĩa không đổi).",
+    "더 (hơn) có thể bỏ: 이 가방이 저 가방보다 가벼워요.",
+    "Với động từ chỉ sở thích: 겨울보다 여름을 더 좋아해요."
+   ],
+   "examples": [
+    [
+     "지하철이 버스보다 더 편리해요.",
+     "Tàu điện ngầm tiện hơn xe buýt."
+    ],
+    [
+     "이 사전이 저 사전보다 얇아요.",
+     "Cuốn từ điển này mỏng hơn cuốn kia."
+    ],
+    [
+     "저는 겨울보다 여름을 더 좋아해요.",
+     "Tôi thích mùa hè hơn mùa đông."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "지하철이 버스___ 더 편리해요.",
+     "options": [
+      "보다",
+      "만",
+      "도",
+      "의"
+     ],
+     "explain": "So sánh → 버스보다 (hơn xe buýt)."
+    },
+    {
+     "q": "이 가방이 저 가방보다 더 ___. (무겁다)",
+     "options": [
+      "무거워요",
+      "무겁어요",
+      "무거워서",
+      "무겁워요"
+     ],
+     "explain": "Bất quy tắc ㅂ: 무겁다 → 무거워요."
+    },
+    {
+     "q": "\"Áo này mỏng hơn áo kia.\" là câu nào?",
+     "options": [
+      "이 옷이 저 옷보다 얇아요.",
+      "저 옷이 이 옷보다 얇아요.",
+      "이 옷보다 저 옷이 얇아요.",
+      "이 옷이 저 옷만 얇아요."
+     ],
+     "explain": "Cái mỏng hơn (이 옷) đi với 이/가, cái đem ra so (저 옷) đi với 보다."
+    },
+    {
+     "q": "형이 저___ 키가 더 커요.",
+     "options": [
+      "보다",
+      "에게",
+      "하고",
+      "만"
+     ],
+     "explain": "Cao hơn tôi → 저보다."
+    },
+    {
+     "q": "\"Tôi thích mùa hè hơn mùa đông.\" là câu nào?",
+     "options": [
+      "저는 겨울보다 여름을 더 좋아해요.",
+      "저는 여름보다 겨울을 더 좋아해요.",
+      "저는 겨울만 여름을 좋아해요.",
+      "저는 겨울보다 여름이 더 좋아해요."
+     ],
+     "explain": "Mùa đông là cái đem ra so → 겨울보다; 좋아하다 đi với 을/를."
+    }
+   ]
+  },
+  {
+   "pattern": "A-(으)ㄴ",
+   "title": "định ngữ của tính từ (… mà …)",
+   "note": [
+    "Tính từ đứng trước danh từ để bổ nghĩa: 비싸다 → 비싼 가방 (cái túi đắt).",
+    "Gốc không patchim → ㄴ: 싼, 예쁜. Gốc có patchim → 은: 작은, 많은.",
+    "Gốc có ㄹ → bỏ ㄹ + ㄴ: 길다 → 긴. Bất quy tắc ㅂ: 가볍다 → 가벼운, 두껍다 → 두꺼운.",
+    "있다/없다 dùng -는: 맛있는 음식, 재미없는 영화."
+   ],
+   "examples": [
+    [
+     "싼 옷을 사고 싶어요.",
+     "Tôi muốn mua quần áo rẻ."
+    ],
+    [
+     "가벼운 노트북이 있어요?",
+     "Có máy tính xách tay nhẹ không?"
+    ],
+    [
+     "머리가 긴 사람이 제 언니예요.",
+     "Người tóc dài là chị tôi."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "___ 옷을 사고 싶어요. (싸다)",
+     "options": [
+      "싼",
+      "싸은",
+      "싸는",
+      "쌀은"
+     ],
+     "explain": "Không patchim → ㄴ: 싼."
+    },
+    {
+     "q": "저는 ___ 가방이 좋아요. (가볍다)",
+     "options": [
+      "가벼운",
+      "가볍은",
+      "가볍는",
+      "가벼은"
+     ],
+     "explain": "Bất quy tắc ㅂ: 가볍다 → 가벼운."
+    },
+    {
+     "q": "머리가 ___ 사람이 제 언니예요. (길다)",
+     "options": [
+      "긴",
+      "길은",
+      "길는",
+      "기는"
+     ],
+     "explain": "Gốc có ㄹ: bỏ ㄹ + ㄴ → 긴."
+    },
+    {
+     "q": "어제 ___ 영화를 봤어요. (재미있다)",
+     "options": [
+      "재미있는",
+      "재미있은",
+      "재미있ㄴ",
+      "재미있다"
+     ],
+     "explain": "있다/없다 dùng -는: 재미있는."
+    },
+    {
+     "q": "\"Một chiếc điện thoại nhỏ\" là gì?",
+     "options": [
+      "작은 휴대전화",
+      "작는 휴대전화",
+      "작안 휴대전화",
+      "작다 휴대전화"
+     ],
+     "explain": "작다 có patchim → 작은."
+    }
+   ]
+  },
+  {
+   "pattern": "V-는",
+   "title": "định ngữ của động từ ở hiện tại",
+   "note": [
+    "Động từ đứng trước danh từ, việc đang diễn ra hoặc thường xuyên: 지금 읽는 책 (cuốn sách đang đọc).",
+    "Gắn -는 vào gốc động từ, có patchim hay không đều vậy: 먹는, 보는.",
+    "Gốc có ㄹ → bỏ ㄹ: 만들다 → 만드는, 살다 → 사는, 팔다 → 파는.",
+    "Dùng nhiều khi miêu tả người, đồ vật: 커피를 파는 가게 (cửa hàng bán cà phê)."
+   ],
+   "examples": [
+    [
+     "지금 읽는 책이 뭐예요?",
+     "Cuốn sách bạn đang đọc là gì?"
+    ],
+    [
+     "요즘 유행하는 가방이에요.",
+     "Đây là kiểu túi đang thịnh hành dạo này."
+    ],
+    [
+     "하노이에 사는 친구가 한국에 왔어요.",
+     "Người bạn sống ở Hà Nội đã đến Hàn Quốc."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "지금 ___ 책이 뭐예요? (읽다)",
+     "options": [
+      "읽는",
+      "읽으는",
+      "읽어는",
+      "읽기"
+     ],
+     "explain": "Động từ hiện tại + -는: 읽는."
+    },
+    {
+     "q": "요즘 ___ 노래를 알아요? (유행하다)",
+     "options": [
+      "유행하는",
+      "유행하은",
+      "유행하어는",
+      "유행해는"
+     ],
+     "explain": "유행하다 → 유행하는."
+    },
+    {
+     "q": "케이크를 ___ 사람이 제 동생이에요. (만들다)",
+     "options": [
+      "만드는",
+      "만들는",
+      "만들은",
+      "만드은"
+     ],
+     "explain": "Gốc có ㄹ → bỏ ㄹ: 만드는."
+    },
+    {
+     "q": "하노이에 ___ 친구가 있어요. (살다)",
+     "options": [
+      "사는",
+      "살는",
+      "산는",
+      "살은"
+     ],
+     "explain": "살다 → 사는."
+    },
+    {
+     "q": "\"Món ăn tôi thích\" là gì?",
+     "options": [
+      "제가 좋아하는 음식",
+      "제가 좋아해는 음식",
+      "제가 좋아하은 음식",
+      "제가 좋아하다 음식"
+     ],
+     "explain": "좋아하다 → 좋아하는."
+    }
+   ]
+  }
+ ],
+ "usage": [
+  {
+   "q": "장미 열 ____ 주세요.",
+   "options": [
+    "송이",
+    "벌",
+    "쌍",
+    "봉지"
+   ],
+   "explain": "Đếm hoa → 송이."
+  },
+  {
+   "q": "정장 한 ____을 샀어요.",
+   "options": [
+    "벌",
+    "송이",
+    "바구니",
+    "상자"
+   ],
+   "explain": "Đếm bộ quần áo → 벌."
+  },
+  {
+   "q": "귀걸이 한 ____이 얼마예요?",
+   "options": [
+    "쌍",
+    "벌",
+    "송이",
+    "상자"
+   ],
+   "explain": "Một đôi khuyên tai → 한 쌍."
+  },
+  {
+   "q": "이 옷이 마음에 안 들어요. 다른 옷으로 ____ 주세요.",
+   "options": [
+    "교환해",
+    "환불해",
+    "어울려",
+    "찾아"
+   ],
+   "explain": "Đổi sang áo khác → 교환해 주세요."
+  },
+  {
+   "q": "이 치마가 언니에게 잘 ____.",
+   "options": [
+    "어울려요",
+    "신어요",
+    "팔아요",
+    "찾아요"
+   ],
+   "explain": "Hợp với chị → 어울려요."
+  },
+  {
+   "q": "이 사전은 너무 ____. 가방에 넣을 수 없어요.",
+   "options": [
+    "두꺼워요",
+    "얇아요",
+    "가벼워요",
+    "단순해요"
+   ],
+   "explain": "Không cho vừa túi → quá dày: 두꺼워요."
+  },
+  {
+   "q": "운동화를 ____ 산책해요.",
+   "options": [
+    "신고",
+    "입고",
+    "팔고",
+    "찾고"
+   ],
+   "explain": "Giày thì dùng 신다 → 신고."
+  },
+  {
+   "q": "이 가방은 ____ 오래 쓸 수 있어요.",
+   "options": [
+    "튼튼해서",
+    "화려해서",
+    "얇아서",
+    "짧아서"
+   ],
+   "explain": "Dùng được lâu vì bền → 튼튼해서."
+  },
+  {
+   "q": "디자인이 ____ 옷보다 단순한 옷을 좋아해요.",
+   "options": [
+    "화려한",
+    "튼튼한",
+    "두꺼운",
+    "다양한"
+   ],
+   "explain": "Đối lập với 단순하다 (đơn giản) → 화려하다 (sặc sỡ)."
+  }
+ ],
+ "listening": [
+  {
+   "listen": "이 가방보다 저 가방이 더 가벼워요.",
+   "options": [
+    "Túi kia nhẹ hơn túi này.",
+    "Túi này nhẹ hơn túi kia.",
+    "Túi kia nặng hơn túi này.",
+    "Hai cái túi nặng bằng nhau."
+   ],
+   "explain": "이 가방보다 = hơn túi này; 저 가방이 더 가벼워요 = túi kia nhẹ hơn."
+  },
+  {
+   "listen": "장미 다섯 송이 주세요.",
+   "options": [
+    "Cho tôi 5 bông hồng.",
+    "Cho tôi 5 giỏ hoa hồng.",
+    "Cho tôi 15 bông hồng.",
+    "Cho tôi 5 hộp quà."
+   ],
+   "explain": "다섯 송이 = 5 bông."
+  },
+  {
+   "listen": "가: 이 바지가 좀 짧아요. 긴 바지 있어요? 나: 네, 여기 있어요.",
+   "options": [
+    "Quần dài hơn",
+    "Quần ngắn hơn",
+    "Quần rẻ hơn",
+    "Áo dài tay"
+   ],
+   "explain": "짧아요 → 긴 바지 있어요? = có quần dài không?",
+   "q": "Khách muốn quần thế nào?"
+  },
+  {
+   "listen": "요즘 유행하는 노트북이에요. 가볍고 기능이 다양해요.",
+   "options": [
+    "Laptop đang thịnh hành, nhẹ và nhiều chức năng.",
+    "Laptop cũ, nặng nhưng rẻ.",
+    "Laptop đang giảm giá, nhẹ và rẻ.",
+    "Laptop nhiều chức năng nhưng nặng."
+   ],
+   "explain": "유행하는 = đang thịnh hành; 가볍고 기능이 다양해요 = nhẹ và chức năng đa dạng."
+  },
+  {
+   "listen": "가: 이 옷을 환불해 주세요. 나: 영수증 있으세요?",
+   "options": [
+    "Trả hàng lấy lại tiền",
+    "Đổi sang cỡ khác",
+    "Mua thêm một chiếc",
+    "Gói quà"
+   ],
+   "explain": "환불해 주세요 = trả hàng lấy lại tiền.",
+   "q": "Khách muốn làm gì?"
+  }
+ ],
+ "reading": {
+  "passage": "어제 저는 쇼핑몰에 핸드백을 사러 갔어요. 마음에 드는 가방이 두 개 있었어요. 하나는 디자인이 화려한 가방이었어요. 예뻤지만 조금 무거웠어요. 다른 하나는 단순한 가방이었어요. 화려한 가방보다 가볍고 쌌어요. 저는 매일 회사에 가방을 들고 다니니까 가벼운 가방을 샀어요. 그런데 집에서 가방을 다시 봤어요. 가방에 작은 문제가 있었어요. 그래서 오늘 쇼핑몰에 가서 새 가방으로 교환했어요.",
+  "passageVi": "Hôm qua tôi đến trung tâm mua sắm để mua túi xách. Có hai chiếc túi tôi ưng. Một chiếc có thiết kế sặc sỡ. Đẹp nhưng hơi nặng. Chiếc kia là túi đơn giản. Nó nhẹ hơn và rẻ hơn chiếc túi sặc sỡ. Vì hằng ngày tôi xách túi đi làm nên tôi mua chiếc túi nhẹ. Nhưng ở nhà tôi xem lại chiếc túi. Túi có một lỗi nhỏ. Vì vậy hôm nay tôi đến trung tâm mua sắm và đổi lấy túi mới.",
+  "questions": [
+   {
+    "q": "Vì sao người viết chọn chiếc túi đơn giản?",
+    "options": [
+     "Vì hằng ngày xách túi đi làm nên cần túi nhẹ",
+     "Vì túi đơn giản đẹp hơn",
+     "Vì túi sặc sỡ đã bán hết",
+     "Vì bạn bè khuyên nên mua"
+    ],
+    "explain": "매일 회사에 가방을 들고 다니니까 가벼운 가방을 샀어요."
+   },
+   {
+    "q": "Chọn câu ĐÚNG với đoạn văn.",
+    "options": [
+     "Hôm nay người viết đổi túi mới ở trung tâm mua sắm.",
+     "Người viết trả túi và lấy lại tiền.",
+     "Túi sặc sỡ nhẹ hơn túi đơn giản.",
+     "Người viết đã mua túi sặc sỡ."
+    ],
+    "explain": "오늘 쇼핑몰에 가서 새 가방으로 교환했어요 (đổi, không phải trả lấy tiền)."
+   }
+  ]
+ },
+ "writing": {
+  "prompt": "Viết 3–4 câu so sánh hai món đồ bạn đang dùng hoặc muốn mua (túi, điện thoại, giày…): món nào hơn ở điểm gì, bạn thích món nào. Dùng 보다, -(으)ㄴ và -는.",
+  "samples": [
+   [
+    "제 노트북은 동생의 노트북보다 가벼워요.",
+    "Máy tính của tôi nhẹ hơn máy của em tôi."
+   ],
+   [
+    "저는 단순한 디자인을 좋아해요.",
+    "Tôi thích thiết kế đơn giản."
+   ],
+   [
+    "요즘 유행하는 운동화를 사고 싶어요.",
+    "Tôi muốn mua đôi giày thể thao đang thịnh hành."
+   ],
+   [
+    "매일 신는 신발은 튼튼한 신발이 좋아요.",
+    "Giày đi hằng ngày thì nên là giày bền."
+   ]
+  ],
+  "tips": "Tính từ: 싼, 작은, 긴, 가벼운; 있다/없다 → -는. Động từ hiện tại: 읽는, 만드는 (bỏ ㄹ). Cái đem ra so + 보다."
+ }
+}

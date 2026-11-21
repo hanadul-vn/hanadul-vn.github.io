@@ -1,0 +1,682 @@
+{
+ "id": "sc2-02",
+ "title": "Hẹn gặp",
+ "ko": "약속",
+ "goal": "Hẹn gặp, đổi hoặc hủy hẹn, nói lý do; dặn ai đừng làm gì và xin phép làm một việc.",
+ "vocab": [
+  {
+   "group": "Hứa hẹn",
+   "words": [
+    [
+     "약속하다",
+     "hứa, hẹn"
+    ],
+    [
+     "약속을 지키다",
+     "giữ lời hứa, đúng hẹn"
+    ],
+    [
+     "약속을 못 지키다",
+     "không giữ được lời hẹn"
+    ],
+    [
+     "약속을 취소하다",
+     "hủy hẹn"
+    ],
+    [
+     "약속을 바꾸다",
+     "đổi hẹn"
+    ],
+    [
+     "헤어지다",
+     "chia tay"
+    ],
+    [
+     "마중을 나가다",
+     "ra đón (ai)"
+    ],
+    [
+     "정각",
+     "đúng giờ (giờ chẵn)"
+    ],
+    [
+     "늦잠을 자다",
+     "ngủ dậy muộn"
+    ],
+    [
+     "확인",
+     "sự xác nhận, kiểm tra lại"
+    ],
+    [
+     "변경",
+     "sự thay đổi"
+    ],
+    [
+     "바뀌다",
+     "bị (được) thay đổi"
+    ]
+   ]
+  },
+  {
+   "group": "Địa điểm hẹn",
+   "words": [
+    [
+     "미술관",
+     "bảo tàng mỹ thuật"
+    ],
+    [
+     "광장",
+     "quảng trường"
+    ],
+    [
+     "안내 데스크",
+     "quầy thông tin, bàn hướng dẫn"
+    ],
+    [
+     "정류장",
+     "trạm dừng (xe buýt)"
+    ],
+    [
+     "뷔페",
+     "nhà hàng buffet"
+    ],
+    [
+     "회의실",
+     "phòng họp"
+    ],
+    [
+     "과 사무실",
+     "văn phòng khoa"
+    ]
+   ]
+  },
+  {
+   "group": "Quy định, lưu ý",
+   "words": [
+    [
+     "담배",
+     "thuốc lá"
+    ],
+    [
+     "피우다",
+     "hút (thuốc)"
+    ],
+    [
+     "라이터",
+     "bật lửa"
+    ],
+    [
+     "떠들다",
+     "làm ồn"
+    ],
+    [
+     "손을 대다",
+     "chạm tay vào"
+    ],
+    [
+     "절대",
+     "tuyệt đối"
+    ],
+    [
+     "유의 사항",
+     "điều cần lưu ý"
+    ],
+    [
+     "준비물",
+     "đồ cần chuẩn bị"
+    ],
+    [
+     "회비",
+     "hội phí"
+    ],
+    [
+     "등산화",
+     "giày leo núi"
+    ]
+   ]
+  },
+  {
+   "group": "Từ khác",
+   "words": [
+    [
+     "갑자기",
+     "đột nhiên"
+    ],
+    [
+     "고치다",
+     "sửa, chữa"
+    ],
+    [
+     "길",
+     "con đường"
+    ],
+    [
+     "논문",
+     "luận văn"
+    ],
+    [
+     "문제가 있다",
+     "có vấn đề"
+    ],
+    [
+     "빠지다",
+     "bị sót, thiếu"
+    ],
+    [
+     "알다",
+     "biết"
+    ],
+    [
+     "잊다",
+     "quên"
+    ],
+    [
+     "외출하다",
+     "ra ngoài"
+    ],
+    [
+     "점검하다",
+     "kiểm tra (định kỳ)"
+    ]
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "pattern": "N만",
+   "title": "chỉ",
+   "note": [
+    "Gắn sau danh từ để nói \"chỉ có cái đó\": 커피만 마셔요 (chỉ uống cà phê).",
+    "만 thay cho 이/가, 을/를: 민수 씨만 왔어요, 물만 마셔요.",
+    "Với tiểu từ khác thì đặt 만 phía sau: 주말에만, 도서관에서만, 친구에게만."
+   ],
+   "examples": [
+    [
+     "저는 커피만 마셔요.",
+     "Tôi chỉ uống cà phê."
+    ],
+    [
+     "회의실에 부장님만 있어요.",
+     "Trong phòng họp chỉ có trưởng phòng."
+    ],
+    [
+     "주말에만 시간이 있어요.",
+     "Tôi chỉ có thời gian vào cuối tuần."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "저는 커피___ 마셔요. 차는 안 마셔요.",
+     "options": [
+      "만",
+      "도",
+      "와",
+      "의"
+     ],
+     "explain": "Chỉ uống cà phê → 커피만."
+    },
+    {
+     "q": "주말에___ 시간이 있어요. (chỉ cuối tuần)",
+     "options": [
+      "만",
+      "를",
+      "의",
+      "로"
+     ],
+     "explain": "에 + 만 → 주말에만."
+    },
+    {
+     "q": "\"Chỉ có Minh đến đúng giờ.\" là câu nào?",
+     "options": [
+      "민 씨만 정각에 왔어요.",
+      "민 씨도 정각에 왔어요.",
+      "민 씨를 정각에 왔어요.",
+      "민 씨의 정각에 왔어요."
+     ],
+     "explain": "Chỉ Minh → 민 씨만 (만 thay cho 이/가)."
+    },
+    {
+     "q": "\"Chỉ uống nước\" là gì?",
+     "options": [
+      "물만 마셔요.",
+      "물을만 마셔요.",
+      "만 물을 마셔요.",
+      "물도 마셔요."
+     ],
+     "explain": "만 thay cho 을/를: 물만."
+    },
+    {
+     "q": "시험 때는 도서관에서___ 공부해요. (chỉ ở thư viện)",
+     "options": [
+      "만",
+      "도",
+      "의",
+      "를"
+     ],
+     "explain": "에서 + 만 → 도서관에서만."
+    }
+   ]
+  },
+  {
+   "pattern": "-(으)니까",
+   "title": "vì … nên",
+   "note": [
+    "Nêu lý do: 비가 오니까 우산을 가져가세요 (Vì trời mưa nên hãy mang ô).",
+    "Gốc có patchim → 으니까: 없으니까. Không patchim hoặc ㄹ → 니까: 오니까, 머니까 (멀다, lược ㄹ).",
+    "Khác -아/어서: sau -(으)니까 được dùng câu mệnh lệnh, rủ rê (-(으)세요, -(으)ㅂ시다, -(으)ㄹ까요?). -아/어서 thì không.",
+    "Việc đã xảy ra → -았/었으니까: 어제 늦게 잤으니까.",
+    "Bất quy tắc ㅂ: 춥다 → 추우니까."
+   ],
+   "examples": [
+    [
+     "비가 오니까 우산을 가져가세요.",
+     "Trời mưa nên hãy mang ô theo."
+    ],
+    [
+     "시간이 없으니까 택시를 탑시다.",
+     "Không có thời gian nên mình đi taxi đi."
+    ],
+    [
+     "오늘은 바쁘니까 약속을 내일로 바꿀까요?",
+     "Hôm nay bận nên mình đổi hẹn sang mai nhé?"
+    ]
+   ],
+   "questions": [
+    {
+     "q": "비가 ___ 우산을 가져가세요.",
+     "options": [
+      "오니까",
+      "와서",
+      "오고",
+      "오지만"
+     ],
+     "explain": "Sau lý do là câu mệnh lệnh (-세요) → dùng -(으)니까, không dùng -아/어서."
+    },
+    {
+     "q": "시간이 ___ 택시를 탑시다.",
+     "options": [
+      "없으니까",
+      "없어서",
+      "없니까",
+      "없으까"
+     ],
+     "explain": "Rủ rê (-ㅂ시다) → -(으)니까; 없다 có patchim → 없으니까."
+    },
+    {
+     "q": "길이 ___ 지하철로 갈까요?",
+     "options": [
+      "막히니까",
+      "막혀서",
+      "막히고",
+      "막히지만"
+     ],
+     "explain": "Rủ rê (-(으)ㄹ까요?) → 막히니까."
+    },
+    {
+     "q": "날씨가 ___ 창문을 닫아 주세요. (춥다)",
+     "options": [
+      "추우니까",
+      "춥으니까",
+      "춥니까",
+      "추워니까"
+     ],
+     "explain": "Bất quy tắc ㅂ: 춥다 → 추우니까."
+    },
+    {
+     "q": "어제 늦게 ___ 오늘은 일찍 주무세요. (자다)",
+     "options": [
+      "잤으니까",
+      "자니까",
+      "잤니까",
+      "잤어서"
+     ],
+     "explain": "Việc đã xảy ra (어제) → 잤으니까."
+    }
+   ]
+  },
+  {
+   "pattern": "-지 말다",
+   "title": "đừng (làm gì)",
+   "note": [
+    "Bảo ai đừng làm gì: -지 마세요 (lịch sự), -지 마십시오 (trang trọng).",
+    "Rủ nhau đừng làm: -지 맙시다: 늦지 맙시다 (Chúng ta đừng đến muộn nhé).",
+    "Không dùng 안 hay -지 않다 trong câu cấm: không nói 안 피우세요."
+   ],
+   "examples": [
+    [
+     "여기에서 담배를 피우지 마세요.",
+     "Đừng hút thuốc ở đây."
+    ],
+    [
+     "그림에 손을 대지 마세요.",
+     "Đừng chạm tay vào tranh."
+    ],
+    [
+     "약속 시간에 늦지 맙시다.",
+     "Chúng ta đừng đến muộn giờ hẹn nhé."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "여기에서 담배를 ___.",
+     "options": [
+      "피우지 마세요",
+      "피우지 않으세요",
+      "안 피우지 마세요",
+      "피우세요 마"
+     ],
+     "explain": "Cấm → -지 마세요."
+    },
+    {
+     "q": "도서관에서 ___ 마세요.",
+     "options": [
+      "떠들지",
+      "떠들고",
+      "떠들어",
+      "떠들을"
+     ],
+     "explain": "Đừng làm ồn → 떠들지 마세요."
+    },
+    {
+     "q": "그림에 손을 대지 ___. (cấm)",
+     "options": [
+      "마세요",
+      "말세요",
+      "마어요",
+      "말으세요"
+     ],
+     "explain": "말다 + -(으)세요 → 마세요 (lược ㄹ)."
+    },
+    {
+     "q": "\"Chúng ta đừng đến muộn nhé.\" là câu nào?",
+     "options": [
+      "늦지 맙시다.",
+      "늦지 않읍시다.",
+      "안 늦지 맙시다.",
+      "늦지 마요세요."
+     ],
+     "explain": "Rủ nhau đừng làm → -지 맙시다."
+    },
+    {
+     "q": "\"Đừng quên lời hẹn nhé.\" là câu nào?",
+     "options": [
+      "약속을 잊지 마세요.",
+      "약속을 잊지 않으세요.",
+      "약속을 잊으세요.",
+      "약속을 안 잊지 마세요."
+     ],
+     "explain": "Đừng quên → 잊지 마세요."
+    }
+   ]
+  },
+  {
+   "pattern": "-아/어도 되다",
+   "title": "được phép (làm gì), … cũng được",
+   "note": [
+    "Xin phép: -아/어도 돼요? (… được không?). Cho phép: 네, -아/어도 돼요.",
+    "Chia theo -아/어요: 앉다 → 앉아도, 먹다 → 먹어도, 하다 → 해도, 켜다 → 켜도.",
+    "Không cho phép thì trả lời: 아니요, -지 마세요."
+   ],
+   "examples": [
+    [
+     "여기에 앉아도 돼요?",
+     "Tôi ngồi đây được không?"
+    ],
+    [
+     "네, 사진을 찍어도 돼요.",
+     "Vâng, được chụp ảnh."
+    ],
+    [
+     "내일 와도 돼요.",
+     "Ngày mai đến cũng được."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "여기에 ___ 돼요?",
+     "options": [
+      "앉아도",
+      "앉어도",
+      "앉아서",
+      "앉으니까"
+     ],
+     "explain": "앉다 (ㅏ) → 앉아도 돼요?"
+    },
+    {
+     "q": "텔레비전을 ___ 돼요? (켜다)",
+     "options": [
+      "켜도",
+      "켜어도",
+      "켜서도",
+      "켜니까"
+     ],
+     "explain": "켜다 → 켜도 돼요?"
+    },
+    {
+     "q": "약속 시간을 ___ 돼요? (바꾸다)",
+     "options": [
+      "바꿔도",
+      "바꾸어서",
+      "바꾸도",
+      "바꿨으니까"
+     ],
+     "explain": "바꾸다 → 바꿔도 돼요?"
+    },
+    {
+     "q": "\"사진을 찍어도 돼요?\" — Trả lời KHÔNG cho phép:",
+     "options": [
+      "아니요, 찍지 마세요.",
+      "아니요, 찍어도 돼요.",
+      "네, 찍지 마세요.",
+      "아니요, 찍어 주세요."
+     ],
+     "explain": "Không cho phép → 아니요, -지 마세요."
+    },
+    {
+     "q": "Nghĩa của \"내일 와도 돼요.\"",
+     "options": [
+      "Ngày mai đến cũng được.",
+      "Ngày mai phải đến.",
+      "Ngày mai đừng đến.",
+      "Ngày mai tôi sẽ đến."
+     ],
+     "explain": "-아/어도 되다 = … cũng được, được phép."
+    }
+   ]
+  }
+ ],
+ "usage": [
+  {
+   "q": "저는 약속 시간에 늦지 않아요. 항상 약속을 ____.",
+   "options": [
+    "지켜요",
+    "바꿔요",
+    "취소해요",
+    "잊어요"
+   ],
+   "explain": "Không đến muộn → luôn giữ lời hẹn: 약속을 지켜요."
+  },
+  {
+   "q": "회사에 갑자기 일이 있어서 친구와의 약속을 ____.",
+   "options": [
+    "취소했어요",
+    "지켰어요",
+    "약속했어요",
+    "확인했어요"
+   ],
+   "explain": "Có việc đột xuất → hủy hẹn: 약속을 취소했어요."
+  },
+  {
+   "q": "여기는 금연이에요. 담배를 ____ 마세요.",
+   "options": [
+    "피우지",
+    "떠들지",
+    "고치지",
+    "빠지지"
+   ],
+   "explain": "Cấm hút thuốc → 피우지 마세요."
+  },
+  {
+   "q": "아침에 ____을 자서 회사에 늦었어요.",
+   "options": [
+    "늦잠",
+    "정각",
+    "확인",
+    "회비"
+   ],
+   "explain": "Ngủ dậy muộn → 늦잠을 자다."
+  },
+  {
+   "q": "친구가 한국에 와요. 그래서 공항에 ____.",
+   "options": [
+    "마중을 나가요",
+    "약속을 지켜요",
+    "손을 대요",
+    "외출해요"
+   ],
+   "explain": "Bạn đến → ra sân bay đón: 마중을 나가요."
+  },
+  {
+   "q": "컴퓨터에 문제가 있어요. 좀 ____ 주세요.",
+   "options": [
+    "고쳐",
+    "잊어",
+    "떠들어",
+    "피워"
+   ],
+   "explain": "Máy có vấn đề → sửa giúp: 고쳐 주세요."
+  },
+  {
+   "q": "회의는 세 시 ____에 시작해요.",
+   "options": [
+    "정각",
+    "늦잠",
+    "준비물",
+    "유의 사항"
+   ],
+   "explain": "Đúng 3 giờ → 세 시 정각."
+  },
+  {
+   "q": "산에 갈 때는 ____가 필요해요.",
+   "options": [
+    "등산화",
+    "라이터",
+    "회비",
+    "논문"
+   ],
+   "explain": "Đi núi cần giày leo núi (등산화)."
+  },
+  {
+   "q": "친구의 이름을 ____ 미안해요.",
+   "options": [
+    "잊어서",
+    "알아서",
+    "고쳐서",
+    "피워서"
+   ],
+   "explain": "Quên tên bạn nên xin lỗi → 잊어서."
+  }
+ ],
+ "listening": [
+  {
+   "listen": "내일 오후 세 시에 미술관 앞에서 만나요.",
+   "options": [
+    "Gặp nhau trước bảo tàng mỹ thuật lúc 3 giờ chiều mai.",
+    "Gặp nhau trong bảo tàng lúc 3 giờ sáng mai.",
+    "Gặp nhau ở quảng trường lúc 3 giờ chiều nay.",
+    "Gặp nhau trước rạp chiếu phim lúc 4 giờ chiều mai."
+   ],
+   "explain": "내일 오후 세 시 = 3 giờ chiều mai; 미술관 앞 = trước bảo tàng mỹ thuật."
+  },
+  {
+   "listen": "여기에서 사진을 찍지 마세요.",
+   "options": [
+    "Đừng chụp ảnh ở đây.",
+    "Hãy chụp ảnh ở đây.",
+    "Ở đây được chụp ảnh.",
+    "Chụp ảnh giúp tôi ở đây."
+   ],
+   "explain": "찍지 마세요 = đừng chụp."
+  },
+  {
+   "listen": "가: 이 의자에 앉아도 돼요? 나: 네, 앉으세요.",
+   "options": [
+    "Cho phép ngồi",
+    "Không cho ngồi",
+    "Bảo đứng dậy",
+    "Bảo đổi ghế khác"
+   ],
+   "explain": "앉아도 돼요? → 네, 앉으세요 = vâng, mời ngồi.",
+   "q": "Người thứ hai trả lời thế nào?"
+  },
+  {
+   "listen": "비가 오니까 약속을 다음 주로 바꿉시다.",
+   "options": [
+    "Vì trời mưa nên đổi hẹn sang tuần sau.",
+    "Vì trời mưa nên hủy hẹn.",
+    "Tuần sau trời mưa nên đổi hẹn.",
+    "Dù trời mưa vẫn giữ hẹn."
+   ],
+   "explain": "비가 오니까 = vì trời mưa; 다음 주로 바꿉시다 = đổi sang tuần sau."
+  },
+  {
+   "listen": "가: 회의실에 누가 있어요? 나: 부장님만 있어요.",
+   "options": [
+    "Chỉ có trưởng phòng",
+    "Không có ai",
+    "Trưởng phòng và giám đốc",
+    "Rất nhiều nhân viên"
+   ],
+   "explain": "부장님만 = chỉ trưởng phòng.",
+   "q": "Trong phòng họp có ai?"
+  }
+ ],
+ "reading": {
+  "passage": "이번 주 토요일에 한국어 동아리에서 북한산에 가요. 아침 여덟 시 정각에 학교 정문 앞에서 만나요. 늦지 마세요. 회비는 만 원이에요. 등산화와 물을 꼭 가져오세요. 점심은 동아리에서 준비하니까 도시락은 가져오지 마세요. 산에서는 담배를 절대 피우지 마세요. 사진은 찍어도 돼요. 금요일 저녁에 동아리 회장이 문자를 보낼 거예요. 꼭 확인하세요.",
+  "passageVi": "Thứ bảy tuần này câu lạc bộ tiếng Hàn sẽ đi núi Bukhan. Chúng ta gặp nhau đúng 8 giờ sáng trước cổng chính của trường. Đừng đến muộn. Hội phí là 10.000 won. Nhất định phải mang giày leo núi và nước. Bữa trưa câu lạc bộ sẽ chuẩn bị nên đừng mang cơm hộp. Trên núi tuyệt đối không hút thuốc. Được phép chụp ảnh. Tối thứ sáu trưởng câu lạc bộ sẽ gửi tin nhắn. Nhớ kiểm tra nhé.",
+  "questions": [
+   {
+    "q": "Thành viên KHÔNG cần mang theo gì?",
+    "options": [
+     "Cơm hộp",
+     "Giày leo núi",
+     "Nước",
+     "Hội phí"
+    ],
+    "explain": "점심은 동아리에서 준비하니까 도시락은 가져오지 마세요."
+   },
+   {
+    "q": "Chọn câu ĐÚNG với đoạn văn.",
+    "options": [
+     "Mọi người gặp nhau đúng 8 giờ sáng trước cổng trường.",
+     "Hội phí là 1.000 won.",
+     "Trên núi được hút thuốc.",
+     "Không được chụp ảnh trên núi."
+    ],
+    "explain": "아침 여덟 시 정각에 학교 정문 앞에서 만나요. Hội phí 만 원 = 10.000 won; cấm hút thuốc; 사진은 찍어도 돼요."
+   }
+  ]
+ },
+ "writing": {
+  "prompt": "Viết 3–4 câu hẹn một người bạn: gặp ở đâu, mấy giờ, vì sao chọn chỗ đó, dặn bạn đừng làm gì và nói việc gì bạn ấy được phép làm. Dùng 만, -(으)니까, -지 말다 và -아/어도 되다.",
+  "samples": [
+   [
+    "토요일 오후 두 시에 광장에서 만나요.",
+    "Thứ bảy 2 giờ chiều gặp nhau ở quảng trường nhé."
+   ],
+   [
+    "광장은 지하철역에서 가까우니까 지하철을 타세요.",
+    "Quảng trường gần ga tàu điện nên hãy đi tàu điện."
+   ],
+   [
+    "늦지 마세요. 저는 30분만 기다릴 수 있어요.",
+    "Đừng đến muộn nhé. Tôi chỉ đợi được 30 phút thôi."
+   ],
+   [
+    "친구와 같이 와도 돼요.",
+    "Bạn đi cùng bạn của bạn cũng được."
+   ]
+  ],
+  "tips": "Sau -(으)니까 được dùng -(으)세요, -(으)ㅂ시다; -아/어서 thì không. Cấm → -지 마세요, không dùng 안. 만 thay cho 이/가, 을/를."
+ }
+}

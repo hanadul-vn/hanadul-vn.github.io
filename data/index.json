@@ -133,7 +133,50 @@
           "icon": "🚇"
         }
       ],
-      "subtitle": "Làm quen chữ Hangeul và những câu giao tiếp đầu tiên"
+      "subtitle": "Làm quen chữ Hangeul và những câu giao tiếp đầu tiên",
+      "icon": "🌱",
+      "status": "Đủ 15 bài"
+    },
+    {
+      "id": "sc2",
+      "name": "Sơ cấp 2",
+      "icon": "🌿",
+      "prefix": true,
+      "subtitle": "Câu dài hơn, giao tiếp hằng ngày trôi chảy hơn",
+      "lessons": [
+        {
+          "id": "sc2-01",
+          "no": "1",
+          "title": "Gặp gỡ",
+          "ko": "만남",
+          "summary": "의 · -(으)ㄹ 때 · -아/어 주다",
+          "icon": "🤝"
+        },
+        {
+          "id": "sc2-02",
+          "no": "2",
+          "title": "Hẹn gặp",
+          "ko": "약속",
+          "summary": "만 · -(으)니까 · -지 말다 · -아/어도 되다",
+          "icon": "📌"
+        },
+        {
+          "id": "sc2-03",
+          "no": "3",
+          "title": "Mua sắm (2)",
+          "ko": "물건 사기 (2)",
+          "summary": "보다 · -(으)ㄴ (tính từ) · -는 (động từ)",
+          "icon": "🛒"
+        },
+        {
+          "id": "sc2-04",
+          "no": "4",
+          "title": "Bệnh viện",
+          "ko": "병원",
+          "summary": "-(으)ㄴ (quá khứ) · 마다 · -아/어야 하다",
+          "icon": "🏥"
+        }
+      ]
     }
   ]
 }
