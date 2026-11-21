@@ -1,4 +1,6 @@
-# Học tiếng Hàn
+# Hana Dul – Học tiếng Hàn miễn phí
+
+**Hana Dul** (하나 둘, “một, hai”): học tiếng Hàn từng bước.
 
 Website miễn phí cho người Việt học tiếng Hàn từ sơ cấp: mỗi bài có bảng từ vựng, ghi chú ngữ pháp và bài trắc nghiệm bấm chọn có giải thích. Không cần đăng ký, tiến độ chỉ lưu trên trình duyệt của người học.
 

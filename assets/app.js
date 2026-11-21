@@ -102,10 +102,11 @@
 
   // ---------- home ----------
   function renderHome() {
-    document.title = 'Học tiếng Hàn';
+    document.title = 'Hana Dul – Học tiếng Hàn miễn phí';
     getIndex().then(function (idx) {
       var prog = readStore();
       var html = '<section class="hero"><h1>Học tiếng Hàn miễn phí</h1>' +
+        '<p><strong>Hana Dul</strong> <span class="ko">(하나 둘)</span> nghĩa là “một, hai”: học tiếng Hàn từng bước, bắt đầu từ bảng chữ cái.</p>' +
         '<p class="muted">Mỗi bài gồm bảng từ vựng, phần ngữ pháp và bài trắc nghiệm có giải thích. Không cần đăng ký.</p></section>';
       idx.levels.forEach(function (lv) {
         html += '<section class="level"><h2>' + esc(lv.name) + '</h2><ul class="lesson-list">';
@@ -131,7 +132,7 @@
       var idx = res[0], data = res[1];
       var found = findLesson(idx, id);
       var name = found ? (found.lesson.no === '0' ? found.lesson.title : 'Bài ' + found.lesson.no + ': ' + found.lesson.title) : data.title;
-      document.title = name + ' – Học tiếng Hàn';
+      document.title = name + ' – Hana Dul';
       var next = found && found.level.lessons[found.pos + 1];
       var head = '<nav class="crumbs"><a href="#/">Trang chủ</a>' + (found ? ' / ' + esc(found.level.name) : '') + '</nav>' +
         '<h1>' + esc(name) + ' <span class="ko muted">' + esc(data.ko) + '</span></h1>' +
