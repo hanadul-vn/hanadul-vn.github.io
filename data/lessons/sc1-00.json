@@ -1,0 +1,70 @@
+{
+  "id": "sc1-00",
+  "title": "Bảng chữ Hangeul",
+  "ko": "한글",
+  "goal": "Nhận mặt và đọc được 21 nguyên âm, 19 phụ âm đầu, biết cách ghép thành âm tiết. Bấm 🔊 để nghe (phụ âm được đọc kèm nguyên âm ㅏ).",
+  "vocabDirection": "ko",
+  "vocabPrompt": { "koToVi": "Chữ {ko} đọc gần với âm nào?" },
+  "vocab": [
+    {
+      "group": "Nguyên âm cơ bản",
+      "words": [
+        ["ㅏ", "a", "아"], ["ㅑ", "ya", "야"], ["ㅓ", "ơ", "어"], ["ㅕ", "yơ", "여"],
+        ["ㅗ", "ô", "오"], ["ㅛ", "yô", "요"], ["ㅜ", "u", "우"], ["ㅠ", "yu", "유"],
+        ["ㅡ", "ư", "으"], ["ㅣ", "i", "이"]
+      ]
+    },
+    {
+      "group": "Nguyên âm ghép",
+      "words": [
+        ["ㅐ", "e (miệng mở rộng)", "애"], ["ㅒ", "ye (miệng mở rộng)", "얘"], ["ㅔ", "ê", "에"], ["ㅖ", "yê", "예"],
+        ["ㅘ", "oa", "와"], ["ㅙ", "oe (wae)", "왜"], ["ㅚ", "uê (oe)", "외"], ["ㅝ", "uơ", "워"],
+        ["ㅞ", "uê (we)", "웨"], ["ㅟ", "uy", "위"], ["ㅢ", "ưi", "의"]
+      ]
+    },
+    {
+      "group": "Phụ âm thường",
+      "words": [
+        ["ㄱ", "g / k", "가"], ["ㄴ", "n", "나"], ["ㄷ", "đ / t", "다"], ["ㄹ", "r / l", "라"],
+        ["ㅁ", "m", "마"], ["ㅂ", "b / p", "바"], ["ㅅ", "s", "사"], ["ㅇ", "câm ở đầu, ng ở cuối", "아"],
+        ["ㅈ", "ch (nhẹ, gần j)", "자"], ["ㅎ", "h", "하"]
+      ]
+    },
+    {
+      "group": "Phụ âm bật hơi",
+      "words": [
+        ["ㅊ", "ch bật hơi", "차"], ["ㅋ", "kh (k bật hơi)", "카"], ["ㅌ", "th (t bật hơi)", "타"], ["ㅍ", "ph (p bật hơi)", "파"]
+      ]
+    },
+    {
+      "group": "Phụ âm căng",
+      "words": [
+        ["ㄲ", "kk (k căng)", "까"], ["ㄸ", "tt (t căng)", "따"], ["ㅃ", "pp (p căng)", "빠"], ["ㅆ", "ss (s căng)", "싸"], ["ㅉ", "jj (ch căng)", "짜"]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "Ghép âm tiết",
+      "title": "phụ âm + nguyên âm (+ phụ âm cuối)",
+      "note": [
+        "Mỗi chữ Hàn là một âm tiết, luôn bắt đầu bằng một phụ âm. Nếu âm tiết bắt đầu bằng nguyên âm thì viết ㅇ câm ở đầu: ㅇ + ㅏ = 아.",
+        "Nguyên âm dọc (ㅏ, ㅓ, ㅣ…) đứng bên phải phụ âm: ㄴ + ㅏ = 나. Nguyên âm ngang (ㅗ, ㅜ, ㅡ…) đứng bên dưới: ㄴ + ㅗ = 노.",
+        "Phụ âm cuối (patchim) viết ở dưới cùng: ㅎ + ㅏ + ㄴ = 한."
+      ],
+      "examples": [["가", "ga"], ["너", "nơ"], ["고", "gô"], ["한", "han"], ["물", "mul (nước)"]],
+      "questions": [
+        { "q": "ㄱ + ㅏ = ?", "options": ["가", "거", "고", "구"], "explain": "ㄱ (g) ghép với ㅏ (a) thành 가 (ga)." },
+        { "q": "ㅁ + ㅗ = ?", "options": ["모", "머", "무", "마"], "explain": "ㅗ là nguyên âm ngang nên viết dưới ㅁ: 모 (mô)." },
+        { "q": "ㅇ + ㅜ = ?", "options": ["우", "오", "어", "으"], "explain": "ㅇ ở đầu không phát âm, 우 đọc là u." },
+        { "q": "ㅎ + ㅏ + ㄴ = ?", "options": ["한", "핟", "할", "함"], "explain": "ㄴ là phụ âm cuối: 한 (han), như trong 한국." },
+        { "q": "Chữ 나 gồm những phần nào?", "options": ["ㄴ + ㅏ", "ㄴ + ㅓ", "ㄷ + ㅏ", "ㄹ + ㅏ"], "explain": "나 = ㄴ (n) + ㅏ (a)." },
+        { "q": "Chữ 서 đọc là gì?", "say": "서", "options": ["sơ", "sa", "sô", "su"], "explain": "ㅅ (s) + ㅓ (ơ) = sơ." },
+        { "q": "Chữ nào đọc là “ku” (k bật hơi + u)?", "options": ["쿠", "구", "꾸", "코"], "explain": "ㅋ là k bật hơi, ㅜ là u: 쿠." },
+        { "q": "Âm tiết nào bắt đầu bằng phụ âm căng?", "options": ["빠", "바", "파", "마"], "explain": "ㅃ (pp) là phụ âm căng, đọc mạnh và không bật hơi." },
+        { "q": "Trong chữ 강, ㅇ ở cuối đọc là gì?", "say": "강", "options": ["ng", "không đọc", "n", "m"], "explain": "ㅇ ở đầu âm tiết thì câm, ở cuối âm tiết đọc là ng: 강 (gang)." },
+        { "q": "Chữ 의 đọc là gì?", "say": "의", "options": ["ưi", "ui", "ê", "uy"], "explain": "ㅢ là ư + i, đọc nhanh thành ưi." }
+      ]
+    }
+  ]
+}

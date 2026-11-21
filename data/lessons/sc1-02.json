@@ -1,0 +1,139 @@
+{
+  "id": "sc1-02",
+  "title": "Trường học",
+  "ko": "학교",
+  "goal": "Gọi tên nơi chốn và đồ vật, hỏi và nói đồ vật ở đâu, có hay không.",
+  "vocab": [
+    {
+      "group": "Nơi chốn",
+      "words": [
+        ["학교", "trường học"], ["도서관", "thư viện"], ["식당", "nhà ăn, nhà hàng"], ["호텔", "khách sạn"],
+        ["극장", "rạp hát, rạp chiếu phim"], ["우체국", "bưu điện"], ["병원", "bệnh viện"], ["은행", "ngân hàng"],
+        ["백화점", "trung tâm thương mại"], ["약국", "hiệu thuốc"], ["가게", "cửa hàng, cửa tiệm"], ["사무실", "văn phòng"]
+      ]
+    },
+    {
+      "group": "Trong trường",
+      "words": [
+        ["강의실", "phòng giảng (lớp đại học)"], ["교실", "lớp học"], ["화장실", "nhà vệ sinh"], ["휴게실", "phòng nghỉ"],
+        ["어학실", "phòng học ngoại ngữ (phòng Lab)"], ["동아리방", "phòng câu lạc bộ"], ["체육관", "nhà thi đấu thể thao"], ["운동장", "sân vận động"],
+        ["강당", "hội trường"], ["학생 식당", "căng tin sinh viên"], ["세미나실", "phòng hội thảo"], ["서점", "hiệu sách"]
+      ]
+    },
+    {
+      "group": "Đồ vật trong lớp",
+      "words": [
+        ["책상", "cái bàn"], ["의자", "cái ghế"], ["칠판", "bảng đen"], ["문", "cửa ra vào"],
+        ["창문", "cửa sổ"], ["시계", "đồng hồ"], ["가방", "cặp, túi xách"], ["컴퓨터", "máy vi tính"],
+        ["책", "sách"], ["공책", "vở"], ["사전", "từ điển"], ["지우개", "cục tẩy"],
+        ["지도", "bản đồ"], ["펜", "bút"], ["필통", "hộp bút"]
+      ]
+    },
+    {
+      "group": "Từ khác trong bài",
+      "words": [
+        ["여기", "ở đây"], ["거기", "ở đó"], ["저기", "ở kia"], ["어디", "ở đâu"],
+        ["이것", "cái này"], ["그것", "cái đó"], ["저것", "cái kia"], ["무엇", "cái gì"],
+        ["있다", "có, ở"], ["없다", "không có"], ["많이", "nhiều (trạng từ)"], ["텔레비전", "ti vi"],
+        ["라디오", "radio"], ["휴대전화", "điện thoại di động"]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "여기 · 거기 · 저기",
+      "title": "ở đây · ở đó · ở kia",
+      "note": [
+        "여기: chỗ gần người nói. 거기: chỗ gần người nghe (hoặc chỗ vừa nhắc tới). 저기: chỗ xa cả hai người.",
+        "Hỏi “ở đâu” dùng 어디: 화장실이 어디입니까?"
+      ],
+      "examples": [
+        ["여기는 도서관입니다.", "Đây là thư viện."],
+        ["저기가 식당입니다.", "Đằng kia là nhà ăn."],
+        ["은행이 어디입니까?", "Ngân hàng ở đâu?"]
+      ],
+      "questions": [
+        { "q": "Bạn đang đứng trong thư viện và nói: “Đây là thư viện.”", "options": ["여기는 도서관입니다.", "저기는 도서관입니다.", "거기는 도서관입니다.", "어디는 도서관입니다."], "explain": "Chỗ mình đang đứng là 여기." },
+        { "q": "Chỉ tòa nhà ở xa cả hai người: “___가 병원입니다.”", "options": ["저기", "여기", "거기", "어디"], "explain": "Xa cả người nói và người nghe dùng 저기." },
+        { "q": "Người nghe đang ở cửa hàng. Bạn hỏi: “___는 가게입니까?”", "options": ["거기", "여기", "저기", "무엇"], "explain": "Chỗ gần người nghe dùng 거기." },
+        { "q": "“Nhà vệ sinh ở đâu?”", "options": ["화장실이 어디입니까?", "화장실이 무엇입니까?", "화장실이 여기입니까?", "어디가 화장실입니다."], "explain": "어디 = ở đâu; câu hỏi kết thúc bằng 입니까?" }
+      ]
+    },
+    {
+      "pattern": "이것 · 그것 · 저것",
+      "title": "cái này · cái đó · cái kia",
+      "note": [
+        "이것: vật gần người nói. 그것: vật gần người nghe. 저것: vật xa cả hai.",
+        "Hỏi “cái gì” dùng 무엇: 이것은 무엇입니까?"
+      ],
+      "examples": [
+        ["이것은 책입니다.", "Cái này là sách."],
+        ["그것은 무엇입니까?", "Cái đó là gì?"],
+        ["저것은 시계입니다.", "Cái kia là đồng hồ."]
+      ],
+      "questions": [
+        { "q": "Bạn cầm quyển sách trên tay: “___은 책입니다.”", "options": ["이것", "그것", "저것", "여기"], "explain": "Vật trong tay người nói dùng 이것." },
+        { "q": "Bạn chỉ chiếc đồng hồ treo xa trên tường: “___은 시계입니다.”", "options": ["저것", "이것", "그것", "거기"], "explain": "Vật xa cả hai người dùng 저것." },
+        { "q": "A: 이것은 무엇입니까? (A cầm cục tẩy)  B: ___", "options": ["그것은 지우개입니다.", "이것은 지우개입니다.", "저것은 지우개입니다.", "거기는 지우개입니다."], "explain": "Vật đang ở chỗ A (người nghe của B) nên B dùng 그것." },
+        { "q": "“Cái kia là gì?”", "options": ["저것은 무엇입니까?", "저기는 무엇입니까?", "이것은 어디입니까?", "저것은 무엇입니다."], "explain": "저것 = cái kia, 무엇 = cái gì, kết thúc bằng 입니까?" }
+      ]
+    },
+    {
+      "pattern": "N이/가",
+      "title": "trợ từ chủ ngữ",
+      "note": [
+        "Gắn sau danh từ làm chủ ngữ. Có patchim dùng 이, không có patchim dùng 가.",
+        "Thường dùng với 있습니다/없습니다 và trong câu hỏi với từ để hỏi."
+      ],
+      "examples": [
+        ["책이 있습니다.", "Có sách."],
+        ["의자가 없습니다.", "Không có ghế."],
+        ["어디가 사무실입니까?", "Văn phòng là chỗ nào?"]
+      ],
+      "questions": [
+        { "q": "가방___ 있습니다.", "options": ["이", "가", "은", "을"], "explain": "가방 có patchim ㅇ nên dùng 이." },
+        { "q": "시계___ 없습니다.", "options": ["가", "이", "는", "를"], "explain": "시계 kết thúc bằng nguyên âm nên dùng 가." },
+        { "q": "컴퓨터___ 많이 있습니다.", "options": ["가", "이", "을", "에"], "explain": "컴퓨터 kết thúc bằng nguyên âm → 가." },
+        { "q": "Cụm nào viết đúng?", "options": ["책상이", "책상가", "의자이", "지도이"], "explain": "책상 có patchim → 이. 의자, 지도 không có patchim phải dùng 가." }
+      ]
+    },
+    {
+      "pattern": "N에 있습니다 / 없습니다",
+      "title": "có ở N / không có ở N",
+      "note": [
+        "Chỉ vị trí của người, vật: Danh từ nơi chốn + 에 + 있습니다 (có, ở) / 없습니다 (không có).",
+        "Hỏi: … 에 무엇이 있습니까? (Ở … có gì?)"
+      ],
+      "examples": [
+        ["교실에 칠판이 있습니다.", "Trong lớp có bảng."],
+        ["화장실이 저기에 있습니다.", "Nhà vệ sinh ở đằng kia."],
+        ["가방에 사전이 없습니다.", "Trong cặp không có từ điển."]
+      ],
+      "questions": [
+        { "q": "도서관___ 책이 많이 있습니다.", "options": ["에", "은", "이", "를"], "explain": "Nơi chốn + 에 + 있습니다." },
+        { "q": "“Trong cặp không có vở.”", "options": ["가방에 공책이 없습니다.", "가방에 공책이 있습니다.", "가방이 공책에 없습니다.", "공책에 가방이 없습니다."], "explain": "Nơi chốn (가방) + 에, vật (공책) + 이, 없습니다 = không có." },
+        { "q": "A: 교실에 무엇이 있습니까?  B: ___", "options": ["칠판이 있습니다.", "교실이 있습니다.", "네, 교실입니다.", "아니요, 교실에 없습니까?"], "explain": "Câu hỏi “Trong lớp có gì?”, trả lời bằng đồ vật + 이/가 있습니다." },
+        { "q": "Trái nghĩa với 있습니다 là gì?", "options": ["없습니다", "아닙니다", "입니다", "있습니까"], "explain": "있다 (có) ↔ 없다 (không có)." }
+      ]
+    },
+    {
+      "pattern": "N이/가 아닙니다",
+      "title": "không phải là N",
+      "note": [
+        "Phủ định của N입니다: N + 이/가 아닙니다. Có patchim dùng 이, không có patchim dùng 가.",
+        "Thường đi với câu trả lời 아니요: 아니요, 학생이 아닙니다."
+      ],
+      "examples": [
+        ["이것은 사전이 아닙니다.", "Cái này không phải từ điển."],
+        ["저는 의사가 아닙니다.", "Tôi không phải bác sĩ."],
+        ["아니요, 여기는 은행이 아닙니다.", "Không, ở đây không phải ngân hàng."]
+      ],
+      "questions": [
+        { "q": "저는 선생님___ 아닙니다.", "options": ["이", "가", "은", "를"], "explain": "선생님 có patchim → 이 아닙니다." },
+        { "q": "이것은 지우개___ 아닙니다.", "options": ["가", "이", "는", "에"], "explain": "지우개 không có patchim → 가 아닙니다." },
+        { "q": "A: 그것은 공책입니까?  B: 아니요, ___", "options": ["공책이 아닙니다.", "공책입니다.", "공책이 없습니다.", "공책가 아닙니다."], "explain": "Phủ định “không phải là vở”: 공책이 아닙니다." },
+        { "q": "Câu nào nghĩa là “Đây không phải bệnh viện”?", "options": ["여기는 병원이 아닙니다.", "여기에 병원이 없습니다.", "여기는 병원입니다.", "병원은 여기가 아닙니까?"], "explain": "아닙니다 = không phải là; 없습니다 = không có." }
+      ]
+    }
+  ]
+}
