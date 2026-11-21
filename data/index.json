@@ -1,0 +1,14 @@
+{
+  "levels": [
+    {
+      "id": "sc1",
+      "name": "Sơ cấp 1",
+      "lessons": [
+        { "id": "sc1-00", "no": "0", "title": "Bảng chữ Hangeul", "ko": "한글", "summary": "Nguyên âm, phụ âm, ghép chữ" },
+        { "id": "sc1-01", "no": "1", "title": "Giới thiệu", "ko": "소개", "summary": "입니다 · 입니까? · 은/는" },
+        { "id": "sc1-02", "no": "2", "title": "Trường học", "ko": "학교", "summary": "여기/거기/저기 · 이것/그것/저것 · 이/가 · 에 있습니다 · 이/가 아닙니다" },
+        { "id": "sc1-03", "no": "3", "title": "Sinh hoạt hằng ngày", "ko": "일상생활", "summary": "-ㅂ/습니다 · -ㅂ/습니까? · 을/를 · 에서" }
+      ]
+    }
+  ]
+}
