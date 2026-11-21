@@ -10,8 +10,8 @@
   <h1>Không tìm thấy trang</h1>
   <p>Đang đưa bạn về <a id="home" href="/">trang chủ Hana Dul</a>…</p>
   <script>
-    // Bản cũ chạy ở minhha96.github.io/hoc-tieng-han/; bản chính (hanadul-vn.github.io hoặc tên miền riêng) chạy ở gốc "/".
-    var home = location.hostname === 'minhha96.github.io' ? '/hoc-tieng-han/' : '/';
+    // Web chạy ở gốc tên miền (hanadul-vn.github.io).
+    var home = '/';
     document.getElementById('home').href = home;
     setTimeout(function () { location.replace(home); }, 3000);
   </script>
