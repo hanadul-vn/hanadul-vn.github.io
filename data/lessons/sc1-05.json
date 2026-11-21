@@ -1,0 +1,270 @@
+{
+  "id": "sc1-05",
+  "title": "Một ngày của tôi",
+  "ko": "하루 일과",
+  "goal": "Nói giờ bằng số thuần Hàn, kể việc làm trong ngày bằng đuôi -아/어요 và câu phủ định với 안.",
+  "vocab": [
+    {
+      "group": "Buổi trong ngày",
+      "words": [
+        ["새벽", "rạng sáng"],
+        ["아침", "buổi sáng, bữa sáng"],
+        ["점심", "buổi trưa, bữa trưa"],
+        ["저녁", "buổi tối, bữa tối"],
+        ["오전", "sáng (giờ trước 12h trưa)"],
+        ["오후", "chiều (giờ sau 12h trưa)"],
+        ["낮", "ban ngày"],
+        ["밤", "ban đêm"]
+      ]
+    },
+    {
+      "group": "Giờ giấc và số đếm",
+      "words": [
+        ["시", "giờ"],
+        ["분", "phút"],
+        ["초", "giây"],
+        ["반", "rưỡi (30 phút)"],
+        ["몇", "mấy (hỏi số lượng)"],
+        ["명", "người (đơn vị đếm)"],
+        ["하나", "một (thuần Hàn)"],
+        ["둘", "hai (thuần Hàn)"],
+        ["셋", "ba (thuần Hàn)"],
+        ["넷", "bốn (thuần Hàn)"],
+        ["다섯", "năm (thuần Hàn)"],
+        ["여섯", "sáu (thuần Hàn)"],
+        ["일곱", "bảy (thuần Hàn)"],
+        ["여덟", "tám (thuần Hàn)"],
+        ["아홉", "chín (thuần Hàn)"],
+        ["열", "mười (thuần Hàn)"],
+        ["스물", "hai mươi (thuần Hàn)"]
+      ]
+    },
+    {
+      "group": "Việc làm hằng ngày",
+      "words": [
+        ["일어나다", "thức dậy"],
+        ["이를 닦다", "đánh răng"],
+        ["세수하다", "rửa mặt"],
+        ["목욕하다", "tắm"],
+        ["청소하다", "dọn dẹp"],
+        ["숙제하다", "làm bài tập"],
+        ["배우다", "học (từ ai đó)"],
+        ["다니다", "đi đều đặn (đi học, đi làm)"],
+        ["출근하다", "đi làm"],
+        ["퇴근하다", "tan làm"],
+        ["시작하다", "bắt đầu"],
+        ["끝나다", "kết thúc"]
+      ]
+    },
+    {
+      "group": "Từ khác trong bài",
+      "words": [
+        ["집", "nhà"],
+        ["회사", "công ty"],
+        ["회의", "cuộc họp"],
+        ["공항", "sân bay"],
+        ["고향", "quê hương"],
+        ["부모님", "bố mẹ"],
+        ["남자", "nam giới"],
+        ["여자", "nữ giới"],
+        ["밥", "cơm"],
+        ["수업", "giờ học, buổi học"],
+        ["수영", "môn bơi"],
+        ["영어", "tiếng Anh"],
+        ["겨울", "mùa đông"],
+        ["일기", "nhật ký"],
+        ["인터넷", "internet"],
+        ["노래방", "quán karaoke"],
+        ["PC방", "quán net", "피시방"],
+        ["받다", "nhận"],
+        ["운전하다", "lái xe"],
+        ["출발하다", "xuất phát"],
+        ["시험을 보다", "đi thi"],
+        ["후", "sau, sau khi"]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "Số thuần Hàn + 시",
+      "title": "đếm số lượng và nói giờ",
+      "note": [
+        "1–10: 하나, 둘, 셋, 넷, 다섯, 여섯, 일곱, 여덟, 아홉, 열. 11 = 열하나, 20 = 스물, 30 = 서른, 40 = 마흔, 50 = 쉰. Từ 100 trở lên dùng số Hán Hàn.",
+        "Đứng trước đơn vị đếm thì 하나 → 한, 둘 → 두, 셋 → 세, 넷 → 네, 스물 → 스무: 한 명, 두 시, 스무 명.",
+        "Giờ (시) dùng số thuần Hàn, phút (분) dùng số Hán Hàn: 3시 10분 = 세 시 십 분. 30분 có thể nói 반.",
+        "Hỏi số lượng dùng 몇: 몇 시예요? (mấy giờ), 몇 명이에요? (mấy người)."
+      ],
+      "examples": [
+        ["지금 몇 시예요? — 열두 시예요.", "Bây giờ mấy giờ? — 12 giờ."],
+        ["수업이 오후 세 시 사십 분에 끝나요.", "Buổi học kết thúc lúc 3 giờ 40 chiều."],
+        ["교실에 학생이 네 명 있어요.", "Trong lớp có 4 học sinh."]
+      ],
+      "questions": [
+        {
+          "q": "3:00 nói là?",
+          "options": ["세 시", "셋 시", "삼 시", "서 시"],
+          "explain": "Giờ dùng số thuần Hàn; 셋 đứng trước đơn vị đổi thành 세."
+        },
+        {
+          "q": "4:15 nói là?",
+          "options": ["네 시 십오 분", "넷 시 십오 분", "사 시 십오 분", "네 시 열다섯 분"],
+          "explain": "Giờ: 넷 → 네 시. Phút: số Hán Hàn → 십오 분."
+        },
+        {
+          "q": "12 giờ nói là?",
+          "options": ["열두 시", "열둘 시", "십이 시", "열이 시"],
+          "explain": "12 = 열둘; trước đơn vị đổi thành 열두 → 열두 시."
+        },
+        {
+          "q": "1 giờ rưỡi nói là?",
+          "options": ["한 시 반", "하나 시 반", "일 시 반", "한 시 삼 분"],
+          "explain": "하나 → 한 trước 시; 30 phút nói 반."
+        },
+        {
+          "q": "Hai người nói là?",
+          "options": ["두 명", "둘 명", "이 명", "두울 명"],
+          "explain": "Đếm người dùng số thuần Hàn; 둘 → 두 trước đơn vị: 두 명."
+        },
+        {
+          "q": "Hai mươi người nói là?",
+          "options": ["스무 명", "스물 명", "두열 명", "열두 명"],
+          "explain": "스물 đứng trước đơn vị đổi thành 스무: 스무 명."
+        }
+      ]
+    },
+    {
+      "pattern": "-아/어요",
+      "title": "đuôi câu lịch sự, thân mật",
+      "note": [
+        "Dùng nhiều trong giao tiếp hằng ngày, mềm hơn -ㅂ/습니다. Câu hỏi giữ nguyên dạng, chỉ lên giọng ở cuối.",
+        "Nguyên âm cuối của gốc là ㅏ hoặc ㅗ → -아요 (살다 → 살아요). Nguyên âm khác → -어요 (먹다 → 먹어요). 하다 → 해요.",
+        "Gốc kết thúc bằng nguyên âm thì gộp lại: 가다 → 가요, 보다 → 봐요, 마시다 → 마셔요, 배우다 → 배워요, 다니다 → 다녀요.",
+        "Với danh từ: có patchim → 이에요 (학생이에요), không patchim → 예요 (의사예요)."
+      ],
+      "examples": [
+        ["지금 뭐 해요? — 집에서 숙제해요.", "Bây giờ bạn làm gì? — Tôi làm bài tập ở nhà."],
+        ["아침에 빵을 먹어요.", "Buổi sáng tôi ăn bánh mì."],
+        ["저는 회사원이에요.", "Tôi là nhân viên công ty."]
+      ],
+      "questions": [
+        {
+          "q": "먹다 → ?",
+          "options": ["먹어요", "먹아요", "먹요", "먹해요"],
+          "explain": "먹 có nguyên âm ㅓ (không phải ㅏ/ㅗ) → -어요."
+        },
+        {
+          "q": "청소하다 → ?",
+          "options": ["청소해요", "청소하요", "청소하어요", "청소해어요"],
+          "explain": "하다 luôn thành 해요."
+        },
+        {
+          "q": "보다 → ?",
+          "options": ["봐요", "보요", "보어요", "봐어요"],
+          "explain": "보 có ㅗ → 보 + 아요 → gộp thành 봐요."
+        },
+        {
+          "q": "마시다 → ?",
+          "options": ["마셔요", "마시요", "마사요", "마셔어요"],
+          "explain": "시 + 어요 → gộp thành 셔요: 마셔요."
+        },
+        {
+          "q": "저는 한국어를 ___. (배우다)",
+          "options": ["배워요", "배우요", "배와요", "배오요"],
+          "explain": "우 + 어요 → 워요: 배워요."
+        },
+        {
+          "q": "저는 학생___.",
+          "options": ["이에요", "예요", "이어요", "이요"],
+          "explain": "학생 có patchim ㅇ → 이에요."
+        },
+        {
+          "q": "제 친구는 의사___.",
+          "options": ["예요", "이에요", "에요", "여요"],
+          "explain": "의사 kết thúc bằng nguyên âm → 예요."
+        }
+      ]
+    },
+    {
+      "pattern": "N에 가다/오다/다니다",
+      "title": "đi đến, đến, đi (học, làm) ở",
+      "note": [
+        "에 chỉ nơi đến, đi với động từ di chuyển 가다, 오다, 다니다.",
+        "다니다 nói việc đi đều đặn tới một nơi: 학교에 다녀요 (đi học), 회사에 다녀요 (đi làm ở công ty).",
+        "Phân biệt: 에 là nơi đến; 에서 là nơi diễn ra hành động (도서관에서 공부해요)."
+      ],
+      "examples": [
+        ["내일 공항에 가요.", "Ngày mai tôi đi sân bay."],
+        ["친구가 우리 집에 와요.", "Bạn tôi đến nhà tôi."],
+        ["언니는 회사에 다녀요.", "Chị tôi đi làm ở công ty."]
+      ],
+      "questions": [
+        {
+          "q": "주말에 고향___ 가요.",
+          "options": ["에", "에서", "을", "이"],
+          "explain": "Nơi đến của 가다 → 에."
+        },
+        {
+          "q": "도서관___ 책을 읽어요.",
+          "options": ["에서", "에", "을", "와"],
+          "explain": "Đọc sách là hành động diễn ra ở thư viện → 에서."
+        },
+        {
+          "q": "저는 한국대학교에 ___. (다니다)",
+          "options": ["다녀요", "다니요", "다나요", "다니어요"],
+          "explain": "니 + 어요 → 녀요: 다녀요."
+        },
+        {
+          "q": "친구가 우리 집___ 와요.",
+          "options": ["에", "에서", "를", "과"],
+          "explain": "Nơi đến của 오다 → 에."
+        },
+        {
+          "q": "\"Tôi đi làm ở công ty\" là câu nào?",
+          "options": ["회사에 다녀요.", "회사에서 다녀요.", "회사가 다녀요.", "회사와 다녀요."],
+          "explain": "다니다 đi với 에 chỉ nơi mình đến đều đặn."
+        }
+      ]
+    },
+    {
+      "pattern": "안 + V/A",
+      "title": "không (phủ định)",
+      "note": [
+        "Đặt 안 ngay trước động từ hoặc tính từ: 안 가요, 안 먹어요, 안 커요.",
+        "Động từ dạng 'danh từ + 하다' thì 안 đứng giữa: 공부 안 해요, 청소 안 해요 (không nói 안 공부해요).",
+        "Riêng 있다 dùng 없다, 이다 dùng 아니다 (đã học ở Bài 2)."
+      ],
+      "examples": [
+        ["저는 아침을 안 먹어요.", "Tôi không ăn sáng."],
+        ["오늘은 학교에 안 가요.", "Hôm nay tôi không đến trường."],
+        ["주말에는 운동 안 해요.", "Cuối tuần tôi không tập thể dục."]
+      ],
+      "questions": [
+        {
+          "q": "\"Không ăn\" là?",
+          "options": ["안 먹어요", "먹어요 안", "먹안어요", "안 먹다요"],
+          "explain": "안 đặt trước động từ: 안 먹어요."
+        },
+        {
+          "q": "오늘은 ___. (숙제하다, phủ định)",
+          "options": ["숙제 안 해요", "안 숙제해요", "숙제해요 안", "숙안제해요"],
+          "explain": "Động từ 'danh từ + 하다' → 안 đứng giữa: 숙제 안 해요."
+        },
+        {
+          "q": "주말에는 회사에 ___. (가다, phủ định)",
+          "options": ["안 가요", "가 안요", "가안요", "가요 안"],
+          "explain": "안 + 가요 → 안 가요."
+        },
+        {
+          "q": "청소하다 (phủ định) → ?",
+          "options": ["청소 안 해요", "안 청소해요", "청소해 안요", "청소하 안요"],
+          "explain": "청소 + 안 + 해요."
+        },
+        {
+          "q": "\"Tôi không uống cà phê\" là câu nào?",
+          "options": ["저는 커피를 안 마셔요.", "저는 안 커피를 마셔요.", "저는 커피를 마셔요 안.", "저는 커피 안을 마셔요."],
+          "explain": "안 đứng ngay trước động từ 마셔요."
+        }
+      ]
+    }
+  ]
+}

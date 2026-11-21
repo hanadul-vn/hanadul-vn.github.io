@@ -1,0 +1,215 @@
+{
+  "id": "sc1-07",
+  "title": "Mua sắm",
+  "ko": "물건 사기",
+  "goal": "Đếm đồ vật bằng đơn vị đếm, hỏi giá, so sánh hai món và nói điều mình muốn mua.",
+  "vocab": [
+    {
+      "group": "Đơn vị đếm",
+      "words": [
+        ["개", "cái (đồ vật)"],
+        ["명", "người"],
+        ["마리", "con (động vật)"],
+        ["잔", "cốc, chén, ly"],
+        ["대", "chiếc (xe, máy móc)"],
+        ["병", "chai"],
+        ["켤레", "đôi (giày, tất)"],
+        ["권", "quyển"],
+        ["장", "tờ, tấm (giấy, vé)"],
+        ["여러", "nhiều, vài"]
+      ]
+    },
+    {
+      "group": "Đồ mua sắm",
+      "words": [
+        ["채소", "rau"],
+        ["음료수", "đồ uống"],
+        ["바지", "quần"],
+        ["치마", "váy"],
+        ["구두", "giày da"],
+        ["모자", "mũ"],
+        ["티셔츠", "áo phông"],
+        ["과자", "bánh quy, bánh kẹo"],
+        ["귤", "quýt"],
+        ["망고", "xoài"],
+        ["수박", "dưa hấu"],
+        ["생선", "cá (để ăn)"],
+        ["주스", "nước ép"],
+        ["카메라", "máy ảnh"],
+        ["소설책", "tiểu thuyết"],
+        ["필통", "hộp bút"]
+      ]
+    },
+    {
+      "group": "Nơi mua sắm",
+      "words": [
+        ["마트", "siêu thị"],
+        ["서점", "hiệu sách"],
+        ["문구점", "cửa hàng văn phòng phẩm"],
+        ["전자상가", "khu bán đồ điện tử"],
+        ["손님", "khách hàng"],
+        ["주인", "chủ cửa hàng"],
+        ["세일", "đợt giảm giá"],
+        ["디자인", "kiểu dáng, thiết kế"]
+      ]
+    },
+    {
+      "group": "Mẫu câu khi mua hàng",
+      "words": [
+        ["어서 오세요.", "Xin mời vào."],
+        ["뭘 찾으세요?", "Anh/chị tìm gì ạ?"],
+        ["이거 얼마예요?", "Cái này bao nhiêu tiền?"],
+        ["이거 두 개 주세요.", "Cho tôi hai cái này."],
+        ["너무 비싸요.", "Đắt quá."],
+        ["깎아 주세요.", "Bớt cho tôi đi."],
+        ["여기 있어요.", "Đây ạ."],
+        ["다음에 또 오세요.", "Lần sau lại đến nhé."],
+        ["얼마", "bao nhiêu (tiền)"],
+        ["원", "won (tiền Hàn)"],
+        ["싸다", "rẻ"],
+        ["비싸다", "đắt"]
+      ]
+    },
+    {
+      "group": "Tính từ có ㅡ",
+      "words": [
+        ["아프다", "đau, ốm"],
+        ["바쁘다", "bận"],
+        ["예쁘다", "đẹp, xinh"],
+        ["배가 고프다", "đói bụng"],
+        ["쓰다", "viết"]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "N은/는 (đối chiếu)",
+      "title": "còn…, thì… (so sánh hai thứ)",
+      "note": [
+        "Ngoài chỉ chủ đề (Bài 1), 은/는 còn dùng để đối chiếu hai người, hai vật: 라면은 싸요. 불고기는 비싸요.",
+        "Danh từ có patchim → 은, không patchim → 는.",
+        "Có thể gắn sau tiểu từ khác: 한국에는, 주말에는."
+      ],
+      "examples": [
+        ["라면은 싸요. 불고기는 비싸요.", "Mì gói thì rẻ. Bulgogi thì đắt."],
+        ["수박은 커요. 귤은 작아요.", "Dưa hấu thì to. Quýt thì nhỏ."],
+        ["저는 한국에 살아요. 친구는 베트남에 살아요.", "Tôi sống ở Hàn Quốc. Còn bạn tôi sống ở Việt Nam."]
+      ],
+      "questions": [
+        {
+          "q": "수박___ 커요. 귤___ 작아요.",
+          "options": ["은 – 은", "는 – 는", "은 – 는", "는 – 은"],
+          "explain": "수박 và 귤 đều có patchim → 은, 은."
+        },
+        {
+          "q": "커피___ 좋아해요. 주스___ 안 좋아해요.",
+          "options": ["는 – 는", "은 – 은", "는 – 은", "은 – 는"],
+          "explain": "커피 và 주스 đều kết thúc bằng nguyên âm → 는, 는."
+        },
+        {
+          "q": "바지는 싸요. 구두___ 비싸요.",
+          "options": ["는", "은", "를", "에"],
+          "explain": "Đối chiếu với 바지는; 구두 không patchim → 는."
+        },
+        {
+          "q": "Câu nào viết đúng?",
+          "options": ["라면은 싸요. 갈비는 비싸요.", "라면는 싸요. 갈비은 비싸요.", "라면은 싸요. 갈비은 비싸요.", "라면는 싸요. 갈비는 비싸요."],
+          "explain": "라면 có patchim → 은; 갈비 không patchim → 는."
+        },
+        {
+          "q": "평일에는 바빠요. 주말___ 안 바빠요.",
+          "options": ["에는", "에은", "는에", "은"],
+          "explain": "주말에 + 는 → 주말에는 (에 kết thúc bằng nguyên âm)."
+        }
+      ]
+    },
+    {
+      "pattern": "Lược ㅡ",
+      "title": "gốc có ㅡ gặp -아/어 thì bỏ ㅡ",
+      "note": [
+        "Gốc kết thúc bằng ㅡ (크다, 바쁘다…) khi gặp -아/어요, -았/었어요 thì bỏ ㅡ.",
+        "Gốc một âm tiết → -어요: 크다 → 커요, 쓰다 → 써요.",
+        "Âm tiết trước ㅡ có ㅏ hoặc ㅗ → -아요: 바쁘다 → 바빠요, 아프다 → 아파요, 고프다 → 고파요. Còn lại → -어요: 예쁘다 → 예뻐요.",
+        "Quá khứ theo cùng quy tắc: 바빴어요, 아팠어요, 예뻤어요."
+      ],
+      "examples": [
+        ["배가 너무 고파요.", "Tôi đói bụng quá."],
+        ["민준 씨는 키가 커요.", "Anh Min-jun cao."],
+        ["저는 어제 바빴어요.", "Hôm qua tôi bận."]
+      ],
+      "questions": [
+        {
+          "q": "크다 → ?",
+          "options": ["커요", "크어요", "카요", "크요"],
+          "explain": "Một âm tiết → bỏ ㅡ + 어요: 커요."
+        },
+        {
+          "q": "바쁘다 → ?",
+          "options": ["바빠요", "바뻐요", "바쁘어요", "바쁘요"],
+          "explain": "Âm tiết trước là 바 (ㅏ) → bỏ ㅡ + 아요: 바빠요."
+        },
+        {
+          "q": "예쁘다 → ?",
+          "options": ["예뻐요", "예빠요", "예쁘어요", "예쁘요"],
+          "explain": "Âm tiết trước là 예 (không phải ㅏ/ㅗ) → bỏ ㅡ + 어요: 예뻐요."
+        },
+        {
+          "q": "배가 ___. (고프다)",
+          "options": ["고파요", "고퍼요", "고프어요", "고프아요"],
+          "explain": "Âm tiết trước là 고 (ㅗ) → 고파요."
+        },
+        {
+          "q": "어제 동생이 ___. (아프다, quá khứ)",
+          "options": ["아팠어요", "아펐어요", "아프었어요", "아파요"],
+          "explain": "아 (ㅏ) → bỏ ㅡ + 았어요: 아팠어요."
+        },
+        {
+          "q": "이메일을 ___. (쓰다)",
+          "options": ["써요", "쓰어요", "싸요", "쓰요"],
+          "explain": "Một âm tiết → bỏ ㅡ + 어요: 써요."
+        }
+      ]
+    },
+    {
+      "pattern": "-고 싶다",
+      "title": "muốn (làm gì)",
+      "note": [
+        "Gắn vào gốc động từ để nói mong muốn của người nói: 가고 싶어요, 먹고 싶어요.",
+        "Hỏi người nghe: 뭐 하고 싶어요?",
+        "Nói về mong muốn của người thứ ba dùng -고 싶어 하다: 동생은 카메라를 사고 싶어 해요."
+      ],
+      "examples": [
+        ["저는 한국에 가고 싶어요.", "Tôi muốn đi Hàn Quốc."],
+        ["뭐 먹고 싶어요? — 비빔밥을 먹고 싶어요.", "Bạn muốn ăn gì? — Tôi muốn ăn bibimbap."],
+        ["민수 씨는 한국어를 배우고 싶어 해요.", "Min-su muốn học tiếng Hàn."]
+      ],
+      "questions": [
+        {
+          "q": "저는 카메라를 ___. (사다)",
+          "options": ["사고 싶어요", "사 싶어요", "사고 싶다요", "샀고 싶어요"],
+          "explain": "Gốc 사 + 고 싶어요."
+        },
+        {
+          "q": "저는 주말에 바다에 ___. (가다)",
+          "options": ["가고 싶어요", "가 싶어요", "갑시다 싶어요", "갔고 싶어요"],
+          "explain": "Gốc 가 + 고 싶어요; không gắn thì quá khứ trước -고."
+        },
+        {
+          "q": "민수 씨는 한국어를 ___. (배우다)",
+          "options": ["배우고 싶어 해요", "배우고 싶어 하요", "배우 싶어 해요", "배워고 싶어 해요"],
+          "explain": "Người thứ ba → -고 싶어 하다 → 배우고 싶어 해요."
+        },
+        {
+          "q": "뭐 ___? — 비빔밥을 먹고 싶어요.",
+          "options": ["먹고 싶어요?", "먹고 싶읍시다?", "먹 싶어요?", "먹었고 싶어요?"],
+          "explain": "Câu hỏi giữ dạng -고 싶어요, lên giọng cuối câu."
+        },
+        {
+          "q": "\"Tôi muốn nghỉ ngơi\" là câu nào?",
+          "options": ["저는 쉬고 싶어요.", "저는 쉬었어요.", "같이 쉽시다.", "저는 안 쉬어요."],
+          "explain": "-고 싶어요 diễn tả mong muốn."
+        }
+      ]
+    }
+  ]
+}
