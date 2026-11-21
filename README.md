@@ -32,6 +32,16 @@ python3 -m http.server 8000
 2. Thêm bài vào `data/index.json`.
 3. Chạy `python3 tools/check_data.py`.
 
+## Trang giới thiệu, đăng ký và thống kê
+
+- `gioi-thieu.html`: trang giới thiệu (lợi ích, lộ trình tới TOPIK, cảm nhận, đăng ký, hỏi đáp). Dùng link này khi chia sẻ lên mạng xã hội.
+- `chinh-sach-bao-mat.html`: quyền riêng tư.
+- `assets/config.js`: bật các dịch vụ ngoài. Mục nào để trống thì phần đó tự ẩn.
+  - `gaId`: mã Google Analytics 4 (`G-…`). Ghi lượt xem từng màn (`/bai/sc1-03`, `/bai/sc1-03/lam-bai`…) và sự kiện `quiz_start`, `quiz_complete`, `review_complete`, `sign_up`, `feedback_sent`, `join_channel`, `cta_click`.
+  - `form`: nơi nhận email đăng ký và cảm nhận (Formspree hoặc Google Form).
+  - `zaloUrl`, `facebookUrl`: link nhóm/trang.
+- `data/cam-nhan.json`: cảm nhận được đăng lên trang giới thiệu, dạng `[{"name": "Lan", "note": "sinh viên", "text": "…"}]`. Chỉ thêm cảm nhận thật mà người gửi đã đánh dấu đồng ý đăng.
+
 ## Nội dung
 
 Câu hỏi, ví dụ và giải thích đều tự soạn. Lộ trình chủ đề, từ vựng và ngữ pháp theo trình tự phổ biến của giáo trình sơ cấp. Góp ý hoặc báo lỗi qua mục Issues.

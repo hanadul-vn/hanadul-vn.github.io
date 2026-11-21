@@ -1,0 +1,91 @@
+/* ===== Hana Dul – trang giới thiệu ===== */
+.lp-nav { display: flex; align-items: center; gap: 18px; }
+.lp-nav a:not(.btn) { color: var(--muted); text-decoration: none; font-weight: 600; font-size: .95rem; }
+.lp-nav a:not(.btn):hover { color: var(--text); }
+@media (max-width: 640px) { .lp-nav a:not(.btn) { display: none; } }
+
+.lp-section { padding: 48px 0; }
+.lp-section.alt { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.lp-head { max-width: 640px; margin: 0 0 22px; }
+.lp-head h2 { margin: 0 0 6px; font-size: clamp(1.5rem, 4vw, 2rem); letter-spacing: -.02em; line-height: 1.2; }
+.lp-head p { margin: 0; }
+.lp-features { margin: 0; }
+.center { text-align: center; }
+.landing .footer { margin-top: 0; }
+
+/* điện thoại minh họa */
+.lp-phone { display: grid; place-items: center; height: auto; padding: 10px 0 18px; }
+.phone { width: min(300px, 100%); background: var(--surface); border: 1px solid var(--line); border-radius: 28px; padding: 18px; box-shadow: var(--shadow-lg); transform: rotate(2deg); }
+.phone-top { display: flex; justify-content: space-between; font-size: .82rem; font-weight: 700; color: var(--muted); }
+.phone-bar { height: 8px; border-radius: 8px; background: var(--line); margin: 8px 0 14px; overflow: hidden; }
+.phone-bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), var(--ok)); border-radius: 8px; }
+.phone-q { font-weight: 800; font-size: 1.1rem; margin: 0 0 10px; }
+.phone-opt { border: 2px solid var(--line); border-radius: 12px; padding: 8px 12px; margin: 6px 0; font-weight: 600; font-size: .95rem; }
+.phone-opt.ok { border-color: var(--ok); background: var(--ok-soft); color: var(--ok); }
+.phone-ex { margin-top: 10px; font-size: .85rem; background: var(--sun-soft); border-radius: 12px; padding: 8px 10px; }
+.lp-phone .chip-float.c1 { top: 4%; left: 2%; }
+.lp-phone .chip-float.c2 { bottom: 4%; right: 2%; }
+
+/* các bước */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+@media (min-width: 760px) { .steps { grid-template-columns: repeat(3, 1fr); } }
+.steps li { display: flex; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
+.steps h3 { margin: 0 0 4px; font-size: 1.05rem; }
+.steps p { margin: 0; font-size: .93rem; }
+.step-no { flex: none; width: 36px; height: 36px; border-radius: 12px; display: grid; place-items: center; font-weight: 800; color: #fff; background: linear-gradient(135deg, var(--primary), var(--primary-2)); }
+
+/* lộ trình */
+.roadmap { list-style: none; margin: 0 0 24px; padding: 0; position: relative; max-width: 720px; }
+.roadmap::before { content: ""; position: absolute; left: 23px; top: 24px; bottom: 24px; width: 4px; border-radius: 4px; background: repeating-linear-gradient(to bottom, var(--line) 0 10px, transparent 10px 18px); }
+.roadmap li { position: relative; display: flex; gap: 14px; margin: 0 0 12px; }
+.rm-dot { position: relative; flex: none; width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center; font-size: 1.4rem; background: var(--surface); border: 3px solid var(--line); }
+.rm-on .rm-dot { border-color: var(--ok); }
+.rm-body { flex: 1; min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
+.roadmap li:not(.rm-on) .rm-body { background: transparent; border-style: dashed; }
+.rm-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.rm-body h3 { margin: 0; font-size: 1.05rem; }
+.rm-body p { margin: 4px 0 0; font-size: .93rem; }
+.tag { font-size: .78rem; font-weight: 700; padding: 3px 10px; border-radius: 99px; background: var(--bg-2); color: var(--muted); border: 1px solid var(--line); white-space: nowrap; }
+.tag.on { background: var(--ok-soft); color: var(--ok); border-color: transparent; }
+
+/* cảm nhận */
+.quotes { display: grid; gap: 14px; margin-bottom: 18px; }
+@media (min-width: 760px) { .quotes { grid-template-columns: repeat(3, 1fr); } }
+.quote { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
+.quote blockquote { margin: 0 0 10px; }
+.quote blockquote::before { content: "“"; font-size: 2rem; line-height: 0; vertical-align: -.4em; color: var(--primary); margin-right: 2px; }
+.quote figcaption { font-size: .9rem; }
+.quote-empty { display: flex; gap: 14px; align-items: flex-start; background: var(--surface); border: 2px dashed var(--line); border-radius: var(--radius); padding: 18px; margin-bottom: 14px; max-width: 720px; }
+.quote-empty p { margin: 0; }
+.quote-empty-ic { font-size: 1.8rem; }
+.feedback-form { display: grid; gap: 12px; max-width: 720px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
+.feedback-form label { display: grid; gap: 6px; font-weight: 600; font-size: .93rem; }
+.feedback-form label .muted { font-weight: 400; }
+.feedback-form label.check { display: flex; align-items: flex-start; gap: 8px; font-weight: 500; }
+.feedback-form label.check input { width: auto; margin-top: 4px; accent-color: var(--primary); }
+.feedback-form textarea { resize: vertical; }
+.feedback-form .btn { justify-self: start; }
+.ff-row { display: grid; gap: 12px; }
+@media (min-width: 640px) { .ff-row { grid-template-columns: 1fr 1fr; } }
+
+.signup-card.big { margin: 0; padding: 24px; }
+
+/* hỏi đáp */
+.faq details { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; margin: 0 0 10px; padding: 0 16px; }
+.faq summary { cursor: pointer; padding: 14px 0; font-weight: 700; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-size: 1.3rem; line-height: 1; color: var(--primary); }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { margin: 0 0 14px; color: var(--muted); }
+
+/* CTA cuối */
+.lp-cta { padding: 56px 0 64px; }
+.lp-cta h2 { margin: 6px 0; font-size: clamp(1.5rem, 4vw, 2rem); letter-spacing: -.02em; }
+.lp-cta-ko { font-weight: 900; font-size: clamp(2rem, 7vw, 3rem); background: linear-gradient(135deg, var(--primary), var(--sun)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.lp-cta .btn { margin-top: 8px; }
+
+/* trang văn bản (quyền riêng tư) */
+.doc { padding: 36px 0 20px; }
+.doc h1 { font-size: clamp(1.6rem, 5vw, 2.2rem); letter-spacing: -.02em; margin: 0 0 6px; }
+.doc h2 { font-size: 1.2rem; margin: 26px 0 6px; }
+.doc p, .doc li { color: var(--text); }

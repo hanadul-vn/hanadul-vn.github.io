@@ -17,6 +17,8 @@
   };
   var cache = {};
   var indexData = null;
+  // Đo lượt truy cập và form đăng ký (assets/site.js). Thiếu file thì mọi thứ vẫn chạy.
+  var HD = window.HD || { track: function () {}, pageview: function () {}, signupHtml: function () { return ''; } };
 
   // ---------- helpers ----------
   function esc(s) {
@@ -146,6 +148,8 @@
     var parts = location.hash.replace(/^#\/?/, '').split('/');
     window.scrollTo(0, 0);
     renderStats();
+    // Đợi trang đặt document.title rồi mới ghi lượt xem.
+    setTimeout(function () { HD.pageview(document.title); }, 400);
     if (parts[0] === 'bai' && parts[1]) return renderLesson(parts[1], parts[2] || 'hoc');
     if (parts[0] === 'so-cau-sai') return renderWrongBook();
     return renderHome();
@@ -187,6 +191,7 @@
         '<p class="lead"><b>Hana Dul</b> <span class="ko">(하나 둘)</span> nghĩa là “một, hai”. Mỗi ngày một bài ngắn: học từ mới, nắm ngữ pháp, làm trắc nghiệm có giải thích ngay.</p>' +
         '<div class="hero-actions"><a class="btn" href="' + startHref + '">' + (lastId ? 'Học tiếp' : 'Bắt đầu học') + ' →</a>' +
         '<a class="btn ghost" href="#lo-trinh">Xem lộ trình</a></div>' +
+        '<p class="hero-more"><a href="gioi-thieu.html">Hana Dul là gì, học thế nào? →</a></p>' +
         '<div class="hero-facts"><div><b>' + all.length + '</b>bài học</div><div><b>40+</b>từ mỗi bài</div><div><b>🔊</b>nghe phát âm</div></div>' +
         '</div><div class="hero-art" aria-hidden="true">' +
         '<div class="art-card art-main"><div><div class="big">하나 둘</div><div class="small">một · hai</div></div></div>' +
@@ -231,7 +236,7 @@
         feature('🔥', 'var(--sun-soft)', 'Giữ chuỗi ngày học', 'Học mỗi ngày để giữ lửa. Điểm, sao và chuỗi ngày được lưu ngay trên máy bạn.') +
         feature('🎧', 'var(--accent-soft)', 'Nghe, đọc, viết', 'Mỗi bài có phần nghe, đoạn đọc hiểu và bài tập viết câu kèm câu mẫu để tự so.') +
         feature('📒', 'var(--sky-soft)', 'Sổ câu sai', 'Câu làm sai được lưu lại để ôn. Trả lời đúng 2 lần liên tiếp thì câu rời khỏi sổ.') +
-        '</div></div>';
+        '</div>' + HD.signupHtml('trang-chu') + '</div>';
       app.innerHTML = h;
     }).catch(fail);
   }
@@ -384,6 +389,7 @@
       '</div><p class="muted" style="font-size:.88rem;margin:12px 0 0">Mẹo: trên máy tính, bấm phím 1–4 để chọn và Enter để tiếp tục. Phần nghe cần bật loa.</p></div></div>';
     app.querySelectorAll('.mode').forEach(function (b) {
       b.addEventListener('click', function () {
+        HD.track('quiz_start', { lesson_id: data.id, mode: b.getAttribute('data-mode') });
         runQuiz({ data: data, found: found, quick: b.getAttribute('data-mode') === 'quick', questions: buildQuestions(data, b.getAttribute('data-mode') === 'quick') });
       });
     });
@@ -535,6 +541,7 @@
       s.days = s.days.slice(-400);
       writeStore(s);
       renderStats();
+      HD.track(review ? 'review_complete' : 'quiz_complete', { lesson_id: review ? 'so-cau-sai' : data.id, mode: review ? 'review' : quick ? 'quick' : 'full', score: pct, questions: total });
       var streak = streakOf(s.days);
       var title = stars === 3 ? 'Xuất sắc!' : stars === 2 ? 'Làm tốt lắm!' : stars === 1 ? 'Khá ổn!' : 'Cố lên nhé!';
       var emoji = stars === 3 ? '🏆' : stars === 2 ? '🎉' : stars === 1 ? '👍' : '💪';
@@ -559,6 +566,7 @@
           (nextL ? '<a class="btn" href="#/bai/' + esc(nextL.id) + '">Bài tiếp theo →</a>' : '<a class="btn" href="#/">Về trang chủ</a>')) +
         '</div></div>';
       if (!review && data.writing) h += '<div class="panel write-panel"><h2>✍️ Luyện viết</h2>' + writingBox(data) + '</div>';
+      if (!review) h += HD.signupHtml('ket-qua', true);
       h += '</div>';
       app.innerHTML = h;
       window.scrollTo(0, 0);
