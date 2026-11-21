@@ -452,3 +452,34 @@ button { font: inherit; color: inherit; }
 .hero-more { margin: 14px 0 0; font-weight: 600; font-size: .95rem; }
 .hero-more a { text-decoration: none; }
 .hero-more a:hover { text-decoration: underline; }
+
+/* ---------- tài khoản (assets/account.js) ---------- */
+.top-right { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.acct-btn {
+  position: relative; display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: var(--text);
+  padding: 5px 12px; border-radius: 99px; font-weight: 700; font-size: .9rem; background: var(--surface); border: 1px solid var(--line); white-space: nowrap;
+}
+.acct-btn:hover { border-color: var(--primary); }
+.acct-btn.me { padding: 3px; border-radius: 50%; }
+.avatar { width: 30px; height: 30px; border-radius: 50%; display: inline-grid; place-items: center; font-weight: 800; color: #fff; background: linear-gradient(135deg, var(--sky), #7a5cff); }
+.avatar.big { width: 52px; height: 52px; font-size: 1.4rem; flex: none; }
+.sync-dot { position: absolute; right: -1px; bottom: -1px; width: 11px; height: 11px; border-radius: 50%; border: 2px solid var(--bg); background: var(--ok); }
+.sync-dot.busy { background: var(--sun); }
+.sync-dot.bad { background: var(--bad); }
+@media (max-width: 480px) { .acct-label { display: none; } .acct-btn:not(.me) { padding: 5px 9px; } }
+.account-panel { margin-top: 14px; }
+.account-panel .form-msg { margin-bottom: 10px; }
+.acct-head { display: flex; gap: 14px; align-items: center; text-align: left; overflow-wrap: anywhere; }
+.acct-form { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.acct-form input { flex: 1 1 220px; min-width: 0; font: inherit; color: var(--text); background: var(--surface); border: 2px solid var(--line); border-radius: 14px; padding: 10px 14px; }
+.acct-form input:focus { outline: none; border-color: var(--sky); }
+@media (max-width: 480px) { .acct-form .btn { width: 100%; } }
+.google-btn { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 12px; }
+.or { display: flex; align-items: center; gap: 10px; margin: 16px 0 8px; color: var(--muted); font-size: .88rem; }
+.or::before, .or::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.small-note { font-size: .86rem; margin: 12px 0 0; }
+.linkish { font: inherit; color: var(--primary-ink); background: none; border: 0; padding: 0; text-decoration: underline; cursor: pointer; }
+.danger-zone { margin: 20px 0 8px; padding: 12px 16px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+.danger-zone summary { cursor: pointer; font-weight: 700; color: var(--muted); }
+.danger-zone .actions { justify-content: flex-start; }
+.acct-card .emoji { background: var(--sky-soft); }

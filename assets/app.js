@@ -18,7 +18,9 @@
   var cache = {};
   var indexData = null;
   // Đo lượt truy cập và form đăng ký (assets/site.js). Thiếu file thì mọi thứ vẫn chạy.
-  var HD = window.HD || { track: function () {}, pageview: function () {}, signupHtml: function () { return ''; } };
+  var HD = window.HD = window.HD || {};
+  ['track', 'pageview'].forEach(function (k) { if (!HD[k]) HD[k] = function () {}; });
+  if (!HD.signupHtml) HD.signupHtml = function () { return ''; };
 
   // ---------- helpers ----------
   function esc(s) {
@@ -68,10 +70,14 @@
     s.last = s.last || null;
     s.wrong = s.wrong || {};
     s.writing = s.writing || {};
+    s.wrongDel = s.wrongDel || {};
+    s.writingAt = s.writingAt || {};
     return s;
   }
   function writeStore(s) {
     try { localStorage.setItem(STORE_KEY, JSON.stringify(s)); } catch (e) { /* chế độ ẩn danh */ }
+    // Đã đăng nhập thì đẩy thay đổi lên tài khoản (assets/account.js).
+    if (HD.onLocalChange) HD.onLocalChange();
   }
   function streakOf(days) {
     if (!days.length) return 0;
@@ -112,7 +118,15 @@
       '<span class="stat fire" title="Chuỗi ngày học liên tiếp">🔥 ' + streak + '</span>' +
       '<span class="stat xp" title="Điểm kinh nghiệm">⭐ ' + s.xp + '</span>' +
       (wrongCount(s) ? '<a class="stat book" href="#/so-cau-sai" title="Sổ câu sai">📒 ' + wrongCount(s) + '</a>' : '');
+    if (HD.renderAccountBadge) HD.renderAccountBadge();
   }
+  // Tiến độ vừa được gộp từ tài khoản: vẽ lại màn hiện tại (trừ lúc đang làm bài hoặc đang ở trang học có ô viết).
+  HD.refresh = function () {
+    if (document.body.classList.contains('quiz-mode')) return renderStats();
+    var h = location.hash;
+    if (/^#\/bai\/[^/]+\/?$/.test(h) && document.activeElement && document.activeElement.id === 'wtext') return renderStats();
+    route(true);
+  };
 
   // ---------- speech ----------
   var koVoice = null;
@@ -142,19 +156,20 @@
 
   // ---------- routing ----------
   var cleanup = null;
-  function route() {
+  function route(silent) {
     if (cleanup) { cleanup(); cleanup = null; }
     document.body.classList.remove('quiz-mode');
     var parts = location.hash.replace(/^#\/?/, '').split('/');
-    window.scrollTo(0, 0);
+    if (silent !== true) window.scrollTo(0, 0);
     renderStats();
     // Đợi trang đặt document.title rồi mới ghi lượt xem.
-    setTimeout(function () { HD.pageview(document.title); }, 400);
+    if (silent !== true) setTimeout(function () { HD.pageview(document.title); }, 400);
+    if (parts[0] === 'tai-khoan' && HD.renderAccountPage) return HD.renderAccountPage(app);
     if (parts[0] === 'bai' && parts[1]) return renderLesson(parts[1], parts[2] || 'hoc');
     if (parts[0] === 'so-cau-sai') return renderWrongBook();
     return renderHome();
   }
-  window.addEventListener('hashchange', route);
+  window.addEventListener('hashchange', function () { route(); });
 
   function getIndex() {
     if (indexData) return Promise.resolve(indexData);
@@ -212,6 +227,7 @@
         h += '<a class="continue book" href="#/so-cau-sai"><span class="emoji">📒</span>' +
           '<span><span class="label">Sổ câu sai</span><br><span class="title">' + nw + ' câu cần ôn lại</span></span><span class="go">→</span></a>';
       }
+      if (HD.accountHomeCard) h += HD.accountHomeCard(!!(s.xp || s.days.length));
 
       idx.levels.forEach(function (lv) {
         var done = lv.lessons.filter(function (l) { return s.lessons[l.id] && s.lessons[l.id].best >= 70; }).length;
@@ -401,10 +417,13 @@
     var id = qid(q);
     var e = s.wrong[id];
     if (!ok) {
-      s.wrong[id] = { item: snapshot(q), n: (e ? e.n : 0) + 1, ok: 0, t: today() };
+      s.wrong[id] = { item: snapshot(q), n: (e ? e.n : 0) + 1, ok: 0, t: today(), ts: Date.now() };
+      delete s.wrongDel[id];
     } else if (e) {
       e.ok++;
-      if (e.ok >= 2) delete s.wrong[id];
+      e.ts = Date.now();
+      // Ghi lại lúc gỡ câu khỏi sổ để máy khác khi đồng bộ cũng gỡ theo.
+      if (e.ok >= 2) { delete s.wrong[id]; s.wrongDel[id] = Date.now(); }
     } else return;
     writeStore(s);
   }
@@ -535,6 +554,7 @@
         var prev = s.lessons[data.id] || { best: 0, stars: 0 };
         s.lessons[data.id] = { best: Math.max(prev.best, pct), stars: Math.max(prev.stars, stars), last: today() };
         s.last = data.id;
+        s.lastAt = Date.now();
       }
       s.xp += xp;
       if (s.days.indexOf(today()) < 0) s.days.push(today());
@@ -602,8 +622,9 @@
       timer = setTimeout(function () {
         var s = readStore();
         s.writing[data.id] = t.value.slice(0, 2000);
+        s.writingAt[data.id] = Date.now();
         writeStore(s);
-        document.getElementById('wsaved').textContent = 'Đã lưu trên máy';
+        document.getElementById('wsaved').textContent = HD.isSignedIn && HD.isSignedIn() ? 'Đã lưu' : 'Đã lưu trên máy';
       }, 500);
     });
     document.getElementById('wshow').addEventListener('click', function () {
@@ -623,7 +644,7 @@
       var ids = Object.keys(s.wrong);
       var h = '<div class="container narrow"><div class="lesson-hero"><div class="crumbs"><a href="#/">Trang chủ</a></div>' +
         '<h1><span class="emoji">📒</span>Sổ câu sai</h1>' +
-        '<p>Câu bạn trả lời sai ở lần đầu được lưu tại đây. Trả lời đúng 2 lần liên tiếp thì câu rời khỏi sổ. Dữ liệu chỉ lưu trên máy này.</p></div>';
+        '<p>Câu bạn trả lời sai ở lần đầu được lưu tại đây. Trả lời đúng 2 lần liên tiếp thì câu rời khỏi sổ. ' + (HD.isSignedIn && HD.isSignedIn() ? 'Sổ được lưu trong tài khoản của bạn.' : 'Dữ liệu chỉ lưu trên máy này.') + '</p></div>';
       if (!ids.length) {
         h += '<div class="panel" style="margin-top:14px"><div class="big-emoji">🎉</div><h2>Sổ đang trống</h2><p class="muted">Làm bài, câu nào sai sẽ hiện ở đây để bạn ôn lại.</p>' +
           '<div class="actions"><a class="btn" href="#/">Về trang chủ</a></div></div></div>';
