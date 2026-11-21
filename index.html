@@ -2,22 +2,39 @@
 <html lang="vi">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Hana Dul – Học tiếng Hàn miễn phí</title>
-  <meta name="description" content="Hana Dul: học tiếng Hàn miễn phí cho người Việt: từ vựng và ngữ pháp sơ cấp theo từng bài, làm trắc nghiệm có giải thích.">
+  <meta name="description" content="Hana Dul: học tiếng Hàn miễn phí cho người Việt. Từ vựng và ngữ pháp sơ cấp theo từng bài, làm trắc nghiệm có giải thích, không cần đăng ký.">
+  <meta name="theme-color" content="#ff6b5b">
+  <meta property="og:title" content="Hana Dul – Học tiếng Hàn miễn phí">
+  <meta property="og:description" content="Học tiếng Hàn từng bước: bảng chữ, từ vựng, ngữ pháp và trắc nghiệm có giải thích. Miễn phí, không cần đăng ký.">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#/"><span class="brand-mark">한</span> Hana Dul <span class="brand-sub ko">하나 둘</span></a>
+    <div class="topbar-inner">
+      <a class="brand" href="#/" aria-label="Hana Dul, về trang chủ">
+        <span class="brand-mark ko" aria-hidden="true">하</span>
+        <span class="brand-text">Hana Dul<span class="brand-sub ko">하나 둘</span></span>
+      </a>
+      <div class="stats" id="stats" aria-label="Thành tích của bạn"></div>
+    </div>
   </header>
-  <main id="app" class="container" aria-live="polite">
-    <p class="muted">Đang tải…</p>
+  <main id="app" aria-live="polite">
+    <div class="container"><p class="muted">Đang tải…</p></div>
   </main>
-  <footer class="footer container">
-    <p>Miễn phí cho mọi người. Nội dung tự soạn. Tiến độ chỉ lưu trên máy của bạn.</p>
-    <p><a href="https://github.com/hanadul-vn/hanadul-vn.github.io/issues" target="_blank" rel="noopener">Góp ý, báo lỗi</a></p>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="brand-mark small ko" aria-hidden="true">하</span>
+      <div>
+        <p><strong>Hana Dul</strong> · Học tiếng Hàn miễn phí cho người Việt. Nội dung tự soạn, tiến độ chỉ lưu trên máy của bạn.</p>
+        <p><a href="https://github.com/hanadul-vn/hanadul-vn.github.io/issues" target="_blank" rel="noopener">Góp ý, báo lỗi</a></p>
+      </div>
+    </div>
   </footer>
   <div id="toast" class="toast" role="status" hidden></div>
   <script src="assets/app.js"></script>
