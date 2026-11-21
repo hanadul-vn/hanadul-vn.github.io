@@ -1,0 +1,205 @@
+{
+  "id": "sc1-06",
+  "title": "Cuối tuần",
+  "ko": "주말",
+  "goal": "Kể lại cuối tuần đã làm gì bằng thì quá khứ, nối danh từ với 하고 và rủ bạn bằng -(으)ㅂ시다.",
+  "vocab": [
+    {
+      "group": "Từ để hỏi",
+      "words": [
+        ["무슨", "gì (… gì, loại gì)"],
+        ["어떤", "như thế nào (kiểu gì)"],
+        ["어느", "nào (trong số nhiều cái)"]
+      ]
+    },
+    {
+      "group": "Hoạt động cuối tuần",
+      "words": [
+        ["등산하다", "leo núi"],
+        ["영화를 보다", "xem phim"],
+        ["여행하다", "đi du lịch"],
+        ["수영하다", "bơi"],
+        ["외식하다", "ăn ngoài"],
+        ["친구를 만나다", "gặp bạn"],
+        ["소풍을 가다", "đi dã ngoại"],
+        ["책을 읽다", "đọc sách"],
+        ["요리하다", "nấu ăn"],
+        ["빨래하다", "giặt đồ"],
+        ["낚시", "câu cá"],
+        ["춤을 추다", "nhảy múa"]
+      ]
+    },
+    {
+      "group": "Thể thao và giải trí",
+      "words": [
+        ["축구", "bóng đá"],
+        ["야구", "bóng chày"],
+        ["농구", "bóng rổ"],
+        ["배구", "bóng chuyền"],
+        ["테니스", "quần vợt"],
+        ["골프", "đánh gôn"],
+        ["치다", "đánh, chơi (quần vợt, gôn…)"],
+        ["가수", "ca sĩ"],
+        ["드라마", "phim truyền hình"],
+        ["공포 영화", "phim kinh dị"],
+        ["액션 영화", "phim hành động"]
+      ]
+    },
+    {
+      "group": "Món ăn và hoa quả",
+      "words": [
+        ["불고기", "bulgogi (thịt bò ướp nướng)"],
+        ["갈비", "galbi (sườn nướng)"],
+        ["비빔밥", "bibimbap (cơm trộn)"],
+        ["김밥", "gimbap (cơm cuộn rong biển)"],
+        ["라면", "mì gói"],
+        ["과일", "hoa quả"],
+        ["딸기", "dâu tây"],
+        ["배", "quả lê"],
+        ["포도", "nho"]
+      ]
+    },
+    {
+      "group": "Từ khác trong bài",
+      "words": [
+        ["바다", "biển"],
+        ["나무", "cây"],
+        ["동물", "động vật"],
+        ["개", "con chó"],
+        ["고양이", "con mèo"],
+        ["새", "con chim"],
+        ["선물", "quà tặng"],
+        ["보내다", "gửi; trải qua (thời gian)"],
+        ["싫어하다", "ghét, không thích"],
+        ["피곤하다", "mệt"],
+        ["일찍", "sớm"],
+        ["같이", "cùng nhau"]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "-았/었-",
+      "title": "đã (thì quá khứ)",
+      "note": [
+        "Gắn vào gốc động từ, tính từ để nói việc đã xảy ra. Nguyên âm cuối của gốc là ㅏ, ㅗ → -았어요. Nguyên âm khác → -었어요. 하다 → 했어요.",
+        "Gốc kết thúc bằng nguyên âm thì gộp như -아/어요: 가다 → 갔어요, 보다 → 봤어요, 마시다 → 마셨어요.",
+        "Danh từ: có patchim → 이었어요 (학생이었어요), không patchim → 였어요 (의사였어요).",
+        "Dạng trang trọng: -았/었습니다 (먹었습니다)."
+      ],
+      "examples": [
+        ["어제 뭐 했어요? — 도서관에서 숙제했어요.", "Hôm qua bạn làm gì? — Tôi làm bài tập ở thư viện."],
+        ["지난 주말에 바다에 갔어요.", "Cuối tuần trước tôi đi biển."],
+        ["아침에 빵을 먹었어요.", "Sáng nay tôi đã ăn bánh mì."]
+      ],
+      "questions": [
+        {
+          "q": "가다 (quá khứ) → ?",
+          "options": ["갔어요", "가었어요", "갔아요", "가요"],
+          "explain": "가 + 았어요 → gộp thành 갔어요."
+        },
+        {
+          "q": "먹다 (quá khứ) → ?",
+          "options": ["먹었어요", "먹았어요", "먹어요", "먹엇어요"],
+          "explain": "먹 có nguyên âm ㅓ → -었어요."
+        },
+        {
+          "q": "어제 친구를 ___. (만나다)",
+          "options": ["만났어요", "만나었어요", "만넜어요", "만나요"],
+          "explain": "나 + 았어요 → 났어요: 만났어요."
+        },
+        {
+          "q": "지난 주말에 요리___.",
+          "options": ["했어요", "하었어요", "했아요", "해요"],
+          "explain": "하다 ở quá khứ → 했어요."
+        },
+        {
+          "q": "어제 영화를 ___. (보다)",
+          "options": ["봤어요", "보었어요", "봐었어요", "봐요"],
+          "explain": "보 có ㅗ → 보 + 았어요 → 봤어요."
+        },
+        {
+          "q": "작년에 저는 학생___.",
+          "options": ["이었어요", "였어요", "이에요", "있었어요"],
+          "explain": "학생 có patchim → 이었어요."
+        }
+      ]
+    },
+    {
+      "pattern": "N하고",
+      "title": "và; cùng với",
+      "note": [
+        "Nối hai danh từ, nghĩa là 'và'. Giống 와/과 nhưng dùng nhiều khi nói, và không cần xét patchim.",
+        "Cũng có nghĩa 'cùng với (ai)', hay đi với 같이: 친구하고 같이."
+      ],
+      "examples": [
+        ["빵하고 우유를 샀어요.", "Tôi đã mua bánh mì và sữa."],
+        ["친구하고 같이 영화를 봤어요.", "Tôi đã xem phim cùng bạn."],
+        ["저는 불고기하고 갈비를 좋아해요.", "Tôi thích bulgogi và galbi."]
+      ],
+      "questions": [
+        {
+          "q": "빵___ 우유를 샀어요.",
+          "options": ["하고", "와", "를", "에서"],
+          "explain": "하고 nối hai danh từ, không xét patchim. 빵 có patchim nên 와 sai."
+        },
+        {
+          "q": "친구___ 같이 테니스를 쳤어요.",
+          "options": ["하고", "을", "에", "이"],
+          "explain": "'cùng với bạn' → 친구하고 같이."
+        },
+        {
+          "q": "\"Tôi thích bóng đá và bóng chày\" là câu nào?",
+          "options": ["저는 축구하고 야구를 좋아해요.", "저는 축구에 야구를 좋아해요.", "저는 축구에서 야구를 좋아해요.", "저는 축구가 야구를 좋아해요."],
+          "explain": "Nối hai danh từ bằng 하고."
+        },
+        {
+          "q": "Câu nào dùng 하고 với nghĩa 'cùng với'?",
+          "options": ["동생하고 같이 수영했어요.", "딸기하고 포도를 샀어요.", "커피하고 차를 마셔요.", "개하고 고양이가 있어요."],
+          "explain": "동생하고 같이: làm việc gì đó cùng em. Các câu còn lại 하고 là 'và'."
+        }
+      ]
+    },
+    {
+      "pattern": "-(으)ㅂ시다",
+      "title": "chúng ta hãy… (rủ rê)",
+      "note": [
+        "Rủ người ngang hàng hoặc nhỏ hơn cùng làm gì. Chỉ dùng với động từ, hay đi với 같이.",
+        "Gốc kết thúc bằng nguyên âm → -ㅂ시다 (가다 → 갑시다). Có patchim → -읍시다 (먹다 → 먹읍시다).",
+        "Gốc có patchim ㄹ thì bỏ ㄹ rồi thêm -ㅂ시다 (만들다 → 만듭시다)."
+      ],
+      "examples": [
+        ["우리 같이 영화를 봅시다.", "Chúng ta cùng xem phim nhé."],
+        ["점심을 같이 먹읍시다.", "Cùng ăn trưa nhé."],
+        ["주말에 바다에 갑시다.", "Cuối tuần mình đi biển đi."]
+      ],
+      "questions": [
+        {
+          "q": "같이 영화를 ___. (보다)",
+          "options": ["봅시다", "보읍시다", "봡시다", "봤읍시다"],
+          "explain": "보 kết thúc bằng nguyên âm → 봅시다."
+        },
+        {
+          "q": "점심을 같이 ___. (먹다)",
+          "options": ["먹읍시다", "먹ㅂ시다", "먹습시다", "먹어시다"],
+          "explain": "먹 có patchim → 먹읍시다."
+        },
+        {
+          "q": "같이 김밥을 ___. (만들다)",
+          "options": ["만듭시다", "만들읍시다", "만들ㅂ시다", "만드읍시다"],
+          "explain": "Gốc có ㄹ → bỏ ㄹ + ㅂ시다: 만듭시다."
+        },
+        {
+          "q": "내일 같이 등산___.",
+          "options": ["합시다", "하읍시다", "했읍시다", "해ㅂ시다"],
+          "explain": "하 kết thúc bằng nguyên âm → 합시다."
+        },
+        {
+          "q": "Câu nào là lời rủ?",
+          "options": ["같이 산책합시다.", "어제 산책했어요.", "저는 산책 안 해요.", "산책을 좋아해요."],
+          "explain": "-(으)ㅂ시다 là đuôi rủ rê."
+        }
+      ]
+    }
+  ]
+}

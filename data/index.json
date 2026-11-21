@@ -35,6 +35,38 @@
           "ko": "일상생활",
           "summary": "-ㅂ/습니다 · -ㅂ/습니까? · 을/를 · 에서",
           "icon": "☕"
+        },
+        {
+          "id": "sc1-04",
+          "no": "4",
+          "title": "Ngày và thứ",
+          "ko": "날짜와 요일",
+          "summary": "Số Hán Hàn · 와/과 · 에 (thời gian)",
+          "icon": "📅"
+        },
+        {
+          "id": "sc1-05",
+          "no": "5",
+          "title": "Một ngày của tôi",
+          "ko": "하루 일과",
+          "summary": "Số thuần Hàn + 시 · -아/어요 · 에 가다 · 안",
+          "icon": "⏰"
+        },
+        {
+          "id": "sc1-06",
+          "no": "6",
+          "title": "Cuối tuần",
+          "ko": "주말",
+          "summary": "-았/었- · 하고 · -(으)ㅂ시다",
+          "icon": "🎉"
+        },
+        {
+          "id": "sc1-07",
+          "no": "7",
+          "title": "Mua sắm",
+          "ko": "물건 사기",
+          "summary": "Đơn vị đếm · 은/는 đối chiếu · lược ㅡ · -고 싶다",
+          "icon": "🛍️"
         }
       ],
       "subtitle": "Làm quen chữ Hangeul và những câu giao tiếp đầu tiên"
