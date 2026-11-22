@@ -11,8 +11,9 @@ const idx = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/index.json'), 'utf8
 const LESSONS = idx.levels.flatMap((lv) => lv.lessons);
 const DATA = {};
 LESSONS.forEach((l) => { DATA[l.id] = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/lessons', l.id + '.json'), 'utf8')); });
-const NEW = ['sc2-01', 'sc2-02', 'sc2-03', 'sc2-04'];
-const TOTAL = LESSONS.length; // 16 bài Sơ cấp 1 (gồm Hangeul) + 4 bài Sơ cấp 2
+const NEW = ['sc2-05', 'sc2-06', 'sc2-07', 'sc2-08'];
+const SC2 = idx.levels.find((lv) => lv.id === 'sc2').lessons.map((l) => l.id);
+const TOTAL = LESSONS.length; // 16 bài Sơ cấp 1 (gồm Hangeul) + 8 bài Sơ cấp 2
 const lname = (id) => 'Sơ cấp 2 Bài ' + (+id.slice(-2));
 const OLD = LESSONS.map((l) => l.id).filter((id) => !NEW.includes(id));
 
@@ -145,7 +146,7 @@ async function noHScroll(page) {
     NEW.forEach((id) => assert(out.includes(id + ':'), 'thiếu ' + id));
   });
 
-  await tc('N02', 'SC2 Bài 1–4 soạn đủ phần: ≥35 từ, ≥8 câu từ trong câu, 3–4 mẫu ngữ pháp ≥5 câu/mẫu, 5 câu nghe, đọc hiểu 2 câu, luyện viết', async () => {
+  await tc('N02', 'SC2 Bài 5–8 soạn đủ phần: ≥35 từ, ≥8 câu từ trong câu, 3–4 mẫu ngữ pháp ≥5 câu/mẫu, 5 câu nghe, đọc hiểu 2 câu, luyện viết', async () => {
     const notes = [];
     NEW.forEach((id) => {
       const d = DATA[id];
@@ -162,7 +163,7 @@ async function noHScroll(page) {
     return notes.join(', ');
   });
 
-  await tc('N03', 'Từ vựng SC2 Bài 1–4 không lặp lại từ của Sơ cấp 1 (Hangeul + 15 bài) và không lặp giữa 4 bài mới', async () => {
+  await tc('N03', 'Từ vựng SC2 Bài 5–8 không lặp lại từ của Sơ cấp 1 (Hangeul + 15 bài), SC2 Bài 1–4 và không lặp giữa 4 bài mới', async () => {
     const old = new Set(OLD.flatMap((id) => (DATA[id].vocab || []).flatMap((g) => g.words.map((w) => norm(w[0])))));
     const seen = new Map(); const dup = [];
     NEW.forEach((id) => DATA[id].vocab.forEach((g) => g.words.forEach((w) => {
@@ -183,16 +184,16 @@ async function noHScroll(page) {
     });
   });
 
-  await tc('N05', 'index.json: Sơ cấp 1 giữ nguyên 0→15; có cấp Sơ cấp 2 riêng gồm Bài 1→4, mỗi bài có tên, chữ Hàn, tóm tắt ngữ pháp, icon', async () => {
+  await tc('N05', 'index.json: Sơ cấp 1 giữ nguyên 0→15; có cấp Sơ cấp 2 riêng gồm Bài 1→8, mỗi bài có tên, chữ Hàn, tóm tắt ngữ pháp, icon', async () => {
     assert(idx.levels.length === 2 && idx.levels[0].id === 'sc1' && idx.levels[1].id === 'sc2', idx.levels.map((l) => l.id).join(','));
     const n1 = idx.levels[0].lessons.map((l) => l.no).join(',');
     assert(n1 === '0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15', 'SC1 ' + n1);
     const n2 = idx.levels[1].lessons.map((l) => l.id + ':' + l.no).join(',');
-    assert(n2 === 'sc2-01:1,sc2-02:2,sc2-03:3,sc2-04:4', 'SC2 ' + n2);
+    assert(n2 === 'sc2-01:1,sc2-02:2,sc2-03:3,sc2-04:4,sc2-05:5,sc2-06:6,sc2-07:7,sc2-08:8', 'SC2 ' + n2);
     NEW.forEach((id) => { const l = LESSONS.find((x) => x.id === id); assert(l.title && l.ko && l.summary && l.icon, id); });
   });
 
-  await tc('N06', 'Trang chủ: đếm "' + TOTAL + ' bài học", hiện link Bài 1–4 Sơ cấp 2', async () => {
+  await tc('N06', 'Trang chủ: đếm "' + TOTAL + ' bài học", hiện link Bài 5–8 Sơ cấp 2', async () => {
     await go(page, '#/');
     await page.waitForSelector('.hero-facts');
     const facts = await page.$eval('.hero-facts', (e) => e.innerText);
@@ -200,7 +201,7 @@ async function noHScroll(page) {
     for (const id of NEW) assert(await page.$(`a[href="#/bai/${id}"]`), 'thiếu link ' + id);
   });
 
-  await tc('N12', 'Lộ trình tách rõ 2 cấp: 2 khối riêng (Sơ cấp 1 trước, Sơ cấp 2 sau), mỗi khối chỉ chứa bài của cấp đó, có nhãn "Cấp 1/Cấp 2", đếm x/16 và x/4, ô "Bài tiếp theo" chỉ ở cuối Sơ cấp 2', async () => {
+  await tc('N12', 'Lộ trình tách rõ 2 cấp: 2 khối riêng (Sơ cấp 1 trước, Sơ cấp 2 sau), mỗi khối chỉ chứa bài của cấp đó, có nhãn "Cấp 1/Cấp 2", đếm x/16 và x/8, ô "Bài tiếp theo" chỉ ở cuối Sơ cấp 2', async () => {
     await go(page, '#/');
     await page.waitForSelector('.level');
     const lv = await page.$$eval('.level', (els) => els.map((e) => ({
@@ -213,8 +214,8 @@ async function noHScroll(page) {
     assert(lv[0].id === 'lo-trinh-sc1' && lv[0].h2 === 'Sơ cấp 1' && /Cấp 1/.test(lv[0].badge), JSON.stringify(lv[0]).slice(0, 120));
     assert(lv[1].id === 'lo-trinh-sc2' && lv[1].h2 === 'Sơ cấp 2' && /Cấp 2/.test(lv[1].badge), JSON.stringify(lv[1]).slice(0, 120));
     assert(lv[0].links.length === 16 && lv[0].links.every((x) => x.startsWith('sc1-')), 'khối SC1: ' + lv[0].links.join(','));
-    assert(lv[1].links.join(',') === NEW.join(','), 'khối SC2: ' + lv[1].links.join(','));
-    assert(/\/16 bài/.test(lv[0].prog) && /\/4 bài/.test(lv[1].prog), lv[0].prog + ' | ' + lv[1].prog);
+    assert(lv[1].links.join(',') === SC2.join(',') && SC2.length === 8, 'khối SC2: ' + lv[1].links.join(','));
+    assert(/\/16 bài/.test(lv[0].prog) && /\/8 bài/.test(lv[1].prog), lv[0].prog + ' | ' + lv[1].prog);
     assert(!lv[0].soon && lv[1].soon, 'ô Bài tiếp theo sai chỗ');
     const ids = await page.$$eval('[id]', (els) => els.map((e) => e.id));
     assert(ids.filter((x) => x === 'lo-trinh').length === 1, 'id lo-trinh bị trùng');
@@ -242,7 +243,7 @@ async function noHScroll(page) {
     assert(y > 200, '"Xem lộ trình" không cuộn, scrollY=' + y);
   });
 
-  await tc('N14', 'Tên bài Sơ cấp 2 có ghi cấp (tiêu đề tab, đường dẫn) để không nhầm với Bài 1–4 Sơ cấp 1; tên bài Sơ cấp 1 giữ nguyên', async () => {
+  await tc('N14', 'Tên bài Sơ cấp 2 có ghi cấp (tiêu đề tab, đường dẫn) để không nhầm với bài cùng số Sơ cấp 1; tên bài Sơ cấp 1 giữ nguyên', async () => {
     await go(page, '#/bai/sc2-01');
     await page.waitForSelector('.lesson-hero h1');
     const t = await page.title();
@@ -299,10 +300,10 @@ async function noHScroll(page) {
     });
   }
 
-  await tc('N10', 'Câu nghe (SC2 Bài 2) có nút loa đọc đúng câu; câu đọc hiểu hiện đoạn văn và bản dịch sau khi trả lời', async () => {
+  await tc('N10', 'Câu nghe (SC2 Bài 6) có nút loa đọc đúng câu; câu đọc hiểu hiện đoạn văn và bản dịch sau khi trả lời', async () => {
     await page.evaluate(() => {});
-    const d = DATA['sc2-02'];
-    await startMode(page, 'sc2-02', 'full');
+    const d = DATA['sc2-06'];
+    await startMode(page, 'sc2-06', 'full');
     let sawListen = false, sawRead = false;
     for (let k = 0; k < 160 && !(await page.$('.result-grid')); k++) {
       await page.waitForSelector('.opt');
@@ -317,13 +318,13 @@ async function noHScroll(page) {
     assert(sawListen && sawRead, 'không gặp câu nghe/đọc');
   });
 
-  await tc('N11', 'Luyện viết SC2 Bài 4: gõ câu được lưu trên máy, nút Xem câu mẫu bật/tắt', async () => {
-    await startMode(page, 'sc2-04', 'quick');
+  await tc('N11', 'Luyện viết SC2 Bài 8: gõ câu được lưu trên máy, nút Xem câu mẫu bật/tắt', async () => {
+    await startMode(page, 'sc2-08', 'quick');
     await playQuiz(page);
-    await page.fill('#wtext', '감기에 걸려서 병원에 가야 해요.');
+    await page.fill('#wtext', '이 영화 정말 재미있네요.');
     await page.waitForTimeout(800);
-    const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('hanadul:v2')).writing['sc2-04']);
-    assert(saved === '감기에 걸려서 병원에 가야 해요.', 'chưa lưu: ' + saved);
+    const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('hanadul:v2')).writing['sc2-08']);
+    assert(saved === '이 영화 정말 재미있네요.', 'chưa lưu: ' + saved);
     await page.click('#wshow');
     assert(!(await page.$eval('#wsamples', (e) => e.hidden)), 'không mở câu mẫu');
     await page.click('#wshow');
@@ -332,7 +333,7 @@ async function noHScroll(page) {
 
   // ================= HỒI QUY =================
   for (const id of OLD) {
-    await tc(`R01-${id.slice(-2)}`, `Hồi quy ${id === 'sc1-00' ? 'Hangeul' : 'Bài ' + (+id.slice(-2))} – Ôn đầy đủ vẫn làm hết, 100%, không lỗi JS`, async () => {
+    await tc(`R01-${id.slice(-2)}`, `Hồi quy ${id === 'sc1-00' ? 'Hangeul' : id.startsWith('sc2') ? lname(id) : 'Bài ' + (+id.slice(-2))} – Ôn đầy đủ vẫn làm hết, 100%, không lỗi JS`, async () => {
       page.errors = [];
       const n = await startMode(page, id, 'full');
       const r = await playQuiz(page);
@@ -340,6 +341,7 @@ async function noHScroll(page) {
       assert(r.first === n && r.acc === '100%', `${r.first}/${n} câu, ${r.acc}`);
       assert(!page.errors.length, page.errors.join('; '));
       if (id === 'sc1-15') assert(r.nextHref === '#/bai/sc2-01', 'Bài 15 Sơ cấp 1 phải dẫn sang Bài 1 Sơ cấp 2, đang là ' + r.nextHref);
+      if (id === 'sc2-04') assert(r.nextHref === '#/bai/sc2-05', 'SC2 Bài 4 phải dẫn sang Bài 5, đang là ' + r.nextHref);
       return `${n} câu`;
     });
   }
@@ -352,7 +354,7 @@ async function noHScroll(page) {
 
   await tc('R03', 'Tiến độ (sao, XP, chuỗi ngày) của bài cũ vẫn giữ sau khi làm bài mới; trang chủ gợi ý "Học tiếp"', async () => {
     const s = await page.evaluate(() => JSON.parse(localStorage.getItem('hanadul:v2')));
-    ['sc1-01', 'sc1-11', 'sc1-15', 'sc2-01', 'sc2-04'].forEach((id) => assert(s.lessons[id] && s.lessons[id].best === 100, 'mất tiến độ ' + id));
+    ['sc1-01', 'sc1-11', 'sc1-15', 'sc2-01', 'sc2-04', 'sc2-05', 'sc2-08'].forEach((id) => assert(s.lessons[id] && s.lessons[id].best === 100, 'mất tiến độ ' + id));
     assert(s.xp > 0 && s.days.length >= 1, 'XP/ngày');
     await go(page, '#/');
     const t = await page.$eval('.hero-actions .btn', (e) => e.innerText);
@@ -381,14 +383,14 @@ async function noHScroll(page) {
     assert(/Sổ đang trống/.test(h2), h2);
   });
 
-  await tc('R05', 'Trang giới thiệu: đếm ' + TOTAL + ' bài đang mở, thẻ Sơ cấp 1 báo "Đủ 15 bài", thẻ Sơ cấp 2 báo "Đang mở 4 bài", không lỗi JS', async () => {
+  await tc('R05', 'Trang giới thiệu: đếm ' + TOTAL + ' bài đang mở, thẻ Sơ cấp 1 báo "Đủ 15 bài", thẻ Sơ cấp 2 báo "Đang mở 8 bài", không lỗi JS', async () => {
     page.errors = [];
     await page.goto(BASE + 'gioi-thieu.html');
     await page.waitForFunction((n) => document.querySelector('[data-fill="lessons"]').textContent === String(n), TOTAL, { timeout: 4000 });
     const tag = await page.$eval('[data-fill="sc1"]', (e) => e.textContent);
     assert(tag === 'Đủ 15 bài', tag);
     const tag2 = await page.$eval('[data-fill="sc2"]', (e) => e.textContent);
-    assert(tag2 === 'Đang mở 4 bài', tag2);
+    assert(tag2 === 'Đang mở 8 bài', tag2);
     assert(!page.errors.length, page.errors.join('; '));
   });
 
@@ -406,11 +408,11 @@ async function noHScroll(page) {
 
   // ---- điện thoại ----
   const mob = await newPage(browser, { viewport: { width: 375, height: 740 }, isMobile: true, hasTouch: true, deviceScaleFactor: 1 });
-  await tc('R07', 'Điện thoại 375px: trang chủ (2 khối cấp độ), trang học và màn làm bài SC2 Bài 1–4 + SC1 Bài 1 không tràn ngang', async () => {
+  await tc('R07', 'Điện thoại 375px: trang chủ (2 khối cấp độ), trang học và màn làm bài SC2 Bài 5–8 + SC2 Bài 1 + SC1 Bài 1 không tràn ngang', async () => {
     const bad = [];
     const p = mob.page;
     await go(p, '#/'); await p.waitForSelector('.hero'); if (!(await noHScroll(p))) bad.push('trang chủ');
-    for (const id of ['sc1-01', ...NEW]) {
+    for (const id of ['sc1-01', 'sc2-01', ...NEW]) {
       await go(p, `#/bai/${id}`); await p.waitForSelector('.lesson-hero'); if (!(await noHScroll(p))) bad.push(id + ' học');
       await startMode(p, id, 'full');
       for (let k = 0; k < 40 && !(await p.$('.result-grid')); k++) {
@@ -426,7 +428,7 @@ async function noHScroll(page) {
 
   // ---- giao diện tối ----
   const dark = await newPage(browser, { colorScheme: 'dark' });
-  await tc('R08', 'Giao diện tối: trang chủ, trang học SC2 Bài 4, màn làm bài và trang giới thiệu dùng nền tối, chữ sáng', async () => {
+  await tc('R08', 'Giao diện tối: trang chủ, trang học SC2 Bài 8, màn làm bài và trang giới thiệu dùng nền tối, chữ sáng', async () => {
     const p = dark.page; const bad = [];
     const lum = (rgb) => { const m = rgb.match(/\d+/g).map(Number); return 0.2126 * m[0] + 0.7152 * m[1] + 0.0722 * m[2]; };
     async function check(name) {
@@ -434,8 +436,8 @@ async function noHScroll(page) {
       if (!(lum(c.bg) < 80 && lum(c.fg) > 150)) bad.push(`${name} bg=${c.bg} fg=${c.fg}`);
     }
     await go(p, '#/'); await p.waitForSelector('.hero'); await check('trang chủ');
-    await go(p, '#/bai/sc2-04'); await p.waitForSelector('.lesson-hero'); await check('SC2 Bài 4');
-    await startMode(p, 'sc2-04', 'quick'); await p.waitForSelector('.opt'); await check('làm bài');
+    await go(p, '#/bai/sc2-08'); await p.waitForSelector('.lesson-hero'); await check('SC2 Bài 8');
+    await startMode(p, 'sc2-08', 'quick'); await p.waitForSelector('.opt'); await check('làm bài');
     await p.goto(BASE + 'gioi-thieu.html'); await check('giới thiệu');
     assert(!bad.length, bad.join('; '));
   });

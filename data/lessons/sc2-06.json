@@ -1,0 +1,598 @@
+{
+  "id": "sc2-06",
+  "title": "Giao thông (2)",
+  "ko": "교통 (2)",
+  "goal": "Hỏi và chỉ đường, nói cách đi và đổi tuyến tàu xe, hỏi lại để xác nhận bằng -지요?.",
+  "vocab": [
+    {
+      "group": "Xe buýt, taxi",
+      "words": [
+        [
+          "시외버스",
+          "xe buýt liên tỉnh"
+        ],
+        [
+          "셔틀버스",
+          "xe buýt đưa đón (shuttle)"
+        ],
+        [
+          "공항버스",
+          "xe buýt sân bay"
+        ],
+        [
+          "일반 택시",
+          "taxi thường"
+        ],
+        [
+          "콜택시",
+          "taxi gọi qua tổng đài"
+        ],
+        [
+          "기본요금",
+          "giá mở cửa (phí cơ bản)"
+        ],
+        [
+          "기사",
+          "tài xế"
+        ],
+        [
+          "첫차",
+          "chuyến xe đầu tiên trong ngày"
+        ],
+        [
+          "막차",
+          "chuyến xe cuối cùng trong ngày"
+        ]
+      ]
+    },
+    {
+      "group": "Đi tàu điện",
+      "words": [
+        [
+          "출구",
+          "cửa ra (ga tàu)"
+        ],
+        [
+          "호선",
+          "tuyến (tàu điện) số …"
+        ],
+        [
+          "환승역",
+          "ga chuyển tuyến"
+        ],
+        [
+          "방면",
+          "hướng (đi về phía …)"
+        ],
+        [
+          "버스 전용 도로",
+          "làn đường riêng cho xe buýt"
+        ]
+      ]
+    },
+    {
+      "group": "Đường phố",
+      "words": [
+        [
+          "골목",
+          "ngõ, hẻm"
+        ],
+        [
+          "모퉁이",
+          "góc đường"
+        ],
+        [
+          "건널목",
+          "chỗ băng qua đường ray"
+        ],
+        [
+          "삼거리",
+          "ngã ba"
+        ],
+        [
+          "사거리",
+          "ngã tư"
+        ],
+        [
+          "맞은편",
+          "phía đối diện"
+        ]
+      ]
+    },
+    {
+      "group": "Chỉ đường",
+      "words": [
+        [
+          "우회전하다",
+          "rẽ phải"
+        ],
+        [
+          "좌회전하다",
+          "rẽ trái"
+        ],
+        [
+          "직진하다",
+          "đi thẳng"
+        ],
+        [
+          "쭉 가다",
+          "cứ đi tiếp một mạch"
+        ],
+        [
+          "지나가다",
+          "đi ngang qua"
+        ],
+        [
+          "건너가다",
+          "băng qua (sang bên kia)"
+        ],
+        [
+          "돌아가다",
+          "quay lại, đi vòng lại"
+        ],
+        [
+          "유턴하다",
+          "quay đầu xe"
+        ],
+        [
+          "나가다",
+          "đi ra (xa chỗ người nói)"
+        ],
+        [
+          "나오다",
+          "đi ra (về phía người nói)"
+        ]
+      ]
+    },
+    {
+      "group": "Từ khác",
+      "words": [
+        [
+          "배달원",
+          "nhân viên giao hàng"
+        ],
+        [
+          "발표회",
+          "buổi thuyết trình"
+        ],
+        [
+          "담요",
+          "chăn mỏng, mền"
+        ],
+        [
+          "색연필",
+          "bút chì màu"
+        ],
+        [
+          "길을 잃다",
+          "lạc đường"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "V-아/어서 (trình tự)",
+      "title": "rồi (làm việc tiếp theo)",
+      "note": [
+        "Nối hai hành động liên tiếp; việc sau diễn ra dựa trên việc trước (ở nơi đó, với vật đó): 학교에 가서 공부해요 (đến trường rồi học ở đó).",
+        "Chia như -아/어요: ㅏ, ㅗ → 아서 (나와서); nguyên âm khác → 어서 (내려서); 하다 → 해서 (좌회전해서).",
+        "Thì quá khứ chỉ chia ở cuối câu: 만나서 먹었어요 (không nói 만났어서).",
+        "Đã học -아/어서 chỉ lý do (바빠서 = vì bận). Ở đây là trình tự: 내려서 갈아타요 (xuống rồi đổi tàu).",
+        "So sánh -고: 친구를 만나고 영화를 봤어요 (hai việc riêng) – 친구를 만나서 영화를 봤어요 (gặp rồi cùng xem)."
+      ],
+      "examples": [
+        [
+          "시청역에서 내려서 2호선으로 갈아타세요.",
+          "Xuống ở ga Tòa thị chính rồi đổi sang tuyến số 2."
+        ],
+        [
+          "사거리에서 우회전해서 쭉 가세요.",
+          "Rẽ phải ở ngã tư rồi cứ đi thẳng."
+        ],
+        [
+          "친구를 만나서 같이 영화를 봤어요.",
+          "Tôi gặp bạn rồi cùng xem phim."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "명동역에서 ___ 4호선으로 갈아타세요. (내리다)",
+          "options": [
+            "내려서",
+            "내리서",
+            "내렸어서",
+            "내려니까"
+          ],
+          "explain": "내리다 → 내려서 (rồi đổi tàu)."
+        },
+        {
+          "q": "사거리에서 ___ 쭉 가세요. (좌회전하다)",
+          "options": [
+            "좌회전해서",
+            "좌회전하서",
+            "좌회전했어서",
+            "좌회전해야서"
+          ],
+          "explain": "하다 → 해서."
+        },
+        {
+          "q": "어제 친구를 ___ 같이 점심을 먹었어요. (만나다)",
+          "options": [
+            "만나서",
+            "만났어서",
+            "만나어서",
+            "만날서"
+          ],
+          "explain": "Thì quá khứ để ở cuối câu → 만나서 … 먹었어요."
+        },
+        {
+          "q": "Câu nào dùng -아/어서 với nghĩa TRÌNH TỰ (rồi)?",
+          "options": [
+            "도서관에 가서 책을 빌렸어요.",
+            "배가 아파서 병원에 갔어요.",
+            "비가 와서 집에 있었어요.",
+            "바빠서 전화하지 못했어요."
+          ],
+          "explain": "Đến thư viện rồi mượn sách ở đó = trình tự. Ba câu kia là lý do (vì…)."
+        },
+        {
+          "q": "Nghĩa của \"케이크를 만들어서 친구에게 줬어요.\"",
+          "options": [
+            "Tôi làm bánh rồi tặng bạn.",
+            "Tôi làm bánh nên bạn cho tôi quà.",
+            "Tôi làm bánh cùng với bạn.",
+            "Tôi mua bánh rồi tặng bạn."
+          ],
+          "explain": "만들어서 = làm (bánh đó) rồi …; 줬어요 = đã tặng."
+        }
+      ]
+    },
+    {
+      "pattern": "-지요?",
+      "title": "… phải không? (hỏi để xác nhận)",
+      "note": [
+        "Hỏi lại điều mình đã biết hoặc tin là người nghe cũng biết, mong được đồng tình: 이 버스가 시청에 가지요?",
+        "Gắn thẳng vào gốc động từ, tính từ: 가지요?, 맛있지요? Quá khứ: -았/었지요? (재미있었지요?). Sẽ: -(으)ㄹ 거지요?",
+        "Danh từ có patchim + 이지요? (환승역이지요?), không patchim + 지요? (친구지요?).",
+        "Khi nói hay rút gọn thành -죠?: 맞죠?"
+      ],
+      "examples": [
+        [
+          "이 버스가 공항에 가지요?",
+          "Xe buýt này đi sân bay phải không?"
+        ],
+        [
+          "어제 영화 재미있었지요?",
+          "Phim hôm qua hay phải không?"
+        ],
+        [
+          "여기가 환승역이지요?",
+          "Đây là ga chuyển tuyến phải không?"
+        ]
+      ],
+      "questions": [
+        {
+          "q": "가: 이 버스가 시청에 ___? 나: 네, 시청에 가요.",
+          "options": [
+            "가지요",
+            "가요지",
+            "가지마요",
+            "가니지요"
+          ],
+          "explain": "Hỏi xác nhận → 가지요?"
+        },
+        {
+          "q": "가: 어제 시험이 ___? 나: 네, 정말 어려웠어요.",
+          "options": [
+            "어려웠지요",
+            "어렵지요었",
+            "어려지요",
+            "어렵었지요"
+          ],
+          "explain": "Quá khứ của 어렵다 là 어려웠- → 어려웠지요?"
+        },
+        {
+          "q": "가: 저 사람이 흐엉 씨 친구___? 나: 네, 맞아요.",
+          "options": [
+            "지요",
+            "이지요",
+            "이에지요",
+            "예지요"
+          ],
+          "explain": "친구 không patchim → 친구지요?"
+        },
+        {
+          "q": "가: 여기가 환승역___? 나: 네, 2호선으로 갈아탈 수 있어요.",
+          "options": [
+            "이지요",
+            "지요",
+            "이요지",
+            "이지만"
+          ],
+          "explain": "환승역 có patchim → 환승역이지요?"
+        },
+        {
+          "q": "Nghĩa của \"내일 같이 갈 거지요?\"",
+          "options": [
+            "Ngày mai mình sẽ đi cùng nhau, phải không?",
+            "Hôm qua mình đã đi cùng nhau, phải không?",
+            "Ngày mai mình đi cùng nhau nhé (rủ).",
+            "Ngày mai đừng đi cùng nhau."
+          ],
+          "explain": "-(으)ㄹ 거지요? = sẽ … phải không?"
+        }
+      ]
+    },
+    {
+      "pattern": "첫째 · 첫 번째",
+      "title": "số thứ tự (thứ nhất, thứ hai…)",
+      "note": [
+        "Dùng số thuần Hàn: 첫째, 둘째, 셋째, 넷째, 다섯째… (thứ nhất, thứ hai…).",
+        "Số đếm thuần Hàn + 번째: 첫 번째 (không nói 한 번째), 두 번째, 세 번째, 네 번째, 열 번째.",
+        "Hay dùng khi chỉ đường: 두 번째 사거리에서 우회전하세요 (rẽ phải ở ngã tư thứ hai).",
+        "첫째, 둘째 còn dùng để liệt kê ý (thứ nhất…, thứ hai…) hoặc chỉ con cả, con thứ trong nhà."
+      ],
+      "examples": [
+        [
+          "두 번째 사거리에서 좌회전하세요.",
+          "Rẽ trái ở ngã tư thứ hai."
+        ],
+        [
+          "이번이 세 번째 한국 여행이에요.",
+          "Đây là chuyến đi Hàn Quốc thứ ba của tôi."
+        ],
+        [
+          "첫째, 매일 단어를 외우세요. 둘째, 많이 들으세요.",
+          "Thứ nhất, hãy học từ mỗi ngày. Thứ hai, hãy nghe thật nhiều."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "\"Ngã tư thứ hai\" là gì?",
+          "options": [
+            "두 번째 사거리",
+            "둘 번째 사거리",
+            "이 번째 사거리",
+            "두째 사거리"
+          ],
+          "explain": "Thứ hai = 두 번째 (둘 → 두)."
+        },
+        {
+          "q": "\"Thứ nhất\" (dùng 번째) là gì?",
+          "options": [
+            "첫 번째",
+            "한 번째",
+            "일 번째",
+            "하나 번째"
+          ],
+          "explain": "Thứ nhất là 첫 번째, không nói 한 번째."
+        },
+        {
+          "q": "세 번째 정류장에서 내리세요. — Xuống ở trạm nào?",
+          "options": [
+            "Trạm thứ ba",
+            "Trạm thứ hai",
+            "Trạm thứ tư",
+            "Trạm cuối cùng"
+          ],
+          "explain": "세 번째 = thứ ba."
+        },
+        {
+          "q": "첫째, 둘째, ___, 넷째",
+          "options": [
+            "셋째",
+            "삼째",
+            "세째",
+            "세 번째째"
+          ],
+          "explain": "Thứ ba = 셋째."
+        },
+        {
+          "q": "이번이 ___ 한국 여행이에요. (lần thứ hai)",
+          "options": [
+            "두 번째",
+            "둘째 번",
+            "이 번째",
+            "두 번"
+          ],
+          "explain": "Thứ hai → 두 번째 (두 번 = hai lần)."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "지하철에서 내려서 3번 ___로 나가세요.",
+      "options": [
+        "출구",
+        "골목",
+        "방면",
+        "호선"
+      ],
+      "explain": "Cửa ra số 3 → 3번 출구."
+    },
+    {
+      "q": "여기는 1호선과 2호선을 갈아탈 수 있는 ___이에요.",
+      "options": [
+        "환승역",
+        "출구",
+        "모퉁이",
+        "삼거리"
+      ],
+      "explain": "Ga đổi tuyến → 환승역."
+    },
+    {
+      "q": "세 길이 만나는 곳은 ___예요.",
+      "options": [
+        "삼거리",
+        "사거리",
+        "골목",
+        "건널목"
+      ],
+      "explain": "Ba ngả đường gặp nhau → ngã ba (삼거리)."
+    },
+    {
+      "q": "택시를 탔어요. ___ 아저씨가 길을 잘 알았어요.",
+      "options": [
+        "기사",
+        "배달원",
+        "발표회",
+        "담요"
+      ],
+      "explain": "Người lái taxi → 기사."
+    },
+    {
+      "q": "저기 ___에서 오른쪽으로 돌면 은행이 있어요.",
+      "options": [
+        "모퉁이",
+        "출구",
+        "기본요금",
+        "셔틀버스"
+      ],
+      "explain": "Góc đường → 모퉁이."
+    },
+    {
+      "q": "길을 잘못 왔어요. 다시 ___.",
+      "options": [
+        "돌아가야 해요",
+        "건너가야 해요",
+        "지나가야 해요",
+        "나와야 해요"
+      ],
+      "explain": "Đi nhầm đường → phải quay lại (돌아가다)."
+    },
+    {
+      "q": "밤 열두 시예요. ___가 끊겨서 택시를 탔어요.",
+      "options": [
+        "막차",
+        "첫차",
+        "콜택시",
+        "공항버스"
+      ],
+      "explain": "Hết chuyến cuối (막차) nên phải đi taxi."
+    },
+    {
+      "q": "밤 늦게 버스가 없으면 전화해서 ___를 타세요.",
+      "options": [
+        "콜택시",
+        "시외버스",
+        "버스 전용 도로",
+        "호선"
+      ],
+      "explain": "Gọi điện để gọi taxi → 콜택시."
+    },
+    {
+      "q": "은행 ___에 우체국이 있어요. 길을 건너가세요.",
+      "options": [
+        "맞은편",
+        "모퉁이",
+        "골목",
+        "출구"
+      ],
+      "explain": "Phải băng qua đường → bưu điện ở phía đối diện (맞은편)."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "명동역에서 내려서 4호선으로 갈아타세요.",
+      "options": [
+        "Xuống ở ga Myeongdong rồi đổi sang tuyến số 4.",
+        "Lên tàu ở ga Myeongdong rồi đi thẳng tuyến số 2.",
+        "Xuống ở ga số 4 rồi đi bộ đến Myeongdong.",
+        "Đi tuyến số 4 đến Myeongdong rồi xuống."
+      ],
+      "explain": "내려서 = xuống rồi; 4호선으로 갈아타세요 = đổi sang tuyến 4."
+    },
+    {
+      "listen": "가: 실례합니다. 우체국이 어디에 있어요? 나: 이 길로 쭉 가서 두 번째 사거리에서 우회전하세요.",
+      "options": [
+        "Đi thẳng, rẽ phải ở ngã tư thứ hai",
+        "Đi thẳng, rẽ trái ở ngã tư thứ hai",
+        "Rẽ phải ở ngã tư thứ nhất",
+        "Quay lại rồi rẽ phải"
+      ],
+      "explain": "쭉 가서 = đi thẳng rồi; 두 번째 사거리 = ngã tư thứ hai; 우회전 = rẽ phải.",
+      "q": "Đường đến bưu điện thế nào?"
+    },
+    {
+      "listen": "가: 이 버스가 공항에 가지요? 나: 아니요, 공항버스는 저쪽에서 타세요.",
+      "options": [
+        "Không, phải bắt xe buýt sân bay ở phía kia",
+        "Có, xe này đi sân bay",
+        "Có, nhưng phải đổi xe",
+        "Không, phải đi taxi"
+      ],
+      "explain": "아니요 = không; 공항버스는 저쪽에서 타세요 = bắt xe sân bay ở đằng kia.",
+      "q": "Xe buýt này có đi sân bay không?"
+    },
+    {
+      "listen": "택시 기본요금이 얼마예요?",
+      "options": [
+        "Giá mở cửa taxi là bao nhiêu?",
+        "Taxi thường đón ở đâu?",
+        "Đi taxi mất bao lâu?",
+        "Tài xế taxi là ai?"
+      ],
+      "explain": "기본요금 = giá mở cửa; 얼마예요? = bao nhiêu?"
+    },
+    {
+      "listen": "은행 앞에서 길을 건너가서 왼쪽 골목으로 들어가세요.",
+      "options": [
+        "Qua đường ở trước ngân hàng rồi đi vào ngõ bên trái.",
+        "Rẽ phải ở ngân hàng rồi đi vào ngõ.",
+        "Đi qua ngân hàng rồi quay lại.",
+        "Vào ngân hàng rồi ra cửa bên trái."
+      ],
+      "explain": "건너가서 = băng qua rồi; 왼쪽 골목 = ngõ bên trái."
+    }
+  ],
+  "reading": {
+    "passage": "토요일 파티에 오는 길이에요. 지하철 2호선을 타고 시청역에서 내려서 1호선으로 갈아타세요. 그리고 종각역 3번 출구로 나와서 쭉 가세요. 첫 번째 사거리에서 좌회전해서 100미터쯤 가면 편의점이 있어요. 편의점 옆 골목으로 들어가세요. 골목 끝에 있는 파란색 건물이 우리 집이에요. 길이 좀 복잡하지요? 모르면 전화하세요.",
+    "passageVi": "Đây là đường đến bữa tiệc thứ Bảy. Đi tàu điện tuyến 2, xuống ở ga Tòa thị chính rồi đổi sang tuyến 1. Sau đó ra cửa số 3 ga Jonggak rồi cứ đi thẳng. Rẽ trái ở ngã tư thứ nhất rồi đi khoảng 100 mét thì có cửa hàng tiện lợi. Hãy đi vào ngõ cạnh cửa hàng tiện lợi. Tòa nhà màu xanh ở cuối ngõ là nhà mình. Đường hơi rắc rối phải không? Không biết thì gọi cho mình nhé.",
+    "questions": [
+      {
+        "q": "Ở ga Jonggak phải ra cửa số mấy?",
+        "options": [
+          "Cửa số 3",
+          "Cửa số 1",
+          "Cửa số 2",
+          "Cửa số 4"
+        ],
+        "explain": "종각역 3번 출구로 나와서."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Rẽ trái ở ngã tư thứ nhất.",
+          "Nhà ở ngay cạnh ga Jonggak.",
+          "Phải đổi sang tuyến 2 ở ga Tòa thị chính.",
+          "Nhà là tòa nhà màu đỏ ở đầu ngõ."
+        ],
+        "explain": "첫 번째 사거리에서 좌회전해서. Đổi sang tuyến 1 (1호선), nhà màu xanh (파란색) ở cuối ngõ."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu chỉ đường từ ga tàu hoặc trạm xe buýt gần nhất đến nhà bạn (hoặc trường, công ty). Dùng -아/어서 (rồi), số thứ tự (첫 번째, 두 번째…) và một câu hỏi lại bằng -지요?.",
+    "samples": [
+      [
+        "2호선 강남역에서 내려서 5번 출구로 나오세요.",
+        "Xuống ga Gangnam tuyến 2 rồi ra cửa số 5."
+      ],
+      [
+        "쭉 가서 두 번째 사거리에서 우회전하세요.",
+        "Đi thẳng rồi rẽ phải ở ngã tư thứ hai."
+      ],
+      [
+        "모퉁이에 있는 빨간색 건물이 우리 회사예요.",
+        "Tòa nhà màu đỏ ở góc đường là công ty tôi."
+      ],
+      [
+        "길이 복잡하지요? 모르면 전화하세요.",
+        "Đường hơi rắc rối phải không? Không biết thì gọi tôi nhé."
+      ]
+    ],
+    "tips": "Rồi (trình tự): 내려서, 나와서, 가서, 우회전해서; thì quá khứ chỉ chia ở cuối câu. Thứ tự: 첫 번째, 두 번째, 세 번째 (không nói 한 번째). Hỏi xác nhận: 맞지요?, 환승역이지요?"
+  }
+}
