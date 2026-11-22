@@ -1,0 +1,614 @@
+{
+ "id": "sc2-01",
+ "title": "Gặp gỡ",
+ "ko": "만남",
+ "goal": "Chào hỏi khi đến thăm nhà người Hàn, giới thiệu về người khác, nhờ ai đó làm giúp việc gì.",
+ "vocab": [
+  {
+   "group": "Các mối quan hệ",
+   "words": [
+    [
+     "선배",
+     "tiền bối (người khóa trước, vào trước)"
+    ],
+    [
+     "후배",
+     "hậu bối (người khóa sau, vào sau)"
+    ],
+    [
+     "상사",
+     "cấp trên"
+    ],
+    [
+     "부하",
+     "cấp dưới"
+    ],
+    [
+     "직원",
+     "nhân viên"
+    ]
+   ]
+  },
+  {
+   "group": "Thăm hỏi, giới thiệu",
+   "words": [
+    [
+     "초대를 받다",
+     "nhận lời mời"
+    ],
+    [
+     "방문하다",
+     "đến thăm"
+    ],
+    [
+     "소개하다",
+     "giới thiệu"
+    ],
+    [
+     "소개를 받다",
+     "được giới thiệu"
+    ],
+    [
+     "인사하다",
+     "chào hỏi"
+    ],
+    [
+     "악수하다",
+     "bắt tay"
+    ],
+    [
+     "명함",
+     "danh thiếp"
+    ],
+    [
+     "정장",
+     "trang phục lịch sự (com-lê, váy công sở)"
+    ],
+    [
+     "예절",
+     "phép lịch sự, lễ nghi"
+    ]
+   ]
+  },
+  {
+   "group": "Câu nói khi đến thăm",
+   "words": [
+    [
+     "실례하겠습니다.",
+     "Xin phép (tôi làm phiền một chút)."
+    ],
+    [
+     "실례했습니다.",
+     "Xin lỗi đã làm phiền."
+    ],
+    [
+     "많이 드세요.",
+     "Mời ăn nhiều vào nhé."
+    ]
+   ]
+  },
+  {
+   "group": "Động từ thường dùng",
+   "words": [
+    [
+     "가져오다",
+     "mang đến, đem đến"
+    ],
+    [
+     "들다",
+     "cầm, xách"
+    ],
+    [
+     "넣다",
+     "cho vào, bỏ vào"
+    ],
+    [
+     "닫다",
+     "đóng (cửa)"
+    ],
+    [
+     "들어가다",
+     "đi vào"
+    ],
+    [
+     "만지다",
+     "sờ, chạm vào"
+    ],
+    [
+     "벗다",
+     "cởi ra"
+    ],
+    [
+     "씻다",
+     "rửa"
+    ],
+    [
+     "사용하다",
+     "sử dụng"
+    ],
+    [
+     "찍다",
+     "chụp (ảnh)"
+    ],
+    [
+     "조심하다",
+     "cẩn thận"
+    ],
+    [
+     "소리를 내다",
+     "phát ra tiếng, làm ồn"
+    ]
+   ]
+  },
+  {
+   "group": "Từ khác",
+   "words": [
+    [
+     "걱정",
+     "nỗi lo, sự lo lắng"
+    ],
+    [
+     "먼저",
+     "trước, trước tiên"
+    ],
+    [
+     "비슷하다",
+     "giống nhau, tương tự"
+    ],
+    [
+     "심심하다",
+     "buồn chán (vì không có việc gì làm)"
+    ],
+    [
+     "상담",
+     "sự tư vấn"
+    ],
+    [
+     "상담소",
+     "văn phòng tư vấn"
+    ],
+    [
+     "안내",
+     "sự hướng dẫn, chỉ dẫn"
+    ],
+    [
+     "설탕",
+     "đường (để ăn)"
+    ],
+    [
+     "크림",
+     "kem (kem sữa, kem bôi)"
+    ],
+    [
+     "올림",
+     "kính thư (ghi cuối thư gửi người trên)"
+    ]
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "pattern": "N의",
+   "title": "của (sở hữu)",
+   "note": [
+    "Nối hai danh từ: N1의 N2 = N2 của N1. 선배의 명함 = danh thiếp của tiền bối.",
+    "Khi nói, 의 chỉ sở hữu thường đọc là [에]: 친구의 [친구에] 집.",
+    "Viết gọn: 저의 → 제, 나의 → 내, 너의 → 네. 제 이름은 … (tên của tôi là …).",
+    "Trong lời nói hằng ngày 의 hay được lược: 우리 회사 사장님, 친구 집."
+   ],
+   "examples": [
+    [
+     "이것은 선배의 명함이에요.",
+     "Đây là danh thiếp của tiền bối."
+    ],
+    [
+     "친구의 언니에게 인사했어요.",
+     "Tôi đã chào chị gái của bạn."
+    ],
+    [
+     "제 동생은 대학생이에요.",
+     "Em tôi là sinh viên đại học."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "이것은 선생님___ 책이에요.",
+     "options": [
+      "의",
+      "을",
+      "에",
+      "와"
+     ],
+     "explain": "Sách của thầy giáo → 선생님의 책."
+    },
+    {
+     "q": "저는 친구___ 형을 만났어요.",
+     "options": [
+      "의",
+      "가",
+      "에서",
+      "로"
+     ],
+     "explain": "Anh trai của bạn → 친구의 형."
+    },
+    {
+     "q": "\"저의 가방\" viết gọn là gì?",
+     "options": [
+      "제 가방",
+      "저 가방",
+      "저는 가방",
+      "저를 가방"
+     ],
+     "explain": "저의 → 제."
+    },
+    {
+     "q": "\"Đây là danh thiếp của tôi.\" là câu nào?",
+     "options": [
+      "이것은 제 명함이에요.",
+      "이것은 저 명함이에요.",
+      "이것은 저를 명함이에요.",
+      "이것은 명함의 저예요."
+     ],
+     "explain": "Của tôi → 제 (= 저의)."
+    },
+    {
+     "q": "Trong \"우리 회사의 사장님\", 의 thường đọc là gì?",
+     "options": [
+      "[에]",
+      "[의]",
+      "[이]",
+      "[으]"
+     ],
+     "explain": "의 chỉ sở hữu khi nói thường đọc là [에]."
+    }
+   ]
+  },
+  {
+   "pattern": "-(으)ㄹ 때",
+   "title": "khi, lúc (làm gì)",
+   "note": [
+    "Gắn sau động từ/tính từ để nói thời điểm: 밥을 먹을 때 (khi ăn cơm).",
+    "Gốc có patchim → 을 때: 먹을 때, 읽을 때. Không patchim → ㄹ 때: 갈 때, 심심할 때.",
+    "Gốc có ㄹ → giữ nguyên + 때: 만들 때, 살 때.",
+    "Việc đã xong rồi → -았/었을 때: 한국에 처음 왔을 때 (khi mới đến Hàn Quốc).",
+    "Với danh từ chỉ thời gian dùng N 때: 방학 때, 점심 때, 생일 때."
+   ],
+   "examples": [
+    [
+     "집에 들어갈 때 신발을 벗어요.",
+     "Khi vào nhà thì cởi giày."
+    ],
+    [
+     "심심할 때 영화를 봐요.",
+     "Khi buồn chán tôi xem phim."
+    ],
+    [
+     "한국에 처음 왔을 때 친구가 없었어요.",
+     "Khi mới đến Hàn Quốc tôi không có bạn."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "밥을 ___ 때 텔레비전을 안 봐요. (먹다)",
+     "options": [
+      "먹을",
+      "먹어",
+      "먹으",
+      "먹고"
+     ],
+     "explain": "먹다 có patchim → 먹을 때."
+    },
+    {
+     "q": "케이크를 ___ 때 설탕을 넣어요. (만들다)",
+     "options": [
+      "만들",
+      "만들을",
+      "만드을",
+      "만들어"
+     ],
+     "explain": "Gốc có ㄹ → 만들 때."
+    },
+    {
+     "q": "한국에 처음 ___ 때 한국어를 잘 못했어요. (오다, việc đã xảy ra)",
+     "options": [
+      "왔을",
+      "올을",
+      "오을",
+      "와"
+     ],
+     "explain": "Việc đã xong → -았/었을 때: 왔을 때."
+    },
+    {
+     "q": "방학___ 고향에 갔어요.",
+     "options": [
+      "때",
+      "을 때",
+      "ㄹ 때",
+      "의 때"
+     ],
+     "explain": "Danh từ thời gian + 때: 방학 때."
+    },
+    {
+     "q": "\"Khi buồn chán tôi xem phim.\" là câu nào?",
+     "options": [
+      "심심할 때 영화를 봐요.",
+      "심심을 때 영화를 봐요.",
+      "심심해 때 영화를 봐요.",
+      "심심하고 때 영화를 봐요."
+     ],
+     "explain": "심심하다 không patchim → 심심할 때."
+    }
+   ]
+  },
+  {
+   "pattern": "-아/어 주다",
+   "title": "làm giúp, làm cho (ai)",
+   "note": [
+    "Làm việc gì đó cho người khác: 가방을 들어 주다 (xách túi giúp).",
+    "Nhờ ai làm giúp: -아/어 주세요, lịch sự hơn: -아/어 주시겠어요? 사진 좀 찍어 주세요.",
+    "Làm giúp người trên (ông bà, thầy cô, cấp trên) → -아/어 드리다: 할머니의 가방을 들어 드렸어요.",
+    "Chia đuôi theo -아/어요: 닫다 → 닫아 주다, 찍다 → 찍어 주다, 소개하다 → 소개해 주다."
+   ],
+   "examples": [
+    [
+     "사진 좀 찍어 주세요.",
+     "Chụp ảnh giúp tôi với."
+    ],
+    [
+     "친구가 제 가방을 들어 줬어요.",
+     "Bạn đã xách túi giúp tôi."
+    ],
+    [
+     "제가 할머니께 길을 안내해 드렸어요.",
+     "Tôi đã chỉ đường cho bà."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "추워요. 문 좀 ___ 주세요. (닫다)",
+     "options": [
+      "닫아",
+      "닫어",
+      "닫으",
+      "닫고"
+     ],
+     "explain": "닫다: nguyên âm ㅏ → 닫아 주세요."
+    },
+    {
+     "q": "사진 좀 ___ 주시겠어요? (찍다)",
+     "options": [
+      "찍어",
+      "찍아",
+      "찍으",
+      "찍고"
+     ],
+     "explain": "찍다: nguyên âm ㅣ → 찍어 주시겠어요?"
+    },
+    {
+     "q": "할머니의 가방을 들어 ___. (làm giúp người trên)",
+     "options": [
+      "드렸어요",
+      "받았어요",
+      "주셨어요",
+      "줬어요"
+     ],
+     "explain": "Làm giúp người trên → -아/어 드리다: 들어 드렸어요."
+    },
+    {
+     "q": "\"Hãy giới thiệu bạn của bạn cho tôi.\" là câu nào?",
+     "options": [
+      "친구를 소개해 주세요.",
+      "친구를 소개하고 주세요.",
+      "친구를 소개해 받으세요.",
+      "친구가 소개해 주세요."
+     ],
+     "explain": "소개하다 → 소개해 주세요."
+    },
+    {
+     "q": "선생님, 다시 한번 ___ 주시겠어요? (말하다)",
+     "options": [
+      "말해",
+      "말하어",
+      "말하고",
+      "말해서"
+     ],
+     "explain": "하다 → 해: 말해 주시겠어요?"
+    }
+   ]
+  }
+ ],
+ "usage": [
+  {
+   "q": "처음 만날 때 ____을 드려요.",
+   "options": [
+    "명함",
+    "정장",
+    "상담",
+    "걱정"
+   ],
+   "explain": "Gặp lần đầu thì đưa danh thiếp (명함)."
+  },
+  {
+   "q": "손을 ____ 밥을 먹어요.",
+   "options": [
+    "씻고",
+    "벗고",
+    "닫고",
+    "찍고"
+   ],
+   "explain": "Rửa tay rồi ăn cơm → 씻고."
+  },
+  {
+   "q": "한국에서는 집에 들어갈 때 신발을 ____.",
+   "options": [
+    "벗어요",
+    "넣어요",
+    "들어요",
+    "만져요"
+   ],
+   "explain": "Vào nhà thì cởi giày → 벗어요."
+  },
+  {
+   "q": "커피에 설탕을 ____?",
+   "options": [
+    "넣을까요",
+    "벗을까요",
+    "씻을까요",
+    "닫을까요"
+   ],
+   "explain": "Cho đường vào cà phê → 넣다."
+  },
+  {
+   "q": "할 일이 없어요. 너무 ____.",
+   "options": [
+    "심심해요",
+    "비슷해요",
+    "조심해요",
+    "사용해요"
+   ],
+   "explain": "Không có việc gì làm → buồn chán: 심심해요."
+  },
+  {
+   "q": "제 고향 음식과 한국 음식은 맛이 ____.",
+   "options": [
+    "비슷해요",
+    "심심해요",
+    "조심해요",
+    "악수해요"
+   ],
+   "explain": "Vị giống nhau → 비슷해요."
+  },
+  {
+   "q": "비가 많이 와요. ____해서 가세요.",
+   "options": [
+    "조심",
+    "심심",
+    "비슷",
+    "상담"
+   ],
+   "explain": "Trời mưa to, đi cẩn thận → 조심해서 가세요."
+  },
+  {
+   "q": "저는 2학년이에요. 3학년 언니는 제 ____예요.",
+   "options": [
+    "선배",
+    "후배",
+    "부하",
+    "직원"
+   ],
+   "explain": "Người học khóa trước → 선배."
+  },
+  {
+   "q": "남자들은 인사할 때 자주 ____해요.",
+   "options": [
+    "악수",
+    "걱정",
+    "설탕",
+    "올림"
+   ],
+   "explain": "Khi chào nhau thường bắt tay → 악수하다."
+  }
+ ],
+ "listening": [
+  {
+   "listen": "처음 뵙겠습니다. 제 명함입니다.",
+   "options": [
+    "Rất hân hạnh. Đây là danh thiếp của tôi.",
+    "Rất vui được gặp lại. Đây là tên của tôi.",
+    "Xin lỗi, tôi không có danh thiếp.",
+    "Đây là danh thiếp của tiền bối tôi."
+   ],
+   "explain": "처음 뵙겠습니다 = rất hân hạnh (gặp lần đầu); 제 명함 = danh thiếp của tôi."
+  },
+  {
+   "listen": "선배의 집에 초대를 받았어요.",
+   "options": [
+    "Tôi được mời đến nhà tiền bối.",
+    "Tôi đã mời tiền bối đến nhà.",
+    "Tôi đến thăm nhà hậu bối.",
+    "Tiền bối đã đến nhà tôi."
+   ],
+   "explain": "선배의 집 = nhà của tiền bối; 초대를 받다 = nhận lời mời."
+  },
+  {
+   "listen": "가: 사진 좀 찍어 주세요. 나: 네, 하나, 둘, 셋!",
+   "options": [
+    "Chụp ảnh giúp",
+    "Mua máy ảnh",
+    "Xem ảnh",
+    "Gửi ảnh"
+   ],
+   "explain": "찍어 주세요 = chụp giúp tôi.",
+   "q": "Người thứ nhất nhờ làm gì?"
+  },
+  {
+   "listen": "한국 사람의 집에 들어갈 때 신발을 벗어요.",
+   "options": [
+    "Khi vào nhà người Hàn thì cởi giày.",
+    "Khi ra khỏi nhà người Hàn thì đi giày.",
+    "Người Hàn đi giày vào nhà.",
+    "Khi vào nhà người Hàn thì rửa tay."
+   ],
+   "explain": "들어갈 때 = khi đi vào; 신발을 벗어요 = cởi giày."
+  },
+  {
+   "listen": "가: 늦어서 죄송합니다. 나: 괜찮아요. 먼저 손을 씻으세요.",
+   "options": [
+    "Rửa tay",
+    "Ngồi xuống",
+    "Cởi áo khoác",
+    "Ăn cơm"
+   ],
+   "explain": "먼저 손을 씻으세요 = trước tiên hãy rửa tay.",
+   "q": "Người thứ hai bảo làm gì trước?"
+  }
+ ],
+ "reading": {
+  "passage": "지난 토요일에 회사 선배의 집에 초대를 받았어요. 한국 사람의 집에 처음 갈 때 조금 걱정했어요. 그래서 한국 친구에게 전화해서 물었어요. 친구가 방문 예절을 가르쳐 줬어요. 집에 들어갈 때 신발을 벗어요. 그리고 작은 선물을 가져가요. 저는 과일을 사서 선배의 집에 갔어요. 선배의 아내가 불고기를 만들어 줬어요. 아주 맛있었어요. 집에 올 때 선배와 선배의 아내에게 인사했어요. 그날은 정말 좋았어요.",
+  "passageVi": "Thứ bảy tuần trước tôi được mời đến nhà một tiền bối ở công ty. Lần đầu đến nhà người Hàn nên tôi hơi lo. Vì vậy tôi gọi điện hỏi một người bạn Hàn Quốc. Bạn đã chỉ cho tôi phép lịch sự khi đến thăm nhà. Khi vào nhà thì cởi giày. Và mang theo một món quà nhỏ. Tôi mua trái cây rồi đến nhà tiền bối. Vợ của tiền bối đã nấu bulgogi cho tôi. Rất ngon. Khi về, tôi chào tiền bối và vợ của anh ấy. Hôm đó thật là vui.",
+  "questions": [
+   {
+    "q": "Trước khi đi, người viết đã làm gì?",
+    "options": [
+     "Gọi điện hỏi bạn người Hàn về phép lịch sự khi đến thăm",
+     "Gọi điện hỏi tiền bối đường đến nhà",
+     "Mua hoa tặng vợ tiền bối",
+     "Học nấu bulgogi"
+    ],
+    "explain": "한국 친구에게 전화해서 물었어요. 친구가 방문 예절을 가르쳐 줬어요."
+   },
+   {
+    "q": "Chọn câu ĐÚNG với đoạn văn.",
+    "options": [
+     "Vợ của tiền bối đã nấu bulgogi.",
+     "Người viết mang hoa đến nhà tiền bối.",
+     "Người viết được mời đến nhà hậu bối.",
+     "Người viết không lo lắng gì cả."
+    ],
+    "explain": "선배의 아내가 불고기를 만들어 줬어요. Người viết mang trái cây, nhà tiền bối, và có lo lắng (걱정했어요)."
+   }
+  ]
+ },
+ "writing": {
+  "prompt": "Viết 3–4 câu về một người bạn quen (tiền bối, đồng nghiệp, bạn bè): người đó là ai của bạn, bạn làm gì khi gặp họ, người đó đã làm giúp bạn việc gì. Dùng 의, -(으)ㄹ 때 và -아/어 주다.",
+  "samples": [
+   [
+    "민수 씨는 제 대학교 선배예요.",
+    "Minsu là tiền bối đại học của tôi."
+   ],
+   [
+    "처음 만났을 때 민수 씨가 학교를 안내해 줬어요.",
+    "Lần đầu gặp, Minsu đã dẫn tôi đi xem trường."
+   ],
+   [
+    "심심할 때 같이 영화를 봐요.",
+    "Khi buồn chán chúng tôi cùng xem phim."
+   ],
+   [
+    "선배의 생일에 꽃을 사 줬어요.",
+    "Vào sinh nhật tiền bối tôi đã mua hoa tặng."
+   ]
+  ],
+  "tips": "저의 → 제. Gốc có patchim + 을 때, không patchim + ㄹ 때, việc đã xong + 았/었을 때. Làm giúp người trên → -아/어 드리다."
+ }
+}

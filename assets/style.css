@@ -196,6 +196,16 @@ button { font: inherit; color: inherit; }
 .section-head h2 { margin: 0; font-size: 1.5rem; letter-spacing: -.02em; }
 .section-head p { margin: 2px 0 0; color: var(--muted); }
 .level-progress { font-weight: 700; color: var(--muted); font-size: .9rem; white-space: nowrap; }
+.level-jump { display: flex; gap: 8px; flex-wrap: wrap; margin: 30px 0 0; scroll-margin-top: 80px; }
+.level-jump a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--text); text-decoration: none; font-weight: 700; font-size: .92rem; }
+.level-jump a:hover { border-color: var(--primary); }
+.level { scroll-margin-top: 80px; }
+.level + .level { margin-top: 34px; padding-top: 6px; border-top: 2px dashed var(--line); }
+.level-head { margin-top: 26px; }
+.level-badge { display: inline-block; margin-bottom: 6px; padding: 3px 10px; border-radius: 999px; font-size: .78rem; font-weight: 800; letter-spacing: .02em; background: var(--primary-soft); color: var(--primary); }
+.level-sc2 .level-badge { background: var(--accent-soft); color: var(--text); }
+.level-sc2 .ring { --ring: var(--accent); }
+.level-sc2 .node.done .ring { --ring: var(--ok); }
 
 .path { list-style: none; margin: 0; padding: 0; position: relative; }
 .path::before { content: ""; position: absolute; left: 35px; top: 30px; bottom: 30px; width: 4px; border-radius: 4px; background: repeating-linear-gradient(to bottom, var(--line) 0 10px, transparent 10px 18px); }

@@ -11,7 +11,9 @@ const idx = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/index.json'), 'utf8
 const LESSONS = idx.levels.flatMap((lv) => lv.lessons);
 const DATA = {};
 LESSONS.forEach((l) => { DATA[l.id] = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/lessons', l.id + '.json'), 'utf8')); });
-const NEW = ['sc1-12', 'sc1-13', 'sc1-14', 'sc1-15'];
+const NEW = ['sc2-01', 'sc2-02', 'sc2-03', 'sc2-04'];
+const TOTAL = LESSONS.length; // 16 bài Sơ cấp 1 (gồm Hangeul) + 4 bài Sơ cấp 2
+const lname = (id) => 'Sơ cấp 2 Bài ' + (+id.slice(-2));
 const OLD = LESSONS.map((l) => l.id).filter((id) => !NEW.includes(id));
 
 // ---- đáp án đúng, tra từ dữ liệu ----
@@ -137,20 +139,20 @@ async function noHScroll(page) {
   const { execSync } = require('child_process');
 
   // ================= PHẦN MỚI =================
-  await tc('N01', 'Dữ liệu hợp lệ: tools/check_data.py chạy OK cho toàn bộ 16 bài', async () => {
+  await tc('N01', 'Dữ liệu hợp lệ: tools/check_data.py chạy OK cho toàn bộ ' + TOTAL + ' bài', async () => {
     const out = execSync('python3 tools/check_data.py', { cwd: ROOT }).toString();
     assert(/\nOK\s*$/.test(out), 'check_data không OK');
     NEW.forEach((id) => assert(out.includes(id + ':'), 'thiếu ' + id));
   });
 
-  await tc('N02', 'Bài 12–15 soạn đủ phần: ≥35 từ, ≥8 câu từ trong câu, 3 mẫu ngữ pháp ≥5 câu/mẫu, 5 câu nghe, đọc hiểu 2 câu, luyện viết', async () => {
+  await tc('N02', 'SC2 Bài 1–4 soạn đủ phần: ≥35 từ, ≥8 câu từ trong câu, 3–4 mẫu ngữ pháp ≥5 câu/mẫu, 5 câu nghe, đọc hiểu 2 câu, luyện viết', async () => {
     const notes = [];
     NEW.forEach((id) => {
       const d = DATA[id];
       const nw = d.vocab.reduce((a, g) => a + g.words.length, 0);
       assert(nw >= 35, `${id}: ${nw} từ`);
       assert(d.usage.length >= 8, `${id}: usage ${d.usage.length}`);
-      assert(d.grammar.length === 3, `${id}: ${d.grammar.length} mẫu`);
+      assert(d.grammar.length >= 3 && d.grammar.length <= 4, `${id}: ${d.grammar.length} mẫu`);
       d.grammar.forEach((g) => { assert(g.questions.length >= 5, `${id} ${g.pattern}: ${g.questions.length} câu`); assert(g.note.length && g.examples.length >= 3, `${id} ${g.pattern}: thiếu note/ví dụ`); });
       assert(d.listening.length === 5, `${id}: nghe ${d.listening.length}`);
       assert(d.reading && d.reading.questions.length === 2, `${id}: đọc hiểu`);
@@ -160,7 +162,7 @@ async function noHScroll(page) {
     return notes.join(', ');
   });
 
-  await tc('N03', 'Từ vựng Bài 12–15 không lặp lại từ của Bài 0–11 và không lặp giữa 4 bài mới', async () => {
+  await tc('N03', 'Từ vựng SC2 Bài 1–4 không lặp lại từ của Sơ cấp 1 (Hangeul + 15 bài) và không lặp giữa 4 bài mới', async () => {
     const old = new Set(OLD.flatMap((id) => (DATA[id].vocab || []).flatMap((g) => g.words.map((w) => norm(w[0])))));
     const seen = new Map(); const dup = [];
     NEW.forEach((id) => DATA[id].vocab.forEach((g) => g.words.forEach((w) => {
@@ -181,22 +183,79 @@ async function noHScroll(page) {
     });
   });
 
-  await tc('N05', 'index.json: 16 bài theo thứ tự 0→15, Bài 12–15 có tên, chữ Hàn, tóm tắt ngữ pháp, icon', async () => {
-    const nos = LESSONS.map((l) => l.no).join(',');
-    assert(nos === '0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15', nos);
+  await tc('N05', 'index.json: Sơ cấp 1 giữ nguyên 0→15; có cấp Sơ cấp 2 riêng gồm Bài 1→4, mỗi bài có tên, chữ Hàn, tóm tắt ngữ pháp, icon', async () => {
+    assert(idx.levels.length === 2 && idx.levels[0].id === 'sc1' && idx.levels[1].id === 'sc2', idx.levels.map((l) => l.id).join(','));
+    const n1 = idx.levels[0].lessons.map((l) => l.no).join(',');
+    assert(n1 === '0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15', 'SC1 ' + n1);
+    const n2 = idx.levels[1].lessons.map((l) => l.id + ':' + l.no).join(',');
+    assert(n2 === 'sc2-01:1,sc2-02:2,sc2-03:3,sc2-04:4', 'SC2 ' + n2);
     NEW.forEach((id) => { const l = LESSONS.find((x) => x.id === id); assert(l.title && l.ko && l.summary && l.icon, id); });
   });
 
-  await tc('N06', 'Trang chủ: lộ trình hiện Bài 12–15 và đếm "16 bài học"', async () => {
+  await tc('N06', 'Trang chủ: đếm "' + TOTAL + ' bài học", hiện link Bài 1–4 Sơ cấp 2', async () => {
     await go(page, '#/');
     await page.waitForSelector('.hero-facts');
     const facts = await page.$eval('.hero-facts', (e) => e.innerText);
-    assert(/16\s*bài học/.test(facts), facts);
+    assert(new RegExp(TOTAL + '\\s*bài học').test(facts), facts);
     for (const id of NEW) assert(await page.$(`a[href="#/bai/${id}"]`), 'thiếu link ' + id);
   });
 
+  await tc('N12', 'Lộ trình tách rõ 2 cấp: 2 khối riêng (Sơ cấp 1 trước, Sơ cấp 2 sau), mỗi khối chỉ chứa bài của cấp đó, có nhãn "Cấp 1/Cấp 2", đếm x/16 và x/4, ô "Bài tiếp theo" chỉ ở cuối Sơ cấp 2', async () => {
+    await go(page, '#/');
+    await page.waitForSelector('.level');
+    const lv = await page.$$eval('.level', (els) => els.map((e) => ({
+      id: e.id, h2: e.querySelector('h2').innerText, badge: e.querySelector('.level-badge').innerText,
+      prog: e.querySelector('.level-progress').innerText,
+      links: [...e.querySelectorAll('a.node')].map((a) => a.getAttribute('href').replace('#/bai/', '')),
+      soon: !!e.querySelector('.soon'),
+    })));
+    assert(lv.length === 2, lv.length + ' khối');
+    assert(lv[0].id === 'lo-trinh-sc1' && lv[0].h2 === 'Sơ cấp 1' && /Cấp 1/.test(lv[0].badge), JSON.stringify(lv[0]).slice(0, 120));
+    assert(lv[1].id === 'lo-trinh-sc2' && lv[1].h2 === 'Sơ cấp 2' && /Cấp 2/.test(lv[1].badge), JSON.stringify(lv[1]).slice(0, 120));
+    assert(lv[0].links.length === 16 && lv[0].links.every((x) => x.startsWith('sc1-')), 'khối SC1: ' + lv[0].links.join(','));
+    assert(lv[1].links.join(',') === NEW.join(','), 'khối SC2: ' + lv[1].links.join(','));
+    assert(/\/16 bài/.test(lv[0].prog) && /\/4 bài/.test(lv[1].prog), lv[0].prog + ' | ' + lv[1].prog);
+    assert(!lv[0].soon && lv[1].soon, 'ô Bài tiếp theo sai chỗ');
+    const ids = await page.$$eval('[id]', (els) => els.map((e) => e.id));
+    assert(ids.filter((x) => x === 'lo-trinh').length === 1, 'id lo-trinh bị trùng');
+  });
+
+  await tc('N13', 'Nút chọn cấp và nút "Xem lộ trình" cuộn tới đúng khối (không nhảy về đầu trang)', async () => {
+    await go(page, '#/');
+    await page.waitForSelector('.level-jump');
+    const chips = await page.$$eval('.level-jump a', (els) => els.map((a) => a.innerText.trim() + '|' + a.getAttribute('href')));
+    assert(chips.length === 2 && /Sơ cấp 1\|#lo-trinh-sc1/.test(chips[0]) && /Sơ cấp 2\|#lo-trinh-sc2/.test(chips[1]), chips.join(' / '));
+    await page.click('.level-jump a[href="#lo-trinh-sc2"]');
+    await page.waitForTimeout(1200);
+    const top2 = await page.$eval('#lo-trinh-sc2', (e) => e.getBoundingClientRect().top);
+    assert(top2 > -10 && top2 < 200, 'khối SC2 cách đỉnh ' + top2 + 'px');
+    // Mở thẳng link #lo-trinh-sc2 (chia sẻ link) cũng tới đúng khối
+    await page.goto(BASE + 'index.html#lo-trinh-sc2'); await page.reload();
+    await page.waitForSelector('#lo-trinh-sc2'); await page.waitForTimeout(600);
+    const top3 = await page.$eval('#lo-trinh-sc2', (e) => e.getBoundingClientRect().top);
+    assert(top3 > -10 && top3 < 200, 'mở link trực tiếp: khối SC2 cách đỉnh ' + top3 + 'px');
+    await go(page, '#/');
+    await page.waitForSelector('.hero-actions');
+    await page.click('.hero-actions a[href="#lo-trinh"]');
+    await page.waitForTimeout(1200);
+    const y = await page.evaluate(() => window.scrollY);
+    assert(y > 200, '"Xem lộ trình" không cuộn, scrollY=' + y);
+  });
+
+  await tc('N14', 'Tên bài Sơ cấp 2 có ghi cấp (tiêu đề tab, đường dẫn) để không nhầm với Bài 1–4 Sơ cấp 1; tên bài Sơ cấp 1 giữ nguyên', async () => {
+    await go(page, '#/bai/sc2-01');
+    await page.waitForSelector('.lesson-hero h1');
+    const t = await page.title();
+    assert(t === 'Sơ cấp 2 · Bài 1: Gặp gỡ – Hana Dul', t);
+    const crumbs = await page.$eval('.crumbs', (e) => e.innerText);
+    assert(/Sơ cấp 2/.test(crumbs), crumbs);
+    await go(page, '#/bai/sc1-01');
+    await page.waitForSelector('.lesson-hero h1');
+    assert((await page.title()) === 'Bài 1: Giới thiệu – Hana Dul', await page.title());
+  });
+
   for (const id of NEW) {
-    await tc(`N07-${id.slice(-2)}`, `Trang học Bài ${+id.slice(-2)}: tiêu đề, đủ nhóm từ, ghi chú 3 mẫu ngữ pháp, nút Làm bài, không lỗi JS`, async () => {
+    await tc(`N07-${id.slice(-2)}`, `Trang học ${lname(id)}: tiêu đề, đủ nhóm từ, ghi chú đủ các mẫu ngữ pháp, nút Làm bài, không lỗi JS`, async () => {
       page.errors = [];
       await go(page, `#/bai/${id}`);
       await page.waitForSelector('.lesson-hero h1');
@@ -212,7 +271,7 @@ async function noHScroll(page) {
   }
 
   for (const id of NEW) {
-    await tc(`N08-${id.slice(-2)}`, `Bài ${+id.slice(-2)} – Ôn đầy đủ: làm hết, trả lời đúng hết → 100%, đúng số câu đã báo, có ô luyện viết, nút bài tiếp theo đúng`, async () => {
+    await tc(`N08-${id.slice(-2)}`, `${lname(id)} – Ôn đầy đủ: làm hết, trả lời đúng hết → 100%, đúng số câu đã báo, có ô luyện viết, nút bài tiếp theo đúng`, async () => {
       page.errors = [];
       const n = await startMode(page, id, 'full');
       const r = await playQuiz(page);
@@ -230,7 +289,7 @@ async function noHScroll(page) {
   }
 
   for (const id of NEW) {
-    await tc(`N09-${id.slice(-2)}`, `Bài ${+id.slice(-2)} – Luyện nhanh: số câu đúng như nút báo (10 từ + 3 câu từ trong câu + 2 câu/mẫu + 3 nghe + 2 đọc)`, async () => {
+    await tc(`N09-${id.slice(-2)}`, `${lname(id)} – Luyện nhanh: số câu đúng như nút báo (10 từ + 3 câu từ trong câu + 2 câu/mẫu + 3 nghe + 2 đọc)`, async () => {
       const n = await startMode(page, id, 'quick');
       const expect = 10 + 3 + 2 * DATA[id].grammar.length + 3 + 2;
       assert(n === expect, `nút báo ${n}, cần ${expect}`);
@@ -240,12 +299,12 @@ async function noHScroll(page) {
     });
   }
 
-  await tc('N10', 'Câu nghe (Bài 12–15) có nút loa đọc đúng câu; câu đọc hiểu hiện đoạn văn và bản dịch sau khi trả lời', async () => {
+  await tc('N10', 'Câu nghe (SC2 Bài 2) có nút loa đọc đúng câu; câu đọc hiểu hiện đoạn văn và bản dịch sau khi trả lời', async () => {
     await page.evaluate(() => {});
-    const d = DATA['sc1-14'];
-    await startMode(page, 'sc1-14', 'full');
+    const d = DATA['sc2-02'];
+    await startMode(page, 'sc2-02', 'full');
     let sawListen = false, sawRead = false;
-    for (let k = 0; k < 120 && !(await page.$('.result-grid')); k++) {
+    for (let k = 0; k < 160 && !(await page.$('.result-grid')); k++) {
       await page.waitForSelector('.opt');
       const say = await page.$eval('.listen-box .play', (e) => e.getAttribute('data-say')).catch(() => null);
       const passage = await page.$eval('.passage', (e) => e.innerText).catch(() => null);
@@ -258,13 +317,13 @@ async function noHScroll(page) {
     assert(sawListen && sawRead, 'không gặp câu nghe/đọc');
   });
 
-  await tc('N11', 'Luyện viết Bài 15: gõ câu được lưu trên máy, nút Xem câu mẫu bật/tắt', async () => {
-    await startMode(page, 'sc1-15', 'quick');
+  await tc('N11', 'Luyện viết SC2 Bài 4: gõ câu được lưu trên máy, nút Xem câu mẫu bật/tắt', async () => {
+    await startMode(page, 'sc2-04', 'quick');
     await playQuiz(page);
-    await page.fill('#wtext', '집에서 회사까지 버스로 가요.');
+    await page.fill('#wtext', '감기에 걸려서 병원에 가야 해요.');
     await page.waitForTimeout(800);
-    const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('hanadul:v2')).writing['sc1-15']);
-    assert(saved === '집에서 회사까지 버스로 가요.', 'chưa lưu: ' + saved);
+    const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('hanadul:v2')).writing['sc2-04']);
+    assert(saved === '감기에 걸려서 병원에 가야 해요.', 'chưa lưu: ' + saved);
     await page.click('#wshow');
     assert(!(await page.$eval('#wsamples', (e) => e.hidden)), 'không mở câu mẫu');
     await page.click('#wshow');
@@ -280,7 +339,7 @@ async function noHScroll(page) {
       assert(!r.unknown.length, 'không tra được đáp án: ' + r.unknown.slice(0, 2).join(' | '));
       assert(r.first === n && r.acc === '100%', `${r.first}/${n} câu, ${r.acc}`);
       assert(!page.errors.length, page.errors.join('; '));
-      if (id === 'sc1-11') assert(r.nextHref === '#/bai/sc1-12', 'Bài 11 phải dẫn sang Bài 12, đang là ' + r.nextHref);
+      if (id === 'sc1-15') assert(r.nextHref === '#/bai/sc2-01', 'Bài 15 Sơ cấp 1 phải dẫn sang Bài 1 Sơ cấp 2, đang là ' + r.nextHref);
       return `${n} câu`;
     });
   }
@@ -293,22 +352,22 @@ async function noHScroll(page) {
 
   await tc('R03', 'Tiến độ (sao, XP, chuỗi ngày) của bài cũ vẫn giữ sau khi làm bài mới; trang chủ gợi ý "Học tiếp"', async () => {
     const s = await page.evaluate(() => JSON.parse(localStorage.getItem('hanadul:v2')));
-    ['sc1-01', 'sc1-11', 'sc1-12', 'sc1-15'].forEach((id) => assert(s.lessons[id] && s.lessons[id].best === 100, 'mất tiến độ ' + id));
+    ['sc1-01', 'sc1-11', 'sc1-15', 'sc2-01', 'sc2-04'].forEach((id) => assert(s.lessons[id] && s.lessons[id].best === 100, 'mất tiến độ ' + id));
     assert(s.xp > 0 && s.days.length >= 1, 'XP/ngày');
     await go(page, '#/');
     const t = await page.$eval('.hero-actions .btn', (e) => e.innerText);
     assert(/Học tiếp/.test(t), t);
   });
 
-  await tc('R04', 'Sổ câu sai: sai 2 câu ở Bài 13 (mới) + 1 câu ở Bài 5 (cũ) → sổ nhóm đúng theo bài; ôn đúng 2 lần thì sổ trống', async () => {
+  await tc('R04', 'Sổ câu sai: sai 2 câu ở SC2 Bài 3 (mới) + 1 câu ở SC1 Bài 5 (cũ) → sổ nhóm đúng theo bài, tên bài SC2 có ghi cấp; ôn đúng 2 lần thì sổ trống', async () => {
     await page.evaluate(() => { const s = JSON.parse(localStorage.getItem('hanadul:v2')); s.wrong = {}; localStorage.setItem('hanadul:v2', JSON.stringify(s)); });
-    await startMode(page, 'sc1-13', 'quick'); await playQuiz(page, { wrong: [0, 5] });
+    await startMode(page, 'sc2-03', 'quick'); await playQuiz(page, { wrong: [0, 5] });
     await startMode(page, 'sc1-05', 'quick'); await playQuiz(page, { wrong: [2] });
     await go(page, '#/so-cau-sai');
     await page.waitForSelector('#startReview');
     const groups = await page.$$eval('.wb-group summary', (els) => els.map((e) => e.innerText));
-    assert(groups.some((g) => /Bài 13: Sinh nhật · 2 câu/.test(g)), groups.join(' / '));
-    assert(groups.some((g) => /Bài 5: .* · 1 câu/.test(g)), groups.join(' / '));
+    assert(groups.some((g) => /Sơ cấp 2 · Bài 3: Mua sắm \(2\) · 2 câu/.test(g)), groups.join(' / '));
+    assert(groups.some((g) => /^Bài 5: .* · 1 câu/.test(g.trim())), groups.join(' / '));
     for (let round = 0; round < 2; round++) {
       await go(page, '#/so-cau-sai');
       await page.waitForSelector('#startReview');
@@ -322,12 +381,14 @@ async function noHScroll(page) {
     assert(/Sổ đang trống/.test(h2), h2);
   });
 
-  await tc('R05', 'Trang giới thiệu: đếm 16 bài đang mở, thẻ Sơ cấp 1 báo "Đủ 15 bài", không lỗi JS', async () => {
+  await tc('R05', 'Trang giới thiệu: đếm ' + TOTAL + ' bài đang mở, thẻ Sơ cấp 1 báo "Đủ 15 bài", thẻ Sơ cấp 2 báo "Đang mở 4 bài", không lỗi JS', async () => {
     page.errors = [];
     await page.goto(BASE + 'gioi-thieu.html');
-    await page.waitForFunction(() => document.querySelector('[data-fill="lessons"]').textContent === '16', null, { timeout: 4000 });
+    await page.waitForFunction((n) => document.querySelector('[data-fill="lessons"]').textContent === String(n), TOTAL, { timeout: 4000 });
     const tag = await page.$eval('[data-fill="sc1"]', (e) => e.textContent);
     assert(tag === 'Đủ 15 bài', tag);
+    const tag2 = await page.$eval('[data-fill="sc2"]', (e) => e.textContent);
+    assert(tag2 === 'Đang mở 4 bài', tag2);
     assert(!page.errors.length, page.errors.join('; '));
   });
 
@@ -345,7 +406,7 @@ async function noHScroll(page) {
 
   // ---- điện thoại ----
   const mob = await newPage(browser, { viewport: { width: 375, height: 740 }, isMobile: true, hasTouch: true, deviceScaleFactor: 1 });
-  await tc('R07', 'Điện thoại 375px: trang chủ, trang học và màn làm bài Bài 12–15 + Bài 1 không tràn ngang', async () => {
+  await tc('R07', 'Điện thoại 375px: trang chủ (2 khối cấp độ), trang học và màn làm bài SC2 Bài 1–4 + SC1 Bài 1 không tràn ngang', async () => {
     const bad = [];
     const p = mob.page;
     await go(p, '#/'); await p.waitForSelector('.hero'); if (!(await noHScroll(p))) bad.push('trang chủ');
@@ -365,7 +426,7 @@ async function noHScroll(page) {
 
   // ---- giao diện tối ----
   const dark = await newPage(browser, { colorScheme: 'dark' });
-  await tc('R08', 'Giao diện tối: trang chủ, trang học Bài 15, màn làm bài và trang giới thiệu dùng nền tối, chữ sáng', async () => {
+  await tc('R08', 'Giao diện tối: trang chủ, trang học SC2 Bài 4, màn làm bài và trang giới thiệu dùng nền tối, chữ sáng', async () => {
     const p = dark.page; const bad = [];
     const lum = (rgb) => { const m = rgb.match(/\d+/g).map(Number); return 0.2126 * m[0] + 0.7152 * m[1] + 0.0722 * m[2]; };
     async function check(name) {
@@ -373,8 +434,8 @@ async function noHScroll(page) {
       if (!(lum(c.bg) < 80 && lum(c.fg) > 150)) bad.push(`${name} bg=${c.bg} fg=${c.fg}`);
     }
     await go(p, '#/'); await p.waitForSelector('.hero'); await check('trang chủ');
-    await go(p, '#/bai/sc1-15'); await p.waitForSelector('.lesson-hero'); await check('Bài 15');
-    await startMode(p, 'sc1-15', 'quick'); await p.waitForSelector('.opt'); await check('làm bài');
+    await go(p, '#/bai/sc2-04'); await p.waitForSelector('.lesson-hero'); await check('SC2 Bài 4');
+    await startMode(p, 'sc2-04', 'quick'); await p.waitForSelector('.opt'); await check('làm bài');
     await p.goto(BASE + 'gioi-thieu.html'); await check('giới thiệu');
     assert(!bad.length, bad.join('; '));
   });

@@ -1,0 +1,623 @@
+{
+ "id": "sc2-04",
+ "title": "Bệnh viện",
+ "ko": "병원",
+ "goal": "Nói triệu chứng khi ốm, hiểu lời dặn ở bệnh viện, hiệu thuốc và nói việc phải làm.",
+ "vocab": [
+  {
+   "group": "Bộ phận cơ thể",
+   "words": [
+    [
+     "머리",
+     "đầu"
+    ],
+    [
+     "이마",
+     "trán"
+    ],
+    [
+     "코",
+     "mũi"
+    ],
+    [
+     "입",
+     "miệng"
+    ],
+    [
+     "귀",
+     "tai"
+    ],
+    [
+     "목",
+     "cổ, họng"
+    ],
+    [
+     "어깨",
+     "vai"
+    ],
+    [
+     "가슴",
+     "ngực"
+    ],
+    [
+     "팔",
+     "cánh tay"
+    ],
+    [
+     "손",
+     "bàn tay"
+    ],
+    [
+     "손가락",
+     "ngón tay"
+    ],
+    [
+     "허리",
+     "eo, thắt lưng"
+    ],
+    [
+     "등",
+     "lưng"
+    ],
+    [
+     "다리",
+     "chân"
+    ],
+    [
+     "무릎",
+     "đầu gối"
+    ],
+    [
+     "발",
+     "bàn chân"
+    ]
+   ]
+  },
+  {
+   "group": "Triệu chứng",
+   "words": [
+    [
+     "기침하다",
+     "ho"
+    ],
+    [
+     "열이 나다",
+     "sốt"
+    ],
+    [
+     "콧물이 나오다",
+     "sổ mũi"
+    ],
+    [
+     "배탈이 나다",
+     "đau bụng (do ăn uống)"
+    ],
+    [
+     "소화가 안 되다",
+     "khó tiêu"
+    ],
+    [
+     "다치다",
+     "bị thương"
+    ],
+    [
+     "피가 나다",
+     "chảy máu"
+    ],
+    [
+     "심하다",
+     "nặng, nghiêm trọng"
+    ],
+    [
+     "가렵다",
+     "ngứa"
+    ],
+    [
+     "붓다",
+     "sưng"
+    ],
+    [
+     "부러지다",
+     "bị gãy"
+    ]
+   ]
+  },
+  {
+   "group": "Thuốc",
+   "words": [
+    [
+     "감기약",
+     "thuốc cảm"
+    ],
+    [
+     "진통제",
+     "thuốc giảm đau"
+    ],
+    [
+     "소화제",
+     "thuốc tiêu hóa"
+    ],
+    [
+     "해열제",
+     "thuốc hạ sốt"
+    ],
+    [
+     "알약",
+     "thuốc viên"
+    ],
+    [
+     "약을 바르다",
+     "bôi thuốc"
+    ],
+    [
+     "처방전",
+     "đơn thuốc"
+    ],
+    [
+     "식후",
+     "sau bữa ăn"
+    ]
+   ]
+  },
+  {
+   "group": "Ở bệnh viện",
+   "words": [
+    [
+     "내과",
+     "khoa nội"
+    ],
+    [
+     "외과",
+     "khoa ngoại"
+    ],
+    [
+     "소아과",
+     "khoa nhi"
+    ],
+    [
+     "이비인후과",
+     "khoa tai mũi họng"
+    ],
+    [
+     "안과",
+     "khoa mắt"
+    ],
+    [
+     "치과",
+     "nha khoa"
+    ],
+    [
+     "주사를 맞다",
+     "được tiêm"
+    ],
+    [
+     "검사하다",
+     "kiểm tra, xét nghiệm"
+    ]
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "pattern": "V-(으)ㄴ",
+   "title": "định ngữ của động từ ở quá khứ",
+   "note": [
+    "Động từ đứng trước danh từ, việc đã xảy ra: 어제 본 영화 (bộ phim đã xem hôm qua).",
+    "Gốc không patchim → ㄴ: 보다 → 본. Gốc có patchim → 은: 먹다 → 먹은, 받다 → 받은.",
+    "Gốc có ㄹ → bỏ ㄹ + ㄴ: 만들다 → 만든.",
+    "So sánh: 지금 먹는 약 (thuốc đang uống) – 아침에 먹은 약 (thuốc đã uống sáng nay)."
+   ],
+   "examples": [
+    [
+     "어제 본 영화가 재미있었어요.",
+     "Bộ phim xem hôm qua hay lắm."
+    ],
+    [
+     "병원에서 받은 처방전을 약국에 냈어요.",
+     "Tôi nộp đơn thuốc nhận ở bệnh viện cho hiệu thuốc."
+    ],
+    [
+     "어머니가 만든 음식이에요.",
+     "Đây là món mẹ đã nấu."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "어제 ___ 영화가 재미있었어요. (보다)",
+     "options": [
+      "본",
+      "보는",
+      "봤는",
+      "보은"
+     ],
+     "explain": "Việc đã xảy ra (어제) → 본."
+    },
+    {
+     "q": "아침에 ___ 약이 감기약이에요. (먹다)",
+     "options": [
+      "먹은",
+      "먹는",
+      "먹었은",
+      "먹ㄴ"
+     ],
+     "explain": "Đã uống sáng nay, gốc có patchim → 먹은."
+    },
+    {
+     "q": "이것은 어머니가 ___ 김치예요. (만들다, đã làm)",
+     "options": [
+      "만든",
+      "만들은",
+      "만드은",
+      "만들ㄴ"
+     ],
+     "explain": "Gốc có ㄹ: bỏ ㄹ + ㄴ → 만든."
+    },
+    {
+     "q": "지난주에 ___ 다리가 아직 아파요. (다치다)",
+     "options": [
+      "다친",
+      "다치는",
+      "다쳐은",
+      "다치은"
+     ],
+     "explain": "Việc tuần trước → 다친."
+    },
+    {
+     "q": "Nghĩa của \"병원에서 받은 처방전\"",
+     "options": [
+      "Đơn thuốc đã nhận ở bệnh viện",
+      "Đơn thuốc đang nhận ở bệnh viện",
+      "Đơn thuốc phải nhận ở bệnh viện",
+      "Đơn thuốc gửi cho bệnh viện"
+     ],
+     "explain": "받은 = đã nhận (quá khứ)."
+    }
+   ]
+  },
+  {
+   "pattern": "N마다",
+   "title": "mỗi, cứ mỗi",
+   "note": [
+    "Gắn sau danh từ: mỗi … đều: 아침마다 (mỗi sáng), 주말마다 (cuối tuần nào cũng).",
+    "Với thời gian: 네 시간마다 (cứ 4 tiếng một lần).",
+    "날마다 = 매일 (hằng ngày). Không nói 매일마다."
+   ],
+   "examples": [
+    [
+     "아침마다 운동해요.",
+     "Sáng nào tôi cũng tập thể dục."
+    ],
+    [
+     "이 약은 여섯 시간마다 드세요.",
+     "Thuốc này cứ 6 tiếng uống một lần."
+    ],
+    [
+     "주말마다 등산을 가요.",
+     "Cuối tuần nào tôi cũng đi leo núi."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "이 약은 네 시간___ 드세요.",
+     "options": [
+      "마다",
+      "만",
+      "보다",
+      "의"
+     ],
+     "explain": "Cứ 4 tiếng một lần → 네 시간마다."
+    },
+    {
+     "q": "아침___ 운동해요.",
+     "options": [
+      "마다",
+      "에게",
+      "의",
+      "을"
+     ],
+     "explain": "Mỗi sáng → 아침마다."
+    },
+    {
+     "q": "Nghĩa của \"주말마다 등산을 가요.\"",
+     "options": [
+      "Cuối tuần nào cũng đi leo núi.",
+      "Chỉ cuối tuần này đi leo núi.",
+      "Cuối tuần sau sẽ đi leo núi.",
+      "Cuối tuần trước đã đi leo núi."
+     ],
+     "explain": "주말마다 = cuối tuần nào cũng."
+    },
+    {
+     "q": "\"날마다\" cùng nghĩa với từ nào?",
+     "options": [
+      "매일",
+      "내일",
+      "모레",
+      "오늘"
+     ],
+     "explain": "날마다 = 매일 = hằng ngày."
+    },
+    {
+     "q": "교실___ 텔레비전이 있어요. (lớp nào cũng có)",
+     "options": [
+      "마다",
+      "보다",
+      "에서",
+      "만"
+     ],
+     "explain": "Lớp nào cũng → 교실마다."
+    }
+   ]
+  },
+  {
+   "pattern": "-아/어야 하다/되다",
+   "title": "phải (làm gì)",
+   "note": [
+    "Nói việc cần làm, bắt buộc: 병원에 가야 해요 (phải đi bệnh viện).",
+    "Chia theo -아/어요: 가다 → 가야, 먹다 → 먹어야, 쉬다 → 쉬어야, 하다 → 해야.",
+    "-아/어야 되다 cùng nghĩa, hay dùng khi nói: 먹어야 돼요.",
+    "So sánh: -아/어도 되다 (được phép) ↔ -아/어야 하다 (phải)."
+   ],
+   "examples": [
+    [
+     "열이 많이 나요. 병원에 가야 해요.",
+     "Sốt cao lắm. Phải đi bệnh viện."
+    ],
+    [
+     "이 약은 식후에 먹어야 돼요.",
+     "Thuốc này phải uống sau bữa ăn."
+    ],
+    [
+     "감기에 걸렸어요. 집에서 쉬어야 해요.",
+     "Tôi bị cảm. Phải nghỉ ở nhà."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "열이 많이 나요. 병원에 ___ 해요.",
+     "options": [
+      "가야",
+      "가도",
+      "가서",
+      "가니까"
+     ],
+     "explain": "Phải đi → 가야 해요."
+    },
+    {
+     "q": "이 약은 식후에 ___ 돼요.",
+     "options": [
+      "먹어야",
+      "먹아야",
+      "먹으야",
+      "먹고야"
+     ],
+     "explain": "먹다 → 먹어야 돼요."
+    },
+    {
+     "q": "내일 시험이 있어요. 오늘 공부___.",
+     "options": [
+      "해야 해요",
+      "해도 돼요",
+      "하지 마세요",
+      "할까요"
+     ],
+     "explain": "Mai thi → hôm nay phải học: 해야 해요."
+    },
+    {
+     "q": "\"Tôi phải tiêm.\" là câu nào?",
+     "options": [
+      "주사를 맞아야 해요.",
+      "주사를 맞아도 돼요.",
+      "주사를 맞지 마세요.",
+      "주사를 맞았어요."
+     ],
+     "explain": "Phải → -아/어야 하다."
+    },
+    {
+     "q": "감기에 걸렸어요. 집에서 ___. (쉬다)",
+     "options": [
+      "쉬어야 해요",
+      "쉬야 해요",
+      "쉬어야 돼서",
+      "쉬지야 해요"
+     ],
+     "explain": "쉬다 → 쉬어야 해요."
+    }
+   ]
+  }
+ ],
+ "usage": [
+  {
+   "q": "눈이 아파요. ____에 가야 해요.",
+   "options": [
+    "안과",
+    "치과",
+    "소아과",
+    "외과"
+   ],
+   "explain": "Đau mắt → khoa mắt (안과)."
+  },
+  {
+   "q": "이가 아파서 ____에 갔어요.",
+   "options": [
+    "치과",
+    "안과",
+    "내과",
+    "이비인후과"
+   ],
+   "explain": "Đau răng → nha khoa (치과)."
+  },
+  {
+   "q": "아이가 아파서 ____에 갔어요.",
+   "options": [
+    "소아과",
+    "안과",
+    "치과",
+    "외과"
+   ],
+   "explain": "Trẻ em ốm → khoa nhi (소아과)."
+  },
+  {
+   "q": "감기에 걸려서 콧물이 나오고 ____.",
+   "options": [
+    "기침해요",
+    "부러져요",
+    "다쳐요",
+    "검사해요"
+   ],
+   "explain": "Cảm → sổ mũi và ho: 기침해요."
+  },
+  {
+   "q": "축구를 할 때 무릎을 ____.",
+   "options": [
+    "다쳤어요",
+    "기침했어요",
+    "검사했어요",
+    "가려웠어요"
+   ],
+   "explain": "Đá bóng → bị thương ở đầu gối: 다쳤어요."
+  },
+  {
+   "q": "머리가 아파요. ____를 먹었어요.",
+   "options": [
+    "진통제",
+    "소화제",
+    "처방전",
+    "알약"
+   ],
+   "explain": "Đau đầu → thuốc giảm đau (진통제)."
+  },
+  {
+   "q": "많이 먹어서 소화가 안 돼요. ____를 주세요.",
+   "options": [
+    "소화제",
+    "진통제",
+    "해열제",
+    "처방전"
+   ],
+   "explain": "Khó tiêu → thuốc tiêu hóa (소화제)."
+  },
+  {
+   "q": "팔이 ____. 약을 바르세요.",
+   "options": [
+    "가려워요",
+    "기침해요",
+    "열이 나요",
+    "소화가 안 돼요"
+   ],
+   "explain": "Ngứa tay → bôi thuốc: 가려워요."
+  },
+  {
+   "q": "이 약은 ____ 30분에 드세요.",
+   "options": [
+    "식후",
+    "처방전",
+    "알약",
+    "내과"
+   ],
+   "explain": "30 phút sau bữa ăn → 식후 30분."
+  }
+ ],
+ "listening": [
+  {
+   "listen": "가: 어디가 아프세요? 나: 목이 아프고 기침을 해요.",
+   "options": [
+    "Đau họng và ho",
+    "Đau đầu và sốt",
+    "Đau bụng và khó tiêu",
+    "Đau lưng và đau vai"
+   ],
+   "explain": "목이 아프고 기침을 해요 = đau họng và ho.",
+   "q": "Người bệnh bị gì?"
+  },
+  {
+   "listen": "이 약은 하루에 세 번, 식후에 드세요.",
+   "options": [
+    "Uống thuốc ngày 3 lần, sau bữa ăn.",
+    "Uống thuốc ngày 3 lần, trước bữa ăn.",
+    "Uống thuốc ngày 2 lần, sau bữa ăn.",
+    "Cứ 3 tiếng uống một lần."
+   ],
+   "explain": "하루에 세 번 = ngày 3 lần; 식후 = sau bữa ăn."
+  },
+  {
+   "listen": "다리를 다쳐서 병원에 가야 해요.",
+   "options": [
+    "Tôi bị thương ở chân nên phải đi bệnh viện.",
+    "Tôi bị thương ở tay nên phải đi bệnh viện.",
+    "Chân tôi đã khỏi nên không cần đi bệnh viện.",
+    "Tôi đi bộ đến bệnh viện."
+   ],
+   "explain": "다리를 다쳐서 = bị thương ở chân nên; 가야 해요 = phải đi."
+  },
+  {
+   "listen": "어젯밤에 먹은 음식이 안 좋았어요. 그래서 배탈이 났어요.",
+   "options": [
+    "Đồ ăn tối qua không tốt nên bị đau bụng.",
+    "Tối qua không ăn gì nên đói bụng.",
+    "Đồ ăn tối qua rất ngon.",
+    "Tối qua bị đau bụng nên không ăn gì."
+   ],
+   "explain": "먹은 음식 = đồ ăn đã ăn; 배탈이 났어요 = bị đau bụng."
+  },
+  {
+   "listen": "가: 주사를 맞아야 해요? 나: 아니요, 약만 드세요.",
+   "options": [
+    "Không cần tiêm, chỉ uống thuốc",
+    "Phải tiêm và uống thuốc",
+    "Chỉ cần tiêm",
+    "Không cần uống thuốc"
+   ],
+   "explain": "약만 드세요 = chỉ uống thuốc thôi.",
+   "q": "Bác sĩ nói gì?"
+  }
+ ],
+ "reading": {
+  "passage": "어제부터 열이 나고 목이 많이 아팠어요. 밤에는 기침도 심했어요. 그래서 오늘 아침에 회사 근처에 있는 이비인후과에 갔어요. 의사 선생님이 목을 검사했어요. 감기였어요. 주사를 맞고 처방전을 받았어요. 약국에서 받은 약은 알약이에요. 하루에 세 번, 식후에 먹어야 해요. 그리고 물을 많이 마셔야 해요. 오늘은 회사에 가지 않고 집에서 쉬었어요.",
+  "passageVi": "Từ hôm qua tôi bị sốt và đau họng nhiều. Ban đêm còn ho nặng. Vì vậy sáng nay tôi đến khoa tai mũi họng gần công ty. Bác sĩ kiểm tra họng. Là bị cảm. Tôi được tiêm và nhận đơn thuốc. Thuốc nhận ở hiệu thuốc là thuốc viên. Phải uống ngày ba lần, sau bữa ăn. Và phải uống nhiều nước. Hôm nay tôi không đi làm mà nghỉ ở nhà.",
+  "questions": [
+   {
+    "q": "Người viết đã đến khoa nào?",
+    "options": [
+     "Khoa tai mũi họng",
+     "Khoa nội",
+     "Khoa nhi",
+     "Nha khoa"
+    ],
+    "explain": "회사 근처에 있는 이비인후과에 갔어요."
+   },
+   {
+    "q": "Chọn câu ĐÚNG với đoạn văn.",
+    "options": [
+     "Phải uống thuốc ngày 3 lần sau bữa ăn.",
+     "Thuốc nhận ở hiệu thuốc là thuốc bột.",
+     "Người viết không được tiêm.",
+     "Hôm nay người viết vẫn đi làm."
+    ],
+    "explain": "하루에 세 번, 식후에 먹어야 해요. Thuốc là 알약 (viên), có tiêm (주사를 맞고), nghỉ ở nhà."
+   }
+  ]
+ },
+ "writing": {
+  "prompt": "Viết 3–4 câu về một lần bạn bị ốm: bị đau ở đâu, triệu chứng thế nào, bạn đã đi khoa nào và phải làm gì. Dùng -(으)ㄴ (quá khứ), 마다 và -아/어야 하다.",
+  "samples": [
+   [
+    "지난주에 감기에 걸려서 열이 나고 기침을 했어요.",
+    "Tuần trước tôi bị cảm nên sốt và ho."
+   ],
+   [
+    "내과에 가서 주사를 맞았어요.",
+    "Tôi đến khoa nội và được tiêm."
+   ],
+   [
+    "병원에서 받은 약을 여섯 시간마다 먹어야 했어요.",
+    "Tôi phải uống thuốc nhận ở bệnh viện cứ 6 tiếng một lần."
+   ],
+   [
+    "그리고 집에서 푹 쉬어야 했어요.",
+    "Và tôi phải nghỉ ngơi thật nhiều ở nhà."
+   ]
+  ],
+  "tips": "Việc đã xảy ra: 본, 먹은, 만든 (bỏ ㄹ). 마다 gắn ngay sau danh từ: 아침마다. Phải → -아/어야 하다/되다; quá khứ → -아/어야 했어요."
+ }
+}

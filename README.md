@@ -33,7 +33,7 @@ python3 -m http.server 8000
    - `listening` (tùy chọn): câu nghe, có `listen` (câu để máy đọc), `options`, `explain`, và `q` tùy chọn (mặc định "Nghe và chọn nghĩa đúng.").
    - `reading` (tùy chọn): `passage`, `passageVi` và `questions`.
    - `writing` (tùy chọn): `prompt`, `samples` (cặp `["câu mẫu", "nghĩa"]`) và `tips`.
-2. Thêm bài vào `data/index.json`.
+2. Thêm bài vào `data/index.json`, đúng cấp độ (`sc1`, `sc2`…). Mỗi cấp là một khối riêng trên lộ trình trang chủ (`icon`, `subtitle`, `status` tùy chọn); cấp có `"prefix": true` thì tên bài hiện kèm tên cấp ("Sơ cấp 2 · Bài 1: …") ở tiêu đề tab và Sổ câu sai để không nhầm với bài cùng số của cấp khác.
 3. Chạy `python3 tools/check_data.py`.
 4. Kiểm thử đầu-cuối (Playwright): chạy `python3 -m http.server 8765` ở thư mục gốc rồi `node tools/e2e/run.js`. Script làm hết mọi bài (Ôn đầy đủ, Luyện nhanh), sổ câu sai, trang giới thiệu, điện thoại 375px, giao diện tối; in PASS/FAIL từng case.
 
