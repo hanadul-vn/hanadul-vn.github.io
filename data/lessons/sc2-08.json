@@ -1,0 +1,629 @@
+{
+  "id": "sc2-08",
+  "title": "Phim ảnh",
+  "ko": "영화",
+  "goal": "Nói về thể loại phim, đặt vé, bày tỏ cảm xúc, đoán cảm giác của người khác và rủ người khác làm thử.",
+  "vocab": [
+    {
+      "group": "Thể loại phim",
+      "words": [
+        [
+          "멜로 영화",
+          "phim tình cảm"
+        ],
+        [
+          "에스에프 영화",
+          "phim khoa học viễn tưởng"
+        ],
+        [
+          "코미디 영화",
+          "phim hài"
+        ],
+        [
+          "전쟁 영화",
+          "phim chiến tranh"
+        ],
+        [
+          "애니메이션",
+          "phim hoạt hình"
+        ]
+      ]
+    },
+    {
+      "group": "Ở rạp phim",
+      "words": [
+        [
+          "영화관",
+          "rạp chiếu phim"
+        ],
+        [
+          "영화 제목",
+          "tên phim"
+        ],
+        [
+          "영화감독",
+          "đạo diễn phim"
+        ],
+        [
+          "영화배우",
+          "diễn viên điện ảnh"
+        ],
+        [
+          "팬",
+          "người hâm mộ (fan)"
+        ],
+        [
+          "연기하다",
+          "diễn xuất"
+        ],
+        [
+          "상영하다",
+          "trình chiếu"
+        ],
+        [
+          "상영 시간",
+          "giờ chiếu, thời lượng phim"
+        ],
+        [
+          "영화 표",
+          "vé xem phim"
+        ],
+        [
+          "예매",
+          "việc mua vé trước"
+        ],
+        [
+          "매진",
+          "bán hết vé"
+        ],
+        [
+          "인기",
+          "sự được yêu thích"
+        ]
+      ]
+    },
+    {
+      "group": "Cảm xúc",
+      "words": [
+        [
+          "슬프다",
+          "buồn, đau lòng"
+        ],
+        [
+          "행복하다",
+          "hạnh phúc"
+        ],
+        [
+          "불행하다",
+          "bất hạnh"
+        ],
+        [
+          "즐겁다",
+          "vui vẻ"
+        ],
+        [
+          "지루하다",
+          "nhàm chán, dài lê thê"
+        ],
+        [
+          "외롭다",
+          "cô đơn"
+        ],
+        [
+          "무섭다",
+          "sợ, đáng sợ"
+        ],
+        [
+          "놀라다",
+          "giật mình, ngạc nhiên"
+        ],
+        [
+          "웃기다",
+          "buồn cười"
+        ],
+        [
+          "웃다",
+          "cười"
+        ],
+        [
+          "울다",
+          "khóc"
+        ],
+        [
+          "신나다",
+          "hào hứng, phấn khích"
+        ],
+        [
+          "화나다",
+          "giận, bực mình"
+        ],
+        [
+          "졸리다",
+          "buồn ngủ"
+        ],
+        [
+          "그립다",
+          "nhớ (nhung)"
+        ]
+      ]
+    },
+    {
+      "group": "Từ khác",
+      "words": [
+        [
+          "잘생기다",
+          "đẹp trai"
+        ],
+        [
+          "날씬하다",
+          "thon thả"
+        ],
+        [
+          "사랑",
+          "tình yêu"
+        ],
+        [
+          "이별",
+          "sự chia ly"
+        ],
+        [
+          "미래",
+          "tương lai"
+        ],
+        [
+          "우주",
+          "vũ trụ"
+        ],
+        [
+          "상상하다",
+          "tưởng tượng"
+        ],
+        [
+          "최고",
+          "nhất, tuyệt nhất"
+        ],
+        [
+          "검색하다",
+          "tìm kiếm (trên mạng)"
+        ],
+        [
+          "경치",
+          "phong cảnh"
+        ],
+        [
+          "소중하다",
+          "quý giá"
+        ],
+        [
+          "애인",
+          "người yêu"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "-겠- (phỏng đoán)",
+      "title": "chắc là … (đoán)",
+      "note": [
+        "Đã học -겠- nói ý định (제가 하겠습니다). Ở đây -겠- dùng để đoán dựa vào điều đang thấy, đang nghe: 맛있겠어요 (trông chắc ngon lắm).",
+        "Gắn thẳng vào gốc động từ, tính từ: 재미있겠어요, 피곤하겠어요, 비가 오겠어요.",
+        "Đoán về việc đã xảy ra: -았/었겠어요 (힘들었겠어요 = chắc đã vất vả lắm).",
+        "Hay dùng khi đáp lời để tỏ ra đồng cảm với người nói."
+      ],
+      "examples": [
+        [
+          "가: 이 영화 포스터 좀 보세요. 나: 와, 정말 무섭겠어요.",
+          "A: Nhìn tấm áp phích phim này xem. B: Ôi, chắc đáng sợ lắm."
+        ],
+        [
+          "하루 종일 일했어요? 피곤하겠어요.",
+          "Làm việc cả ngày à? Chắc mệt lắm."
+        ],
+        [
+          "두 시간 동안 줄을 섰어요? 힘들었겠어요.",
+          "Xếp hàng suốt hai tiếng à? Chắc vất vả lắm."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "가: 내일 시험이 세 개 있어요. 나: 정말 ___.",
+          "options": [
+            "바쁘겠어요",
+            "바빴겠어요",
+            "바쁠게요",
+            "바쁘겠어요니까"
+          ],
+          "explain": "Đoán về ngày mai → 바쁘겠어요."
+        },
+        {
+          "q": "가: 이 케이크 제가 만들었어요. 나: 와, ___.",
+          "options": [
+            "맛있겠어요",
+            "맛있을게요",
+            "맛있었겠어요",
+            "맛있게요"
+          ],
+          "explain": "Nhìn thấy bánh, đoán → 맛있겠어요."
+        },
+        {
+          "q": "가: 어제 열두 시간 일했어요. 나: ___.",
+          "options": [
+            "힘들었겠어요",
+            "힘들을게요",
+            "힘들었어요",
+            "힘드세요겠"
+          ],
+          "explain": "Đoán về việc đã qua → 힘들었겠어요."
+        },
+        {
+          "q": "Nghĩa của \"그 영화 정말 슬프겠어요.\"",
+          "options": [
+            "Bộ phim đó chắc buồn lắm.",
+            "Bộ phim đó đã rất buồn.",
+            "Tôi sẽ làm bộ phim đó buồn.",
+            "Bộ phim đó không buồn."
+          ],
+          "explain": "슬프겠어요 = chắc là buồn (đoán)."
+        },
+        {
+          "q": "-겠- trong câu nào là PHỎNG ĐOÁN?",
+          "options": [
+            "하늘을 보니까 곧 비가 오겠어요.",
+            "제가 먼저 하겠습니다.",
+            "내일 다시 오겠습니다.",
+            "저는 비빔밥을 먹겠어요."
+          ],
+          "explain": "Nhìn trời rồi đoán sắp mưa = phỏng đoán. Ba câu kia là ý định của người nói."
+        }
+      ]
+    },
+    {
+      "pattern": "-네요",
+      "title": "… quá! / … thế nhỉ (cảm thán khi vừa nhận ra)",
+      "note": [
+        "Bày tỏ cảm xúc, ngạc nhiên khi vừa trực tiếp thấy, nghe, trải qua: 영화가 정말 재미있네요!",
+        "Gắn thẳng vào gốc: 크네요, 춥네요, 잘하네요.",
+        "Gốc tận cùng ㄹ bỏ ㄹ: 멀다 → 머네요, 알다 → 아네요.",
+        "Danh từ: có patchim + 이네요 (학생이네요), không patchim + 네요 (열두 시네요). Quá khứ: -았/었네요 (다 먹었네요)."
+      ],
+      "examples": [
+        [
+          "이 영화 정말 재미있네요!",
+          "Phim này hay thật đấy!"
+        ],
+        [
+          "와, 배우가 정말 잘생겼네요.",
+          "Ôi, diễn viên đẹp trai quá."
+        ],
+        [
+          "영화관이 집에서 머네요.",
+          "Rạp phim xa nhà thế nhỉ."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "(Vừa xem xong) 와, 영화가 정말 ___!",
+          "options": [
+            "재미있네요",
+            "재미있을게요",
+            "재미있으네요",
+            "재미있겠네요요"
+          ],
+          "explain": "Cảm thán điều vừa trải qua → 재미있네요."
+        },
+        {
+          "q": "집에서 학교까지 정말 ___. (멀다)",
+          "options": [
+            "머네요",
+            "멀네요",
+            "멀으네요",
+            "머으네요"
+          ],
+          "explain": "Gốc ㄹ bỏ ㄹ + 네요 → 머네요."
+        },
+        {
+          "q": "와, 한국어를 정말 잘___!",
+          "options": [
+            "하네요",
+            "하겠어요네",
+            "할게요",
+            "하으네요"
+          ],
+          "explain": "잘하다 → 잘하네요."
+        },
+        {
+          "q": "벌써 열두 시___. 자야 해요.",
+          "options": [
+            "네요",
+            "이네요",
+            "이에네요",
+            "예네요"
+          ],
+          "explain": "시 không patchim → 시네요."
+        },
+        {
+          "q": "Nghĩa của \"오늘 날씨가 정말 춥네요.\"",
+          "options": [
+            "Hôm nay trời lạnh thật đấy!",
+            "Hôm nay trời chắc sẽ lạnh.",
+            "Hôm nay trời không lạnh.",
+            "Hôm qua trời lạnh lắm."
+          ],
+          "explain": "춥네요 = lạnh thật (cảm nhận ngay lúc nói)."
+        }
+      ]
+    },
+    {
+      "pattern": "V-아/어 보다",
+      "title": "thử (làm gì), đã từng",
+      "note": [
+        "Làm thử hoặc trải nghiệm: 먹어 보세요 (ăn thử đi), 가 봤어요 (đã từng đi).",
+        "Chia như -아/어요: 가다 → 가 보다, 먹다 → 먹어 보다, 입다 → 입어 보다, 하다 → 해 보다.",
+        "-아/어 보세요: khuyên, rủ người khác thử. -아/어 봤어요: đã từng làm.",
+        "Với 보다 (xem) không nói 봐 보다: nói 꼭 보세요, 봤어요."
+      ],
+      "examples": [
+        [
+          "이 떡볶이 먹어 보세요. 정말 맛있어요.",
+          "Ăn thử món tteokbokki này đi. Ngon lắm."
+        ],
+        [
+          "한국에서 눈썰매장에 가 봤어요?",
+          "Bạn đã từng đi sân trượt tuyết ở Hàn Quốc chưa?"
+        ],
+        [
+          "한복을 입어 봤어요. 정말 예뻤어요.",
+          "Tôi đã mặc thử hanbok. Đẹp lắm."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "이 옷을 한번 ___. (입다)",
+          "options": [
+            "입어 보세요",
+            "입아 보세요",
+            "입어 봐세요",
+            "입고 보세요"
+          ],
+          "explain": "입다 → 입어 보세요 (mặc thử đi)."
+        },
+        {
+          "q": "가: 제주도에 ___? 나: 네, 작년에 가 봤어요.",
+          "options": [
+            "가 봤어요",
+            "가 보세요",
+            "가서 봤어요",
+            "가 볼까요"
+          ],
+          "explain": "Hỏi trải nghiệm → 가 봤어요?"
+        },
+        {
+          "q": "이 김치 정말 맛있어요. 한번 ___. (먹다)",
+          "options": [
+            "먹어 보세요",
+            "먹아 보세요",
+            "먹으 보세요",
+            "먹 보세요"
+          ],
+          "explain": "먹다 → 먹어 보세요."
+        },
+        {
+          "q": "Nghĩa của \"한국어로 편지를 써 봤어요.\"",
+          "options": [
+            "Tôi đã thử viết thư bằng tiếng Hàn.",
+            "Tôi sẽ viết thư bằng tiếng Hàn.",
+            "Tôi đã xem thư bằng tiếng Hàn.",
+            "Hãy thử viết thư bằng tiếng Hàn."
+          ],
+          "explain": "써 봤어요 = đã thử viết."
+        },
+        {
+          "q": "\"Hãy thử làm đi.\"",
+          "options": [
+            "해 보세요",
+            "하 보세요",
+            "해 봤어요",
+            "하고 보세요"
+          ],
+          "explain": "하다 → 해 보세요."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "우주 이야기를 좋아해요. 그래서 ___를 자주 봐요.",
+      "options": [
+        "에스에프 영화",
+        "멜로 영화",
+        "코미디 영화",
+        "전쟁 영화"
+      ],
+      "explain": "Chuyện vũ trụ → phim khoa học viễn tưởng."
+    },
+    {
+      "q": "이 영화는 너무 ___. 그래서 계속 웃었어요.",
+      "options": [
+        "웃겨요",
+        "슬퍼요",
+        "무서워요",
+        "외로워요"
+      ],
+      "explain": "Cười suốt → 웃기다 (buồn cười)."
+    },
+    {
+      "q": "주말이라서 표가 다 팔렸어요. 지금은 ___이에요.",
+      "options": [
+        "매진",
+        "예매",
+        "인기",
+        "팬"
+      ],
+      "explain": "Bán hết vé → 매진."
+    },
+    {
+      "q": "영화관에 가기 전에 인터넷으로 표를 ___했어요.",
+      "options": [
+        "예매",
+        "매진",
+        "팬",
+        "이별"
+      ],
+      "explain": "Mua vé trước → 예매하다."
+    },
+    {
+      "q": "그 배우는 연기를 정말 잘해요. 그래서 ___가 많아요.",
+      "options": [
+        "팬",
+        "영화 제목",
+        "상영 시간",
+        "미래"
+      ],
+      "explain": "Diễn giỏi → có nhiều người hâm mộ (팬)."
+    },
+    {
+      "q": "슬픈 영화를 보고 많이 ___.",
+      "options": [
+        "울었어요",
+        "웃겼어요",
+        "졸렸어요",
+        "신났어요"
+      ],
+      "explain": "Phim buồn → khóc (울다)."
+    },
+    {
+      "q": "영화가 너무 ___ 중간에 잤어요.",
+      "options": [
+        "지루해서",
+        "무서워서",
+        "신나서",
+        "행복해서"
+      ],
+      "explain": "Chán quá nên ngủ → 지루해서."
+    },
+    {
+      "q": "가족과 멀리 살아서 가족이 너무 ___.",
+      "options": [
+        "그리워요",
+        "웃겨요",
+        "날씬해요",
+        "잘생겼어요"
+      ],
+      "explain": "Ở xa gia đình → nhớ (그립다)."
+    },
+    {
+      "q": "친구가 약속에 또 늦어서 ___.",
+      "options": [
+        "화났어요",
+        "행복했어요",
+        "졸렸어요",
+        "웃었어요"
+      ],
+      "explain": "Bạn lại đến muộn → bực (화나다)."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 이 영화 어때요? 나: 정말 재미있네요. 배우들이 연기를 잘하네요.",
+      "options": [
+        "Rất hay, diễn viên diễn giỏi",
+        "Chán, diễn viên diễn dở",
+        "Đáng sợ, muốn về sớm",
+        "Buồn, đã khóc nhiều"
+      ],
+      "explain": "재미있네요 = hay quá; 연기를 잘하네요 = diễn giỏi quá.",
+      "q": "Người nói thấy phim thế nào?"
+    },
+    {
+      "listen": "그 식당 음식이 정말 맛있어요. 한번 가 보세요.",
+      "options": [
+        "Món ăn ở quán đó rất ngon, hãy thử đến một lần.",
+        "Quán đó không ngon, đừng đến.",
+        "Tôi đã đến quán đó một lần.",
+        "Quán đó đã đóng cửa."
+      ],
+      "explain": "가 보세요 = hãy thử đến."
+    },
+    {
+      "listen": "가: 일곱 시 영화 표가 있어요? 나: 죄송합니다. 일곱 시는 매진이에요.",
+      "options": [
+        "Đã bán hết",
+        "Còn nhiều vé",
+        "Chỉ còn một vé",
+        "Chưa mở bán"
+      ],
+      "explain": "매진 = bán hết vé.",
+      "q": "Vé suất 7 giờ thế nào?"
+    },
+    {
+      "listen": "가: 어제 열두 시간 일했어요. 나: 정말 피곤하겠어요.",
+      "options": [
+        "Đoán là người kia chắc rất mệt",
+        "Nói mình cũng rất mệt",
+        "Rủ người kia đi ngủ",
+        "Bảo người kia đừng làm nữa"
+      ],
+      "explain": "피곤하겠어요 = chắc mệt lắm (đoán, đồng cảm).",
+      "q": "Người nghe phản ứng thế nào?"
+    },
+    {
+      "listen": "이 영화는 미래의 우주 이야기예요.",
+      "options": [
+        "Phim này là chuyện vũ trụ trong tương lai.",
+        "Phim này là chuyện tình yêu ngày xưa.",
+        "Phim này là chuyện chiến tranh.",
+        "Phim này là chuyện về một chàng trai đẹp trai."
+      ],
+      "explain": "미래 = tương lai; 우주 = vũ trụ."
+    }
+  ],
+  "reading": {
+    "passage": "지난 주말에 친구와 같이 영화관에 갔어요. 인기가 많은 영화라서 표를 먼저 예매했어요. 영화 제목은 '하늘 아래'예요. 전쟁 중에 만난 두 사람의 사랑 이야기예요. 남자 배우가 정말 잘생겼고 연기도 최고였어요. 마지막에 두 사람이 이별할 때 저는 많이 울었어요. 영화가 끝나고 친구가 말했어요. \"정말 슬프네요. 하지만 좋은 영화예요.\" 여러분도 한번 보세요.",
+    "passageVi": "Cuối tuần trước tôi đi rạp phim với bạn. Vì là phim được yêu thích nên tôi đã mua vé trước. Tên phim là 'Dưới bầu trời'. Đó là chuyện tình của hai người gặp nhau trong chiến tranh. Nam diễn viên rất đẹp trai và diễn xuất cũng tuyệt nhất. Ở cuối phim, khi hai người chia ly, tôi đã khóc rất nhiều. Phim kết thúc, bạn tôi nói: \"Buồn thật đấy. Nhưng là phim hay.\" Các bạn cũng xem thử một lần nhé.",
+    "questions": [
+      {
+        "q": "Bộ phim kể về điều gì?",
+        "options": [
+          "Chuyện tình của hai người gặp nhau trong chiến tranh",
+          "Chuyện vũ trụ trong tương lai",
+          "Chuyện hài về một gia đình",
+          "Chuyện một cậu bé cô đơn"
+        ],
+        "explain": "전쟁 중에 만난 두 사람의 사랑 이야기예요."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Người viết đã mua vé trước.",
+          "Vé đã bán hết nên không xem được.",
+          "Người viết thấy phim chán.",
+          "Người bạn không thích bộ phim."
+        ],
+        "explain": "표를 먼저 예매했어요. Người viết khóc vì phim buồn; bạn khen phim hay."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu giới thiệu một bộ phim bạn đã xem: thể loại, nội dung, cảm xúc của bạn và rủ người khác xem thử. Dùng -네요, -겠- (đoán) và -아/어 보다.",
+    "samples": [
+      [
+        "어제 한국 코미디 영화를 봤어요.",
+        "Hôm qua tôi đã xem một bộ phim hài Hàn Quốc."
+      ],
+      [
+        "배우들이 정말 웃겨서 많이 웃었어요.",
+        "Các diễn viên buồn cười quá nên tôi cười rất nhiều."
+      ],
+      [
+        "여러분도 이 영화를 좋아하겠어요.",
+        "Chắc các bạn cũng sẽ thích phim này."
+      ],
+      [
+        "주말에 가족과 같이 영화관에 가 보세요.",
+        "Cuối tuần hãy thử đi rạp cùng gia đình nhé."
+      ]
+    ],
+    "tips": "Đoán: gốc + 겠어요 (재미있겠어요, 힘들었겠어요). Cảm thán khi vừa thấy: -네요 (gốc ㄹ bỏ ㄹ: 머네요). Thử, từng làm: -아/어 보세요, -아/어 봤어요; với 보다 (xem) nói 꼭 보세요, 봤어요."
+  }
+}

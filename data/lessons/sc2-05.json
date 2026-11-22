@@ -1,0 +1,597 @@
+{
+  "id": "sc2-05",
+  "title": "Thư từ",
+  "ko": "편지",
+  "goal": "Viết thư, thiệp hỏi thăm, gửi đồ ở bưu điện; nói việc không làm được, điều kiện \"nếu\" và việc sắp làm.",
+  "vocab": [
+    {
+      "group": "Từ nối câu",
+      "words": [
+        [
+          "하지만",
+          "nhưng, tuy nhiên"
+        ],
+        [
+          "그런데",
+          "mà này (chuyển sang ý khác)"
+        ],
+        [
+          "그래서",
+          "vì vậy, cho nên"
+        ],
+        [
+          "그러면",
+          "nếu vậy thì"
+        ]
+      ]
+    },
+    {
+      "group": "Thư và bưu phẩm",
+      "words": [
+        [
+          "편지",
+          "thư"
+        ],
+        [
+          "손편지",
+          "thư viết tay"
+        ],
+        [
+          "엽서",
+          "bưu thiếp"
+        ],
+        [
+          "연하장",
+          "thiệp chúc Tết"
+        ],
+        [
+          "소포",
+          "bưu kiện"
+        ],
+        [
+          "택배",
+          "dịch vụ giao hàng tận nhà"
+        ],
+        [
+          "봉투",
+          "phong bì"
+        ],
+        [
+          "우표",
+          "tem"
+        ],
+        [
+          "우편번호",
+          "mã bưu chính"
+        ],
+        [
+          "받는 사람",
+          "người nhận"
+        ],
+        [
+          "보내는 사람",
+          "người gửi"
+        ],
+        [
+          "귀하",
+          "kính gửi (ghi sau tên người nhận)"
+        ],
+        [
+          "드림",
+          "kính thư (ghi sau tên mình ở cuối thư)"
+        ]
+      ]
+    },
+    {
+      "group": "Ở bưu điện",
+      "words": [
+        [
+          "빠른우편",
+          "chuyển phát nhanh"
+        ],
+        [
+          "등기",
+          "thư bảo đảm"
+        ],
+        [
+          "항공편",
+          "gửi đường hàng không"
+        ],
+        [
+          "배편",
+          "gửi đường biển"
+        ],
+        [
+          "부치다",
+          "gửi (thư, đồ qua bưu điện)"
+        ],
+        [
+          "붙이다",
+          "dán"
+        ],
+        [
+          "무게를 재다",
+          "cân (đo trọng lượng)"
+        ],
+        [
+          "깨지다",
+          "vỡ"
+        ]
+      ]
+    },
+    {
+      "group": "Từ khác",
+      "words": [
+        [
+          "소식",
+          "tin tức"
+        ],
+        [
+          "안부",
+          "lời hỏi thăm (sức khỏe, cuộc sống)"
+        ],
+        [
+          "고장 나다",
+          "hỏng (máy móc)"
+        ],
+        [
+          "눈싸움",
+          "trò ném tuyết"
+        ],
+        [
+          "눈썰매장",
+          "sân trượt tuyết"
+        ],
+        [
+          "담그다",
+          "muối (kim chi, dưa)"
+        ],
+        [
+          "말하기 대회",
+          "cuộc thi nói"
+        ],
+        [
+          "수목원",
+          "vườn thực vật"
+        ],
+        [
+          "한국어능력시험",
+          "kỳ thi năng lực tiếng Hàn (TOPIK)"
+        ],
+        [
+          "합격하다",
+          "thi đỗ"
+        ],
+        [
+          "한턱내다",
+          "khao, đãi (mọi người)"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "V-지 못하다",
+      "title": "không thể (làm gì)",
+      "note": [
+        "Gắn sau gốc động từ: muốn làm nhưng không làm được vì không đủ khả năng hoặc vì hoàn cảnh.",
+        "Cùng nghĩa với 못 + động từ đã học: 못 가요 = 가지 못해요. Dạng -지 못하다 hay dùng hơn khi viết.",
+        "Quá khứ: -지 못했어요 (바빠서 가지 못했어요).",
+        "So sánh: -지 않다 (không làm, vì không muốn) ↔ -지 못하다 (muốn mà không làm được)."
+      ],
+      "examples": [
+        [
+          "바빠서 편지를 쓰지 못했어요.",
+          "Bận quá nên tôi không viết thư được."
+        ],
+        [
+          "저는 아직 운전을 하지 못해요.",
+          "Tôi vẫn chưa lái xe được."
+        ],
+        [
+          "주소를 몰라서 소포를 보내지 못했어요.",
+          "Không biết địa chỉ nên tôi không gửi bưu kiện được."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "어제 바빠서 친구를 ___. (만나다)",
+          "options": [
+            "만나지 못했어요",
+            "만나지 못해서요",
+            "못 만나지 했어요",
+            "만나지 마세요"
+          ],
+          "explain": "Việc hôm qua, không làm được → 만나지 못했어요."
+        },
+        {
+          "q": "저는 수영을 ___. (không bơi được)",
+          "options": [
+            "하지 못해요",
+            "하지 않아도 돼요",
+            "해도 돼요",
+            "하지 마세요"
+          ],
+          "explain": "Không có khả năng → 하지 못해요."
+        },
+        {
+          "q": "\"못 읽어요\" cùng nghĩa với câu nào?",
+          "options": [
+            "읽지 못해요",
+            "읽지 않아요",
+            "읽지 마세요",
+            "읽어야 해요"
+          ],
+          "explain": "못 + V = V-지 못하다."
+        },
+        {
+          "q": "Nghĩa của \"주소를 몰라서 편지를 보내지 못했어요.\"",
+          "options": [
+            "Không biết địa chỉ nên không gửi thư được.",
+            "Biết địa chỉ nhưng không muốn gửi thư.",
+            "Không biết địa chỉ nên phải gửi lại thư.",
+            "Đã gửi thư đến địa chỉ mới."
+          ],
+          "explain": "몰라서 = vì không biết; 보내지 못했어요 = đã không gửi được."
+        },
+        {
+          "q": "숙제가 많아서 어제 잠을 ___. (자다)",
+          "options": [
+            "자지 못했어요",
+            "자지 못해서",
+            "자지 마세요",
+            "자도 돼요"
+          ],
+          "explain": "Nhiều bài tập nên hôm qua không ngủ được → 자지 못했어요."
+        }
+      ]
+    },
+    {
+      "pattern": "-(으)면",
+      "title": "nếu … thì",
+      "note": [
+        "Nói điều kiện hoặc giả định: 시간이 있으면 (nếu có thời gian).",
+        "Gốc không patchim hoặc tận cùng ㄹ → 면: 오다 → 오면, 살다 → 살면.",
+        "Gốc có patchim → 으면: 있다 → 있으면, 먹다 → 먹으면.",
+        "Danh từ: có patchim + 이면 (학생이면), không patchim + (이)면 → 친구면."
+      ],
+      "examples": [
+        [
+          "날씨가 좋으면 수목원에 갈 거예요.",
+          "Nếu trời đẹp tôi sẽ đi vườn thực vật."
+        ],
+        [
+          "한국에 오면 연락하세요.",
+          "Nếu sang Hàn Quốc thì liên lạc với tôi nhé."
+        ],
+        [
+          "시험에 합격하면 친구들에게 한턱낼 거예요.",
+          "Nếu thi đỗ tôi sẽ khao các bạn."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "시간이 ___ 같이 영화를 봐요. (있다)",
+          "options": [
+            "있으면",
+            "있면",
+            "있어면",
+            "있음면"
+          ],
+          "explain": "Gốc có patchim → 으면: 있으면."
+        },
+        {
+          "q": "한국에 ___ 연락하세요. (오다)",
+          "options": [
+            "오면",
+            "오으면",
+            "와면",
+            "올면"
+          ],
+          "explain": "Gốc không patchim → 면: 오면."
+        },
+        {
+          "q": "서울에 ___ 지하철을 자주 타요. (살다)",
+          "options": [
+            "살면",
+            "살으면",
+            "사으면",
+            "사면"
+          ],
+          "explain": "Gốc tận cùng ㄹ → 면: 살면 (không thêm 으)."
+        },
+        {
+          "q": "Nghĩa của \"비가 오면 집에 있을 거예요.\"",
+          "options": [
+            "Nếu trời mưa tôi sẽ ở nhà.",
+            "Vì trời mưa nên tôi đã ở nhà.",
+            "Trời mưa nhưng tôi vẫn ra ngoài.",
+            "Hôm qua trời mưa nên tôi ở nhà."
+          ],
+          "explain": "오면 = nếu (mưa); 있을 거예요 = sẽ ở."
+        },
+        {
+          "q": "학생___ 표가 싸요. (nếu là học sinh)",
+          "options": [
+            "이면",
+            "으면",
+            "면이",
+            "이어면"
+          ],
+          "explain": "Danh từ có patchim (학생) + 이면."
+        }
+      ]
+    },
+    {
+      "pattern": "V-(으)ㄹ + N",
+      "title": "định ngữ của động từ ở tương lai",
+      "note": [
+        "Động từ đứng trước danh từ, việc sẽ làm, chưa xảy ra: 내일 볼 영화 (bộ phim sẽ xem ngày mai).",
+        "Gốc không patchim → ㄹ: 보내다 → 보낼. Gốc có patchim → 을: 먹다 → 먹을.",
+        "Gốc có ㄹ → giữ nguyên: 만들다 → 만들 (만들 음식).",
+        "So sánh 3 thì: 어제 본 영화 (đã xem) – 지금 보는 영화 (đang xem) – 내일 볼 영화 (sẽ xem).",
+        "Hay gặp: 할 일 (việc cần làm), 먹을 것 (đồ để ăn)."
+      ],
+      "examples": [
+        [
+          "이것은 내일 보낼 소포예요.",
+          "Đây là bưu kiện sẽ gửi ngày mai."
+        ],
+        [
+          "오늘 할 일이 많아요.",
+          "Hôm nay có nhiều việc phải làm."
+        ],
+        [
+          "다음 달에 볼 한국어능력시험을 공부해요.",
+          "Tôi học cho kỳ thi năng lực tiếng Hàn sẽ thi tháng sau."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "이것은 내일 ___ 편지예요. (보내다, sẽ gửi)",
+          "options": [
+            "보낼",
+            "보낸",
+            "보내을",
+            "보내는을"
+          ],
+          "explain": "Việc sẽ làm, gốc không patchim → 보낼."
+        },
+        {
+          "q": "오늘 ___ 일이 많아요. (하다)",
+          "options": [
+            "할",
+            "하을",
+            "한을",
+            "해을"
+          ],
+          "explain": "Việc cần làm (chưa làm) → 할 일."
+        },
+        {
+          "q": "저녁에 ___ 음식을 샀어요. (먹다, sẽ ăn)",
+          "options": [
+            "먹을",
+            "먹은",
+            "먹ㄹ",
+            "먹는을"
+          ],
+          "explain": "Sẽ ăn, gốc có patchim → 먹을."
+        },
+        {
+          "q": "주말에 ___ 케이크예요. (만들다, sẽ làm)",
+          "options": [
+            "만들",
+            "만들을",
+            "만드을",
+            "만든"
+          ],
+          "explain": "Gốc có ㄹ → giữ nguyên: 만들. (만든 = đã làm)"
+        },
+        {
+          "q": "Nghĩa của \"다음 주에 볼 시험\"",
+          "options": [
+            "Kỳ thi sẽ thi tuần sau",
+            "Kỳ thi đã thi tuần trước",
+            "Kỳ thi đang thi tuần này",
+            "Kỳ thi không thi nữa"
+          ],
+          "explain": "볼 = sẽ (thi/xem), việc chưa xảy ra."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "편지를 ___에 넣고 우표를 붙였어요.",
+      "options": [
+        "봉투",
+        "소포",
+        "엽서",
+        "등기"
+      ],
+      "explain": "Bỏ thư vào phong bì (봉투) rồi dán tem."
+    },
+    {
+      "q": "편지 봉투에 ___를 붙여야 해요.",
+      "options": [
+        "우표",
+        "주소",
+        "소식",
+        "안부"
+      ],
+      "explain": "Dán tem → 우표를 붙이다."
+    },
+    {
+      "q": "우체국에서 소포의 무게를 ___.",
+      "options": [
+        "쟀어요",
+        "붙였어요",
+        "깨졌어요",
+        "담갔어요"
+      ],
+      "explain": "Cân trọng lượng → 무게를 재다 → 쟀어요."
+    },
+    {
+      "q": "내일까지 도착해야 해요. ___으로 보내 주세요.",
+      "options": [
+        "빠른우편",
+        "손편지",
+        "연하장",
+        "봉투"
+      ],
+      "explain": "Cần đến sớm → gửi chuyển phát nhanh (빠른우편)."
+    },
+    {
+      "q": "새해에 선생님께 ___을 보냈어요.",
+      "options": [
+        "연하장",
+        "우편번호",
+        "등기",
+        "눈싸움"
+      ],
+      "explain": "Năm mới gửi thiệp chúc Tết (연하장)."
+    },
+    {
+      "q": "컴퓨터가 ___ 이메일을 보내지 못했어요.",
+      "options": [
+        "고장 나서",
+        "한턱내서",
+        "담가서",
+        "붙여서"
+      ],
+      "explain": "Máy tính hỏng → 고장 나서."
+    },
+    {
+      "q": "시험에 합격해서 친구들에게 ___.",
+      "options": [
+        "한턱냈어요",
+        "부쳤어요",
+        "깨졌어요",
+        "고장 났어요"
+      ],
+      "explain": "Thi đỗ nên khao bạn bè → 한턱냈어요."
+    },
+    {
+      "q": "어제는 비가 왔어요. ___ 오늘은 날씨가 좋아요.",
+      "options": [
+        "하지만",
+        "그래서",
+        "그러면",
+        "왜냐하면"
+      ],
+      "explain": "Hai ý trái nhau → 하지만 (nhưng)."
+    },
+    {
+      "q": "가: 이 소포를 베트남에 보내고 싶어요. 나: ___ 여기에 주소를 쓰세요.",
+      "options": [
+        "그러면",
+        "하지만",
+        "그래서",
+        "그런데"
+      ],
+      "explain": "Nếu vậy thì (dựa vào lời người kia) → 그러면."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "이 소포를 베트남으로 보내고 싶어요. 항공편으로 해 주세요.",
+      "options": [
+        "Gửi bưu kiện đi Việt Nam bằng đường hàng không.",
+        "Gửi thư đi Việt Nam bằng đường biển.",
+        "Nhận bưu kiện từ Việt Nam.",
+        "Gửi bưu kiện chuyển phát nhanh trong nước."
+      ],
+      "explain": "소포 = bưu kiện; 항공편 = đường hàng không."
+    },
+    {
+      "listen": "가: 어제 왜 안 왔어요? 나: 일이 많아서 가지 못했어요.",
+      "options": [
+        "Vì nhiều việc nên không đi được",
+        "Vì bị ốm nên không đi",
+        "Vì không muốn đi",
+        "Vì quên lịch hẹn"
+      ],
+      "explain": "일이 많아서 가지 못했어요 = nhiều việc nên không đi được.",
+      "q": "Vì sao hôm qua người nói không đến?"
+    },
+    {
+      "listen": "날씨가 좋으면 주말에 수목원에 갈 거예요.",
+      "options": [
+        "Nếu trời đẹp, cuối tuần sẽ đi vườn thực vật.",
+        "Trời đẹp nên cuối tuần trước đã đi vườn thực vật.",
+        "Cuối tuần trời đẹp nhưng không đi đâu.",
+        "Nếu trời mưa, cuối tuần sẽ ở nhà."
+      ],
+      "explain": "좋으면 = nếu đẹp; 갈 거예요 = sẽ đi."
+    },
+    {
+      "listen": "가: 편지에 우표를 붙였어요? 나: 아니요, 아직 못 붙였어요.",
+      "options": [
+        "Chưa dán được",
+        "Đã dán rồi",
+        "Không cần dán",
+        "Dán hai con tem"
+      ],
+      "explain": "아직 못 붙였어요 = vẫn chưa dán được.",
+      "q": "Người nói đã dán tem chưa?"
+    },
+    {
+      "listen": "오늘 저녁에 할 일이 많아요.",
+      "options": [
+        "Tối nay tôi có nhiều việc phải làm.",
+        "Tối qua tôi đã làm nhiều việc.",
+        "Tối nay tôi không có việc gì.",
+        "Tối nay tôi làm việc ở bưu điện."
+      ],
+      "explain": "할 일 = việc sẽ/cần làm."
+    }
+  ],
+  "reading": {
+    "passage": "선생님, 안녕하세요? 저는 흐엉이에요. 요즘 서울은 많이 추워요? 저는 지난달에 베트남에 돌아왔어요. 그런데 바빠서 선생님께 편지를 쓰지 못했어요. 죄송해요. 요즘 저는 낮에 회사에 다니고 저녁에는 한국어를 공부해요. 다음 달에 볼 한국어능력시험이 있어요. 시험에 합격하면 다시 한국에 갈 거예요. 그때 선생님을 꼭 만나고 싶어요. 건강하세요. 하노이에서 흐엉 올림",
+    "passageVi": "Thưa cô, cô khỏe không ạ? Em là Hương. Dạo này Seoul lạnh lắm không cô? Tháng trước em đã về Việt Nam. Nhưng vì bận nên em chưa viết thư cho cô được. Em xin lỗi. Dạo này ban ngày em đi làm ở công ty, buổi tối học tiếng Hàn. Tháng sau em có kỳ thi năng lực tiếng Hàn. Nếu thi đỗ em sẽ lại sang Hàn Quốc. Lúc đó em rất muốn gặp cô. Cô giữ gìn sức khỏe nhé. Từ Hà Nội, Hương kính thư.",
+    "questions": [
+      {
+        "q": "Vì sao Hương chưa viết thư cho cô giáo?",
+        "options": [
+          "Vì bận",
+          "Vì không biết địa chỉ",
+          "Vì bị ốm",
+          "Vì quên"
+        ],
+        "explain": "바빠서 선생님께 편지를 쓰지 못했어요."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Nếu thi đỗ, Hương sẽ lại sang Hàn Quốc.",
+          "Hương đang sống ở Seoul.",
+          "Hương đã thi xong kỳ thi năng lực tiếng Hàn.",
+          "Hương học tiếng Hàn vào buổi sáng."
+        ],
+        "explain": "시험에 합격하면 다시 한국에 갈 거예요. Hương đã về Hà Nội, kỳ thi là tháng sau (볼 시험), học buổi tối."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu thư ngắn hỏi thăm một người bạn hoặc thầy cô ở xa: kể việc bạn chưa làm được, việc sắp làm và một dự định \"nếu…\". Dùng -지 못하다, -(으)면 và -(으)ㄹ + danh từ.",
+    "samples": [
+      [
+        "민수 씨, 잘 지내요? 요즘 바빠서 연락하지 못했어요.",
+        "Minsu ơi, bạn khỏe không? Dạo này bận quá nên mình chưa liên lạc được."
+      ],
+      [
+        "다음 주에 볼 시험이 있어서 열심히 공부해요.",
+        "Tuần sau mình có kỳ thi nên đang học chăm chỉ."
+      ],
+      [
+        "시험이 끝나면 같이 밥을 먹어요.",
+        "Thi xong thì mình cùng đi ăn nhé."
+      ],
+      [
+        "그럼 건강하세요. 흐엉 드림",
+        "Vậy nhé, giữ gìn sức khỏe. Hương."
+      ]
+    ],
+    "tips": "Không làm được: -지 못했어요 (= 못 + V). Nếu: gốc có patchim + 으면 (있으면), không patchim hoặc ㄹ + 면 (오면, 살면). Việc sẽ làm đứng trước danh từ: 볼 시험, 보낼 편지, 할 일."
+  }
+}
