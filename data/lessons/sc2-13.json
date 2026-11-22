@@ -1,0 +1,645 @@
+{
+  "id": "sc2-13",
+  "title": "Đô thị",
+  "ko": "도시",
+  "goal": "Giới thiệu một thành phố: vị trí, dân số, ngành nghề, điểm nổi tiếng; phỏng đoán và nhấn mạnh số lượng nhiều hơn mong đợi.",
+  "vocab": [
+    {
+      "group": "Thành phố và vùng miền",
+      "words": [
+        [
+          "도시",
+          "thành phố"
+        ],
+        [
+          "수도",
+          "thủ đô"
+        ],
+        [
+          "시골",
+          "nông thôn"
+        ],
+        [
+          "지역",
+          "vùng, khu vực"
+        ],
+        [
+          "중심지",
+          "khu trung tâm"
+        ],
+        [
+          "육지",
+          "đất liền"
+        ],
+        [
+          "항구",
+          "cảng (biển)"
+        ],
+        [
+          "신도시",
+          "khu đô thị mới"
+        ],
+        [
+          "고층 건물",
+          "tòa nhà cao tầng"
+        ],
+        [
+          "번화가",
+          "khu phố sầm uất"
+        ],
+        [
+          "교외",
+          "vùng ngoại ô"
+        ],
+        [
+          "지방",
+          "địa phương, tỉnh lẻ"
+        ]
+      ]
+    },
+    {
+      "group": "Thông tin về thành phố",
+      "words": [
+        [
+          "인구",
+          "dân số"
+        ],
+        [
+          "면적",
+          "diện tích"
+        ],
+        [
+          "위치",
+          "vị trí"
+        ],
+        [
+          "물가",
+          "vật giá, giá cả sinh hoạt"
+        ],
+        [
+          "최대",
+          "lớn nhất, tối đa"
+        ],
+        [
+          "특산물",
+          "đặc sản"
+        ],
+        [
+          "명소",
+          "điểm nổi tiếng, danh thắng"
+        ],
+        [
+          "예전",
+          "ngày trước, trước đây"
+        ],
+        [
+          "분위기",
+          "bầu không khí"
+        ]
+      ]
+    },
+    {
+      "group": "Ngành kinh tế",
+      "words": [
+        [
+          "공업",
+          "công nghiệp"
+        ],
+        [
+          "상업",
+          "thương nghiệp"
+        ],
+        [
+          "농업",
+          "nông nghiệp"
+        ],
+        [
+          "관광업",
+          "ngành du lịch"
+        ],
+        [
+          "무역",
+          "thương mại (mậu dịch)"
+        ],
+        [
+          "경제",
+          "kinh tế"
+        ]
+      ]
+    },
+    {
+      "group": "Đặc điểm thành phố",
+      "words": [
+        [
+          "유명하다",
+          "nổi tiếng"
+        ],
+        [
+          "경치가 아름답다",
+          "phong cảnh đẹp"
+        ],
+        [
+          "역사가 깊다",
+          "có lịch sử lâu đời"
+        ],
+        [
+          "발달하다",
+          "phát triển, phát đạt"
+        ],
+        [
+          "붐비다",
+          "đông đúc, chen chúc"
+        ],
+        [
+          "축제",
+          "lễ hội"
+        ],
+        [
+          "예술",
+          "nghệ thuật"
+        ],
+        [
+          "도자기",
+          "đồ gốm sứ"
+        ]
+      ]
+    },
+    {
+      "group": "Phương hướng",
+      "words": [
+        [
+          "방향",
+          "phương hướng"
+        ],
+        [
+          "동",
+          "đông (hướng)"
+        ],
+        [
+          "서",
+          "tây (hướng)"
+        ],
+        [
+          "남",
+          "nam (hướng)"
+        ],
+        [
+          "북",
+          "bắc (hướng)"
+        ]
+      ]
+    },
+    {
+      "group": "Động từ bất quy tắc ㅅ",
+      "words": [
+        [
+          "낫다",
+          "khỏi (bệnh), đỡ hơn"
+        ],
+        [
+          "짓다",
+          "xây (nhà); nấu (cơm); đặt (tên)"
+        ],
+        [
+          "젓다",
+          "khuấy"
+        ],
+        [
+          "긋다",
+          "kẻ, gạch (đường)"
+        ],
+        [
+          "잇다",
+          "nối"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "(이)나 (nhấn mạnh)",
+      "title": "tới, những…: số lượng nhiều hơn mong đợi",
+      "note": [
+        "Gắn sau từ chỉ số lượng để nhấn mạnh rằng con số đó nhiều (hoặc lâu) hơn mình nghĩ: \"tới…, những…, đến…\".",
+        "Tận cùng phụ âm: 이나 (두 시간이나, 세 권이나); tận cùng nguyên âm: 나 (다섯 개나, 열 마리나).",
+        "Khác với (이)나 ở Bài 9 (\"hoặc\", nối hai danh từ): ở đây (이)나 đứng sau con số.",
+        "Thường đi với quá khứ hoặc với 되다/하다: 인구가 천만 명이나 돼요."
+      ],
+      "examples": [
+        [
+          "친구가 늦게 와서 한 시간이나 기다렸어요.",
+          "Bạn đến muộn nên tôi đã đợi tới một tiếng."
+        ],
+        [
+          "어제 커피를 다섯 잔이나 마셨어요.",
+          "Hôm qua tôi uống những năm cốc cà phê."
+        ],
+        [
+          "그 도시는 인구가 천만 명이나 돼요.",
+          "Thành phố đó dân số lên tới mười triệu người."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "길이 막혀서 버스를 두 시간___ 탔어요.",
+          "options": [
+            "이나",
+            "나",
+            "을",
+            "이"
+          ],
+          "explain": "시간 tận cùng phụ âm ㄴ → 이나 (nhấn mạnh lâu hơn mong đợi)."
+        },
+        {
+          "q": "동생이 사과를 다섯 개___ 먹었어요.",
+          "options": [
+            "나",
+            "이나",
+            "를",
+            "에"
+          ],
+          "explain": "개 tận cùng nguyên âm → 나."
+        },
+        {
+          "q": "Nghĩa của \"이 도시의 인구는 오백만 명이나 돼요.\"",
+          "options": [
+            "Dân số thành phố này lên tới năm triệu người.",
+            "Dân số thành phố này chỉ có năm triệu người.",
+            "Dân số thành phố này khoảng năm triệu hoặc hơn.",
+            "Thành phố này cần năm triệu người."
+          ],
+          "explain": "(이)나 sau số lượng = nhiều hơn mong đợi, \"lên tới\"."
+        },
+        {
+          "q": "Câu nào dùng (이)나 để NHẤN MẠNH số lượng?",
+          "options": [
+            "어제 책을 세 권이나 읽었어요.",
+            "커피나 차를 마실까요?",
+            "주말에 영화나 볼까요?",
+            "버스나 지하철을 타세요."
+          ],
+          "explain": "Sau số lượng (세 권) → nhấn mạnh; các câu khác là \"hoặc\"."
+        },
+        {
+          "q": "가: 숙제가 많아요? 나: 네, 스무 장___ 돼요.",
+          "options": [
+            "이나",
+            "나",
+            "은",
+            "를"
+          ],
+          "explain": "장 tận cùng phụ âm → 이나."
+        }
+      ]
+    },
+    {
+      "pattern": "-(으)ㄹ 것 같다",
+      "title": "hình như…, có lẽ… (phỏng đoán)",
+      "note": [
+        "Gắn vào động từ, tính từ để phỏng đoán điều chưa chắc chắn: \"có lẽ…, hình như…, chắc là…\".",
+        "Tận cùng nguyên âm hoặc ㄹ: -ㄹ 것 같다 (올 것 같다, 살 것 같다); phụ âm: -을 것 같다 (많을 것 같다).",
+        "Danh từ: N일 것 같다 (학생일 것 같아요). Phỏng đoán việc đã xảy ra: -았/었을 것 같다 (도착했을 것 같아요).",
+        "Bất quy tắc ㅂ, ㄷ vẫn áp dụng: 춥다 → 추울 것 같다, 걷다 → 걸을 것 같다."
+      ],
+      "examples": [
+        [
+          "하늘이 흐려요. 곧 비가 올 것 같아요.",
+          "Trời âm u. Có lẽ sắp mưa."
+        ],
+        [
+          "서울은 물가가 비쌀 것 같아요.",
+          "Hình như giá cả ở Seoul đắt."
+        ],
+        [
+          "저 사람은 이 동네 사람일 것 같아요.",
+          "Có lẽ người kia là người khu này."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "하늘이 어두워요. 비가 ___.",
+          "options": [
+            "올 것 같아요",
+            "오을 것 같아요",
+            "올 것 같어요",
+            "오 것 같아요"
+          ],
+          "explain": "오다 tận cùng nguyên âm → 올 것 같아요."
+        },
+        {
+          "q": "이 김치찌개는 아주 ___. (맵다)",
+          "options": [
+            "매울 것 같아요",
+            "맵을 것 같아요",
+            "맵 것 같아요",
+            "매을 것 같아요"
+          ],
+          "explain": "Bất quy tắc ㅂ: 맵다 → 매울 것 같아요."
+        },
+        {
+          "q": "저 사람은 대학생___ 것 같아요.",
+          "options": [
+            "일",
+            "을",
+            "이",
+            "할"
+          ],
+          "explain": "Danh từ + 일 것 같다."
+        },
+        {
+          "q": "Nghĩa của \"부산은 서울보다 따뜻할 것 같아요.\"",
+          "options": [
+            "Có lẽ Busan ấm hơn Seoul.",
+            "Busan chắc chắn ấm hơn Seoul.",
+            "Busan sẽ ấm lên sau Seoul.",
+            "Tôi muốn Busan ấm hơn Seoul."
+          ],
+          "explain": "-(으)ㄹ 것 같다 = phỏng đoán \"có lẽ\"."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "주말에는 길이 많이 막힐 것 같아요.",
+            "주말에는 길이 많이 막힐을 것 같아요.",
+            "주말에는 길이 많이 막히을 것 같아요.",
+            "주말에는 길이 많이 막힐 것 같다요."
+          ],
+          "explain": "막히다 → 막힐 것 같아요."
+        }
+      ]
+    },
+    {
+      "pattern": "Bất quy tắc ㅅ",
+      "title": "낫다, 짓다, 젓다: bỏ ㅅ trước nguyên âm",
+      "note": [
+        "Một số động từ, tính từ có gốc tận cùng ㅅ (낫다, 짓다, 젓다, 긋다, 잇다, 붓다) bỏ ㅅ khi gặp đuôi bắt đầu bằng nguyên âm.",
+        "Sau khi bỏ ㅅ KHÔNG gộp nguyên âm: 낫다 → 나아요 (không phải 나요), 짓다 → 지어요, 젓다 → 저어요, 긋다 → 그어요.",
+        "Gặp phụ âm thì giữ ㅅ: 짓고, 낫지만, 젓기 전에.",
+        "웃다, 씻다, 벗다 là động từ có quy tắc: 웃어요, 씻으세요, 벗었어요."
+      ],
+      "examples": [
+        [
+          "약을 먹고 감기가 다 나았어요.",
+          "Uống thuốc xong tôi khỏi cảm hẳn rồi."
+        ],
+        [
+          "이 도시에 새 아파트를 많이 지었어요.",
+          "Ở thành phố này người ta đã xây nhiều chung cư mới."
+        ],
+        [
+          "설탕을 넣고 잘 저으세요.",
+          "Cho đường vào rồi khuấy đều nhé."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "약을 먹어서 감기가 다 ___. (낫다, quá khứ)",
+          "options": [
+            "나았어요",
+            "낫았어요",
+            "났어요",
+            "나섰어요"
+          ],
+          "explain": "Bất quy tắc ㅅ: 낫 + 았어요 → 나았어요 (không gộp nguyên âm)."
+        },
+        {
+          "q": "이 마을에 새 학교를 ___ 있어요. (짓다)",
+          "options": [
+            "짓고",
+            "지고",
+            "지어고",
+            "짓어고"
+          ],
+          "explain": "Gặp phụ âm -고 → giữ ㅅ: 짓고 있어요."
+        },
+        {
+          "q": "커피에 설탕을 넣고 잘 ___. (젓다)",
+          "options": [
+            "저으세요",
+            "젓으세요",
+            "저세요",
+            "젓세요"
+          ],
+          "explain": "젓다 + -(으)세요 → bỏ ㅅ: 저으세요."
+        },
+        {
+          "q": "밖에서 들어오면 손을 ___. (씻다)",
+          "options": [
+            "씻으세요",
+            "씨으세요",
+            "씻세요",
+            "씨세요"
+          ],
+          "explain": "씻다 có quy tắc → 씻으세요."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "중요한 단어에 줄을 그었어요.",
+            "중요한 단어에 줄을 긋었어요.",
+            "중요한 단어에 줄을 귿었어요.",
+            "중요한 단어에 줄을 그얐어요."
+          ],
+          "explain": "긋다 → 그었어요."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "서울은 ___가 비싸서 생활비가 많이 들어요.",
+      "options": [
+        "물가",
+        "면적",
+        "방향",
+        "예술"
+      ],
+      "explain": "Giá cả sinh hoạt → 물가."
+    },
+    {
+      "q": "이 도시의 ___는 천만 명쯤 돼요.",
+      "options": [
+        "인구",
+        "위치",
+        "특산물",
+        "분위기"
+      ],
+      "explain": "Số người sống ở thành phố → 인구."
+    },
+    {
+      "q": "부산은 큰 ___가 있어서 배가 많이 들어와요.",
+      "options": [
+        "항구",
+        "시골",
+        "교외",
+        "명소"
+      ],
+      "explain": "Nơi tàu ra vào → 항구."
+    },
+    {
+      "q": "주말에는 명동 같은 ___에 사람이 정말 많아요.",
+      "options": [
+        "번화가",
+        "육지",
+        "농업",
+        "방향"
+      ],
+      "explain": "Khu phố sầm uất → 번화가."
+    },
+    {
+      "q": "이 지역의 ___은 사과예요. 사과가 아주 맛있어요.",
+      "options": [
+        "특산물",
+        "공업",
+        "면적",
+        "수도"
+      ],
+      "explain": "Sản vật nổi tiếng của vùng → 특산물."
+    },
+    {
+      "q": "제주도는 ___이 발달해서 여행객이 많이 와요.",
+      "options": [
+        "관광업",
+        "농업",
+        "무역",
+        "육지"
+      ],
+      "explain": "Nhiều khách du lịch → 관광업."
+    },
+    {
+      "q": "출퇴근 시간에는 지하철이 아주 ___.",
+      "options": [
+        "붐벼요",
+        "유명해요",
+        "발달해요",
+        "나아요"
+      ],
+      "explain": "Đông đúc, chen chúc → 붐비다."
+    },
+    {
+      "q": "경주는 아주 오래전에 한국의 수도였어요. 그래서 ___.",
+      "options": [
+        "역사가 깊어요",
+        "물가가 싸요",
+        "인구가 많아요",
+        "교외예요"
+      ],
+      "explain": "Từng là thủ đô từ rất lâu → có lịch sử lâu đời."
+    },
+    {
+      "q": "복잡한 도시보다 조용한 ___에서 살고 싶어요.",
+      "options": [
+        "시골",
+        "중심지",
+        "번화가",
+        "고층 건물"
+      ],
+      "explain": "Trái với thành phố ồn ào → 시골 (nông thôn)."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "서울의 인구는 천만 명이나 돼요. 그래서 지하철이 항상 붐벼요.",
+      "options": [
+        "Khoảng mười triệu người",
+        "Khoảng một triệu người",
+        "Khoảng năm triệu người",
+        "Khoảng một trăm triệu người"
+      ],
+      "explain": "천만 명 = mười triệu người.",
+      "q": "Dân số Seoul khoảng bao nhiêu?"
+    },
+    {
+      "listen": "가: 내일 날씨가 어떨까요? 나: 바람이 많이 불어서 추울 것 같아요.",
+      "options": [
+        "Gió to, trời lạnh",
+        "Nắng, trời nóng",
+        "Mưa to",
+        "Có tuyết"
+      ],
+      "explain": "바람이 많이 불어서 추울 것 같아요 = gió to nên chắc trời lạnh.",
+      "q": "Người nói đoán thời tiết ngày mai thế nào?"
+    },
+    {
+      "listen": "이천은 도자기로 유명한 도시예요. 매년 도자기 축제가 있어요.",
+      "options": [
+        "Đồ gốm sứ",
+        "Cảng biển",
+        "Pháo hoa",
+        "Đặc sản táo"
+      ],
+      "explain": "도자기로 유명한 도시 = thành phố nổi tiếng về gốm.",
+      "q": "Thành phố này nổi tiếng về gì?"
+    },
+    {
+      "listen": "우리 고향은 서울에서 남쪽으로 세 시간 거리에 있어요. 농업이 발달했어요.",
+      "options": [
+        "Nông nghiệp",
+        "Công nghiệp",
+        "Du lịch",
+        "Thương mại"
+      ],
+      "explain": "농업이 발달했어요 = nông nghiệp phát triển.",
+      "q": "Quê người nói phát triển ngành gì?"
+    },
+    {
+      "listen": "가: 감기는 좀 나았어요? 나: 네, 약을 먹어서 다 나았어요.",
+      "options": [
+        "Đã khỏi cảm",
+        "Vẫn còn cảm",
+        "Sắp đi bệnh viện",
+        "Chưa uống thuốc"
+      ],
+      "explain": "다 나았어요 = khỏi hẳn rồi.",
+      "q": "Người nói bây giờ thế nào?"
+    }
+  ],
+  "reading": {
+    "passage": "인천은 서울의 서쪽에 있는 도시예요. 인구는 약 삼백만 명이에요. 인천에는 큰 국제공항과 항구가 있어서 무역이 발달했어요. 그리고 바다가 가까워서 경치가 아름다워요. 예전에는 작은 항구 도시였어요. 그런데 지금은 고층 건물이 많은 신도시도 있어요. 앞으로 인천은 더 유명해질 것 같아요.",
+    "passageVi": "Incheon là thành phố nằm ở phía tây Seoul. Dân số khoảng ba triệu người. Ở Incheon có sân bay quốc tế lớn và cảng nên thương mại phát triển. Ngoài ra vì gần biển nên phong cảnh đẹp. Ngày trước nơi đây là một thành phố cảng nhỏ. Nhưng bây giờ cũng có khu đô thị mới với nhiều tòa nhà cao tầng. Có lẽ sau này Incheon sẽ càng nổi tiếng hơn.",
+    "questions": [
+      {
+        "q": "Vì sao thương mại ở Incheon phát triển?",
+        "options": [
+          "Vì có sân bay quốc tế và cảng",
+          "Vì dân số đông nhất Hàn Quốc",
+          "Vì là thủ đô",
+          "Vì có nhiều nhà máy gốm"
+        ],
+        "explain": "국제공항과 항구가 있어서 무역이 발달했어요."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Incheon ở phía tây Seoul",
+          "Incheon có khoảng ba mươi triệu dân",
+          "Ngày trước Incheon là thành phố lớn",
+          "Bây giờ Incheon không có tòa nhà cao tầng"
+        ],
+        "explain": "서울의 서쪽에 있는 도시; 인구 약 삼백만 명; 예전에는 작은 항구 도시."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu giới thiệu một thành phố bạn biết (vị trí, dân số, điều nổi tiếng). Dùng (이)나 nhấn mạnh và -(으)ㄹ 것 같다.",
+    "samples": [
+      [
+        "다낭은 베트남의 중부에 있는 도시예요.",
+        "Đà Nẵng là thành phố ở miền Trung Việt Nam."
+      ],
+      [
+        "바다가 가까워서 경치가 아름답고 관광업이 발달했어요.",
+        "Vì gần biển nên phong cảnh đẹp và ngành du lịch phát triển."
+      ],
+      [
+        "작년에는 외국인 관광객이 수백만 명이나 왔어요.",
+        "Năm ngoái có tới mấy triệu khách du lịch nước ngoài đến."
+      ],
+      [
+        "앞으로 더 유명해질 것 같아요.",
+        "Có lẽ sau này sẽ càng nổi tiếng hơn."
+      ]
+    ],
+    "tips": "Nhấn mạnh số lượng: số + (이)나 (두 시간이나, 다섯 개나). Phỏng đoán: -(으)ㄹ 것 같아요, danh từ + 일 것 같아요. Phương hướng: 동쪽/서쪽/남쪽/북쪽에 있어요. Bất quy tắc ㅅ: 짓다 → 지었어요, 낫다 → 나았어요."
+  }
+}

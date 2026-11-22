@@ -319,7 +319,7 @@
     h += '<div class="study-tools"><h2>Từ vựng</h2><label class="toggle"><input type="checkbox" id="hideVi"> Che nghĩa để tự kiểm tra</label></div>' +
       '<p class="muted" style="margin:0">Bấm vào thẻ để nghe phát âm' + ' (khi che nghĩa, bấm để mở nghĩa).</p><div id="vocab">';
     data.vocab.forEach(function (g) {
-      h += '<div class="group-title">' + ko(g.group) + '</div><div class="cards">';
+      h += '<div class="group-title"><span>' + ko(g.group) + '</span></div><div class="cards">';
       g.words.forEach(function (w) {
         h += '<button type="button" class="wcard" data-word="' + esc(w[2] || w[0]) + '"><span class="w-ko">' + esc(w[0]) + '</span>' +
           '<span class="w-vi">' + ko(w[1]) + '</span><span class="w-say" aria-hidden="true">🔊</span></button>';

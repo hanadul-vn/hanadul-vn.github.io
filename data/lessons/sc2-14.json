@@ -1,0 +1,624 @@
+{
+  "id": "sc2-14",
+  "title": "Kế hoạch",
+  "ko": "계획",
+  "goal": "Nói về việc học, nghề nghiệp và kế hoạch tương lai; nói đã làm một việc được bao lâu, việc gì làm sau việc gì, và điều mình đã quyết định.",
+  "vocab": [
+    {
+      "group": "Học tập",
+      "words": [
+        [
+          "진학",
+          "việc học lên (cấp cao hơn)"
+        ],
+        [
+          "유학",
+          "du học"
+        ],
+        [
+          "어학연수",
+          "khóa học tiếng ở nước ngoài"
+        ],
+        [
+          "대학원",
+          "cao học (sau đại học)"
+        ],
+        [
+          "입학",
+          "nhập học"
+        ],
+        [
+          "학기",
+          "học kỳ"
+        ],
+        [
+          "과목",
+          "môn học"
+        ],
+        [
+          "등록금",
+          "học phí"
+        ],
+        [
+          "장학금",
+          "học bổng"
+        ],
+        [
+          "전공",
+          "chuyên ngành"
+        ]
+      ]
+    },
+    {
+      "group": "Nghề nghiệp",
+      "words": [
+        [
+          "연구자",
+          "nhà nghiên cứu"
+        ],
+        [
+          "아나운서",
+          "phát thanh viên"
+        ],
+        [
+          "미용사",
+          "thợ làm tóc, làm đẹp"
+        ],
+        [
+          "경영자",
+          "người điều hành doanh nghiệp"
+        ],
+        [
+          "기자",
+          "phóng viên, nhà báo"
+        ],
+        [
+          "요리사",
+          "đầu bếp"
+        ]
+      ]
+    },
+    {
+      "group": "Nơi làm việc",
+      "words": [
+        [
+          "항공사",
+          "hãng hàng không"
+        ],
+        [
+          "신문사",
+          "tòa soạn báo"
+        ],
+        [
+          "방송국",
+          "đài truyền hình"
+        ],
+        [
+          "출판사",
+          "nhà xuất bản"
+        ],
+        [
+          "무역 회사",
+          "công ty thương mại"
+        ],
+        [
+          "건설 회사",
+          "công ty xây dựng"
+        ],
+        [
+          "자문 회사",
+          "công ty tư vấn"
+        ],
+        [
+          "산업 단지",
+          "khu công nghiệp"
+        ],
+        [
+          "합작사",
+          "công ty liên doanh"
+        ],
+        [
+          "대기업",
+          "tập đoàn lớn"
+        ]
+      ]
+    },
+    {
+      "group": "Kế hoạch, tương lai",
+      "words": [
+        [
+          "계획",
+          "kế hoạch"
+        ],
+        [
+          "꿈",
+          "ước mơ, giấc mơ"
+        ],
+        [
+          "목표",
+          "mục tiêu"
+        ],
+        [
+          "취직",
+          "việc xin được việc làm"
+        ],
+        [
+          "졸업",
+          "sự tốt nghiệp"
+        ],
+        [
+          "봉사 활동",
+          "hoạt động tình nguyện"
+        ],
+        [
+          "자격증",
+          "chứng chỉ"
+        ],
+        [
+          "면접",
+          "phỏng vấn"
+        ],
+        [
+          "세우다",
+          "lập (kế hoạch), dựng"
+        ],
+        [
+          "이루다",
+          "đạt được, thực hiện (ước mơ)"
+        ]
+      ]
+    },
+    {
+      "group": "Từ khác",
+      "words": [
+        [
+          "벌써",
+          "đã… rồi (sớm vậy)"
+        ],
+        [
+          "동안",
+          "trong suốt (khoảng thời gian)"
+        ],
+        [
+          "끊다",
+          "bỏ (thuốc lá…), cắt đứt"
+        ],
+        [
+          "다녀오다",
+          "đi rồi về"
+        ],
+        [
+          "언제든지",
+          "bất cứ lúc nào"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "-(으)ㄴ 지",
+      "title": "đã… được (bao lâu): thời gian trôi qua từ khi làm việc gì",
+      "note": [
+        "Gắn vào động từ + khoảng thời gian + 되다/지나다/넘다: tính từ lúc làm việc đó đến nay đã bao lâu.",
+        "Tận cùng nguyên âm: -ㄴ 지 (배운 지); phụ âm: -은 지 (먹은 지); gốc ㄹ bỏ ㄹ: 살다 → 산 지, 만들다 → 만든 지.",
+        "Hay gặp nhất: V-(으)ㄴ 지 + thời gian + 됐어요. Hỏi: -(으)ㄴ 지 얼마나 됐어요?",
+        "Phủ định \"đã… không làm\": 안 V-(으)ㄴ 지 (담배를 안 피운 지 1년이 됐어요)."
+      ],
+      "examples": [
+        [
+          "한국어를 배운 지 6개월이 됐어요.",
+          "Tôi học tiếng Hàn được 6 tháng rồi."
+        ],
+        [
+          "이 회사에 다닌 지 벌써 3년이 지났어요.",
+          "Tôi làm ở công ty này đã hơn 3 năm rồi."
+        ],
+        [
+          "가: 서울에 산 지 얼마나 됐어요? 나: 1년쯤 됐어요.",
+          "A: Bạn sống ở Seoul được bao lâu rồi? B: Khoảng 1 năm rồi."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "한국어를 ___ 1년이 됐어요. (배우다)",
+          "options": [
+            "배운 지",
+            "배우은 지",
+            "배울 지",
+            "배우는 지"
+          ],
+          "explain": "배우다 tận cùng nguyên âm → 배운 지."
+        },
+        {
+          "q": "점심을 ___ 두 시간이 지났어요. (먹다)",
+          "options": [
+            "먹은 지",
+            "먹는 지",
+            "먹을 지",
+            "먹기 지"
+          ],
+          "explain": "먹다 tận cùng phụ âm → 먹은 지."
+        },
+        {
+          "q": "서울에서 ___ 3년이 됐어요. (살다)",
+          "options": [
+            "산 지",
+            "살은 지",
+            "사는 지",
+            "살 지"
+          ],
+          "explain": "Gốc ㄹ bỏ ㄹ: 살다 → 산 지."
+        },
+        {
+          "q": "Nghĩa của \"이 회사에 다닌 지 벌써 5년이 넘었어요.\"",
+          "options": [
+            "Tôi làm ở công ty này đã hơn 5 năm rồi.",
+            "5 năm nữa tôi sẽ vào công ty này.",
+            "Tôi định làm ở công ty này 5 năm.",
+            "Tôi đã nghỉ ở công ty này 5 năm rồi."
+          ],
+          "explain": "-(으)ㄴ 지 + thời gian + 넘다 = đã hơn (bao lâu)."
+        },
+        {
+          "q": "가: 대학교를 졸업한 지 얼마나 됐어요? 나: ___",
+          "options": [
+            "2년쯤 됐어요.",
+            "2년 후에 졸업할 거예요.",
+            "2년 동안 다닐 거예요.",
+            "2년 전에 입학할 거예요."
+          ],
+          "explain": "Hỏi đã bao lâu → trả lời thời gian + 됐어요."
+        }
+      ]
+    },
+    {
+      "pattern": "-(으)ㄴ 후에",
+      "title": "sau khi…",
+      "note": [
+        "Gắn vào động từ: làm xong việc trước rồi mới làm việc sau. Ngược với -기 전에 (Bài 7).",
+        "Tận cùng nguyên âm: -ㄴ 후에 (끝난 후에); phụ âm: -은 후에 (먹은 후에); gốc ㄹ bỏ ㄹ: 만들다 → 만든 후에.",
+        "Danh từ: N 후에 (졸업 후에, 수업 후에). Có thể nói -(으)ㄴ 다음에 với nghĩa tương tự.",
+        "Thì của câu chia ở vế sau: 밥을 먹은 후에 커피를 마셨어요."
+      ],
+      "examples": [
+        [
+          "수업이 끝난 후에 친구를 만날 거예요.",
+          "Sau khi tan học tôi sẽ gặp bạn."
+        ],
+        [
+          "졸업 후에 무역 회사에 취직하고 싶어요.",
+          "Sau khi tốt nghiệp tôi muốn vào làm ở công ty thương mại."
+        ],
+        [
+          "손을 씻은 후에 밥을 드세요.",
+          "Hãy rửa tay rồi mới ăn cơm."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "수업이 ___ 도서관에 갈 거예요. (끝나다)",
+          "options": [
+            "끝난 후에",
+            "끝나은 후에",
+            "끝날 후에",
+            "끝나는 후에"
+          ],
+          "explain": "끝나다 tận cùng nguyên âm → 끝난 후에."
+        },
+        {
+          "q": "손을 ___ 밥을 먹으세요. (씻다)",
+          "options": [
+            "씻은 후에",
+            "씻는 후에",
+            "씻을 후에",
+            "씻기 후에"
+          ],
+          "explain": "씻다 tận cùng phụ âm → 씻은 후에."
+        },
+        {
+          "q": "졸업___ 대학원에 진학하고 싶어요.",
+          "options": [
+            "후에",
+            "은 후에",
+            "는 후에",
+            "기 후에"
+          ],
+          "explain": "Danh từ + 후에 → 졸업 후에."
+        },
+        {
+          "q": "Nghĩa của \"운동한 후에 샤워를 해요.\"",
+          "options": [
+            "Tôi tắm sau khi tập thể dục.",
+            "Tôi tắm trước khi tập thể dục.",
+            "Tôi vừa tập thể dục vừa tắm.",
+            "Tôi tập thể dục để đi tắm."
+          ],
+          "explain": "-(으)ㄴ 후에 = sau khi."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "영화를 본 후에 저녁을 먹었어요.",
+            "영화를 보은 후에 저녁을 먹었어요.",
+            "영화를 볼 후에 저녁을 먹었어요.",
+            "영화를 봤은 후에 저녁을 먹었어요."
+          ],
+          "explain": "보다 → 본 후에; quá khứ chia ở cuối câu."
+        }
+      ]
+    },
+    {
+      "pattern": "-기로 하다",
+      "title": "quyết định…, hẹn sẽ…",
+      "note": [
+        "Gắn vào gốc động từ để nói mình (hoặc mọi người) đã quyết định hay đã hẹn sẽ làm việc gì.",
+        "Không phân biệt nguyên âm/phụ âm: 가기로, 먹기로, 만들기로.",
+        "Thường dùng ở quá khứ: -기로 했어요 (đã quyết định). Quyết định không làm: 안 -기로 했어요 hoặc -지 않기로 했어요.",
+        "Hẹn cùng người khác: 친구하고 만나기로 했어요 = đã hẹn gặp bạn."
+      ],
+      "examples": [
+        [
+          "내년에 한국으로 유학을 가기로 했어요.",
+          "Tôi đã quyết định sang năm đi du học Hàn Quốc."
+        ],
+        [
+          "건강을 위해서 담배를 끊기로 했어요.",
+          "Vì sức khỏe, tôi đã quyết định bỏ thuốc lá."
+        ],
+        [
+          "주말에 친구하고 등산하기로 했어요.",
+          "Cuối tuần tôi đã hẹn đi leo núi với bạn."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "내년에 한국으로 유학을 ___ 했어요. (가다)",
+          "options": [
+            "가기로",
+            "갈기로",
+            "가기를",
+            "가로"
+          ],
+          "explain": "Gốc + 기로 하다 → 가기로 했어요."
+        },
+        {
+          "q": "건강을 위해서 담배를 ___ 했어요. (끊다)",
+          "options": [
+            "끊기로",
+            "끊으로",
+            "끊기를",
+            "끊게로"
+          ],
+          "explain": "끊 + 기로 했어요."
+        },
+        {
+          "q": "가: 주말에 뭐 해요? 나: 친구하고 등산을 ___.",
+          "options": [
+            "하기로 했어요",
+            "하기로 했어서",
+            "하로 했어요",
+            "할기로 했어요"
+          ],
+          "explain": "Đã hẹn → 하기로 했어요."
+        },
+        {
+          "q": "Nghĩa của \"우리는 다음 달에 결혼하기로 했어요.\"",
+          "options": [
+            "Chúng tôi đã quyết định kết hôn vào tháng sau.",
+            "Chúng tôi đã kết hôn tháng trước.",
+            "Chúng tôi muốn kết hôn vào tháng sau.",
+            "Chúng tôi có thể kết hôn vào tháng sau."
+          ],
+          "explain": "-기로 했어요 = đã quyết định."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "오늘부터 커피를 안 마시기로 했어요.",
+            "오늘부터 커피를 안 마시로 했어요.",
+            "오늘부터 커피를 안 마셨기로 했어요.",
+            "오늘부터 커피를 안 마시기를 했어요."
+          ],
+          "explain": "안 + 마시기로 했어요; không chia quá khứ trước -기로."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "대학교를 졸업한 후에 ___에 가서 공부를 더 하고 싶어요.",
+      "options": [
+        "대학원",
+        "항공사",
+        "출판사",
+        "산업 단지"
+      ],
+      "explain": "Học thêm sau đại học → 대학원."
+    },
+    {
+      "q": "성적이 좋아서 ___을 받았어요. 등록금을 안 내도 돼요.",
+      "options": [
+        "장학금",
+        "자격증",
+        "목표",
+        "과목"
+      ],
+      "explain": "Được nhận vì học giỏi, không phải đóng học phí → 장학금."
+    },
+    {
+      "q": "저는 뉴스를 전하는 ___가 되고 싶어요.",
+      "options": [
+        "아나운서",
+        "미용사",
+        "요리사",
+        "연구자"
+      ],
+      "explain": "Người đọc tin tức → 아나운서."
+    },
+    {
+      "q": "비행기를 좋아해서 ___에서 일하고 싶어요.",
+      "options": [
+        "항공사",
+        "신문사",
+        "출판사",
+        "건설 회사"
+      ],
+      "explain": "Liên quan máy bay → 항공사."
+    },
+    {
+      "q": "다음 주에 회사 ___이 있어서 옷을 샀어요.",
+      "options": [
+        "면접",
+        "학기",
+        "입학",
+        "꿈"
+      ],
+      "explain": "Đi xin việc phải qua → 면접."
+    },
+    {
+      "q": "새해에는 계획을 ___ 열심히 지킬 거예요.",
+      "options": [
+        "세워서",
+        "끊어서",
+        "이뤄서",
+        "다녀와서"
+      ],
+      "explain": "Lập kế hoạch → 계획을 세우다."
+    },
+    {
+      "q": "제 ___은 세계 여행을 하는 거예요.",
+      "options": [
+        "꿈",
+        "졸업",
+        "면접",
+        "학기"
+      ],
+      "explain": "Điều mong muốn trong tương lai → 꿈."
+    },
+    {
+      "q": "주말마다 아이들에게 한국어를 가르치는 ___을 해요.",
+      "options": [
+        "봉사 활동",
+        "자격증",
+        "장학금",
+        "전공"
+      ],
+      "explain": "Giúp đỡ người khác không lấy tiền → 봉사 활동."
+    },
+    {
+      "q": "궁금한 것이 있으면 ___ 연락하세요.",
+      "options": [
+        "언제든지",
+        "벌써",
+        "동안",
+        "끊고"
+      ],
+      "explain": "Bất cứ lúc nào → 언제든지."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 한국에 온 지 얼마나 됐어요? 나: 벌써 2년이 됐어요.",
+      "options": [
+        "2 năm",
+        "2 tháng",
+        "1 năm",
+        "3 năm"
+      ],
+      "explain": "2년이 됐어요 = được 2 năm rồi.",
+      "q": "Người nói đến Hàn Quốc được bao lâu rồi?"
+    },
+    {
+      "listen": "저는 졸업한 후에 방송국에서 기자로 일하고 싶어요.",
+      "options": [
+        "Đài truyền hình",
+        "Hãng hàng không",
+        "Nhà xuất bản",
+        "Công ty xây dựng"
+      ],
+      "explain": "방송국 = đài truyền hình.",
+      "q": "Người nói muốn làm việc ở đâu?"
+    },
+    {
+      "listen": "가: 방학에 뭐 할 거예요? 나: 친구하고 제주도에 가기로 했어요.",
+      "options": [
+        "Đi Jeju với bạn",
+        "Ở nhà học bài",
+        "Đi làm thêm",
+        "Về quê"
+      ],
+      "explain": "제주도에 가기로 했어요 = đã quyết định đi Jeju.",
+      "q": "Người nói đã quyết định làm gì vào kỳ nghỉ?"
+    },
+    {
+      "listen": "아버지는 담배를 끊은 지 일 년이 넘었어요.",
+      "options": [
+        "Hơn một năm",
+        "Một tháng",
+        "Gần một năm",
+        "Mười năm"
+      ],
+      "explain": "끊은 지 일 년이 넘었어요 = bỏ được hơn một năm.",
+      "q": "Bố của người nói đã bỏ thuốc lá được bao lâu?"
+    },
+    {
+      "listen": "저는 내년에 대학원에 진학할 거예요. 그래서 요즘 장학금 신청을 준비하고 있어요.",
+      "options": [
+        "Hồ sơ xin học bổng",
+        "Phỏng vấn xin việc",
+        "Thi chứng chỉ",
+        "Chuyển nhà"
+      ],
+      "explain": "장학금 신청을 준비하고 있어요 = đang chuẩn bị xin học bổng.",
+      "q": "Dạo này người nói đang chuẩn bị gì?"
+    }
+  ],
+  "reading": {
+    "passage": "저는 베트남에서 대학교를 졸업한 후에 한국에 왔어요. 한국에 온 지 벌써 1년이 됐어요. 지금은 어학연수를 하고 있어요. 제 전공은 경영이에요. 다음 학기에 대학원에 진학하기로 했어요. 대학원을 졸업한 후에는 베트남에 돌아가서 한국 무역 회사에 취직하고 싶어요. 그것이 제 꿈이에요.",
+    "passageVi": "Tôi đến Hàn Quốc sau khi tốt nghiệp đại học ở Việt Nam. Tôi đến Hàn Quốc đã được 1 năm rồi. Bây giờ tôi đang học khóa tiếng. Chuyên ngành của tôi là quản trị kinh doanh. Tôi đã quyết định học lên cao học vào học kỳ tới. Sau khi tốt nghiệp cao học, tôi muốn về Việt Nam và làm việc ở công ty thương mại Hàn Quốc. Đó là ước mơ của tôi.",
+    "questions": [
+      {
+        "q": "Người viết đã quyết định làm gì vào học kỳ tới?",
+        "options": [
+          "Học lên cao học",
+          "Về Việt Nam",
+          "Xin việc ở công ty thương mại",
+          "Bắt đầu học khóa tiếng"
+        ],
+        "explain": "다음 학기에 대학원에 진학하기로 했어요."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Người viết đến Hàn Quốc được 1 năm",
+          "Người viết chưa tốt nghiệp đại học",
+          "Chuyên ngành của người viết là báo chí",
+          "Người viết muốn ở lại Hàn Quốc làm việc"
+        ],
+        "explain": "한국에 온 지 벌써 1년이 됐어요; 졸업한 후에 왔어요; 전공은 경영; muốn về Việt Nam."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu về kế hoạch của bạn: bạn đã học/làm việc gì được bao lâu, sau khi xong sẽ làm gì, đã quyết định gì. Dùng -(으)ㄴ 지, -(으)ㄴ 후에, -기로 하다.",
+    "samples": [
+      [
+        "한국어를 배운 지 6개월이 됐어요.",
+        "Tôi học tiếng Hàn được 6 tháng rồi."
+      ],
+      [
+        "올해 토픽 시험을 보기로 했어요.",
+        "Tôi đã quyết định năm nay thi TOPIK."
+      ],
+      [
+        "시험이 끝난 후에 한국으로 어학연수를 가고 싶어요.",
+        "Sau khi thi xong tôi muốn sang Hàn Quốc học tiếng."
+      ],
+      [
+        "졸업 후에는 무역 회사에 취직할 거예요.",
+        "Sau khi tốt nghiệp tôi sẽ xin vào công ty thương mại."
+      ]
+    ],
+    "tips": "Đã bao lâu: V-(으)ㄴ 지 + thời gian + 됐어요 (살다 → 산 지). Sau khi: V-(으)ㄴ 후에, danh từ + 후에 (졸업 후에). Quyết định: V-기로 했어요; không làm: 안 V-기로 했어요."
+  }
+}
