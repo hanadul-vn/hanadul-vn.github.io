@@ -125,10 +125,10 @@
             <div class="rm-body"><div class="rm-top"><h3>Sơ cấp 2</h3><span class="tag on" data-fill="sc2">Đang mở</span></div>
             <p class="muted">Giao tiếp hằng ngày trôi chảy hơn, câu dài hơn. Mục tiêu: <b>TOPIK I cấp 2</b>.</p></div>
           </li>
-          <li>
+          <li class="rm-on">
             <span class="rm-dot">🌳</span>
-            <div class="rm-body"><div class="rm-top"><h3>Trung cấp</h3><span class="tag">Dự kiến</span></div>
-            <p class="muted">Ngữ pháp trung cấp, đọc hiểu đoạn dài, viết đoạn văn. Mục tiêu: <b>TOPIK II cấp 3–4</b>.</p></div>
+            <div class="rm-body"><div class="rm-top"><h3>Trung cấp</h3><span class="tag on" data-fill="tc3">Đang mở</span></div>
+            <p class="muted">Ngữ pháp trung cấp, đọc hiểu đoạn dài, viết đoạn văn, làm quen dạng câu đề thi. Mục tiêu: <b>TOPIK II cấp 3–4</b>.</p></div>
           </li>
           <li>
             <span class="rm-dot">🏆</span>
@@ -238,13 +238,14 @@
       function esc(t) { return String(t).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
       // Số bài đang mở lấy từ danh sách bài thật.
       fetch('data/index.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (d) {
-        var total = 0, sc1 = 0, sc2 = 0;
+        var total = 0, sc1 = 0, sc2 = 0, tc3 = 0;
         d.levels.forEach(function (lv) {
-          lv.lessons.forEach(function (l) { total++; if (lv.id === 'sc1' && l.no !== '0') sc1++; if (lv.id === 'sc2') sc2++; });
+          lv.lessons.forEach(function (l) { total++; if (lv.id === 'sc1' && l.no !== '0') sc1++; if (lv.id === 'sc2') sc2++; if (lv.id === 'tc3') tc3++; });
         });
         document.querySelectorAll('[data-fill="lessons"]').forEach(function (el) { el.textContent = total; });
         document.querySelectorAll('[data-fill="sc1"]').forEach(function (el) { el.textContent = sc1 >= 15 ? 'Đủ ' + sc1 + ' bài' : 'Đang mở ' + sc1 + ' bài'; });
         document.querySelectorAll('[data-fill="sc2"]').forEach(function (el) { el.textContent = sc2 >= 15 ? 'Đủ ' + sc2 + ' bài' : sc2 ? 'Đang mở ' + sc2 + ' bài' : 'Đang soạn'; });
+        document.querySelectorAll('[data-fill="tc3"]').forEach(function (el) { el.textContent = tc3 >= 15 ? 'Đủ ' + tc3 + ' bài' : tc3 ? 'Đang mở ' + tc3 + ' bài' : 'Đang soạn'; });
       }).catch(function () {});
       // Cảm nhận thật của người học (data/cam-nhan.json). Chưa có thì giữ khung mời gửi.
       fetch('data/cam-nhan.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (list) {

@@ -33,6 +33,13 @@ python3 -m http.server 8000
    - `listening` (tùy chọn): câu nghe, có `listen` (câu để máy đọc), `options`, `explain`, và `q` tùy chọn (mặc định "Nghe và chọn nghĩa đúng.").
    - `reading` (tùy chọn): `passage`, `passageVi` và `questions`.
    - `writing` (tùy chọn): `prompt`, `samples` (cặp `["câu mẫu", "nghĩa"]`) và `tips`.
+   - `topik` (tùy chọn, dùng từ Trung cấp): câu dạng đề TOPIK II, mỗi câu có `type`, `q`, `options` (đáp án đúng đứng đầu), `explain`:
+     - `blank` điền vào chỗ trống, `q` có `(    )`;
+     - `similar` chọn nghĩa gần nhất, phần gạch chân bọc trong `__…__`;
+     - `notice` đọc thông báo/quảng cáo, `order` sắp xếp câu (`passage` có đủ `(가)(나)(다)(라)`), `main` đọc đoạn văn: đều cần `passage` và `passageVi`;
+     - `dialog` nghe hội thoại: `lines` (≥4 lượt `["người nói", "câu"]`, máy đọc đổi giọng theo người nói) và `linesVi`.
+     Luyện nhanh lấy 1 câu mỗi dạng, Ôn đầy đủ lấy hết.
+   - `fillWriting` (tùy chọn): bài viết điền ㉠/㉡ (dạng câu 51–52): `text`, `textVi`, `blanks` (`mark`, `answers` là các đáp án mẫu), `tips`. Người học tự so, không chấm; câu viết lưu cùng chỗ với Luyện viết.
 2. Thêm bài vào `data/index.json`, đúng cấp độ (`sc1`, `sc2`…). Mỗi cấp là một khối riêng trên lộ trình trang chủ (`icon`, `subtitle`, `status` tùy chọn); cấp có `"prefix": true` thì tên bài hiện kèm tên cấp ("Sơ cấp 2 · Bài 1: …") ở tiêu đề tab và Sổ câu sai để không nhầm với bài cùng số của cấp khác.
 3. Chạy `python3 tools/check_data.py`.
 4. Kiểm thử đầu-cuối (Playwright): chạy `python3 -m http.server 8765` ở thư mục gốc rồi `node tools/e2e/run.js`. Script làm hết mọi bài (Ôn đầy đủ, Luyện nhanh), sổ câu sai, trang giới thiệu, điện thoại 375px, giao diện tối; in PASS/FAIL từng case.

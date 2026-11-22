@@ -266,6 +266,40 @@
         }
       ],
       "status": "Đủ 15 bài"
+    },
+    {
+      "id": "tc3",
+      "name": "Trung cấp 3",
+      "icon": "🌳",
+      "prefix": true,
+      "subtitle": "Ngữ pháp trung cấp, làm quen dạng đề TOPIK II",
+      "status": "Đang mở 3 bài",
+      "lessons": [
+        {
+          "id": "tc3-01",
+          "no": "1",
+          "title": "Đời sống học đường",
+          "ko": "학교생활",
+          "summary": "밖에 · (이)라고 하다 · -게 되다 · -(으)ㄹ 생각이다",
+          "icon": "🎓"
+        },
+        {
+          "id": "tc3-02",
+          "no": "2",
+          "title": "Quan hệ con người",
+          "ko": "대인 관계",
+          "summary": "-는 길이다 · -(으)ㄴ 덕분에 · -나요/-(으)ㄴ가요",
+          "icon": "🤝"
+        },
+        {
+          "id": "tc3-03",
+          "no": "3",
+          "title": "Sức khỏe",
+          "ko": "건강",
+          "summary": "-는 게 좋다 · -아/어 보이다 · -(으)ㄴ/는 것 같다",
+          "icon": "💪"
+        }
+      ]
     }
   ]
 }

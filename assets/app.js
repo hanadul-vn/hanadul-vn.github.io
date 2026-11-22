@@ -13,7 +13,18 @@
     usage: { tag: '📝 Từ trong câu', cls: '' },
     grammar: { tag: '🧩', cls: ' g' },
     listen: { tag: '🎧 Nghe', cls: ' l' },
-    read: { tag: '📖 Đọc hiểu', cls: ' r' }
+    read: { tag: '📖 Đọc hiểu', cls: ' r' },
+    topik: { tag: '🎯 Dạng đề TOPIK', cls: ' t' }
+  };
+  // Dạng câu gần đề TOPIK II (từ Trung cấp): thứ tự hiển thị và nhãn từng dạng.
+  var TOPIK_TYPES = ['blank', 'similar', 'notice', 'order', 'main', 'dialog'];
+  var TOPIK_TAGS = {
+    blank: '🎯 TOPIK · Điền vào chỗ trống',
+    similar: '🎯 TOPIK · Nghĩa gần nhất',
+    notice: '🎯 TOPIK · Đọc thông báo',
+    order: '🎯 TOPIK · Sắp xếp câu',
+    main: '🎯 TOPIK · Đọc đoạn văn',
+    dialog: '🎯 TOPIK · Nghe hội thoại'
   };
   var cache = {};
   var indexData = null;
@@ -32,6 +43,11 @@
   function ko(s) {
     return esc(s).replace(/([ᄀ-ᇿ㄰-㆏가-힯][ᄀ-ᇿ㄰-㆏가-힯\s.,?!~()\-/]*)/g, '<span class="ko">$1</span>');
   }
+  // Như ko(), thêm gạch chân cho phần bọc trong __…__ (dạng câu "nghĩa gần nhất").
+  function koq(s) {
+    return ko(s).replace(/__(.+?)__/g, '<u>$1</u>');
+  }
+  function plain(s) { return String(s || '').replace(/__/g, ''); }
   function shuffle(a) {
     a = a.slice();
     for (var i = a.length - 1; i > 0; i--) {
@@ -92,14 +108,14 @@
   }
   // Mã ổn định cho mỗi câu hỏi, dùng cho Sổ câu sai.
   function qid(q) {
-    var str = q.lid + '|' + q.kind + '|' + (q.listen || '') + '|' + q.q + '|' + q.answer;
+    var str = q.lid + '|' + q.kind + '|' + (q.listen || '') + '|' + q.q + '|' + q.answer + (q.kind === 'topik' ? '|' + (q.passage || '') : '');
     var h = 5381;
     for (var i = 0; i < str.length; i++) h = ((h * 33) ^ str.charCodeAt(i)) >>> 0;
     return h.toString(36);
   }
   function snapshot(q) {
     var o = {};
-    ['lid', 'kind', 'pattern', 'q', 'options', 'answer', 'explain', 'say', 'sayAnswer', 'listen', 'passage', 'passageVi'].forEach(function (k) {
+    ['lid', 'kind', 'ttype', 'pattern', 'q', 'options', 'answer', 'explain', 'say', 'sayAnswer', 'listen', 'lines', 'linesVi', 'passage', 'passageVi'].forEach(function (k) {
       if (q[k] != null) o[k] = q[k];
     });
     return o;
@@ -124,7 +140,7 @@
   HD.refresh = function () {
     if (document.body.classList.contains('quiz-mode')) return renderStats();
     var h = location.hash;
-    if (/^#\/bai\/[^/]+\/?$/.test(h) && document.activeElement && document.activeElement.id === 'wtext') return renderStats();
+    if (/^#\/bai\/[^/]+\/?$/.test(h) && document.activeElement && (document.activeElement.id === 'wtext' || document.activeElement.classList.contains('fill-in'))) return renderStats();
     route(true);
   };
 
@@ -146,12 +162,32 @@
     else if (!warnedVoice) { warnedVoice = true; toast('Máy chưa có giọng đọc tiếng Hàn, âm có thể không chuẩn.'); }
     speechSynthesis.speak(u);
   }
+  // Đọc hội thoại hai người: đổi cao độ giọng theo người nói để dễ phân biệt.
+  function speakLines(lines, rate) {
+    if (!('speechSynthesis' in window)) { toast('Trình duyệt này không hỗ trợ đọc to.'); return; }
+    if (!koVoice) pickVoice();
+    speechSynthesis.cancel();
+    var who = [];
+    lines.forEach(function (l) {
+      if (who.indexOf(l[0]) < 0) who.push(l[0]);
+      var u = new SpeechSynthesisUtterance(l[1]);
+      u.lang = 'ko-KR'; u.rate = rate || 0.9;
+      u.pitch = who.indexOf(l[0]) % 2 ? 1.35 : 0.85;
+      if (koVoice) u.voice = koVoice;
+      speechSynthesis.speak(u);
+    });
+  }
+  function dialogText(lines) { return lines.map(function (l) { return l[1]; }).join(' '); }
   function speakBtn(text) {
     return '<button type="button" class="speak" data-say="' + esc(text) + '" aria-label="Nghe ' + esc(text) + '" title="Nghe">🔊</button>';
   }
   document.addEventListener('click', function (e) {
     var b = e.target.closest('[data-say]');
-    if (b) { e.preventDefault(); e.stopPropagation(); speak(b.getAttribute('data-say')); }
+    if (!b) return;
+    e.preventDefault(); e.stopPropagation();
+    var lines = b.getAttribute('data-lines');
+    if (lines) { try { return speakLines(JSON.parse(lines)); } catch (err) { /* đọc cả câu */ } }
+    speak(b.getAttribute('data-say'));
   });
 
   // ---------- routing ----------
@@ -332,11 +368,13 @@
       data.grammar.forEach(function (g) { h += grammarNote(g); });
     }
     if (data.writing) h += '<div class="study-tools"><h2>Luyện viết</h2></div>' + writingBox(data);
+    if (data.fillWriting && data.fillWriting.length) h += '<div class="study-tools"><h2>Viết điền ㉠, ㉡ (dạng đề TOPIK)</h2></div>' + fillBox(data);
     h += '<div class="cta-bar"><div><strong>Sẵn sàng chưa?</strong><br><span class="muted">Làm bài trắc nghiệm để nhận sao và điểm ⭐</span></div>' +
       '<a class="btn" href="#/bai/' + esc(data.id) + '/lam-bai">Làm bài →</a></div></div>';
     app.innerHTML = h;
 
     bindWriting(data);
+    bindFill(data);
     var vocab = document.getElementById('vocab');
     document.getElementById('hideVi').addEventListener('change', function (e) {
       vocab.classList.toggle('hide-vi', e.target.checked);
@@ -402,12 +440,25 @@
         qs.push(mcq(data.id, 'read', q, { passage: data.reading.passage, passageVi: data.reading.passageVi }));
       });
     }
+    // Dạng đề TOPIK: Luyện nhanh lấy 1 câu mỗi dạng, Ôn đầy đủ lấy hết, theo thứ tự dạng.
+    var tp = data.topik || [];
+    TOPIK_TYPES.forEach(function (t) {
+      var list = shuffle(tp.filter(function (q) { return q.type === t; }));
+      if (quick) list = list.slice(0, 1);
+      list.forEach(function (q) {
+        var extra = { ttype: t };
+        if (q.passage) { extra.passage = q.passage; extra.passageVi = q.passageVi; }
+        if (q.lines) { extra.lines = q.lines; extra.linesVi = q.linesVi; extra.listen = dialogText(q.lines); }
+        qs.push(mcq(data.id, 'topik', q, extra));
+      });
+    });
     return qs;
   }
   function sectionCounts(data) {
     var parts = [];
     if (data.listening && data.listening.length) parts.push('nghe');
     if (data.reading) parts.push('đọc hiểu');
+    if (data.topik && data.topik.length) parts.push('dạng đề TOPIK');
     return parts.length ? ' + ' + parts.join(', ') : '';
   }
 
@@ -471,18 +522,18 @@
       var h = '<div class="quiz"><div class="qbar"><a class="qclose" href="' + exitHref + '" aria-label="Thoát bài">✕</a>' +
         '<div class="qprog" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + progressPct() + '"><span style="width:' + progressPct() + '%"></span></div>' +
         '<div class="combo" id="combo">' + (combo >= 2 ? '🔥 ' + combo : '') + '</div></div>' +
-        '<span class="qsection' + sec.cls + '">' + (q.kind === 'grammar' ? '🧩 ' + ko(q.pattern) : sec.tag) + '</span>' +
+        '<span class="qsection' + sec.cls + '">' + (q.kind === 'grammar' ? '🧩 ' + ko(q.pattern) : q.kind === 'topik' ? (TOPIK_TAGS[q.ttype] || sec.tag) : sec.tag) + '</span>' +
         (q.retry ? '<span class="retry-tag">Làm lại câu sai</span>' : '') +
         (review && q.lessonName ? '<span class="retry-tag">' + esc(q.lessonName) + '</span>' : '') +
         '<div class="qcard">';
-      if (q.kind === 'listen') {
-        h += '<div class="listen-box"><button type="button" class="play" data-say="' + esc(q.listen) + '" aria-label="Nghe lại">🔊</button>' +
-          '<div><b>Bấm loa để nghe</b><br><button type="button" class="slow" data-slow="1">🐢 Nghe chậm</button></div></div>';
+      if (q.listen) {
+        h += '<div class="listen-box"><button type="button" class="play" data-say="' + esc(q.listen) + '"' + (q.lines ? ' data-lines="' + esc(JSON.stringify(q.lines)) + '"' : '') + ' aria-label="Nghe lại">🔊</button>' +
+          '<div><b>' + (q.lines ? 'Bấm loa để nghe hội thoại' : 'Bấm loa để nghe') + '</b><br><button type="button" class="slow" data-slow="1">🐢 Nghe chậm</button></div></div>';
       }
-      if (q.kind === 'read') {
-        h += '<div class="passage ko-block">' + ko(q.passage) + '</div>';
+      if (q.passage) {
+        h += '<div class="passage ko-block' + (q.kind === 'topik' ? ' pre' : '') + '">' + ko(q.passage) + '</div>';
       }
-      h += '<div class="qtext"><span style="flex:1">' + ko(q.q) + '</span>' + (q.say ? speakBtn(q.say) : '') + '</div>' +
+      h += '<div class="qtext"><span style="flex:1">' + koq(q.q) + '</span>' + (q.say ? speakBtn(q.say) : '') + '</div>' +
         (q.grammar ? '<details class="hint"><summary>💡 Xem ghi chú ngữ pháp</summary>' + grammarNote(q.grammar) + '</details>' : '') +
         '<div class="opts" role="group" aria-label="Các đáp án">';
       q.options.forEach(function (o, i) {
@@ -490,7 +541,8 @@
       });
       h += '</div></div><div id="fb"></div></div>';
       app.innerHTML = h;
-      if (q.kind === 'listen') speak(q.listen);
+      if (q.lines) speakLines(q.lines);
+      else if (q.listen) speak(q.listen);
       else if (q.say && q.kind === 'vocab') speak(q.say);
     }
 
@@ -525,11 +577,17 @@
       var praise = ['Chính xác!', 'Tuyệt vời!', 'Giỏi lắm!', 'Đúng rồi!', '잘했어요!'];
       var extra = '';
       if (q.kind === 'listen') extra = '<span class="transcript">🗣️ <span class="ko">' + esc(q.listen) + '</span> ' + speakBtn(q.listen) + '</span>';
+      if (q.lines) {
+        extra = '<div class="dialog-script">' + q.lines.map(function (l) {
+          return '<p><b>' + esc(l[0]) + ':</b> <span class="ko">' + esc(l[1]) + '</span></p>';
+        }).join('') + '</div>' + (q.linesVi ? '<details class="trans"><summary>Xem bản dịch hội thoại</summary>' + ko(q.linesVi) + '</details>' : '');
+      }
+      if (q.passage && q.passageVi && q.kind !== 'read') extra = '<details class="trans"><summary>Xem bản dịch</summary>' + ko(q.passageVi) + '</details>';
       if (q.kind === 'read' && q.passageVi) extra = '<details class="trans"><summary>Xem bản dịch đoạn văn</summary>' + ko(q.passageVi) + '</details>';
       var fb = document.getElementById('fb');
       fb.innerHTML = '<div class="feedback ' + (ok ? 'ok' : 'bad') + '" role="alert"><div>' +
         '<div class="fb-title">' + (ok ? '✅ ' + praise[Math.floor(Math.random() * praise.length)] : '❌ Chưa đúng') + '</div>' + extra +
-        '<p class="fb-text">' + (ok ? '' : 'Đáp án: <b>' + ko(q.answer) + '</b>. ') + (q.explain ? ko(q.explain) : '') + (q.sayAnswer ? ' ' + speakBtn(q.sayAnswer) : '') + '</p>' +
+        '<p class="fb-text">' + (ok ? '' : 'Đáp án: <b>' + ko(q.answer) + '</b>' + (/[.?!]$/.test(q.answer) ? ' ' : '. ')) + (q.explain ? ko(q.explain) : '') + (q.sayAnswer ? ' ' + speakBtn(q.sayAnswer) : '') + '</p>' +
         '</div><button type="button" class="btn ' + (ok ? 'green' : 'red') + '" id="next">Tiếp tục</button></div>';
       document.getElementById('next').focus({ preventScroll: true });
       fb.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
@@ -549,7 +607,8 @@
       if (e.target.closest('#next')) return next();
       if (e.target.closest('[data-slow]')) {
         var q = queue[pos];
-        if (q && q.listen) speak(q.listen, 0.6);
+        if (q && q.lines) speakLines(q.lines, 0.6);
+        else if (q && q.listen) speak(q.listen, 0.6);
       }
     }
     function onKey(e) {
@@ -597,7 +656,7 @@
         '<div class="rbox fire"><b>' + streak + '</b><span>🔥 Ngày liên tiếp</span></div></div>';
       if (wrongList.length) {
         h += '<details class="review"' + (wrongList.length <= 5 ? ' open' : '') + '><summary>📝 ' + wrongList.length + ' câu đã sai (đã lưu vào Sổ câu sai)</summary><ul>';
-        wrongList.forEach(function (q) { h += '<li>' + ko(q.kind === 'listen' ? q.listen : q.q) + ' → <b>' + ko(q.answer) + '</b></li>'; });
+        wrongList.forEach(function (q) { h += '<li>' + koq(q.listen ? q.listen : q.q) + ' → <b>' + ko(q.answer) + '</b></li>'; });
         h += '</ul></details>';
       }
       if (left) h += '<p class="muted" style="margin-top:14px">📒 Sổ câu sai còn <b>' + left + '</b> câu.</p>';
@@ -608,6 +667,7 @@
           (nextL ? '<a class="btn" href="#/bai/' + esc(nextL.id) + '">Bài tiếp theo →</a>' : '<a class="btn" href="#/">Về trang chủ</a>')) +
         '</div></div>';
       if (!review && data.writing) h += '<div class="panel write-panel"><h2>✍️ Luyện viết</h2>' + writingBox(data) + '</div>';
+      if (!review && data.fillWriting && data.fillWriting.length) h += '<div class="panel write-panel"><h2>✍️ Viết điền ㉠, ㉡</h2>' + fillBox(data) + '</div>';
       if (!review) h += HD.signupHtml('ket-qua', true);
       h += '</div>';
       app.innerHTML = h;
@@ -615,6 +675,7 @@
       if (!review) {
         document.getElementById('again').addEventListener('click', function () { renderQuizStart(data, found); });
         bindWriting(data);
+        bindFill(data);
       }
       if (stars >= 2) confetti();
     }
@@ -656,6 +717,53 @@
     });
   }
 
+  // ---------- viết điền ㉠/㉡ (dạng câu 51–52) ----------
+  function fillKey(id, i, j) { return id + '#51-' + i + '-' + j; }
+  function fillBox(data) {
+    var s = readStore();
+    var h = '<div class="writing fillw" id="fillw"><p class="muted" style="margin-top:0">Đọc đoạn văn, viết một câu ngắn vào mỗi chỗ ㉠, ㉡ cho hợp ngữ cảnh. Viết xong bấm “Xem đáp án mẫu” để tự so.</p>';
+    data.fillWriting.forEach(function (f, i) {
+      h += '<div class="fill-item"><div class="passage ko-block pre">' + ko(f.text) + '</div>';
+      f.blanks.forEach(function (b, j) {
+        h += '<label class="fill-row"><span class="fill-mark">' + esc(b.mark) + '</span><input type="text" class="fill-in" lang="ko" data-i="' + i + '" data-j="' + j + '" maxlength="200" value="' + esc(s.writing[fillKey(data.id, i, j)] || '') + '" placeholder="Viết câu vào chỗ ' + esc(b.mark) + '…"></label>';
+      });
+      h += '<div class="w-actions"><button type="button" class="btn ghost fill-show" data-i="' + i + '">👀 Xem đáp án mẫu</button><span class="muted fill-saved"></span></div>' +
+        '<div class="w-samples fill-ans" data-i="' + i + '" hidden><ul class="ex">';
+      f.blanks.forEach(function (b) {
+        h += '<li><span class="txt"><b>' + esc(b.mark) + '</b> ' + b.answers.map(function (a) { return '<span class="ex-ko">' + esc(a) + '</span>'; }).join(' / ') + '</span></li>';
+      });
+      h += '</ul>' + (f.textVi ? '<details class="trans"><summary>Xem bản dịch đoạn văn</summary>' + ko(f.textVi) + '</details>' : '') +
+        (f.tips ? '<p class="w-tip">💡 ' + ko(f.tips) + '</p>' : '') + '</div></div>';
+    });
+    return h + '</div>';
+  }
+  function bindFill(data) {
+    var box = document.getElementById('fillw');
+    if (!box) return;
+    var timer;
+    box.addEventListener('input', function (e) {
+      var t = e.target.closest('.fill-in');
+      if (!t) return;
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        var s = readStore();
+        var k = fillKey(data.id, t.getAttribute('data-i'), t.getAttribute('data-j'));
+        s.writing[k] = t.value.slice(0, 200);
+        s.writingAt[k] = Date.now();
+        writeStore(s);
+        var m = t.closest('.fill-item').querySelector('.fill-saved');
+        if (m) m.textContent = HD.isSignedIn && HD.isSignedIn() ? 'Đã lưu' : 'Đã lưu trên máy';
+      }, 500);
+    });
+    box.addEventListener('click', function (e) {
+      var b = e.target.closest('.fill-show');
+      if (!b) return;
+      var a = box.querySelector('.fill-ans[data-i="' + b.getAttribute('data-i') + '"]');
+      a.hidden = !a.hidden;
+      b.textContent = a.hidden ? '👀 Xem đáp án mẫu' : '🙈 Ẩn đáp án mẫu';
+    });
+  }
+
   // ---------- wrong book ----------
   function renderWrongBook() {
     document.title = 'Sổ câu sai – Hana Dul';
@@ -684,7 +792,7 @@
         h += '<details class="wb-group"><summary class="group-title">' + esc(names[lid] || lid) + ' · ' + byLesson[lid].length + ' câu</summary><ul class="wb-list">';
         byLesson[lid].forEach(function (e) {
           var it = e.item;
-          h += '<li><span class="wb-q">' + ko(it.kind === 'listen' ? '🎧 ' + it.listen : it.q) + '</span><span class="wb-a">→ ' + ko(it.answer) + '</span>' +
+          h += '<li><span class="wb-q">' + koq(it.listen ? '🎧 ' + it.listen : it.q + (it.kind === 'topik' && it.passage ? ' · ' + it.passage.slice(0, 40) + '…' : '')) + '</span><span class="wb-a">→ ' + ko(it.answer) + '</span>' +
             '<span class="wb-n">sai ' + e.n + ' lần' + (e.ok ? ' · đã đúng ' + e.ok + '/2' : '') + '</span></li>';
         });
         h += '</ul></details>';

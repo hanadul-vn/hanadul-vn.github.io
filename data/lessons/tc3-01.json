@@ -1,0 +1,902 @@
+{
+  "id": "tc3-01",
+  "title": "Đời sống học đường",
+  "ko": "학교생활",
+  "goal": "Nói về việc học ở đại học, các sự kiện trong trường và kế hoạch học tập; giới thiệu tên gọi, nói về thay đổi và dự định.",
+  "vocab": [
+    {
+      "group": "Lớp học và môn học",
+      "words": [
+        [
+          "학점",
+          "tín chỉ"
+        ],
+        [
+          "휴강",
+          "nghỉ (không có) buổi học"
+        ],
+        [
+          "종강",
+          "kết thúc môn học cuối kỳ"
+        ],
+        [
+          "중간고사",
+          "kỳ thi giữa kỳ"
+        ],
+        [
+          "기말고사",
+          "kỳ thi cuối kỳ"
+        ],
+        [
+          "학과 사무실",
+          "văn phòng khoa"
+        ],
+        [
+          "조교",
+          "trợ giảng"
+        ],
+        [
+          "수강하다",
+          "theo học (một môn)"
+        ],
+        [
+          "수강 신청하다",
+          "đăng ký môn học"
+        ],
+        [
+          "강의를 듣다",
+          "nghe giảng, dự giờ học"
+        ],
+        [
+          "청강하다",
+          "học dự thính"
+        ],
+        [
+          "보고서를 제출하다",
+          "nộp bài báo cáo"
+        ]
+      ]
+    },
+    {
+      "group": "Sinh viên và đời sống đại học",
+      "words": [
+        [
+          "신학기",
+          "đầu học kỳ mới"
+        ],
+        [
+          "새내기",
+          "lính mới, năm nhất (cách nói thân mật)"
+        ],
+        [
+          "신입생",
+          "tân sinh viên"
+        ],
+        [
+          "재학생",
+          "sinh viên đang theo học"
+        ],
+        [
+          "졸업생",
+          "cựu sinh viên, người đã tốt nghiệp"
+        ],
+        [
+          "동아리",
+          "câu lạc bộ (trong trường)"
+        ],
+        [
+          "입학하다",
+          "nhập học, vào trường"
+        ],
+        [
+          "등록하다",
+          "đăng ký, ghi danh"
+        ],
+        [
+          "장학금을 받다",
+          "được nhận học bổng"
+        ]
+      ]
+    },
+    {
+      "group": "Sự kiện trong trường",
+      "words": [
+        [
+          "입학식",
+          "lễ nhập học"
+        ],
+        [
+          "오리엔테이션",
+          "buổi định hướng cho sinh viên mới"
+        ],
+        [
+          "졸업식",
+          "lễ tốt nghiệp"
+        ],
+        [
+          "체육대회",
+          "hội thao"
+        ],
+        [
+          "MT",
+          "chuyến dã ngoại gắn kết của lớp/khoa",
+          "엠티"
+        ],
+        [
+          "사은회",
+          "buổi tri ân thầy cô"
+        ],
+        [
+          "신입생 환영회",
+          "tiệc chào đón tân sinh viên"
+        ],
+        [
+          "졸업생 환송회",
+          "tiệc tiễn sinh viên ra trường"
+        ]
+      ]
+    },
+    {
+      "group": "Từ mới khác",
+      "words": [
+        [
+          "교류",
+          "sự giao lưu"
+        ],
+        [
+          "교환학생",
+          "sinh viên trao đổi"
+        ],
+        [
+          "모집하다",
+          "tuyển, chiêu mộ"
+        ],
+        [
+          "문학작품",
+          "tác phẩm văn học"
+        ],
+        [
+          "성적 우수자",
+          "người có thành tích học tập xuất sắc"
+        ],
+        [
+          "시인",
+          "nhà thơ"
+        ],
+        [
+          "시험 기간",
+          "mùa thi"
+        ],
+        [
+          "신청 마감",
+          "hạn chót đăng ký"
+        ],
+        [
+          "자료실",
+          "phòng tư liệu"
+        ],
+        [
+          "자원봉사",
+          "việc tình nguyện"
+        ],
+        [
+          "제시하다",
+          "đưa ra, trình bày (ý kiến, phương án)"
+        ],
+        [
+          "지급하다",
+          "cấp, chi trả"
+        ],
+        [
+          "참석",
+          "sự tham dự"
+        ],
+        [
+          "최선을 다하다",
+          "cố gắng hết mình"
+        ],
+        [
+          "토론",
+          "cuộc thảo luận, tranh luận"
+        ],
+        [
+          "통역",
+          "phiên dịch (nói)"
+        ],
+        [
+          "휴관",
+          "đóng cửa nghỉ (thư viện, bảo tàng…)"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "N 밖에",
+      "title": "chỉ… (mà thôi), luôn đi với câu phủ định",
+      "note": [
+        "Gắn sau danh từ hoặc số lượng, nhấn mạnh “chỉ có bấy nhiêu, ít hơn mong đợi”.",
+        "Vế sau BẮT BUỘC là phủ định: 없다, 안 …, 못 …, 모르다. Không dùng với câu khẳng định.",
+        "So sánh: 만 dùng được với câu khẳng định (한 명만 왔어요), còn 밖에 thì phải phủ định (한 명밖에 안 왔어요)."
+      ],
+      "examples": [
+        [
+          "시험까지 일주일밖에 안 남았어요.",
+          "Chỉ còn một tuần nữa là thi."
+        ],
+        [
+          "교실에 학생이 두 명밖에 없어요.",
+          "Trong lớp chỉ có hai sinh viên."
+        ],
+        [
+          "저는 한국 노래를 한 곡밖에 몰라요.",
+          "Tôi chỉ biết mỗi một bài hát Hàn."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "지갑에 천 원___ 없어요.",
+          "options": [
+            "밖에",
+            "만",
+            "도",
+            "까지"
+          ],
+          "explain": "Đi với 없다 (phủ định) để nói “chỉ có” → 밖에."
+        },
+        {
+          "q": "이번 학기에 장학금을 받은 학생은 한 명___ 없어요.",
+          "options": [
+            "밖에",
+            "만",
+            "이나",
+            "부터"
+          ],
+          "explain": "N밖에 + 없다 = chỉ có N."
+        },
+        {
+          "q": "A: 학생들이 많이 왔어요? B: 아니요, 다섯 명___ 안 왔어요.",
+          "options": [
+            "밖에",
+            "만",
+            "도",
+            "처럼"
+          ],
+          "explain": "Vế sau là 안 왔어요 (phủ định) → 밖에."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "숙제를 반밖에 못 했어요.",
+            "숙제를 반밖에 했어요.",
+            "숙제를 반밖에를 했어요.",
+            "숙제를 반밖에 해요."
+          ],
+          "explain": "밖에 phải đi với phủ định: 반밖에 못 했어요."
+        },
+        {
+          "q": "Nghĩa của \"수업까지 10분밖에 안 남았어요.\"",
+          "options": [
+            "Chỉ còn 10 phút nữa là vào học.",
+            "Còn hơn 10 phút nữa mới vào học.",
+            "Giờ học đã bắt đầu được 10 phút.",
+            "Giờ học chỉ kéo dài 10 phút."
+          ],
+          "explain": "10분밖에 안 남다 = chỉ còn 10 phút."
+        }
+      ]
+    },
+    {
+      "pattern": "N(이)라고 하다",
+      "title": "gọi là…, tên là…",
+      "note": [
+        "Dùng để nói tên gọi của người, vật hoặc khái niệm.",
+        "Danh từ có patchim + 이라고 하다; không có patchim + 라고 하다.",
+        "Hỏi tên gọi: 이것을 한국어로 뭐라고 해요? Giới thiệu trang trọng: 저는 ○○(이)라고 합니다."
+      ],
+      "examples": [
+        [
+          "대학교 1학년 학생을 새내기라고 해요.",
+          "Sinh viên năm nhất được gọi là 새내기."
+        ],
+        [
+          "이 음식은 한국어로 뭐라고 해요?",
+          "Món này tiếng Hàn gọi là gì?"
+        ],
+        [
+          "처음 대학에 들어가는 것을 입학이라고 해요.",
+          "Việc vào đại học lần đầu gọi là 입학."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "대학교 1학년 학생을 '새내기'___ 해요.",
+          "options": [
+            "라고",
+            "이라고",
+            "에게",
+            "하고"
+          ],
+          "explain": "새내기 không có patchim → 라고 하다."
+        },
+        {
+          "q": "처음 대학에 들어가는 것을 '입학'___ 해요.",
+          "options": [
+            "이라고",
+            "라고",
+            "이랑",
+            "으로"
+          ],
+          "explain": "입학 có patchim ㄱ → 이라고 하다."
+        },
+        {
+          "q": "졸업 전에 선생님께 감사하는 모임을 '사은회'___ 해요.",
+          "options": [
+            "라고",
+            "이라고",
+            "를",
+            "에서"
+          ],
+          "explain": "사은회 không có patchim → 라고."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "저는 김민수라고 합니다.",
+            "저는 김민수이라고 합니다.",
+            "저는 김민수를 합니다.",
+            "저는 김민수라고 해 합니다."
+          ],
+          "explain": "민수 không có patchim → 라고 합니다."
+        },
+        {
+          "q": "Nghĩa của \"수업이 없는 시간을 '공강'이라고 해요.\"",
+          "options": [
+            "Khoảng thời gian không có tiết học được gọi là '공강'.",
+            "Lúc không có tiết học thì đi chơi '공강'.",
+            "'공강' là giờ phải học bù.",
+            "Không ai biết '공강' nghĩa là gì."
+          ],
+          "explain": "N(이)라고 하다 = gọi là N."
+        }
+      ]
+    },
+    {
+      "pattern": "V/A -게 되다",
+      "title": "trở nên…, thành ra… (thay đổi, kết quả không do mình quyết)",
+      "note": [
+        "Diễn tả một tình huống thay đổi hoặc một kết quả xảy ra do hoàn cảnh, không phải do ý muốn của người nói.",
+        "Gắn -게 되다 vào gốc động từ/tính từ: 살다 → 살게 되다, 알다 → 알게 되다.",
+        "Thường dùng ở quá khứ -게 됐어요/-게 되었어요 để kể lại sự thay đổi."
+      ],
+      "examples": [
+        [
+          "장학금을 받게 되어서 정말 기뻐요.",
+          "Tôi được nhận học bổng nên vui lắm."
+        ],
+        [
+          "회사 일 때문에 서울에서 살게 됐어요.",
+          "Vì công việc mà tôi thành ra sống ở Seoul."
+        ],
+        [
+          "처음에는 김치를 못 먹었는데 지금은 잘 먹게 됐어요.",
+          "Lúc đầu tôi không ăn được kim chi, giờ thì đã ăn được rồi."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "다음 학기부터 교환학생으로 한국에서 공부하___.",
+          "options": [
+            "게 됐어요",
+            "게 했어요",
+            "기로 해요",
+            "고 있었어요"
+          ],
+          "explain": "Một thay đổi đã được quyết định (không phải tự mình làm cho ai) → -게 됐어요."
+        },
+        {
+          "q": "처음에는 한국 노래를 몰랐는데 지금은 많이 알___.",
+          "options": [
+            "게 됐어요",
+            "기 전에요",
+            "게 하세요",
+            "지 마세요"
+          ],
+          "explain": "Từ không biết → đã biết: thay đổi → 알게 됐어요."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "회사 일 때문에 부산으로 이사하게 됐어요.",
+            "회사 일 때문에 부산으로 이사하게 돼요어요.",
+            "회사 일 때문에 부산으로 이사게 됐어요.",
+            "회사 일 때문에 부산으로 이사하게를 됐어요."
+          ],
+          "explain": "이사하다 → 이사하게 됐어요."
+        },
+        {
+          "q": "A: 그 친구를 어떻게 알게 됐어요? B: ___",
+          "options": [
+            "동아리에서 만나서 친해지게 됐어요.",
+            "동아리에서 만나게 하세요.",
+            "동아리에 가지 마세요.",
+            "동아리를 만나고 싶어요."
+          ],
+          "explain": "Kể lại kết quả: gặp ở CLB rồi trở nên thân → 친해지게 됐어요."
+        },
+        {
+          "q": "Nghĩa của \"갑자기 일이 생겨서 MT에 못 가게 됐어요.\"",
+          "options": [
+            "Tự nhiên có việc nên tôi thành ra không đi MT được.",
+            "Tôi không muốn đi MT nên đã bịa ra việc.",
+            "Tôi bắt bạn không được đi MT.",
+            "Tôi đi MT về rồi mới có việc."
+          ],
+          "explain": "-게 되다: kết quả do hoàn cảnh."
+        }
+      ]
+    },
+    {
+      "pattern": "V -(으)ㄹ 생각이다",
+      "title": "định…, có ý định…",
+      "note": [
+        "Nói về dự định, kế hoạch mà người nói đã nghĩ tới.",
+        "Gốc có patchim + 을 생각이다, không patchim hoặc patchim ㄹ + ㄹ 생각이다 (가다 → 갈 생각이에요, 만들다 → 만들 생각이에요).",
+        "Câu hỏi: 무엇을 할 생각이에요? Nói về dự định trong quá khứ: -(으)ㄹ 생각이었어요."
+      ],
+      "examples": [
+        [
+          "방학에는 아르바이트를 할 생각이에요.",
+          "Kỳ nghỉ tôi định đi làm thêm."
+        ],
+        [
+          "졸업 후에 대학원에 갈 생각이에요.",
+          "Sau khi tốt nghiệp tôi định học cao học."
+        ],
+        [
+          "이번 주말에는 집에서 쉴 생각이에요.",
+          "Cuối tuần này tôi định nghỉ ở nhà."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "다음 학기에 한국어 수업을 수강___ 생각이에요.",
+          "options": [
+            "할",
+            "한",
+            "하는",
+            "해서"
+          ],
+          "explain": "Dự định → định ngữ tương lai -(으)ㄹ: 수강할 생각이에요."
+        },
+        {
+          "q": "방학 때 고향에 ___ 생각이에요.",
+          "options": [
+            "갈",
+            "간",
+            "가는",
+            "가서"
+          ],
+          "explain": "가다 → 갈 생각이에요."
+        },
+        {
+          "q": "졸업한 후에 무엇을 ___?",
+          "options": [
+            "할 생각이에요",
+            "한 생각이에요",
+            "하는 생각이에요",
+            "할 생각했어요"
+          ],
+          "explain": "Hỏi dự định: 무엇을 할 생각이에요?"
+        },
+        {
+          "q": "A: 이번 축제 때 뭐 할 거예요? B: 친구들하고 노래 공연을 ___.",
+          "options": [
+            "할 생각이에요",
+            "하게 생각이에요",
+            "하는 생각이에요",
+            "해 생각이에요"
+          ],
+          "explain": "V-(으)ㄹ 생각이에요 = định làm V."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "내년에 한국으로 유학 갈 생각이에요.",
+            "내년에 한국으로 유학 가는 생각이에요.",
+            "내년에 한국으로 유학 간 생각이에요.",
+            "내년에 한국으로 유학 가 생각이에요."
+          ],
+          "explain": "Dự định tương lai → 갈 생각이에요."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "수강 신청을 하기 전에 졸업에 필요한 ___이 몇 점인지 확인하세요.",
+      "options": [
+        "학점",
+        "휴강",
+        "조교",
+        "동아리"
+      ],
+      "explain": "Số điểm cần để tốt nghiệp → 학점 (tín chỉ)."
+    },
+    {
+      "q": "교수님이 아프셔서 오늘 수업은 ___이에요.",
+      "options": [
+        "휴강",
+        "종강",
+        "입학식",
+        "신학기"
+      ],
+      "explain": "Thầy ốm nên lớp nghỉ → 휴강."
+    },
+    {
+      "q": "리포트를 다 썼으니까 학과 사무실에 가서 ___ 거예요.",
+      "options": [
+        "보고서를 제출할",
+        "수강 신청할",
+        "입학할",
+        "휴강할"
+      ],
+      "explain": "Viết xong báo cáo thì nộp → 보고서를 제출하다."
+    },
+    {
+      "q": "성적이 좋아서 이번 학기에 ___.",
+      "options": [
+        "장학금을 받았어요",
+        "휴관했어요",
+        "종강했어요",
+        "모집했어요"
+      ],
+      "explain": "Học giỏi → nhận học bổng (장학금을 받다)."
+    },
+    {
+      "q": "대학교에 처음 들어온 1학년 학생을 ___이라고 해요.",
+      "options": [
+        "신입생",
+        "졸업생",
+        "재학생",
+        "조교"
+      ],
+      "explain": "Sinh viên mới vào trường → 신입생."
+    },
+    {
+      "q": "도서관 ___에는 옛날 신문과 잡지가 있어요.",
+      "options": [
+        "자료실",
+        "동아리",
+        "사은회",
+        "학점"
+      ],
+      "explain": "Nơi lưu tài liệu → 자료실."
+    },
+    {
+      "q": "한국어를 잘하는 친구가 회의에서 ___을 해 줬어요.",
+      "options": [
+        "통역",
+        "토론",
+        "교류",
+        "휴강"
+      ],
+      "explain": "Dịch lời nói cho người khác → 통역."
+    },
+    {
+      "q": "시험 결과가 좋지 않았지만 ___ 후회는 없어요.",
+      "options": [
+        "최선을 다해서",
+        "휴관해서",
+        "지급해서",
+        "청강해서"
+      ],
+      "explain": "Đã cố hết sức nên không hối tiếc → 최선을 다하다."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 수강 신청은 언제까지예요? 나: 이번 주 금요일이 신청 마감이에요.",
+      "q": "Hạn đăng ký môn học là khi nào?",
+      "options": [
+        "Thứ Sáu tuần này",
+        "Thứ Hai tuần sau",
+        "Hôm nay",
+        "Cuối tháng"
+      ],
+      "explain": "이번 주 금요일이 신청 마감이에요."
+    },
+    {
+      "listen": "가: 오늘 김 교수님 수업이 있어요? 나: 아니요, 교수님이 학회에 가셔서 휴강이에요.",
+      "q": "Vì sao hôm nay lớp được nghỉ?",
+      "options": [
+        "Giáo sư đi dự hội thảo",
+        "Giáo sư bị ốm",
+        "Hôm nay là ngày lễ",
+        "Môn học đã kết thúc"
+      ],
+      "explain": "교수님이 학회에 가셔서 휴강이에요."
+    },
+    {
+      "listen": "가: 방학에 뭐 할 거예요? 나: 고향에 가서 영어 학원에 다닐 생각이에요.",
+      "q": "Kỳ nghỉ người nói định làm gì?",
+      "options": [
+        "Về quê và học ở trung tâm tiếng Anh",
+        "Ở lại trường làm thêm",
+        "Đi du lịch Hàn Quốc",
+        "Đăng ký học kỳ hè"
+      ],
+      "explain": "고향에 가서 영어 학원에 다닐 생각이에요."
+    },
+    {
+      "listen": "가: 동아리에 들어갔어요? 나: 네, 사진 동아리에 들어갔어요. 그런데 신입생이 저밖에 없어요.",
+      "q": "Câu nào ĐÚNG?",
+      "options": [
+        "Trong CLB chỉ có người nói là tân sinh viên",
+        "CLB có rất nhiều tân sinh viên",
+        "Người nói chưa vào CLB nào",
+        "Người nói vào CLB bóng đá"
+      ],
+      "explain": "신입생이 저밖에 없어요 = chỉ có tôi là tân sinh viên."
+    },
+    {
+      "listen": "가: 어떻게 한국어를 공부하게 됐어요? 나: 한국 드라마를 좋아해서 공부하게 됐어요.",
+      "q": "Vì sao người nói học tiếng Hàn?",
+      "options": [
+        "Vì thích phim truyền hình Hàn",
+        "Vì công ty yêu cầu",
+        "Vì có bạn người Hàn",
+        "Vì muốn đi du học"
+      ],
+      "explain": "한국 드라마를 좋아해서 공부하게 됐어요."
+    }
+  ],
+  "reading": {
+    "passage": "저는 올해 대학교에 입학한 새내기입니다. 3월에 입학식과 오리엔테이션이 끝나고 수업이 시작되었습니다. 이번 학기에는 다섯 과목을 수강하고 있습니다. 수업이 끝나면 학교 자료실에서 공부하고, 주말에는 봉사 동아리에서 활동합니다. 처음에는 아는 사람이 한 명밖에 없었는데 동아리에 들어간 후에 친구를 많이 사귀게 되었습니다. 다음 학기에 장학금을 받고 싶어서 요즘 중간고사 준비를 열심히 하고 있습니다.",
+    "passageVi": "Tôi là sinh viên năm nhất vừa nhập học năm nay. Tháng 3, sau lễ nhập học và buổi định hướng thì các lớp bắt đầu. Học kỳ này tôi học năm môn. Tan học tôi học bài ở phòng tư liệu của trường, cuối tuần thì sinh hoạt ở câu lạc bộ tình nguyện. Lúc đầu tôi chỉ quen đúng một người, nhưng sau khi vào câu lạc bộ thì tôi đã kết bạn được với nhiều người. Vì muốn nhận học bổng học kỳ sau nên dạo này tôi đang chăm chỉ ôn thi giữa kỳ.",
+    "questions": [
+      {
+        "q": "Học kỳ này người viết học bao nhiêu môn?",
+        "options": [
+          "5 môn",
+          "3 môn",
+          "4 môn",
+          "6 môn"
+        ],
+        "explain": "이번 학기에는 다섯 과목을 수강하고 있습니다."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Sau khi vào CLB, người viết có thêm nhiều bạn",
+          "Người viết là sinh viên năm cuối",
+          "Cuối tuần người viết học ở phòng tư liệu",
+          "Người viết đã nhận học bổng học kỳ này"
+        ],
+        "explain": "동아리에 들어간 후에 친구를 많이 사귀게 되었습니다."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu giới thiệu đời sống đại học (hoặc nơi bạn đang học). Dùng 밖에, -게 되다 và -(으)ㄹ 생각이다.",
+    "samples": [
+      [
+        "저는 올해 대학교에 입학하게 됐어요.",
+        "Năm nay tôi đã vào đại học."
+      ],
+      [
+        "우리 학과에는 외국 학생이 두 명밖에 없어요.",
+        "Khoa tôi chỉ có hai sinh viên nước ngoài."
+      ],
+      [
+        "이번 학기에는 한국어 동아리에 들어갈 생각이에요.",
+        "Học kỳ này tôi định vào câu lạc bộ tiếng Hàn."
+      ],
+      [
+        "졸업 후에 한국 회사에서 일할 생각이에요.",
+        "Sau khi tốt nghiệp tôi định làm việc ở công ty Hàn."
+      ]
+    ],
+    "tips": "밖에 luôn đi với phủ định (없다, 안, 못). -게 되다 kể lại thay đổi ngoài ý mình: 알게 됐어요, 살게 됐어요. Dự định: gốc + -(으)ㄹ 생각이에요 (갈, 먹을, 만들)."
+  },
+  "topik": [
+    {
+      "type": "blank",
+      "q": "1년 동안 동아리 활동을 하면서 친구가 많이 (    ).",
+      "options": [
+        "생기게 됐어요",
+        "생길 생각이에요",
+        "생기지 마세요",
+        "생기려고 해요"
+      ],
+      "explain": "Kết quả tự nhiên sau một thời gian → -게 됐어요. 생기다 không dùng với -(으)ㄹ 생각이다/-(으)려고 하다 (không phải hành động có chủ ý)."
+    },
+    {
+      "type": "blank",
+      "q": "수업 시작까지 5분(    ) 안 남았으니까 빨리 가요.",
+      "options": [
+        "밖에",
+        "만",
+        "도",
+        "부터"
+      ],
+      "explain": "Vế sau phủ định (안 남았으니까) → 밖에."
+    },
+    {
+      "type": "blank",
+      "q": "졸업한 후에 고향에 돌아가서 한국어 선생님이 (    ).",
+      "options": [
+        "될 생각이에요",
+        "된 생각이에요",
+        "되는 생각이에요",
+        "되게 생각이에요"
+      ],
+      "explain": "Dự định tương lai → 될 생각이에요."
+    },
+    {
+      "type": "similar",
+      "q": "이번 학기에는 꼭 장학금을 __받을 생각이에요__.",
+      "options": [
+        "받으려고 해요",
+        "받은 적이 있어요",
+        "받아야 해요",
+        "받고 있어요"
+      ],
+      "explain": "-(으)ㄹ 생각이다 ≈ -(으)려고 하다: đều nói dự định."
+    },
+    {
+      "type": "similar",
+      "q": "교실에 학생이 세 명__밖에 없어요__.",
+      "options": [
+        "만 있어요",
+        "도 없어요",
+        "이나 있어요",
+        "부터 있어요"
+      ],
+      "explain": "N밖에 없다 = chỉ có N → N만 있다."
+    },
+    {
+      "type": "notice",
+      "passage": "📢 2학기 수강 신청 안내\n· 기간: 8월 10일(월) ~ 8월 12일(수)\n· 방법: 학교 홈페이지에서 신청\n· 신청 마감 후에는 과목을 바꿀 수 없습니다.",
+      "passageVi": "Thông báo đăng ký môn học học kỳ 2. Thời gian: 10/8 (thứ Hai) – 12/8 (thứ Tư). Cách làm: đăng ký trên trang web của trường. Sau hạn chót không thể đổi môn.",
+      "q": "다음은 무엇에 대한 글입니까?",
+      "options": [
+        "수강 신청",
+        "동아리 모집",
+        "졸업식",
+        "장학금"
+      ],
+      "explain": "수강 신청 안내 = thông báo đăng ký môn học."
+    },
+    {
+      "type": "order",
+      "passage": "(가) 그래서 지금은 학교생활이 아주 즐거워요.\n(나) 처음 입학했을 때는 아는 사람이 한 명도 없었어요.\n(다) 그런데 동아리에 들어가서 친구를 많이 사귀게 되었어요.\n(라) 그때는 학교에 가는 것이 좀 외로웠어요.",
+      "passageVi": "(나) Lúc mới nhập học tôi không quen ai cả. (라) Khi đó đi học hơi cô đơn. (다) Nhưng tôi vào câu lạc bộ và kết bạn được với nhiều người. (가) Vì vậy bây giờ đời sống ở trường rất vui.",
+      "q": "다음을 순서대로 맞게 배열한 것을 고르십시오.",
+      "options": [
+        "(나)-(라)-(다)-(가)",
+        "(나)-(다)-(라)-(가)",
+        "(라)-(나)-(가)-(다)",
+        "(다)-(나)-(라)-(가)"
+      ],
+      "explain": "Mở đầu bằng hoàn cảnh (나), tiếp cảm giác lúc đó (라), bước ngoặt 그런데 (다), kết quả 그래서 (가)."
+    },
+    {
+      "type": "main",
+      "passage": "우리 학교는 매년 5월에 체육대회를 엽니다. 체육대회에는 학생들과 교수님들이 함께 참석합니다. 올해는 비가 많이 와서 체육대회가 원래 날짜보다 일주일 늦게 열리게 되었습니다. 체육대회가 끝난 후에는 학과 친구들과 함께 저녁을 먹습니다.",
+      "passageVi": "Trường tôi tổ chức hội thao vào tháng 5 hằng năm. Sinh viên và giáo sư cùng tham dự. Năm nay mưa nhiều nên hội thao diễn ra muộn một tuần so với ngày dự kiến. Sau hội thao, mọi người ăn tối cùng các bạn trong khoa.",
+      "q": "다음 글의 내용과 같은 것을 고르십시오.",
+      "options": [
+        "올해 체육대회는 원래 날짜보다 늦게 열렸습니다.",
+        "체육대회에는 학생들만 참석합니다.",
+        "체육대회는 매년 10월에 열립니다.",
+        "체육대회 전에 학과 친구들과 저녁을 먹습니다."
+      ],
+      "explain": "비가 많이 와서 … 일주일 늦게 열리게 되었습니다."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "여자",
+          "민수 씨, 이번 학기 수강 신청 다 했어요?"
+        ],
+        [
+          "남자",
+          "아니요, 아직 못 했어요. 듣고 싶은 과목이 있는데 벌써 자리가 없어요."
+        ],
+        [
+          "여자",
+          "그럼 학과 사무실에 가서 조교님한테 물어보세요. 조교님이 도와줄 거예요."
+        ],
+        [
+          "남자",
+          "그래요? 그럼 지금 바로 가 볼게요."
+        ]
+      ],
+      "linesVi": "Nữ: Min-su, bạn đăng ký môn học kỳ này xong chưa? Nam: Chưa, tôi chưa đăng ký được. Có môn tôi muốn học mà hết chỗ rồi. Nữ: Vậy bạn đến văn phòng khoa hỏi trợ giảng đi. Trợ giảng sẽ giúp bạn. Nam: Vậy à? Thế tôi đi ngay bây giờ.",
+      "q": "남자가 이어서 할 행동으로 알맞은 것을 고르십시오.",
+      "options": [
+        "학과 사무실에 가요.",
+        "수강 신청을 취소해요.",
+        "다른 과목을 신청해요.",
+        "여자에게 전화해요."
+      ],
+      "explain": "그럼 지금 바로 가 볼게요 → đi đến văn phòng khoa."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "남자",
+          "수진 씨, 이번 주 금요일에 신입생 환영회가 있는데 올 수 있어요?"
+        ],
+        [
+          "여자",
+          "가고 싶은데 금요일까지 보고서를 제출해야 해서 시간이 없어요."
+        ],
+        [
+          "남자",
+          "환영회는 저녁 9시까지 하니까 보고서를 낸 후에 오세요."
+        ],
+        [
+          "여자",
+          "좋아요. 그럼 지금부터 보고서를 빨리 쓸게요."
+        ]
+      ],
+      "linesVi": "Nam: Su-jin, thứ Sáu này có tiệc chào tân sinh viên, bạn đến được không? Nữ: Muốn đi lắm nhưng phải nộp báo cáo trước thứ Sáu nên không có thời gian. Nam: Tiệc kéo dài tới 9 giờ tối, nộp báo cáo xong thì đến nhé. Nữ: Được. Vậy từ bây giờ tôi sẽ viết báo cáo cho nhanh.",
+      "q": "여자가 이어서 할 행동으로 알맞은 것을 고르십시오.",
+      "options": [
+        "보고서를 써요.",
+        "환영회 장소를 예약해요.",
+        "신입생에게 전화해요.",
+        "교수님을 만나러 가요."
+      ],
+      "explain": "지금부터 보고서를 빨리 쓸게요."
+    }
+  ],
+  "fillWriting": [
+    {
+      "text": "제목: 사진 동아리 신입 회원 모집\n사진에 관심이 있는 신입생 여러분, 우리 동아리에 들어오세요. 사진을 잘 찍지 못해도 괜찮습니다. 선배들이 ( ㉠ ). 관심이 있는 학생은 3월 15일까지 ( ㉡ ). 동아리 방은 학생회관 3층에 있습니다.",
+      "textVi": "Tiêu đề: Tuyển thành viên mới CLB nhiếp ảnh. Các bạn tân sinh viên yêu thích nhiếp ảnh hãy tham gia câu lạc bộ. Chụp chưa giỏi cũng không sao. Các anh chị khóa trên ( ㉠ ). Bạn nào quan tâm hãy ( ㉡ ) trước ngày 15/3. Phòng CLB ở tầng 3 nhà sinh viên.",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "친절하게 가르쳐 줄 거예요",
+            "잘 가르쳐 드릴게요"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "동아리 방으로 오세요",
+            "동아리 방에 와서 신청하세요"
+          ]
+        }
+      ],
+      "tips": "㉠ nối với câu trước (chụp chưa giỏi cũng được) → khóa trên sẽ dạy. ㉡ có hạn chót và câu sau nói vị trí phòng → mời đến phòng để đăng ký. Giữ văn phong thông báo: -(으)세요, -아/어 줄 거예요."
+    },
+    {
+      "text": "대학에 입학하면 처음에는 모든 것이 낯섭니다. 그래서 많은 학교에서는 입학 전에 오리엔테이션을 합니다. 오리엔테이션에서는 수강 신청 방법이나 학교 시설을 ( ㉠ ). 이런 정보를 미리 알면 학교생활에 빨리 ( ㉡ ).",
+      "textVi": "Khi vào đại học, lúc đầu mọi thứ đều lạ lẫm. Vì vậy nhiều trường tổ chức buổi định hướng trước khi nhập học. Ở buổi định hướng, trường ( ㉠ ) cách đăng ký môn học và cơ sở vật chất. Biết trước những thông tin này thì có thể nhanh chóng ( ㉡ ) với đời sống ở trường.",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "소개합니다",
+            "알려 줍니다"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "적응할 수 있습니다",
+            "익숙해질 수 있습니다"
+          ]
+        }
+      ],
+      "tips": "Đây là đoạn văn giải thích (dạng câu 52) nên dùng đuôi -(스)ㅂ니다. ㉠ cần động từ “giới thiệu/cho biết”; ㉡ cần “thích nghi/quen”, kèm -(으)ㄹ 수 있습니다 cho hợp với 미리 알면."
+    }
+  ]
+}

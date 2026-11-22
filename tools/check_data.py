@@ -64,12 +64,41 @@ for lid in ids:
             err(f"{lid} / Đọc hiểu: chưa có câu hỏi")
         for q in r.get("questions", []):
             check_q("Đọc hiểu", q)
+    TT = {"blank", "similar", "notice", "order", "main", "dialog"}
+    for q in d.get("topik", []):
+        t = q.get("type")
+        if t not in TT:
+            err(f"{lid} / TOPIK: dạng câu lạ: {t}")
+            continue
+        check_q("TOPIK " + t, q)
+        if t in ("notice", "order", "main") and (not q.get("passage") or not q.get("passageVi")):
+            err(f"{lid} / TOPIK {t}: thiếu đoạn văn hoặc bản dịch: {q.get('q')}")
+        if t == "order":
+            if not all(m in q.get("passage", "") for m in ("(가)", "(나)", "(다)", "(라)")):
+                err(f"{lid} / TOPIK order: đoạn văn phải có đủ (가)(나)(다)(라)")
+        if t == "similar" and q.get("q", "").count("__") != 2:
+            err(f"{lid} / TOPIK similar: phải gạch chân đúng 1 đoạn bằng __…__: {q.get('q')}")
+        if t == "blank" and "(" not in q.get("q", ""):
+            err(f"{lid} / TOPIK blank: thiếu chỗ trống ( ): {q.get('q')}")
+        if t == "dialog":
+            lines = q.get("lines") or []
+            if len(lines) < 4 or any(len(l) != 2 or not l[0] or not l[1] for l in lines):
+                err(f"{lid} / TOPIK dialog: cần ≥4 lượt thoại [người nói, câu]")
+            if not q.get("linesVi"):
+                err(f"{lid} / TOPIK dialog: thiếu bản dịch hội thoại")
+    for f in d.get("fillWriting", []):
+        if not f.get("text") or not f.get("textVi") or not f.get("blanks"):
+            err(f"{lid} / Viết điền: thiếu đoạn văn, bản dịch hoặc chỗ trống")
+        for b in f.get("blanks", []):
+            if b.get("mark") not in f.get("text", "") or not b.get("answers"):
+                err(f"{lid} / Viết điền: chỗ {b.get('mark')} không có trong đoạn văn hoặc thiếu đáp án mẫu")
     w = d.get("writing")
     if w and (not w.get("prompt") or not w.get("samples")):
         err(f"{lid} / Luyện viết: thiếu đề hoặc câu mẫu")
     nq = sum(len(g.get('questions', [])) for g in d.get('grammar', []))
     print(f"{lid}: {len(words)} từ, {len(d.get('usage', []))} câu từ trong câu, {nq} câu ngữ pháp, "
-          f"{len(d.get('listening', []))} câu nghe, {len(r['questions']) if r else 0} câu đọc, viết: {'có' if w else 'không'}")
+          f"{len(d.get('listening', []))} câu nghe, {len(r['questions']) if r else 0} câu đọc, viết: {'có' if w else 'không'}"
+          + (f", {len(d['topik'])} câu TOPIK, {len(d.get('fillWriting', []))} bài viết điền" if d.get('topik') else ""))
 
 # Cảm nhận người học: chỉ đăng khi người gửi đã đồng ý.
 fb_path = ROOT / "data/cam-nhan.json"
