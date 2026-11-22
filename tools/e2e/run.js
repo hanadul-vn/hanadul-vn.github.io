@@ -333,7 +333,7 @@ async function noHScroll(page) {
 
   // ================= HỒI QUY =================
   for (const id of OLD) {
-    await tc(`R01-${id.slice(-2)}`, `Hồi quy ${id === 'sc1-00' ? 'Hangeul' : id.startsWith('sc2') ? lname(id) : 'Bài ' + (+id.slice(-2))} – Ôn đầy đủ vẫn làm hết, 100%, không lỗi JS`, async () => {
+    await tc(`R01-${id.startsWith('sc2') ? 'sc2-' : ''}${id.slice(-2)}`, `Hồi quy ${id === 'sc1-00' ? 'Hangeul' : id.startsWith('sc2') ? lname(id) : 'Bài ' + (+id.slice(-2))} – Ôn đầy đủ vẫn làm hết, 100%, không lỗi JS`, async () => {
       page.errors = [];
       const n = await startMode(page, id, 'full');
       const r = await playQuiz(page);
