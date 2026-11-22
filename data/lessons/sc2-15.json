@@ -1,0 +1,620 @@
+{
+  "id": "sc2-15",
+  "title": "Cuộc sống ở Hàn Quốc",
+  "ko": "한국 생활",
+  "goal": "Nói về việc thích nghi với cuộc sống ở Hàn Quốc, làm giấy tờ và tìm nhà; nói nhận được gì từ ai, nêu bối cảnh trước khi hỏi hoặc nhờ.",
+  "vocab": [
+    {
+      "group": "Thích nghi",
+      "words": [
+        [
+          "익숙하다",
+          "quen thuộc, quen"
+        ],
+        [
+          "익숙해지다",
+          "trở nên quen, quen dần"
+        ],
+        [
+          "적응하다",
+          "thích nghi, thích ứng"
+        ],
+        [
+          "낯설다",
+          "lạ lẫm, xa lạ"
+        ],
+        [
+          "향수병",
+          "bệnh nhớ nhà"
+        ],
+        [
+          "고민",
+          "nỗi lo, sự trăn trở"
+        ]
+      ]
+    },
+    {
+      "group": "Giấy tờ và ngân hàng",
+      "words": [
+        [
+          "외국인 등록증",
+          "thẻ đăng ký người nước ngoài"
+        ],
+        [
+          "출입국관리사무소",
+          "văn phòng quản lý xuất nhập cảnh"
+        ],
+        [
+          "현금 카드",
+          "thẻ rút tiền mặt"
+        ],
+        [
+          "통장",
+          "sổ tài khoản ngân hàng"
+        ],
+        [
+          "통장을 만들다",
+          "mở tài khoản ngân hàng"
+        ],
+        [
+          "환전하다",
+          "đổi tiền"
+        ],
+        [
+          "송금하다",
+          "chuyển tiền"
+        ]
+      ]
+    },
+    {
+      "group": "Tìm nhà",
+      "words": [
+        [
+          "자취방",
+          "phòng trọ tự nấu ăn"
+        ],
+        [
+          "원룸",
+          "phòng một gian (studio)"
+        ],
+        [
+          "룸메이트",
+          "bạn cùng phòng"
+        ],
+        [
+          "보증금",
+          "tiền đặt cọc"
+        ],
+        [
+          "월세",
+          "tiền thuê nhà hằng tháng"
+        ],
+        [
+          "관리비",
+          "phí quản lý"
+        ],
+        [
+          "가스 요금",
+          "tiền ga"
+        ],
+        [
+          "전기 요금",
+          "tiền điện"
+        ],
+        [
+          "집주인",
+          "chủ nhà"
+        ],
+        [
+          "부동산",
+          "văn phòng nhà đất"
+        ],
+        [
+          "이사하다",
+          "chuyển nhà"
+        ],
+        [
+          "계약하다",
+          "ký hợp đồng"
+        ],
+        [
+          "포함되다",
+          "được bao gồm"
+        ]
+      ]
+    },
+    {
+      "group": "Động từ bất quy tắc 르",
+      "words": [
+        [
+          "모르다",
+          "không biết"
+        ],
+        [
+          "부르다",
+          "gọi; hát"
+        ],
+        [
+          "다르다",
+          "khác"
+        ],
+        [
+          "기르다",
+          "nuôi; để (tóc)"
+        ],
+        [
+          "마르다",
+          "khô; gầy đi"
+        ],
+        [
+          "서두르다",
+          "vội vàng, khẩn trương"
+        ],
+        [
+          "자르다",
+          "cắt"
+        ]
+      ]
+    },
+    {
+      "group": "Từ khác",
+      "words": [
+        [
+          "궁금하다",
+          "thắc mắc, tò mò"
+        ],
+        [
+          "혹시",
+          "không biết… có…, liệu"
+        ],
+        [
+          "직접",
+          "trực tiếp"
+        ],
+        [
+          "따로",
+          "riêng"
+        ],
+        [
+          "아끼다",
+          "tiết kiệm, quý trọng"
+        ],
+        [
+          "신경 쓰다",
+          "để tâm, bận tâm"
+        ],
+        [
+          "생활비",
+          "chi phí sinh hoạt"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "에게서 · 한테서",
+      "title": "từ (ai đó): nhận, nghe, học… từ người khác",
+      "note": [
+        "Gắn sau danh từ chỉ người hoặc con vật: hành động đến TỪ người đó (받다, 듣다, 배우다, 빌리다, 전화가 오다…).",
+        "에게서 dùng nhiều trong văn viết, 한테서 dùng nhiều khi nói. Có thể bỏ 서: 친구한테 선물을 받았어요.",
+        "Người cần kính trọng: dùng 께 (선생님께 배웠어요).",
+        "Nơi chốn, tổ chức thì dùng 에서, không dùng 에게서: 회사에서 전화가 왔어요."
+      ],
+      "examples": [
+        [
+          "고향 친구한테서 소포가 왔어요.",
+          "Tôi nhận được bưu kiện từ bạn ở quê."
+        ],
+        [
+          "이 소식은 룸메이트에게서 들었어요.",
+          "Tin này tôi nghe từ bạn cùng phòng."
+        ],
+        [
+          "어머니께 전화를 받았어요.",
+          "Tôi nhận được điện thoại của mẹ."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "어제 친구___ 편지를 받았어요.",
+          "options": [
+            "한테서",
+            "에서",
+            "을",
+            "께서"
+          ],
+          "explain": "Nhận từ người (bạn) → 한테서."
+        },
+        {
+          "q": "이 이야기는 누구___ 들었어요?",
+          "options": [
+            "에게서",
+            "에서",
+            "을",
+            "이"
+          ],
+          "explain": "Nghe từ ai → 에게서."
+        },
+        {
+          "q": "할머니___ 용돈을 받았어요. (kính trọng)",
+          "options": [
+            "께",
+            "께서",
+            "에서",
+            "을"
+          ],
+          "explain": "Người cần kính trọng → 께 (không dùng 께서, đó là trợ từ chủ ngữ)."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "선생님한테서 책을 빌렸어요.",
+            "학교한테서 메일이 왔어요.",
+            "친구에서 선물을 받았어요.",
+            "동생한테서를 전화가 왔어요."
+          ],
+          "explain": "Người → 한테서; nơi chốn (학교) → 에서."
+        },
+        {
+          "q": "Nghĩa của \"고향 친구한테서 소포가 왔어요.\"",
+          "options": [
+            "Tôi nhận được bưu kiện từ bạn ở quê.",
+            "Tôi gửi bưu kiện cho bạn ở quê.",
+            "Bạn ở quê nhận bưu kiện của tôi.",
+            "Tôi mang bưu kiện về quê cho bạn."
+          ],
+          "explain": "N한테서 = từ N."
+        }
+      ]
+    },
+    {
+      "pattern": "-(으)ㄴ/는데",
+      "title": "nêu bối cảnh trước khi đề nghị, hỏi, nhờ",
+      "note": [
+        "Nối hai vế: vế trước nêu hoàn cảnh, thông tin nền; vế sau là đề nghị, câu hỏi, lời nhờ hoặc ý liên quan.",
+        "Động từ và 있다/없다: -는데 (가는데, 맛있는데). Tính từ: nguyên âm -ㄴ데 (바쁜데), phụ âm -은데 (좋은데). Danh từ: 인데 (학생인데).",
+        "Quá khứ: -았/었는데 (갔는데, 추웠는데). Gốc ㄹ bỏ ㄹ: 살다 → 사는데, 멀다 → 먼데.",
+        "Cũng dùng để nói hai ý trái ngược: 방은 넓은데 좀 비싸요."
+      ],
+      "examples": [
+        [
+          "한국어를 잘 모르는데 좀 도와주세요.",
+          "Tôi không giỏi tiếng Hàn lắm, giúp tôi với."
+        ],
+        [
+          "날씨가 좋은데 공원에 갈까요?",
+          "Trời đẹp quá, mình đi công viên nhé?"
+        ],
+        [
+          "어제 백화점에 갔는데 사람이 정말 많았어요.",
+          "Hôm qua tôi đi trung tâm thương mại, người đông thật."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "날씨가 ___ 산책할까요? (좋다)",
+          "options": [
+            "좋은데",
+            "좋는데",
+            "좋아는데",
+            "좋인데"
+          ],
+          "explain": "Tính từ tận cùng phụ âm → 좋은데."
+        },
+        {
+          "q": "지금 비가 ___ 우산 있어요? (오다)",
+          "options": [
+            "오는데",
+            "온데",
+            "오은데",
+            "와는데"
+          ],
+          "explain": "Động từ hiện tại → 오는데."
+        },
+        {
+          "q": "제가 이 동네는 처음___ 길 좀 가르쳐 주세요.",
+          "options": [
+            "인데",
+            "이는데",
+            "은데",
+            "는데"
+          ],
+          "explain": "Danh từ (처음) + 인데."
+        },
+        {
+          "q": "어제 부동산에 ___ 방이 없었어요. (가다)",
+          "options": [
+            "갔는데",
+            "간데",
+            "가는데",
+            "갔은데"
+          ],
+          "explain": "Việc đã xảy ra (어제) → 갔는데."
+        },
+        {
+          "q": "Nghĩa của \"집이 좀 먼데 괜찮아요?\"",
+          "options": [
+            "Nhà hơi xa, có được không?",
+            "Vì nhà xa nên không được.",
+            "Nhà gần nên ổn.",
+            "Nhà có xa không?"
+          ],
+          "explain": "먼데 (멀다) nêu bối cảnh rồi hỏi."
+        }
+      ]
+    },
+    {
+      "pattern": "Bất quy tắc 르",
+      "title": "모르다, 부르다, 다르다: 르 + 아/어 → ㄹ라/ㄹ러",
+      "note": [
+        "Động từ, tính từ có gốc tận cùng 르 khi gặp -아/어: bỏ ㅡ và thêm ㄹ vào âm trước.",
+        "Nguyên âm trước 르 là ㅏ/ㅗ → ㄹ라: 모르다 → 몰라요, 다르다 → 달라요, 자르다 → 잘라요.",
+        "Nguyên âm khác → ㄹ러: 부르다 → 불러요, 기르다 → 길러요, 서두르다 → 서둘러요.",
+        "Gặp phụ âm thì giữ nguyên: 모르고, 다른, 부르면. 따르다, 들르다 theo quy tắc ㅡ: 따라요, 들러요."
+      ],
+      "examples": [
+        [
+          "저는 그 사람 이름을 몰라요.",
+          "Tôi không biết tên người đó."
+        ],
+        [
+          "한국 생활은 베트남 생활하고 많이 달라요.",
+          "Cuộc sống ở Hàn khác cuộc sống ở Việt Nam nhiều."
+        ],
+        [
+          "노래방에서 한국 노래를 불렀어요.",
+          "Tôi đã hát bài hát Hàn Quốc ở phòng karaoke."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "저는 그 사람 전화번호를 ___. (모르다)",
+          "options": [
+            "몰라요",
+            "모라요",
+            "모르어요",
+            "몰르어요"
+          ],
+          "explain": "모르다 → 몰라요 (bỏ ㅡ, thêm ㄹ)."
+        },
+        {
+          "q": "노래방에서 노래를 ___. (부르다, quá khứ)",
+          "options": [
+            "불렀어요",
+            "부렀어요",
+            "부르었어요",
+            "불랐어요"
+          ],
+          "explain": "부르다 → 불러 → 불렀어요."
+        },
+        {
+          "q": "한국 음식은 베트남 음식하고 맛이 ___. (다르다)",
+          "options": [
+            "달라요",
+            "다라요",
+            "다르어요",
+            "달러요"
+          ],
+          "explain": "다르다 → 달라요."
+        },
+        {
+          "q": "미용실에서 머리를 짧게 ___. (자르다, quá khứ)",
+          "options": [
+            "잘랐어요",
+            "자랐어요",
+            "자르었어요",
+            "잘렀어요"
+          ],
+          "explain": "자르다 → 잘랐어요 (자랐어요 là \"đã lớn lên\" của 자라다)."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "늦어서 서둘러서 나갔어요.",
+            "늦어서 서두러서 나갔어요.",
+            "늦어서 서두르어서 나갔어요.",
+            "늦어서 서둘라서 나갔어요."
+          ],
+          "explain": "서두르다 → 서둘러서."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "한국에 온 지 석 달이 지나서 이제 한국 생활에 ___.",
+      "options": [
+        "익숙해졌어요",
+        "낯설었어요",
+        "환전했어요",
+        "계약했어요"
+      ],
+      "explain": "Ba tháng rồi nên đã quen → 익숙해지다."
+    },
+    {
+      "q": "외국인은 한국에 온 후에 ___을 만들어야 해요.",
+      "options": [
+        "외국인 등록증",
+        "가스 요금",
+        "자취방",
+        "향수병"
+      ],
+      "explain": "Giấy tờ người nước ngoài phải làm → 외국인 등록증."
+    },
+    {
+      "q": "은행에서 ___ 현금 카드도 받았어요.",
+      "options": [
+        "통장을 만들고",
+        "이사하고",
+        "서두르고",
+        "적응하고"
+      ],
+      "explain": "Ở ngân hàng mở tài khoản → 통장을 만들다."
+    },
+    {
+      "q": "공항에서 베트남 돈을 한국 돈으로 ___.",
+      "options": [
+        "환전했어요",
+        "송금했어요",
+        "계약했어요",
+        "포함됐어요"
+      ],
+      "explain": "Đổi tiền → 환전하다."
+    },
+    {
+      "q": "이 방은 ___이 천만 원이고 월세는 오십만 원이에요.",
+      "options": [
+        "보증금",
+        "관리비",
+        "생활비",
+        "고민"
+      ],
+      "explain": "Khoản tiền cọc khi thuê → 보증금."
+    },
+    {
+      "q": "월세에 인터넷 요금이 ___ 있어요?",
+      "options": [
+        "포함되어",
+        "익숙해",
+        "서둘러",
+        "낯설어"
+      ],
+      "explain": "Có bao gồm không → 포함되다."
+    },
+    {
+      "q": "방을 구하러 학교 앞 ___에 갔어요.",
+      "options": [
+        "부동산",
+        "출입국관리사무소",
+        "룸메이트",
+        "통장"
+      ],
+      "explain": "Nơi giới thiệu nhà cho thuê → 부동산."
+    },
+    {
+      "q": "매달 부모님께 돈을 ___.",
+      "options": [
+        "송금해요",
+        "환전해요",
+        "아껴요",
+        "계약해요"
+      ],
+      "explain": "Gửi tiền cho người khác → 송금하다."
+    },
+    {
+      "q": "___ 이 근처에 싼 원룸이 있어요?",
+      "options": [
+        "혹시",
+        "따로",
+        "직접",
+        "벌써"
+      ],
+      "explain": "Hỏi lịch sự \"không biết có… không\" → 혹시."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 한국 생활은 어때요? 나: 처음에는 모든 것이 낯설었는데 지금은 많이 익숙해졌어요.",
+      "options": [
+        "Đã quen nhiều rồi",
+        "Vẫn rất lạ lẫm",
+        "Muốn về nước ngay",
+        "Rất cô đơn"
+      ],
+      "explain": "지금은 많이 익숙해졌어요 = bây giờ đã quen nhiều.",
+      "q": "Bây giờ người nói thấy cuộc sống ở Hàn thế nào?"
+    },
+    {
+      "listen": "어제 고향 친구한테서 전화가 왔어요. 다음 달에 한국에 놀러 올 거예요.",
+      "options": [
+        "Bạn ở quê",
+        "Chủ nhà",
+        "Bạn cùng phòng",
+        "Nhân viên ngân hàng"
+      ],
+      "explain": "고향 친구한테서 전화가 왔어요.",
+      "q": "Hôm qua ai gọi điện cho người nói?"
+    },
+    {
+      "listen": "이 원룸은 월세가 사십만 원인데 관리비는 따로 내야 해요.",
+      "options": [
+        "Phí quản lý",
+        "Tiền thuê tháng",
+        "Tiền đặt cọc",
+        "Tiền điện thoại"
+      ],
+      "explain": "관리비는 따로 내야 해요.",
+      "q": "Điều gì phải trả riêng?"
+    },
+    {
+      "listen": "가: 이 단어 뜻을 알아요? 나: 아니요, 저도 몰라요. 선생님께 물어볼까요?",
+      "options": [
+        "Hỏi thầy cô",
+        "Tra từ điển",
+        "Hỏi bạn cùng phòng",
+        "Bỏ qua từ đó"
+      ],
+      "explain": "선생님께 물어볼까요? = hỏi thầy cô nhé?",
+      "q": "Người nói muốn làm gì?"
+    },
+    {
+      "listen": "머리가 너무 길어서 어제 미용실에서 짧게 잘랐어요.",
+      "options": [
+        "Cắt tóc ngắn",
+        "Nhuộm tóc",
+        "Để tóc dài",
+        "Gội đầu"
+      ],
+      "explain": "짧게 잘랐어요 = cắt ngắn.",
+      "q": "Hôm qua người nói đã làm gì?"
+    }
+  ],
+  "reading": {
+    "passage": "저는 한국에 온 지 두 달이 됐어요. 처음에는 기숙사에서 살았는데 지난주에 학교 근처 원룸으로 이사했어요. 보증금은 오백만 원이고 월세는 사십만 원이에요. 월세에 인터넷 요금은 포함되어 있는데 가스 요금과 전기 요금은 따로 내야 해요. 그래서 생활비를 아끼고 있어요. 혼자 살아서 가끔 외로운데 고향 친구들한테서 자주 연락이 와서 괜찮아요.",
+    "passageVi": "Tôi đến Hàn Quốc được hai tháng rồi. Lúc đầu tôi sống ở ký túc xá, tuần trước tôi đã chuyển sang phòng studio gần trường. Tiền cọc là năm triệu won, tiền thuê tháng là bốn trăm nghìn won. Tiền thuê đã bao gồm tiền internet, còn tiền ga và tiền điện phải trả riêng. Vì vậy tôi đang tiết kiệm chi phí sinh hoạt. Sống một mình nên thỉnh thoảng thấy cô đơn, nhưng bạn bè ở quê hay liên lạc nên cũng ổn.",
+    "questions": [
+      {
+        "q": "Khoản nào ĐÃ bao gồm trong tiền thuê tháng?",
+        "options": [
+          "Tiền internet",
+          "Tiền ga",
+          "Tiền điện",
+          "Tiền đặt cọc"
+        ],
+        "explain": "월세에 인터넷 요금은 포함되어 있는데 가스 요금과 전기 요금은 따로 내야 해요."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Tuần trước người viết đã chuyển nhà",
+          "Người viết đến Hàn được hai năm",
+          "Người viết đang sống ở ký túc xá",
+          "Bạn ở quê không liên lạc với người viết"
+        ],
+        "explain": "지난주에 학교 근처 원룸으로 이사했어요."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu về cuộc sống ở một nơi mới (thành phố mới, nhà mới, nước ngoài). Dùng 한테서/에게서, -(으)ㄴ/는데 và một động từ bất quy tắc 르.",
+    "samples": [
+      [
+        "처음에는 모든 것이 낯설었는데 지금은 익숙해졌어요.",
+        "Lúc đầu mọi thứ đều lạ lẫm, bây giờ đã quen rồi."
+      ],
+      [
+        "어제 어머니한테서 소포를 받았어요.",
+        "Hôm qua tôi nhận được bưu kiện từ mẹ."
+      ],
+      [
+        "이 동네는 조용한데 집이 좀 멀어요.",
+        "Khu này yên tĩnh nhưng nhà hơi xa."
+      ],
+      [
+        "한국 음식은 베트남 음식하고 맛이 달라요.",
+        "Đồ ăn Hàn có vị khác đồ ăn Việt."
+      ]
+    ],
+    "tips": "Từ ai: người + 한테서/에게서 (kính trọng: 께), nơi chốn + 에서. Nêu bối cảnh: động từ -는데, tính từ -(으)ㄴ데, danh từ 인데, quá khứ -았/었는데. Bất quy tắc 르: 모르다 → 몰라요, 부르다 → 불러요, 다르다 → 달라요."
+  }
+}
