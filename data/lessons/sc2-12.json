@@ -1,0 +1,607 @@
+{
+  "id": "sc2-12",
+  "title": "Nơi công cộng",
+  "ko": "공공장소",
+  "goal": "Nói về nơi công cộng và quy tắc ở đó: cấm đoán, xin lỗi, làm hai việc cùng lúc và trả lời ngắn lịch sự.",
+  "vocab": [
+    {
+      "group": "Nơi công cộng",
+      "words": [
+        [
+          "공공장소",
+          "nơi công cộng"
+        ],
+        [
+          "연주회장",
+          "phòng hòa nhạc"
+        ],
+        [
+          "공중목욕탕",
+          "nhà tắm công cộng"
+        ],
+        [
+          "병실",
+          "phòng bệnh"
+        ],
+        [
+          "동물원",
+          "sở thú"
+        ],
+        [
+          "놀이공원",
+          "công viên giải trí"
+        ],
+        [
+          "전시회",
+          "buổi triển lãm"
+        ]
+      ]
+    },
+    {
+      "group": "Quy tắc nơi công cộng",
+      "words": [
+        [
+          "질서를 지키다",
+          "giữ trật tự"
+        ],
+        [
+          "조용히 하다",
+          "giữ yên lặng"
+        ],
+        [
+          "방해하다",
+          "làm phiền, cản trở"
+        ],
+        [
+          "금연하다",
+          "không hút thuốc (cấm hút thuốc)"
+        ],
+        [
+          "담배를 피우다",
+          "hút thuốc lá"
+        ],
+        [
+          "개를 데려가다",
+          "dắt chó theo"
+        ],
+        [
+          "쓰레기",
+          "rác"
+        ],
+        [
+          "버리다",
+          "vứt, bỏ"
+        ],
+        [
+          "줄을 서다",
+          "xếp hàng"
+        ],
+        [
+          "규칙",
+          "quy tắc"
+        ],
+        [
+          "출입",
+          "sự ra vào"
+        ],
+        [
+          "뒷문",
+          "cửa sau"
+        ],
+        [
+          "반납",
+          "việc trả lại (sách, đồ mượn)"
+        ],
+        [
+          "면회",
+          "việc vào thăm (bệnh nhân…)"
+        ],
+        [
+          "절대로",
+          "tuyệt đối (không)"
+        ],
+        [
+          "위험하다",
+          "nguy hiểm"
+        ],
+        [
+          "미끄럽다",
+          "trơn trượt"
+        ]
+      ]
+    },
+    {
+      "group": "Xin lỗi",
+      "words": [
+        [
+          "사과하다",
+          "xin lỗi"
+        ],
+        [
+          "실수",
+          "sự sơ suất, lỗi"
+        ],
+        [
+          "잘못하다",
+          "làm sai"
+        ]
+      ]
+    },
+    {
+      "group": "Từ khác",
+      "words": [
+        [
+          "강",
+          "sông"
+        ],
+        [
+          "그림",
+          "bức tranh"
+        ],
+        [
+          "작품",
+          "tác phẩm"
+        ],
+        [
+          "피아노",
+          "đàn piano"
+        ],
+        [
+          "연주회",
+          "buổi hòa nhạc"
+        ],
+        [
+          "박수",
+          "tiếng vỗ tay"
+        ],
+        [
+          "환자",
+          "bệnh nhân"
+        ],
+        [
+          "입원하다",
+          "nhập viện"
+        ],
+        [
+          "이륙하다",
+          "(máy bay) cất cánh"
+        ],
+        [
+          "이번",
+          "lần này"
+        ],
+        [
+          "왜냐하면",
+          "bởi vì, đó là vì"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "-(으)면서",
+      "title": "vừa … vừa … (hai việc cùng lúc)",
+      "note": [
+        "Gắn vào gốc động từ: hai hành động diễn ra cùng lúc, cùng một chủ ngữ.",
+        "Nguyên âm hoặc ㄹ: -면서 (마시면서, 만들면서); phụ âm: -으면서 (먹으면서).",
+        "Thì quá khứ chỉ chia ở cuối câu: 먹으면서 봤어요 (✗ 먹었으면서).",
+        "Bất quy tắc ㄷ: 듣다 → 들으면서, 걷다 → 걸으면서."
+      ],
+      "examples": [
+        [
+          "음악을 들으면서 공부해요.",
+          "Tôi vừa nghe nhạc vừa học."
+        ],
+        [
+          "운전하면서 전화하면 안 돼요.",
+          "Không được vừa lái xe vừa gọi điện."
+        ],
+        [
+          "피아노를 치면서 노래를 했어요.",
+          "Tôi vừa đánh piano vừa hát."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "밥을 ___ 텔레비전을 봐요.",
+          "options": [
+            "먹으면서",
+            "먹면서",
+            "먹어면서",
+            "먹으며서"
+          ],
+          "explain": "먹다 tận cùng phụ âm → 먹으면서."
+        },
+        {
+          "q": "커피를 ___ 친구와 이야기했어요.",
+          "options": [
+            "마시면서",
+            "마셨면서",
+            "마시으면서",
+            "마시서면"
+          ],
+          "explain": "마시다 tận cùng nguyên âm → 마시면서; quá khứ chia ở cuối câu."
+        },
+        {
+          "q": "공원을 ___ 생각을 해요. (걷다)",
+          "options": [
+            "걸으면서",
+            "걷으면서",
+            "걷면서",
+            "걸면서"
+          ],
+          "explain": "Bất quy tắc ㄷ: 걷다 → 걸으면서."
+        },
+        {
+          "q": "Nghĩa của \"그 가수는 춤을 추면서 노래해요.\"",
+          "options": [
+            "Ca sĩ đó vừa nhảy vừa hát.",
+            "Ca sĩ đó nhảy xong rồi hát.",
+            "Ca sĩ đó nhảy hoặc hát.",
+            "Ca sĩ đó muốn nhảy và hát."
+          ],
+          "explain": "-면서 = vừa … vừa …"
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "저는 음악을 들으면서 청소를 해요.",
+            "저는 음악을 들었으면서 청소를 했어요.",
+            "저는 음악을 듣으면서 청소를 해요.",
+            "저는 음악을 듣면서 청소를 해요."
+          ],
+          "explain": "듣다 → 들으면서; không chia quá khứ trước -면서."
+        }
+      ]
+    },
+    {
+      "pattern": "요 (trả lời ngắn)",
+      "title": "trả lời ngắn mà vẫn lịch sự: 집에요, 친구하고요",
+      "note": [
+        "Gắn 요 sau danh từ, trợ từ hoặc đuôi nối câu để trả lời ngắn, không cần nhắc lại cả câu.",
+        "Danh từ tận cùng phụ âm vẫn chỉ thêm 요: 학교요, 도서관에서요.",
+        "Trả lời lý do: -아/어서요 (아파서요, 차가 밀려서요).",
+        "Cũng dùng để hỏi lại: 저요? (Tôi ạ?)"
+      ],
+      "examples": [
+        [
+          "가: 어디에 가요? 나: 도서관에요.",
+          "A: Bạn đi đâu đấy? B: Đến thư viện ạ."
+        ],
+        [
+          "가: 왜 늦었어요? 나: 차가 밀려서요.",
+          "A: Sao bạn đến muộn? B: Vì kẹt xe ạ."
+        ],
+        [
+          "가: 누구하고 갔어요? 나: 친구하고요.",
+          "A: Bạn đi với ai? B: Với bạn ạ."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "가: 어제 어디에 있었어요? 나: ___.",
+          "options": [
+            "집에요",
+            "집이요에",
+            "집에서이요",
+            "집요에"
+          ],
+          "explain": "Danh từ + trợ từ + 요 → 집에요."
+        },
+        {
+          "q": "가: 왜 학교에 안 왔어요? 나: 감기에 ___.",
+          "options": [
+            "걸려서요",
+            "걸려요서",
+            "걸리어서요요",
+            "걸렸서요"
+          ],
+          "explain": "Lý do: -아/어서 + 요 → 걸려서요."
+        },
+        {
+          "q": "가: 이 가방 어디에서 샀어요? 나: ___.",
+          "options": [
+            "시장에서요",
+            "시장에서이에요",
+            "시장이요에서",
+            "시장에요서"
+          ],
+          "explain": "시장에서 + 요."
+        },
+        {
+          "q": "가: 몇 시에 만날까요? 나: ___.",
+          "options": [
+            "세 시에요",
+            "세 시예요에",
+            "세 시에이요",
+            "세 시요에"
+          ],
+          "explain": "세 시에 + 요."
+        },
+        {
+          "q": "Nghĩa của \"가: 누가 피아노를 쳤어요? 나: 제 동생이요.\" — B nói gì?",
+          "options": [
+            "Em tôi ạ.",
+            "Em tôi đang chơi piano.",
+            "Em tôi không chơi.",
+            "Tôi không biết."
+          ],
+          "explain": "동생이 + 요 = (Là) em tôi ạ."
+        }
+      ]
+    },
+    {
+      "pattern": "-(으)면 안 되다",
+      "title": "không được … (cấm đoán)",
+      "note": [
+        "Gốc động từ + (으)면 안 돼요: không được làm việc đó.",
+        "Nguyên âm hoặc ㄹ: -면 안 되다 (피우면, 떠들면); phụ âm: -으면 안 되다 (먹으면).",
+        "Ngược nghĩa với -아/어도 되다 (bài 2: được phép). Hỏi xin phép: -아/어도 돼요? → 네, -아/어도 돼요 / 아니요, -(으)면 안 돼요.",
+        "Nhấn mạnh: 절대로 -(으)면 안 돼요. Viết đúng: 안 돼요 (không viết 안 되요)."
+      ],
+      "examples": [
+        [
+          "미술관에서 그림에 손을 대면 안 돼요.",
+          "Ở bảo tàng mỹ thuật không được chạm tay vào tranh."
+        ],
+        [
+          "병실에서 큰 소리로 떠들면 안 돼요.",
+          "Trong phòng bệnh không được làm ồn."
+        ],
+        [
+          "여기에서 담배를 피우면 안 됩니다.",
+          "Không được hút thuốc ở đây."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "도서관에서 음식을 ___.",
+          "options": [
+            "먹으면 안 돼요",
+            "먹면 안 돼요",
+            "먹어면 안 돼요",
+            "먹으면 안 되요"
+          ],
+          "explain": "먹다 tận cùng phụ âm → 먹으면; viết đúng là 안 돼요."
+        },
+        {
+          "q": "공연 중에 사진을 ___.",
+          "options": [
+            "찍으면 안 돼요",
+            "찍면 안 돼요",
+            "찍어면 안 돼요",
+            "찍으면 안 되어요요"
+          ],
+          "explain": "찍다 tận cùng phụ âm → 찍으면 안 돼요."
+        },
+        {
+          "q": "가: 여기에 개를 데려가도 돼요? 나: 아니요, ___.",
+          "options": [
+            "데려가면 안 돼요",
+            "데려가도 돼요",
+            "데려가면 돼요",
+            "데려가세요"
+          ],
+          "explain": "Trả lời KHÔNG → -(으)면 안 돼요."
+        },
+        {
+          "q": "Biển \"금연\" có nghĩa là gì?",
+          "options": [
+            "여기에서 담배를 피우면 안 돼요.",
+            "여기에서 담배를 피워도 돼요.",
+            "여기에서 담배를 사야 해요.",
+            "여기에서 담배를 팔아요."
+          ],
+          "explain": "금연 = cấm hút thuốc."
+        },
+        {
+          "q": "Nghĩa của \"박물관에서 뛰면 안 돼요.\"",
+          "options": [
+            "Không được chạy trong bảo tàng.",
+            "Hãy chạy trong bảo tàng.",
+            "Được phép chạy trong bảo tàng.",
+            "Phải chạy trong bảo tàng."
+          ],
+          "explain": "-(으)면 안 되다 = không được."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "도서관에서 빌린 책을 내일까지 ___해야 해요.",
+      "options": [
+        "반납",
+        "면회",
+        "출입",
+        "박수"
+      ],
+      "explain": "Trả sách đã mượn → 반납."
+    },
+    {
+      "q": "병원에 입원한 친구를 보러 갔어요. ___ 시간은 저녁 일곱 시까지예요.",
+      "options": [
+        "면회",
+        "반납",
+        "이륙",
+        "실수"
+      ],
+      "explain": "Giờ vào thăm bệnh nhân → 면회."
+    },
+    {
+      "q": "비행기가 곧 ___. 휴대폰을 꺼 주세요.",
+      "options": [
+        "이륙해요",
+        "입원해요",
+        "방해해요",
+        "반납해요"
+      ],
+      "explain": "Máy bay sắp cất cánh → 이륙하다."
+    },
+    {
+      "q": "앞문이 닫혀서 ___으로 나갔어요.",
+      "options": [
+        "뒷문",
+        "병실",
+        "강",
+        "작품"
+      ],
+      "explain": "Cửa trước đóng → đi ra cửa sau."
+    },
+    {
+      "q": "연주회가 끝나고 사람들이 크게 ___를 쳤어요.",
+      "options": [
+        "박수",
+        "그림",
+        "규칙",
+        "쓰레기"
+      ],
+      "explain": "박수를 치다 = vỗ tay."
+    },
+    {
+      "q": "다른 사람이 공부하고 있어요. 공부하는 사람을 ___ 마세요.",
+      "options": [
+        "방해하지",
+        "반납하지",
+        "줄을 서지",
+        "입원하지"
+      ],
+      "explain": "Đừng làm phiền → 방해하지 마세요."
+    },
+    {
+      "q": "버스를 탈 때 ___. 먼저 온 사람이 먼저 타요.",
+      "options": [
+        "줄을 서요",
+        "담배를 피워요",
+        "떠들어요",
+        "금연해요"
+      ],
+      "explain": "Người đến trước lên trước → xếp hàng."
+    },
+    {
+      "q": "비가 와서 바닥이 ___. 조심하세요.",
+      "options": [
+        "미끄러워요",
+        "조용해요",
+        "부지런해요",
+        "통통해요"
+      ],
+      "explain": "Mưa → sàn trơn (미끄럽다, bất quy tắc ㅂ)."
+    },
+    {
+      "q": "제가 ___를 했어요. 정말 죄송합니다.",
+      "options": [
+        "실수",
+        "박수",
+        "출입",
+        "규칙"
+      ],
+      "explain": "Xin lỗi vì sơ suất → 실수."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "여기는 미술관이에요. 작품에 손을 대면 안 돼요.",
+      "options": [
+        "Chạm tay vào tác phẩm",
+        "Chụp ảnh",
+        "Nói chuyện nhỏ",
+        "Mua vé"
+      ],
+      "explain": "작품에 손을 대면 안 돼요 = không được chạm vào tác phẩm.",
+      "q": "Ở bảo tàng mỹ thuật không được làm gì?"
+    },
+    {
+      "listen": "가: 어제 왜 연주회에 안 왔어요? 나: 일이 많아서요.",
+      "options": [
+        "Vì nhiều việc",
+        "Vì bị ốm",
+        "Vì không có vé",
+        "Vì quên mất"
+      ],
+      "explain": "일이 많아서요 = vì nhiều việc ạ.",
+      "q": "Vì sao người nói không đến buổi hòa nhạc?"
+    },
+    {
+      "listen": "저는 강을 보면서 산책하는 것을 좋아해요.",
+      "options": [
+        "Vừa ngắm sông vừa đi dạo",
+        "Bơi ở sông",
+        "Đi dạo xong rồi ngắm sông",
+        "Ở nhà, không đi dạo"
+      ],
+      "explain": "-(으)면서 = vừa … vừa …",
+      "q": "Người nói thích làm gì?"
+    },
+    {
+      "listen": "공중목욕탕에서는 먼저 몸을 씻고 탕에 들어가야 해요.",
+      "options": [
+        "Tắm rửa cơ thể trước",
+        "Mua đồ uống",
+        "Xếp hàng",
+        "Tắt điện thoại"
+      ],
+      "explain": "먼저 몸을 씻고 = rửa người trước.",
+      "q": "Ở nhà tắm công cộng phải làm gì trước?"
+    },
+    {
+      "listen": "죄송합니다. 이번에는 제가 잘못했어요. 다시는 늦지 않을게요.",
+      "options": [
+        "Xin lỗi và hứa không đến muộn nữa",
+        "Cảm ơn vì được giúp đỡ",
+        "Rủ đi chơi lần sau",
+        "Hỏi đường"
+      ],
+      "explain": "잘못했어요 = tôi đã sai; 늦지 않을게요 = sẽ không muộn nữa.",
+      "q": "Người nói đang làm gì?"
+    }
+  ],
+  "reading": {
+    "passage": "한국의 공공장소에는 지켜야 하는 규칙이 있어요. 지하철에서는 큰 소리로 전화하면 안 돼요. 왜냐하면 다른 사람을 방해하기 때문이에요. 버스나 지하철을 탈 때는 줄을 서야 해요. 공원에서 쓰레기를 버리면 안 되고, 개를 데려갈 때는 조심해야 해요. 그리고 건물 안에서는 담배를 피우면 안 돼요. 모두 이런 규칙을 지키면 기분이 좋아요.",
+    "passageVi": "Ở nơi công cộng của Hàn Quốc có những quy tắc phải giữ. Trên tàu điện ngầm không được gọi điện to tiếng. Bởi vì như vậy làm phiền người khác. Khi lên xe buýt hay tàu điện ngầm phải xếp hàng. Ở công viên không được vứt rác, và khi dắt chó theo thì phải cẩn thận. Ngoài ra không được hút thuốc trong tòa nhà. Nếu mọi người đều giữ những quy tắc này thì ai cũng thấy dễ chịu.",
+    "questions": [
+      {
+        "q": "Vì sao không được gọi điện to trên tàu điện ngầm?",
+        "options": [
+          "Vì làm phiền người khác",
+          "Vì sóng điện thoại yếu",
+          "Vì gọi điện tốn tiền",
+          "Vì tàu điện ngầm rất ồn"
+        ],
+        "explain": "다른 사람을 방해하기 때문이에요."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Khi lên xe buýt phải xếp hàng",
+          "Được hút thuốc trong tòa nhà",
+          "Có thể vứt rác ở công viên",
+          "Tuyệt đối không được dắt chó vào công viên"
+        ],
+        "explain": "버스나 지하철을 탈 때는 줄을 서야 해요. Dắt chó chỉ cần cẩn thận."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu giới thiệu quy tắc ở một nơi công cộng (thư viện, bảo tàng, rạp phim…). Dùng -(으)면 안 되다, -(으)면서 và câu trả lời ngắn với 요.",
+    "samples": [
+      [
+        "도서관에서는 떠들면 안 돼요.",
+        "Ở thư viện không được làm ồn."
+      ],
+      [
+        "음식을 먹으면서 책을 읽으면 안 돼요.",
+        "Không được vừa ăn vừa đọc sách."
+      ],
+      [
+        "책은 일주일 후에 반납해야 해요.",
+        "Sách phải trả lại sau một tuần."
+      ],
+      [
+        "가: 어디에서 책을 반납해요? 나: 1층에서요.",
+        "A: Trả sách ở đâu ạ? B: Ở tầng 1 ạ."
+      ]
+    ],
+    "tips": "Cấm đoán: gốc + (으)면 안 돼요 (viết 안 돼요, không viết 안 되요). Hai việc cùng lúc: -(으)면서, quá khứ chia ở cuối câu; 듣다 → 들으면서. Trả lời ngắn: danh từ/trợ từ + 요 (1층에서요), lý do -아/어서요."
+  }
+}

@@ -1,0 +1,636 @@
+{
+  "id": "sc2-10",
+  "title": "Ngoại hình",
+  "ko": "외모",
+  "goal": "Miêu tả ngoại hình, màu sắc, trang phục; nói về sự thay đổi và giải thích lý do.",
+  "vocab": [
+    {
+      "group": "Kiểu tóc",
+      "words": [
+        [
+          "긴 머리",
+          "tóc dài"
+        ],
+        [
+          "짧은 머리",
+          "tóc ngắn"
+        ],
+        [
+          "단발머리",
+          "tóc ngắn ngang cằm"
+        ],
+        [
+          "파마머리",
+          "tóc uốn"
+        ],
+        [
+          "생머리",
+          "tóc thẳng tự nhiên"
+        ]
+      ]
+    },
+    {
+      "group": "Dáng người, vẻ ngoài",
+      "words": [
+        [
+          "통통하다",
+          "mũm mĩm, đầy đặn"
+        ],
+        [
+          "멋있다",
+          "có phong cách, ngầu"
+        ],
+        [
+          "귀엽다",
+          "dễ thương"
+        ],
+        [
+          "닮다",
+          "giống (ai đó)"
+        ],
+        [
+          "키가 크다",
+          "cao (người)"
+        ],
+        [
+          "키가 작다",
+          "thấp (người)"
+        ],
+        [
+          "살이 찌다",
+          "tăng cân, béo lên"
+        ],
+        [
+          "살이 빠지다",
+          "giảm cân, gầy đi"
+        ],
+        [
+          "다이어트",
+          "việc ăn kiêng"
+        ],
+        [
+          "수염",
+          "râu"
+        ],
+        [
+          "눈썹",
+          "lông mày"
+        ],
+        [
+          "피부",
+          "làn da"
+        ]
+      ]
+    },
+    {
+      "group": "Màu sắc",
+      "words": [
+        [
+          "빨간색",
+          "màu đỏ"
+        ],
+        [
+          "노란색",
+          "màu vàng"
+        ],
+        [
+          "파란색",
+          "màu xanh dương"
+        ],
+        [
+          "하얀색",
+          "màu trắng"
+        ],
+        [
+          "까만색",
+          "màu đen"
+        ],
+        [
+          "녹색",
+          "màu xanh lá"
+        ],
+        [
+          "갈색",
+          "màu nâu"
+        ]
+      ]
+    },
+    {
+      "group": "Mặc, đeo",
+      "words": [
+        [
+          "끼다",
+          "đeo (găng tay, nhẫn, kính)"
+        ],
+        [
+          "메다",
+          "đeo (ba lô) trên vai"
+        ],
+        [
+          "안경",
+          "kính mắt"
+        ],
+        [
+          "청바지",
+          "quần bò (jeans)"
+        ],
+        [
+          "원피스",
+          "váy liền"
+        ],
+        [
+          "블라우스",
+          "áo sơ mi nữ"
+        ],
+        [
+          "양복",
+          "bộ com-lê nam"
+        ],
+        [
+          "코트",
+          "áo khoác dài, măng tô"
+        ],
+        [
+          "스웨터",
+          "áo len"
+        ],
+        [
+          "운동복",
+          "quần áo thể thao"
+        ],
+        [
+          "가죽",
+          "da thuộc"
+        ],
+        [
+          "주머니",
+          "túi (trên áo, quần)"
+        ],
+        [
+          "지퍼",
+          "khóa kéo"
+        ]
+      ]
+    },
+    {
+      "group": "Từ khác",
+      "words": [
+        [
+          "성격",
+          "tính cách"
+        ],
+        [
+          "착하다",
+          "hiền, tốt bụng"
+        ],
+        [
+          "부지런하다",
+          "chăm chỉ, siêng năng"
+        ],
+        [
+          "활발하다",
+          "hoạt bát"
+        ],
+        [
+          "변하다",
+          "thay đổi, biến đổi"
+        ],
+        [
+          "선풍기",
+          "quạt máy"
+        ],
+        [
+          "열쇠고리",
+          "móc chìa khóa"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "-아/어지다",
+      "title": "trở nên …, … hơn (thay đổi trạng thái)",
+      "note": [
+        "Gắn sau gốc tính từ để nói trạng thái thay đổi: 예쁘다 → 예뻐지다 (trở nên xinh hơn).",
+        "Gốc có ㅏ/ㅗ → -아지다 (많아지다, 좋아지다); còn lại → -어지다 (길어지다); 하다 → 해지다 (건강해지다).",
+        "Thường nói ở quá khứ -아/어졌어요 để kể đã thay đổi so với trước.",
+        "Hay đi cùng 점점 (dần dần), 요즘, ~보다 더."
+      ],
+      "examples": [
+        [
+          "다이어트를 해서 얼굴이 날씬해졌어요.",
+          "Ăn kiêng nên khuôn mặt đã thon gọn hơn."
+        ],
+        [
+          "머리가 많이 길어졌네요.",
+          "Tóc dài ra nhiều quá nhỉ."
+        ],
+        [
+          "봄이 와서 날씨가 점점 따뜻해져요.",
+          "Xuân đến nên thời tiết dần ấm lên."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "운동을 해서 몸이 ___.",
+          "options": [
+            "건강해졌어요",
+            "건강하졌어요",
+            "건강했어졌요",
+            "건강하게졌어요"
+          ],
+          "explain": "하다 → 해지다: 건강해졌어요."
+        },
+        {
+          "q": "머리를 잘라서 머리가 ___.",
+          "options": [
+            "짧아졌어요",
+            "짧어졌어요",
+            "짧아줬어요",
+            "짧았어요졌"
+          ],
+          "explain": "짧다 có ㅏ → 짧아지다."
+        },
+        {
+          "q": "Nghĩa của \"한국어 공부가 점점 재미있어져요.\"",
+          "options": [
+            "Việc học tiếng Hàn ngày càng thú vị.",
+            "Học tiếng Hàn đã từng rất thú vị.",
+            "Tôi muốn học tiếng Hàn cho vui.",
+            "Học tiếng Hàn không thú vị."
+          ],
+          "explain": "점점 + -어지다 = ngày càng …"
+        },
+        {
+          "q": "가: 오랜만이에요. 나: 와, 정말 ___. 다이어트했어요?",
+          "options": [
+            "날씬해졌네요",
+            "날씬해지세요",
+            "날씬해질게요",
+            "날씬하네졌요"
+          ],
+          "explain": "Nhận ra thay đổi → 날씬해졌네요 (thon gọn hẳn ra)."
+        },
+        {
+          "q": "겨울이 돼서 날씨가 ___.",
+          "options": [
+            "추워졌어요",
+            "춥어졌어요",
+            "추웠어졌요",
+            "춥게졌어요"
+          ],
+          "explain": "춥다 (bất quy tắc ㅂ) → 추워지다."
+        }
+      ]
+    },
+    {
+      "pattern": "-기 때문에",
+      "title": "vì … nên … (lý do)",
+      "note": [
+        "Gốc động từ/tính từ + 기 때문에: vế trước là lý do của vế sau.",
+        "Quá khứ: -았/었기 때문에 (아팠기 때문에). Danh từ: N + 때문에 (감기 때문에), N + 이기 때문에 (= vì là N).",
+        "Vế sau KHÔNG dùng mệnh lệnh, rủ rê (-(으)세요, -(으)ㅂ시다, -(으)ㄹ까요); khi đó dùng -(으)니까 (bài 2).",
+        "Trả lời lý do: -기 때문이에요 (vì …)."
+      ],
+      "examples": [
+        [
+          "동생은 성격이 활발하기 때문에 친구가 많아요.",
+          "Em tôi tính hoạt bát nên có nhiều bạn."
+        ],
+        [
+          "어제 늦게 잤기 때문에 너무 피곤해요.",
+          "Hôm qua ngủ muộn nên rất mệt."
+        ],
+        [
+          "비 때문에 소풍을 못 갔어요.",
+          "Vì mưa nên không đi dã ngoại được."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "날씨가 ___ 코트를 입었어요.",
+          "options": [
+            "춥기 때문에",
+            "추운 때문에",
+            "춥니까 때문에",
+            "춥기 때문"
+          ],
+          "explain": "Gốc + 기 때문에 → 춥기 때문에."
+        },
+        {
+          "q": "어제 ___ 학교에 못 갔어요. (아프다)",
+          "options": [
+            "아팠기 때문에",
+            "아프었기 때문에",
+            "아파기 때문에",
+            "아팠는 때문에"
+          ],
+          "explain": "Quá khứ: 아팠 + 기 때문에."
+        },
+        {
+          "q": "감기___ 회사에 안 갔어요.",
+          "options": [
+            "때문에",
+            "기 때문에",
+            "이기 때문에",
+            "를 때문에"
+          ],
+          "explain": "Danh từ + 때문에 → 감기 때문에."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "시간이 없기 때문에 택시를 탔어요.",
+            "시간이 없기 때문에 택시를 타세요.",
+            "시간이 없기 때문에 택시를 탈까요?",
+            "시간이 없기 때문에 택시를 탑시다."
+          ],
+          "explain": "-기 때문에 không đi với mệnh lệnh/rủ rê."
+        },
+        {
+          "q": "Nghĩa của \"저는 학생이기 때문에 돈이 많지 않아요.\"",
+          "options": [
+            "Vì tôi là học sinh nên không có nhiều tiền.",
+            "Tôi là học sinh nhưng có nhiều tiền.",
+            "Để làm học sinh thì cần nhiều tiền.",
+            "Khi còn là học sinh tôi không có tiền."
+          ],
+          "explain": "N + 이기 때문에 = vì là N."
+        }
+      ]
+    },
+    {
+      "pattern": "Bất quy tắc ㅎ",
+      "title": "tính từ gốc ㅎ: 빨갛다, 하얗다, 어떻다 …",
+      "note": [
+        "Tính từ chỉ màu và 이렇다/그렇다/어떻다 có gốc tận cùng ㅎ: 빨갛다, 노랗다, 파랗다, 하얗다, 까맣다.",
+        "Gặp -(으)ㄴ, -(으)면: bỏ ㅎ và bỏ 으 → 빨간, 빨가면, 하얀, 어떤.",
+        "Gặp -아/어: bỏ ㅎ, nguyên âm thành ㅐ → 빨개요, 파래요, 까매요, 어때요 (하얗다 → 하얘요).",
+        "좋다, 놓다, 넣다 KHÔNG theo quy tắc này: 좋아요, 좋은."
+      ],
+      "examples": [
+        [
+          "가을 하늘이 정말 파래요.",
+          "Bầu trời mùa thu thật xanh."
+        ],
+        [
+          "하얀 운동화를 사고 싶어요.",
+          "Tôi muốn mua đôi giày thể thao màu trắng."
+        ],
+        [
+          "가: 이 원피스 어때요? 나: 색깔이 예쁘네요.",
+          "A: Cái váy này thế nào? B: Màu đẹp quá."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "사과가 ___. (빨갛다)",
+          "options": [
+            "빨개요",
+            "빨갛아요",
+            "빨가요",
+            "빨갛어요"
+          ],
+          "explain": "빨갛다 + 아요 → bỏ ㅎ, ㅏ thành ㅐ: 빨개요."
+        },
+        {
+          "q": "___ 머리가 멋있어요. (까맣다 + -(으)ㄴ)",
+          "options": [
+            "까만",
+            "까맣은",
+            "까마은",
+            "까매은"
+          ],
+          "explain": "Gặp -(으)ㄴ: bỏ ㅎ và 으 → 까만."
+        },
+        {
+          "q": "눈이 와서 길이 ___. (하얗다 + -아/어지다)",
+          "options": [
+            "하얘졌어요",
+            "하얗아졌어요",
+            "하얀졌어요",
+            "하얗졌어요"
+          ],
+          "explain": "하얗다 → 하얘 + 졌어요."
+        },
+        {
+          "q": "이 바지 ___? 저한테 잘 어울려요?",
+          "options": [
+            "어때요",
+            "어떻어요",
+            "어떠요",
+            "어떻아요"
+          ],
+          "explain": "어떻다 + 어요 → 어때요."
+        },
+        {
+          "q": "좋다 + -아요 viết đúng là?",
+          "options": [
+            "좋아요",
+            "조애요",
+            "좋애요",
+            "좋어요"
+          ],
+          "explain": "좋다 không phải bất quy tắc ㅎ → 좋아요."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "저는 머리를 오래 안 잘랐어요. 그래서 ___예요.",
+      "options": [
+        "긴 머리",
+        "짧은 머리",
+        "단발머리",
+        "파마머리"
+      ],
+      "explain": "Lâu không cắt tóc → tóc dài."
+    },
+    {
+      "q": "어제 미용실에서 머리를 ___로 했어요. 이제 머리가 꼬불꼬불해요.",
+      "options": [
+        "파마머리",
+        "생머리",
+        "단발머리",
+        "짧은 머리"
+      ],
+      "explain": "꼬불꼬불 = xoăn → tóc uốn."
+    },
+    {
+      "q": "저는 아버지를 많이 ___. 눈하고 코가 똑같아요.",
+      "options": [
+        "닮았어요",
+        "끼었어요",
+        "메었어요",
+        "변했어요"
+      ],
+      "explain": "닮다 = giống ai đó."
+    },
+    {
+      "q": "날씨가 추워서 손에 장갑을 ___.",
+      "options": [
+        "꼈어요",
+        "멨어요",
+        "닮았어요",
+        "벗었어요"
+      ],
+      "explain": "Đeo găng tay → 끼다."
+    },
+    {
+      "q": "학생들이 가방을 ___ 학교에 가요.",
+      "options": [
+        "메고",
+        "끼고",
+        "닮고",
+        "찌고"
+      ],
+      "explain": "Đeo ba lô trên vai → 메다."
+    },
+    {
+      "q": "요즘 많이 먹고 운동을 안 해서 살이 ___.",
+      "options": [
+        "쪘어요",
+        "빠졌어요",
+        "변했어요",
+        "닮았어요"
+      ],
+      "explain": "Ăn nhiều, không tập → 살이 찌다 (tăng cân)."
+    },
+    {
+      "q": "동생은 성격이 ___ 친구가 많아요. 항상 웃고 이야기를 잘해요.",
+      "options": [
+        "활발해서",
+        "통통해서",
+        "까만색이라서",
+        "키가 작아서"
+      ],
+      "explain": "Hay cười, nói chuyện giỏi → hoạt bát."
+    },
+    {
+      "q": "제 동생은 매일 아침 여섯 시에 일어나서 운동하고 공부해요. 정말 ___.",
+      "options": [
+        "부지런해요",
+        "통통해요",
+        "닮았어요",
+        "변했어요"
+      ],
+      "explain": "Dậy sớm tập thể dục, học bài → chăm chỉ."
+    },
+    {
+      "q": "여름에 너무 더워서 ___를 샀어요.",
+      "options": [
+        "선풍기",
+        "코트",
+        "스웨터",
+        "열쇠고리"
+      ],
+      "explain": "Trời nóng → mua quạt máy."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 수진 씨가 누구예요? 나: 저기 긴 생머리에 하얀 원피스를 입은 사람이에요.",
+      "options": [
+        "Tóc dài thẳng, mặc váy liền trắng",
+        "Tóc ngắn uốn, mặc váy đen",
+        "Tóc dài, mặc quần bò xanh",
+        "Tóc ngắn, đeo kính"
+      ],
+      "explain": "긴 생머리 = tóc dài thẳng; 하얀 원피스 = váy liền trắng.",
+      "q": "Su-jin là người nào?"
+    },
+    {
+      "listen": "요즘 운동을 해서 몸이 건강해졌어요.",
+      "options": [
+        "Tập thể dục nên cơ thể khỏe hơn",
+        "Bị ốm nên không tập thể dục",
+        "Muốn tập thể dục để khỏe hơn",
+        "Dạo này tăng cân nhiều"
+      ],
+      "explain": "건강해졌어요 = đã khỏe lên.",
+      "q": "Người nói đã thay đổi thế nào?"
+    },
+    {
+      "listen": "비가 오기 때문에 오늘은 집에 있을 거예요.",
+      "options": [
+        "Vì trời mưa",
+        "Vì bị ốm",
+        "Vì có khách đến",
+        "Vì phải học bài"
+      ],
+      "explain": "비가 오기 때문에 = vì trời mưa.",
+      "q": "Vì sao hôm nay người nói ở nhà?"
+    },
+    {
+      "listen": "가: 이 가방 어때요? 나: 색깔이 너무 까매요. 갈색 가방은 없어요?",
+      "options": [
+        "Màu nâu",
+        "Màu đen",
+        "Màu trắng",
+        "Màu đỏ"
+      ],
+      "explain": "까매요 = đen quá; muốn 갈색 (màu nâu).",
+      "q": "Người nói muốn túi màu gì?"
+    },
+    {
+      "listen": "제 남동생은 키가 크고 조금 통통해요. 그리고 안경을 꼈어요.",
+      "options": [
+        "Cao, hơi mũm mĩm, đeo kính",
+        "Thấp, gầy, đeo kính",
+        "Cao, gầy, không đeo kính",
+        "Thấp, mũm mĩm, có râu"
+      ],
+      "explain": "키가 크다 = cao; 통통하다 = mũm mĩm; 안경을 끼다 = đeo kính.",
+      "q": "Em trai người nói trông thế nào?"
+    }
+  ],
+  "reading": {
+    "passage": "제 친구 민수 씨를 소개할게요. 민수 씨는 키가 크고 머리가 짧아요. 옛날에는 조금 통통했어요. 그런데 작년부터 다이어트를 했기 때문에 지금은 날씬해졌어요. 민수 씨는 성격도 활발해요. 그래서 친구가 많아요. 민수 씨는 보통 까만색 옷을 입어요. 그런데 오늘은 빨간 티셔츠를 입었어요. 정말 멋있었어요.",
+    "passageVi": "Tôi xin giới thiệu bạn tôi là Minsu. Minsu cao và tóc ngắn. Trước đây cậu ấy hơi mũm mĩm. Nhưng vì đã ăn kiêng từ năm ngoái nên bây giờ thon gọn hơn rồi. Tính cách Minsu cũng hoạt bát. Vì thế cậu ấy có nhiều bạn. Minsu thường mặc đồ màu đen. Nhưng hôm nay cậu ấy mặc áo phông đỏ. Trông thật ngầu.",
+    "questions": [
+      {
+        "q": "Vì sao bây giờ Minsu thon gọn hơn?",
+        "options": [
+          "Vì đã ăn kiêng từ năm ngoái",
+          "Vì bị ốm",
+          "Vì đi bơi mỗi ngày",
+          "Vì ngủ ít"
+        ],
+        "explain": "작년부터 다이어트를 했기 때문에 날씬해졌어요."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Hôm nay Minsu mặc áo phông đỏ",
+          "Minsu có tóc dài",
+          "Minsu có ít bạn",
+          "Minsu thường mặc đồ màu trắng"
+        ],
+        "explain": "오늘은 빨간 티셔츠를 입었어요."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu miêu tả ngoại hình một người bạn hoặc người trong gia đình và sự thay đổi của họ. Dùng -아/어지다, -기 때문에 và tính từ bất quy tắc ㅎ.",
+    "samples": [
+      [
+        "제 언니는 키가 크고 긴 생머리예요.",
+        "Chị tôi cao và có mái tóc dài thẳng."
+      ],
+      [
+        "요즘 운동을 열심히 하기 때문에 건강해졌어요.",
+        "Dạo này chị chăm tập thể dục nên đã khỏe hơn."
+      ],
+      [
+        "언니는 하얀 옷을 자주 입어요.",
+        "Chị hay mặc đồ màu trắng."
+      ],
+      [
+        "얼굴은 어머니를 많이 닮았어요.",
+        "Khuôn mặt chị rất giống mẹ."
+      ]
+    ],
+    "tips": "Thay đổi: gốc tính từ + 아/어지다 (날씬해졌어요, 길어졌어요). Lý do: -기 때문에, danh từ + 때문에; vế sau không dùng -(으)세요. Bất quy tắc ㅎ: 하얗다 → 하얀, 하얘요; 빨갛다 → 빨간, 빨개요."
+  }
+}
