@@ -1,0 +1,619 @@
+{
+  "id": "sc2-11",
+  "title": "Du lịch",
+  "ko": "여행",
+  "goal": "Nói về các loại hình du lịch, chuẩn bị cho chuyến đi, kể việc đang làm và kinh nghiệm đã từng có.",
+  "vocab": [
+    {
+      "group": "Loại hình du lịch",
+      "words": [
+        [
+          "국내 여행",
+          "du lịch trong nước"
+        ],
+        [
+          "해외여행",
+          "du lịch nước ngoài"
+        ],
+        [
+          "신혼여행",
+          "tuần trăng mật"
+        ],
+        [
+          "가족 여행",
+          "du lịch cùng gia đình"
+        ],
+        [
+          "배낭여행",
+          "du lịch ba lô"
+        ],
+        [
+          "여행 상품",
+          "tour du lịch trọn gói"
+        ],
+        [
+          "여행사",
+          "công ty du lịch"
+        ],
+        [
+          "1박 2일",
+          "2 ngày 1 đêm"
+        ],
+        [
+          "일정",
+          "lịch trình"
+        ]
+      ]
+    },
+    {
+      "group": "Chỗ ở, tham quan",
+      "words": [
+        [
+          "민박",
+          "nhà nghỉ trong nhà dân (homestay)"
+        ],
+        [
+          "한옥",
+          "nhà truyền thống Hàn (hanok)"
+        ],
+        [
+          "숙소",
+          "chỗ nghỉ, nơi lưu trú"
+        ],
+        [
+          "관광지",
+          "điểm du lịch"
+        ],
+        [
+          "입장료",
+          "phí vào cửa"
+        ],
+        [
+          "조식",
+          "bữa sáng (ở khách sạn)"
+        ],
+        [
+          "궁전",
+          "cung điện"
+        ],
+        [
+          "문화재",
+          "di sản văn hóa"
+        ],
+        [
+          "유람선",
+          "du thuyền"
+        ],
+        [
+          "마차",
+          "xe ngựa"
+        ],
+        [
+          "일출",
+          "cảnh mặt trời mọc"
+        ],
+        [
+          "쇼",
+          "buổi trình diễn (show)"
+        ],
+        [
+          "방문",
+          "sự thăm viếng"
+        ],
+        [
+          "전통 놀이",
+          "trò chơi truyền thống"
+        ],
+        [
+          "약수",
+          "nước suối khoáng tự nhiên"
+        ],
+        [
+          "기념품",
+          "đồ lưu niệm"
+        ],
+        [
+          "경험",
+          "kinh nghiệm, trải nghiệm"
+        ]
+      ]
+    },
+    {
+      "group": "Chuẩn bị đi du lịch",
+      "words": [
+        [
+          "비상약",
+          "thuốc mang theo phòng khi cần"
+        ],
+        [
+          "신용카드",
+          "thẻ tín dụng"
+        ],
+        [
+          "슬리퍼",
+          "dép lê"
+        ],
+        [
+          "세면도구",
+          "đồ dùng vệ sinh cá nhân"
+        ],
+        [
+          "선글라스",
+          "kính râm"
+        ],
+        [
+          "환전",
+          "việc đổi tiền"
+        ],
+        [
+          "보험",
+          "bảo hiểm"
+        ],
+        [
+          "예약",
+          "việc đặt trước (chỗ, phòng)"
+        ],
+        [
+          "가방을 싸다",
+          "sắp đồ vào vali, túi"
+        ],
+        [
+          "여권을 만들다",
+          "làm hộ chiếu"
+        ],
+        [
+          "비자를 받다",
+          "được cấp visa"
+        ],
+        [
+          "짐",
+          "hành lý"
+        ]
+      ]
+    },
+    {
+      "group": "Từ khác",
+      "words": [
+        [
+          "섬",
+          "hòn đảo"
+        ],
+        [
+          "해수욕장",
+          "bãi tắm biển"
+        ],
+        [
+          "캠핑",
+          "cắm trại"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "-거나",
+      "title": "hoặc (làm việc A hoặc việc B)",
+      "note": [
+        "Gắn thẳng vào gốc động từ, tính từ để chọn một trong hai hành động, trạng thái: 쉬거나 여행해요.",
+        "Danh từ thì dùng (이)나 (bài 9): 바다나 산; động từ, tính từ dùng -거나: 바다에 가거나 산에 가요.",
+        "Thì (quá khứ, tương lai) thường chỉ chia ở động từ cuối câu.",
+        "Hay dùng để nói thói quen: 주말에는 … -거나 … -아/어요."
+      ],
+      "examples": [
+        [
+          "휴가 때 캠핑을 하거나 해수욕장에 가요.",
+          "Kỳ nghỉ tôi đi cắm trại hoặc đi bãi tắm biển."
+        ],
+        [
+          "여행 전에 인터넷으로 숙소를 예약하거나 여행사에 전화해요.",
+          "Trước chuyến đi tôi đặt chỗ nghỉ trên mạng hoặc gọi cho công ty du lịch."
+        ],
+        [
+          "주말에는 집에서 쉬거나 친구를 만나요.",
+          "Cuối tuần tôi nghỉ ở nhà hoặc gặp bạn."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "방학에 해외여행을 ___ 아르바이트를 할 거예요.",
+          "options": [
+            "가거나",
+            "가나",
+            "가이나",
+            "가고나"
+          ],
+          "explain": "Động từ + 거나 → 가거나."
+        },
+        {
+          "q": "아침에는 빵을 ___ 우유를 마셔요.",
+          "options": [
+            "먹거나",
+            "먹이나",
+            "먹나",
+            "먹거니"
+          ],
+          "explain": "Động từ + 거나 → 먹거나."
+        },
+        {
+          "q": "휴일에 영화___ 드라마를 봐요.",
+          "options": [
+            "나",
+            "거나",
+            "이나",
+            "하거나"
+          ],
+          "explain": "Nối hai DANH TỪ → (이)나; 영화 tận cùng nguyên âm → 나."
+        },
+        {
+          "q": "Nghĩa của \"피곤하면 좀 쉬거나 산책하세요.\"",
+          "options": [
+            "Nếu mệt thì hãy nghỉ một chút hoặc đi dạo.",
+            "Nếu mệt thì hãy vừa nghỉ vừa đi dạo.",
+            "Mệt nên đã nghỉ rồi đi dạo.",
+            "Nếu mệt thì đừng nghỉ, hãy đi dạo."
+          ],
+          "explain": "-거나 = hoặc."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "여행지에서 사진을 찍거나 기념품을 사요.",
+            "여행지에서 사진을 찍이나 기념품을 사요.",
+            "여행지에서 사진을 찍거나을 기념품 사요.",
+            "여행지에서 사진을 찍었거나요 기념품을 사요."
+          ],
+          "explain": "찍다 + 거나 → 찍거나."
+        }
+      ]
+    },
+    {
+      "pattern": "-고 있다",
+      "title": "đang … (hành động đang diễn ra)",
+      "note": [
+        "Gốc động từ + 고 있다: hành động đang diễn ra. 지금 비행기를 타고 있어요.",
+        "Kính ngữ với chủ ngữ là người trên: -고 계시다 (할아버지께서 주무시고 계세요).",
+        "Quá khứ: -고 있었어요 = lúc đó đang …",
+        "Với 입다, 쓰다, 신다, 끼다, 메다: -고 있다 còn chỉ trạng thái đang mặc/đeo (안경을 끼고 있어요)."
+      ],
+      "examples": [
+        [
+          "지금 제주도로 가는 비행기를 타고 있어요.",
+          "Bây giờ tôi đang ngồi trên máy bay đi Jeju."
+        ],
+        [
+          "할머니께서는 한옥에서 쉬고 계세요.",
+          "Bà đang nghỉ ngơi trong ngôi nhà hanok."
+        ],
+        [
+          "그 사람은 선글라스를 끼고 있어요.",
+          "Người đó đang đeo kính râm."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "가: 지금 뭐 해요? 나: 여행 가방을 ___.",
+          "options": [
+            "싸고 있어요",
+            "싸고 있었요",
+            "싸 있어요",
+            "싸서 있어요"
+          ],
+          "explain": "Đang làm → 싸고 있어요."
+        },
+        {
+          "q": "가: 어제 전화했을 때 뭐 했어요? 나: 샤워를 ___.",
+          "options": [
+            "하고 있었어요",
+            "하고 있어요",
+            "하고 있을게요",
+            "하고 계셔요"
+          ],
+          "explain": "Lúc đó đang … → -고 있었어요."
+        },
+        {
+          "q": "할아버지께서 신문을 ___.",
+          "options": [
+            "읽고 계세요",
+            "읽고 계셔세요",
+            "읽고 있으시다",
+            "읽고 계시다요"
+          ],
+          "explain": "Kính ngữ: -고 계세요."
+        },
+        {
+          "q": "Nghĩa của \"민수 씨는 까만 모자를 쓰고 있어요.\"",
+          "options": [
+            "Minsu đang đội mũ đen.",
+            "Hôm qua Minsu đã đội mũ đen.",
+            "Minsu muốn đội mũ đen.",
+            "Minsu đang mua mũ đen."
+          ],
+          "explain": "쓰고 있다 = đang đội (trạng thái)."
+        },
+        {
+          "q": "가: 요즘 뭐 해요? 나: 수영을 ___.",
+          "options": [
+            "배우고 있어요",
+            "배워고 있어요",
+            "배우거나 있어요",
+            "배우고 있었요"
+          ],
+          "explain": "Dạo này đang học → 배우고 있어요."
+        }
+      ]
+    },
+    {
+      "pattern": "-(으)ㄴ 적이 있다/없다",
+      "title": "đã từng / chưa từng …",
+      "note": [
+        "Nói kinh nghiệm: gốc động từ + (으)ㄴ 적이 있어요 (đã từng) / 없어요 (chưa từng).",
+        "Nguyên âm: -ㄴ 적 (간 적); gốc ㄹ bỏ ㄹ: 만든 적; phụ âm: -은 적 (먹은 적).",
+        "Hay đi với -아/어 보다 (bài 8): 가 본 적이 있어요 = đã từng thử đi.",
+        "Không dùng cho việc làm hằng ngày: ✗ 밥을 먹은 적이 있어요."
+      ],
+      "examples": [
+        [
+          "저는 한옥에서 잔 적이 있어요.",
+          "Tôi đã từng ngủ ở nhà hanok."
+        ],
+        [
+          "해외여행을 한 적이 없어요.",
+          "Tôi chưa từng đi du lịch nước ngoài."
+        ],
+        [
+          "가: 유람선을 타 본 적이 있어요? 나: 네, 작년에 한 번 타 봤어요.",
+          "A: Bạn đã từng đi du thuyền chưa? B: Rồi, năm ngoái tôi đi một lần."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "저는 제주도에 ___ 적이 있어요.",
+          "options": [
+            "간",
+            "가는",
+            "갈",
+            "가은"
+          ],
+          "explain": "가다 tận cùng nguyên âm → 간 적."
+        },
+        {
+          "q": "김치를 ___ 적이 있어요? (만들다)",
+          "options": [
+            "만든",
+            "만들은",
+            "만드는",
+            "만들"
+          ],
+          "explain": "Gốc ㄹ bỏ ㄹ + ㄴ → 만든 적."
+        },
+        {
+          "q": "한국 음식을 ___ 적이 없어요.",
+          "options": [
+            "먹은",
+            "먹는",
+            "먹을",
+            "먹ㄴ"
+          ],
+          "explain": "먹다 tận cùng phụ âm → 먹은 적."
+        },
+        {
+          "q": "Nghĩa của \"저는 비행기를 타 본 적이 없어요.\"",
+          "options": [
+            "Tôi chưa từng đi máy bay.",
+            "Tôi không muốn đi máy bay.",
+            "Tôi sẽ đi máy bay.",
+            "Tôi đã đi máy bay nhiều lần."
+          ],
+          "explain": "-아/어 본 적이 없다 = chưa từng thử."
+        },
+        {
+          "q": "가: 한복을 입어 본 적이 있어요? 나: 네, ___.",
+          "options": [
+            "입어 봤어요",
+            "입어 볼게요",
+            "입어 보세요",
+            "입어 봐야 해요"
+          ],
+          "explain": "Trả lời đã từng → 입어 봤어요."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "결혼한 부부가 같이 가는 첫 여행은 ___이에요.",
+      "options": [
+        "신혼여행",
+        "배낭여행",
+        "국내 여행",
+        "가족 여행"
+      ],
+      "explain": "Chuyến đi đầu tiên của vợ chồng mới cưới → tuần trăng mật."
+    },
+    {
+      "q": "다른 나라에 가기 전에 은행에서 ___을 해요. 그 나라 돈이 필요해요.",
+      "options": [
+        "환전",
+        "보험",
+        "조식",
+        "방문"
+      ],
+      "explain": "Cần tiền nước khác → đổi tiền."
+    },
+    {
+      "q": "호텔 식당에서 아침에 ___을 먹었어요.",
+      "options": [
+        "조식",
+        "입장료",
+        "일출",
+        "약수"
+      ],
+      "explain": "Bữa sáng ở khách sạn → 조식."
+    },
+    {
+      "q": "박물관에 들어가려면 ___를 내야 해요.",
+      "options": [
+        "입장료",
+        "환전",
+        "보험",
+        "일정"
+      ],
+      "explain": "Phí vào cửa → 입장료."
+    },
+    {
+      "q": "여행 가방에 칫솔과 치약 같은 ___를 넣었어요.",
+      "options": [
+        "세면도구",
+        "비상약",
+        "선글라스",
+        "신용카드"
+      ],
+      "explain": "Bàn chải, kem đánh răng → đồ vệ sinh cá nhân."
+    },
+    {
+      "q": "햇빛이 너무 강해서 ___를 꼈어요.",
+      "options": [
+        "선글라스",
+        "슬리퍼",
+        "세면도구",
+        "기념품"
+      ],
+      "explain": "Nắng gắt → đeo kính râm."
+    },
+    {
+      "q": "돈이 많지 않아서 가방 하나만 메고 ___을 했어요.",
+      "options": [
+        "배낭여행",
+        "신혼여행",
+        "여행 상품",
+        "유람선"
+      ],
+      "explain": "Chỉ đeo một ba lô, tiết kiệm → du lịch ba lô."
+    },
+    {
+      "q": "산 위에서 아침 해가 뜨는 것을 봤어요. ___이 정말 아름다웠어요.",
+      "options": [
+        "일출",
+        "마차",
+        "쇼",
+        "민박"
+      ],
+      "explain": "Mặt trời mọc → 일출."
+    },
+    {
+      "q": "여행 ___을 짜요. 첫날은 궁전을 구경하고 둘째 날은 유람선을 타요.",
+      "options": [
+        "일정",
+        "보험",
+        "환전",
+        "입장료"
+      ],
+      "explain": "Sắp xếp từng ngày → lịch trình."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 제주도에 가 본 적이 있어요? 나: 네, 작년 여름에 가족 여행으로 갔어요.",
+      "options": [
+        "Rồi, đi du lịch cùng gia đình hè năm ngoái",
+        "Chưa từng đến",
+        "Rồi, đi tuần trăng mật",
+        "Sắp đi vào hè năm nay"
+      ],
+      "explain": "작년 여름에 가족 여행으로 갔어요.",
+      "q": "Người nói đã đến Jeju chưa?"
+    },
+    {
+      "listen": "지금 공항에서 비행기를 기다리고 있어요.",
+      "options": [
+        "Đang chờ máy bay ở sân bay",
+        "Đang đổi tiền ở ngân hàng",
+        "Đang ngồi trên máy bay",
+        "Đang sắp đồ vào vali"
+      ],
+      "explain": "기다리고 있어요 = đang chờ.",
+      "q": "Người nói đang làm gì?"
+    },
+    {
+      "listen": "휴가 때 바다에 가거나 캠핑을 할 거예요.",
+      "options": [
+        "Đi biển hoặc đi cắm trại",
+        "Đi biển rồi đi cắm trại",
+        "Đã đi biển và cắm trại",
+        "Không đi đâu cả"
+      ],
+      "explain": "-거나 = hoặc.",
+      "q": "Kỳ nghỉ người nói sẽ làm gì?"
+    },
+    {
+      "listen": "여행 가기 전에 여권을 만들고 비자를 받아야 해요.",
+      "options": [
+        "Làm hộ chiếu và xin visa",
+        "Mua đồ lưu niệm",
+        "Đặt du thuyền",
+        "Mua bảo hiểm và đổi tiền"
+      ],
+      "explain": "여권을 만들다, 비자를 받다.",
+      "q": "Trước khi đi du lịch phải làm gì?"
+    },
+    {
+      "listen": "한옥 민박에서 1박 2일 동안 묵었어요. 아주 좋았어요.",
+      "options": [
+        "Ở homestay nhà hanok 2 ngày 1 đêm, rất thích",
+        "Ở khách sạn 3 ngày 2 đêm",
+        "Ở nhà hanok 1 đêm nhưng không thích",
+        "Chưa từng ở nhà hanok"
+      ],
+      "explain": "1박 2일 = 2 ngày 1 đêm; 아주 좋았어요 = rất thích.",
+      "q": "Người nói kể gì?"
+    }
+  ],
+  "reading": {
+    "passage": "저는 지난달에 처음으로 해외여행을 했어요. 여행사의 여행 상품으로 4박 5일 동안 유럽에 갔어요. 여행 가기 전에 여권을 만들고 환전을 했어요. 유럽에서 오래된 궁전과 문화재를 구경했어요. 저녁에는 유람선을 타거나 쇼를 봤어요. 마차도 처음 타 봤어요. 다음에는 친구와 같이 배낭여행을 해 보고 싶어요.",
+    "passageVi": "Tháng trước lần đầu tiên tôi đi du lịch nước ngoài. Tôi đi châu Âu 5 ngày 4 đêm theo tour trọn gói của công ty du lịch. Trước khi đi tôi đã làm hộ chiếu và đổi tiền. Ở châu Âu tôi tham quan các cung điện cổ và di sản văn hóa. Buổi tối tôi đi du thuyền hoặc xem biểu diễn. Tôi cũng lần đầu đi thử xe ngựa. Lần sau tôi muốn thử đi du lịch ba lô cùng bạn.",
+    "questions": [
+      {
+        "q": "Người viết đã đi du lịch theo cách nào?",
+        "options": [
+          "Theo tour trọn gói của công ty du lịch",
+          "Du lịch ba lô một mình",
+          "Tự lái xe cùng gia đình",
+          "Đi tuần trăng mật"
+        ],
+        "explain": "여행사의 여행 상품으로 갔어요."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Đây là lần đầu người viết đi nước ngoài",
+          "Người viết đã đi Mỹ",
+          "Người viết không đổi tiền trước khi đi",
+          "Lần sau người viết muốn đi tour trọn gói"
+        ],
+        "explain": "처음으로 해외여행을 했어요."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu về một chuyến du lịch bạn đã từng đi và việc bạn hay làm khi đi du lịch. Dùng -(으)ㄴ 적이 있다, -거나 và -고 있다.",
+    "samples": [
+      [
+        "저는 하노이에 간 적이 있어요.",
+        "Tôi đã từng đến Hà Nội."
+      ],
+      [
+        "여행할 때 사진을 찍거나 기념품을 사요.",
+        "Khi du lịch tôi chụp ảnh hoặc mua đồ lưu niệm."
+      ],
+      [
+        "요즘 다음 여행을 준비하고 있어요.",
+        "Dạo này tôi đang chuẩn bị cho chuyến đi tới."
+      ],
+      [
+        "유람선을 타 본 적은 없어요.",
+        "Tôi chưa từng đi du thuyền."
+      ]
+    ],
+    "tips": "Kinh nghiệm: -(으)ㄴ 적이 있어요/없어요 (간 적, 먹은 적, 만든 적). Hoặc: gốc động từ + 거나 (danh từ dùng (이)나). Đang làm: -고 있어요; người trên: -고 계세요."
+  }
+}
