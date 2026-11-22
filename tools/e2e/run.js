@@ -76,6 +76,7 @@ function assert(c, msg) { if (!c) throw new Error(msg); }
 
 async function newPage(browser, opts = {}) {
   const ctx = await browser.newContext(Object.assign({ viewport: { width: 1280, height: 860 } }, opts));
+  await require('../../tests/stub_third_party')(ctx);
   await ctx.route(/^(?!http:\/\/127\.0\.0\.1).*/, (r) => r.abort()); // không gọi ra ngoài (GA, font)
   const page = await ctx.newPage();
   page.errors = [];

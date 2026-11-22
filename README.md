@@ -62,7 +62,11 @@ Không bắt buộc. Bật bằng `supabaseUrl` + `supabaseKey` (khóa công kha
 node tests/merge.test.js                       # gộp tiến độ
 psql -d <db trống> -f tests/schema_test.sql    # SQL + phân quyền (giả lập auth của Supabase)
 python3 -m http.server 8765 & SHOTS=/tmp node tests/e2e_account.js   # giao diện tài khoản (cần playwright)
+node tests/e2e_regression.js                   # hồi quy phần học, làm bài, sổ câu sai
+node tests/e2e_contact.js                      # GA4 + form đăng ký/cảm nhận
 ```
+
+Các test Playwright giả lập Google Analytics và Formspree (`tests/stub_third_party.js`), nên không gửi số liệu hay email thật.
 
 ## Nội dung
 

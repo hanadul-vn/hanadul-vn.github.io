@@ -15,6 +15,7 @@ async function tc(id, name, fn) {
 }
 async function device(browser, acctOn, viewport) {
   const ctx = await browser.newContext({ viewport: viewport || { width: 1100, height: 900 } });
+  await require('./stub_third_party')(ctx);
   const net = [];
   await ctx.route(SB + '/**', (r) => { net.push(r.request().url()); r.fulfill({ status: 200, contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: '{}' }); });
   await ctx.route('**/assets/config.js', async (route) => {

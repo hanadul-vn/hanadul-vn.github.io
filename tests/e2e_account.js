@@ -108,6 +108,7 @@ async function tc(id, name, fn) {
 async function newDevice(browser, opts) {
   opts = opts || {};
   const ctx = await browser.newContext({ viewport: opts.viewport || { width: 1100, height: 900 } });
+  await require('./stub_third_party')(ctx);
   const errors = [];
   const sdkLoads = [];
   await ctx.route(SB + '/**', handle);
