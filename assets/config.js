@@ -18,6 +18,6 @@ window.HANADUL_CONFIG = {
   // supabaseUrl: "Project URL", dạng https://xxxx.supabase.co
   // supabaseKey: khóa CÔNG KHAI (Publishable key "sb_publishable_…" hoặc anon key). KHÔNG BAO GIỜ dán secret / service_role key.
   // Để trống = không có nút đăng nhập, tiến độ chỉ lưu trên máy như cũ.
-  supabaseUrl: '',
-  supabaseKey: ''
+  supabaseUrl: 'https://xwlsuzfpcdkvakkijwzg.supabase.co',
+  supabaseKey: 'sb_publishable_dJzFwnyAEcQkx2S_sdVtEw_GUiQbCnu'
 };

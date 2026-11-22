@@ -21,7 +21,8 @@ async function device(browser, acctOn, viewport) {
   await ctx.route('**/assets/config.js', async (route) => {
     const r = await route.fetch();
     let body = await r.text();
-    if (acctOn) body = body.replace("supabaseUrl: ''", "supabaseUrl: '" + SB + "'").replace("supabaseKey: ''", "supabaseKey: 'sb_publishable_x'");
+    // Config thật có thể đã điền khóa: test luôn tự đặt lại (bật = server giả, tắt = để trống).
+    body = body.replace(/supabaseUrl: '[^']*'/, "supabaseUrl: '" + (acctOn ? SB : '') + "'").replace(/supabaseKey: '[^']*'/, "supabaseKey: '" + (acctOn ? 'sb_publishable_x' : '') + "'");
     route.fulfill({ response: r, body });
   });
   await ctx.route('**/assets/app.js', async (route) => {

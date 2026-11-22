@@ -115,9 +115,9 @@ async function newDevice(browser, opts) {
   await ctx.route('**/assets/config.js', async (route) => {
     const r = await route.fetch();
     let body = await r.text();
-    if (opts.key !== undefined || opts.on) {
-      body = body.replace("supabaseUrl: ''", "supabaseUrl: '" + SB + "'").replace("supabaseKey: ''", "supabaseKey: '" + (opts.key || PUB_KEY) + "'");
-    }
+    // Config thật có thể đã điền khóa: test luôn tự đặt lại (bật = server giả, tắt = để trống).
+    const on = opts.key !== undefined || opts.on;
+    body = body.replace(/supabaseUrl: '[^']*'/, "supabaseUrl: '" + (on ? SB : '') + "'").replace(/supabaseKey: '[^']*'/, "supabaseKey: '" + (on ? opts.key || PUB_KEY : '') + "'");
     route.fulfill({ response: r, body });
   });
   // Chỉ trong test: lộ vị trí đáp án đúng để bot làm bài đúng/sai theo ý.
