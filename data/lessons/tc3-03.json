@@ -1,0 +1,808 @@
+{
+  "id": "tc3-03",
+  "title": "Sức khỏe",
+  "ko": "건강",
+  "goal": "Nói về sức khỏe, sự mệt mỏi và cách nghỉ ngơi; khuyên ai nên làm gì, nhận xét vẻ bề ngoài và phỏng đoán.",
+  "vocab": [
+    {
+      "group": "Sức khỏe",
+      "words": [
+        [
+          "건강하다",
+          "khỏe mạnh"
+        ],
+        [
+          "몸이 약하다",
+          "thể trạng yếu"
+        ],
+        [
+          "안색이 좋다",
+          "sắc mặt tươi tỉnh"
+        ],
+        [
+          "안색이 나쁘다",
+          "sắc mặt kém, xanh xao"
+        ],
+        [
+          "건강을 지키다",
+          "giữ gìn sức khỏe"
+        ],
+        [
+          "건강을 유지하다",
+          "duy trì sức khỏe"
+        ],
+        [
+          "몸이 안 좋다",
+          "người không được khỏe"
+        ],
+        [
+          "건강을 잃다",
+          "mất sức khỏe"
+        ],
+        [
+          "건강에 좋다",
+          "có lợi cho sức khỏe"
+        ],
+        [
+          "건강에 나쁘다",
+          "có hại cho sức khỏe"
+        ]
+      ]
+    },
+    {
+      "group": "Mệt mỏi",
+      "words": [
+        [
+          "힘들다",
+          "vất vả, mệt nhọc"
+        ],
+        [
+          "지치다",
+          "kiệt sức, rã rời"
+        ],
+        [
+          "과로하다",
+          "làm việc quá sức"
+        ],
+        [
+          "스트레스를 받다",
+          "bị căng thẳng"
+        ]
+      ]
+    },
+    {
+      "group": "Nghỉ ngơi",
+      "words": [
+        [
+          "휴식을 취하다",
+          "nghỉ ngơi lấy sức"
+        ],
+        [
+          "피로를 풀다",
+          "xua tan mệt mỏi"
+        ],
+        [
+          "스트레스를 풀다",
+          "giải tỏa căng thẳng"
+        ],
+        [
+          "휴가를 가다",
+          "đi nghỉ phép"
+        ],
+        [
+          "가벼운 운동을 하다",
+          "vận động nhẹ"
+        ],
+        [
+          "잠을 자다",
+          "ngủ một giấc"
+        ]
+      ]
+    },
+    {
+      "group": "Từ mới khác",
+      "words": [
+        [
+          "(가슴이) 답답하다",
+          "tức ngực, bức bối",
+          "가슴이 답답하다"
+        ],
+        [
+          "규칙적",
+          "đều đặn, có nề nếp"
+        ],
+        [
+          "불규칙적",
+          "thất thường, không đều"
+        ],
+        [
+          "그리 ~지 않다",
+          "không… lắm",
+          "그리 비싸지 않다"
+        ],
+        [
+          "리터",
+          "lít"
+        ],
+        [
+          "막다",
+          "ngăn chặn, phòng ngừa"
+        ],
+        [
+          "만족하다",
+          "hài lòng"
+        ],
+        [
+          "무조건",
+          "bằng mọi giá, vô điều kiện"
+        ],
+        [
+          "변비",
+          "chứng táo bón"
+        ],
+        [
+          "사이클링",
+          "đạp xe (thể thao)"
+        ],
+        [
+          "실천하다",
+          "thực hiện, áp dụng vào thực tế"
+        ],
+        [
+          "암",
+          "bệnh ung thư"
+        ],
+        [
+          "에어로빅",
+          "thể dục nhịp điệu"
+        ],
+        [
+          "연령대",
+          "độ tuổi, lứa tuổi"
+        ],
+        [
+          "완성하다",
+          "hoàn thành"
+        ],
+        [
+          "유지하다",
+          "duy trì, giữ"
+        ],
+        [
+          "전단",
+          "tờ rơi"
+        ],
+        [
+          "젊다",
+          "trẻ"
+        ],
+        [
+          "증상",
+          "triệu chứng"
+        ],
+        [
+          "체중",
+          "cân nặng"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "V -는 게 좋다",
+      "title": "nên…, làm… thì tốt hơn (lời khuyên)",
+      "note": [
+        "Đưa ra lời khuyên một cách nhẹ nhàng: làm V thì tốt.",
+        "-는 게 là dạng nói ngắn của -는 것이. Phủ định: -지 않는 게 좋다 (đừng… thì hơn).",
+        "Thêm -겠- (좋겠어요) để lời khuyên mềm hơn."
+      ],
+      "examples": [
+        [
+          "감기에 걸렸을 때는 푹 쉬는 게 좋아요.",
+          "Khi bị cảm thì nên nghỉ ngơi cho đẫy."
+        ],
+        [
+          "밤늦게 먹지 않는 게 좋아요.",
+          "Không nên ăn khuya."
+        ],
+        [
+          "건강을 위해서 담배를 끊는 게 좋겠어요.",
+          "Vì sức khỏe, anh nên bỏ thuốc lá thì hơn."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "피곤하면 오늘은 일찍 ___ 게 좋아요.",
+          "options": [
+            "자는",
+            "잔",
+            "잘",
+            "자서"
+          ],
+          "explain": "V-는 게 좋다 → 자는 게 좋아요."
+        },
+        {
+          "q": "건강을 지키려면 규칙적으로 운동하___ 좋아요.",
+          "options": [
+            "는 게",
+            "은 게",
+            "기 게",
+            "는 걸게"
+          ],
+          "explain": "운동하다 → 운동하는 게 좋아요."
+        },
+        {
+          "q": "A: 요즘 잠을 잘 못 자요. B: 자기 전에는 커피를 ___ 게 좋아요.",
+          "options": [
+            "마시지 않는",
+            "마시는",
+            "마신",
+            "마실"
+          ],
+          "explain": "Khuyên không nên → -지 않는 게 좋다."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "스트레스를 받을 때는 산책을 하는 게 좋아요.",
+            "스트레스를 받을 때는 산책을 한 게 좋아요.",
+            "스트레스를 받을 때는 산책을 하게 좋아요.",
+            "스트레스를 받을 때는 산책을 하는 게 좋하요."
+          ],
+          "explain": "하다 → 하는 게 좋아요."
+        },
+        {
+          "q": "Nghĩa của \"과로하지 않는 게 좋겠어요.\"",
+          "options": [
+            "Tốt hơn là đừng làm việc quá sức.",
+            "Làm việc quá sức cũng tốt.",
+            "Tôi đã không làm quá sức.",
+            "Tôi thích làm việc nhiều."
+          ],
+          "explain": "-지 않는 게 좋겠다 = không nên…"
+        }
+      ]
+    },
+    {
+      "pattern": "A -아/어 보이다",
+      "title": "trông có vẻ…, nhìn thấy…",
+      "note": [
+        "Nói cảm nhận khi nhìn bề ngoài của người hoặc vật, gắn với TÍNH TỪ.",
+        "Gốc có ㅏ/ㅗ + 아 보이다 (좋아 보여요), còn lại + 어 보이다 (젊어 보여요), 하다 → 해 보이다 (피곤해 보여요).",
+        "Đừng nhầm với -아/어 보다 (thử làm) đi với động từ."
+      ],
+      "examples": [
+        [
+          "오늘 안색이 안 좋아 보여요.",
+          "Hôm nay sắc mặt anh trông không tốt."
+        ],
+        [
+          "그 가방이 비싸 보이네요.",
+          "Cái túi đó trông đắt nhỉ."
+        ],
+        [
+          "민수 씨가 요즘 많이 피곤해 보여요.",
+          "Dạo này Min-su trông mệt lắm."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "어제 잠을 못 잤어요? 많이 피곤___ 보여요.",
+          "options": [
+            "해",
+            "하",
+            "한",
+            "하게"
+          ],
+          "explain": "피곤하다 → 피곤해 보여요."
+        },
+        {
+          "q": "그 음식은 정말 맛있___ 보여요.",
+          "options": [
+            "어",
+            "아",
+            "게",
+            "는"
+          ],
+          "explain": "맛있다 (nguyên âm 이) → 맛있어 보여요."
+        },
+        {
+          "q": "이 옷을 입으니까 더 젊___ 보여요.",
+          "options": [
+            "어",
+            "아",
+            "은",
+            "게"
+          ],
+          "explain": "젊다 (nguyên âm ㅓ) → 젊어 보여요."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "할머니가 오늘 건강해 보이세요.",
+            "할머니가 오늘 건강하 보이세요.",
+            "할머니가 오늘 건강한 보이세요.",
+            "할머니가 오늘 건강해서 보이세요."
+          ],
+          "explain": "건강하다 → 건강해 보이다 (+ kính ngữ 시)."
+        },
+        {
+          "q": "Nghĩa của \"수진 씨, 오늘 기분이 좋아 보여요.\"",
+          "options": [
+            "Su-jin, hôm nay trông bạn có vẻ vui.",
+            "Su-jin, hôm nay bạn hãy vui lên.",
+            "Su-jin, hôm nay tôi thấy vui.",
+            "Su-jin, hôm qua bạn có vui không?"
+          ],
+          "explain": "-아/어 보이다 = trông có vẻ."
+        }
+      ]
+    },
+    {
+      "pattern": "-(으)ㄴ/는 것 같다",
+      "title": "hình như…, có lẽ… (phỏng đoán)",
+      "note": [
+        "Phỏng đoán dựa trên điều nhìn thấy, nghe thấy; cũng dùng để nói ý kiến một cách mềm mỏng.",
+        "Động từ hiện tại: -는 것 같다 (오는). Động từ quá khứ: -(으)ㄴ 것 같다 (간, 걸린). Tương lai/chưa xảy ra: -(으)ㄹ 것 같다 (올).",
+        "Tính từ: -(으)ㄴ 것 같다 (작은, 비싼). Danh từ: 인 것 같다. Gốc có ㄹ bỏ ㄹ: 놀다 → 노는, 길다 → 긴."
+      ],
+      "examples": [
+        [
+          "밖에 비가 오는 것 같아요.",
+          "Hình như ngoài trời đang mưa."
+        ],
+        [
+          "민수 씨는 벌써 집에 간 것 같아요.",
+          "Có lẽ Min-su về nhà rồi."
+        ],
+        [
+          "감기에 걸린 것 같아요.",
+          "Hình như tôi bị cảm rồi."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "목이 아프고 열이 나요. 감기에 ___ 것 같아요.",
+          "options": [
+            "걸린",
+            "걸리고",
+            "걸리게",
+            "걸려서"
+          ],
+          "explain": "Đã bị cảm (quá khứ) → 걸린 것 같아요."
+        },
+        {
+          "q": "밖이 시끄러워요. 아이들이 밖에서 ___ 것 같아요.",
+          "options": [
+            "노는",
+            "놀는",
+            "논는",
+            "놀은"
+          ],
+          "explain": "놀다 hiện tại: bỏ ㄹ + 는 → 노는 것 같아요."
+        },
+        {
+          "q": "이 운동화는 저한테 좀 ___ 것 같아요.",
+          "options": [
+            "작은",
+            "작는",
+            "작을는",
+            "작아"
+          ],
+          "explain": "Tính từ 작다 → 작은 것 같아요."
+        },
+        {
+          "q": "민수 씨가 아직 안 왔어요. 길이 많이 ___ 것 같아요.",
+          "options": [
+            "막히는",
+            "막힌는",
+            "막혀는",
+            "막히은"
+          ],
+          "explain": "Đang tắc đường (hiện tại) → 막히는 것 같아요."
+        },
+        {
+          "q": "Nghĩa của \"요즘 체중이 좀 는 것 같아요.\"",
+          "options": [
+            "Hình như dạo này tôi tăng cân một chút.",
+            "Dạo này tôi muốn tăng cân.",
+            "Dạo này tôi đã giảm cân.",
+            "Dạo này chắc chắn tôi đã tăng 5 kg."
+          ],
+          "explain": "늘다 → 는 것 같다 (bỏ ㄹ): hình như đã tăng."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "매일 밤늦게까지 일하면 ___ 수 있어요.",
+      "options": [
+        "건강을 잃을",
+        "피로를 풀",
+        "휴가를 갈",
+        "건강을 지킬"
+      ],
+      "explain": "Làm việc khuya liên tục → có thể mất sức khỏe."
+    },
+    {
+      "q": "주말에는 집에서 푹 쉬면서 ___.",
+      "options": [
+        "피로를 풀어요",
+        "스트레스를 받아요",
+        "과로해요",
+        "건강을 잃어요"
+      ],
+      "explain": "Nghỉ ngơi để xua tan mệt mỏi → 피로를 풀다."
+    },
+    {
+      "q": "담배는 ___ 피우지 마세요.",
+      "options": [
+        "건강에 나쁘니까",
+        "건강에 좋으니까",
+        "안색이 좋으니까",
+        "젊으니까"
+      ],
+      "explain": "Thuốc lá có hại → 건강에 나쁘다."
+    },
+    {
+      "q": "식사 시간이 ___이면 소화가 잘 안 돼요.",
+      "options": [
+        "불규칙적",
+        "규칙적",
+        "무조건",
+        "연령대"
+      ],
+      "explain": "Ăn uống thất thường → 불규칙적."
+    },
+    {
+      "q": "음악에 맞춰서 하는 운동인 ___을 배우고 있어요.",
+      "options": [
+        "에어로빅",
+        "사이클링",
+        "변비",
+        "전단"
+      ],
+      "explain": "Môn tập theo nhạc → 에어로빅."
+    },
+    {
+      "q": "물을 하루에 2___쯤 마시는 게 좋아요.",
+      "options": [
+        "리터",
+        "체중",
+        "증상",
+        "암"
+      ],
+      "explain": "Đơn vị đo nước → 리터."
+    },
+    {
+      "q": "감기 ___이 있으면 빨리 병원에 가세요.",
+      "options": [
+        "증상",
+        "전단",
+        "연령대",
+        "규칙적"
+      ],
+      "explain": "Dấu hiệu bệnh → 증상."
+    },
+    {
+      "q": "계획을 세우는 것보다 ___ 것이 더 중요해요.",
+      "options": [
+        "실천하는",
+        "젊은",
+        "답답한",
+        "무조건"
+      ],
+      "explain": "Lập kế hoạch rồi phải làm thật → 실천하다."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 안색이 안 좋아 보여요. 어디 아파요? 나: 어제 잠을 못 자서 좀 피곤해요.",
+      "q": "Vì sao người nói mệt?",
+      "options": [
+        "Hôm qua không ngủ được",
+        "Làm việc quá sức",
+        "Bị cảm",
+        "Tập thể dục nhiều"
+      ],
+      "explain": "어제 잠을 못 자서 좀 피곤해요."
+    },
+    {
+      "listen": "가: 요즘 스트레스를 많이 받아요. 나: 그럼 주말에 가벼운 운동을 하는 게 좋아요.",
+      "q": "Người thứ hai khuyên gì?",
+      "options": [
+        "Cuối tuần vận động nhẹ",
+        "Đi khám bác sĩ",
+        "Nghỉ việc",
+        "Đi du lịch xa"
+      ],
+      "explain": "주말에 가벼운 운동을 하는 게 좋아요."
+    },
+    {
+      "listen": "가: 민수 씨가 아직 안 왔네요. 나: 아까 전화했는데 안 받아요. 아직 자는 것 같아요.",
+      "q": "Theo người nói, Min-su đang làm gì?",
+      "options": [
+        "Hình như vẫn đang ngủ",
+        "Đang trên đường đến",
+        "Đang gọi điện",
+        "Đang nằm viện"
+      ],
+      "explain": "아직 자는 것 같아요."
+    },
+    {
+      "listen": "가: 건강을 위해서 뭘 하세요? 나: 매일 아침 30분씩 걷고 밤늦게 먹지 않아요.",
+      "q": "Người nói làm gì để giữ sức khỏe?",
+      "options": [
+        "Đi bộ 30 phút mỗi sáng và không ăn khuya",
+        "Tập yoga mỗi tối",
+        "Ăn thật nhiều rau",
+        "Đi bơi vào cuối tuần"
+      ],
+      "explain": "매일 아침 30분씩 걷고 밤늦게 먹지 않아요."
+    },
+    {
+      "listen": "가: 요즘 일이 많아서 너무 지쳤어요. 나: 그럼 이번 휴가 때 여행을 가서 푹 쉬세요.",
+      "q": "Người thứ hai khuyên gì?",
+      "options": [
+        "Kỳ nghỉ này đi du lịch nghỉ ngơi",
+        "Làm thêm giờ cho xong việc",
+        "Uống thuốc bổ",
+        "Đổi công việc khác"
+      ],
+      "explain": "이번 휴가 때 여행을 가서 푹 쉬세요."
+    }
+  ],
+  "reading": {
+    "passage": "요즘 젊은 사람들 사이에서 건강에 대한 관심이 많아지고 있습니다. 예전에는 나이가 많은 사람들이 주로 건강을 걱정했지만 지금은 20~30대도 운동을 열심히 합니다. 특히 회사원들은 과로와 스트레스 때문에 쉽게 지칩니다. 그래서 퇴근 후에 요가나 에어로빅을 배우거나 주말에 사이클링을 하는 사람이 많아졌습니다. 하지만 운동만 하는 것보다 규칙적으로 식사하고 충분히 자는 것이 더 중요합니다.",
+    "passageVi": "Dạo này người trẻ ngày càng quan tâm đến sức khỏe. Trước đây chủ yếu người lớn tuổi lo về sức khỏe, nhưng giờ người 20–30 tuổi cũng chăm tập thể dục. Đặc biệt nhân viên văn phòng dễ kiệt sức vì làm việc quá sức và căng thẳng. Vì thế ngày càng nhiều người học yoga, thể dục nhịp điệu sau giờ làm hoặc đạp xe vào cuối tuần. Tuy nhiên, ăn uống đều đặn và ngủ đủ còn quan trọng hơn chỉ tập thể dục.",
+    "questions": [
+      {
+        "q": "Vì sao nhân viên văn phòng dễ kiệt sức?",
+        "options": [
+          "Vì làm việc quá sức và căng thẳng",
+          "Vì không có thời gian ăn",
+          "Vì tập thể dục quá nhiều",
+          "Vì ngủ quá nhiều"
+        ],
+        "explain": "회사원들은 과로와 스트레스 때문에 쉽게 지칩니다."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Ngày nay người 20–30 tuổi cũng chăm tập thể dục",
+          "Chỉ người lớn tuổi mới quan tâm sức khỏe",
+          "Tập thể dục quan trọng hơn ngủ đủ",
+          "Rất ít người tập yoga sau giờ làm"
+        ],
+        "explain": "지금은 20~30대도 운동을 열심히 합니다."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu khuyên một người bạn đang mệt mỏi, căng thẳng. Dùng -아/어 보이다, -(으)ㄴ/는 것 같다 và -는 게 좋다.",
+    "samples": [
+      [
+        "요즘 많이 피곤해 보여요.",
+        "Dạo này trông bạn mệt lắm."
+      ],
+      [
+        "일이 너무 많은 것 같아요.",
+        "Hình như bạn có quá nhiều việc."
+      ],
+      [
+        "주말에는 푹 쉬는 게 좋아요.",
+        "Cuối tuần bạn nên nghỉ ngơi cho đẫy."
+      ],
+      [
+        "밤늦게 커피를 마시지 않는 게 좋겠어요.",
+        "Bạn không nên uống cà phê buổi tối muộn."
+      ]
+    ],
+    "tips": "Nhận xét vẻ ngoài: tính từ + -아/어 보이다. Phỏng đoán: động từ hiện tại -는 것 같다, quá khứ -(으)ㄴ 것 같다, tính từ -(으)ㄴ 것 같다. Khuyên: -는 게 좋아요 / -지 않는 게 좋아요."
+  },
+  "topik": [
+    {
+      "type": "blank",
+      "q": "얼굴이 많이 (    ). 무슨 일 있어요?",
+      "options": [
+        "피곤해 보여요",
+        "피곤하게 됐어요",
+        "피곤할 생각이에요",
+        "피곤한 길이에요"
+      ],
+      "explain": "Nhận xét qua vẻ ngoài → -아/어 보여요."
+    },
+    {
+      "type": "blank",
+      "q": "감기에 걸렸을 때는 따뜻한 물을 많이 (    ).",
+      "options": [
+        "마시는 게 좋아요",
+        "마신 덕분이에요",
+        "마시는 길이에요",
+        "마실 생각이었어요"
+      ],
+      "explain": "Lời khuyên → -는 게 좋아요."
+    },
+    {
+      "type": "blank",
+      "q": "하늘이 많이 흐려요. 곧 비가 (    ).",
+      "options": [
+        "올 것 같아요",
+        "온 것 같아요",
+        "오는 길이에요",
+        "오게 했어요"
+      ],
+      "explain": "곧 (sắp) → phỏng đoán điều chưa xảy ra → -(으)ㄹ 것 같아요."
+    },
+    {
+      "type": "similar",
+      "q": "민수 씨가 오늘 __기분이 안 좋아 보여요__.",
+      "options": [
+        "기분이 안 좋은 것 같아요",
+        "기분이 좋아졌어요",
+        "기분이 좋을 생각이에요",
+        "기분이 안 좋으면 안 돼요"
+      ],
+      "explain": "-아/어 보이다 (trông có vẻ) ≈ -(으)ㄴ 것 같다 (hình như)."
+    },
+    {
+      "type": "similar",
+      "q": "스트레스를 받을 때는 __산책을 하는 게 좋아요__.",
+      "options": [
+        "산책을 해 보세요",
+        "산책을 하면 안 돼요",
+        "산책을 한 적이 있어요",
+        "산책을 하고 있어요"
+      ],
+      "explain": "Lời khuyên -는 게 좋아요 ≈ gợi ý -아/어 보세요."
+    },
+    {
+      "type": "notice",
+      "passage": "🚶 함께 걸어요! 가족 걷기 대회\n건강한 몸, 행복한 하루\n· 일시: 10월 5일(일) 오전 9시\n· 장소: 한강 공원\n· 참가비 없음 / 끝까지 걸은 분께 작은 선물을 드립니다.",
+      "passageVi": "Cùng đi bộ nào! Hội đi bộ gia đình. Cơ thể khỏe, ngày vui. Thời gian: 9 giờ sáng Chủ nhật 5/10. Địa điểm: công viên sông Hàn. Không mất phí; ai đi hết quãng đường sẽ nhận một món quà nhỏ.",
+      "q": "다음은 무엇에 대한 글입니까?",
+      "options": [
+        "운동 행사",
+        "병원 안내",
+        "공원 청소",
+        "건강 검진"
+      ],
+      "explain": "걷기 대회 = một sự kiện thể thao (đi bộ)."
+    },
+    {
+      "type": "order",
+      "passage": "(가) 처음에는 힘들었지만 지금은 아침마다 기분이 좋아요.\n(나) 저는 작년부터 몸이 많이 안 좋아졌어요.\n(다) 그래서 매일 아침 30분씩 걷기 시작했어요.\n(라) 체중도 줄고 안색도 좋아졌어요.",
+      "passageVi": "(나) Từ năm ngoái sức khỏe tôi kém đi nhiều. (다) Vì vậy tôi bắt đầu đi bộ 30 phút mỗi sáng. (가) Lúc đầu thì vất vả nhưng giờ sáng nào tôi cũng thấy dễ chịu. (라) Cân nặng cũng giảm và sắc mặt cũng tươi hơn.",
+      "q": "다음을 순서대로 맞게 배열한 것을 고르십시오.",
+      "options": [
+        "(나)-(다)-(가)-(라)",
+        "(나)-(가)-(다)-(라)",
+        "(다)-(나)-(라)-(가)",
+        "(가)-(나)-(다)-(라)"
+      ],
+      "explain": "Vấn đề (나) → giải pháp 그래서 (다) → cảm nhận (가) → kết quả thêm 도 (라)."
+    },
+    {
+      "type": "main",
+      "passage": "잠을 충분히 자지 못하면 다음 날 쉽게 피곤해집니다. 그런데 오래 자는 것보다 매일 같은 시간에 자고 일어나는 것이 더 중요합니다. 주말에 늦게까지 자면 오히려 월요일에 더 피곤할 수 있습니다.",
+      "passageVi": "Không ngủ đủ thì hôm sau rất dễ mệt. Nhưng ngủ đúng giờ và dậy đúng giờ mỗi ngày còn quan trọng hơn ngủ lâu. Cuối tuần ngủ nướng đến trưa thì ngược lại, thứ Hai có thể còn mệt hơn.",
+      "q": "다음 글의 중심 생각으로 알맞은 것을 고르십시오.",
+      "options": [
+        "규칙적으로 자고 일어나는 것이 중요합니다.",
+        "주말에는 늦게까지 자는 게 좋습니다.",
+        "잠을 오래 잘수록 건강해집니다.",
+        "월요일에는 일찍 일어나야 합니다."
+      ],
+      "explain": "같은 시간에 자고 일어나는 것이 더 중요합니다 → ý chính: ngủ dậy đều đặn."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "여자",
+          "어디가 불편하세요?"
+        ],
+        [
+          "남자",
+          "며칠 전부터 머리가 아프고 가슴이 좀 답답해요."
+        ],
+        [
+          "여자",
+          "요즘 일을 많이 하셨나요?"
+        ],
+        [
+          "남자",
+          "네, 일이 많아서 매일 밤늦게까지 일했어요."
+        ],
+        [
+          "여자",
+          "과로하신 것 같아요. 약을 드릴게요. 그리고 며칠 동안은 푹 쉬는 게 좋아요."
+        ]
+      ],
+      "linesVi": "Nữ (bác sĩ): Anh thấy khó chịu ở đâu? Nam: Từ mấy hôm trước tôi đau đầu và hơi tức ngực. Nữ: Dạo này anh làm việc nhiều à? Nam: Vâng, việc nhiều nên ngày nào tôi cũng làm đến khuya. Nữ: Có lẽ anh làm việc quá sức rồi. Tôi kê thuốc cho anh. Và mấy ngày tới anh nên nghỉ ngơi cho đẫy.",
+      "q": "들은 내용과 같은 것을 고르십시오.",
+      "options": [
+        "남자는 요즘 밤늦게까지 일했습니다.",
+        "남자는 오늘 처음 머리가 아팠습니다.",
+        "여자는 남자에게 운동을 추천했습니다.",
+        "남자는 약을 받지 않을 겁니다."
+      ],
+      "explain": "매일 밤늦게까지 일했어요."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "남자",
+          "수진 씨, 요즘 피곤해 보여요."
+        ],
+        [
+          "여자",
+          "네, 회사 일 때문에 스트레스를 많이 받아서 잠을 잘 못 자요."
+        ],
+        [
+          "남자",
+          "저도 그랬는데 요가를 시작한 후에 많이 좋아졌어요. 같이 해 볼래요?"
+        ],
+        [
+          "여자",
+          "좋아요. 그럼 이번 주말에 같이 요가 학원에 가 봐요."
+        ]
+      ],
+      "linesVi": "Nam: Su-jin, dạo này trông bạn mệt. Nữ: Ừ, vì việc công ty căng thẳng quá nên tôi ngủ không ngon. Nam: Tôi cũng từng vậy, nhưng từ khi tập yoga thì đỡ nhiều. Bạn tập cùng không? Nữ: Được đó. Vậy cuối tuần này mình cùng đến lớp yoga nhé.",
+      "q": "여자가 할 행동으로 알맞은 것을 고르십시오.",
+      "options": [
+        "주말에 요가 학원에 가요.",
+        "회사를 그만둬요.",
+        "병원에 가서 약을 받아요.",
+        "오늘 밤 일찍 자요."
+      ],
+      "explain": "이번 주말에 같이 요가 학원에 가 봐요."
+    }
+  ],
+  "fillWriting": [
+    {
+      "text": "제목: 헬스장 이용 안내\n회원 여러분, 안녕하십니까? 다음 주 월요일부터 수요일까지 운동 기구를 바꾸는 공사가 있습니다. 그래서 이 기간에는 헬스장을 ( ㉠ ). 하지만 1층 요가실은 평소처럼 ( ㉡ ). 이용에 불편을 드려서 죄송합니다.",
+      "textVi": "Tiêu đề: Thông báo sử dụng phòng gym. Kính chào hội viên. Từ thứ Hai đến thứ Tư tuần sau sẽ thi công thay máy tập. Vì vậy trong thời gian này phòng gym ( ㉠ ). Tuy nhiên phòng yoga tầng 1 vẫn ( ㉡ ) như bình thường. Xin lỗi vì sự bất tiện.",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "이용할 수 없습니다",
+            "사용하실 수 없습니다"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "이용할 수 있습니다",
+            "문을 엽니다"
+          ]
+        }
+      ],
+      "tips": "Có thi công → không dùng được (㉠). 하지만 báo hiệu ý ngược lại → phòng yoga vẫn dùng được (㉡). Thông báo nên dùng -(스)ㅂ니다 và -(으)ㄹ 수 있다/없다."
+    },
+    {
+      "text": "스트레스를 오랫동안 받으면 몸과 마음이 모두 지칩니다. 그래서 스트레스를 받을 때는 ( ㉠ ). 예를 들면 좋아하는 음악을 듣거나 가벼운 운동을 하는 것입니다. 하지만 스트레스를 풀려고 술을 많이 마시는 것은 ( ㉡ ).",
+      "textVi": "Nếu căng thẳng kéo dài thì cả thể chất lẫn tinh thần đều kiệt sức. Vì vậy khi bị căng thẳng thì ( ㉠ ). Ví dụ như nghe nhạc mình thích hoặc vận động nhẹ. Nhưng uống nhiều rượu để giải tỏa căng thẳng thì ( ㉡ ).",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "빨리 푸는 게 좋습니다",
+            "자기에게 맞는 방법으로 푸는 것이 좋습니다"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "건강에 나쁩니다",
+            "좋지 않습니다"
+          ]
+        }
+      ],
+      "tips": "Câu sau ㉠ đưa ví dụ cách giải tỏa → ㉠ là lời khuyên “nên giải tỏa”. 하지만 + uống nhiều rượu → ㉡ nói điều không tốt. Văn giải thích dùng -(스)ㅂ니다."
+    }
+  ]
+}

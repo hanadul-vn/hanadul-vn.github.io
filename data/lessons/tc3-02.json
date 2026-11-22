@@ -1,0 +1,856 @@
+{
+  "id": "tc3-02",
+  "title": "Quan hệ con người",
+  "ko": "대인 관계",
+  "goal": "Hỏi thăm, nhờ vả và từ chối khéo; nói mình đang trên đường đi đâu, cảm ơn nhờ ai đó, hỏi một cách nhẹ nhàng, lịch sự.",
+  "vocab": [
+    {
+      "group": "Quan hệ xã hội",
+      "words": [
+        [
+          "대인 관계",
+          "quan hệ giữa người với người"
+        ],
+        [
+          "마음이 넓다",
+          "rộng lượng, bao dung"
+        ],
+        [
+          "인기가 있다",
+          "được nhiều người yêu mến"
+        ],
+        [
+          "성격이 좋다",
+          "tính tình dễ chịu"
+        ],
+        [
+          "대인 관계가 좋다",
+          "giỏi giao tiếp, quan hệ tốt với mọi người"
+        ],
+        [
+          "사람을 사귀다",
+          "kết bạn, làm quen"
+        ]
+      ]
+    },
+    {
+      "group": "Nhờ vả và từ chối",
+      "words": [
+        [
+          "부탁하다",
+          "nhờ, nhờ vả"
+        ],
+        [
+          "부탁을 받다",
+          "được (ai đó) nhờ"
+        ],
+        [
+          "부탁을 들어주다",
+          "nhận lời giúp"
+        ],
+        [
+          "부탁을 거절하다",
+          "từ chối lời nhờ"
+        ],
+        [
+          "도움을 청하다",
+          "xin sự giúp đỡ"
+        ],
+        [
+          "거절하다",
+          "từ chối"
+        ],
+        [
+          "거절을 당하다",
+          "bị từ chối"
+        ]
+      ]
+    },
+    {
+      "group": "Hỏi thăm",
+      "words": [
+        [
+          "안부를 묻다",
+          "hỏi thăm sức khỏe, tình hình"
+        ],
+        [
+          "여쭙다",
+          "hỏi (kính ngữ, với người trên)"
+        ],
+        [
+          "안부를 전하다",
+          "gửi lời hỏi thăm"
+        ],
+        [
+          "안부 전화를 하다",
+          "gọi điện hỏi thăm"
+        ],
+        [
+          "안부 편지를 보내다",
+          "gửi thư hỏi thăm"
+        ],
+        [
+          "찾아뵙다",
+          "đến thăm (người trên)"
+        ]
+      ]
+    },
+    {
+      "group": "Các buổi gặp mặt",
+      "words": [
+        [
+          "송별회",
+          "tiệc chia tay"
+        ],
+        [
+          "동창회",
+          "buổi họp lớp cũ"
+        ],
+        [
+          "송년회",
+          "tiệc tất niên"
+        ],
+        [
+          "야유회",
+          "buổi dã ngoại tập thể"
+        ],
+        [
+          "정기 모임",
+          "buổi gặp mặt định kỳ"
+        ],
+        [
+          "연락",
+          "sự liên lạc"
+        ],
+        [
+          "취소",
+          "sự hủy bỏ"
+        ]
+      ]
+    },
+    {
+      "group": "Từ mới khác",
+      "words": [
+        [
+          "가능하면",
+          "nếu được thì"
+        ],
+        [
+          "겁이 나다",
+          "sợ, thấy run"
+        ],
+        [
+          "농담",
+          "câu nói đùa"
+        ],
+        [
+          "다가오다",
+          "đến gần, sắp tới"
+        ],
+        [
+          "때때로",
+          "thỉnh thoảng, đôi lúc"
+        ],
+        [
+          "뒤풀이",
+          "buổi liên hoan sau sự kiện"
+        ],
+        [
+          "들르다",
+          "ghé qua"
+        ],
+        [
+          "면접시험",
+          "buổi thi phỏng vấn"
+        ],
+        [
+          "무사히",
+          "suôn sẻ, bình an"
+        ],
+        [
+          "부드럽다",
+          "mềm mỏng, nhẹ nhàng"
+        ],
+        [
+          "사람을 대하다",
+          "đối xử, cư xử với người khác"
+        ],
+        [
+          "사정",
+          "hoàn cảnh, lý do riêng"
+        ],
+        [
+          "상대방",
+          "người đối diện, phía bên kia"
+        ],
+        [
+          "솔직하다",
+          "thẳng thắn, thật lòng"
+        ],
+        [
+          "수첩",
+          "cuốn sổ tay"
+        ],
+        [
+          "스승의 날",
+          "ngày Nhà giáo (Hàn Quốc, 15/5)"
+        ],
+        [
+          "실력",
+          "năng lực thực tế"
+        ],
+        [
+          "어색하다",
+          "ngượng ngập, gượng gạo"
+        ],
+        [
+          "염려",
+          "sự lo lắng, bận tâm"
+        ],
+        [
+          "요약",
+          "bản tóm tắt"
+        ],
+        [
+          "원래",
+          "vốn dĩ, ban đầu"
+        ],
+        [
+          "추천",
+          "sự giới thiệu, đề cử"
+        ],
+        [
+          "충분히",
+          "một cách đầy đủ"
+        ],
+        [
+          "포기하다",
+          "bỏ cuộc, từ bỏ"
+        ],
+        [
+          "표정을 짓다",
+          "làm vẻ mặt, tỏ nét mặt"
+        ],
+        [
+          "현명하다",
+          "sáng suốt, khôn ngoan"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "V -는 길이다",
+      "title": "đang trên đường (đi/về)…",
+      "note": [
+        "Gắn với động từ di chuyển như 가다, 오다, 돌아가다, 출근하다, 퇴근하다: đang trên đường đi tới đâu đó.",
+        "-는 길에: trong lúc đang trên đường thì làm việc khác (들르다, 만나다, 사다…).",
+        "Chỉ dùng dạng hiện tại -는, không dùng -(으)ㄴ hay -(으)ㄹ."
+      ],
+      "examples": [
+        [
+          "지금 학교에 가는 길이에요.",
+          "Bây giờ tôi đang trên đường đến trường."
+        ],
+        [
+          "집에 오는 길에 친구를 만났어요.",
+          "Trên đường về nhà tôi gặp bạn."
+        ],
+        [
+          "선생님 댁에 인사드리러 가는 길이에요.",
+          "Tôi đang trên đường đến nhà thầy để chào hỏi."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "A: 어디 가요? B: 도서관에 책을 반납하러 가는 ___이에요.",
+          "options": [
+            "길",
+            "척",
+            "편",
+            "수"
+          ],
+          "explain": "Đang trên đường đi trả sách → 가는 길이에요."
+        },
+        {
+          "q": "퇴근하는 ___에 마트에 들렀어요.",
+          "options": [
+            "길",
+            "대신",
+            "덕분",
+            "적"
+          ],
+          "explain": "-는 길에 = trên đường (làm gì) thì tiện ghé."
+        },
+        {
+          "q": "A: 지금 어디예요? B: 집에 ___ 길이에요. 10분 후에 도착해요.",
+          "options": [
+            "가는",
+            "간",
+            "갈",
+            "가던"
+          ],
+          "explain": "-는 길이다 chỉ dùng dạng hiện tại -는."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "회사에 가는 길이에요.",
+            "회사에 간 길이에요.",
+            "회사에 갈 길이에요.",
+            "회사에 가길이에요."
+          ],
+          "explain": "가다 → 가는 길이에요."
+        },
+        {
+          "q": "Nghĩa của \"학교에 오는 길에 교통사고를 봤어요.\"",
+          "options": [
+            "Trên đường đến trường tôi thấy một vụ tai nạn giao thông.",
+            "Tôi bị tai nạn giao thông nên không đến trường được.",
+            "Con đường đến trường có nhiều tai nạn.",
+            "Đến trường rồi tôi mới nghe tin tai nạn."
+          ],
+          "explain": "-는 길에 = trên đường."
+        }
+      ]
+    },
+    {
+      "pattern": "V -(으)ㄴ 덕분에 · N 덕분에",
+      "title": "nhờ… (mà có kết quả tốt)",
+      "note": [
+        "Nói nguyên nhân mang lại kết quả TỐT, thường kèm lòng biết ơn.",
+        "Động từ: gốc + -(으)ㄴ 덕분에 (도와준 덕분에, 먹은 덕분에). Danh từ: N 덕분에 (선생님 덕분에).",
+        "Kết quả xấu thì không dùng 덕분에, hãy dùng 때문에.",
+        "Câu cảm ơn quen thuộc: 덕분에 잘 지냈어요. (Nhờ anh/chị mà tôi vẫn khỏe.)"
+      ],
+      "examples": [
+        [
+          "친구가 도와준 덕분에 이사를 빨리 끝냈어요.",
+          "Nhờ bạn giúp mà tôi chuyển nhà xong nhanh."
+        ],
+        [
+          "선생님 덕분에 한국어 실력이 많이 늘었어요.",
+          "Nhờ thầy mà trình độ tiếng Hàn của tôi tiến bộ nhiều."
+        ],
+        [
+          "약을 먹은 덕분에 감기가 다 나았어요.",
+          "Nhờ uống thuốc mà tôi khỏi cảm hẳn."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "친구가 공책을 빌려준 ___ 시험을 잘 봤어요.",
+          "options": [
+            "덕분에",
+            "길에",
+            "처럼",
+            "마다"
+          ],
+          "explain": "Nhờ bạn cho mượn vở → kết quả tốt → 덕분에."
+        },
+        {
+          "q": "선생님___ 대학교에 합격할 수 있었어요.",
+          "options": [
+            "덕분에",
+            "덕분에서",
+            "한테 덕분",
+            "의 덕분에서"
+          ],
+          "explain": "N 덕분에."
+        },
+        {
+          "q": "열심히 연습한 ___ 면접시험에 합격했어요.",
+          "options": [
+            "덕분에",
+            "덕분이",
+            "덕분을",
+            "덕분도"
+          ],
+          "explain": "V-(으)ㄴ 덕분에."
+        },
+        {
+          "q": "Câu nào tự nhiên nhất?",
+          "options": [
+            "부모님이 도와주신 덕분에 유학을 올 수 있었어요.",
+            "비가 온 덕분에 소풍이 취소됐어요.",
+            "늦게 일어난 덕분에 지각했어요.",
+            "감기에 걸린 덕분에 시험을 못 봤어요."
+          ],
+          "explain": "덕분에 chỉ dùng cho kết quả tốt; kết quả xấu dùng 때문에."
+        },
+        {
+          "q": "Nghĩa của \"여러분 덕분에 무사히 일을 끝냈어요.\"",
+          "options": [
+            "Nhờ mọi người mà tôi đã xong việc suôn sẻ.",
+            "Vì mọi người mà công việc bị hỏng.",
+            "Tôi đã làm thay mọi người cho xong việc.",
+            "Mọi người làm xong việc rồi về trước."
+          ],
+          "explain": "N 덕분에 = nhờ N."
+        }
+      ]
+    },
+    {
+      "pattern": "-나요? · -(으)ㄴ가요?",
+      "title": "hỏi nhẹ nhàng, mềm mỏng",
+      "note": [
+        "Đuôi câu hỏi lịch sự, nghe mềm và thân thiện hơn -아/어요?.",
+        "Động từ, 있다/없다 và quá khứ -았/었-: + 나요? (가나요?, 맛있나요?, 왔나요?).",
+        "Tính từ: + -(으)ㄴ가요? (비싼가요?, 작은가요?). Danh từ: + 인가요? (학생인가요?)."
+      ],
+      "examples": [
+        [
+          "요즘 어떻게 지내시나요?",
+          "Dạo này anh/chị sống thế nào ạ?"
+        ],
+        [
+          "이 가방은 좀 비싼가요?",
+          "Cái túi này có đắt không ạ?"
+        ],
+        [
+          "저분이 새로 오신 선생님인가요?",
+          "Vị kia là thầy giáo mới đến phải không ạ?"
+        ]
+      ],
+      "questions": [
+        {
+          "q": "주말에 보통 뭐 하___?",
+          "options": [
+            "나요",
+            "ㄴ가요",
+            "인가요",
+            "은가요"
+          ],
+          "explain": "하다 là động từ → 하나요?"
+        },
+        {
+          "q": "저 사람이 새로 온 조교___?",
+          "options": [
+            "인가요",
+            "나요",
+            "은가요",
+            "는가요"
+          ],
+          "explain": "Danh từ (조교) → 인가요?"
+        },
+        {
+          "q": "어제 모임에 사람이 많이 왔___?",
+          "options": [
+            "나요",
+            "인가요",
+            "은가요",
+            "한가요"
+          ],
+          "explain": "Quá khứ 왔- → 왔나요?"
+        },
+        {
+          "q": "부모님은 요즘 ___?",
+          "options": [
+            "건강하신가요",
+            "건강하신는가요",
+            "건강한이가요",
+            "건강하신인가요"
+          ],
+          "explain": "Tính từ 건강하다 (+ kính ngữ 시) → 건강하신가요?"
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "이 방은 좀 작은가요?",
+            "이 방은 좀 작나가요?",
+            "이 방은 좀 작인가요?",
+            "이 방은 좀 작는가요?"
+          ],
+          "explain": "Tính từ 작다 có patchim → 작은가요?"
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "제 친구는 ___ 다른 사람의 실수를 잘 이해해 줘요.",
+      "options": [
+        "마음이 넓어서",
+        "겁이 나서",
+        "어색해서",
+        "포기해서"
+      ],
+      "explain": "Hiểu và bỏ qua lỗi người khác → rộng lượng (마음이 넓다)."
+    },
+    {
+      "q": "혼자 하기 힘들어서 친구에게 도움을 ___.",
+      "options": [
+        "청했어요",
+        "거절했어요",
+        "포기했어요",
+        "요약했어요"
+      ],
+      "explain": "도움을 청하다 = xin giúp đỡ."
+    },
+    {
+      "q": "바빠서 친구의 부탁을 ___ 미안했어요.",
+      "options": [
+        "거절해서",
+        "추천해서",
+        "들러서",
+        "요약해서"
+      ],
+      "explain": "Bận nên từ chối lời nhờ → 거절하다."
+    },
+    {
+      "q": "고향에 계신 할머니께 오랜만에 ___.",
+      "options": [
+        "안부 전화를 했어요",
+        "뒤풀이를 했어요",
+        "표정을 지었어요",
+        "면접시험을 봤어요"
+      ],
+      "explain": "Gọi điện hỏi thăm bà → 안부 전화를 하다."
+    },
+    {
+      "q": "연말에 회사 사람들과 ___를 했어요.",
+      "options": [
+        "송년회",
+        "스승의 날",
+        "면접시험",
+        "수첩"
+      ],
+      "explain": "Tiệc cuối năm → 송년회."
+    },
+    {
+      "q": "처음 만난 사람과 이야기할 때는 좀 ___.",
+      "options": [
+        "어색해요",
+        "무사히",
+        "충분히",
+        "원래"
+      ],
+      "explain": "Mới gặp nên ngượng → 어색하다."
+    },
+    {
+      "q": "스승의 날에 고등학교 선생님을 ___ 꽃을 드렸어요.",
+      "options": [
+        "찾아뵙고",
+        "거절하고",
+        "포기하고",
+        "취소하고"
+      ],
+      "explain": "Đến thăm thầy cô (người trên) → 찾아뵙다."
+    },
+    {
+      "q": "갑자기 일이 생겨서 오늘 모임을 ___했어요.",
+      "options": [
+        "취소",
+        "추천",
+        "요약",
+        "농담"
+      ],
+      "explain": "Có việc đột xuất → hủy buổi gặp (취소하다)."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 어디 가세요? 나: 할머니 댁에 안부 인사를 드리러 가는 길이에요.",
+      "q": "Người nói đang đi đâu?",
+      "options": [
+        "Đến nhà bà",
+        "Đến trường",
+        "Đi họp lớp",
+        "Về công ty"
+      ],
+      "explain": "할머니 댁에 … 가는 길이에요."
+    },
+    {
+      "listen": "가: 이사는 잘 했어요? 나: 네, 친구들이 도와준 덕분에 빨리 끝났어요.",
+      "q": "Vì sao chuyển nhà xong nhanh?",
+      "options": [
+        "Nhờ bạn bè giúp",
+        "Nhờ thuê dịch vụ chuyển nhà",
+        "Vì đồ đạc ít",
+        "Vì nhà mới ở gần"
+      ],
+      "explain": "친구들이 도와준 덕분에."
+    },
+    {
+      "listen": "가: 내일 동창회에 오나요? 나: 미안해요. 내일 면접시험이 있어서 못 가요.",
+      "q": "Vì sao người nói không đi họp lớp?",
+      "options": [
+        "Ngày mai có buổi thi phỏng vấn",
+        "Đang bị ốm",
+        "Phải đi làm thêm",
+        "Không thích họp lớp"
+      ],
+      "explain": "내일 면접시험이 있어서 못 가요."
+    },
+    {
+      "listen": "가: 수진 씨가 부탁을 들어줬어요? 나: 아니요, 사정이 있어서 거절했어요.",
+      "q": "Su-jin đã làm gì?",
+      "options": [
+        "Từ chối vì có lý do riêng",
+        "Nhận lời giúp",
+        "Nhờ người khác giúp",
+        "Vẫn chưa trả lời"
+      ],
+      "explain": "사정이 있어서 거절했어요."
+    },
+    {
+      "listen": "가: 민호 씨는 어떤 사람이에요? 나: 솔직하고 마음이 넓어서 친구들한테 인기가 많아요.",
+      "q": "Min-ho là người thế nào?",
+      "options": [
+        "Thẳng thắn và rộng lượng",
+        "Nhút nhát và hay lo",
+        "Khôn ngoan nhưng khó gần",
+        "Hay đùa và vụng về"
+      ],
+      "explain": "솔직하고 마음이 넓어서."
+    }
+  ],
+  "reading": {
+    "passage": "지난주 토요일에 고등학교 동창회가 있었습니다. 졸업한 후에 처음 만나는 친구들도 있어서 처음에는 조금 어색했습니다. 그런데 반장이었던 민수가 재미있는 농담을 많이 해 준 덕분에 분위기가 금방 좋아졌습니다. 모임이 끝난 후에는 다 같이 노래방에 가서 뒤풀이를 했습니다. 다음 동창회 때는 스승의 날에 담임 선생님을 찾아뵙고 함께 식사를 하기로 했습니다.",
+    "passageVi": "Thứ Bảy tuần trước có buổi họp lớp cấp ba. Có những bạn lần đầu gặp lại từ khi tốt nghiệp nên lúc đầu hơi ngượng. Nhưng nhờ Min-su, lớp trưởng ngày xưa, kể nhiều chuyện vui mà không khí nhanh chóng tốt lên. Họp xong cả nhóm đi karaoke liên hoan tiếp. Lần họp lớp sau, cả lớp quyết định vào ngày Nhà giáo sẽ đến thăm thầy chủ nhiệm và cùng ăn cơm.",
+    "questions": [
+      {
+        "q": "Vì sao không khí nhanh chóng vui lên?",
+        "options": [
+          "Vì Min-su kể nhiều chuyện vui",
+          "Vì cả lớp đi hát karaoke",
+          "Vì thầy chủ nhiệm đến",
+          "Vì mọi người đã thân từ trước"
+        ],
+        "explain": "민수가 재미있는 농담을 많이 해 준 덕분에 분위기가 금방 좋아졌습니다."
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Lần sau cả lớp sẽ đến thăm thầy chủ nhiệm",
+          "Lúc đầu mọi người rất tự nhiên",
+          "Buổi họp lớp diễn ra vào Chủ nhật",
+          "Họp xong mọi người về nhà ngay"
+        ],
+        "explain": "다음 동창회 때는 … 담임 선생님을 찾아뵙고 … 하기로 했습니다."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu kể về một người đã giúp đỡ bạn. Dùng -(으)ㄴ 덕분에, -는 길이다 (hoặc -는 길에) và -나요/-(으)ㄴ가요.",
+    "samples": [
+      [
+        "선배가 도와준 덕분에 학교생활에 빨리 적응했어요.",
+        "Nhờ anh khóa trên giúp mà tôi nhanh chóng quen với đời sống ở trường."
+      ],
+      [
+        "오늘은 선배에게 선물을 주러 가는 길이에요.",
+        "Hôm nay tôi đang trên đường đi tặng quà cho anh ấy."
+      ],
+      [
+        "학교에 오는 길에 꽃집에 들렀어요.",
+        "Trên đường đến trường tôi đã ghé tiệm hoa."
+      ],
+      [
+        "선배님, 요즘 어떻게 지내시나요?",
+        "Anh ơi, dạo này anh thế nào ạ?"
+      ]
+    ],
+    "tips": "덕분에 chỉ dùng cho kết quả tốt. -는 길이다 chỉ đi với dạng -는. Hỏi mềm mỏng: động từ + 나요?, tính từ + (으)ㄴ가요?, danh từ + 인가요?"
+  },
+  "topik": [
+    {
+      "type": "blank",
+      "q": "친구가 공항까지 차로 (    ) 비행기를 놓치지 않았어요.",
+      "options": [
+        "태워 준 덕분에",
+        "태워 주는 길에",
+        "태워 주지 말고",
+        "태워 주려고"
+      ],
+      "explain": "Nhờ bạn chở mà không trễ máy bay → -(으)ㄴ 덕분에."
+    },
+    {
+      "type": "blank",
+      "q": "학교에서 집에 (    ) 서점에 들러서 책을 샀어요.",
+      "options": [
+        "오는 길에",
+        "온 덕분에",
+        "오지 말고",
+        "올 생각에"
+      ],
+      "explain": "Trên đường về thì ghé hiệu sách → -는 길에."
+    },
+    {
+      "type": "blank",
+      "q": "실례지만, 여기가 학과 사무실(    )?",
+      "options": [
+        "인가요",
+        "나요",
+        "은가요",
+        "이나요"
+      ],
+      "explain": "Danh từ + 인가요? (hỏi lịch sự)."
+    },
+    {
+      "type": "similar",
+      "q": "친구가 많이 __도와준 덕분에__ 일을 일찍 끝냈어요.",
+      "options": [
+        "도와줘서",
+        "도와주려고",
+        "도와주면",
+        "도와주지만"
+      ],
+      "explain": "-(으)ㄴ 덕분에 ≈ -아/어서 (nguyên nhân, ở đây là kết quả tốt)."
+    },
+    {
+      "type": "similar",
+      "q": "지금 회사에 __가는 길이에요__.",
+      "options": [
+        "가고 있어요",
+        "갈 거예요",
+        "가고 싶어요",
+        "간 적이 있어요"
+      ],
+      "explain": "-는 길이다 = đang trên đường → 가고 있어요."
+    },
+    {
+      "type": "notice",
+      "passage": "🎉 송년회 안내\n한 해 동안 수고 많으셨습니다!\n· 일시: 12월 27일(금) 저녁 7시\n· 장소: 회사 근처 '한마음 식당'\n· 회비: 2만 원 (당일에 내 주세요)",
+      "passageVi": "Thông báo tiệc tất niên. Cảm ơn mọi người đã vất vả cả năm! Thời gian: 7 giờ tối thứ Sáu 27/12. Địa điểm: nhà hàng 'Hanmaeum' gần công ty. Phí: 20.000 won (đóng trong ngày).",
+      "q": "다음은 무엇에 대한 글입니까?",
+      "options": [
+        "연말 모임",
+        "신입 사원 모집",
+        "식당 광고",
+        "동창회 취소"
+      ],
+      "explain": "송년회 = tiệc tất niên → buổi gặp cuối năm."
+    },
+    {
+      "type": "order",
+      "passage": "(가) 그런데 그날은 면접시험이 있어서 갈 수 없었어요.\n(나) 지난달에 친구에게서 결혼식 초대를 받았어요.\n(다) 다행히 친구는 제 사정을 이해해 줬어요.\n(라) 그래서 친구에게 전화를 해서 솔직하게 사정을 말했어요.",
+      "passageVi": "(나) Tháng trước tôi nhận được thiệp mời cưới của bạn. (가) Nhưng hôm đó tôi có buổi thi phỏng vấn nên không đi được. (라) Vì vậy tôi gọi cho bạn và nói thật lý do. (다) May là bạn đã thông cảm cho tôi.",
+      "q": "다음을 순서대로 맞게 배열한 것을 고르십시오.",
+      "options": [
+        "(나)-(가)-(라)-(다)",
+        "(나)-(라)-(가)-(다)",
+        "(가)-(나)-(다)-(라)",
+        "(라)-(나)-(가)-(다)"
+      ],
+      "explain": "Sự việc (나) → trở ngại 그런데 (가) → cách xử lý 그래서 (라) → kết quả (다)."
+    },
+    {
+      "type": "main",
+      "passage": "한국에서는 다른 사람의 부탁을 거절할 때 바로 '안 돼요'라고 하지 않는 경우가 많습니다. 보통 먼저 미안하다는 마음을 표현하고 거절하는 이유를 부드럽게 이야기합니다. 이렇게 하면 상대방도 기분이 덜 나쁘고 관계도 나빠지지 않습니다.",
+      "passageVi": "Ở Hàn Quốc, khi từ chối lời nhờ của người khác, nhiều người không nói ngay “không được”. Thường họ bày tỏ sự áy náy trước rồi nhẹ nhàng nói lý do từ chối. Làm như vậy người kia đỡ phật lòng và mối quan hệ cũng không xấu đi.",
+      "q": "다음 글의 내용과 같은 것을 고르십시오.",
+      "options": [
+        "거절할 때는 이유를 같이 말하는 경우가 많습니다.",
+        "한국 사람들은 부탁을 거절하지 않습니다.",
+        "거절할 때는 바로 '안 돼요'라고 해야 합니다.",
+        "이유를 말하면 상대방이 더 화를 냅니다."
+      ],
+      "explain": "거절하는 이유를 부드럽게 이야기합니다."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "남자",
+          "수미 씨, 무슨 일 있어요? 표정이 안 좋네요."
+        ],
+        [
+          "여자",
+          "다음 주에 면접시험이 있는데 너무 겁이 나요."
+        ],
+        [
+          "남자",
+          "제 선배가 그 회사에 다녀요. 선배한테 물어봐 줄까요?"
+        ],
+        [
+          "여자",
+          "정말요? 그럼 그 선배님 연락처를 좀 알려 주세요."
+        ]
+      ],
+      "linesVi": "Nam: Su-mi, có chuyện gì vậy? Trông mặt bạn không vui. Nữ: Tuần sau tôi có buổi phỏng vấn mà sợ quá. Nam: Anh khóa trên của tôi làm ở công ty đó. Để tôi hỏi giúp nhé? Nữ: Thật à? Vậy cho tôi xin số liên lạc của anh ấy với.",
+      "q": "남자가 이어서 할 행동으로 알맞은 것을 고르십시오.",
+      "options": [
+        "선배의 연락처를 알려 줘요.",
+        "면접시험을 취소해요.",
+        "회사에 지원서를 내요.",
+        "여자와 같이 면접을 봐요."
+      ],
+      "explain": "여자: 연락처를 좀 알려 주세요 → nam sẽ cho số liên lạc."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "여자",
+          "선생님, 안녕하세요? 작년에 졸업한 응우옌 란이에요."
+        ],
+        [
+          "남자",
+          "아, 란 씨! 오랜만이에요. 잘 지냈어요?"
+        ],
+        [
+          "여자",
+          "네, 선생님 덕분에 한국 회사에 취직했어요. 그래서 인사드리러 왔어요."
+        ],
+        [
+          "남자",
+          "정말 축하해요. 시간 있으면 같이 점심 먹으러 갈까요?"
+        ]
+      ],
+      "linesVi": "Nữ: Em chào thầy ạ. Em là Nguyễn Lan, tốt nghiệp năm ngoái. Nam: À, Lan! Lâu quá không gặp. Em khỏe không? Nữ: Dạ, nhờ thầy mà em đã vào làm ở công ty Hàn. Em đến để chào thầy ạ. Nam: Chúc mừng em. Nếu có thời gian, mình đi ăn trưa nhé?",
+      "q": "여자가 선생님을 찾아온 이유로 알맞은 것을 고르십시오.",
+      "options": [
+        "취직 소식을 전하려고",
+        "추천서를 부탁하려고",
+        "수업을 청강하려고",
+        "점심을 사 드리려고"
+      ],
+      "explain": "선생님 덕분에 한국 회사에 취직했어요. 그래서 인사드리러 왔어요."
+    }
+  ],
+  "fillWriting": [
+    {
+      "text": "선배님, 안녕하세요? 저는 지난 학기에 같은 동아리에서 활동한 하이입니다. 부탁이 하나 있어서 연락드립니다. 다음 주에 면접시험이 있는데 선배님께 ( ㉠ ). 혹시 이번 주에 ( ㉡ )? 선배님이 편한 시간을 알려 주시면 제가 찾아뵙겠습니다.",
+      "textVi": "Chào anh ạ. Em là Hải, học kỳ trước cùng sinh hoạt câu lạc bộ với anh. Em liên lạc vì có một việc muốn nhờ. Tuần sau em có buổi phỏng vấn, em ( ㉠ ) anh. Không biết tuần này anh ( ㉡ )? Anh cho em biết giờ anh tiện, em sẽ đến gặp anh ạ.",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "조언을 듣고 싶습니다",
+            "몇 가지 여쭤보고 싶습니다"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "시간이 있으신가요",
+            "잠깐 만날 수 있나요"
+          ]
+        }
+      ],
+      "tips": "Viết cho người trên nên dùng kính ngữ: 여쭤보다, -(으)시-. ㉡ là câu hỏi lịch sự → -나요?/-(으)ㄴ가요? Câu sau nói “cho em biết giờ tiện” nên ㉡ phải hỏi về thời gian rảnh."
+    },
+    {
+      "text": "사람들과 좋은 관계를 유지하려면 자주 연락하는 것이 중요합니다. 바빠서 만나지 못할 때는 ( ㉠ ). 짧은 메시지 하나만 받아도 상대방은 기분이 좋아집니다. 또 상대방의 부탁을 거절해야 할 때는 ( ㉡ ). 그러면 상대방도 내 사정을 이해해 줄 것입니다.",
+      "textVi": "Muốn giữ quan hệ tốt với mọi người thì việc liên lạc thường xuyên rất quan trọng. Khi bận không gặp được thì ( ㉠ ). Chỉ cần nhận một tin nhắn ngắn là người kia cũng vui. Ngoài ra, khi phải từ chối lời nhờ của ai đó thì ( ㉡ ). Như vậy người kia cũng sẽ hiểu hoàn cảnh của mình.",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "전화나 메시지로 안부를 전하면 됩니다",
+            "안부 전화라도 하는 것이 좋습니다"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "솔직하게 이유를 말하는 것이 좋습니다",
+            "왜 거절하는지 이유를 이야기해야 합니다"
+          ]
+        }
+      ],
+      "tips": "Câu sau ㉠ nhắc “tin nhắn ngắn” → viết về việc hỏi thăm qua điện thoại/tin nhắn. Câu sau ㉡ nói “sẽ hiểu hoàn cảnh” → nên nói thật lý do. Dùng đuôi -(스)ㅂ니다 cho đúng văn viết."
+    }
+  ]
+}
