@@ -637,3 +637,21 @@ button.ex-opt:hover { border-color: var(--sky); }
 .rank-xp { flex: none; font-weight: 800; font-variant-numeric: tabular-nums; }
 .rank-gap { text-align: center; color: var(--muted); }
 .rank-empty { margin: 16px 0; }
+
+/* ---------- tra từ, ngữ pháp (assets/search.js) ---------- */
+.search { margin: 22px 0 8px; padding: 14px 16px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.search-label { display: block; font-weight: 700; margin-bottom: 8px; }
+.search-input { width: 100%; padding: 11px 14px; border-radius: 12px; border: 2px solid var(--line); background: var(--surface-2); color: var(--text); font: inherit; font-size: 1rem; }
+.search-input:focus { outline: none; border-color: var(--sky); }
+.search-results:empty { display: none; }
+.search-results { margin-top: 8px; }
+.sr-head { margin: 12px 0 6px; font-size: .9rem; color: var(--muted); }
+.sr-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.sr-item { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; padding: 9px 12px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line); color: var(--text); text-decoration: none; }
+.sr-item:hover, .sr-item:focus-visible { border-color: var(--sky); background: var(--sky-soft); }
+.sr-ko { font-weight: 700; word-break: keep-all; }
+.sr-vi { flex: 1; min-width: 8em; }
+.sr-where { width: 100%; font-size: .82rem; color: var(--muted); }
+.sr-empty, .sr-more { margin: 10px 2px 0; font-size: .9rem; }
+.flash { animation: hd-flash 2.4s ease-out; }
+@keyframes hd-flash { 0%, 40% { box-shadow: 0 0 0 4px var(--sun); } 100% { box-shadow: 0 0 0 0 transparent; } }

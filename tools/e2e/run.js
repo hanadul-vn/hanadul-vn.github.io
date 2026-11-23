@@ -275,6 +275,9 @@ async function noHScroll(page) {
     await go(page, '#/');
     await page.waitForSelector('.level-jump');
     await page.evaluate(() => { document.querySelector('.hero').dataset.mark = '1'; });
+    // Đưa thanh tab vào màn hình trước (ô tra cứu nằm trên tab), để Playwright không tự cuộn khi bấm.
+    await page.evaluate(() => document.querySelector('.level-jump').scrollIntoView({ block: 'center', behavior: 'instant' }));
+    await page.waitForTimeout(100);
     const y0 = await page.evaluate(() => window.scrollY);
     await page.click('.level-jump a[href="#lo-trinh-sc2"]');
     await page.waitForTimeout(800);
@@ -605,7 +608,7 @@ async function noHScroll(page) {
     const p = mob.page;
     await go(p, '#/'); await p.waitForSelector('.level-jump');
     await p.waitForTimeout(400);
-    // Cuộn tức thì (trang dùng scroll-behavior: smooth; cuộn mượt chưa xong thì đo sai).
+    // Cuộn tức thì: html có scroll-behavior: smooth, quãng cuộn dài hơn (ô tra cứu nằm trên tab) thì 400ms chưa cuộn xong.
     await p.$eval('#lo-trinh', (e) => e.scrollIntoView({ block: 'start', behavior: 'instant' }));
     await p.waitForTimeout(400);
     const tops = await p.$$eval('.level-jump a', (els) => els.map((a) => Math.round(a.getBoundingClientRect().top)));
