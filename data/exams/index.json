@@ -1,0 +1,22 @@
+{
+ "exams": [
+  {
+   "id": "doc-01",
+   "title": "Đề thi thử Đọc số 1",
+   "part": "doc",
+   "icon": "📖",
+   "minutes": 70,
+   "count": 50,
+   "level": "TOPIK II · Đọc"
+  },
+  {
+   "id": "doc-02",
+   "title": "Đề thi thử Đọc số 2",
+   "part": "doc",
+   "icon": "📗",
+   "minutes": 70,
+   "count": 50,
+   "level": "TOPIK II · Đọc"
+  }
+ ]
+}

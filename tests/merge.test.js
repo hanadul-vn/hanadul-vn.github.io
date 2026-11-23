@@ -120,4 +120,21 @@ t('M15 sameData bỏ qua trường chỉ dùng trên máy; hasProgress', () => {
   assert.ok(hasProgress({ days: ['2026-11-21'] }));
 });
 
+
+t('M16 đề thi thử: giữ điểm cao nhất, lượt gần nhất theo thời điểm nộp, số lượt lấy lớn nhất', () => {
+  const local = { exams: { 'doc-01': { best: 70, last: 70, at: 2000, n: 3, ans: '0123', secs: 3000 } } };
+  const remote = { exams: { 'doc-01': { best: 84, last: 60, at: 1000, n: 2, ans: '3210', secs: 4000 }, 'doc-02': { best: 50, last: 50, at: 500, n: 1 } } };
+  const m = merge(local, remote, NOW);
+  assert.deepStrictEqual(m.exams['doc-01'], { best: 84, last: 70, at: 2000, n: 3, ans: '0123', secs: 3000 });
+  assert.strictEqual(m.exams['doc-02'].best, 50);
+  assert.ok(hasProgress({ exams: { x: { best: 10 } } }), 'chỉ có điểm thi thử cũng là có tiến độ');
+  assert.ok(!sameData({ exams: {} }, { exams: { x: { best: 1 } } }));
+});
+
+t('M17 dữ liệu đề thi thử hỏng (không phải object) bị bỏ qua, không làm lỗi', () => {
+  const m = merge({ exams: 'x' }, { exams: { a: 'y', b: { best: 'z', at: 5 } } }, NOW);
+  assert.deepStrictEqual(m.exams.a, { best: 0, n: 0, last: 0, at: 0 });
+  assert.strictEqual(m.exams.b.best, 0);
+});
+
 console.log(`\n${pass} test pass`);

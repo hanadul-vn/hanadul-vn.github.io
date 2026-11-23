@@ -1,0 +1,940 @@
+{
+ "id": "doc-02",
+ "title": "Đề thi thử Đọc số 2",
+ "part": "doc",
+ "minutes": 70,
+ "note": "Đề tự soạn theo cấu trúc phần Đọc TOPIK II (50 câu, 70 phút). Không phải đề thi chính thức.",
+ "sets": [
+  {
+   "instruction": "(    )에 들어갈 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Chọn đáp án đúng nhất điền vào (    ).",
+   "questions": [
+    {
+     "n": 1,
+     "q": "어제는 너무 피곤해서 숙제를 (    ) 잠이 들었다.",
+     "options": [
+      "하다가",
+      "하려면",
+      "하는데도",
+      "하도록"
+     ],
+     "answer": 0,
+     "explain": "-다가: đang làm việc này thì chuyển sang việc khác. \"Đang làm bài tập thì ngủ thiếp đi\"."
+    }
+   ]
+  },
+  {
+   "instruction": "(    )에 들어갈 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Chọn đáp án đúng nhất điền vào (    ).",
+   "questions": [
+    {
+     "n": 2,
+     "q": "주말에 날씨가 좋으면 친구들과 등산을 (    ).",
+     "options": [
+      "가 버렸다",
+      "가기로 했다",
+      "갈 뻔했다",
+      "가 본 적이 있다"
+     ],
+     "answer": 1,
+     "explain": "-기로 하다: quyết định, hẹn làm gì (kế hoạch). Vế \"nếu cuối tuần trời đẹp\" chỉ việc chưa xảy ra."
+    }
+   ]
+  },
+  {
+   "instruction": "밑줄 친 부분과 의미가 가장 비슷한 것을 고르십시오.",
+   "instructionVi": "Chọn đáp án có nghĩa gần nhất với phần gạch chân.",
+   "questions": [
+    {
+     "n": 3,
+     "q": "시험에 합격하__기 위해서__ 매일 열심히 공부했다.",
+     "options": [
+      "합격하더니",
+      "합격하자마자",
+      "합격하려고",
+      "합격하는 대신"
+     ],
+     "answer": 2,
+     "explain": "-기 위해서 và -(으)려고 đều chỉ mục đích \"để\"."
+    }
+   ]
+  },
+  {
+   "instruction": "밑줄 친 부분과 의미가 가장 비슷한 것을 고르십시오.",
+   "instructionVi": "Chọn đáp án có nghĩa gần nhất với phần gạch chân.",
+   "questions": [
+    {
+     "n": 4,
+     "q": "집에 오자마자 너무 피곤해서 __잠이 들고 말았다__.",
+     "options": [
+      "잠이 들 뻔했다",
+      "잠이 들기로 했다",
+      "잠이 드는 척했다",
+      "잠이 들어 버렸다"
+     ],
+     "answer": 3,
+     "explain": "-고 말다 và -아/어 버리다 đều diễn tả việc đã xảy ra (thường ngoài ý muốn), \"lỡ…mất\"."
+    }
+   ]
+  },
+  {
+   "instruction": "다음은 무엇에 대한 글인지 고르십시오.",
+   "instructionVi": "Đoạn sau nói về điều gì?",
+   "passage": "한 번 충전으로 하루 종일!\n선명한 화면, 빠른 속도",
+   "passageVi": "Sạc một lần, dùng cả ngày! Màn hình sắc nét, tốc độ nhanh.",
+   "questions": [
+    {
+     "n": 5,
+     "q": "",
+     "options": [
+      "세탁기",
+      "휴대 전화",
+      "자전거",
+      "가방"
+     ],
+     "answer": 1,
+     "explain": "\"Sạc một lần dùng cả ngày, màn hình sắc nét, tốc độ nhanh\" là quảng cáo điện thoại."
+    }
+   ]
+  },
+  {
+   "instruction": "다음은 무엇에 대한 글인지 고르십시오.",
+   "instructionVi": "Đoạn sau nói về điều gì?",
+   "passage": "신선한 재료로 매일 아침 직접 굽습니다.\n갓 나온 빵 냄새를 맡으러 오세요.",
+   "passageVi": "Mỗi sáng tự tay nướng bằng nguyên liệu tươi. Hãy đến thưởng thức mùi bánh mì vừa ra lò.",
+   "questions": [
+    {
+     "n": 6,
+     "q": "",
+     "options": [
+      "꽃집",
+      "약국",
+      "세탁소",
+      "빵집"
+     ],
+     "answer": 3,
+     "explain": "\"Nướng mỗi sáng từ nguyên liệu tươi, đến ngửi mùi bánh mới ra lò\" là quảng cáo tiệm bánh."
+    }
+   ]
+  },
+  {
+   "instruction": "다음은 무엇에 대한 글인지 고르십시오.",
+   "instructionVi": "Đoạn sau nói về điều gì?",
+   "passage": "물은 쓸 만큼만 받아서 쓰고,\n양치할 때는 컵을 사용합시다.",
+   "passageVi": "Chỉ hứng đủ nước để dùng, khi đánh răng hãy dùng cốc.",
+   "questions": [
+    {
+     "n": 7,
+     "q": "",
+     "options": [
+      "건강 관리",
+      "교통 안전",
+      "물 절약",
+      "이웃 사랑"
+     ],
+     "answer": 2,
+     "explain": "Chỉ lấy đủ nước dùng, đánh răng thì dùng cốc → tiết kiệm nước."
+    }
+   ]
+  },
+  {
+   "instruction": "다음은 무엇에 대한 글인지 고르십시오.",
+   "instructionVi": "Đoạn sau nói về điều gì?",
+   "passage": "• 매주 월요일은 쉽니다.\n• 관람 시간: 오전 9시~오후 6시\n• 입장은 문 닫기 1시간 전까지",
+   "passageVi": "• Nghỉ thứ Hai hằng tuần. • Giờ tham quan: 9 giờ sáng – 6 giờ chiều. • Vào cửa chậm nhất 1 tiếng trước giờ đóng cửa.",
+   "questions": [
+    {
+     "n": 8,
+     "q": "",
+     "options": [
+      "관람 안내",
+      "제품 설명",
+      "회원 모집",
+      "행사 소개"
+     ],
+     "answer": 0,
+     "explain": "Ngày nghỉ, giờ tham quan, giờ vào cửa cuối → hướng dẫn tham quan (관람 안내)."
+    }
+   ]
+  },
+  {
+   "instruction": "다음 글 또는 그래프의 내용과 같은 것을 고르십시오.",
+   "instructionVi": "Chọn câu đúng với nội dung bài đọc hoặc biểu đồ.",
+   "passage": "한국어 말하기 대회\n• 참가 대상: 한국에 사는 외국인 누구나\n• 일시: 2026년 12월 12일(토) 오후 2시\n• 장소: 시민회관 대강당\n• 상금: 1등 100만 원\n• 신청: 11월 30일까지 이메일로",
+   "passageVi": "Cuộc thi nói tiếng Hàn. Đối tượng: mọi người nước ngoài sống ở Hàn Quốc. Thời gian: 2 giờ chiều thứ Bảy 12/12/2026. Địa điểm: hội trường lớn Nhà văn hóa thành phố. Giải thưởng: giải nhất 1 triệu won. Đăng ký: qua email đến hết 30/11.",
+   "questions": [
+    {
+     "n": 9,
+     "q": "",
+     "options": [
+      "대회는 오전에 열린다.",
+      "외국인이면 누구나 신청할 수 있다.",
+      "신청은 대회 당일까지 할 수 있다.",
+      "참가하려면 직접 방문해서 신청해야 한다."
+     ],
+     "answer": 1,
+     "explain": "Đối tượng: mọi người nước ngoài sống ở Hàn. Thi lúc 2 giờ chiều; đăng ký qua email đến 30/11."
+    }
+   ]
+  },
+  {
+   "instruction": "다음 글 또는 그래프의 내용과 같은 것을 고르십시오.",
+   "instructionVi": "Chọn câu đúng với nội dung bài đọc hoặc biểu đồ.",
+   "passage": "[그래프] 1인 가구가 늘어난 이유\n결혼을 늦게 해서 42%\n혼자 사는 것이 편해서 31%\n직장이나 학교 때문에 18%\n기타 9%",
+   "passageVi": "[Biểu đồ] Lý do hộ một người tăng: kết hôn muộn 42%, sống một mình thoải mái 31%, vì công việc hoặc trường học 18%, khác 9%.",
+   "questions": [
+    {
+     "n": 10,
+     "q": "",
+     "options": [
+      "혼자 사는 것이 편하다는 응답이 가장 많다.",
+      "직장이나 학교 때문이라는 응답이 30%를 넘는다.",
+      "기타 응답이 직장이나 학교 때문이라는 응답보다 많다.",
+      "결혼을 늦게 하는 것이 가장 큰 이유이다."
+     ],
+     "answer": 3,
+     "explain": "\"Kết hôn muộn\" 42% là cao nhất. Vì công việc/học hành chỉ 18%, khác 9%."
+    }
+   ]
+  },
+  {
+   "instruction": "다음 글 또는 그래프의 내용과 같은 것을 고르십시오.",
+   "instructionVi": "Chọn câu đúng với nội dung bài đọc hoặc biểu đồ.",
+   "passage": "지난 주말 한 아파트에서 불이 났지만 큰 피해는 없었다. 불이 나자마자 경비원이 소화기로 불을 끄고 주민들을 밖으로 안내했기 때문이다. 소방관들은 경비원의 빠른 대처 덕분에 다친 사람이 한 명도 없었다고 말했다.",
+   "passageVi": "Cuối tuần trước một chung cư bị cháy nhưng không thiệt hại lớn, vì ngay khi cháy, bảo vệ đã dùng bình chữa cháy dập lửa và hướng dẫn cư dân ra ngoài. Lính cứu hỏa cho biết nhờ bảo vệ xử lý nhanh nên không ai bị thương.",
+   "questions": [
+    {
+     "n": 11,
+     "q": "",
+     "options": [
+      "이 화재로 다친 사람은 없었다.",
+      "소방관이 소화기로 불을 껐다.",
+      "불은 평일 밤에 났다.",
+      "주민들이 경비원을 밖으로 안내했다."
+     ],
+     "answer": 0,
+     "explain": "Không ai bị thương nhờ bảo vệ xử lý nhanh. Bảo vệ (không phải lính cứu hỏa) dập lửa và hướng dẫn cư dân ra ngoài; cháy vào cuối tuần."
+    }
+   ]
+  },
+  {
+   "instruction": "다음 글 또는 그래프의 내용과 같은 것을 고르십시오.",
+   "instructionVi": "Chọn câu đúng với nội dung bài đọc hoặc biểu đồ.",
+   "passage": "우리 동네에는 오래된 작은 서점이 있다. 주인 할아버지는 손님이 찾는 책이 없으면 직접 주문해서 연락을 해 주신다. 큰 서점보다 책이 적지만 나는 할아버지의 친절함 때문에 이 서점을 자주 찾는다.",
+   "passageVi": "Khu tôi có một hiệu sách nhỏ lâu đời. Nếu không có cuốn khách tìm, ông chủ tự đặt rồi gọi báo. Sách ít hơn hiệu sách lớn nhưng vì sự tử tế của ông mà tôi hay ghé.",
+   "questions": [
+    {
+     "n": 12,
+     "q": "",
+     "options": [
+      "이 서점은 최근에 문을 열었다.",
+      "이 서점에는 큰 서점보다 책이 많다.",
+      "할아버지는 손님에게 필요한 책을 주문해 준다.",
+      "나는 이 서점에 거의 가지 않는다."
+     ],
+     "answer": 2,
+     "explain": "Không có sách khách cần thì ông chủ tự đặt rồi báo khách. Hiệu sách lâu đời, ít sách hơn hiệu lớn, tôi hay ghé."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 순서대로 맞게 배열한 것을 고르십시오.",
+   "instructionVi": "Chọn thứ tự sắp xếp đúng.",
+   "passage": "(가) 처음에는 단어를 몰라서 내용을 거의 이해하지 못했다.\n(나) 한국 드라마를 보면서 한국어 공부를 시작했다.\n(다) 지금은 자막 없이도 대부분 알아들을 수 있다.\n(라) 그래서 모르는 단어를 공책에 적고 매일 외웠다.",
+   "passageVi": "(가) Lúc đầu vì không biết từ nên hầu như không hiểu nội dung. (나) Tôi bắt đầu học tiếng Hàn qua phim truyền hình Hàn. (다) Giờ không cần phụ đề tôi cũng nghe hiểu phần lớn. (라) Vì vậy tôi ghi từ chưa biết vào vở và học thuộc mỗi ngày.",
+   "questions": [
+    {
+     "n": 13,
+     "q": "",
+     "options": [
+      "(나)-(라)-(가)-(다)",
+      "(가)-(나)-(다)-(라)",
+      "(가)-(라)-(나)-(다)",
+      "(나)-(가)-(라)-(다)"
+     ],
+     "answer": 3,
+     "explain": "(나) bắt đầu học qua phim → (가) lúc đầu không hiểu vì không biết từ → (라) 그래서 ghi từ và học thuộc → (다) giờ hiểu được không cần phụ đề."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 순서대로 맞게 배열한 것을 고르십시오.",
+   "instructionVi": "Chọn thứ tự sắp xếp đúng.",
+   "passage": "(가) 일반 우산은 바람이 강하게 불면 뒤집히기 쉽다.\n(나) 그래서 바람이 많은 지역에서 특히 인기가 많다.\n(다) 그런데 이 우산은 바람이 불어도 쉽게 뒤집히지 않는다.\n(라) 우산살이 바람의 방향에 따라 유연하게 움직이기 때문이다.",
+   "passageVi": "(가) Ô thường dễ bị lật khi gió mạnh. (나) Vì vậy nó đặc biệt được ưa chuộng ở vùng nhiều gió. (다) Nhưng chiếc ô này có gió cũng không dễ lật. (라) Vì nan ô chuyển động linh hoạt theo hướng gió.",
+   "questions": [
+    {
+     "n": 14,
+     "q": "",
+     "options": [
+      "(가)-(라)-(다)-(나)",
+      "(다)-(가)-(나)-(라)",
+      "(가)-(다)-(라)-(나)",
+      "(다)-(라)-(가)-(나)"
+     ],
+     "answer": 2,
+     "explain": "(가) ô thường dễ lật → (다) 그런데 ô này không lật → (라) vì nan ô chuyển động mềm → (나) 그래서 được ưa chuộng ở vùng nhiều gió."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 순서대로 맞게 배열한 것을 고르십시오.",
+   "instructionVi": "Chọn thứ tự sắp xếp đúng.",
+   "passage": "(가) 이 행사에서는 다 읽은 책을 가져오면 다른 책으로 바꿔 갈 수 있다.\n(나) 매달 첫째 토요일에 시청 앞에서 ‘책 바꾸기 행사’가 열린다.\n(다) 행사가 끝난 뒤 남은 책은 근처 학교 도서관에 기부된다.\n(라) 단, 너무 낡거나 찢어진 책은 받지 않는다.",
+   "passageVi": "(가) Ở sự kiện này, mang sách đã đọc đến có thể đổi lấy sách khác. (나) Thứ Bảy đầu tiên mỗi tháng có \"sự kiện đổi sách\" trước tòa thị chính. (다) Sau sự kiện, sách còn lại được tặng thư viện trường gần đó. (라) Lưu ý: không nhận sách quá cũ hoặc bị rách.",
+   "questions": [
+    {
+     "n": 15,
+     "q": "",
+     "options": [
+      "(나)-(다)-(가)-(라)",
+      "(나)-(가)-(라)-(다)",
+      "(라)-(가)-(나)-(다)",
+      "(라)-(나)-(다)-(가)"
+     ],
+     "answer": 1,
+     "explain": "(나) giới thiệu sự kiện → (가) cách đổi sách → (라) 단 lưu ý không nhận sách rách → (다) sau sự kiện sách còn lại được tặng."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 읽고 (    )에 들어갈 내용으로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Đọc và chọn nội dung phù hợp nhất điền vào (    ).",
+   "passage": "식물을 키울 때 물을 너무 자주 주면 오히려 (    ). 뿌리가 숨을 쉬지 못해 썩기 때문이다. 흙이 말랐는지 손가락으로 확인한 후에 물을 주는 것이 좋다.",
+   "passageVi": "Khi trồng cây, tưới nước quá thường xuyên ngược lại (có thể làm cây chết), vì rễ không thở được nên bị thối. Nên dùng ngón tay kiểm tra đất khô chưa rồi mới tưới.",
+   "questions": [
+    {
+     "n": 16,
+     "q": "",
+     "options": [
+      "식물이 죽을 수 있다",
+      "식물이 빨리 자란다",
+      "꽃이 많이 핀다",
+      "흙이 금방 마른다"
+     ],
+     "answer": 0,
+     "explain": "Câu sau: rễ không thở được nên thối → tưới quá nhiều có thể làm cây chết."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 읽고 (    )에 들어갈 내용으로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Đọc và chọn nội dung phù hợp nhất điền vào (    ).",
+   "passage": "요즘은 물건을 사기 전에 다른 사람들이 쓴 후기를 먼저 읽는 사람이 많다. 직접 사용해 본 사람의 의견이 (    ) 믿을 만하다고 생각하기 때문이다.",
+   "passageVi": "Dạo này nhiều người đọc đánh giá của người khác trước khi mua, vì nghĩ ý kiến của người đã dùng thật đáng tin hơn (quảng cáo).",
+   "questions": [
+    {
+     "n": 17,
+     "q": "",
+     "options": [
+      "가격보다",
+      "가게보다",
+      "포장보다",
+      "광고보다"
+     ],
+     "answer": 3,
+     "explain": "Ý kiến người đã dùng thật được tin hơn quảng cáo."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 읽고 (    )에 들어갈 내용으로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Đọc và chọn nội dung phù hợp nhất điền vào (    ).",
+   "passage": "외국어를 공부할 때 실수를 두려워하면 말을 하기가 어렵다. 틀려도 괜찮다고 생각하고 (    ) 실력이 빨리 는다.",
+   "passageVi": "Khi học ngoại ngữ, nếu sợ sai thì khó mở miệng. Phải nghĩ sai cũng không sao và (thử nói thường xuyên) thì trình độ mới tăng nhanh.",
+   "questions": [
+    {
+     "n": 18,
+     "q": "",
+     "options": [
+      "조용히 들어야만",
+      "문법만 공부해야",
+      "자주 말해 봐야",
+      "책만 읽어야"
+     ],
+     "answer": 2,
+     "explain": "Không sợ sai, phải nói thường xuyên thì trình độ mới tăng nhanh."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 읽고 물음에 답하십시오.",
+   "instructionVi": "Đọc và trả lời câu hỏi.",
+   "passage": "커피를 마시면 잠이 깬다고 생각하는 사람이 많다. 커피 속의 카페인이 피로를 덜 느끼게 해 주기 때문이다. (    ) 카페인의 효과는 보통 마신 후 30분쯤 지나야 나타난다. 따라서 졸릴 때 바로 마시기보다는 조금 미리 마시는 것이 좋다.",
+   "passageVi": "Nhiều người nghĩ uống cà phê thì tỉnh ngủ, vì caffeine giúp bớt cảm thấy mệt. (Nhưng) tác dụng của caffeine thường sau khi uống khoảng 30 phút mới xuất hiện. Vì vậy thay vì uống ngay lúc buồn ngủ, nên uống trước một chút.",
+   "questions": [
+    {
+     "n": 19,
+     "q": "(    )에 들어갈 말로 가장 알맞은 것을 고르십시오.",
+     "options": [
+      "그래서",
+      "그런데",
+      "또한",
+      "왜냐하면"
+     ],
+     "answer": 1,
+     "explain": "Câu trước: caffeine giúp bớt mệt; câu sau đưa thêm thông tin trái kỳ vọng (phải 30 phút mới có tác dụng) → 그런데."
+    },
+    {
+     "n": 20,
+     "q": "이 글의 내용과 같은 것을 고르십시오.",
+     "options": [
+      "카페인의 효과는 마시자마자 나타나지 않는다.",
+      "커피는 피로를 더 느끼게 한다.",
+      "졸릴 때 바로 마시는 것이 가장 좋다.",
+      "카페인의 효과는 세 시간 후에 나타난다."
+     ],
+     "answer": 0,
+     "explain": "Tác dụng xuất hiện sau khoảng 30 phút, nên uống sớm một chút trước khi buồn ngủ."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 읽고 물음에 답하십시오.",
+   "instructionVi": "Đọc và trả lời câu hỏi.",
+   "passage": "회사에 새로 들어온 직원들은 처음 몇 달 동안 실수가 잦다. 이때 선배들이 큰소리로 꾸짖으면 신입 사원은 (    ) 질문조차 하지 못하게 된다. 그러면 같은 실수가 반복될 수밖에 없다. 실수를 했을 때 차분하게 이유를 설명해 주면 신입 사원은 빨리 일을 배우고 회사에도 잘 적응한다.",
+   "passageVi": "Nhân viên mới vào công ty mấy tháng đầu hay mắc lỗi. Nếu lúc đó tiền bối quát to, nhân viên mới sẽ (mất tinh thần) đến mức không dám hỏi. Khi đó lỗi cũ chắc chắn lặp lại. Khi mắc lỗi mà được giải thích lý do bình tĩnh, nhân viên mới sẽ học việc nhanh và thích nghi tốt.",
+   "questions": [
+    {
+     "n": 21,
+     "q": "(    )에 들어갈 말로 가장 알맞은 것을 고르십시오.",
+     "options": [
+      "기가 죽어서",
+      "손이 커서",
+      "발이 넓어서",
+      "귀가 얇아서"
+     ],
+     "answer": 0,
+     "explain": "기가 죽다 = mất tinh thần, chùn bước. 손이 크다 = hào phóng; 발이 넓다 = quen biết rộng; 귀가 얇다 = cả tin."
+    },
+    {
+     "n": 22,
+     "q": "이 글의 중심 생각으로 가장 알맞은 것을 고르십시오.",
+     "options": [
+      "신입 사원은 실수를 하지 않는다.",
+      "선배는 신입 사원을 엄하게 꾸짖어야 한다.",
+      "신입 사원의 실수는 차분하게 설명해 주는 것이 좋다.",
+      "신입 사원은 질문을 하면 안 된다."
+     ],
+     "answer": 2,
+     "explain": "Câu cuối: giải thích bình tĩnh thì nhân viên mới học nhanh, thích nghi tốt."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 읽고 물음에 답하십시오.",
+   "instructionVi": "Đọc và trả lời câu hỏi.",
+   "passage": "초등학교 때 나는 그림 대회에 나가기만 하면 떨어졌다. 그날도 상을 받지 못하고 터덜터덜 집에 돌아왔는데, 아버지가 내 그림을 보시더니 거실 벽에 붙여 주셨다. “우리 집에서는 이게 1등이다.” 아버지의 말에 __나는 괜히 코끝이 찡해졌다.__ 그 그림은 지금도 부모님 댁 거실에 걸려 있다. 나는 그 후로 상을 받지 못해도 그림 그리기를 그만두지 않았다.",
+   "passageVi": "Hồi tiểu học, cứ thi vẽ là tôi trượt. Hôm đó cũng không đạt giải, tôi lê bước về nhà; bố xem tranh rồi dán lên tường phòng khách: \"Ở nhà mình, đây là giải nhất.\" Nghe bố nói, sống mũi tôi bỗng cay cay. Bức tranh đó đến giờ vẫn treo ở phòng khách nhà bố mẹ. Từ đó dù không đạt giải tôi cũng không bỏ vẽ.",
+   "questions": [
+    {
+     "n": 23,
+     "q": "밑줄 친 부분에 나타난 ‘나’의 심정으로 가장 알맞은 것을 고르십시오.",
+     "options": [
+      "억울하다",
+      "창피하다",
+      "불안하다",
+      "감동스럽다"
+     ],
+     "answer": 3,
+     "explain": "코끝이 찡하다 = cay cay sống mũi vì xúc động. Bố dán tranh lên tường và nói \"ở nhà mình đây là giải nhất\" → cảm động."
+    },
+    {
+     "n": 24,
+     "q": "이 글의 내용과 같은 것을 고르십시오.",
+     "options": [
+      "나는 그날 그림 대회에서 1등을 했다.",
+      "아버지는 내 그림을 거실 벽에 붙여 주셨다.",
+      "그 그림은 지금 내 방에 걸려 있다.",
+      "나는 그 후 그림 그리기를 그만두었다."
+     ],
+     "answer": 1,
+     "explain": "Hôm đó không đạt giải; tranh vẫn treo ở phòng khách nhà bố mẹ; từ đó tôi không bỏ vẽ."
+    }
+   ]
+  },
+  {
+   "instruction": "다음은 신문 기사의 제목입니다. 가장 잘 설명한 것을 고르십시오.",
+   "instructionVi": "Đây là tiêu đề báo. Chọn câu giải thích đúng nhất.",
+   "passage": "첫눈에 출근길 ‘거북이걸음’",
+   "passageVi": "Tuyết đầu mùa, đường đi làm \"bò như rùa\".",
+   "questions": [
+    {
+     "n": 25,
+     "q": "",
+     "options": [
+      "첫눈 때문에 출근하는 사람이 줄었다.",
+      "출근길에 거북이가 나타나 차가 멈췄다.",
+      "첫눈이 오기 전에 출근을 서둘렀다.",
+      "첫눈이 와서 출근하는 차들이 천천히 움직였다."
+     ],
+     "answer": 3,
+     "explain": "거북이걸음 = bước rùa, di chuyển rất chậm."
+    }
+   ]
+  },
+  {
+   "instruction": "다음은 신문 기사의 제목입니다. 가장 잘 설명한 것을 고르십시오.",
+   "instructionVi": "Đây là tiêu đề báo. Chọn câu giải thích đúng nhất.",
+   "passage": "중고 거래 ‘쑥쑥’, 아끼고 나누는 소비 늘어",
+   "passageVi": "Mua bán đồ cũ \"tăng vọt\", tiêu dùng tiết kiệm và chia sẻ tăng.",
+   "questions": [
+    {
+     "n": 26,
+     "q": "",
+     "options": [
+      "중고 물건 거래가 줄어 새 물건 판매가 늘었다.",
+      "중고 물건을 사고파는 일이 빠르게 늘면서 아끼고 나누는 소비가 많아졌다.",
+      "중고 물건 가격이 크게 올랐다.",
+      "나눔 행사가 취소되었다."
+     ],
+     "answer": 1,
+     "explain": "쑥쑥 = tăng vọt, lớn nhanh; 아끼고 나누는 소비 = tiêu dùng tiết kiệm và chia sẻ."
+    }
+   ]
+  },
+  {
+   "instruction": "다음은 신문 기사의 제목입니다. 가장 잘 설명한 것을 고르십시오.",
+   "instructionVi": "Đây là tiêu đề báo. Chọn câu giải thích đúng nhất.",
+   "passage": "겨울 축제 ‘흥행’, 관광객 발길 이어져",
+   "passageVi": "Lễ hội mùa đông \"thắng lớn\", du khách nối nhau kéo đến.",
+   "questions": [
+    {
+     "n": 27,
+     "q": "",
+     "options": [
+      "겨울 축제가 성공을 거둬 관광객이 계속 찾아오고 있다.",
+      "겨울 축제가 날씨 때문에 연기되었다.",
+      "관광객이 줄어 겨울 축제가 끝났다.",
+      "겨울 축제 준비를 위해 관광객을 모집했다."
+     ],
+     "answer": 0,
+     "explain": "흥행 = thành công, đông khách; 발길이 이어지다 = người đến liên tục."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 읽고 (    )에 들어갈 내용으로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Đọc và chọn nội dung phù hợp nhất điền vào (    ).",
+   "passage": "사람은 하루에 수만 가지의 생각을 한다고 한다. 그런데 그중 대부분은 어제 한 생각을 반복하는 것이다. 새로운 아이디어를 얻고 싶다면 (    ) 필요가 있다. 평소에 가지 않던 길로 걷거나 읽지 않던 분야의 책을 읽는 것만으로도 생각이 달라질 수 있다.",
+   "passageVi": "Người ta nói mỗi ngày con người nghĩ hàng vạn điều. Nhưng phần lớn là lặp lại suy nghĩ hôm qua. Muốn có ý tưởng mới thì cần (tạo thay đổi nhỏ trong cuộc sống quen thuộc). Chỉ cần đi con đường chưa từng đi hay đọc sách lĩnh vực chưa từng đọc là suy nghĩ đã có thể khác.",
+   "questions": [
+    {
+     "n": 28,
+     "q": "",
+     "options": [
+      "하루에 더 많은 생각을 할",
+      "어제 한 생각을 다시 떠올릴",
+      "익숙한 생활에 작은 변화를 줄",
+      "같은 일을 계속 반복할"
+     ],
+     "answer": 2,
+     "explain": "Câu sau: đi đường khác, đọc lĩnh vực mới → cần tạo thay đổi nhỏ trong nếp quen."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 읽고 (    )에 들어갈 내용으로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Đọc và chọn nội dung phù hợp nhất điền vào (    ).",
+   "passage": "‘골든 타임’은 원래 사고가 났을 때 사람의 생명을 구할 수 있는 짧은 시간을 뜻한다. 심장이 멈춘 사람의 경우 4분 안에 심폐 소생술을 하면 살아날 가능성이 크게 높아진다. 그래서 전문가들은 (    ) 기본적인 응급 처치 방법을 배워 두어야 한다고 강조한다.",
+   "passageVi": "\"Thời gian vàng\" vốn là khoảng thời gian ngắn có thể cứu sống người khi xảy ra tai nạn. Với người bị ngừng tim, nếu hồi sức tim phổi trong 4 phút thì khả năng sống tăng rất nhiều. Vì vậy chuyên gia nhấn mạnh (cả người bình thường không phải bác sĩ) cũng nên học cách sơ cứu cơ bản.",
+   "questions": [
+    {
+     "n": 29,
+     "q": "",
+     "options": [
+      "구급차를 기다리는 사람만",
+      "의사가 아닌 일반인도",
+      "사고를 당한 사람만",
+      "병원에서 일하는 사람만"
+     ],
+     "answer": 1,
+     "explain": "Người tim ngừng đập cần hồi sức trong 4 phút, trước khi bác sĩ đến → người bình thường cũng nên học sơ cứu."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 읽고 (    )에 들어갈 내용으로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Đọc và chọn nội dung phù hợp nhất điền vào (    ).",
+   "passage": "한국에서는 이사를 하면 이웃에게 떡을 돌리는 경우가 많다. 이는 새로 이사 온 사람이 (    ) 전통이다. 떡을 나누며 인사를 하면 처음 만난 이웃과도 쉽게 가까워질 수 있다.",
+   "passageVi": "Ở Hàn Quốc, chuyển nhà thì thường đem bánh tteok biếu hàng xóm. Đây là truyền thống để người mới chuyển đến (tạo quan hệ tốt với hàng xóm). Chia bánh và chào hỏi thì dễ thân với cả hàng xóm mới gặp.",
+   "questions": [
+    {
+     "n": 30,
+     "q": "",
+     "options": [
+      "이웃과 좋은 관계를 맺기 위한",
+      "이삿짐을 빨리 옮기기 위한",
+      "떡을 많이 팔기 위한",
+      "집값을 알아보기 위한"
+     ],
+     "answer": 0,
+     "explain": "Câu sau: chia bánh và chào hỏi thì dễ thân với hàng xóm mới."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 읽고 (    )에 들어갈 내용으로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Đọc và chọn nội dung phù hợp nhất điền vào (    ).",
+   "passage": "사람들은 보통 화가 나면 바로 감정을 표현한다. 하지만 화가 난 상태에서 한 말은 나중에 후회하는 경우가 많다. 그래서 화가 날 때는 (    ) 것이 좋다. 잠시 시간이 지나면 감정이 가라앉아 차분하게 이야기할 수 있다.",
+   "passageVi": "Người ta thường bộc lộ cảm xúc ngay khi tức giận. Nhưng lời nói lúc giận thường khiến mình hối hận về sau. Vì vậy khi giận nên (lấy lại hơi thở một chút trước khi nói). Một lúc sau cảm xúc lắng xuống, có thể nói chuyện bình tĩnh.",
+   "questions": [
+    {
+     "n": 31,
+     "q": "",
+     "options": [
+      "바로 큰 소리로 말하는",
+      "상대방을 피해 다니는",
+      "말하기 전에 잠깐 숨을 고르는",
+      "다른 사람에게 대신 말하게 하는"
+     ],
+     "answer": 2,
+     "explain": "Câu sau: đợi một lúc cảm xúc lắng xuống mới nói chuyện bình tĩnh được."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 읽고 내용이 같은 것을 고르십시오.",
+   "instructionVi": "Đọc và chọn câu có nội dung giống bài đọc.",
+   "passage": "한글은 1443년 세종대왕이 백성들이 쉽게 글을 읽고 쓸 수 있도록 만든 문자이다. 처음에는 28자였지만 지금은 24자만 사용한다. 자음은 소리를 낼 때의 입과 혀의 모양을 본떠 만들어 배우기 쉽고 과학적인 문자로 평가받는다. 한국에서는 매년 10월 9일을 한글날로 정해 그 뜻을 기리고 있다.",
+   "passageVi": "Hangeul là chữ viết vua Sejong tạo ra năm 1443 để dân chúng dễ đọc, dễ viết. Ban đầu có 28 chữ, nay chỉ dùng 24 chữ. Phụ âm được tạo theo hình dáng miệng và lưỡi khi phát âm nên được đánh giá là chữ viết dễ học và khoa học. Hàn Quốc lấy ngày 9/10 hằng năm làm Ngày Hangeul để tưởng nhớ.",
+   "questions": [
+    {
+     "n": 32,
+     "q": "",
+     "options": [
+      "한글은 처음부터 24자였다.",
+      "한글날은 매년 9월 10일이다.",
+      "한글은 배우기 어려운 문자로 알려져 있다.",
+      "한글은 처음 만들 때보다 글자 수가 줄었다."
+     ],
+     "answer": 3,
+     "explain": "Ban đầu 28 chữ, nay dùng 24 chữ. Hangeul được đánh giá dễ học; Ngày Hangeul là 9/10."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 읽고 내용이 같은 것을 고르십시오.",
+   "instructionVi": "Đọc và chọn câu có nội dung giống bài đọc.",
+   "passage": "철새는 계절에 따라 먹이와 따뜻한 곳을 찾아 먼 거리를 이동한다. 어떤 새는 한 번에 만 킬로미터 넘게 날기도 한다. 철새들은 해와 별의 위치, 땅의 자기장 등을 이용해 길을 찾는 것으로 알려져 있다. 최근에는 기후 변화로 철새가 이동하는 시기가 조금씩 달라지고 있다.",
+   "passageVi": "Chim di cư bay xa theo mùa để tìm thức ăn và nơi ấm áp. Có loài một lần bay hơn 10.000 km. Chim di cư được biết là tìm đường nhờ vị trí mặt trời, các vì sao, từ trường trái đất… Gần đây do biến đổi khí hậu, thời điểm di cư đang dần thay đổi.",
+   "questions": [
+    {
+     "n": 33,
+     "q": "",
+     "options": [
+      "철새는 일 년 내내 한곳에 머문다.",
+      "철새는 짧은 거리만 이동한다.",
+      "철새는 해와 별의 위치를 이용해 길을 찾는다.",
+      "철새의 이동 시기는 해마다 똑같다."
+     ],
+     "answer": 2,
+     "explain": "Chim di cư tìm đường nhờ vị trí mặt trời, sao, từ trường; bay rất xa; thời điểm di cư đang thay đổi do khí hậu."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 읽고 내용이 같은 것을 고르십시오.",
+   "instructionVi": "Đọc và chọn câu có nội dung giống bài đọc.",
+   "passage": "김장은 겨울 동안 먹을 김치를 한꺼번에 많이 담그는 한국의 풍습이다. 보통 11월 말에서 12월 초에 하며, 가족과 이웃이 함께 모여 서로 돕는다. 김장 문화는 2013년 유네스코 인류무형문화유산에 올랐다. 최근에는 김치를 사 먹는 집이 늘면서 김장을 하는 가정이 줄고 있다.",
+   "passageVi": "Kimjang là phong tục Hàn Quốc muối một lượng lớn kimchi để ăn suốt mùa đông. Thường làm vào cuối tháng 11 đến đầu tháng 12, gia đình và hàng xóm tụ họp giúp nhau. Văn hóa kimjang được UNESCO ghi danh là di sản phi vật thể năm 2013. Gần đây nhà mua kimchi ăn tăng lên nên số gia đình làm kimjang đang giảm.",
+   "questions": [
+    {
+     "n": 34,
+     "q": "",
+     "options": [
+      "김장할 때는 가족과 이웃이 서로 돕는다.",
+      "김장은 주로 여름에 한다.",
+      "김장을 하는 가정이 점점 늘고 있다.",
+      "김장 문화는 아직 유네스코에 오르지 못했다."
+     ],
+     "answer": 0,
+     "explain": "Gia đình và hàng xóm tụ họp giúp nhau. Làm vào cuối tháng 11 – đầu tháng 12; số nhà làm kimjang đang giảm; đã vào danh sách UNESCO năm 2013."
+    }
+   ]
+  },
+  {
+   "instruction": "다음 글의 주제로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Chọn chủ đề phù hợp nhất của đoạn văn.",
+   "passage": "많은 사람들이 성공한 사람들은 처음부터 특별한 재능이 있었다고 생각한다. 하지만 대부분의 성공한 사람들은 수많은 실패를 겪었고, 그때마다 포기하지 않고 다시 도전했다. 재능보다 중요한 것은 꾸준히 노력하는 태도이다.",
+   "passageVi": "Nhiều người nghĩ người thành công có tài năng đặc biệt từ đầu. Nhưng phần lớn họ đã trải qua vô số thất bại và lần nào cũng không bỏ cuộc mà thử lại. Quan trọng hơn tài năng là thái độ nỗ lực bền bỉ.",
+   "questions": [
+    {
+     "n": 35,
+     "q": "",
+     "options": [
+      "성공한 사람은 실패를 겪지 않았다.",
+      "성공하려면 재능보다 꾸준한 노력이 중요하다.",
+      "특별한 재능이 있어야 성공할 수 있다.",
+      "실패하면 다른 일을 찾는 것이 좋다."
+     ],
+     "answer": 1,
+     "explain": "Câu cuối là ý chính: thái độ nỗ lực bền bỉ quan trọng hơn tài năng."
+    }
+   ]
+  },
+  {
+   "instruction": "다음 글의 주제로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Chọn chủ đề phù hợp nhất của đoạn văn.",
+   "passage": "스마트폰으로 언제든 사진을 찍을 수 있게 되면서 사람들은 예전보다 훨씬 많은 사진을 찍는다. 그러나 찍은 사진을 다시 보는 일은 드물다. 사진을 찍느라 정작 눈앞의 풍경을 제대로 즐기지 못하는 경우도 많다. 때로는 카메라를 내려놓고 그 순간을 눈과 마음에 담아 보는 것은 어떨까?",
+   "passageVi": "Từ khi lúc nào cũng chụp được bằng điện thoại, người ta chụp nhiều hơn trước rất nhiều. Nhưng hiếm khi xem lại ảnh đã chụp. Mải chụp nên nhiều khi không thật sự tận hưởng cảnh trước mắt. Thỉnh thoảng thử bỏ máy ảnh xuống, lưu khoảnh khắc ấy bằng mắt và trái tim thì sao?",
+   "questions": [
+    {
+     "n": 36,
+     "q": "",
+     "options": [
+      "스마트폰 사진은 질이 낮다.",
+      "여행할 때는 사진을 많이 찍어야 한다.",
+      "찍은 사진은 바로 지워야 한다.",
+      "사진을 찍기보다 그 순간을 직접 즐기는 것도 필요하다."
+     ],
+     "answer": 3,
+     "explain": "Câu cuối gợi ý: thỉnh thoảng hãy bỏ máy ảnh xuống, lưu giữ khoảnh khắc bằng mắt và trái tim."
+    }
+   ]
+  },
+  {
+   "instruction": "다음 글의 주제로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Chọn chủ đề phù hợp nhất của đoạn văn.",
+   "passage": "요즘 아이들은 밖에서 뛰어노는 시간이 크게 줄었다. 학원과 숙제로 바쁘고, 놀 때도 주로 스마트폰을 사용하기 때문이다. 그러나 친구들과 밖에서 뛰어놀면서 아이들은 체력을 기르고 규칙을 지키는 법과 다른 사람과 어울리는 법을 배운다. 아이들에게 마음껏 뛰어놀 수 있는 시간을 돌려주어야 한다.",
+   "passageVi": "Trẻ em ngày nay có ít thời gian chạy chơi ngoài trời hơn nhiều, vì bận học thêm, bài tập, và khi chơi thì chủ yếu dùng điện thoại. Nhưng khi chạy chơi ngoài trời cùng bạn, trẻ rèn thể lực, học cách tuân thủ luật lệ và hòa đồng với người khác. Cần trả lại cho trẻ thời gian được chạy chơi thỏa thích.",
+   "questions": [
+    {
+     "n": 37,
+     "q": "",
+     "options": [
+      "아이들은 학원에 더 많이 다녀야 한다.",
+      "아이들이 밖에서 충분히 뛰어놀 수 있게 해야 한다.",
+      "아이들의 스마트폰 사용 시간을 늘려야 한다.",
+      "아이들은 혼자 노는 것이 좋다."
+     ],
+     "answer": 1,
+     "explain": "Câu cuối: cần trả lại cho trẻ thời gian chạy chơi thỏa thích."
+    }
+   ]
+  },
+  {
+   "instruction": "다음 글의 주제로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Chọn chủ đề phù hợp nhất của đoạn văn.",
+   "passage": "음식을 빨리 먹으면 배가 부르다는 신호가 뇌에 전달되기 전에 이미 많은 양을 먹게 된다. 이 신호가 뇌에 전달되기까지는 보통 20분 정도가 걸린다. 그러므로 살을 빼고 싶다면 음식을 천천히 꼭꼭 씹어 먹는 습관을 들이는 것이 좋다.",
+   "passageVi": "Ăn nhanh thì đã ăn rất nhiều trước khi tín hiệu \"no rồi\" kịp truyền lên não. Tín hiệu này thường mất khoảng 20 phút. Vì vậy muốn giảm cân, nên tập thói quen ăn chậm, nhai kỹ.",
+   "questions": [
+    {
+     "n": 38,
+     "q": "",
+     "options": [
+      "음식은 20분 안에 다 먹어야 한다.",
+      "배가 부르면 바로 운동을 해야 한다.",
+      "음식을 천천히 먹는 습관이 체중 조절에 도움이 된다.",
+      "살을 빼려면 음식을 적게 씹어야 한다."
+     ],
+     "answer": 2,
+     "explain": "그러므로 + câu cuối là kết luận: muốn giảm cân nên ăn chậm, nhai kỹ."
+    }
+   ]
+  },
+  {
+   "instruction": "주어진 문장이 들어갈 곳으로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Chọn vị trí phù hợp nhất để đặt câu cho sẵn.",
+   "sentence": "이처럼 같은 행동도 나라에 따라 다른 의미로 받아들여질 수 있다.",
+   "passage": "손짓 하나에도 문화의 차이가 담겨 있다. ( ㉠ ) 예를 들어 엄지와 검지로 동그라미를 만드는 손짓은 한국에서 ‘좋다’나 ‘돈’을 뜻한다. ( ㉡ ) 그런데 어떤 나라에서는 이 손짓이 상대를 무시하는 뜻이 되기도 한다. ( ㉢ ) 그러므로 외국에 갈 때는 그 나라의 손짓 문화를 미리 알아 두는 것이 좋다. ( ㉣ )",
+   "passageVi": "Ngay cả một cử chỉ tay cũng chứa khác biệt văn hóa. Ví dụ, cử chỉ dùng ngón cái và ngón trỏ tạo vòng tròn ở Hàn nghĩa là \"tốt\" hoặc \"tiền\". Nhưng ở một số nước, cử chỉ này lại có nghĩa coi thường người khác. (Như vậy, cùng một hành động có thể được hiểu khác nhau tùy nước.) Vì thế khi ra nước ngoài nên tìm hiểu trước văn hóa cử chỉ của nước đó.",
+   "questions": [
+    {
+     "n": 39,
+     "q": "",
+     "options": [
+      "㉠",
+      "㉡",
+      "㉢",
+      "㉣"
+     ],
+     "answer": 2,
+     "explain": "Câu \"이처럼 cùng một hành động có thể mang nghĩa khác tùy nước\" tổng kết ví dụ vừa nêu (nghĩa ở Hàn và ở nước khác), đứng trước lời khuyên \"그러므로…\" → ㉢."
+    }
+   ]
+  },
+  {
+   "instruction": "주어진 문장이 들어갈 곳으로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Chọn vị trí phù hợp nhất để đặt câu cho sẵn.",
+   "sentence": "하지만 이 방법은 시간이 오래 걸리고 비용도 많이 든다.",
+   "passage": "바다에 버려진 플라스틱 쓰레기가 큰 문제가 되고 있다. ( ㉠ ) 지금까지는 주로 배를 타고 나가 사람이 직접 쓰레기를 건져 왔다. ( ㉡ ) 그래서 최근에는 바닷물의 흐름을 이용해 쓰레기를 한곳에 모으는 장치가 개발되었다. ( ㉢ ) 이 장치는 사람이 없어도 스스로 쓰레기를 모을 수 있어 효과가 크다. ( ㉣ )",
+   "passageVi": "Rác nhựa bị vứt xuống biển đang là vấn đề lớn. Từ trước đến nay chủ yếu là người đi thuyền ra vớt rác bằng tay. (Nhưng cách này tốn nhiều thời gian và chi phí.) Vì thế gần đây người ta phát triển thiết bị dùng dòng chảy nước biển gom rác về một chỗ. Thiết bị này tự gom rác mà không cần người nên rất hiệu quả.",
+   "questions": [
+    {
+     "n": 40,
+     "q": "",
+     "options": [
+      "㉠",
+      "㉡",
+      "㉢",
+      "㉣"
+     ],
+     "answer": 1,
+     "explain": "Câu \"하지만 cách này tốn thời gian và chi phí\" nói nhược điểm của cách vớt rác bằng tay vừa nêu, và dẫn tới \"그래서 gần đây phát triển thiết bị mới\" → ㉡."
+    }
+   ]
+  },
+  {
+   "instruction": "주어진 문장이 들어갈 곳으로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Chọn vị trí phù hợp nhất để đặt câu cho sẵn.",
+   "sentence": "이 때문에 그는 ‘거리의 피아니스트’라는 별명을 얻었다.",
+   "passage": "한 청년이 매주 주말 기차역 앞에서 피아노를 연주해 화제다. ( ㉠ ) 그는 바쁘게 지나가는 사람들에게 잠시 쉬어 갈 시간을 주고 싶어서 연주를 시작했다고 한다. ( ㉡ ) 3년째 하루도 빠지지 않고 연주를 하자 그의 연주를 들으러 일부러 찾아오는 사람들도 생겼다. ( ㉢ ) 그는 앞으로 다른 도시에서도 연주를 해 보고 싶다고 말했다. ( ㉣ )",
+   "passageVi": "Một chàng trai chơi piano trước ga tàu mỗi cuối tuần đang gây chú ý. Anh nói bắt đầu chơi đàn vì muốn cho người qua lại vội vã một chút thời gian nghỉ ngơi. Ba năm không bỏ buổi nào, đã có người cố ý tìm đến nghe anh chơi. (Vì thế anh có biệt danh \"nghệ sĩ dương cầm đường phố\".) Anh cho biết sau này muốn chơi ở các thành phố khác.",
+   "questions": [
+    {
+     "n": 41,
+     "q": "",
+     "options": [
+      "㉠",
+      "㉡",
+      "㉢",
+      "㉣"
+     ],
+     "answer": 2,
+     "explain": "\"이 때문에 được đặt biệt danh nghệ sĩ dương cầm đường phố\" là kết quả của việc 3 năm chơi đàn khiến người ta tìm đến nghe → ㉢."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 읽고 물음에 답하십시오.",
+   "instructionVi": "Đọc và trả lời câu hỏi.",
+   "passage": "할머니는 매일 아침 대문 앞을 쓰셨다. 비가 오나 눈이 오나 하루도 거르는 날이 없었다. 어느 날 내가 “할머니, 어차피 내일 또 더러워질 텐데 왜 매일 쓰세요?” 하고 물었다. 할머니는 빗자루를 든 채 허리를 펴고 웃으셨다. “우리 집에 오는 사람이 기분 좋게 들어오라고 그러지.” 그때는 그 말이 무슨 뜻인지 잘 몰랐다. 할머니가 돌아가신 지 십 년이 지난 지금, 나는 아침마다 우리 집 현관 앞을 쓴다. __빗자루를 들 때마다 할머니의 웃음소리가 들리는 것 같다.__",
+   "passageVi": "Bà quét trước cổng mỗi sáng. Mưa hay tuyết cũng không bỏ ngày nào. Một hôm tôi hỏi: \"Bà ơi, đằng nào mai lại bẩn, sao ngày nào bà cũng quét?\" Bà cầm chổi, đứng thẳng lưng cười: \"Để ai đến nhà mình cũng vui vẻ bước vào.\" Hồi đó tôi chưa hiểu câu ấy nghĩa là gì. Giờ bà mất đã mười năm, mỗi sáng tôi quét trước cửa nhà mình. Mỗi lần cầm chổi, tôi như nghe thấy tiếng cười của bà.",
+   "questions": [
+    {
+     "n": 42,
+     "q": "밑줄 친 부분에 나타난 ‘나’의 심정으로 가장 알맞은 것을 고르십시오.",
+     "options": [
+      "귀찮다",
+      "후회스럽다",
+      "실망스럽다",
+      "그립다"
+     ],
+     "answer": 3,
+     "explain": "Bà đã mất mười năm, mỗi lần cầm chổi như nghe tiếng cười của bà → nhớ thương (그립다)."
+    },
+    {
+     "n": 43,
+     "q": "이 글의 내용과 같은 것을 고르십시오.",
+     "options": [
+      "할머니는 날씨와 상관없이 매일 대문 앞을 쓸었다.",
+      "할머니는 비가 오는 날에는 쉬셨다.",
+      "나는 그때 할머니의 말을 바로 이해했다.",
+      "나는 지금 일주일에 한 번 현관 앞을 쓴다."
+     ],
+     "answer": 0,
+     "explain": "\"비가 오나 눈이 오나 하루도 거르는 날이 없었다\" = mưa hay tuyết cũng không bỏ ngày nào."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 읽고 물음에 답하십시오.",
+   "instructionVi": "Đọc và trả lời câu hỏi.",
+   "passage": "최근 ‘제로 웨이스트’ 가게가 늘고 있다. 이곳에서는 세제나 곡물 등을 포장 없이 판매하기 때문에 손님이 직접 용기를 가져와 필요한 만큼만 담아 가야 한다. 처음에는 번거롭다는 반응도 있었지만 쓰레기를 줄이는 데 동참하려는 사람들이 늘면서 단골손님도 많아졌다. 그러나 이런 가게가 늘어나는 것만으로는 한계가 있다. 대형 마트와 기업이 (    ) 근본적인 변화를 기대하기 어렵기 때문이다. 소비자의 작은 실천과 함께 기업의 책임 있는 노력이 필요하다.",
+   "passageVi": "Gần đây cửa hàng \"zero waste\" (không rác thải) tăng lên. Ở đây bột giặt, ngũ cốc… bán không bao bì nên khách phải tự mang hộp đến lấy vừa đủ dùng. Ban đầu có người thấy phiền, nhưng người muốn chung tay giảm rác tăng lên nên khách quen cũng nhiều. Tuy vậy chỉ tăng những cửa hàng như thế thì có giới hạn, vì nếu siêu thị lớn và doanh nghiệp (không giảm bao bì thừa) thì khó mong thay đổi tận gốc. Cần hành động nhỏ của người tiêu dùng cùng nỗ lực có trách nhiệm của doanh nghiệp.",
+   "questions": [
+    {
+     "n": 44,
+     "q": "이 글의 주제로 가장 알맞은 것을 고르십시오.",
+     "options": [
+      "제로 웨이스트 가게는 손님에게 불편하기만 하다.",
+      "대형 마트는 포장을 더 늘려야 한다.",
+      "소비자의 노력만으로 쓰레기 문제를 해결할 수 있다.",
+      "쓰레기를 줄이려면 소비자와 기업이 함께 노력해야 한다."
+     ],
+     "answer": 3,
+     "explain": "Câu cuối: cùng với hành động nhỏ của người tiêu dùng cần nỗ lực có trách nhiệm của doanh nghiệp."
+    },
+    {
+     "n": 45,
+     "q": "(    )에 들어갈 내용으로 가장 알맞은 것을 고르십시오.",
+     "options": [
+      "과도한 포장을 줄이지 않으면",
+      "가격을 내리지 않으면",
+      "가게를 더 크게 짓지 않으면",
+      "새로운 제품을 만들지 않으면"
+     ],
+     "answer": 0,
+     "explain": "Bài nói về giảm rác thải bao bì → siêu thị, doanh nghiệp không giảm bao bì thừa thì khó thay đổi tận gốc."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 읽고 물음에 답하십시오.",
+   "instructionVi": "Đọc và trả lời câu hỏi.",
+   "passage": "최근 공공 도서관들이 단순히 책을 빌려주는 곳에서 벗어나 지역 주민을 위한 문화 공간으로 바뀌고 있다. 아이들을 위한 그림책 읽기 모임, 어르신을 위한 스마트폰 교실, 직장인을 위한 저녁 강연 등 다양한 프로그램이 운영된다. 일부에서는 도서관이 본래의 역할에서 벗어나 조용히 책을 읽을 공간이 줄어든다고 걱정하기도 한다. 그러나 책과 사람을 이어 주는 것이 도서관의 본래 목적이라는 점을 생각하면 이러한 변화는 오히려 도서관의 역할을 넓히는 것이라고 볼 수 있다. 다만 조용한 열람 공간과 활동 공간을 나누어 서로 불편하지 않도록 하는 배려가 필요하다.",
+   "passageVi": "Gần đây thư viện công cộng không chỉ cho mượn sách mà đang thành không gian văn hóa cho cư dân. Có nhiều chương trình như nhóm đọc sách tranh cho trẻ, lớp học điện thoại cho người cao tuổi, buổi nói chuyện buổi tối cho người đi làm. Một số người lo thư viện rời xa vai trò vốn có, chỗ đọc yên tĩnh bị thu hẹp. Nhưng nếu nghĩ mục đích vốn có của thư viện là kết nối sách và con người, thì thay đổi này đúng ra là mở rộng vai trò thư viện. Chỉ có điều cần tách khu đọc yên tĩnh và khu hoạt động để không làm phiền nhau.",
+   "questions": [
+    {
+     "n": 46,
+     "q": "이 글에 나타난 필자의 태도로 가장 알맞은 것을 고르십시오.",
+     "options": [
+      "도서관은 책만 빌려주어야 한다고 주장하고 있다.",
+      "도서관의 변화를 긍정적으로 보면서 공간에 대한 배려를 당부하고 있다.",
+      "도서관 프로그램을 모두 없애야 한다고 보고 있다.",
+      "도서관 이용자가 줄어드는 것을 걱정하고 있다."
+     ],
+     "answer": 1,
+     "explain": "Tác giả cho rằng thay đổi này mở rộng vai trò thư viện (tích cực), nhưng cần tách khu đọc yên tĩnh và khu hoạt động."
+    },
+    {
+     "n": 47,
+     "q": "이 글의 내용과 같은 것을 고르십시오.",
+     "options": [
+      "도서관에서 어르신을 위한 스마트폰 교실이 열린다.",
+      "도서관은 이제 책을 빌려주지 않는다.",
+      "모든 사람이 도서관의 변화를 환영한다.",
+      "필자는 열람 공간을 없애야 한다고 말한다."
+     ],
+     "answer": 0,
+     "explain": "Có lớp học điện thoại cho người cao tuổi. Vẫn có người lo ngại; tác giả muốn giữ khu đọc yên tĩnh."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 읽고 물음에 답하십시오.",
+   "instructionVi": "Đọc và trả lời câu hỏi.",
+   "passage": "최근 정부가 노인 운전자의 교통사고를 줄이기 위해 일정 나이 이상의 운전자에게 면허증을 반납하도록 권하고 있다. 면허증을 반납하면 교통비를 지원해 주는 지역도 늘었다. 그러나 반납률은 여전히 낮다. 특히 버스나 지하철이 드문 농촌 지역에서는 자동차가 없으면 병원이나 시장에 가기도 어렵기 때문이다. __나이만을 기준으로 운전 능력을 판단하는 것도 문제라는 목소리가 있다.__ 같은 나이라도 사람마다 건강 상태와 운전 능력은 크게 다르다. 따라서 일률적으로 반납을 권하기보다 정기적인 운전 능력 검사를 통해 (    ) 방안이 필요하다. 동시에 농촌 지역의 대중교통을 늘려 운전을 하지 않아도 생활에 불편이 없도록 해야 할 것이다.",
+   "passageVi": "Gần đây chính phủ khuyến khích người lái xe trên một độ tuổi nhất định trả lại bằng lái để giảm tai nạn do người cao tuổi lái xe. Số địa phương hỗ trợ tiền đi lại khi trả bằng cũng tăng. Nhưng tỉ lệ trả bằng vẫn thấp, đặc biệt ở nông thôn ít xe buýt, tàu điện, không có ô tô thì đi bệnh viện hay chợ cũng khó. Cũng có ý kiến cho rằng chỉ lấy tuổi làm tiêu chuẩn đánh giá năng lực lái xe là có vấn đề. Cùng tuổi nhưng sức khỏe và năng lực lái mỗi người rất khác. Vì vậy thay vì khuyên trả bằng đồng loạt, cần cách (đánh giá phù hợp năng lực lái của từng người) qua kiểm tra định kỳ. Đồng thời cần tăng giao thông công cộng ở nông thôn để không lái xe vẫn sinh hoạt thuận tiện.",
+   "questions": [
+    {
+     "n": 48,
+     "q": "필자가 이 글을 쓴 목적으로 가장 알맞은 것을 고르십시오.",
+     "options": [
+      "노인 운전자의 사고 원인을 분석하려고",
+      "면허증 반납 제도를 홍보하려고",
+      "농촌 지역의 의료 시설 문제를 알리려고",
+      "노인 운전자 정책을 보완할 방향을 제시하려고"
+     ],
+     "answer": 3,
+     "explain": "Tác giả chỉ ra hạn chế của việc khuyên trả bằng lái theo tuổi và đề xuất kiểm tra năng lực định kỳ, tăng giao thông công cộng → đưa ra hướng bổ sung chính sách."
+    },
+    {
+     "n": 49,
+     "q": "(    )에 들어갈 내용으로 가장 알맞은 것을 고르십시오.",
+     "options": [
+      "모든 노인의 면허를 바로 취소하는",
+      "운전면허 시험을 없애는",
+      "교통비 지원을 줄이는",
+      "개인의 운전 능력에 맞게 판단하는"
+     ],
+     "answer": 3,
+     "explain": "Câu trước: cùng tuổi nhưng năng lực mỗi người khác nhau → cần đánh giá theo năng lực từng người qua kiểm tra định kỳ."
+    },
+    {
+     "n": 50,
+     "q": "밑줄 친 부분에 나타난 필자의 태도로 가장 알맞은 것을 고르십시오.",
+     "options": [
+      "면허증 반납 제도를 적극적으로 지지하고 있다.",
+      "노인 운전자를 비난하고 있다.",
+      "나이만으로 운전 능력을 판단하는 기준에 문제를 제기하고 있다.",
+      "교통비 지원이 너무 많다고 지적하고 있다."
+     ],
+     "answer": 2,
+     "explain": "Câu gạch chân nêu ý kiến cho rằng chỉ dựa vào tuổi để đánh giá là có vấn đề → đặt vấn đề với tiêu chí đó."
+    }
+   ]
+  }
+ ]
+}

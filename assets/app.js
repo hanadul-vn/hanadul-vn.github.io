@@ -144,6 +144,10 @@
     route(true);
   };
 
+  // Cho assets/exam.js (đề thi thử) dùng chung.
+  HD.lib = { esc: esc, ko: ko, koq: koq, loadJSON: loadJSON, readStore: readStore, writeStore: writeStore, renderStats: renderStats, today: today, toast: toast, streakOf: streakOf };
+  HD.setCleanup = function (fn) { cleanup = fn; };
+
   // ---------- speech ----------
   var koVoice = null;
   function pickVoice() {
@@ -203,6 +207,7 @@
     if (parts[0] === 'tai-khoan' && HD.renderAccountPage) return HD.renderAccountPage(app);
     if (parts[0] === 'bai' && parts[1]) return renderLesson(parts[1], parts[2] || 'hoc');
     if (parts[0] === 'so-cau-sai') return renderWrongBook();
+    if (parts[0] === 'thi-thu' && HD.renderExam) return HD.renderExam(app, parts.slice(1));
     return renderHome(/^lo-trinh/.test(parts[0]) ? parts[0] : null);
   }
   window.addEventListener('hashchange', function () { route(); });
@@ -275,6 +280,7 @@
           '<span><span class="label">Sổ câu sai</span><br><span class="title">' + nw + ' câu cần ôn lại</span></span><span class="go">→</span></a>';
       }
       if (HD.accountHomeCard) h += HD.accountHomeCard(!!(s.xp || s.days.length));
+      if (HD.examHomeCard) h += HD.examHomeCard(s);
 
       if (idx.levels.length > 1) {
         h += '<div id="lo-trinh" class="level-jump" aria-label="Chọn cấp độ">' + idx.levels.map(function (lv) {

@@ -28,8 +28,24 @@
       wrong: obj(s.wrong),
       wrongDel: obj(s.wrongDel),
       writing: obj(s.writing),
-      writingAt: obj(s.writingAt)
+      writingAt: obj(s.writingAt),
+      exams: obj(s.exams)
     };
+  }
+
+  // Đề thi thử: điểm cao nhất giữ lại; lượt làm gần nhất (điểm, đáp án đã chọn) lấy theo thời điểm nộp mới hơn.
+  function mergeExams(a, b) {
+    var out = {};
+    Object.keys(a).concat(Object.keys(b)).forEach(function (id) {
+      if (out[id]) return;
+      var x = obj(a[id]), y = obj(b[id]);
+      var newer = num(x.at) >= num(y.at) ? x : y;
+      var e = { best: Math.max(num(x.best), num(y.best)), n: Math.max(num(x.n), num(y.n)), last: num(newer.last), at: num(newer.at) };
+      if (typeof newer.ans === 'string') e.ans = newer.ans;
+      if (num(newer.secs)) e.secs = num(newer.secs);
+      out[id] = e;
+    });
+    return out;
   }
 
   function mergeLessons(a, b) {
@@ -96,7 +112,8 @@
       wrong: wr.wrong,
       wrongDel: wr.wrongDel,
       writing: wt.writing,
-      writingAt: wt.writingAt
+      writingAt: wt.writingAt,
+      exams: mergeExams(a.exams, b.exams)
     };
   }
 
@@ -115,7 +132,7 @@
   }
   function hasProgress(s) {
     s = normalize(s);
-    return s.xp > 0 || s.days.length > 0 || Object.keys(s.lessons).length > 0 || Object.keys(s.wrong).length > 0;
+    return s.xp > 0 || s.days.length > 0 || Object.keys(s.lessons).length > 0 || Object.keys(s.wrong).length > 0 || Object.keys(s.exams).length > 0;
   }
 
   var api = { merge: merge, sameData: sameData, normalize: normalize, hasProgress: hasProgress };

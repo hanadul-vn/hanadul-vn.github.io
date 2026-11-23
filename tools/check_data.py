@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Kiểm tra dữ liệu bài học: JSON hợp lệ, đủ trường, không trùng đáp án."""
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -114,6 +115,52 @@ if fb_path.exists():
             print(f"cam-nhan.json: {len(fb)} cảm nhận")
     except json.JSONDecodeError as e:
         err(f"cam-nhan.json: JSON lỗi: {e}")
+
+# Đề thi thử (data/exams): số câu liên tục, 4 lựa chọn khác nhau, đáp án 0–3, có giải thích và bản dịch đoạn văn.
+ex_dir = ROOT / "data/exams"
+if ex_dir.exists():
+    eidx = json.loads((ex_dir / "index.json").read_text(encoding="utf-8"))
+    for meta in eidx.get("exams", []):
+        eid = meta.get("id", "")
+        if not re.fullmatch(r"[a-z0-9-]+", eid):
+            err(f"đề thi: mã đề lạ {eid!r}")
+            continue
+        f = ex_dir / f"{eid}.json"
+        if not f.exists():
+            err(f"{eid}: thiếu file {f.name}")
+            continue
+        ex = json.loads(f.read_text(encoding="utf-8"))
+        if ex.get("id") != eid:
+            err(f"{eid}: id trong file khác index")
+        qs = [q for st in ex.get("sets", []) for q in st.get("questions", [])]
+        ns = [q.get("n") for q in qs]
+        if not ns or ns != list(range(ns[0], ns[0] + len(ns))):
+            err(f"{eid}: số câu không liên tục {ns[:5]}…")
+        if meta.get("count") != len(qs):
+            err(f"{eid}: index ghi {meta.get('count')} câu, file có {len(qs)}")
+        if meta.get("minutes") != ex.get("minutes") or not ex.get("minutes"):
+            err(f"{eid}: số phút trong index và file khác nhau")
+        for st in ex.get("sets", []):
+            if not st.get("instruction") or not st.get("instructionVi"):
+                err(f"{eid}: bộ câu {st['questions'][0].get('n')} thiếu lời dẫn")
+            if st.get("passage") and not st.get("passageVi"):
+                err(f"{eid}: câu {st['questions'][0].get('n')} có đoạn văn mà thiếu bản dịch")
+            if "㉠" in (st.get("passage") or "") and not st.get("sentence"):
+                err(f"{eid}: câu {st['questions'][0].get('n')} có ㉠㉡ mà thiếu câu cho sẵn")
+            for q in st.get("questions", []):
+                o = q.get("options", [])
+                if len(o) != 4 or len(set(o)) != 4 or any(not str(x).strip() for x in o):
+                    err(f"{eid} câu {q.get('n')}: cần đúng 4 lựa chọn khác nhau")
+                if q.get("answer") not in (0, 1, 2, 3):
+                    err(f"{eid} câu {q.get('n')}: answer phải là 0–3")
+                if not q.get("explain"):
+                    err(f"{eid} câu {q.get('n')}: thiếu giải thích")
+                if not q.get("q") and not st.get("passage"):
+                    err(f"{eid} câu {q.get('n')}: không có câu hỏi lẫn đoạn văn")
+        cnt = [sum(1 for q in qs if q.get("answer") == i) for i in range(4)]
+        if qs and max(cnt) - min(cnt) > max(3, len(qs) // 8):
+            err(f"{eid}: đáp án đúng dồn lệch về một vị trí {cnt}")
+        print(f"{eid}: {len(qs)} câu, {ex.get('minutes')} phút, đáp án ①②③④ = {cnt}")
 
 if errors:
     print("\nLỖI:")

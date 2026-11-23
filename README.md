@@ -64,6 +64,12 @@ Không bắt buộc. Bật bằng `supabaseUrl` + `supabaseKey` (khóa công kha
 - Tên hiển thị (bảng `profiles`): khung "Tên hiển thị" ở `#/tai-khoan`, dùng cho chứng nhận và bảng xếp hạng; đọc bằng `HD.displayName()`.
 - Đăng xuất xóa tiến độ khỏi máy đó (vẫn còn trên tài khoản). Thư viện `assets/vendor/supabase-2.118.0.js` (MIT) chỉ tải khi đã bật.
 
+## Đề thi thử TOPIK II
+
+- `#/thi-thu`: danh sách đề; `#/thi-thu/<id>`: giới thiệu; `/lam`: làm bài; `/ket-qua`: điểm và xem lại. Code ở [`assets/exam.js`](assets/exam.js).
+- Miễn phí, không cần đăng nhập. Đồng hồ và chấm điểm chạy trên máy: bài đang làm lưu ở `localStorage` `hanadul:exam-run` (tải lại trang vẫn đếm tiếp, hết giờ tự nộp). Kết quả lưu vào tiến độ `exams` (điểm cao nhất, lượt gần nhất, đáp án đã chọn), đăng nhập thì đồng bộ như bài học. Mỗi câu đúng +2 XP.
+- Dữ liệu: `data/exams/index.json` (danh sách đề) và `data/exams/<id>.json`: `minutes`, `sets` (mỗi bộ có `instruction`, `instructionVi`, tùy chọn `passage` + `passageVi`, `sentence` cho câu chèn ㉠–㉣, và `questions`: `n`, `q`, `options` 4 lựa chọn **giữ nguyên thứ tự**, `answer` là vị trí đúng 0–3, `explain`). Phần gạch chân bọc trong `__…__`. `tools/check_data.py` kiểm tra số câu liên tục, đáp án không dồn về một vị trí.
+
 ## Kiểm thử
 
 ```bash
@@ -72,6 +78,7 @@ psql -d <db trống> -f tests/schema_test.sql    # SQL + phân quyền (giả l�
 python3 -m http.server 8765 & SHOTS=/tmp node tests/e2e_account.js   # giao diện tài khoản (cần playwright)
 node tests/e2e_regression.js                   # hồi quy phần học, làm bài, sổ câu sai
 node tests/e2e_contact.js                      # GA4 + form đăng ký/cảm nhận
+node tests/e2e_exam.js                         # đề thi thử (đồng hồ giả lập, không phải chờ 70 phút)
 ```
 
 Các test Playwright giả lập Google Analytics và Formspree (`tests/stub_third_party.js`), nên không gửi số liệu hay email thật.
