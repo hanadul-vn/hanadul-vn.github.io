@@ -206,14 +206,50 @@
     return renderHome(/^lo-trinh/.test(parts[0]) ? parts[0] : null);
   }
   window.addEventListener('hashchange', function () { route(); });
-  // Nút "Xem lộ trình" và nút chọn cấp: đang ở trang chủ thì cuộn thẳng tới khối, không vẽ lại trang.
+  // Tab cấp độ: chỉ hiện bài của cấp đang chọn, không cuộn trang. Ghi tab vào hash (replaceState)
+  // để F5 / quay lại từ trang bài vẫn đúng tab mà không thêm bước vào lịch sử.
+  function selectLevel(id) {
+    var tabs = document.querySelectorAll('.level-jump [role="tab"]');
+    if (!tabs.length || !document.getElementById('lo-trinh-' + id)) return false;
+    Array.prototype.forEach.call(tabs, function (t) {
+      var on = t.getAttribute('data-level') === id;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.setAttribute('tabindex', on ? '0' : '-1');
+      t.classList.toggle('active', on);
+      // Thanh tab cuộn ngang (khi có nhiều cấp): kéo tab đang chọn vào tầm nhìn, không cuộn trang.
+      var bar = t.parentNode;
+      if (on && bar && (t.offsetLeft < bar.scrollLeft || t.offsetLeft + t.offsetWidth > bar.scrollLeft + bar.clientWidth)) bar.scrollLeft = t.offsetLeft - 8;
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('section.level[role="tabpanel"]'), function (sec) {
+      sec.hidden = sec.id !== 'lo-trinh-' + id;
+    });
+    return true;
+  }
+  // Nút "Xem lộ trình": đang ở trang chủ thì cuộn thẳng tới khu lộ trình, không vẽ lại trang.
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[href^="#lo-trinh"]');
     if (!a) return;
+    var tab = a.getAttribute('role') === 'tab' && a.getAttribute('data-level');
+    if (tab) {
+      if (!selectLevel(tab)) return;
+      e.preventDefault();
+      if (history.replaceState) history.replaceState(null, '', '#lo-trinh-' + tab);
+      return;
+    }
     var el = document.getElementById(a.getAttribute('href').slice(1));
     if (!el) return;
     e.preventDefault();
     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  // Phím mũi tên trái/phải chuyển tab cấp độ.
+  document.addEventListener('keydown', function (e) {
+    var t = e.target;
+    if (!t || t.getAttribute('role') !== 'tab' || (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight')) return;
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.level-jump [role="tab"]'));
+    var i = tabs.indexOf(t) + (e.key === 'ArrowRight' ? 1 : -1);
+    var n = tabs[(i + tabs.length) % tabs.length];
+    e.preventDefault();
+    n.focus(); n.click();
   });
 
   function getIndex() {
@@ -276,15 +312,22 @@
       }
       if (HD.accountHomeCard) h += HD.accountHomeCard(!!(s.xp || s.days.length));
 
-      if (idx.levels.length > 1) {
-        h += '<div id="lo-trinh" class="level-jump" aria-label="Chọn cấp độ">' + idx.levels.map(function (lv) {
-          return '<a href="#lo-trinh-' + esc(lv.id) + '"><span>' + esc(lv.icon || '📘') + '</span>' + esc(lv.name) + '</a>';
+      var tabs = idx.levels.length > 1;
+      // Mặc định tab cấp đầu (Sơ cấp 1); link #lo-trinh-<cấp> mở đúng tab.
+      var active = idx.levels[0].id;
+      idx.levels.forEach(function (lv) { if (jump === 'lo-trinh-' + lv.id) active = lv.id; });
+      if (tabs) {
+        h += '<div id="lo-trinh" class="level-jump" role="tablist" aria-label="Chọn cấp độ">' + idx.levels.map(function (lv) {
+          var on = lv.id === active;
+          return '<a href="#lo-trinh-' + esc(lv.id) + '" role="tab" id="tab-' + esc(lv.id) + '" data-level="' + esc(lv.id) + '" aria-controls="lo-trinh-' + esc(lv.id) + '"' +
+            ' aria-selected="' + on + '" tabindex="' + (on ? 0 : -1) + '"' + (on ? ' class="active"' : '') + '><span>' + esc(lv.icon || '📘') + '</span>' + esc(lv.name) + '</a>';
         }).join('') + '</div>';
       }
       idx.levels.forEach(function (lv, li) {
         var done = lv.lessons.filter(function (l) { return s.lessons[l.id] && s.lessons[l.id].best >= 70; }).length;
         var last = li === idx.levels.length - 1;
-        h += '<section class="level level-' + esc(lv.id) + '" id="lo-trinh-' + esc(lv.id) + '"' + (idx.levels.length > 1 ? '' : ' data-only="1"') + '>' +
+        h += '<section class="level level-' + esc(lv.id) + '" id="lo-trinh-' + esc(lv.id) + '"' +
+          (tabs ? ' role="tabpanel" aria-labelledby="tab-' + esc(lv.id) + '"' + (lv.id === active ? '' : ' hidden') : ' data-only="1"') + '>' +
           '<div class="section-head level-head"' + (idx.levels.length > 1 ? '' : ' id="lo-trinh"') + '><div>' +
           '<span class="level-badge">' + esc(lv.icon || '📘') + ' Cấp ' + (li + 1) + (lv.status ? ' · ' + esc(lv.status) : '') + '</span>' +
           '<h2>' + esc(lv.name) + '</h2>' + (lv.subtitle ? '<p>' + esc(lv.subtitle) + '</p>' : '') + '</div>' +
@@ -310,7 +353,8 @@
         feature('📒', 'var(--sky-soft)', 'Sổ câu sai', 'Câu làm sai được lưu lại để ôn. Trả lời đúng 2 lần liên tiếp thì câu rời khỏi sổ.') +
         '</div>' + HD.signupHtml('trang-chu') + '</div>';
       app.innerHTML = h;
-      var target = jump && document.getElementById(jump === 'lo-trinh' ? 'lo-trinh' : jump);
+      // #lo-trinh hoặc #lo-trinh-<cấp> (F5, quay lại từ bài, link chia sẻ): đưa khu tab lên đầu, không hiệu ứng cuộn.
+      var target = jump && document.getElementById('lo-trinh');
       if (target) target.scrollIntoView({ behavior: 'instant', block: 'start' });
     }).catch(fail);
   }
@@ -333,7 +377,7 @@
     var words = countWords(data);
     var gcount = (data.grammar || []).length;
     return '<div class="lesson-hero" data-ko="' + esc(data.ko) + '">' +
-      '<div class="crumbs"><a href="#/">Trang chủ</a>' + (found ? ' / ' + esc(found.level.name) : '') + '</div>' +
+      '<div class="crumbs"><a href="#/">Trang chủ</a>' + (found ? ' / <a href="#lo-trinh-' + esc(found.level.id) + '">' + esc(found.level.name) + '</a>' : '') + '</div>' +
       '<h1><span class="emoji">' + esc(l.icon || '📘') + '</span>' + esc(lessonName(l)) + ' <span class="ko" style="opacity:.85">' + esc(data.ko) + '</span></h1>' +
       (data.goal ? '<p>' + ko(data.goal) + '</p>' : '') +
       '<div class="meta-chips"><span>📚 ' + words + ' từ</span>' + (gcount ? '<span>🧩 ' + gcount + ' mẫu ngữ pháp</span>' : '') + '<span>⏱️ ~10 phút</span></div>' +
