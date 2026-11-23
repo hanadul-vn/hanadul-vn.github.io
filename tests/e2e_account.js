@@ -5,6 +5,8 @@ const { chromium } = require('playwright');
 const assert = require('assert');
 
 const BASE = process.env.BASE || 'http://localhost:8765/';
+// Thư mục ảnh chụp/kết quả: mặc định thư mục tạm (không ghi ra repo).
+const SHOTS = process.env.SHOTS || require('os').tmpdir();
 const SB = 'https://test-hanadul.supabase.co';
 const PUB_KEY = 'sb_publishable_test_123';
 
@@ -229,13 +231,16 @@ async function waitSynced(page) {
 
   // ===== Máy 1: khách học rồi đăng nhập email =====
   const d1 = await newDevice(browser, { on: true });
-  await tc('N2', 'Config có: hiện nút Đăng nhập, tải SDK, không lỗi console', async () => {
+  await tc('N2', 'Config có: hiện nút Đăng nhập; khách ở trang chủ/bài học KHÔNG tải SDK, mở #/tai-khoan mới tải (1 lần); không lỗi console', async () => {
     await d1.page.goto(BASE);
     await d1.page.waitForSelector('#acct .acct-btn');
     assert.ok(/Đăng nhập/.test(await d1.page.textContent('#acct')));
-    assert.strictEqual(d1.sdkLoads.length, 1);
-    await d1.page.goto(BASE + '#/tai-khoan');
+    await d1.page.goto(BASE + '#/bai/sc1-01');
+    await d1.page.waitForTimeout(600);
+    assert.strictEqual(d1.sdkLoads.length, 0, 'khách bị tải SDK ở trang chủ/bài học');
+    await d1.page.click('#acct .acct-btn');
     await d1.page.waitForSelector('#emailForm');
+    assert.strictEqual(d1.sdkLoads.length, 1);
     assert.strictEqual(await d1.page.locator('#namePanel').count(), 0, 'khách thấy ô tên hiển thị');
     assert.deepStrictEqual(d1.errors, []);
   });
@@ -248,6 +253,12 @@ async function waitSynced(page) {
     assert.ok(!s.owner, 'khách không có owner');
     await d1.page.goto(BASE + '#/');
     await d1.page.waitForSelector('.acct-card');
+    // Mở lại trang chủ từ đầu (khách không tải SDK) vẫn có thẻ mời.
+    const n = d1.sdkLoads.length;
+    await d1.page.reload();
+    await d1.page.waitForSelector('.acct-card');
+    await d1.page.waitForTimeout(300);
+    assert.strictEqual(d1.sdkLoads.length, n, 'khách bị tải SDK khi mở lại trang chủ');
   });
 
   let guest;
@@ -300,6 +311,30 @@ async function waitSynced(page) {
     await d2.page.waitForSelector('.continue.book');
     assert.ok(!(await d2.page.locator('.acct-card').count()), 'đã đăng nhập vẫn mời đăng nhập');
     assert.deepStrictEqual(d2.errors, []);
+  });
+
+  await tc('N25', 'Đã đăng nhập: mở thẳng trang chủ (tải lại) vẫn tải SDK, nhận lại phiên, hiện avatar và đồng bộ', async () => {
+    const before = d2.sdkLoads.length;
+    await d2.page.goto(BASE + '#/');
+    await d2.page.reload();
+    await d2.page.waitForSelector('#acct .avatar', { timeout: 15000 });
+    await waitSynced(d2.page);
+    assert.strictEqual(d2.sdkLoads.length, before + 1, 'không tải SDK khi đã có phiên');
+    assert.deepStrictEqual(d2.errors, []);
+  });
+
+  await tc('N26', 'Khách: trang chủ không tải SDK; bấm thẻ Xếp hạng ở trang chủ thì tải SDK và hiện bảng', async () => {
+    srv.board[0] = [{ rank: 1, display_name: 'Lan', xp: 1250, user_id: 'x1' }];
+    const d = await newDevice(browser, { on: true });
+    await d.page.goto(BASE);
+    await d.page.waitForSelector('.rank-card');
+    await d.page.waitForTimeout(500);
+    assert.strictEqual(d.sdkLoads.length, 0, 'khách bị tải SDK ở trang chủ');
+    await d.page.click('.rank-card');
+    await d.page.waitForSelector('#rankList');
+    assert.strictEqual(d.sdkLoads.length, 1);
+    assert.deepStrictEqual(d.errors, []);
+    await d.ctx.close();
   });
 
   await tc('N15', 'Tên hiển thị: chưa lưu thì gợi ý tên Google; không có khung gói/Pro nào', async () => {
@@ -435,7 +470,7 @@ async function waitSynced(page) {
     await m.page.waitForSelector('#cert');
     const over = await m.page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
     assert.ok(over <= 0, 'tràn ngang ' + over + 'px');
-    await m.page.screenshot({ path: process.env.SHOTS + '/chung-nhan-dien-thoai.png', fullPage: true });
+    await m.page.screenshot({ path: SHOTS + '/chung-nhan-dien-thoai.png', fullPage: true });
     await m.page.emulateMedia({ media: 'print' });
     assert.ok(await m.page.locator('#printBtn').isHidden(), 'nút In vẫn hiện khi in');
     await m.ctx.close();
@@ -465,7 +500,8 @@ async function waitSynced(page) {
     assert.ok((await d.page.textContent('#rankEmpty')).includes('Tuần trước'));
     await d.page.goto(BASE + '#/');
     await d.page.waitForSelector('.path .node');
-    assert.strictEqual(await d.page.locator('.rank-card').count(), 0, 'khách thấy thẻ xếp hạng ở trang chủ');
+    assert.strictEqual(await d.page.locator('.rank-card').count(), 1, 'khách không thấy lối vào xếp hạng ở trang chủ');
+    assert.ok((await d.page.textContent('.rank-card')).includes('Ai học chăm nhất'));
     assert.deepStrictEqual(d.errors, []);
     await d.ctx.close();
     const off = await newDevice(browser, {});
@@ -511,7 +547,7 @@ async function waitSynced(page) {
     await m.page.waitForSelector('#rankList');
     const over = await m.page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
     assert.ok(over <= 0, 'tràn ngang ' + over + 'px');
-    await m.page.screenshot({ path: process.env.SHOTS + '/xep-hang-dien-thoai.png', fullPage: true });
+    await m.page.screenshot({ path: SHOTS + '/xep-hang-dien-thoai.png', fullPage: true });
     await m.ctx.close();
   });
 
@@ -673,7 +709,7 @@ async function waitSynced(page) {
       const bar = await d.page.evaluate(() => { const r = document.querySelector('#acct').getBoundingClientRect(); return r.right; });
       assert.ok(bar <= 360, 'nút tài khoản ra ngoài màn: ' + bar);
       if (on) await d.page.waitForSelector('#displayName');
-      await d.page.screenshot({ path: process.env.SHOTS + '/tai-khoan-dien-thoai-' + (on ? 'da-dang-nhap' : 'chua-dang-nhap') + '.png', fullPage: true });
+      await d.page.screenshot({ path: SHOTS + '/tai-khoan-dien-thoai-' + (on ? 'da-dang-nhap' : 'chua-dang-nhap') + '.png', fullPage: true });
       await d.ctx.close();
     }
   });
@@ -681,7 +717,7 @@ async function waitSynced(page) {
   await d1.ctx.close(); await d2.ctx.close();
   await browser.close();
   console.log('\n' + results.filter((r) => r[2] === 'PASS').length + '/' + results.length + ' PASS');
-  require('fs').writeFileSync(process.env.SHOTS + '/e2e_account.json', JSON.stringify(results, null, 1));
+  require('fs').writeFileSync(SHOTS + '/e2e_account.json', JSON.stringify(results, null, 1));
 })();
 
 // Làm hết bài Luyện nhanh: `wrongN` câu đầu cố ý chọn sai, còn lại chọn đúng.
