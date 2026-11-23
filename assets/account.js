@@ -305,8 +305,32 @@
     certs = []; certState = 'idle'; certView = { msg: '', bad: false, busy: '' };
   }
 
+  // Thư viện Supabase (~210KB) chỉ tải khi cần: đã có phiên đăng nhập trên máy, đang quay về từ Google/link email,
+  // hoặc mở trang Tài khoản / Xếp hạng. Khách chưa đăng nhập ở trang chủ, trang bài học không tải.
+  var NEED_SDK = /^#\/(tai-khoan|xep-hang)/;
+  var booted = false;
+  function hasStoredSession() {
+    try {
+      for (var i = 0; i < localStorage.length; i++) if (/^hanadul:auth/.test(localStorage.key(i))) return true;
+    } catch (e) { /* chế độ ẩn danh */ }
+    return false;
+  }
   function start() {
     if (!HD.accountOn) { ready = true; return; }
+    var qs = new URLSearchParams(location.search);
+    var returning = qs.has('code') || qs.has('token_hash') || qs.has('error_description');
+    window.addEventListener('hashchange', function () { if (NEED_SDK.test(location.hash)) boot(); });
+    if (returning || hasStoredSession() || NEED_SDK.test(location.hash)) return boot();
+    // Khách: biết chắc chưa đăng nhập, không cần thư viện.
+    ready = true;
+    HD.renderAccountBadge();
+  }
+  HD.ensureAccount = function () { if (HD.accountOn) boot(); };
+
+  function boot() {
+    if (booted) return;
+    booted = true;
+    ready = false;
     var qs = new URLSearchParams(location.search);
     var authError = qs.get('error_description');
     var returning = qs.has('code') || !!authError;
