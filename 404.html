@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Không tìm thấy trang – Hana Dul</title>
   <style>body{font:16px/1.5 system-ui,sans-serif;max-width:560px;margin:15vh auto;padding:0 16px;color:#1c2233;background:#f6f7fb}a{color:#2f5fd0}@media(prefers-color-scheme:dark){body{color:#e8ebf3;background:#12151d}a{color:#7ea2ff}}</style>
+  <script src="/assets/merge.js"></script>
+  <script src="/assets/move.js"></script>
 </head>
 <body>
   <h1>Không tìm thấy trang</h1>
   <p>Đang đưa bạn về <a id="home" href="/">trang chủ Hana Dul</a>…</p>
   <script>
-    // Web chạy ở gốc tên miền (hanadul-vn.github.io).
+    // Web chạy ở gốc tên miền (hanadul.app; tên miền cũ hanadul-vn.github.io tự chuyển qua assets/move.js).
     var home = '/';
     document.getElementById('home').href = home;
     setTimeout(function () { location.replace(home); }, 3000);

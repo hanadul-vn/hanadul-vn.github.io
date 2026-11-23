@@ -6,13 +6,15 @@
   <title>Quyền riêng tư – Hana Dul</title>
   <meta name="description" content="Hana Dul thu thập những gì, dùng để làm gì và bạn có quyền gì với dữ liệu của mình.">
   <meta name="theme-color" content="#ff6b5b">
-  <link rel="canonical" href="https://hanadul-vn.github.io/chinh-sach-bao-mat.html">
+  <link rel="canonical" href="https://hanadul.app/chinh-sach-bao-mat.html">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/landing.css">
+  <script src="assets/merge.js"></script>
+  <script src="assets/move.js"></script>
 </head>
 <body class="landing">
   <header class="topbar">
@@ -31,6 +33,7 @@
 
     <h2>1. Tiến độ học</h2>
     <p>Khi bạn học mà không đăng nhập, điểm, sao, chuỗi ngày học, Sổ câu sai và câu bạn tự viết chỉ lưu trong trình duyệt của bạn (localStorage), không gửi về máy chủ nào. Bạn xóa dữ liệu trang web trong trình duyệt là các thông tin này mất hẳn.</p>
+    <p>Hana Dul đã chuyển từ địa chỉ cũ <b>hanadul-vn.github.io</b> sang <b>hanadul.app</b>. Khi bạn mở địa chỉ cũ, tiến độ trên trình duyệt được chuyển thẳng sang địa chỉ mới qua đường dẫn (phần sau dấu #, không gửi lên máy chủ nào), rồi xóa khỏi thanh địa chỉ ngay. Nếu bạn đã đăng nhập ở địa chỉ cũ, chỉ cần đăng nhập lại một lần ở địa chỉ mới.</p>
 
     <h2>2. Tài khoản (không bắt buộc)</h2>
     <p>Bạn có thể đăng nhập bằng Google hoặc email để lưu tiến độ và học tiếp trên máy khác. Không đăng nhập vẫn học được đầy đủ.</p>
@@ -38,6 +41,7 @@
       <li><b>Hana Dul lưu gì:</b> email, tên và ảnh đại diện Google trả về (nếu đăng nhập bằng Google), thời điểm đăng nhập; cùng tiến độ học nêu ở mục 1, tên hiển thị bạn tự đặt (để in trên chứng nhận, hiện trên bảng xếp hạng nếu bạn bật). Khi bạn đăng nhập lần đầu, tiến độ đang có trên máy được gộp vào tài khoản.</li>
       <li><b>Không lưu:</b> mật khẩu (Hana Dul không dùng mật khẩu: đăng nhập bằng Google hoặc link/mã gửi qua email), số điện thoại, thông tin thanh toán.</li>
       <li><b>Lưu ở đâu:</b> dịch vụ Supabase (máy chủ đặt tại Singapore). Mỗi tài khoản chỉ đọc và sửa được dữ liệu của chính mình.</li>
+      <li><b>Email đăng nhập:</b> link và mã đăng nhập được gửi từ địa chỉ <a href="mailto:team@hanadul.app">team@hanadul.app</a> qua dịch vụ gửi email Brevo (brevo.com). Brevo chỉ nhận địa chỉ email của bạn và nội dung thư đăng nhập để gửi đi, không dùng để gửi quảng cáo.</li>
       <li><b>Dùng để làm gì:</b> chỉ để đăng nhập và đồng bộ tiến độ giữa các máy của bạn. Không bán, không dùng để quảng cáo. Email đăng nhập không tự động được đăng ký nhận thông báo bài mới (mục 3 là việc riêng, do bạn tự chọn).</li>
       <li><b>Chứng nhận:</b> khi bạn bấm nhận chứng nhận hoàn thành cấp độ, Hana Dul lưu tên hiển thị, tên cấp độ, số bài, điểm trung bình và ngày cấp kèm một mã (HD-XXXX-XXXX). <b>Ai có mã đều xem được</b> các thông tin này ở trang <a href="chung-nhan.html">Xác minh chứng nhận</a> (không có email). Bạn tự xóa chứng nhận bằng cách xóa tài khoản.</li>
       <li><b>Bảng xếp hạng tuần (tự chọn):</b> mặc định bạn không có tên trên bảng. Chỉ khi bạn bấm "Tham gia", <b>tên hiển thị và XP kiếm được trong tuần</b> mới hiện công khai ở trang <a href="./#/xep-hang">Xếp hạng</a> (không có email). Bấm "Rời bảng xếp hạng" là tên biến mất ngay.</li>
@@ -55,9 +59,12 @@
     <p>Hana Dul dùng Google Analytics để đếm lượt xem, biết bài nào được học nhiều và nút nào được bấm, nhằm cải thiện nội dung. Công cụ này dùng cookie và nhận các thông tin như loại thiết bị, trình duyệt, khu vực gần đúng. Hana Dul không gửi tên, email, mã tài khoản hay câu trả lời bài tập của bạn vào công cụ thống kê (chỉ ghi lại sự kiện "đã đăng nhập" và cách đăng nhập: Google hay email). Bạn có thể chặn bằng tiện ích chặn theo dõi hoặc <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">tiện ích tắt Google Analytics</a>.</p>
 
     <h2>6. Quyền của bạn</h2>
-    <p>Tài khoản và tiến độ: bạn tự xem trong trang <a href="./#/tai-khoan">Tài khoản</a> và tự xóa bất cứ lúc nào (mục 2). Bạn có thể yêu cầu xem, sửa hoặc xóa email và cảm nhận đã gửi bất cứ lúc nào, qua mục <a href="https://github.com/hanadul-vn/hanadul-vn.github.io/issues" target="_blank" rel="noopener">Góp ý</a> (đừng ghi email công khai ở đó, chỉ cần nói bạn muốn xóa, Hana Dul sẽ liên hệ) hoặc trả lời email thông báo bạn nhận được.</p>
+    <p>Tài khoản và tiến độ: bạn tự xem trong trang <a href="./#/tai-khoan">Tài khoản</a> và tự xóa bất cứ lúc nào (mục 2). Bạn có thể yêu cầu xem, sửa hoặc xóa email và cảm nhận đã gửi bất cứ lúc nào, bằng cách gửi email tới <a href="mailto:team@hanadul.app">team@hanadul.app</a> hoặc trả lời email thông báo bạn nhận được.</p>
 
-    <h2>7. Thay đổi</h2>
+    <h2>7. Liên hệ</h2>
+    <p>Mọi câu hỏi về dữ liệu và quyền riêng tư, gửi email tới <a href="mailto:team@hanadul.app">team@hanadul.app</a>. Góp ý nội dung bài học có thể gửi ở mục <a href="https://github.com/hanadul-vn/hanadul-vn.github.io/issues" target="_blank" rel="noopener">Góp ý</a> (đừng ghi email hay thông tin cá nhân ở đó vì mục này công khai).</p>
+
+    <h2>8. Thay đổi</h2>
     <p>Khi chính sách thay đổi, ngày cập nhật ở đầu trang sẽ đổi theo. Nếu thay đổi lớn (ví dụ có gói trả phí), Hana Dul sẽ báo trước.</p>
   </main>
   <footer class="footer">

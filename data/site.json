@@ -1,4 +1,4 @@
 {
   "_ghi_chu": "Địa chỉ chính thức của web (không có / ở cuối). Đổi ở đây rồi chạy python3 tools/build_pages.py: canonical, og:url của trang bài, sitemap.xml và robots.txt cập nhật theo.",
-  "url": "https://hanadul-vn.github.io"
+  "url": "https://hanadul.app"
 }
