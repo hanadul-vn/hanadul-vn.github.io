@@ -1,0 +1,808 @@
+{
+  "id": "tc3-06",
+  "title": "Ngân hàng",
+  "ko": "은행",
+  "goal": "Giao dịch ở ngân hàng: mở tài khoản, gửi/rút/chuyển tiền, mất thẻ; nói “dễ…”, “trong lúc…” và “muốn… thì…”.",
+  "vocab": [
+    {
+      "group": "Tài khoản, thẻ",
+      "words": [
+        [
+          "계좌",
+          "tài khoản (ngân hàng)"
+        ],
+        [
+          "개설하다",
+          "mở (tài khoản)",
+          "계좌를 개설하다"
+        ],
+        [
+          "체크카드",
+          "thẻ ghi nợ"
+        ],
+        [
+          "잔액",
+          "số dư"
+        ],
+        [
+          "금액",
+          "số tiền"
+        ],
+        [
+          "비밀번호를 입력하다",
+          "nhập mật khẩu"
+        ],
+        [
+          "분실하다",
+          "đánh mất"
+        ],
+        [
+          "재발급",
+          "cấp lại"
+        ],
+        [
+          "정지하다",
+          "khóa, tạm ngừng",
+          "카드를 정지하다"
+        ],
+        [
+          "인터넷 뱅킹",
+          "ngân hàng trực tuyến"
+        ]
+      ]
+    },
+    {
+      "group": "Giao dịch",
+      "words": [
+        [
+          "입금하다",
+          "nộp tiền vào tài khoản"
+        ],
+        [
+          "출금하다",
+          "rút tiền"
+        ],
+        [
+          "이체하다",
+          "chuyển khoản"
+        ],
+        [
+          "해외 송금",
+          "chuyển tiền ra nước ngoài"
+        ],
+        [
+          "환율",
+          "tỷ giá"
+        ],
+        [
+          "수수료",
+          "phí dịch vụ"
+        ],
+        [
+          "이자",
+          "tiền lãi"
+        ],
+        [
+          "예금",
+          "tiền gửi"
+        ],
+        [
+          "적금",
+          "tiết kiệm gửi góp hằng tháng"
+        ],
+        [
+          "대출",
+          "khoản vay"
+        ],
+        [
+          "만기",
+          "đáo hạn"
+        ],
+        [
+          "현금 인출기",
+          "máy rút tiền ATM"
+        ]
+      ]
+    },
+    {
+      "group": "Ở quầy giao dịch",
+      "words": [
+        [
+          "창구",
+          "quầy giao dịch"
+        ],
+        [
+          "번호표",
+          "phiếu số thứ tự"
+        ],
+        [
+          "신분증",
+          "giấy tờ tùy thân"
+        ],
+        [
+          "도장",
+          "con dấu"
+        ],
+        [
+          "서명하다",
+          "ký tên"
+        ],
+        [
+          "신청서",
+          "đơn đăng ký"
+        ],
+        [
+          "작성하다",
+          "điền, viết (giấy tờ)"
+        ],
+        [
+          "영업시간",
+          "giờ làm việc (giao dịch)"
+        ]
+      ]
+    },
+    {
+      "group": "Từ mới khác",
+      "words": [
+        [
+          "저축하다",
+          "để dành, gửi tiết kiệm"
+        ],
+        [
+          "지폐",
+          "tiền giấy"
+        ],
+        [
+          "잔돈",
+          "tiền lẻ"
+        ],
+        [
+          "보이스피싱",
+          "lừa đảo qua điện thoại"
+        ],
+        [
+          "개인 정보",
+          "thông tin cá nhân"
+        ],
+        [
+          "유출되다",
+          "bị rò rỉ"
+        ],
+        [
+          "속다",
+          "bị lừa"
+        ],
+        [
+          "피해",
+          "thiệt hại"
+        ],
+        [
+          "급하다",
+          "gấp, vội"
+        ],
+        [
+          "실수하다",
+          "nhầm lẫn, sơ suất"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "V -기 쉽다",
+      "title": "dễ (xảy ra)…",
+      "note": [
+        "Nghĩa 1: việc V dễ làm (이 기계는 사용하기 쉬워요).",
+        "Nghĩa 2: dễ xảy ra điều không mong muốn (급하면 실수하기 쉬워요).",
+        "Ngược lại: -기 어렵다 (khó…)."
+      ],
+      "examples": [
+        [
+          "인터넷 뱅킹은 사용하기 쉬워요.",
+          "Ngân hàng trực tuyến dễ sử dụng."
+        ],
+        [
+          "급하게 송금하면 실수하기 쉬워요.",
+          "Chuyển tiền vội vàng thì dễ nhầm."
+        ],
+        [
+          "겨울에는 감기에 걸리기 쉬워요.",
+          "Mùa đông dễ bị cảm."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "비밀번호가 너무 간단하면 개인 정보가 ___ 쉬워요.",
+          "options": [
+            "유출되기",
+            "유출되는",
+            "유출돼서",
+            "유출될"
+          ],
+          "explain": "V-기 쉽다 → 유출되기 쉬워요."
+        },
+        {
+          "q": "이 현금 인출기는 외국어 안내가 있어서 ___ 쉬워요.",
+          "options": [
+            "사용하기",
+            "사용한",
+            "사용해",
+            "사용하는 게"
+          ],
+          "explain": "Dễ sử dụng → 사용하기 쉽다."
+        },
+        {
+          "q": "A: 계좌 번호를 꼭 두 번 확인하세요. B: 네, 숫자가 많아서 ___ 쉽지요.",
+          "options": [
+            "틀리기",
+            "틀린",
+            "틀려서",
+            "틀릴"
+          ],
+          "explain": "Dễ nhầm → 틀리기 쉽다."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "카드를 지갑에 넣고 다니면 잃어버리기 쉬워요.",
+            "카드를 지갑에 넣고 다니면 잃어버린 쉬워요.",
+            "카드를 지갑에 넣고 다니면 잃어버리게 쉬워요.",
+            "카드를 지갑에 넣고 다니면 잃어버리기 쉽어요."
+          ],
+          "explain": "-기 쉽다 → 쉬워요 (bất quy tắc ㅂ)."
+        },
+        {
+          "q": "Nghĩa của \"돈은 모으기 어렵지만 쓰기는 쉬워요.\"",
+          "options": [
+            "Tiền khó gom nhưng tiêu thì dễ.",
+            "Tiền dễ gom nhưng khó tiêu.",
+            "Tôi không thích tiêu tiền.",
+            "Gom tiền rất dễ."
+          ],
+          "explain": "-기 어렵다 / -기 쉽다 = khó / dễ."
+        }
+      ]
+    },
+    {
+      "pattern": "V -는 동안(에)",
+      "title": "trong lúc, trong khi…",
+      "note": [
+        "Việc vế sau xảy ra trong suốt khoảng thời gian V diễn ra.",
+        "Với danh từ chỉ thời gian: N 동안 (한 달 동안, 방학 동안).",
+        "Hai vế có thể khác chủ ngữ: 제가 서류를 쓰는 동안 친구가 기다렸어요."
+      ],
+      "examples": [
+        [
+          "번호표를 뽑고 기다리는 동안 신청서를 작성하세요.",
+          "Trong lúc lấy số chờ, hãy điền đơn."
+        ],
+        [
+          "한국에 사는 동안 적금을 들었어요.",
+          "Trong thời gian sống ở Hàn, tôi gửi tiết kiệm góp."
+        ],
+        [
+          "제가 은행에 간 동안 동생이 집을 봤어요.",
+          "Trong lúc tôi đi ngân hàng, em tôi trông nhà."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "직원이 서류를 ___ 동안 잠깐 기다려 주세요.",
+          "options": [
+            "확인하는",
+            "확인한",
+            "확인할",
+            "확인하기"
+          ],
+          "explain": "Đang diễn ra → -는 동안."
+        },
+        {
+          "q": "방학 ___ 아르바이트를 해서 돈을 모았어요.",
+          "options": [
+            "동안",
+            "는 동안",
+            "한 동안",
+            "동안을"
+          ],
+          "explain": "Danh từ thời gian + 동안."
+        },
+        {
+          "q": "A: 제가 계좌를 만드는 ___ 뭐 할 거예요? B: 저는 옆 가게에서 기다릴게요.",
+          "options": [
+            "동안",
+            "대신",
+            "덕분에",
+            "밖에"
+          ],
+          "explain": "Trong lúc tôi mở tài khoản → -는 동안."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "한국에서 공부하는 동안 이 통장을 썼어요.",
+            "한국에서 공부한 동안이 이 통장을 썼어요.",
+            "한국에서 공부하는 동안을 이 통장을 썼어요.",
+            "한국에서 공부하기 동안 이 통장을 썼어요."
+          ],
+          "explain": "V-는 동안 + mệnh đề."
+        },
+        {
+          "q": "Nghĩa của \"줄을 서 있는 동안 휴대폰으로 잔액을 확인했어요.\"",
+          "options": [
+            "Trong lúc xếp hàng tôi kiểm tra số dư bằng điện thoại.",
+            "Xếp hàng xong rồi tôi kiểm tra số dư.",
+            "Tôi không xếp hàng mà kiểm tra số dư.",
+            "Vì xếp hàng nên tôi không kiểm tra được."
+          ],
+          "explain": "-는 동안 = trong lúc."
+        }
+      ]
+    },
+    {
+      "pattern": "V -(으)려면",
+      "title": "nếu muốn… thì…",
+      "note": [
+        "Nêu ý định/điều kiện, vế sau nói việc cần làm: 계좌를 만들려면 신분증이 필요해요.",
+        "Thân có patchim + 으려면, không patchim/ㄹ + 려면.",
+        "Vế sau hay dùng -아/어야 하다, -(으)면 되다, -(으)세요, 필요하다."
+      ],
+      "examples": [
+        [
+          "카드를 다시 만들려면 신분증을 가져오세요.",
+          "Muốn làm lại thẻ thì hãy mang giấy tờ tùy thân."
+        ],
+        [
+          "해외로 돈을 보내려면 수수료를 내야 해요.",
+          "Muốn gửi tiền ra nước ngoài thì phải trả phí."
+        ],
+        [
+          "돈을 모으려면 먼저 적금부터 드세요.",
+          "Muốn gom tiền thì trước hết hãy gửi tiết kiệm góp."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "계좌를 ___ 외국인 등록증이 필요해요.",
+          "options": [
+            "개설하려면",
+            "개설하고 나서",
+            "개설하는 동안",
+            "개설하기 쉬워서"
+          ],
+          "explain": "Muốn mở tài khoản thì cần… → -(으)려면."
+        },
+        {
+          "q": "돈을 ___ 이 버튼을 누르세요.",
+          "options": [
+            "찾으려면",
+            "찾려면",
+            "찾으면서",
+            "찾다가"
+          ],
+          "explain": "찾다 có patchim → 찾으려면."
+        },
+        {
+          "q": "A: 카드를 재발급___ 뭐가 필요해요? B: 신분증만 가져오시면 돼요.",
+          "options": [
+            "받으려면",
+            "받는 동안",
+            "받기 쉬워서",
+            "받다가"
+          ],
+          "explain": "Muốn được cấp lại thẻ thì cần gì → 받으려면."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "인터넷 뱅킹을 쓰려면 앱을 먼저 설치해야 해요.",
+            "인터넷 뱅킹을 쓰으려면 앱을 먼저 설치해야 해요.",
+            "인터넷 뱅킹을 쓸려면을 앱을 먼저 설치해야 해요.",
+            "인터넷 뱅킹을 쓰려고면 앱을 먼저 설치해야 해요."
+          ],
+          "explain": "쓰다 không patchim → 쓰려면."
+        },
+        {
+          "q": "Nghĩa của \"이자를 많이 받으려면 적금이 좋아요.\"",
+          "options": [
+            "Muốn nhận nhiều lãi thì gửi tiết kiệm góp là tốt.",
+            "Nhận nhiều lãi nên tôi gửi tiết kiệm góp.",
+            "Tiết kiệm góp không có lãi.",
+            "Tôi đã nhận rất nhiều lãi."
+          ],
+          "explain": "-(으)려면 = nếu muốn…"
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "은행에 들어가면 먼저 ___를 뽑고 기다리세요.",
+      "options": [
+        "번호표",
+        "잔액",
+        "이자",
+        "만기"
+      ],
+      "explain": "Lấy số thứ tự → 번호표를 뽑다."
+    },
+    {
+      "q": "한국 돈을 베트남 돈으로 바꿀 때는 오늘 ___을 확인하세요.",
+      "options": [
+        "환율",
+        "도장",
+        "창구",
+        "대출"
+      ],
+      "explain": "Đổi tiền → xem tỷ giá (환율)."
+    },
+    {
+      "q": "다른 은행으로 이체하면 ___가 500원 있어요.",
+      "options": [
+        "수수료",
+        "적금",
+        "지폐",
+        "신청서"
+      ],
+      "explain": "Phí khi chuyển khoản → 수수료."
+    },
+    {
+      "q": "지갑을 잃어버려서 바로 카드를 ___.",
+      "options": [
+        "정지했어요",
+        "입금했어요",
+        "저축했어요",
+        "개설했어요"
+      ],
+      "explain": "Mất ví → khóa thẻ ngay: 정지하다."
+    },
+    {
+      "q": "모르는 사람이 전화로 계좌 번호를 물어보면 ___일 수 있으니까 조심하세요.",
+      "options": [
+        "보이스피싱",
+        "인터넷 뱅킹",
+        "적금",
+        "체크카드"
+      ],
+      "explain": "Lừa đảo qua điện thoại → 보이스피싱."
+    },
+    {
+      "q": "이 ___는 3년 후에 만기가 돼요.",
+      "options": [
+        "적금",
+        "번호표",
+        "도장",
+        "잔돈"
+      ],
+      "explain": "Sổ tiết kiệm góp có ngày đáo hạn → 적금."
+    },
+    {
+      "q": "집을 사려고 은행에서 ___을 받았어요.",
+      "options": [
+        "대출",
+        "잔액",
+        "환율",
+        "서명"
+      ],
+      "explain": "Vay ngân hàng → 대출을 받다."
+    },
+    {
+      "q": "신청서를 다 쓰고 나서 맨 아래에 ___.",
+      "options": [
+        "서명해 주세요",
+        "분실해 주세요",
+        "출금해 주세요",
+        "유출해 주세요"
+      ],
+      "explain": "Ký tên cuối đơn → 서명하다."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 계좌를 만들려고 왔는데요. 나: 네, 신분증 주시고 이 신청서를 작성해 주세요.",
+      "q": "Người khách đến ngân hàng để làm gì?",
+      "options": [
+        "Mở tài khoản",
+        "Đổi tiền",
+        "Vay tiền",
+        "Làm lại thẻ"
+      ],
+      "explain": "계좌를 만들려고 왔는데요."
+    },
+    {
+      "listen": "가: 카드를 잃어버렸어요. 나: 먼저 카드를 정지하고 나서 재발급 신청을 하세요.",
+      "q": "Việc đầu tiên phải làm là gì?",
+      "options": [
+        "Khóa thẻ",
+        "Đăng ký cấp lại",
+        "Đổi mật khẩu",
+        "Rút hết tiền"
+      ],
+      "explain": "먼저 카드를 정지하고 나서…"
+    },
+    {
+      "listen": "가: 지금 송금할 수 있어요? 나: 죄송합니다. 영업시간이 끝나서 내일 오전 9시부터 가능합니다.",
+      "q": "Vì sao bây giờ không chuyển tiền được?",
+      "options": [
+        "Đã hết giờ giao dịch",
+        "Máy bị hỏng",
+        "Không mang giấy tờ",
+        "Số dư không đủ"
+      ],
+      "explain": "영업시간이 끝나서…"
+    },
+    {
+      "listen": "가: 기다리는 동안 이 서류 좀 써 주세요. 나: 네, 볼펜 좀 빌릴 수 있을까요?",
+      "q": "Người khách cần gì?",
+      "options": [
+        "Mượn bút",
+        "Phiếu số thứ tự",
+        "Con dấu",
+        "Tiền lẻ"
+      ],
+      "explain": "볼펜 좀 빌릴 수 있을까요?"
+    },
+    {
+      "listen": "가: 베트남으로 돈을 보내려면 수수료가 얼마예요? 나: 보내시는 금액에 따라 달라요. 보통 만 원쯤 돼요.",
+      "q": "Phí chuyển tiền thường khoảng bao nhiêu?",
+      "options": [
+        "Khoảng 10.000 won",
+        "Khoảng 1.000 won",
+        "Miễn phí",
+        "Khoảng 100.000 won"
+      ],
+      "explain": "보통 만 원쯤 돼요."
+    }
+  ],
+  "reading": {
+    "passage": "요즘 보이스피싱 때문에 피해를 입는 사람이 많습니다. 은행이나 경찰이라고 하면서 전화로 계좌 번호나 비밀번호를 물어보는 경우가 많습니다. 하지만 은행은 전화로 비밀번호를 절대 물어보지 않습니다. 급하다고 하면 더 속기 쉬우니까 전화를 끊고 은행에 직접 확인하십시오. 피해를 막으려면 개인 정보를 다른 사람에게 알려 주지 않는 것이 가장 중요합니다.",
+    "passageVi": "Dạo này nhiều người bị thiệt hại vì lừa đảo qua điện thoại. Thường có kẻ xưng là ngân hàng hay cảnh sát rồi hỏi số tài khoản, mật khẩu qua điện thoại. Nhưng ngân hàng tuyệt đối không hỏi mật khẩu qua điện thoại. Họ nói gấp thì lại càng dễ bị lừa, nên hãy cúp máy và trực tiếp hỏi lại ngân hàng. Muốn tránh thiệt hại thì quan trọng nhất là không cho người khác biết thông tin cá nhân.",
+    "questions": [
+      {
+        "q": "Theo đoạn văn, ngân hàng KHÔNG làm gì?",
+        "options": [
+          "Hỏi mật khẩu qua điện thoại",
+          "Xác nhận khi khách gọi đến",
+          "Mở tài khoản cho khách",
+          "Gửi thông báo giao dịch"
+        ],
+        "explain": "은행은 전화로 비밀번호를 절대 물어보지 않습니다."
+      },
+      {
+        "q": "Người viết khuyên gì khi nhận cuộc gọi đáng ngờ?",
+        "options": [
+          "Cúp máy và hỏi trực tiếp ngân hàng",
+          "Nói nhanh số tài khoản",
+          "Báo mật khẩu cho cảnh sát",
+          "Chuyển tiền thật nhanh"
+        ],
+        "explain": "전화를 끊고 은행에 직접 확인하십시오."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu hướng dẫn một người bạn mới sang Hàn cách mở tài khoản và dùng ngân hàng an toàn. Dùng -(으)려면, -는 동안 và -기 쉽다.",
+    "samples": [
+      [
+        "계좌를 만들려면 외국인 등록증하고 휴대폰이 필요해요.",
+        "Muốn mở tài khoản thì cần thẻ người nước ngoài và điện thoại."
+      ],
+      [
+        "번호표를 뽑고 기다리는 동안 신청서를 쓰세요.",
+        "Trong lúc lấy số chờ, hãy điền đơn."
+      ],
+      [
+        "비밀번호를 생일로 하면 다른 사람이 알기 쉬워요.",
+        "Đặt mật khẩu là ngày sinh thì người khác dễ đoán ra."
+      ],
+      [
+        "모르는 전화가 오면 조심하세요.",
+        "Có cuộc gọi lạ thì hãy cẩn thận."
+      ]
+    ],
+    "tips": "Điều kiện để đạt mục đích: -(으)려면 + -아/어야 해요 / 필요해요. Trong khoảng thời gian: -는 동안. Dễ xảy ra: -기 쉬워요 (쉽다 bất quy tắc ㅂ)."
+  },
+  "topik": [
+    {
+      "type": "blank",
+      "q": "해외로 돈을 (    ) 2번 창구로 가세요.",
+      "options": [
+        "보내려면",
+        "보내는 동안",
+        "보내기 쉬워서",
+        "보내다가"
+      ],
+      "explain": "Muốn gửi tiền ra nước ngoài thì… → -(으)려면."
+    },
+    {
+      "type": "blank",
+      "q": "직원이 카드를 (    ) 저는 의자에 앉아서 기다렸어요.",
+      "options": [
+        "만드는 동안",
+        "만들려면",
+        "만들기 쉬워서",
+        "만든 대신"
+      ],
+      "explain": "Trong lúc nhân viên làm thẻ → -는 동안."
+    },
+    {
+      "type": "blank",
+      "q": "비밀번호를 너무 쉽게 만들면 다른 사람이 (    ).",
+      "options": [
+        "알기 쉬워요",
+        "알려면 돼요",
+        "아는 동안이에요",
+        "알고 나서요"
+      ],
+      "explain": "Dễ bị người khác biết → -기 쉬워요."
+    },
+    {
+      "type": "similar",
+      "q": "__현금을 찾으려면__ 이 카드를 기계에 넣으세요.",
+      "options": [
+        "현금을 찾고 싶으면",
+        "현금을 찾은 후에",
+        "현금을 찾는 동안",
+        "현금을 찾다가"
+      ],
+      "explain": "-(으)려면 ≈ -고 싶으면 (nếu muốn)."
+    },
+    {
+      "type": "similar",
+      "q": "급하게 이체하면 계좌 번호를 __틀리기 쉬워요__.",
+      "options": [
+        "틀릴 수 있어요",
+        "틀리면 안 돼요",
+        "틀린 적이 없어요",
+        "틀리지 않아요"
+      ],
+      "explain": "-기 쉽다 (dễ xảy ra) ≈ -(으)ㄹ 수 있다 (có thể)."
+    },
+    {
+      "type": "notice",
+      "passage": "🏦 하나은행 안내\n· 영업시간: 평일 오전 9시 ~ 오후 4시\n· 토요일·일요일·공휴일 휴무\n· 현금 인출기는 24시간 이용 가능합니다.\n· 외국인 손님은 3번 창구를 이용해 주십시오.",
+      "passageVi": "Thông báo ngân hàng Hana. Giờ giao dịch: ngày thường 9 giờ sáng – 4 giờ chiều. Nghỉ thứ Bảy, Chủ nhật, ngày lễ. Máy ATM dùng được 24 giờ. Khách nước ngoài xin dùng quầy số 3.",
+      "q": "이 글의 내용과 같은 것을 고르십시오.",
+      "options": [
+        "주말에도 현금 인출기를 쓸 수 있습니다.",
+        "토요일 오전에도 창구에서 일을 봅니다.",
+        "외국인은 1번 창구로 가야 합니다.",
+        "영업시간은 오후 6시까지입니다."
+      ],
+      "explain": "현금 인출기는 24시간 이용 가능합니다."
+    },
+    {
+      "type": "order",
+      "passage": "(가) 그래서 바로 은행에 전화해서 카드를 정지했습니다.\n(나) 어제 지하철에서 지갑을 잃어버렸습니다.\n(다) 오늘 아침에 신분증을 가지고 은행에 가서 재발급을 신청했습니다.\n(라) 지갑 안에 체크카드가 있어서 걱정이 됐습니다.",
+      "passageVi": "(나) Hôm qua tôi đánh mất ví trên tàu điện ngầm. (라) Trong ví có thẻ ghi nợ nên tôi rất lo. (가) Vì vậy tôi lập tức gọi ngân hàng khóa thẻ. (다) Sáng nay tôi mang giấy tờ đến ngân hàng đăng ký cấp lại.",
+      "q": "다음을 순서대로 맞게 배열한 것을 고르십시오.",
+      "options": [
+        "(나)-(라)-(가)-(다)",
+        "(나)-(가)-(라)-(다)",
+        "(라)-(나)-(다)-(가)",
+        "(나)-(다)-(가)-(라)"
+      ],
+      "explain": "Mất ví (나) → lo vì có thẻ (라) → 그래서 khóa thẻ (가) → sáng nay cấp lại (다)."
+    },
+    {
+      "type": "main",
+      "passage": "돈을 모으려면 먼저 한 달 동안 돈을 어디에 쓰는지 알아야 합니다. 쓴 돈을 적어 보면 필요 없는 곳에 쓴 돈이 생각보다 많습니다. 그 돈을 줄여서 적금에 넣으면 생각보다 쉽게 돈을 모을 수 있습니다.",
+      "passageVi": "Muốn để dành tiền thì trước hết phải biết trong một tháng mình tiêu tiền vào đâu. Thử ghi lại tiền đã tiêu thì thấy tiền tiêu vào chỗ không cần nhiều hơn mình nghĩ. Cắt bớt khoản đó rồi bỏ vào tiết kiệm góp thì có thể gom tiền dễ hơn mình nghĩ.",
+      "q": "다음 글의 중심 생각으로 알맞은 것을 고르십시오.",
+      "options": [
+        "돈을 모으려면 먼저 어디에 쓰는지 알아야 합니다.",
+        "적금은 이자가 많지 않습니다.",
+        "필요 없는 물건은 사면 안 됩니다.",
+        "돈은 한 달에 한 번만 써야 합니다."
+      ],
+      "explain": "Câu đầu nêu ý chính: 돈을 모으려면 먼저 … 알아야 합니다."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "여자",
+          "어서 오세요. 무엇을 도와드릴까요?"
+        ],
+        [
+          "남자",
+          "베트남에 계신 부모님께 돈을 보내려고 하는데요."
+        ],
+        [
+          "여자",
+          "해외 송금이시군요. 이 신청서를 작성해 주시고 신분증도 보여 주세요."
+        ],
+        [
+          "남자",
+          "네, 여기 있습니다. 수수료는 얼마예요?"
+        ],
+        [
+          "여자",
+          "만 원입니다. 신청서를 쓰시는 동안 환율을 확인해 드릴게요."
+        ]
+      ],
+      "linesVi": "Nữ (nhân viên): Xin mời. Tôi giúp gì được ạ? Nam: Tôi muốn gửi tiền cho bố mẹ ở Việt Nam. Nữ: Chuyển tiền ra nước ngoài ạ. Anh điền đơn này và cho tôi xem giấy tờ tùy thân. Nam: Vâng, đây ạ. Phí bao nhiêu vậy? Nữ: 10.000 won. Trong lúc anh điền đơn, tôi sẽ kiểm tra tỷ giá giúp anh.",
+      "q": "들은 내용과 같은 것을 고르십시오.",
+      "options": [
+        "남자는 해외로 돈을 보내려고 합니다.",
+        "수수료는 없습니다.",
+        "남자는 신분증을 가져오지 않았습니다.",
+        "여자가 신청서를 대신 써 줍니다."
+      ],
+      "explain": "베트남에 계신 부모님께 돈을 보내려고 하는데요."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "남자",
+          "수진 씨, 아까 이상한 전화를 받았어요. 은행이라고 하면서 비밀번호를 물어봤어요."
+        ],
+        [
+          "여자",
+          "알려 줬어요? 그거 보이스피싱일 거예요."
+        ],
+        [
+          "남자",
+          "아니요, 이상해서 말 안 했어요."
+        ],
+        [
+          "여자",
+          "잘했어요. 그래도 걱정되면 은행에 직접 전화해서 확인해 보세요."
+        ]
+      ],
+      "linesVi": "Nam: Su-jin, lúc nãy tôi nhận một cuộc gọi lạ. Họ xưng là ngân hàng rồi hỏi mật khẩu. Nữ: Anh có nói không? Chắc đó là lừa đảo qua điện thoại. Nam: Không, thấy lạ nên tôi không nói. Nữ: Tốt lắm. Nhưng nếu vẫn lo thì hãy gọi thẳng cho ngân hàng hỏi lại.",
+      "q": "남자가 할 행동으로 알맞은 것을 고르십시오.",
+      "options": [
+        "은행에 직접 전화해서 확인해요.",
+        "비밀번호를 알려 줘요.",
+        "경찰서에 가서 돈을 찾아요.",
+        "새 계좌를 개설해요."
+      ],
+      "explain": "은행에 직접 전화해서 확인해 보세요."
+    }
+  ],
+  "fillWriting": [
+    {
+      "text": "제목: 체크카드를 잃어버렸습니다\n안녕하세요? 어제 저녁에 지갑을 잃어버려서 체크카드도 ( ㉠ ). 카드는 어제 밤에 정지했습니다. 새 카드를 ( ㉡ )? 은행에 직접 가야 하는지 인터넷으로도 신청할 수 있는지 알고 싶습니다.",
+      "textVi": "Tiêu đề: Tôi bị mất thẻ ghi nợ. Xin chào. Tối qua tôi đánh rơi ví nên thẻ ghi nợ cũng ( ㉠ ). Tôi đã khóa thẻ tối qua. Muốn ( ㉡ ) thẻ mới thì làm thế nào? Tôi muốn biết phải đến ngân hàng trực tiếp hay đăng ký qua mạng cũng được.",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "잃어버렸습니다",
+            "같이 없어졌습니다"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "받으려면 어떻게 해야 합니까",
+            "만들려면 어떻게 해야 합니까"
+          ]
+        }
+      ],
+      "tips": "-아/어서 + 도 → ㉠ cũng mất theo: 잃어버렸습니다. ㉡ kết thúc bằng dấu hỏi và câu sau hỏi cách làm → -(으)려면 어떻게 해야 합니까?"
+    },
+    {
+      "text": "은행에 가면 먼저 번호표를 뽑습니다. 그리고 내 번호를 부를 때까지 기다립니다. 기다리는 시간이 길 때가 많기 때문에 ( ㉠ ) 필요한 서류를 미리 작성해 두면 좋습니다. 그리고 은행 일은 영업시간에만 볼 수 있으니까 ( ㉡ ).",
+      "textVi": "Đến ngân hàng thì trước hết lấy số thứ tự. Rồi chờ đến khi gọi số của mình. Vì thời gian chờ thường lâu nên ( ㉠ ) điền sẵn giấy tờ cần thiết thì tốt. Và việc ngân hàng chỉ làm được trong giờ giao dịch nên ( ㉡ ).",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "기다리는 동안",
+            "번호를 기다리는 동안에"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "영업시간을 미리 확인하는 것이 좋습니다",
+            "시간을 확인하고 가야 합니다"
+          ]
+        }
+      ],
+      "tips": "㉠ đứng trước hành động diễn ra trong lúc chờ → -는 동안. -(으)니까 nêu lý do → ㉡ là lời khuyên kiểm tra giờ giao dịch trước."
+    }
+  ]
+}
