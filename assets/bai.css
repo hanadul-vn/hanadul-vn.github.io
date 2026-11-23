@@ -1,0 +1,43 @@
+/* Trang tĩnh của từng bài (bai/<id>/, sinh bởi tools/build_pages.py). Dùng cùng assets/style.css. */
+.static-lesson main { padding-top: 20px; padding-bottom: 8px; }
+.static-lesson main h2 { margin: 30px 0 8px; font-size: 1.35rem; letter-spacing: -.01em; }
+.static-lesson .page-title { margin: 8px 0 4px; font-size: clamp(1.6rem, 5vw, 2.1rem); letter-spacing: -.02em; }
+.static-lesson h3.group-title { font-size: 1rem; }
+.static-lesson h3.gnote-head { margin: 0; font-size: 1rem; }
+.static-lesson section { scroll-margin-top: 80px; }
+.static-lesson [id^="t"], .static-lesson [id^="g"] { scroll-margin-top: 90px; }
+.cta-bar.top { margin-top: 18px; }
+.cta-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.toc { margin: 14px 0 0; font-size: .95rem; color: var(--muted); }
+
+.vtable { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.vtable th, .vtable td { padding: 9px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.vtable tr:last-child td { border-bottom: 0; }
+.vtable th { background: var(--bg-2); font-size: .85rem; color: var(--muted); font-weight: 700; }
+.vtable td:first-child { width: 42%; font-weight: 700; font-size: 1.05rem; word-break: keep-all; overflow-wrap: anywhere; }
+.vtable tr.flash { animation: none; }
+.vtable tr.flash td { animation: hd-flash-bg 2.4s ease-out; }
+@keyframes hd-flash-bg { 0%, 40% { background: var(--sun-soft); } 100% { background: transparent; } }
+
+.passage details { margin-top: 10px; font-size: .98rem; }
+.passage summary { cursor: pointer; color: var(--primary-ink); font-weight: 600; }
+
+.pager { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 18px 0 0; }
+.pager a { padding: 12px 14px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); text-decoration: none; color: var(--text); font-weight: 600; line-height: 1.4; }
+.pager .next { text-align: right; }
+.pager .muted { font-weight: 500; font-size: .85rem; }
+
+.lv h2 { margin-bottom: 2px; }
+.lv > .muted { margin: 0 0 10px; }
+.lesson-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.lesson-list a { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); color: var(--text); text-decoration: none; }
+.lesson-list a:hover { border-color: var(--primary); }
+.ll-ic { font-size: 1.5rem; line-height: 1.2; }
+.ll-name { font-weight: 700; }
+.ll-sum { font-size: .88rem; }
+
+@media (max-width: 480px) {
+  .vtable th, .vtable td { padding: 8px 10px; }
+  .pager { grid-template-columns: 1fr; }
+  .pager .next { text-align: left; }
+}
