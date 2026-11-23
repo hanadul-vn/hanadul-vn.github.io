@@ -196,11 +196,19 @@ button { font: inherit; color: inherit; }
 .section-head h2 { margin: 0; font-size: 1.5rem; letter-spacing: -.02em; }
 .section-head p { margin: 2px 0 0; color: var(--muted); }
 .level-progress { font-weight: 700; color: var(--muted); font-size: .9rem; white-space: nowrap; }
-.level-jump { display: flex; gap: 8px; flex-wrap: wrap; margin: 30px 0 0; scroll-margin-top: 80px; }
-.level-jump a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--text); text-decoration: none; font-weight: 700; font-size: .92rem; }
+.level-jump { display: flex; gap: 8px; margin: 30px 0 0; padding: 2px 2px 4px; overflow-x: auto; scrollbar-width: none; scroll-margin-top: 80px; }
+.level-jump::-webkit-scrollbar { display: none; }
+.level-jump a { flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--text); text-decoration: none; font-weight: 700; font-size: .92rem; white-space: nowrap; transition: background .15s, color .15s, border-color .15s; }
 .level-jump a:hover { border-color: var(--primary); }
+.level-jump a.active, .level-jump a[aria-selected="true"] { background: var(--primary); border-color: var(--primary); color: #fff; box-shadow: 0 4px 12px rgba(255, 107, 91, .28); }
+.level-jump a:focus-visible { outline: 3px solid var(--primary-soft); outline-offset: 2px; }
+@media (max-width: 480px) {
+  .level-jump { gap: 6px; }
+  .level-jump a { flex: 1 1 0; min-width: 0; justify-content: center; padding: 9px 6px; font-size: .86rem; }
+  .level-jump a > span { display: none; }
+}
 .level { scroll-margin-top: 80px; }
-.level + .level { margin-top: 34px; padding-top: 6px; border-top: 2px dashed var(--line); }
+.level[hidden] { display: none; }
 .level-head { margin-top: 26px; }
 .level-badge { display: inline-block; margin-bottom: 6px; padding: 3px 10px; border-radius: 999px; font-size: .78rem; font-weight: 800; letter-spacing: .02em; background: var(--primary-soft); color: var(--primary); }
 .level-sc2 .level-badge { background: var(--accent-soft); color: var(--text); }

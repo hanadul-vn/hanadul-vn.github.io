@@ -248,30 +248,123 @@ async function noHScroll(page) {
     assert(ids.filter((x) => x === 'lo-trinh').length === 1, 'id lo-trinh bị trùng');
   });
 
-  await tc('N13', 'Nút chọn cấp và nút "Xem lộ trình" cuộn tới đúng khối (không nhảy về đầu trang)', async () => {
+  // ---- Tab cấp độ (thay cho cuộn tới khối) ----
+  const tabState = (page) => page.evaluate(() => ({
+    sel: [...document.querySelectorAll('.level-jump [role="tab"]')].filter((t) => t.getAttribute('aria-selected') === 'true').map((t) => t.dataset.level),
+    active: [...document.querySelectorAll('.level-jump a.active')].map((t) => t.dataset.level),
+    shown: [...document.querySelectorAll('section.level')].filter((s) => s.offsetParent !== null).map((s) => s.id),
+    links: [...document.querySelectorAll('section.level')].filter((s) => s.offsetParent !== null).flatMap((s) => [...s.querySelectorAll('a.node')].map((a) => a.getAttribute('href').replace('#/bai/', ''))),
+    y: window.scrollY, hash: location.hash,
+  }));
+
+  await tc('T01', 'Vào trang chủ: có thanh tab 3 cấp (role tablist), mặc định chọn và tô nổi tab Sơ cấp 1, chỉ hiện 16 bài Sơ cấp 1; Sơ cấp 2 và Trung cấp 3 bị ẩn', async () => {
     await go(page, '#/');
-    await page.waitForSelector('.level-jump');
+    await page.waitForSelector('.level-jump [role="tab"]');
     const chips = await page.$$eval('.level-jump a', (els) => els.map((a) => a.innerText.trim() + '|' + a.getAttribute('href')));
     assert(chips.length === 3 && /Sơ cấp 1\|#lo-trinh-sc1/.test(chips[0]) && /Sơ cấp 2\|#lo-trinh-sc2/.test(chips[1]) && /Trung cấp 3\|#lo-trinh-tc3/.test(chips[2]), chips.join(' / '));
+    assert(await page.$('.level-jump[role="tablist"]'), 'thiếu role=tablist');
+    const st = await tabState(page);
+    assert(st.sel.join() === 'sc1' && st.active.join() === 'sc1', 'tab chọn: ' + st.sel + ' / ' + st.active);
+    assert(st.shown.join() === 'lo-trinh-sc1', 'khối đang hiện: ' + st.shown);
+    assert(st.links.length === 16 && st.links.every((x) => x.startsWith('sc1-')), 'bài đang hiện: ' + st.links.join(','));
+    const bg = await page.$$eval('.level-jump a', (els) => els.map((a) => getComputedStyle(a).backgroundColor));
+    assert(bg[0] !== bg[1] && bg[1] === bg[2], 'tab đang chọn không nổi bật: ' + bg.join(' | '));
+  });
+
+  await tc('T02', 'Bấm tab Sơ cấp 2 rồi Trung cấp 3: đổi highlight, thay danh sách đúng bài cấp đó, KHÔNG cuộn trang, không vẽ lại trang (hero giữ nguyên), hash đổi thành #lo-trinh-<cấp>', async () => {
+    await go(page, '#/');
+    await page.waitForSelector('.level-jump');
+    await page.evaluate(() => { document.querySelector('.hero').dataset.mark = '1'; });
+    const y0 = await page.evaluate(() => window.scrollY);
     await page.click('.level-jump a[href="#lo-trinh-sc2"]');
-    await page.waitForTimeout(1200);
-    const top2 = await page.$eval('#lo-trinh-sc2', (e) => e.getBoundingClientRect().top);
-    assert(top2 > -10 && top2 < 200, 'khối SC2 cách đỉnh ' + top2 + 'px');
+    await page.waitForTimeout(800);
+    let st = await tabState(page);
+    assert(st.sel.join() === 'sc2' && st.active.join() === 'sc2', 'tab chọn: ' + st.sel);
+    assert(st.shown.join() === 'lo-trinh-sc2' && st.links.join(',') === SC2.join(','), 'SC2 hiện: ' + st.links.join(','));
+    assert(st.y === y0, 'trang bị cuộn: ' + y0 + ' → ' + st.y);
+    assert(st.hash === '#lo-trinh-sc2', 'hash ' + st.hash);
     await page.click('.level-jump a[href="#lo-trinh-tc3"]');
-    await page.waitForTimeout(1200);
-    const top4 = await page.$eval('#lo-trinh-tc3', (e) => e.getBoundingClientRect().top);
-    assert(top4 > -10 && top4 < 200, 'khối TC3 cách đỉnh ' + top4 + 'px');
-    // Mở thẳng link #lo-trinh-sc2 (chia sẻ link) cũng tới đúng khối
-    await page.goto(BASE + 'index.html#lo-trinh-sc2'); await page.reload();
-    await page.waitForSelector('#lo-trinh-sc2'); await page.waitForTimeout(600);
-    const top3 = await page.$eval('#lo-trinh-sc2', (e) => e.getBoundingClientRect().top);
-    assert(top3 > -10 && top3 < 200, 'mở link trực tiếp: khối SC2 cách đỉnh ' + top3 + 'px');
+    await page.waitForTimeout(800);
+    st = await tabState(page);
+    assert(st.sel.join() === 'tc3' && st.shown.join() === 'lo-trinh-tc3' && st.links.join(',') === TC3.join(','), 'TC3: ' + JSON.stringify(st));
+    assert(st.y === y0, 'trang bị cuộn: ' + y0 + ' → ' + st.y);
+    assert(await page.$('.level-tc3 .soon'), 'thiếu ô "Bài tiếp theo" ở TC3');
+    await page.click('.level-jump a[href="#lo-trinh-sc1"]');
+    await page.waitForTimeout(500);
+    st = await tabState(page);
+    assert(st.sel.join() === 'sc1' && st.links.length === 16, 'quay lại SC1: ' + st.sel);
+    assert(await page.$('.hero[data-mark="1"]'), 'trang bị vẽ lại khi đổi tab');
+  });
+
+  await tc('T03', 'Đổi tab không thêm bước vào lịch sử: SC1→SC2→TC3 rồi Back về đúng trang trước (không lùi từng tab)', async () => {
+    await page.goto(BASE + 'index.html#/so-cau-sai'); await page.reload();
+    await page.waitForTimeout(300);
+    await page.goto(BASE + 'index.html#/'); await page.waitForSelector('.level-jump');
+    await page.click('.level-jump a[href="#lo-trinh-sc2"]');
+    await page.click('.level-jump a[href="#lo-trinh-tc3"]');
+    await page.goBack(); await page.waitForTimeout(400);
+    const h = await page.evaluate(() => location.hash);
+    assert(h === '#/so-cau-sai', 'Back về ' + h);
+  });
+
+  await tc('T04', 'Giữ tab khi F5 và khi vào bài rồi bấm Back: đang ở tab Sơ cấp 2 → mở bài SC2 Bài 3 → Back vẫn là tab Sơ cấp 2; F5 vẫn tab Sơ cấp 2', async () => {
+    await go(page, '#/');
+    await page.waitForSelector('.level-jump');
+    await page.click('.level-jump a[href="#lo-trinh-sc2"]');
+    await page.click('a[href="#/bai/sc2-03"]');
+    await page.waitForSelector('.lesson-hero');
+    await page.goBack();
+    await page.waitForSelector('.level-jump'); await page.waitForTimeout(300);
+    let st = await tabState(page);
+    assert(st.sel.join() === 'sc2' && st.shown.join() === 'lo-trinh-sc2', 'sau Back: ' + st.sel + ' ' + st.shown);
+    const top = await page.$eval('#lo-trinh', (e) => e.getBoundingClientRect().top);
+    assert(top > -10 && top < 200, 'sau Back thanh tab cách đỉnh ' + top + 'px');
+    await page.reload(); await page.waitForSelector('.level-jump'); await page.waitForTimeout(300);
+    st = await tabState(page);
+    assert(st.sel.join() === 'sc2' && st.links.join(',') === SC2.join(','), 'sau F5: ' + st.sel);
+  });
+
+  await tc('T05', 'Mở thẳng link chia sẻ #lo-trinh-tc3 → tab Trung cấp 3 được chọn, thanh tab nằm đầu màn hình; hash lạ #lo-trinh-xyz → về mặc định Sơ cấp 1', async () => {
+    await go(page, '#lo-trinh-tc3');
+    await page.waitForSelector('.level-jump'); await page.waitForTimeout(400);
+    let st = await tabState(page);
+    assert(st.sel.join() === 'tc3' && st.shown.join() === 'lo-trinh-tc3', JSON.stringify(st).slice(0, 160));
+    const top = await page.$eval('#lo-trinh', (e) => e.getBoundingClientRect().top);
+    assert(top > -10 && top < 200, 'thanh tab cách đỉnh ' + top + 'px');
+    await go(page, '#lo-trinh-xyz');
+    await page.waitForSelector('.level-jump'); await page.waitForTimeout(300);
+    st = await tabState(page);
+    assert(st.sel.join() === 'sc1' && st.shown.join() === 'lo-trinh-sc1', 'hash lạ: ' + st.sel);
+  });
+
+  await tc('T06', 'Đường dẫn trang bài có link về đúng tab cấp (SC2 Bài 1 → "Sơ cấp 2" mở tab Sơ cấp 2); phím mũi tên trái/phải chuyển tab', async () => {
+    await go(page, '#/bai/sc2-01');
+    await page.waitForSelector('.crumbs a[href="#lo-trinh-sc2"]');
+    await page.click('.crumbs a[href="#lo-trinh-sc2"]');
+    await page.waitForSelector('.level-jump'); await page.waitForTimeout(300);
+    let st = await tabState(page);
+    assert(st.sel.join() === 'sc2', 'crumb mở tab ' + st.sel);
+    await page.focus('.level-jump a[data-level="sc2"]');
+    await page.keyboard.press('ArrowRight'); await page.waitForTimeout(200);
+    st = await tabState(page);
+    assert(st.sel.join() === 'tc3', 'ArrowRight → ' + st.sel);
+    await page.keyboard.press('ArrowRight'); await page.waitForTimeout(200);
+    st = await tabState(page);
+    assert(st.sel.join() === 'sc1', 'ArrowRight vòng về → ' + st.sel);
+    await page.keyboard.press('ArrowLeft'); await page.waitForTimeout(200);
+    st = await tabState(page);
+    assert(st.sel.join() === 'tc3', 'ArrowLeft → ' + st.sel);
+  });
+
+  await tc('T07', 'Nút "Xem lộ trình" vẫn cuộn tới thanh tab (giữ hành vi cũ), tab đang chọn không đổi', async () => {
     await go(page, '#/');
     await page.waitForSelector('.hero-actions');
     await page.click('.hero-actions a[href="#lo-trinh"]');
     await page.waitForTimeout(1200);
     const y = await page.evaluate(() => window.scrollY);
     assert(y > 200, '"Xem lộ trình" không cuộn, scrollY=' + y);
+    const st = await tabState(page);
+    assert(st.sel.join() === 'sc1', 'tab ' + st.sel);
   });
 
   await tc('N14', 'Tên bài Trung cấp 3 và Sơ cấp 2 có ghi cấp (tiêu đề tab, đường dẫn) để không nhầm với bài cùng số; tên bài Sơ cấp 1 giữ nguyên', async () => {
@@ -507,6 +600,26 @@ async function noHScroll(page) {
 
   // ---- điện thoại ----
   const mob = await newPage(browser, { viewport: { width: 375, height: 740 }, isMobile: true, hasTouch: true, deviceScaleFactor: 1 });
+  await tc('T08', 'Điện thoại 375px: 3 tab nằm trọn trên một hàng (không bị cắt), không tràn trang, chạm tab Sơ cấp 2 đổi danh sách và không cuộn trang', async () => {
+    const p = mob.page;
+    await go(p, '#/'); await p.waitForSelector('.level-jump');
+    await p.waitForTimeout(400);
+    await p.$eval('#lo-trinh', (e) => e.scrollIntoView({ block: 'start' }));
+    await p.waitForTimeout(400);
+    const tops = await p.$$eval('.level-jump a', (els) => els.map((a) => Math.round(a.getBoundingClientRect().top)));
+    assert(new Set(tops).size === 1, 'tab xuống dòng: ' + tops.join(','));
+    const rights = await p.$$eval('.level-jump a', (els) => els.map((a) => Math.round(a.getBoundingClientRect().right)));
+    assert(rights.every((r) => r <= 375), 'tab bị cắt ngoài màn hình: ' + rights.join(','));
+    assert(await noHScroll(p), 'trang tràn ngang');
+    const y0 = await p.evaluate(() => window.scrollY);
+    assert(y0 > 100, 'chưa cuộn tới thanh tab, scrollY=' + y0);
+    // Chạm thật vào toạ độ tab (p.tap của Playwright tự cuộn phần tử vào giữa màn hình nên không dùng).
+    const pt = await p.$eval('.level-jump a[href="#lo-trinh-sc2"]', (e) => { const r = e.getBoundingClientRect(); return [r.x + r.width / 2, r.y + r.height / 2]; });
+    await p.touchscreen.tap(pt[0], pt[1]); await p.waitForTimeout(500);
+    const st = await tabState(p);
+    assert(st.sel.join() === 'sc2' && st.links.join(',') === SC2.join(','), 'tab ' + st.sel);
+    assert(Math.abs(st.y - y0) < 20, 'bị cuộn ' + y0 + ' → ' + st.y);
+  });
   await tc('R07', 'Điện thoại 375px: trang chủ (3 khối cấp độ), trang học (gồm ô viết điền) và màn làm bài TC3 Bài 4–6 (gồm câu TOPIK có đoạn văn, hội thoại) + SC2 Bài 15 + SC1 Bài 1 không tràn ngang', async () => {
     const bad = [];
     const p = mob.page;
