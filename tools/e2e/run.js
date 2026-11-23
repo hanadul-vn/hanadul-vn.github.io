@@ -608,7 +608,8 @@ async function noHScroll(page) {
     const p = mob.page;
     await go(p, '#/'); await p.waitForSelector('.level-jump');
     await p.waitForTimeout(400);
-    await p.$eval('#lo-trinh', (e) => e.scrollIntoView({ block: 'start' }));
+    // Cuộn tức thì: html có scroll-behavior: smooth, quãng cuộn dài hơn (ô tra cứu nằm trên tab) thì 400ms chưa cuộn xong.
+    await p.$eval('#lo-trinh', (e) => e.scrollIntoView({ block: 'start', behavior: 'instant' }));
     await p.waitForTimeout(400);
     const tops = await p.$$eval('.level-jump a', (els) => els.map((a) => Math.round(a.getBoundingClientRect().top)));
     assert(new Set(tops).size === 1, 'tab xuống dòng: ' + tops.join(','));
