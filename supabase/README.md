@@ -21,8 +21,8 @@ Bảng `progress` có bật Row Level Security: mỗi tài khoản chỉ đọc/
 
 **Authentication → URL Configuration**
 
-- Site URL: `https://hanadul-vn.github.io`
-- Redirect URLs: thêm `https://hanadul-vn.github.io/**` và (để thử trên máy) `http://localhost:8000/**`
+- Site URL: `https://hanadul.app`
+- Redirect URLs: thêm `https://hanadul.app/**`, `https://hanadul-vn.github.io/**` (địa chỉ cũ, giữ trong lúc chuyển) và (để thử trên máy) `http://localhost:8000/**`
 
 ## 4. Đăng nhập bằng email (link + mã 6 số, không mật khẩu)
 
@@ -37,14 +37,14 @@ Bảng `progress` có bật Row Level Security: mỗi tài khoản chỉ đọc/
    ```
 
    Tiêu đề gợi ý: `Mã đăng nhập Hana Dul`. Mã giúp người học mở email trên điện thoại nhưng học trên máy tính (link chỉ đăng nhập được trên đúng trình duyệt đã bấm gửi).
-3. **Quan trọng:** email mặc định của Supabase chỉ gửi được vài email mỗi giờ, chỉ đủ để thử. Trước khi mở cho mọi người, vào **Authentication → Emails → SMTP Settings** gắn dịch vụ gửi mail riêng (Resend, Brevo… đều có gói miễn phí).
+3. **Quan trọng:** email mặc định của Supabase chỉ gửi được vài email mỗi giờ, chỉ đủ để thử. Trước khi mở cho mọi người, vào **Authentication → Emails → SMTP Settings** gắn dịch vụ gửi mail riêng. Hana Dul đang dùng Brevo (`smtp-relay.brevo.com:587`, gửi từ `team@hanadul.app`).
 
 ## 5. Đăng nhập bằng Google
 
 1. Vào <https://console.cloud.google.com> → tạo project `Hana Dul`.
-2. **Google Auth Platform → Branding** (OAuth consent screen): tên ứng dụng `Hana Dul`, email hỗ trợ, logo (tùy chọn), link trang chủ `https://hanadul-vn.github.io/`, link chính sách `https://hanadul-vn.github.io/chinh-sach-bao-mat.html`. Audience: **External**, sau đó **Publish app** (để ai cũng đăng nhập được, không chỉ tài khoản thử).
+2. **Google Auth Platform → Branding** (OAuth consent screen): tên ứng dụng `Hana Dul`, email hỗ trợ, logo (tùy chọn), link trang chủ `https://hanadul.app/`, link chính sách `https://hanadul.app/chinh-sach-bao-mat.html`, Authorized domains: `hanadul.app`. Audience: **External**, sau đó **Publish app** (để ai cũng đăng nhập được, không chỉ tài khoản thử).
 3. **Clients → Create client** → loại **Web application**:
-   - Authorized JavaScript origins: `https://hanadul-vn.github.io`
+   - Authorized JavaScript origins: `https://hanadul.app` và `https://hanadul-vn.github.io`
    - Authorized redirect URIs: `https://<project-ref>.supabase.co/auth/v1/callback` (lấy đúng link ở Supabase → Authentication → Sign In / Providers → Google → "Callback URL").
 4. Copy **Client ID** và **Client Secret** dán vào Supabase → **Authentication → Sign In / Providers → Google** → bật → Save. (Client Secret chỉ nằm trong Supabase, không đưa vào repo.)
 
