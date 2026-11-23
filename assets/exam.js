@@ -298,6 +298,13 @@
     if (location.hash === target) HD.refresh(); else location.replace(target);
   }
 
+  // Nút tạo ảnh chia sẻ kết quả (assets/share.js).
+  function shareRow() { return HD.share ? '<p class="share-row"><button type="button" class="btn ghost small" id="shareResult">📸 Khoe kết quả</button></p>' : ''; }
+  function bindShare(app, opts) {
+    var b = app.querySelector('#shareResult');
+    if (b) b.addEventListener('click', function () { HD.share.open(opts()); });
+  }
+
   // ---------- kết quả + xem lại ----------
   function renderResult(app, ex) {
     var s = store(), r = s.exams[ex.id];
@@ -331,7 +338,7 @@
     h += '<details class="review exam-types"><summary>📊 Đúng theo dạng câu</summary><table><tbody>' +
       groups.map(function (g) { return '<tr><td>' + esc(g.label) + '</td><td class="num' + (g.ok < g.n / 2 ? ' low' : '') + '">' + g.ok + '/' + g.n + '</td></tr>'; }).join('') +
       '</tbody></table></details>' +
-      '<div class="actions"><a class="btn ghost" href="#/thi-thu">Danh sách đề</a><a class="btn" href="#/thi-thu/' + esc(ex.id) + '">🔁 Làm lại đề</a></div></div>';
+      '<div class="actions"><a class="btn ghost" href="#/thi-thu">Danh sách đề</a><a class="btn" href="#/thi-thu/' + esc(ex.id) + '">🔁 Làm lại đề</a></div>' + shareRow() + '</div>';
 
     h += '<div class="exam-review"><h2>Xem lại từng câu</h2><div class="seg ex-filter" role="tablist">' +
       '<button type="button" data-f="all" aria-pressed="true">Tất cả</button>' +
@@ -357,6 +364,10 @@
       h += '</section>';
     });
     app.innerHTML = h + '</div></div>';
+    bindShare(app, function () {
+      return { kind: 'thi-thu', emoji: pct >= 80 ? '🏆' : pct >= 60 ? '🎉' : '💪', kicker: 'Đề thi thử TOPIK II · Đọc', title: ex.title,
+        big: right + '/' + total, bigLabel: 'câu đúng · ' + right * 2 + '/' + total * 2 + ' điểm', stats: [['⏱', mins(r.secs || 0)], ['🎯', pct + '%']] };
+    });
     app.querySelector('.ex-filter').addEventListener('click', function (e) {
       var b = e.target.closest('[data-f]');
       if (!b) return;
@@ -528,7 +539,7 @@
       '<p class="muted">Thời gian làm: ' + mins(r.secs || 0) + ' / ' + ex.minutes + ' phút · Cao nhất: <span id="scoreBest">' + r.best + '</span>/' + max + (f && f.xp ? ' · ⭐ +' + f.xp + ' XP' : '') + '</p>' +
       '<p class="wr-pending" id="pendingMsg" role="status">' + pendingText(sc.pending) + '</p>' +
       '<p class="muted small-note">Điểm tự chấm chỉ để bạn theo dõi tiến bộ, không phải điểm TOPIK chính thức. Chấm khắt khe với chính mình sẽ thấy rõ chỗ cần luyện.</p>' +
-      '<div class="actions"><a class="btn ghost" href="#/thi-thu">Danh sách đề</a><a class="btn" href="#/thi-thu/' + esc(ex.id) + '">🔁 Làm lại đề</a></div></div>';
+      '<div class="actions"><a class="btn ghost" href="#/thi-thu">Danh sách đề</a><a class="btn" href="#/thi-thu/' + esc(ex.id) + '">🔁 Làm lại đề</a></div>' + shareRow() + '</div>';
     h += '<div class="exam-review wr-review"><h2>Chấm từng câu</h2>';
     ex.sets.forEach(function (st, si) {
       var rg = rangeOf(ex, si);
@@ -571,6 +582,13 @@
       });
     });
     app.innerHTML = h + '</div></div>';
+    // Điểm tự chấm có thể đổi sau khi vẽ: tính lại lúc bấm.
+    bindShare(app, function () {
+      var cur = store().exams[ex.id] || r;
+      var sc3 = vietScore(ex, cur.texts || {}, cur.self || {});
+      return { kind: 'thi-thu', emoji: '✍️', kicker: 'Đề thi thử TOPIK II · Viết', title: ex.title,
+        big: sc3.pts + '/' + max, bigLabel: 'điểm' + (sc3.pending ? ' (còn ' + sc3.pending + ' mục chưa tự chấm)' : ' tự chấm'), stats: [['⏱', mins(cur.secs || 0)]] };
+    });
 
     app.querySelector('.wr-review').addEventListener('click', function (e) {
       var b = e.target.closest('.sg');

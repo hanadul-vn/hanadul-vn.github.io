@@ -559,6 +559,25 @@ async function waitSynced(page) {
     assert.ok(row.data.xp > before + 7, 'mất XP của máy khác (+7) hoặc của máy này');
   });
 
+  await tc('N25', 'Ôn hôm nay + huy hiệu đồng bộ theo tài khoản: hàng ôn từ và huy hiệu lên server; ôn 1 từ ở máy 2 thì máy 1 nhận lịch ôn mới; huy hiệu giữ ngày đạt sớm nhất', async () => {
+    const data = srv.rows[UA].data;
+    const keys = Object.keys(data.srs || {});
+    assert.ok(keys.length >= 20, 'server có hàng ôn: ' + keys.length);
+    assert.ok(Object.values(data.srs).some((e) => e.l === 'sc1-02') && Object.values(data.srs).some((e) => e.l === 'sc1-03'), 'từ của 2 bài học trên 2 máy');
+    assert.ok(data.badges && data.badges['lessons-1'], 'huy hiệu lên server');
+    const k = keys.find((x) => data.srs[x].l === 'sc1-02');
+    const b0 = data.srs[k].b;
+    await d2.page.evaluate((key) => window.HD.srs.answer(key, true), k);
+    await waitSynced(d2.page);
+    assert.strictEqual(srv.rows[UA].data.srs[k].b, Math.min(b0 + 1, 7));
+    await d1.page.goto(BASE + '#/tai-khoan');
+    await d1.page.click('#syncBtn');
+    await waitSynced(d1.page);
+    const s1 = await store(d1.page);
+    assert.strictEqual(s1.srs[k].b, Math.min(b0 + 1, 7), 'máy 1 nhận lịch ôn mới');
+    assert.strictEqual(s1.badges['lessons-1'], srv.rows[UA].data.badges['lessons-1']);
+  });
+
   await tc('N11', 'Server lỗi: chấm đỏ + thông báo, tiến độ vẫn trên máy; có mạng lại thì đồng bộ', async () => {
     srv.failNext = 1;
     await d1.page.goto(BASE + '#/tai-khoan');

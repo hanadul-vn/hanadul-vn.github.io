@@ -29,8 +29,41 @@
       wrongDel: obj(s.wrongDel),
       writing: obj(s.writing),
       writingAt: obj(s.writingAt),
-      exams: obj(s.exams)
+      exams: obj(s.exams),
+      srs: obj(s.srs),
+      srsLog: obj(s.srsLog),
+      badges: obj(s.badges)
     };
+  }
+
+  // Ôn hôm nay (ôn ngắt quãng): mỗi từ lấy bản có lần trả lời mới nhất (ts). Từ chỉ được thêm vào
+  // mà chưa trả lời lần nào có ts = 0 nên luôn nhường bản đã ôn ở máy khác.
+  function mergeSrs(a, b) {
+    var out = {};
+    Object.keys(a).concat(Object.keys(b)).forEach(function (k) {
+      if (out[k]) return;
+      var x = a[k], y = b[k];
+      var okx = x && typeof x === 'object', oky = y && typeof y === 'object';
+      if (!okx && !oky) return;
+      out[k] = !oky || (okx && num(x.ts) >= num(y.ts)) ? x : y;
+    });
+    return out;
+  }
+  // Số từ đã ôn theo ngày: lấy số lớn hơn.
+  function mergeMax(a, b) {
+    var out = {};
+    Object.keys(a).concat(Object.keys(b)).forEach(function (k) { out[k] = Math.max(num(a[k]), num(b[k])); });
+    return out;
+  }
+  // Huy hiệu: đã đạt ở máy nào cũng giữ, ngày đạt lấy ngày sớm nhất.
+  function mergeBadges(a, b) {
+    var out = {};
+    Object.keys(a).concat(Object.keys(b)).forEach(function (k) {
+      var x = num(a[k]), y = num(b[k]);
+      var v = x && y ? Math.min(x, y) : x || y;
+      if (v) out[k] = v;
+    });
+    return out;
   }
 
   // Đề thi thử: điểm cao nhất giữ lại; lượt làm gần nhất (điểm, đáp án đã chọn) lấy theo thời điểm nộp mới hơn.
@@ -119,7 +152,10 @@
       wrongDel: wr.wrongDel,
       writing: wt.writing,
       writingAt: wt.writingAt,
-      exams: mergeExams(a.exams, b.exams)
+      exams: mergeExams(a.exams, b.exams),
+      srs: mergeSrs(a.srs, b.srs),
+      srsLog: mergeMax(a.srsLog, b.srsLog),
+      badges: mergeBadges(a.badges, b.badges)
     };
   }
 
@@ -138,7 +174,7 @@
   }
   function hasProgress(s) {
     s = normalize(s);
-    return s.xp > 0 || s.days.length > 0 || Object.keys(s.lessons).length > 0 || Object.keys(s.wrong).length > 0 || Object.keys(s.exams).length > 0;
+    return s.xp > 0 || s.days.length > 0 || Object.keys(s.lessons).length > 0 || Object.keys(s.wrong).length > 0 || Object.keys(s.exams).length > 0 || Object.keys(s.srs).length > 0;
   }
 
   var api = { merge: merge, sameData: sameData, normalize: normalize, hasProgress: hasProgress };
