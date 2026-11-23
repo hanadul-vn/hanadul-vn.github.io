@@ -1,6 +1,7 @@
-/* Đề thi thử TOPIK II (phần Đọc và phần Viết 51–54): làm như thi thật, có tính giờ, nộp bài xem điểm và giải thích.
+/* Đề thi thử TOPIK II (phần Đọc, phần Nghe và phần Viết 51–54): làm như thi thật, có tính giờ, nộp bài xem điểm và giải thích.
    Miễn phí, không cần đăng nhập. Giờ đếm và chấm điểm ngay trên máy; bài đang làm lưu ở localStorage
    (tải lại trang, đóng tab vẫn đếm tiếp). Kết quả lưu vào tiến độ (hanadul:v2 → exams), đăng nhập thì đồng bộ theo.
+   Phần Nghe: lời thoại đọc bằng giọng có sẵn của trình duyệt (Web Speech API, miễn phí), mỗi đoạn nghe tối đa ex.plays lần khi làm bài.
    Phần Viết: 51–52 so khớp với đáp án mẫu, 53–54 người học tự chấm theo tiêu chí và bài mẫu (không chấm bằng AI).
    Cần assets/app.js (HD.lib, HD.setCleanup). */
 (function () {
@@ -48,6 +49,23 @@
     return L().loadJSON('data/exams/' + id + '.json');
   }
   function isViet(ex) { return ex && ex.part === 'viet'; }
+  function isNghe(ex) { return ex && ex.part === 'nghe'; }
+  // Phần Nghe: mỗi bộ câu có lời thoại (lines) do giọng đọc của trình duyệt phát; khi làm bài mỗi đoạn nghe tối đa ex.plays lần.
+  function maxPlays(ex) { return ex.plays || 2; }
+  function audioBox(ex, st, si, used, review) {
+    var left = maxPlays(ex) - (used || 0);
+    var qs = st.questions;
+    var label = qs.length > 1 ? qs[0].n + '~' + qs[qs.length - 1].n : String(qs[0].n);
+    return '<div class="ex-audio"><button type="button" class="play" data-' + (review ? 'replay' : 'play') + '="' + si + '"' + (!review && left <= 0 ? ' disabled' : '') +
+      ' aria-label="Nghe đoạn câu ' + label + '">🔊</button><div><b>Nghe đoạn câu ' + label + '</b><br><span class="muted" data-left="' + si + '">' +
+      (review ? 'Nghe lại thoải mái khi xem lại' : left > 0 ? 'Còn ' + left + ' lượt nghe' : 'Đã hết lượt nghe') + '</span></div></div>';
+  }
+  function scriptHtml(st) {
+    return '<details class="ex-vi ex-script"><summary>Lời thoại</summary>' + st.lines.map(function (l) {
+      return '<p><b class="ko">' + esc(l[0]) + ':</b> <span class="ko">' + esc(l[1]) + '</span></p>';
+    }).join('') + '</details>' + (st.linesVi ? '<details class="ex-vi"><summary>Dịch lời thoại</summary><p>' + L().ko(st.linesVi) + '</p></details>' : '');
+  }
+  function stopAudio() { try { if (window.speechSynthesis) speechSynthesis.cancel(); } catch (e) { /* không có giọng đọc */ } }
   function flat(ex) {
     var out = [];
     ex.sets.forEach(function (st, si) { st.questions.forEach(function (q) { out.push({ q: q, set: st, si: si }); }); });
@@ -133,7 +151,7 @@
         h += '<li><a class="exam-item" href="#/thi-thu/' + esc(e.id) + '" data-exam="' + esc(e.id) + '"><span class="emoji" aria-hidden="true">' + esc(e.icon || '📖') + '</span>' +
           '<span class="exam-item-body"><b>' + esc(e.title) + '</b><br><span class="muted">' + e.count + ' câu · ' + e.minutes + ' phút' + (e.level ? ' · ' + esc(e.level) : '') + '</span></span>' + status + '</a></li>';
       });
-      h += '</ul><p class="muted small-note">Đề do Hana Dul tự soạn theo cấu trúc đề TOPIK II, không phải đề thi chính thức. Phần Viết: bạn tự chấm theo đáp án, tiêu chí và bài mẫu.</p></div>';
+      h += '</ul><p class="muted small-note">Đề do Hana Dul tự soạn theo cấu trúc đề TOPIK II, không phải đề thi chính thức. Phần Viết: bạn tự chấm theo đáp án, tiêu chí và bài mẫu. Phần Nghe: âm thanh là giọng đọc máy của trình duyệt.</p></div>';
       app.innerHTML = h;
     }).catch(function (err) { failMsg(app, err); });
   }
@@ -150,7 +168,12 @@
     var h = '<div class="container narrow">' + hero(ex.title, esc(total + ' câu · ' + ex.minutes + ' phút')) +
       '<div class="panel exam-intro"><h2>Trước khi bắt đầu</h2><ul class="exam-rules">' +
       '<li>⏱ Có <b>' + ex.minutes + ' phút</b> cho ' + total + ' câu. Đồng hồ vẫn chạy khi bạn tải lại trang hay đóng tab.</li>' +
-      (isViet(ex)
+      (isNghe(ex)
+        ? '<li>🎧 Bật loa hoặc đeo tai nghe. Bấm 🔊 ở mỗi đoạn để nghe; mỗi đoạn nghe tối đa <b>' + maxPlays(ex) + ' lần</b>, nghe xong chọn ① ② ③ ④.</li>' +
+          '<li>🤖 Âm thanh là giọng đọc có sẵn của trình duyệt (miễn phí, không cần tải). Nghe sẽ hơi máy móc và không có tiếng động như đề thật; máy chưa có giọng tiếng Hàn thì hãy cài thêm (Android: Cài đặt › Chuyển văn bản thành giọng nói; iPhone: Cài đặt › Trợ năng › Nội dung được đọc).</li>' +
+          '<li>📤 Hết giờ bài tự nộp. Mỗi câu đúng 2 điểm (tối đa ' + total * 2 + '). Nộp xong xem lời thoại, bản dịch, giải thích và nghe lại thoải mái.</li>' +
+          '<li id="ttsCheck" class="muted"></li>'
+        : isViet(ex)
         ? '<li>✍️ Gõ câu trả lời vào ô (bàn phím tiếng Hàn). Gõ tới đâu tự lưu tới đó, có đếm số chữ.</li>' +
           '<li>📤 Hết giờ bài tự nộp với những gì bạn đã viết.</li>' +
           '<li>🎯 Thang 100 điểm: câu 51, 52 mỗi câu 10 điểm (máy so với đáp án mẫu), câu 53 30 điểm, câu 54 50 điểm: bạn tự chấm theo tiêu chí và bài mẫu sau khi nộp.</li>'
@@ -173,6 +196,17 @@
     if (r && isViet(ex)) h += '<p class="muted" style="margin-top:12px">Lần trước: <b>' + r.last + '/100</b> điểm · cao nhất ' + r.best + '/100 · <a href="#/thi-thu/' + esc(ex.id) + '/ket-qua">Xem lại và tự chấm bài đã nộp</a></p>';
     else if (r) h += '<p class="muted" style="margin-top:12px">Lần trước: <b>' + r.last + '/' + total + '</b> câu đúng · cao nhất ' + r.best + '/' + total + ' · <a href="#/thi-thu/' + esc(ex.id) + '/ket-qua">Xem lại bài đã nộp</a></p>';
     app.innerHTML = h + '</div></div>';
+    var tc = document.getElementById('ttsCheck');
+    if (tc) {
+      var hasVoice = function () { return window.speechSynthesis && speechSynthesis.getVoices().some(function (v) { return /^ko/i.test(v.lang); }); };
+      var paint = function () {
+        tc.innerHTML = !window.speechSynthesis ? '⚠️ Trình duyệt này không đọc to được. Hãy mở bằng Chrome, Safari hoặc Edge bản mới.'
+          : hasVoice() ? '✅ Máy đã có giọng đọc tiếng Hàn. <button type="button" class="slow" data-say="안녕하세요. 듣기 시험을 시작하겠습니다.">🔊 Nghe thử</button>'
+          : '⚠️ Chưa thấy giọng đọc tiếng Hàn trên máy, âm có thể không chuẩn. <button type="button" class="slow" data-say="안녕하세요. 듣기 시험을 시작하겠습니다.">🔊 Nghe thử</button>';
+      };
+      paint();
+      setTimeout(paint, 800);
+    }
     var b = document.getElementById('startBtn');
     if (b) b.addEventListener('click', function () {
       var t = Date.now();
@@ -202,6 +236,7 @@
       var rg = rangeOf(ex, si);
       if (rg.start === si) h += '<h2 class="ex-inst"><span class="ko">[' + rg.text + '] ' + gap(esc(st.instruction)) + '</span><br><span class="muted">' + gap(esc(st.instructionVi || '')) + '</span></h2>';
       h += '<section class="ex-set">';
+      if (st.lines) h += audioBox(ex, st, si, (run.plays || {})[si]);
       if (st.sentence) h += '<div class="ex-box"><span class="ex-box-label ko">보기</span><p class="ko">' + passageHtml(st.sentence) + '</p></div>';
       if (st.passage) h += '<div class="ex-passage ko">' + passageHtml(st.passage) + '</div>';
       st.questions.forEach(function (q) {
@@ -235,11 +270,28 @@
       timerEl.classList.toggle('warn', left <= WARN_MS);
     }
     var iv = setInterval(tick, 1000);
-    function stop() { clearInterval(iv); document.body.classList.remove('exam-mode'); }
+    function stop() { clearInterval(iv); document.body.classList.remove('exam-mode'); stopAudio(); }
     HD.setCleanup(stop);
     paintCount(); tick();
 
     root.addEventListener('click', function (e) {
+      var pb = e.target.closest('[data-play]');
+      if (pb) {
+        var cr = readRun();
+        if (!cr || cr.id !== ex.id) { location.replace('#/thi-thu/' + ex.id); return; }
+        run = cr;
+        var si = pb.getAttribute('data-play');
+        run.plays = run.plays || {};
+        var used = run.plays[si] || 0;
+        if (used >= maxPlays(ex)) { L().toast('Đoạn này đã nghe đủ ' + maxPlays(ex) + ' lần.'); return; }
+        run.plays[si] = used + 1;
+        writeRun(run);
+        L().speakLines(ex.sets[si].lines, 0.95);
+        var left = maxPlays(ex) - run.plays[si];
+        root.querySelector('[data-left="' + si + '"]').textContent = left > 0 ? 'Còn ' + left + ' lượt nghe' : 'Đã hết lượt nghe';
+        if (left <= 0) pb.disabled = true;
+        return;
+      }
       var opt = e.target.closest('.ex-opt');
       if (opt) {
         var cur = readRun();
@@ -348,6 +400,7 @@
       var bad = st.questions.some(function (q) { return answers[q.n] !== q.answer; });
       h += '<section class="ex-set ex-rev' + (bad ? ' has-wrong' : '') + '">';
       if (rg.start === si) h += '<h3 class="ex-inst ko">[' + rg.text + '] ' + gap(esc(st.instruction)) + '</h3>';
+      if (st.lines) h += audioBox(ex, st, si, 0, true) + scriptHtml(st);
       if (st.sentence) h += '<div class="ex-box"><span class="ex-box-label ko">보기</span><p class="ko">' + passageHtml(st.sentence) + '</p></div>';
       if (st.passage) h += '<div class="ex-passage ko">' + passageHtml(st.passage) + '</div>';
       if (st.passageVi) h += '<details class="ex-vi"><summary>Dịch đoạn văn</summary><p>' + gap(L().ko(st.passageVi)) + '</p></details>';
@@ -365,9 +418,14 @@
     });
     app.innerHTML = h + '</div></div>';
     bindShare(app, function () {
-      return { kind: 'thi-thu', emoji: pct >= 80 ? '🏆' : pct >= 60 ? '🎉' : '💪', kicker: 'Đề thi thử TOPIK II · Đọc', title: ex.title,
+      return { kind: 'thi-thu', emoji: pct >= 80 ? '🏆' : pct >= 60 ? '🎉' : '💪', kicker: 'Đề thi thử TOPIK II · ' + (isNghe(ex) ? 'Nghe' : 'Đọc'), title: ex.title,
         big: right + '/' + total, bigLabel: 'câu đúng · ' + right * 2 + '/' + total * 2 + ' điểm', stats: [['⏱', mins(r.secs || 0)], ['🎯', pct + '%']] };
     });
+    app.querySelector('.exam-review').addEventListener('click', function (e) {
+      var rb = e.target.closest('[data-replay]');
+      if (rb) L().speakLines(ex.sets[rb.getAttribute('data-replay')].lines, 0.95);
+    });
+    HD.setCleanup(stopAudio);
     app.querySelector('.ex-filter').addEventListener('click', function (e) {
       var b = e.target.closest('[data-f]');
       if (!b) return;
