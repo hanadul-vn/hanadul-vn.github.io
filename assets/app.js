@@ -324,6 +324,7 @@
       // Mặc định tab cấp đầu (Sơ cấp 1); link #lo-trinh-<cấp> mở đúng tab.
       var active = idx.levels[0].id;
       idx.levels.forEach(function (lv) { if (jump === 'lo-trinh-' + lv.id) active = lv.id; });
+      if (window.HDSearch) h += HDSearch.html();
       if (tabs) {
         h += '<div id="lo-trinh" class="level-jump" role="tablist" aria-label="Chọn cấp độ">' + idx.levels.map(function (lv) {
           var on = lv.id === active;
@@ -417,7 +418,7 @@
     h += '</div>';
     if (data.grammar && data.grammar.length) {
       h += '<div class="study-tools"><h2>Ngữ pháp</h2></div>';
-      data.grammar.forEach(function (g) { h += grammarNote(g); });
+      data.grammar.forEach(function (g, i) { h += grammarNote(g, i + 1); });
     }
     if (data.writing) h += '<div class="study-tools"><h2>Luyện viết</h2></div>' + writingBox(data);
     if (data.fillWriting && data.fillWriting.length) h += '<div class="study-tools"><h2>Viết điền ㉠, ㉡ (dạng đề TOPIK)</h2></div>' + fillBox(data);
@@ -438,9 +439,20 @@
       if (vocab.classList.contains('hide-vi')) c.classList.add('reveal');
       speak(c.getAttribute('data-word'));
     });
+    focusFromSearch();
   }
-  function grammarNote(g) {
-    var h = '<div class="gnote"><div class="gnote-head"><span class="gpat">' + esc(g.pattern) + '</span>' + (g.title ? '<span class="gtitle">' + ko(g.title) + '</span>' : '') + '</div><div class="gnote-body">';
+  // Mở bài từ ô tra cứu: cuộn tới từ / mẫu ngữ pháp vừa chọn và làm nổi bật.
+  function focusFromSearch() {
+    var f = HD.searchFocus;
+    HD.searchFocus = null;
+    if (!f) return;
+    var el = f.kind === 'g' ? document.getElementById('g' + f.n) : document.querySelectorAll('#vocab .wcard')[f.n - 1];
+    if (!el) return;
+    el.scrollIntoView({ behavior: 'instant', block: 'center' });
+    el.classList.add('flash');
+  }
+  function grammarNote(g, n) {
+    var h = '<div class="gnote"' + (n ? ' id="g' + n + '"' : '') + '><div class="gnote-head"><span class="gpat">' + esc(g.pattern) + '</span>' + (g.title ? '<span class="gtitle">' + ko(g.title) + '</span>' : '') + '</div><div class="gnote-body">';
     (g.note || []).forEach(function (p) { h += '<p>' + ko(p) + '</p>'; });
     if (g.examples && g.examples.length) {
       h += '<ul class="ex">';
