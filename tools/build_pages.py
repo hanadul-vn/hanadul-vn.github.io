@@ -80,6 +80,14 @@ def head(title, desc, canonical, depth, extra=""):
     # Chỉ nạp khi repo có move.js (nhánh chuyển tên miền).
     move = (f'  <script src="{up}assets/merge.js"></script>\n  <script src="{up}assets/move.js"></script>\n'
             if (ROOT / "assets/move.js").exists() else "")
+    # Ảnh chia sẻ chung của web (chỉ khi repo có assets/og-image.jpg).
+    og_img = ""
+    if (ROOT / "assets/og-image.jpg").exists():
+        img = SITE + "/assets/og-image.jpg"
+        og_img = (f'  <meta property="og:image" content="{img}">\n'
+                  '  <meta property="og:image:width" content="1200">\n  <meta property="og:image:height" content="630">\n'
+                  '  <meta property="og:image:alt" content="Hana Dul – học tiếng Hàn miễn phí">\n'
+                  '  <meta name="twitter:card" content="summary_large_image">\n')
     return f"""<!doctype html>
 <html lang="vi">
 <head>
@@ -94,10 +102,10 @@ def head(title, desc, canonical, depth, extra=""):
   <meta property="og:url" content="{esc(canonical)}">
   <meta property="og:title" content="{esc(title)}">
   <meta property="og:description" content="{esc(desc)}">
-  <link rel="icon" href="{up}assets/icon.svg" type="image/svg+xml">
+{og_img}  <link rel="icon" href="{up}assets/icon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{up}assets/style.css">
   <link rel="stylesheet" href="{up}assets/bai.css">
 {extra}{move}</head>
