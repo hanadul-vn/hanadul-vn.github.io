@@ -30,6 +30,56 @@
   "PASS"
  ],
  [
+  "N15",
+  "Tên hiển thị: chưa lưu thì gợi ý tên Google; không có khung gói/Pro nào",
+  "PASS"
+ ],
+ [
+  "N16",
+  "Tên hiển thị: chặn tên 1 ký tự và có < >, không gọi server; tên đúng lưu lên server, tải lại vẫn còn",
+  "PASS"
+ ],
+ [
+  "N17",
+  "Đọc tên hiển thị lỗi: báo chưa tải được, phần còn lại của trang vẫn dùng được; Thử lại thì hiện tên",
+  "PASS"
+ ],
+ [
+  "N18",
+  "Chứng nhận: mỗi cấp độ hiện tiến độ x/N bài đạt 2 sao; cấp độ đang mở thêm bài thì chưa cấp; chưa đủ thì không có nút nhận",
+  "PASS"
+ ],
+ [
+  "N19",
+  "Chứng nhận: đủ 2 sao mọi bài Sơ cấp 1 nhưng chưa có tên → nhắc lưu tên; có tên → bấm Nhận, đồng bộ trước rồi server cấp mã; có link xem",
+  "PASS"
+ ],
+ [
+  "N20",
+  "Chứng nhận: server từ chối (tiến độ trên server chưa đủ) → báo rõ bài nào chưa đạt, không vỡ trang",
+  "PASS"
+ ],
+ [
+  "N21",
+  "Trang xác minh (khách, không đăng nhập): mã đúng hiện tên, cấp độ, ngày, mã; gõ thường/thừa dấu cách vẫn được; mã sai báo không tìm thấy; sai dạng không gọi server",
+  "PASS"
+ ],
+ [
+  "N22",
+  "Xếp hạng (khách): xem được bảng tuần này/tuần trước, huy chương top 3, mời đăng nhập, không có nút tham gia; config trống thì báo chưa mở",
+  "PASS"
+ ],
+ [
+  "N23",
+  "Xếp hạng (đã đăng nhập): chưa tham gia → nút Tham gia với tên; bấm thì server ghi nhận, tải lại vẫn giữ; hàng của mình nổi bật kể cả ngoài top 50; Rời thì tên biến mất",
+  "PASS"
+ ],
+ [
+  "N24",
+  "Xếp hạng: chưa có tên hiển thị → nhắc đặt tên, không có nút tham gia; điện thoại 375px không tràn ngang",
+  "PASS"
+ ],
+ [
   "N7",
   "Học song song 2 máy: XP cộng đủ, sổ câu sai gỡ trên máy này thì máy kia gỡ theo",
   "PASS"

@@ -41,8 +41,16 @@ python3 -m http.server 8000
      Luyện nhanh lấy 1 câu mỗi dạng, Ôn đầy đủ lấy hết.
    - `fillWriting` (tùy chọn): bài viết điền ㉠/㉡ (dạng câu 51–52): `text`, `textVi`, `blanks` (`mark`, `answers` là các đáp án mẫu), `tips`. Người học tự so, không chấm; câu viết lưu cùng chỗ với Luyện viết.
 2. Thêm bài vào `data/index.json`, đúng cấp độ (`sc1`, `sc2`…). Mỗi cấp là một khối riêng trên lộ trình trang chủ (`icon`, `subtitle`, `status` tùy chọn); cấp có `"prefix": true` thì tên bài hiện kèm tên cấp ("Sơ cấp 2 · Bài 1: …") ở tiêu đề tab và Sổ câu sai để không nhầm với bài cùng số của cấp khác.
-3. Chạy `python3 tools/check_data.py`.
+3. Chạy `python3 tools/check_data.py` rồi `python3 tools/build_pages.py` (sinh trang tĩnh `bai/<id>/`, chỉ mục tra cứu, sitemap; CI báo lỗi nếu quên).
 4. Kiểm thử đầu-cuối (Playwright): chạy `python3 -m http.server 8765` ở thư mục gốc rồi `node tools/e2e/run.js`. Script làm hết mọi bài (Ôn đầy đủ, Luyện nhanh), sổ câu sai, trang giới thiệu, điện thoại 375px, giao diện tối; in PASS/FAIL từng case.
+
+## Trang tĩnh từng bài (cho Google) và ô tra cứu
+
+- Trang học chạy bằng `#/…` nên Google không đọc được nội dung bài. `tools/build_pages.py` sinh từ `data/`: `bai/<id>/index.html` (từ vựng, ngữ pháp, ví dụ, bài đọc, câu mẫu; title/description/canonical/JSON-LD riêng; nút vào làm bài), `bai/index.html` (mọi bài), `data/search.json`, `sitemap.xml`, `robots.txt`. Không sửa tay các file này.
+- Địa chỉ web chính thức nằm ở **một chỗ**: `data/site.json` (`url`). Đổi tên miền: sửa `url` rồi chạy lại script.
+- `python3 tools/build_pages.py --check`: chỉ kiểm tra file đã khớp dữ liệu chưa (CI chạy trên mỗi PR).
+- Ô "Tra từ, ngữ pháp" ([`assets/search.js`](assets/search.js)) có ở trang chủ, `/bai/` và mọi trang bài: gõ chữ Hàn (bỏ qua ngoặc, gạch: `으니까` khớp `-(으)니까`) hoặc tiếng Việt không cần dấu. Ở trang học, bấm kết quả mở bài và làm nổi bật thẻ từ / mẫu ngữ pháp; ở trang tĩnh, mở `bai/<id>/#t<n>` hoặc `#g<n>`.
+- Test: `node tests/e2e_seo.js`.
 
 ## Trang giới thiệu, đăng ký và thống kê
 
