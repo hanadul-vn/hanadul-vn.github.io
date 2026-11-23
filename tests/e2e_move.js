@@ -207,12 +207,25 @@ const PROGRESS = {
   });
 
   await tc('M11', 'Địa chỉ chuẩn: canonical/og:url/sitemap/robots dùng hanadul.app, không còn hanadul-vn.github.io (trừ link Góp ý GitHub)', async () => {
-    for (const f of ['index.html', 'gioi-thieu.html', 'chinh-sach-bao-mat.html', 'sitemap.xml', 'robots.txt']) {
+    for (const f of ['index.html', 'gioi-thieu.html', 'chinh-sach-bao-mat.html', 'chung-nhan.html', 'sitemap.xml', 'robots.txt']) {
       const s = fs.readFileSync(path.join(ROOT, f), 'utf8').replace(/github\.com\/hanadul-vn\/hanadul-vn\.github\.io/g, '').replace('địa chỉ cũ <b>hanadul-vn.github.io</b>', '');
       assert.ok(!s.includes('hanadul-vn.github.io'), f + ' còn địa chỉ cũ');
     }
     assert.ok(fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8').includes('<link rel="canonical" href="https://hanadul.app/">'));
     assert.ok(!fs.existsSync(path.join(ROOT, 'CNAME')), 'không được có file CNAME (GitHub sẽ chuyển hướng ở máy chủ, mất tiến độ)');
+  });
+
+  await tc('M12', 'Trang xác minh chứng nhận ở địa chỉ cũ (?ma=…): sang hanadul.app giữ mã; bài thi thử đang làm dở và kết quả thi thử sang đủ', async () => {
+    const { ctx, page } = await device(browser);
+    const run = JSON.stringify({ id: 'doc-01', startedAt: Date.now(), deadline: Date.now() + 3600e3, answers: { 1: 2, 7: 0 } });
+    const prog = Object.assign({}, PROGRESS, { exams: { 'doc-01': { best: 60, last: { score: 60, at: Date.now() } } } });
+    await seed(page, OLD, { 'hanadul:v2': JSON.stringify(prog), 'hanadul:exam-run': run });
+    await page.goto(OLD + '/chung-nhan.html?ma=HD-ABCD-1234'); await waitNew(page);
+    assert.strictEqual(page.url(), NEW + '/chung-nhan.html?ma=HD-ABCD-1234');
+    const ls = await dump(page, NEW);
+    assert.strictEqual(ls['hanadul:exam-run'], run);
+    assert.deepStrictEqual(JSON.parse(ls['hanadul:v2']).exams, prog.exams);
+    await ctx.close();
   });
 
   await browser.close();
