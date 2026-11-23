@@ -72,6 +72,7 @@
   </footer>
   <script src="assets/config.js"></script>
   <script src="assets/site.js"></script>
+  <script src="assets/share.js"></script>
   <script>
   /* Xác minh chứng nhận: gọi hàm verify_certificate của Supabase bằng khóa công khai (chỉ trả tên hiển thị, tên chứng nhận, ngày cấp). */
   (function () {
@@ -100,8 +101,15 @@
         (det.lessons ? '<p class="muted" style="margin:0">' + esc(det.lessons) + ' bài, mỗi bài đạt từ 2 sao' + (det.avg ? ' · điểm trung bình ' + esc(det.avg) + '%' : '') + '</p>' : '') +
         '<div class="cert-meta"><span>Ngày cấp: <b>' + esc(dateVi(c.issued_at)) + '</b></span><span>Mã: <b id="certCode">' + esc(c.code) + '</b></span></div>' +
         '<span class="cert-ok">✔ Đã xác minh trên Hana Dul</span></article>' +
-        '<div class="cv-actions no-print"><button type="button" class="btn" id="printBtn">🖨 In / lưu PDF</button><button type="button" class="btn ghost" id="copyBtn">🔗 Sao chép link</button></div>';
+        '<div class="cv-actions no-print"><button type="button" class="btn" id="printBtn">🖨 In / lưu PDF</button><button type="button" class="btn ghost" id="copyBtn">🔗 Sao chép link</button>' +
+        (window.HD && HD.share ? '<button type="button" class="btn ghost" id="shareBtn">📸 Ảnh chia sẻ</button>' : '') + '</div>';
       document.getElementById('printBtn').addEventListener('click', function () { window.print(); });
+      var sh = document.getElementById('shareBtn');
+      if (sh) sh.addEventListener('click', function () {
+        HD.share.open({ kind: 'chung-nhan', emoji: '🎓', kicker: 'Chứng nhận hoàn thành', title: c.display_name,
+          sub: 'đã hoàn thành ' + String(c.title || '').replace(/^Hoàn thành /, '') + ' · ngày cấp ' + dateVi(c.issued_at), big: c.code, bigLabel: 'mã xác minh trên Hana Dul',
+          url: location.origin + location.pathname + '?ma=' + encodeURIComponent(c.code) });
+      });
       document.getElementById('copyBtn').addEventListener('click', function () {
         var b = this, link = location.origin + location.pathname + '?ma=' + encodeURIComponent(c.code);
         (navigator.clipboard ? navigator.clipboard.writeText(link) : Promise.reject()).then(function () { b.textContent = '✅ Đã sao chép'; }, function () { b.textContent = link; });

@@ -638,6 +638,50 @@ button.ex-opt:hover { border-color: var(--sky); }
 .rank-gap { text-align: center; color: var(--muted); }
 .rank-empty { margin: 16px 0; }
 
+/* ---------- Ôn hôm nay (assets/review.js) ---------- */
+.continue.srs-card .emoji { background: var(--accent-soft); }
+.continue.srs-card .go { color: var(--accent); }
+.continue.srs-card.hot { border-color: var(--accent); }
+.srs-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
+.srs-stats > div { text-align: center; padding: 12px 6px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.srs-stats b { display: block; font-size: 1.5rem; }
+.srs-stats span { font-size: .8rem; color: var(--muted); font-weight: 600; }
+
+/* ---------- Huy hiệu (assets/badges.js) ---------- */
+.continue.badge-card .emoji { background: var(--sun-soft); }
+.continue.badge-card .go { color: #d99a10; }
+.badge-count { margin: 16px 0 10px; color: var(--muted); }
+.badge-grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.badge { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; padding: 16px 10px 14px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); min-width: 0; }
+.badge .bi { font-size: 2.2rem; width: 64px; height: 64px; display: grid; place-items: center; border-radius: 50%; background: var(--line); filter: grayscale(1); opacity: .55; }
+.badge.got { border-color: var(--sun); box-shadow: var(--shadow); }
+.badge.got .bi { background: var(--sun-soft); filter: none; opacity: 1; }
+.badge b { font-size: .98rem; overflow-wrap: anywhere; }
+.badge .bd { font-size: .8rem; color: var(--muted); }
+.badge .bdate { font-size: .78rem; color: var(--ok); font-weight: 700; }
+.badge .bprog { display: block; width: 100%; height: 8px; border-radius: 99px; background: var(--line); overflow: hidden; margin-top: 6px; }
+.badge .bprog span { display: block; height: 100%; background: var(--sun); border-radius: 99px; }
+.badge .bnum { font-size: .78rem; color: var(--muted); font-weight: 700; }
+.badge .btn { margin-top: 6px; }
+.badge-new { margin: 16px 0 0; padding: 12px 14px; border-radius: 16px; border: 2px solid var(--sun); background: var(--sun-soft); text-align: left; }
+.badge-new-title { margin: 0 0 6px; font-weight: 800; }
+.badge-new-item { display: flex; align-items: center; gap: 12px; padding: 6px 0; flex-wrap: wrap; }
+.badge-new-item .bi { font-size: 1.8rem; }
+.badge-new-item > span:nth-child(2) { flex: 1 1 140px; min-width: 0; }
+.badge-new-item .muted { font-size: .85rem; }
+
+/* ---------- Thẻ ảnh chia sẻ (assets/share.js) ---------- */
+.share-row { margin: 14px 0 0; text-align: center; }
+.share-modal { position: fixed; inset: 0; z-index: 70; display: grid; place-items: center; padding: 16px; background: rgba(20, 14, 28, .6); overflow-y: auto; }
+.share-box { position: relative; width: min(460px, 100%); background: var(--surface); color: var(--text); border-radius: 22px; padding: 20px 18px 18px; box-shadow: var(--shadow-lg); }
+.share-box h2 { margin: 0 0 12px; font-size: 1.2rem; }
+.share-close { position: absolute; top: 10px; right: 10px; width: 38px; height: 38px; border-radius: 50%; border: 0; background: var(--surface-2); color: var(--text); font-size: 1.1rem; cursor: pointer; }
+.share-preview { aspect-ratio: 1; border-radius: 14px; background: var(--bg-2); display: grid; place-items: center; overflow: hidden; }
+.share-preview img { width: 100%; height: 100%; display: block; }
+.share-hint { font-size: .86rem; margin: 10px 0 0; }
+.share-actions { margin-top: 12px; }
+.share-actions a[aria-disabled="true"] { opacity: .5; pointer-events: none; }
+
 /* ---------- tra từ, ngữ pháp (assets/search.js) ---------- */
 .search { margin: 22px 0 8px; padding: 14px 16px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); }
 .search-label { display: block; font-weight: 700; margin-bottom: 8px; }

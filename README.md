@@ -88,6 +88,13 @@ Không bắt buộc. Bật bằng `supabaseUrl` + `supabaseKey` (khóa công kha
 
 - `#/xep-hang` ([`assets/rank.js`](assets/rank.js)): ai cũng xem được; muốn có tên thì đăng nhập, đặt tên hiển thị, bấm Tham gia (mặc định không tham gia). XP tuần do server tính từ tiến độ đã đồng bộ. Cài đặt: [`supabase/README.md`](supabase/README.md) mục 10.
 
+## Ôn hôm nay, huy hiệu, ảnh chia sẻ
+
+- `assets/review.js` (`#/on-tap`): ôn ngắt quãng từ đã học. Làm bài trắc nghiệm thì từ của bài vào hàng ôn (từ đã hỏi theo kết quả, từ chưa hỏi chia tối đa 20 từ/ngày). Đúng thì hỏi lại sau 1, 3, 7, 14, 30, 60, 120 ngày; sai thì ngày mai. Mỗi lượt tối đa 20 từ. Bài bảng chữ (`vocabDirection: "ko"`) không đưa vào. Lưu ở `hanadul:v2` → `srs`, `srsLog`.
+- `assets/badges.js` (`#/huy-hieu`): 18 huy hiệu tính từ tiến độ (chuỗi ngày dài nhất, từ đã học, bài, ôn, thi thử, XP); đạt rồi giữ luôn, lưu ở `badges` (id → thời điểm). Thêm huy hiệu: thêm vào `LIST`, không đổi id cũ.
+- `assets/share.js`: ảnh 1080×1080 vẽ bằng canvas trên máy người học (kết quả bài, Ôn hôm nay, đề thi thử, huy hiệu, trang chứng nhận). Điện thoại có Web Share thì chia sẻ thẳng sang Facebook/Zalo; máy tính tải ảnh về.
+- Cả ba đồng bộ theo tài khoản qua `assets/merge.js`; không cần đổi SQL.
+
 ## Kiểm thử
 
 ```bash
@@ -97,6 +104,7 @@ python3 -m http.server 8765 & SHOTS=/tmp node tests/e2e_account.js   # giao di�
 node tests/e2e_regression.js                   # hồi quy phần học, làm bài, sổ câu sai
 node tests/e2e_contact.js                      # GA4 + form đăng ký/cảm nhận
 node tests/e2e_exam.js                         # đề thi thử (đồng hồ giả lập, không phải chờ 70 phút)
+node tests/e2e_review.js                       # Ôn hôm nay, huy hiệu, ảnh chia sẻ
 ```
 
 Các test Playwright giả lập Google Analytics và Formspree (`tests/stub_third_party.js`), nên không gửi số liệu hay email thật.

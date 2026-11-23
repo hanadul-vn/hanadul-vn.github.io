@@ -148,4 +148,22 @@ t('M18 đề Viết: bài viết và điểm tự chấm theo bản tự chấm 
   assert.ok(!('texts' in merge({ exams: { d: { best: 1, at: 1 } } }, {}, NOW).exams.d), 'đề Đọc không thêm trường Viết');
 });
 
+t('M19 Ôn hôm nay: mỗi từ lấy bản trả lời mới nhất (ts); từ mới thêm chưa ôn (ts=0) nhường bản đã ôn ở máy khác; từ chỉ có ở một bên giữ nguyên', () => {
+  const local = { srs: { a: { l: 'x', w: '가', v: 'đi', b: 3, d: '2026-11-30', ts: 5000 }, b: { l: 'x', w: '나', v: 'tôi', b: 0, d: '2026-11-22', ts: 0 }, c: { l: 'x', w: '다', v: 'tất cả', b: 1, d: '2026-11-22', ts: 10 } } };
+  const remote = { srs: { a: { l: 'x', w: '가', v: 'đi', b: 1, d: '2026-11-22', ts: 3000 }, b: { l: 'x', w: '나', v: 'tôi', b: 4, d: '2026-12-05', ts: 4000 } } };
+  const m = merge(local, remote, NOW);
+  assert.strictEqual(m.srs.a.b, 3);
+  assert.strictEqual(m.srs.b.b, 4);
+  assert.strictEqual(m.srs.c.b, 1);
+  assert.ok(hasProgress({ srs: { a: {} } }));
+});
+
+t('M20 Số từ ôn theo ngày lấy số lớn hơn; huy hiệu hợp lại, ngày đạt lấy ngày sớm nhất', () => {
+  const m = merge({ srsLog: { '2026-11-21': 8, '2026-11-22': 3 }, badges: { 'streak-3': 2000, 'xp-1000': 9000 } },
+    { srsLog: { '2026-11-21': 20 }, badges: { 'streak-3': 1000, 'lessons-1': 500 } }, NOW);
+  assert.deepStrictEqual(m.srsLog, { '2026-11-21': 20, '2026-11-22': 3 });
+  assert.deepStrictEqual(m.badges, { 'streak-3': 1000, 'xp-1000': 9000, 'lessons-1': 500 });
+  assert.ok(sameData(m, merge(m, m, NOW)), 'gộp lặp lại không đổi');
+});
+
 console.log(`\n${pass} test pass`);

@@ -88,6 +88,9 @@
     s.writing = s.writing || {};
     s.wrongDel = s.wrongDel || {};
     s.writingAt = s.writingAt || {};
+    s.srs = s.srs || {};
+    s.srsLog = s.srsLog || {};
+    s.badges = s.badges || {};
     return s;
   }
   function writeStore(s) {
@@ -135,6 +138,11 @@
       '<span class="stat xp" title="Điểm kinh nghiệm">⭐ ' + s.xp + '</span>' +
       (wrongCount(s) ? '<a class="stat book" href="#/so-cau-sai" title="Sổ câu sai">📒 ' + wrongCount(s) + '</a>' : '');
     if (HD.renderAccountBadge) HD.renderAccountBadge();
+    // Huy hiệu mới đạt (sau khi làm bài, thi thử, hoặc tiến độ vừa đồng bộ về): báo ngắn.
+    if (HD.badges) {
+      var nb = HD.badges.check();
+      if (nb.length) toast(nb.length > 2 ? '🏅 Bạn vừa có ' + nb.length + ' huy hiệu mới. Xem ở trang Huy hiệu.' : '🏅 Huy hiệu mới: ' + nb.map(function (b) { return b.name; }).join(', '));
+    }
   }
   // Tiến độ vừa được gộp từ tài khoản: vẽ lại màn hiện tại (trừ lúc đang làm bài hoặc đang ở trang học có ô viết).
   HD.refresh = function () {
@@ -145,7 +153,8 @@
   };
 
   // Cho assets/exam.js (đề thi thử) dùng chung.
-  HD.lib = { esc: esc, ko: ko, koq: koq, loadJSON: loadJSON, readStore: readStore, writeStore: writeStore, renderStats: renderStats, today: today, toast: toast, streakOf: streakOf };
+  HD.lib = { esc: esc, ko: ko, koq: koq, loadJSON: loadJSON, readStore: readStore, writeStore: writeStore, renderStats: renderStats, today: today, toast: toast, streakOf: streakOf,
+    shuffle: shuffle, getIndex: getIndex, allLessons: allLessons, fullName: fullName, runQuiz: function (o) { return runQuiz(o); } };
   HD.setCleanup = function (fn) { cleanup = fn; };
 
   // ---------- speech ----------
@@ -207,11 +216,21 @@
     if (parts[0] === 'tai-khoan' && HD.renderAccountPage) return HD.renderAccountPage(app);
     if (parts[0] === 'bai' && parts[1]) return renderLesson(parts[1], parts[2] || 'hoc');
     if (parts[0] === 'so-cau-sai') return renderWrongBook();
+    if (parts[0] === 'on-tap' && HD.renderReview) return HD.renderReview(app);
+    if (parts[0] === 'huy-hieu' && HD.renderBadges) return HD.renderBadges(app);
     if (parts[0] === 'thi-thu' && HD.renderExam) return HD.renderExam(app, parts.slice(1));
     if (parts[0] === 'xep-hang' && HD.renderRank) return HD.renderRank(app);
     return renderHome(/^lo-trinh/.test(parts[0]) ? parts[0] : null);
   }
   window.addEventListener('hashchange', function () { route(); });
+  // Link trỏ đúng màn đang mở (✕ thoát lượt ôn/Sổ câu sai, "Ôn tiếp") không sinh hashchange: tự vẽ lại màn.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#/"]');
+    if (!a || e.defaultPrevented || e.ctrlKey || e.metaKey || e.shiftKey || a.target) return;
+    if (a.getAttribute('href') !== location.hash) return;
+    e.preventDefault();
+    route();
+  });
   // Tab cấp độ: chỉ hiện bài của cấp đang chọn, không cuộn trang. Ghi tab vào hash (replaceState)
   // để F5 / quay lại từ trang bài vẫn đúng tab mà không thêm bước vào lịch sử.
   function selectLevel(id) {
@@ -311,6 +330,7 @@
           '<span><span class="label">Bài gần nhất' + (lp ? ' · đúng ' + lp.best + '%' : '') + '</span><br><span class="title">' + esc(fullName(lastId)) + '</span></span><span class="go">→</span></a>';
       }
 
+      if (HD.reviewHomeCard) h += HD.reviewHomeCard(s);
       var nw = wrongCount(s);
       if (nw) {
         h += '<a class="continue book" href="#/so-cau-sai"><span class="emoji">📒</span>' +
@@ -319,6 +339,7 @@
       if (HD.accountHomeCard) h += HD.accountHomeCard(!!(s.xp || s.days.length));
       if (HD.examHomeCard) h += HD.examHomeCard(s);
       if (HD.rankHomeCard) h += HD.rankHomeCard();
+      if (HD.badgeHomeCard) h += HD.badgeHomeCard(s);
 
       var tabs = idx.levels.length > 1;
       // Mặc định tab cấp đầu (Sơ cấp 1); link #lo-trinh-<cấp> mở đúng tab.
@@ -479,11 +500,13 @@
     var qs = picked.map(function (w, i) {
       var pool = shuffle(words.filter(function (o) { return o[0] !== w[0] && o[1] !== w[1]; })).slice(0, 3);
       var koToVi = data.vocabDirection === 'ko' ? true : (i % 2 === 0);
+      // Từ để đưa vào Ôn hôm nay (bài bảng chữ hỏi cách đọc chữ cái thì không).
+      var srsWord = data.vocabDirection === 'ko' ? null : w;
       if (koToVi) {
-        return { lid: data.id, kind: 'vocab', q: (p.koToVi || 'Nghĩa của {ko} là gì?').replace('{ko}', w[0]), say: w[2] || w[0],
+        return { lid: data.id, kind: 'vocab', w: srsWord, q: (p.koToVi || 'Nghĩa của {ko} là gì?').replace('{ko}', w[0]), say: w[2] || w[0],
           options: shuffle([w[1]].concat(pool.map(function (o) { return o[1]; }))), answer: w[1], explain: w[0] + ' = ' + w[1] };
       }
-      return { lid: data.id, kind: 'vocab', q: (p.viToKo || '“{vi}” trong tiếng Hàn là gì?').replace('{vi}', w[1]),
+      return { lid: data.id, kind: 'vocab', w: srsWord, q: (p.viToKo || '“{vi}” trong tiếng Hàn là gì?').replace('{vi}', w[1]),
         options: shuffle([w[0]].concat(pool.map(function (o) { return o[0]; }))), answer: w[0], explain: w[0] + ' = ' + w[1], sayAnswer: w[2] || w[0] };
     });
     var usage = shuffle(data.usage || []);
@@ -566,7 +589,7 @@
   }
 
   function runQuiz(opt) {
-    var data = opt.data, found = opt.found, quick = opt.quick, review = !!opt.review;
+    var data = opt.data, found = opt.found, quick = opt.quick, srs = !!opt.srs, review = !!opt.review || srs;
     document.body.classList.add('quiz-mode');
     window.scrollTo(0, 0);
     var queue = opt.questions;
@@ -575,7 +598,7 @@
     var wrongList = [];
     var pos = 0;
     var state = null; // null = đang chọn, object = đã trả lời
-    var exitHref = review ? '#/so-cau-sai' : '#/bai/' + esc(data.id);
+    var exitHref = srs ? '#/on-tap' : review ? '#/so-cau-sai' : '#/bai/' + esc(data.id);
 
     function progressPct() { return Math.round(answeredFirst / total * 100); }
 
@@ -624,7 +647,12 @@
       });
       if (!q.retry) {
         answeredFirst++;
-        recordAnswer(q, ok);
+        // Ôn hôm nay: chỉ cập nhật lịch ôn của từ, không ghi Sổ câu sai.
+        if (q.srsKey) { if (HD.srs) HD.srs.answer(q.srsKey, ok); }
+        else {
+          recordAnswer(q, ok);
+          if (!review && HD.srs) HD.srs.fromLesson(q, ok);
+        }
         if (ok) firstTry++;
         else { wrongList.push(q); queue.push(Object.assign({}, q, { retry: true, options: shuffle(q.options), grammar: null })); }
       } else if (!ok) {
@@ -704,16 +732,21 @@
       s.xp += xp;
       if (s.days.indexOf(today()) < 0) s.days.push(today());
       s.days = s.days.slice(-400);
+      if (srs && HD.srs) HD.srs.logDone(s, total);
       writeStore(s);
+      if (!review && HD.srs) HD.srs.finishLesson(data);
+      // Kiểm huy hiệu trước renderStats để hiện ngay trong màn kết quả (renderStats sẽ không báo trùng).
+      var newBadges = HD.badges ? HD.badges.check() : [];
       renderStats();
-      HD.track(review ? 'review_complete' : 'quiz_complete', { lesson_id: review ? 'so-cau-sai' : data.id, mode: review ? 'review' : quick ? 'quick' : 'full', score: pct, questions: total });
+      HD.track(srs ? 'srs_complete' : review ? 'review_complete' : 'quiz_complete', { lesson_id: srs ? 'on-tap' : review ? 'so-cau-sai' : data.id, mode: srs ? 'srs' : review ? 'review' : quick ? 'quick' : 'full', score: pct, questions: total });
+      s = readStore();
       var streak = streakOf(s.days);
       var title = stars === 3 ? 'Xuất sắc!' : stars === 2 ? 'Làm tốt lắm!' : stars === 1 ? 'Khá ổn!' : 'Cố lên nhé!';
       var emoji = stars === 3 ? '🏆' : stars === 2 ? '🎉' : stars === 1 ? '👍' : '💪';
       var nextL = !review && found && found.next;
       var left = wrongCount(s);
-      var h = '<div class="container narrow" style="padding-top:22px"><div class="panel"><div class="big-emoji">' + (review ? '📒' : emoji) + '</div>' +
-        '<h2>' + (review ? 'Ôn xong!' : title) + '</h2>' + (review ? '' : '<div class="result-stars">' + starsHtml(stars) + '</div>') +
+      var h = '<div class="container narrow" style="padding-top:22px"><div class="panel"><div class="big-emoji">' + (srs ? '🧠' : review ? '📒' : emoji) + '</div>' +
+        '<h2>' + (srs ? 'Ôn xong hôm nay!' : review ? 'Ôn xong!' : title) + '</h2>' + (review ? '' : '<div class="result-stars">' + starsHtml(stars) + '</div>') +
         '<p class="muted">Đúng ngay lần đầu ' + firstTry + '/' + total + ' câu' + (bestCombo >= 3 ? ' · chuỗi đúng dài nhất ' + bestCombo : '') + '</p>' +
         '<div class="result-grid"><div class="rbox xp"><b>+' + xp + '</b><span>⭐ XP</span></div>' +
         '<div class="rbox acc"><b>' + pct + '%</b><span>🎯 Chính xác</span></div>' +
@@ -723,19 +756,39 @@
         wrongList.forEach(function (q) { h += '<li>' + koq(q.listen ? q.listen : q.q) + ' → <b>' + ko(q.answer) + '</b></li>'; });
         h += '</ul></details>';
       }
-      if (left) h += '<p class="muted" style="margin-top:14px">📒 Sổ câu sai còn <b>' + left + '</b> câu.</p>';
-      h += '<div class="actions">' + (review
+      if (srs && HD.srs) {
+        var sst = HD.srs.stats(s);
+        h += '<p class="muted" style="margin-top:14px" id="srsLeft">' + (sst.due ? '🧠 Còn <b>' + sst.due + '</b> từ đến hạn hôm nay.' : '🧠 Đã ôn hết từ đến hạn hôm nay. Từ trả lời đúng sẽ được hỏi lại sau vài ngày.') + '</p>';
+      } else if (left) h += '<p class="muted" style="margin-top:14px">📒 Sổ câu sai còn <b>' + left + '</b> câu.</p>';
+      if (newBadges.length && HD.badges) h += HD.badges.newHtml(newBadges);
+      h += '<div class="actions">' + (srs
+        ? (HD.srs && HD.srs.stats(s).due ? '<a class="btn ghost" href="#/on-tap">🧠 Ôn tiếp</a>' : '') + '<a class="btn" href="#/">Về trang chủ</a>'
+        : review
         ? '<a class="btn ghost" href="#/so-cau-sai">📒 Về sổ câu sai</a><a class="btn" href="#/">Về trang chủ</a>'
         : '<a class="btn ghost" href="#/bai/' + esc(data.id) + '">📖 Xem lại bài</a>' +
           '<button type="button" class="btn ghost" id="again">🔁 Làm lại</button>' +
           (nextL ? '<a class="btn" href="#/bai/' + esc(nextL.id) + '">Bài tiếp theo →</a>' : '<a class="btn" href="#/">Về trang chủ</a>')) +
-        '</div></div>';
+        '</div>' + (HD.share && (srs || !review) ? '<p class="share-row"><button type="button" class="btn ghost small" id="shareResult">📸 Khoe kết quả</button></p>' : '') + '</div>';
       if (!review && data.writing) h += '<div class="panel write-panel"><h2>✍️ Luyện viết</h2>' + writingBox(data) + '</div>';
       if (!review && data.fillWriting && data.fillWriting.length) h += '<div class="panel write-panel"><h2>✍️ Viết điền ㉠, ㉡</h2>' + fillBox(data) + '</div>';
       if (!review) h += HD.signupHtml('ket-qua', true);
       h += '</div>';
       app.innerHTML = h;
       window.scrollTo(0, 0);
+      var sb = document.getElementById('shareResult');
+      if (sb) sb.addEventListener('click', function () {
+        var cur = readStore();
+        HD.share.open(srs ? {
+          kind: 'on-tap', emoji: '🧠', kicker: 'Ôn từ vựng hôm nay', title: 'Ôn xong ' + total + ' từ',
+          big: pct + '%', bigLabel: 'nhớ đúng ngay lần đầu',
+          stats: [['🔥', streak + ' ngày liên tiếp'], ['📚', (HD.srs ? HD.srs.stats(cur).learned : 0) + ' từ đã học']]
+        } : {
+          kind: 'bai-hoc', emoji: emoji, kicker: 'Hoàn thành bài học', title: found ? fullName(found) : data.title, ko: data.ko,
+          big: pct + '%', bigLabel: 'chính xác · ' + stars + ' sao',
+          stats: [['⭐', '+' + xp + ' XP'], ['🔥', streak + ' ngày liên tiếp']]
+        });
+      });
+      if (newBadges.length && HD.badges) HD.badges.bindNew(document.getElementById('badgeNew'));
       if (!review) {
         document.getElementById('again').addEventListener('click', function () { renderQuizStart(data, found); });
         bindWriting(data);
