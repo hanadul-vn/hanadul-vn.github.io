@@ -5,173 +5,234 @@
   "goal": "Miêu tả tính cách của mình và người khác; nói “giống như…”, “thì ra… quá” và “thuộc kiểu…, khá là…”.",
   "vocab": [
     {
-      "group": "Tính cách tốt",
+      "group": "Tính cách",
       "words": [
         [
-          "적극적이다",
-          "chủ động, năng nổ"
+          "명랑하다",
+          "vui vẻ, hồn nhiên"
         ],
         [
-          "성실하다",
-          "chăm chỉ, nghiêm túc"
+          "밝다",
+          "tươi tắn, cởi mở"
         ],
         [
-          "침착하다",
-          "điềm tĩnh"
+          "얌전하다",
+          "nhu mì, điềm đạm"
         ],
         [
-          "차분하다",
-          "nhẹ nhàng, từ tốn"
-        ],
-        [
-          "다정하다",
-          "ân cần, tình cảm"
-        ],
-        [
-          "사교적이다",
-          "hòa đồng, giỏi giao tiếp"
-        ],
-        [
-          "긍정적이다",
-          "lạc quan"
-        ],
-        [
-          "외향적이다",
-          "hướng ngoại"
-        ],
-        [
-          "유머 감각이 있다",
-          "có khiếu hài hước"
-        ],
-        [
-          "책임감이 강하다",
-          "có tinh thần trách nhiệm cao"
-        ],
-        [
-          "배려심이 많다",
-          "biết quan tâm, nghĩ cho người khác"
-        ],
-        [
-          "눈치가 빠르다",
-          "tinh ý, nhanh nhạy"
-        ],
-        [
-          "씩씩하다",
-          "mạnh mẽ, tự tin"
-        ]
-      ]
-    },
-    {
-      "group": "Tính cách chưa tốt",
-      "words": [
-        [
-          "소극적이다",
-          "thụ động, rụt rè"
-        ],
-        [
-          "내성적이다",
-          "hướng nội"
-        ],
-        [
-          "이기적이다",
-          "ích kỷ"
+          "조용하다",
+          "trầm, ít nói ít cười"
         ],
         [
           "고집이 세다",
-          "cố chấp, bướng bỉnh"
+          "bướng bỉnh, cố chấp"
+        ],
+        [
+          "차분하다",
+          "điềm tĩnh, từ tốn"
         ],
         [
           "성격이 급하다",
           "nóng vội"
         ],
         [
-          "까다롭다",
-          "khó tính"
+          "적극적이다",
+          "chủ động, năng nổ"
         ],
         [
-          "예민하다",
-          "nhạy cảm, dễ phật lòng"
+          "소극적이다",
+          "thụ động, rụt rè"
         ],
         [
-          "무뚝뚝하다",
-          "cộc lốc, khô khan"
+          "사교적이다",
+          "hòa đồng, giỏi giao tiếp"
         ],
         [
-          "수줍음이 많다",
-          "hay ngại ngùng"
+          "내성적이다",
+          "hướng nội, trầm tính"
         ],
         [
-          "겁이 많다",
-          "nhát gan"
+          "외향적이다",
+          "hướng ngoại"
         ],
         [
-          "욕심이 많다",
-          "tham lam, nhiều ham muốn"
-        ],
-        [
-          "참을성이 없다",
-          "thiếu kiên nhẫn"
-        ],
-        [
-          "변덕스럽다",
-          "thất thường, hay thay đổi"
+          "긍정적이다",
+          "lạc quan, nghĩ tích cực"
         ]
       ]
     },
     {
-      "group": "Miêu tả, so sánh",
+      "group": "Đặc điểm con người",
       "words": [
         [
-          "장점",
-          "ưu điểm"
+          "재주가 많다",
+          "đa tài"
         ],
         [
-          "단점",
-          "nhược điểm"
+          "유머 감각이 있다",
+          "có khiếu hài hước"
         ],
         [
-          "첫인상",
-          "ấn tượng đầu tiên"
+          "게으르다",
+          "lười biếng"
         ],
         [
-          "정반대",
-          "trái ngược hoàn toàn"
+          "믿음직하다",
+          "đáng tin cậy"
+        ],
+        [
+          "이해심이 많다",
+          "biết cảm thông, bao dung"
+        ],
+        [
+          "말이 많다",
+          "nói nhiều"
+        ],
+        [
+          "정이 많다",
+          "giàu tình cảm"
+        ],
+        [
+          "생각이 깊다",
+          "suy nghĩ chín chắn"
+        ],
+        [
+          "성실하다",
+          "chăm chỉ, chân thành"
+        ],
+        [
+          "책임감이 강하다",
+          "có trách nhiệm cao"
+        ],
+        [
+          "신중하다",
+          "thận trọng"
+        ],
+        [
+          "시원시원하다",
+          "xởi lởi, dứt khoát"
+        ],
+        [
+          "계산적이다",
+          "hay tính toán thiệt hơn"
+        ],
+        [
+          "분석적이다",
+          "thiên về phân tích"
+        ],
+        [
+          "합리적이다",
+          "hợp lý, lý trí"
+        ],
+        [
+          "자기중심적",
+          "lấy mình làm trung tâm"
+        ],
+        [
+          "주장이 강하다",
+          "có chính kiến mạnh"
+        ],
+        [
+          "호기심",
+          "tính tò mò"
+        ],
+        [
+          "유능하다",
+          "có năng lực, giỏi giang"
+        ],
+        [
+          "감정이 풍부하다",
+          "giàu cảm xúc"
+        ],
+        [
+          "자유롭다",
+          "tự do, phóng khoáng"
+        ]
+      ]
+    },
+    {
+      "group": "Thành ngữ về cơ thể",
+      "words": [
+        [
+          "눈이 높다",
+          "kén chọn, tiêu chuẩn cao"
+        ],
+        [
+          "발이 넓다",
+          "quen biết rộng"
+        ],
+        [
+          "입이 무겁다",
+          "kín miệng"
+        ],
+        [
+          "입이 가볍다",
+          "hay buôn chuyện, không giữ bí mật"
+        ],
+        [
+          "귀가 얇다",
+          "cả tin, dễ nghe theo người khác"
+        ],
+        [
+          "콧대가 높다",
+          "kiêu căng, chảnh"
+        ]
+      ]
+    },
+    {
+      "group": "Từ mới trong bài",
+      "words": [
+        [
+          "격려하다",
+          "khích lệ, động viên"
+        ],
+        [
+          "글씨",
+          "chữ viết tay"
+        ],
+        [
+          "긴장하다",
+          "căng thẳng, hồi hộp"
+        ],
+        [
+          "다투다",
+          "cãi nhau"
+        ],
+        [
+          "소년소녀가장",
+          "trẻ phải làm trụ cột gia đình"
+        ],
+        [
+          "아이디어",
+          "ý tưởng"
+        ],
+        [
+          "지도자",
+          "người lãnh đạo"
+        ],
+        [
+          "일에 집중하다",
+          "tập trung vào công việc"
+        ],
+        [
+          "참다",
+          "nhịn, chịu đựng"
+        ],
+        [
+          "참여하다",
+          "tham gia"
+        ],
+        [
+          "추진하다",
+          "thúc đẩy (công việc)"
+        ],
+        [
+          "학과 대표",
+          "đại diện khoa"
         ],
         [
           "혈액형",
           "nhóm máu"
-        ],
-        [
-          "별명",
-          "biệt danh"
-        ],
-        [
-          "성격이 맞다",
-          "hợp tính"
-        ],
-        [
-          "말수가 적다",
-          "ít nói"
-        ],
-        [
-          "장난을 치다",
-          "đùa nghịch, trêu chọc"
-        ],
-        [
-          "겉모습",
-          "vẻ bề ngoài"
-        ],
-        [
-          "판단하다",
-          "phán đoán, đánh giá"
-        ],
-        [
-          "성격 유형",
-          "kiểu tính cách"
-        ],
-        [
-          "화를 내다",
-          "nổi giận"
         ]
       ]
     }
@@ -257,7 +318,7 @@
       "title": "thì ra…, … quá nhỉ (cảm thán khi mới biết)",
       "note": [
         "Dùng khi vừa nhận ra hay mới biết điều gì và bày tỏ cảm xúc.",
-        "Tính từ + -군요, động từ + -는군요, danh từ + (이)군요, quá khứ -았/었군요.",
+        "Tính từ + -군요, động từ + -는군요, danh từ + (이)군요, quá khứ -았/었군요; đoán: -겠군요 (피곤하겠군요).",
         "-군요 lịch sự; -구나 dùng với bạn thân, người nhỏ tuổi hoặc nói một mình."
       ],
       "examples": [
@@ -405,84 +466,84 @@
   ],
   "usage": [
     {
-      "q": "그 사람은 일을 할 때 작은 것까지 확인할 정도로 ___.",
+      "q": "그 사람은 비밀을 이야기해도 다른 사람에게 절대 말하지 않아요. 입이 ___.",
       "options": [
-        "꼼꼼해요",
+        "무거워요",
+        "가벼워요",
+        "넓어요",
+        "높아요"
+      ],
+      "explain": "Kín miệng → 입이 무겁다."
+    },
+    {
+      "q": "제 친구는 아는 사람이 정말 많아요. 발이 ___.",
+      "options": [
+        "넓어요",
+        "무거워요",
+        "얇아요",
+        "높아요"
+      ],
+      "explain": "Quen biết rộng → 발이 넓다."
+    },
+    {
+      "q": "언니는 점원 말을 쉽게 믿어서 필요 없는 물건을 자주 사요. 귀가 ___.",
+      "options": [
+        "얇아요",
+        "넓어요",
+        "무거워요",
+        "깊어요"
+      ],
+      "explain": "Cả tin → 귀가 얇다."
+    },
+    {
+      "q": "동생은 노래도 잘하고 그림도 잘 그려요. ___가 많아요.",
+      "options": [
+        "재주",
+        "정",
+        "말",
+        "고집"
+      ],
+      "explain": "Đa tài → 재주가 많다."
+    },
+    {
+      "q": "그 선배는 약속을 꼭 지키고 맡은 일도 끝까지 해서 정말 ___.",
+      "options": [
+        "믿음직해요",
         "게을러요",
-        "변덕스러워요",
-        "무뚝뚝해요"
+        "계산적이에요",
+        "소극적이에요"
       ],
-      "explain": "Kiểm tra cả chi tiết nhỏ → 꼼꼼하다."
+      "explain": "Đáng tin cậy → 믿음직하다."
     },
     {
-      "q": "제 친구는 처음 보는 사람하고도 금방 친해질 만큼 ___.",
+      "q": "제 친구는 다른 사람의 실수도 잘 이해해 줘요. ___이 많아요.",
       "options": [
-        "사교적이에요",
-        "내성적이에요",
-        "소극적이에요",
-        "예민해요"
+        "이해심",
+        "호기심",
+        "고집",
+        "재주"
       ],
-      "explain": "Dễ thân với người lạ → 사교적이다."
+      "explain": "Biết cảm thông → 이해심이 많다."
     },
     {
-      "q": "동생은 자기 생각만 하고 다른 사람은 생각하지 않아서 좀 ___.",
+      "q": "저는 처음 만난 사람 앞에서 말을 잘 못 하는 ___ 성격이에요.",
       "options": [
-        "이기적이에요",
-        "다정해요",
-        "침착해요",
-        "씩씩해요"
+        "내성적인",
+        "사교적인",
+        "외향적인",
+        "적극적인"
       ],
-      "explain": "Chỉ nghĩ cho mình → 이기적이다."
+      "explain": "Ngại nói trước người lạ → 내성적이다."
     },
     {
-      "q": "한번 정하면 다른 사람 말을 절대 듣지 않아요. 정말 고집이 ___.",
+      "q": "아이는 ___이 많아서 궁금한 것을 계속 물어봐요.",
       "options": [
-        "세요",
-        "많아요",
-        "빨라요",
-        "적어요"
-      ],
-      "explain": "고집이 세다 = cố chấp."
-    },
-    {
-      "q": "저는 큰 문제가 생겨도 당황하지 않고 ___ 행동하려고 해요.",
-      "options": [
-        "침착하게",
-        "이기적으로",
-        "까다롭게",
-        "변덕스럽게"
-      ],
-      "explain": "Không hoảng → 침착하게."
-    },
-    {
-      "q": "누구에게나 ___과 단점이 있어요.",
-      "options": [
-        "장점",
-        "첫인상",
-        "별명",
+        "호기심",
+        "이해심",
+        "책임감",
         "혈액형"
       ],
-      "explain": "장점 ↔ 단점."
-    },
-    {
-      "q": "처음 만났을 때 ___이 좋아서 계속 만나고 싶었어요.",
-      "options": [
-        "첫인상",
-        "단점",
-        "고집",
-        "욕심"
-      ],
-      "explain": "Lần đầu gặp → 첫인상."
-    },
-    {
-      "q": "제 남자 친구는 말수가 ___ 무뚝뚝하지만 마음은 따뜻해요.",
-      "options": [
-        "적고",
-        "세고",
-        "빠르고",
-        "급하고"
-      ],
-      "explain": "말수가 적다 = ít nói."
+      "explain": "Tò mò → 호기심이 많다."
     }
   ],
   "listening": [

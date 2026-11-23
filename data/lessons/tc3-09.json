@@ -5,59 +5,39 @@
   "goal": "Tìm nhà, chuyển nhà và làm quen hàng xóm; nói “biết/không biết cách…”, “mong rằng…”, “so với…” và “… nào cũng được”.",
   "vocab": [
     {
-      "group": "Tìm nhà",
+      "group": "Loại nhà, hình thức ở",
       "words": [
         [
-          "오피스텔",
-          "căn hộ officetel"
+          "개인 주택",
+          "nhà riêng"
+        ],
+        [
+          "연립주택",
+          "nhà liên kế thấp tầng"
+        ],
+        [
+          "다세대주택",
+          "nhà nhiều hộ chung tòa"
+        ],
+        [
+          "빌라",
+          "chung cư mini (villa)"
+        ],
+        [
+          "고시원",
+          "phòng trọ siêu nhỏ (gosiwon)"
         ],
         [
           "전세",
-          "thuê nhà đặt cọc lớn (jeonse)"
+          "thuê đặt cọc lớn (jeonse)"
         ],
         [
-          "계약서",
-          "bản hợp đồng"
+          "하숙",
+          "ở trọ có chủ nấu cơm"
         ],
         [
-          "세입자",
-          "người thuê nhà"
-        ],
-        [
-          "햇빛이 잘 들다",
-          "nhiều nắng chiếu vào"
-        ],
-        [
-          "남향",
-          "hướng nam"
-        ],
-        [
-          "풀옵션",
-          "đầy đủ nội thất sẵn"
-        ],
-        [
-          "층간 소음",
-          "tiếng ồn giữa các tầng"
-        ],
-        [
-          "평",
-          "pyeong (đơn vị diện tích ≈ 3,3 m²)"
-        ],
-        [
-          "집을 구하다",
-          "tìm thuê nhà"
-        ],
-        [
-          "역세권",
-          "khu gần ga tàu điện"
-        ],
-        [
-          "낡다",
-          "cũ kỹ"
-        ],
-        [
-          "새로 지은 건물",
-          "tòa nhà mới xây"
+          "자취",
+          "ở trọ tự nấu ăn"
         ]
       ]
     },
@@ -65,11 +45,27 @@
       "group": "Chuyển nhà",
       "words": [
         [
+          "부동산 소개소",
+          "văn phòng môi giới nhà đất"
+        ],
+        [
+          "계약서",
+          "bản hợp đồng"
+        ],
+        [
+          "계약금",
+          "tiền đặt cọc hợp đồng"
+        ],
+        [
+          "이사",
+          "việc chuyển nhà"
+        ],
+        [
           "이삿짐",
           "đồ đạc chuyển nhà"
         ],
         [
-          "이삿짐 센터",
+          "이삿짐센터",
           "công ty chuyển nhà"
         ],
         [
@@ -77,93 +73,174 @@
           "chuyển nhà trọn gói"
         ],
         [
+          "집을 구하다",
+          "tìm nhà"
+        ],
+        [
+          "집이 나가다",
+          "nhà đã có người thuê/mua"
+        ],
+        [
+          "잔금을 치르다",
+          "trả nốt tiền còn lại"
+        ],
+        [
           "짐을 싸다",
           "đóng gói đồ"
+        ],
+        [
+          "짐을 싣다",
+          "chất đồ lên xe"
+        ],
+        [
+          "짐을 옮기다",
+          "khiêng, chuyển đồ"
         ],
         [
           "짐을 풀다",
           "dỡ đồ"
         ],
         [
-          "조립하다",
-          "lắp ráp"
-        ],
-        [
-          "배치하다",
-          "bố trí, kê (đồ đạc)"
-        ],
-        [
-          "전입 신고",
-          "khai báo chuyển đến (cư trú)"
-        ],
-        [
-          "주소를 변경하다",
-          "đổi địa chỉ"
-        ],
-        [
-          "대형 폐기물",
-          "đồ bỏ cồng kềnh"
+          "짐을 정리하다",
+          "sắp xếp đồ đạc"
         ],
         [
           "이사 비용",
           "chi phí chuyển nhà"
         ],
         [
-          "손 없는 날",
-          "ngày tốt (để chuyển nhà)"
+          "보험 가입",
+          "tham gia bảo hiểm"
+        ],
+        [
+          "파손되다",
+          "bị hư hỏng"
+        ],
+        [
+          "분실되다",
+          "bị thất lạc"
+        ],
+        [
+          "전액 배상",
+          "bồi thường toàn bộ"
         ]
       ]
     },
     {
-      "group": "Hàng xóm, khu phố",
+      "group": "Tiện nghi, khu ở",
       "words": [
         [
-          "이웃",
-          "hàng xóm"
+          "보일러",
+          "nồi hơi sưởi"
         ],
         [
-          "집들이",
-          "tiệc tân gia"
+          "남향집",
+          "nhà hướng nam"
         ],
         [
-          "인사를 드리다",
-          "chào hỏi (kính ngữ)"
+          "마당",
+          "sân nhà"
         ],
         [
-          "떡을 돌리다",
-          "đi biếu bánh tteok"
+          "개별난방",
+          "sưởi riêng từng hộ"
         ],
         [
-          "경비실",
-          "phòng bảo vệ"
+          "중앙난방",
+          "sưởi trung tâm"
         ],
         [
-          "관리 사무소",
-          "ban quản lý tòa nhà"
+          "난방비",
+          "tiền sưởi"
         ],
         [
-          "분리수거",
-          "phân loại rác"
+          "역세권",
+          "khu gần ga tàu điện"
         ],
         [
           "편의 시설",
           "tiện ích"
         ],
         [
-          "택배를 맡기다",
-          "gửi nhờ bưu kiện"
+          "주변 환경",
+          "môi trường xung quanh"
         ],
         [
-          "윗집",
-          "nhà tầng trên"
+          "주택가",
+          "khu dân cư"
         ],
         [
-          "아랫집",
-          "nhà tầng dưới"
+          "신축",
+          "mới xây"
         ],
         [
-          "주민 센터",
-          "trung tâm hành chính phường"
+          "전망",
+          "tầm nhìn; triển vọng"
+        ],
+        [
+          "도보",
+          "đi bộ"
+        ],
+        [
+          "저렴하다",
+          "rẻ, giá phải chăng"
+        ],
+        [
+          "이웃",
+          "hàng xóm"
+        ],
+        [
+          "떡을 돌리다",
+          "biếu bánh tteok cho hàng xóm"
+        ],
+        [
+          "집들이",
+          "tiệc tân gia"
+        ]
+      ]
+    },
+    {
+      "group": "Từ mới trong bài",
+      "words": [
+        [
+          "가루비누",
+          "bột giặt"
+        ],
+        [
+          "세제",
+          "chất tẩy rửa"
+        ],
+        [
+          "관습",
+          "phong tục, tập quán"
+        ],
+        [
+          "문의하다",
+          "hỏi, liên hệ hỏi"
+        ],
+        [
+          "부담을 줄이다",
+          "giảm gánh nặng"
+        ],
+        [
+          "사라지다",
+          "biến mất"
+        ],
+        [
+          "안심하다",
+          "yên tâm"
+        ],
+        [
+          "요청하다",
+          "đề nghị, yêu cầu"
+        ],
+        [
+          "제공하다",
+          "cung cấp"
+        ],
+        [
+          "해결되다",
+          "được giải quyết"
         ]
       ]
     }
@@ -175,7 +252,7 @@
       "note": [
         "Nói về khả năng có được nhờ học, luyện: 운전할 줄 알아요.",
         "Thân có patchim + -을 줄, không patchim + -ㄹ 줄; thân ㄹ: 만들 줄.",
-        "Khác với -(으)ㄴ/는 줄 알았다 (cứ tưởng) ở Bài 8."
+        "Chỉ nói kỹ năng; khả năng do hoàn cảnh dùng -(으)ㄹ 수 있다 (지금 떠날 수 있어요 ○ / 떠날 줄 알아요 ×). Khác -(으)ㄴ/는 줄 알았다 (cứ tưởng) ở Bài 8."
       ],
       "examples": [
         [
@@ -476,80 +553,80 @@
       "options": [
         "싸서",
         "풀어서",
-        "조립해서",
-        "돌려서"
+        "실어서",
+        "치러서"
       ],
-      "explain": "Đóng đồ → 짐을 싸다."
+      "explain": "Đóng gói đồ → 짐을 싸다."
+    },
+    {
+      "q": "트럭에 짐을 다 ___ 새 집으로 출발했어요.",
+      "options": [
+        "싣고",
+        "풀고",
+        "구하고",
+        "치르고"
+      ],
+      "explain": "Chất đồ lên xe → 짐을 싣다."
     },
     {
       "q": "새 집에 도착해서 짐을 ___ 하나씩 정리했어요.",
       "options": [
         "풀고",
         "싸고",
-        "구하고",
-        "맡기고"
+        "싣고",
+        "구하고"
       ],
       "explain": "Dỡ đồ → 짐을 풀다."
     },
     {
-      "q": "___ 소음 때문에 밤에 잠을 못 자요. 윗집 아이들이 매일 뛰어요.",
+      "q": "계약하는 날 계약금을 내고 이사하는 날 ___을 치렀어요.",
       "options": [
-        "층간",
-        "남향",
-        "전입",
-        "편의"
+        "잔금",
+        "관리비",
+        "난방비",
+        "이사 비용"
       ],
-      "explain": "Tiếng ồn giữa các tầng → 층간 소음."
+      "explain": "Trả nốt tiền còn lại → 잔금을 치르다."
     },
     {
-      "q": "이사한 후에는 주민 센터에 가서 ___를 해야 해요.",
+      "q": "밥을 직접 해 먹고 싶어서 하숙 대신 ___를 하기로 했어요.",
       "options": [
-        "전입 신고",
-        "분리수거",
-        "집들이",
-        "포장 이사"
+        "자취",
+        "전세",
+        "마당",
+        "보일러"
       ],
-      "explain": "Khai báo cư trú → 전입 신고."
+      "explain": "Ở trọ tự nấu ăn → 자취."
     },
     {
-      "q": "새로 산 책상을 혼자 ___ 시간이 오래 걸렸어요.",
+      "q": "우리 집은 ___이라서 겨울에도 따뜻하고 밝아요.",
       "options": [
-        "조립하느라고",
-        "구하느라고",
-        "돌리느라고",
-        "맡기느라고"
+        "남향집",
+        "고시원",
+        "주차장",
+        "주택가"
       ],
-      "explain": "Lắp ráp → 조립하다."
+      "explain": "Nhà hướng nam → 남향집."
     },
     {
-      "q": "이 방은 남향이라서 ___ 아주 밝아요.",
+      "q": "지하철역까지 걸어서 5분이라서 ___ 아파트라고 광고해요.",
       "options": [
-        "햇빛이 잘 들어서",
-        "층간 소음이 있어서",
-        "관리비가 비싸서",
-        "짐을 싸서"
+        "역세권",
+        "개별난방",
+        "고시원",
+        "하숙"
       ],
-      "explain": "Hướng nam → nhiều nắng."
+      "explain": "Gần ga tàu → 역세권."
     },
     {
-      "q": "집에 없을 때 온 택배는 아파트 ___에 맡겨 두었어요.",
+      "q": "이삿짐센터에서 가구가 ___ 전액 배상해 준다고 했어요.",
       "options": [
-        "경비실",
-        "계약서",
-        "세입자",
-        "역세권"
+        "파손되면",
+        "안심하면",
+        "제공하면",
+        "점검하면"
       ],
-      "explain": "Phòng bảo vệ → 경비실."
-    },
-    {
-      "q": "짐이 많아서 이번에는 ___ 센터에 맡기기로 했어요.",
-      "options": [
-        "이삿짐",
-        "분리수거",
-        "편의",
-        "주민"
-      ],
-      "explain": "Công ty chuyển nhà → 이삿짐 센터."
+      "explain": "Bị hư hỏng → 파손되다."
     }
   ],
   "listening": [
