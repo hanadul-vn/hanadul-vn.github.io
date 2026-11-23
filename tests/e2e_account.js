@@ -495,7 +495,7 @@ async function waitSynced(page) {
     await d.page.goto(BASE + '#/');
     await d.page.waitForSelector('.path .node');
     assert.strictEqual(await d.page.locator('.rank-card').count(), 1, 'khách không thấy lối vào xếp hạng ở trang chủ');
-    assert.ok((await d.page.textContent('.rank-card')).includes('ai học chăm nhất'));
+    assert.ok((await d.page.textContent('.rank-card')).includes('Ai học chăm nhất'));
     assert.deepStrictEqual(d.errors, []);
     await d.ctx.close();
     const off = await newDevice(browser, {});
