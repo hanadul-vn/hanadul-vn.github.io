@@ -273,7 +273,7 @@
       "icon": "🌳",
       "prefix": true,
       "subtitle": "Ngữ pháp trung cấp, làm quen dạng đề TOPIK II",
-      "status": "Đang mở 6 bài",
+      "status": "Đang mở 9 bài",
       "lessons": [
         {
           "id": "tc3-01",
@@ -322,6 +322,30 @@
           "ko": "은행",
           "summary": "-기 쉽다 · -는 동안 · -(으)려면",
           "icon": "🏦"
+        },
+        {
+          "id": "tc3-07",
+          "no": "7",
+          "title": "Tính cách",
+          "ko": "성격",
+          "summary": "N처럼 · -군요/-구나 · -(으)ㄴ/는 편이다",
+          "icon": "🧩"
+        },
+        {
+          "id": "tc3-08",
+          "no": "8",
+          "title": "Sai sót",
+          "ko": "실수",
+          "summary": "-는 바람에 · -는 중이다 · -도록 하다 · -(으)ㄴ/는 줄 알았다",
+          "icon": "😅"
+        },
+        {
+          "id": "tc3-09",
+          "no": "9",
+          "title": "Chuyển nhà",
+          "ko": "이사",
+          "summary": "-(으)ㄹ 줄 알다/모르다 · -기 바라다 · N에 비해서 · 아무 N(이)나",
+          "icon": "📦"
         }
       ]
     }
