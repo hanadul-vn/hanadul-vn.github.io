@@ -319,13 +319,15 @@
     if (!HD.accountOn) { ready = true; return; }
     var qs = new URLSearchParams(location.search);
     var returning = qs.has('code') || qs.has('token_hash') || qs.has('error_description');
-    window.addEventListener('hashchange', function () { if (NEED_SDK.test(location.hash)) boot(); });
     if (returning || hasStoredSession() || NEED_SDK.test(location.hash)) return boot();
     // Khách: biết chắc chưa đăng nhập, không cần thư viện.
     ready = true;
     HD.renderAccountBadge();
+    refreshApp(); // thẻ mời lưu tiến độ ở trang chủ cần biết đã sẵn sàng
   }
   HD.ensureAccount = function () { if (HD.accountOn) boot(); };
+  // Đăng ký trước app.js để khi vào #/tai-khoan, #/xep-hang thì trạng thái "đang tải" có trước lúc vẽ trang.
+  window.addEventListener('hashchange', function () { if (HD.accountOn && NEED_SDK.test(location.hash)) boot(); });
 
   function boot() {
     if (booted) return;
@@ -573,5 +575,8 @@
       '<span><span class="label">Không bắt buộc</span><br><span class="title">Lưu tiến độ vào tài khoản để học trên nhiều máy</span></span><span class="go">→</span></a>';
   };
 
-  start();
+  // Chờ mọi script trên trang chạy xong (app.js cấp HD.lib) rồi mới khởi động: thư viện có sẵn trong cache
+  // có thể tải xong trước khi app.js chạy.
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
 })();

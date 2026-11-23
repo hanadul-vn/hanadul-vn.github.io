@@ -253,6 +253,12 @@ async function waitSynced(page) {
     assert.ok(!s.owner, 'khách không có owner');
     await d1.page.goto(BASE + '#/');
     await d1.page.waitForSelector('.acct-card');
+    // Mở lại trang chủ từ đầu (khách không tải SDK) vẫn có thẻ mời.
+    const n = d1.sdkLoads.length;
+    await d1.page.reload();
+    await d1.page.waitForSelector('.acct-card');
+    await d1.page.waitForTimeout(300);
+    assert.strictEqual(d1.sdkLoads.length, n, 'khách bị tải SDK khi mở lại trang chủ');
   });
 
   let guest;
