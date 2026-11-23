@@ -1,0 +1,793 @@
+{
+  "id": "tc3-07",
+  "title": "Tính cách",
+  "ko": "성격",
+  "goal": "Miêu tả tính cách của mình và người khác; nói “giống như…”, “thì ra… quá” và “thuộc kiểu…, khá là…”.",
+  "vocab": [
+    {
+      "group": "Tính cách tốt",
+      "words": [
+        [
+          "적극적이다",
+          "chủ động, năng nổ"
+        ],
+        [
+          "성실하다",
+          "chăm chỉ, nghiêm túc"
+        ],
+        [
+          "침착하다",
+          "điềm tĩnh"
+        ],
+        [
+          "차분하다",
+          "nhẹ nhàng, từ tốn"
+        ],
+        [
+          "다정하다",
+          "ân cần, tình cảm"
+        ],
+        [
+          "사교적이다",
+          "hòa đồng, giỏi giao tiếp"
+        ],
+        [
+          "긍정적이다",
+          "lạc quan"
+        ],
+        [
+          "외향적이다",
+          "hướng ngoại"
+        ],
+        [
+          "유머 감각이 있다",
+          "có khiếu hài hước"
+        ],
+        [
+          "책임감이 강하다",
+          "có tinh thần trách nhiệm cao"
+        ],
+        [
+          "배려심이 많다",
+          "biết quan tâm, nghĩ cho người khác"
+        ],
+        [
+          "눈치가 빠르다",
+          "tinh ý, nhanh nhạy"
+        ],
+        [
+          "씩씩하다",
+          "mạnh mẽ, tự tin"
+        ]
+      ]
+    },
+    {
+      "group": "Tính cách chưa tốt",
+      "words": [
+        [
+          "소극적이다",
+          "thụ động, rụt rè"
+        ],
+        [
+          "내성적이다",
+          "hướng nội"
+        ],
+        [
+          "이기적이다",
+          "ích kỷ"
+        ],
+        [
+          "고집이 세다",
+          "cố chấp, bướng bỉnh"
+        ],
+        [
+          "성격이 급하다",
+          "nóng vội"
+        ],
+        [
+          "까다롭다",
+          "khó tính"
+        ],
+        [
+          "예민하다",
+          "nhạy cảm, dễ phật lòng"
+        ],
+        [
+          "무뚝뚝하다",
+          "cộc lốc, khô khan"
+        ],
+        [
+          "수줍음이 많다",
+          "hay ngại ngùng"
+        ],
+        [
+          "겁이 많다",
+          "nhát gan"
+        ],
+        [
+          "욕심이 많다",
+          "tham lam, nhiều ham muốn"
+        ],
+        [
+          "참을성이 없다",
+          "thiếu kiên nhẫn"
+        ],
+        [
+          "변덕스럽다",
+          "thất thường, hay thay đổi"
+        ]
+      ]
+    },
+    {
+      "group": "Miêu tả, so sánh",
+      "words": [
+        [
+          "장점",
+          "ưu điểm"
+        ],
+        [
+          "단점",
+          "nhược điểm"
+        ],
+        [
+          "첫인상",
+          "ấn tượng đầu tiên"
+        ],
+        [
+          "정반대",
+          "trái ngược hoàn toàn"
+        ],
+        [
+          "혈액형",
+          "nhóm máu"
+        ],
+        [
+          "별명",
+          "biệt danh"
+        ],
+        [
+          "성격이 맞다",
+          "hợp tính"
+        ],
+        [
+          "말수가 적다",
+          "ít nói"
+        ],
+        [
+          "장난을 치다",
+          "đùa nghịch, trêu chọc"
+        ],
+        [
+          "겉모습",
+          "vẻ bề ngoài"
+        ],
+        [
+          "판단하다",
+          "phán đoán, đánh giá"
+        ],
+        [
+          "성격 유형",
+          "kiểu tính cách"
+        ],
+        [
+          "화를 내다",
+          "nổi giận"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "N 처럼",
+      "title": "giống như N",
+      "note": [
+        "So sánh hai đối tượng giống nhau về tính chất hay cách làm: 아이처럼 웃어요.",
+        "Gắn liền sau danh từ, không cần patchim hay không.",
+        "Gần nghĩa với N 같이: 가족처럼 = 가족같이."
+      ],
+      "examples": [
+        [
+          "우리 언니는 엄마처럼 성격이 차분해요.",
+          "Chị tôi tính tình từ tốn giống mẹ."
+        ],
+        [
+          "민수 씨는 아이처럼 잘 웃어요.",
+          "Min-su hay cười như trẻ con."
+        ],
+        [
+          "저도 선생님처럼 다정한 사람이 되고 싶어요.",
+          "Tôi cũng muốn trở thành người ân cần như cô giáo."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "제 동생은 성격이 아빠___ 조용해요.",
+          "options": [
+            "처럼",
+            "부터",
+            "에서",
+            "까지"
+          ],
+          "explain": "Giống bố → 아빠처럼."
+        },
+        {
+          "q": "A: 하늘 씨는 정말 가수___ 노래를 잘하네요. B: 고마워요.",
+          "options": [
+            "처럼",
+            "에게",
+            "으로",
+            "한테서"
+          ],
+          "explain": "Hát hay như ca sĩ → 가수처럼."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "그 사람은 꽃처럼 예쁘게 웃었어요.",
+            "그 사람은 꽃처럼이 예쁘게 웃었어요.",
+            "그 사람은 꽃 처럼에 예쁘게 웃었어요.",
+            "그 사람은 꽃처럼을 예쁘게 웃었어요."
+          ],
+          "explain": "N처럼 không gắn thêm trợ từ 이/에/을."
+        },
+        {
+          "q": "'친구가 가족처럼 저를 도와줬어요.'에서 '처럼'과 바꿔 쓸 수 있는 것은?",
+          "options": [
+            "같이",
+            "보다",
+            "만",
+            "도"
+          ],
+          "explain": "N처럼 ≈ N같이."
+        },
+        {
+          "q": "Nghĩa của \"얼음처럼 차가워 보이지만 사실은 마음이 따뜻해요.\"",
+          "options": [
+            "Trông lạnh lùng như băng nhưng thật ra rất ấm áp.",
+            "Lạnh hơn cả băng và không ấm áp.",
+            "Thích ăn đá nhưng sợ lạnh.",
+            "Trông ấm áp nhưng thật ra lạnh lùng."
+          ],
+          "explain": "얼음처럼 = như băng; -아/어 보이다 = trông có vẻ."
+        }
+      ]
+    },
+    {
+      "pattern": "-군요 / -구나",
+      "title": "thì ra…, … quá nhỉ (cảm thán khi mới biết)",
+      "note": [
+        "Dùng khi vừa nhận ra hay mới biết điều gì và bày tỏ cảm xúc.",
+        "Tính từ + -군요, động từ + -는군요, danh từ + (이)군요, quá khứ -았/었군요.",
+        "-군요 lịch sự; -구나 dùng với bạn thân, người nhỏ tuổi hoặc nói một mình."
+      ],
+      "examples": [
+        [
+          "수진 씨는 정말 꼼꼼하군요.",
+          "Su-jin tỉ mỉ thật đấy."
+        ],
+        [
+          "아, 두 분이 자매였군요.",
+          "À, thì ra hai người là chị em."
+        ],
+        [
+          "민호가 벌써 숙제를 다 했구나!",
+          "Min-ho làm xong bài tập rồi cơ à!"
+        ]
+      ],
+      "questions": [
+        {
+          "q": "A: 저는 주말마다 봉사 활동을 해요. B: 와, 정말 ___.",
+          "options": [
+            "성실하시군요",
+            "성실하시는군요",
+            "성실하셨구나요",
+            "성실하기군요"
+          ],
+          "explain": "성실하다 là tính từ → 성실하시군요."
+        },
+        {
+          "q": "A: 제 동생은 매일 아침 6시에 일어나서 운동해요. B: 동생이 아침마다 운동을 ___.",
+          "options": [
+            "하는군요",
+            "하군요",
+            "했군요요",
+            "하기군요"
+          ],
+          "explain": "Động từ, thói quen hiện tại → -는군요."
+        },
+        {
+          "q": "(일기) 오늘 처음 김치를 만들어 봤다. 생각보다 ___!",
+          "options": [
+            "쉽구나",
+            "쉬운구나",
+            "쉽는구나",
+            "쉽군요구나"
+          ],
+          "explain": "Nói một mình, tính từ → -구나."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "두 사람이 형제였군요.",
+            "두 사람이 형제군였요.",
+            "두 사람이 형제이는군요.",
+            "두 사람이 형제하는군요."
+          ],
+          "explain": "Danh từ quá khứ → 였군요."
+        },
+        {
+          "q": "Nghĩa của \"아, 그래서 다들 민수 씨를 좋아하는군요.\"",
+          "options": [
+            "À, thì ra vì thế mà ai cũng thích Min-su.",
+            "Tôi không biết ai thích Min-su.",
+            "Mọi người sẽ thích Min-su chứ?",
+            "Min-su thích tất cả mọi người."
+          ],
+          "explain": "-는군요: vừa nhận ra lý do."
+        }
+      ]
+    },
+    {
+      "pattern": "-(으)ㄴ/는 편이다",
+      "title": "thuộc kiểu…, khá là…",
+      "note": [
+        "Nói khuynh hướng chung, nhẹ nhàng hơn khẳng định thẳng.",
+        "Tính từ + -(으)ㄴ 편이다; động từ + -는 편이다 (hay đi với 잘, 많이, 자주, 빨리).",
+        "Nói về quá khứ: -(으)ㄴ/는 편이었다."
+      ],
+      "examples": [
+        [
+          "저는 성격이 조용한 편이에요.",
+          "Tôi thuộc kiểu khá trầm."
+        ],
+        [
+          "우리 형은 친구를 쉽게 사귀는 편이에요.",
+          "Anh tôi thuộc kiểu dễ kết bạn."
+        ],
+        [
+          "어렸을 때는 겁이 많은 편이었어요.",
+          "Hồi nhỏ tôi khá nhát."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "저는 처음 만난 사람하고도 이야기를 잘 ___ 편이에요.",
+          "options": [
+            "하는",
+            "한",
+            "할",
+            "하기"
+          ],
+          "explain": "Động từ, thói quen → -는 편이다."
+        },
+        {
+          "q": "제 동생은 또래에 비해 키가 ___ 편이에요.",
+          "options": [
+            "큰",
+            "크는",
+            "클",
+            "크기"
+          ],
+          "explain": "크다 là tính từ → 큰 편이다."
+        },
+        {
+          "q": "A: 매운 음식 잘 먹어요? B: 네, 잘 먹는 ___.",
+          "options": [
+            "편이에요",
+            "처럼이에요",
+            "바람이에요",
+            "줄이에요"
+          ],
+          "explain": "Khuynh hướng → -는 편이에요."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "우리 반 친구들은 다 활발한 편이에요.",
+            "우리 반 친구들은 다 활발하는 편이에요.",
+            "우리 반 친구들은 다 활발할 편이에요.",
+            "우리 반 친구들은 다 활발한 편해요."
+          ],
+          "explain": "Tính từ → -(으)ㄴ 편이다."
+        },
+        {
+          "q": "Nghĩa của \"저는 화를 잘 안 내는 편이에요.\"",
+          "options": [
+            "Tôi thuộc kiểu ít khi nổi giận.",
+            "Tôi chưa bao giờ nổi giận.",
+            "Tôi rất hay nổi giận.",
+            "Tôi không biết cách nổi giận."
+          ],
+          "explain": "잘 안 -는 편이다 = ít khi…"
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "그 사람은 일을 할 때 작은 것까지 확인할 정도로 ___.",
+      "options": [
+        "꼼꼼해요",
+        "게을러요",
+        "변덕스러워요",
+        "무뚝뚝해요"
+      ],
+      "explain": "Kiểm tra cả chi tiết nhỏ → 꼼꼼하다."
+    },
+    {
+      "q": "제 친구는 처음 보는 사람하고도 금방 친해질 만큼 ___.",
+      "options": [
+        "사교적이에요",
+        "내성적이에요",
+        "소극적이에요",
+        "예민해요"
+      ],
+      "explain": "Dễ thân với người lạ → 사교적이다."
+    },
+    {
+      "q": "동생은 자기 생각만 하고 다른 사람은 생각하지 않아서 좀 ___.",
+      "options": [
+        "이기적이에요",
+        "다정해요",
+        "침착해요",
+        "씩씩해요"
+      ],
+      "explain": "Chỉ nghĩ cho mình → 이기적이다."
+    },
+    {
+      "q": "한번 정하면 다른 사람 말을 절대 듣지 않아요. 정말 고집이 ___.",
+      "options": [
+        "세요",
+        "많아요",
+        "빨라요",
+        "적어요"
+      ],
+      "explain": "고집이 세다 = cố chấp."
+    },
+    {
+      "q": "저는 큰 문제가 생겨도 당황하지 않고 ___ 행동하려고 해요.",
+      "options": [
+        "침착하게",
+        "이기적으로",
+        "까다롭게",
+        "변덕스럽게"
+      ],
+      "explain": "Không hoảng → 침착하게."
+    },
+    {
+      "q": "누구에게나 ___과 단점이 있어요.",
+      "options": [
+        "장점",
+        "첫인상",
+        "별명",
+        "혈액형"
+      ],
+      "explain": "장점 ↔ 단점."
+    },
+    {
+      "q": "처음 만났을 때 ___이 좋아서 계속 만나고 싶었어요.",
+      "options": [
+        "첫인상",
+        "단점",
+        "고집",
+        "욕심"
+      ],
+      "explain": "Lần đầu gặp → 첫인상."
+    },
+    {
+      "q": "제 남자 친구는 말수가 ___ 무뚝뚝하지만 마음은 따뜻해요.",
+      "options": [
+        "적고",
+        "세고",
+        "빠르고",
+        "급하고"
+      ],
+      "explain": "말수가 적다 = ít nói."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 새로 온 직원은 어때요? 나: 말은 별로 없지만 일을 아주 꼼꼼하게 하는 편이에요.",
+      "q": "Nhân viên mới là người thế nào?",
+      "options": [
+        "Ít nói nhưng làm việc tỉ mỉ",
+        "Nói nhiều và hoạt bát",
+        "Làm việc cẩu thả",
+        "Hay đi trễ"
+      ],
+      "explain": "말은 별로 없지만 일을 아주 꼼꼼하게 하는 편이에요."
+    },
+    {
+      "listen": "가: 지수 씨 언니는 지수 씨하고 성격이 비슷해요? 나: 아니요, 정반대예요. 저는 조용한데 언니는 아주 활발해요.",
+      "q": "Chị của Ji-su có tính cách thế nào?",
+      "options": [
+        "Rất hoạt bát",
+        "Trầm lặng",
+        "Giống hệt Ji-su",
+        "Nhút nhát"
+      ],
+      "explain": "언니는 아주 활발해요."
+    },
+    {
+      "listen": "가: 이 사진 속 아이가 민수 씨예요? 나: 네, 어렸을 때는 겁이 많아서 혼자 잠도 못 잤어요. 가: 지금은 정말 씩씩한데 어렸을 땐 그랬군요.",
+      "q": "Hồi nhỏ Min-su thế nào?",
+      "options": [
+        "Nhát gan",
+        "Rất mạnh dạn",
+        "Hay đùa nghịch",
+        "Ngủ một mình rất giỏi"
+      ],
+      "explain": "어렸을 때는 겁이 많아서…"
+    },
+    {
+      "listen": "가: 우리 팀장님은 좀 까다로운 편이에요. 보고서에 작은 실수가 있어도 다시 쓰라고 하세요. 나: 그래도 덕분에 실력이 많이 늘겠군요.",
+      "q": "Vì sao trưởng nhóm bị cho là khó tính?",
+      "options": [
+        "Có lỗi nhỏ cũng bắt viết lại báo cáo",
+        "Hay nổi giận vô cớ",
+        "Không cho nghỉ phép",
+        "Nói chuyện cộc lốc"
+      ],
+      "explain": "작은 실수가 있어도 다시 쓰라고 하세요."
+    },
+    {
+      "listen": "가: 제 단점은 성격이 너무 급한 거예요. 나: 그럼 말하기 전에 한 번 더 생각해 보세요.",
+      "q": "Người thứ hai khuyên gì?",
+      "options": [
+        "Nghĩ thêm một lần trước khi nói",
+        "Nói nhanh hơn",
+        "Đừng nói chuyện với ai",
+        "Đi khám bác sĩ"
+      ],
+      "explain": "말하기 전에 한 번 더 생각해 보세요."
+    }
+  ],
+  "reading": {
+    "passage": "사람의 성격은 보통 외향적인 성격과 내성적인 성격으로 나눕니다. 외향적인 사람은 사람들을 만나면서 힘을 얻는 편이고, 내성적인 사람은 혼자 있는 시간에 힘을 얻는 편입니다. 많은 사람들이 외향적인 성격이 더 좋다고 생각하지만 꼭 그렇지는 않습니다. 내성적인 사람은 다른 사람의 말을 잘 듣고 일을 침착하게 하는 장점이 있습니다. 중요한 것은 자기 성격을 잘 알고 장점을 살리는 것입니다.",
+    "passageVi": "Tính cách con người thường được chia thành hướng ngoại và hướng nội. Người hướng ngoại thường nạp năng lượng khi gặp gỡ mọi người, còn người hướng nội thường nạp năng lượng khi ở một mình. Nhiều người nghĩ tính cách hướng ngoại tốt hơn nhưng không hẳn vậy. Người hướng nội có ưu điểm là biết lắng nghe người khác và làm việc điềm tĩnh. Điều quan trọng là hiểu rõ tính cách của mình và phát huy ưu điểm.",
+    "questions": [
+      {
+        "q": "Theo đoạn văn, người hướng nội nạp năng lượng khi nào?",
+        "options": [
+          "Khi ở một mình",
+          "Khi gặp nhiều người",
+          "Khi làm việc nhóm",
+          "Khi đi du lịch"
+        ],
+        "explain": "내성적인 사람은 혼자 있는 시간에 힘을 얻는 편입니다."
+      },
+      {
+        "q": "Ý chính của người viết là gì?",
+        "options": [
+          "Hiểu rõ tính cách và phát huy ưu điểm của mình",
+          "Tính cách hướng ngoại tốt hơn",
+          "Người hướng nội nên thay đổi tính cách",
+          "Không nên chia tính cách thành hai loại"
+        ],
+        "explain": "중요한 것은 자기 성격을 잘 알고 장점을 살리는 것입니다."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu giới thiệu tính cách của bạn và một người trong gia đình. Dùng 처럼 và -(으)ㄴ/는 편이다; thêm một câu phản ứng bằng -군요.",
+    "samples": [
+      [
+        "저는 조용하고 꼼꼼한 편이에요.",
+        "Tôi thuộc kiểu khá trầm và tỉ mỉ."
+      ],
+      [
+        "그런데 제 동생은 저하고 정반대로 아주 활발해요.",
+        "Nhưng em tôi trái ngược hẳn, rất hoạt bát."
+      ],
+      [
+        "동생은 아빠처럼 유머 감각이 있어서 친구가 많아요.",
+        "Em tôi có khiếu hài hước giống bố nên có nhiều bạn."
+      ],
+      [
+        "사진을 보니까 두 사람이 정말 닮았군요.",
+        "Xem ảnh mới thấy hai người giống nhau thật đấy."
+      ]
+    ],
+    "tips": "Tính từ + -(으)ㄴ 편이다, động từ + -는 편이다. N처럼 = giống như N. Phản ứng khi mới nhận ra: tính từ + -군요, động từ + -는군요."
+  },
+  "topik": [
+    {
+      "type": "blank",
+      "q": "제 친구는 (    ) 노래를 잘 불러서 별명이 '가수'예요.",
+      "options": [
+        "가수처럼",
+        "가수인 편이고",
+        "가수군요",
+        "가수였는데"
+      ],
+      "explain": "Hát hay giống như ca sĩ → N처럼."
+    },
+    {
+      "type": "blank",
+      "q": "저는 처음 만난 사람 앞에서는 말을 잘 (    ).",
+      "options": [
+        "못 하는 편이에요",
+        "못 하는군요",
+        "못 하는 처럼이에요",
+        "못 할 편이에요"
+      ],
+      "explain": "Khuynh hướng của bản thân → -는 편이에요."
+    },
+    {
+      "type": "blank",
+      "q": "A: 이 그림을 제가 그렸어요. B: 와, 그림을 정말 잘 (    ).",
+      "options": [
+        "그리시는군요",
+        "그리실 편이에요",
+        "그리시는 처럼요",
+        "그리셨을까요"
+      ],
+      "explain": "Mới biết và cảm thán → -는군요."
+    },
+    {
+      "type": "similar",
+      "q": "저는 어렸을 때부터 겁이 __많은 편이에요__.",
+      "options": [
+        "좀 많아요",
+        "하나도 없어요",
+        "많을 거예요",
+        "많아졌어요"
+      ],
+      "explain": "-(으)ㄴ 편이다 ≈ khá là, tương đối (좀)."
+    },
+    {
+      "type": "similar",
+      "q": "동생은 __아이처럼__ 작은 일에도 잘 울어요.",
+      "options": [
+        "아이같이",
+        "아이보다",
+        "아이 대신",
+        "아이한테"
+      ],
+      "explain": "N처럼 ≈ N같이."
+    },
+    {
+      "type": "notice",
+      "passage": "🧩 성격 유형 검사 안내\n· 대상: 우리 학교 학생 누구나\n· 기간: 11월 25일 ~ 11월 29일\n· 장소: 학생회관 2층 상담실\n· 검사 시간: 약 30분\n· 결과는 일주일 후 이메일로 보내 드립니다.",
+      "passageVi": "Thông báo kiểm tra kiểu tính cách. Đối tượng: mọi sinh viên của trường. Thời gian: 25/11 – 29/11. Địa điểm: phòng tư vấn tầng 2 nhà sinh viên. Thời gian làm: khoảng 30 phút. Kết quả gửi qua email sau một tuần.",
+      "q": "이 글의 내용과 같은 것을 고르십시오.",
+      "options": [
+        "검사 결과는 이메일로 받습니다.",
+        "검사는 한 시간쯤 걸립니다.",
+        "교수님만 검사를 받을 수 있습니다.",
+        "검사 결과는 바로 알 수 있습니다."
+      ],
+      "explain": "결과는 일주일 후 이메일로 보내 드립니다."
+    },
+    {
+      "type": "order",
+      "passage": "(가) 그런데 같이 일해 보니까 아주 다정하고 배려심이 많은 사람이었습니다.\n(나) 회사에 처음 들어갔을 때 옆자리 선배는 말수가 적었습니다.\n(다) 그래서 첫인상만 보고 사람을 판단하면 안 된다는 것을 알게 되었습니다.\n(라) 그래서 처음에는 좀 무뚝뚝한 사람이라고 생각했습니다.",
+      "passageVi": "(나) Khi tôi mới vào công ty, anh tiền bối ngồi cạnh rất ít nói. (라) Vì thế lúc đầu tôi nghĩ anh ấy là người hơi cộc lốc. (가) Nhưng làm việc cùng mới thấy anh ấy rất ân cần và biết nghĩ cho người khác. (다) Vì vậy tôi hiểu ra rằng không được đánh giá người khác chỉ qua ấn tượng đầu tiên.",
+      "q": "다음을 순서대로 맞게 배열한 것을 고르십시오.",
+      "options": [
+        "(나)-(라)-(가)-(다)",
+        "(나)-(가)-(라)-(다)",
+        "(라)-(나)-(다)-(가)",
+        "(나)-(다)-(라)-(가)"
+      ],
+      "explain": "Lúc mới vào (나) → nghĩ là cộc lốc (라) → 그런데 thật ra ân cần (가) → 그래서 rút ra bài học (다)."
+    },
+    {
+      "type": "main",
+      "passage": "사람들은 성격이 비슷한 친구와 더 쉽게 친해지는 편입니다. 하지만 성격이 다른 친구에게서 배울 점이 더 많을 때도 있습니다. 꼼꼼한 친구는 덜렁거리는 친구의 실수를 줄여 주고, 활발한 친구는 조용한 친구에게 새로운 경험을 하게 해 줍니다. 그러니까 나와 성격이 다른 사람도 소중한 친구가 될 수 있습니다.",
+      "passageVi": "Người ta thường dễ thân với bạn có tính cách giống mình hơn. Nhưng đôi khi lại học được nhiều điều hơn từ người bạn khác tính. Bạn tỉ mỉ giúp bạn hậu đậu bớt lỗi, bạn hoạt bát cho bạn trầm tính những trải nghiệm mới. Vì vậy người khác tính với mình cũng có thể trở thành người bạn quý giá.",
+      "q": "다음 글의 중심 생각으로 알맞은 것을 고르십시오.",
+      "options": [
+        "성격이 다른 사람도 좋은 친구가 될 수 있습니다.",
+        "성격이 비슷한 친구만 사귀어야 합니다.",
+        "꼼꼼한 사람은 실수를 하지 않습니다.",
+        "조용한 친구는 새로운 경험을 싫어합니다."
+      ],
+      "explain": "Câu cuối 그러니까… nêu ý chính."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "남자",
+          "수진 씨, 이번에 새로 온 팀장님 어때요?"
+        ],
+        [
+          "여자",
+          "처음에는 무뚝뚝해 보였는데 이야기해 보니까 유머 감각이 있는 편이에요."
+        ],
+        [
+          "남자",
+          "아, 그렇군요. 저는 좀 무서운 분이라고 생각했어요."
+        ],
+        [
+          "여자",
+          "아니에요. 회의 때도 우리 의견을 잘 들어 주세요."
+        ]
+      ],
+      "linesVi": "Nam: Su-jin, trưởng nhóm mới đến thế nào? Nữ: Lúc đầu trông có vẻ cộc lốc nhưng nói chuyện rồi mới thấy khá hài hước. Nam: À, vậy à. Tôi cứ nghĩ là người đáng sợ. Nữ: Không đâu. Trong cuộc họp anh ấy cũng lắng nghe ý kiến của chúng tôi.",
+      "q": "들은 내용과 같은 것을 고르십시오.",
+      "options": [
+        "팀장님은 다른 사람의 의견을 잘 들어 줍니다.",
+        "팀장님은 유머 감각이 없습니다.",
+        "여자는 팀장님을 아직 만나지 않았습니다.",
+        "남자는 팀장님과 자주 이야기합니다."
+      ],
+      "explain": "회의 때도 우리 의견을 잘 들어 주세요."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "여자",
+          "민수 씨는 성격이 정말 좋은 것 같아요. 누가 부탁하면 거절을 못 하잖아요."
+        ],
+        [
+          "남자",
+          "사실 그게 제 단점이에요. 그래서 일이 너무 많아요."
+        ],
+        [
+          "여자",
+          "그럼 이번 주부터는 힘들면 솔직하게 말해 보세요."
+        ],
+        [
+          "남자",
+          "네, 그렇게 해 볼게요."
+        ]
+      ],
+      "linesVi": "Nữ: Min-su tính tình tốt thật đấy. Ai nhờ gì anh cũng không từ chối được mà. Nam: Thật ra đó là nhược điểm của tôi. Vì vậy việc nhiều quá. Nữ: Vậy từ tuần này nếu mệt thì hãy nói thẳng xem. Nam: Vâng, tôi sẽ thử như vậy.",
+      "q": "남자가 할 행동으로 알맞은 것을 고르십시오.",
+      "options": [
+        "힘들 때 솔직하게 말해 봐요.",
+        "부탁을 모두 들어줘요.",
+        "회사를 그만둬요.",
+        "친구에게 일을 부탁해요."
+      ],
+      "explain": "힘들면 솔직하게 말해 보세요. → 그렇게 해 볼게요."
+    }
+  ],
+  "fillWriting": [
+    {
+      "text": "제목: 룸메이트를 찾습니다\n안녕하세요? 저는 한국대학교 3학년 학생입니다. 같이 살 룸메이트를 찾고 있습니다. 저는 조용하고 깨끗한 것을 좋아하는 ( ㉠ ). 그래서 밤늦게 시끄럽게 하지 않는 분이면 ( ㉡ ). 관심 있는 분은 연락 주십시오.",
+      "textVi": "Tiêu đề: Tìm bạn cùng phòng. Xin chào. Tôi là sinh viên năm 3 trường Đại học Hàn Quốc. Tôi đang tìm bạn ở cùng. Tôi ( ㉠ ) thích yên tĩnh và sạch sẽ. Vì vậy nếu là người không làm ồn lúc khuya thì ( ㉡ ). Ai quan tâm xin liên lạc.",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "편입니다",
+            "성격입니다"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "좋겠습니다",
+            "좋을 것 같습니다"
+          ]
+        }
+      ],
+      "tips": "㉠ nói khuynh hướng của bản thân, văn viết -ㅂ니다 → 편입니다. ㉡ nói mong muốn: -(으)면 좋겠습니다."
+    },
+    {
+      "text": "사람의 첫인상은 3초 만에 결정된다고 합니다. 그래서 처음 만난 사람이 무뚝뚝해 보이면 성격도 ( ㉠ ) 생각하기 쉽습니다. 하지만 첫인상과 실제 성격은 다를 때가 많습니다. 그러니까 사람을 잘 알려면 ( ㉡ ).",
+      "textVi": "Người ta nói ấn tượng đầu tiên được quyết định trong 3 giây. Vì vậy nếu người mới gặp trông cộc lốc thì dễ nghĩ rằng tính cách ( ㉠ ). Nhưng ấn tượng đầu và tính cách thật thường khác nhau. Vì thế muốn hiểu rõ một người thì ( ㉡ ).",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "무뚝뚝할 거라고",
+            "차가울 거라고"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "오래 만나 봐야 합니다",
+            "시간을 두고 만나 보는 것이 좋습니다"
+          ]
+        }
+      ],
+      "tips": "㉠ đứng trước 생각하다 → đoán: -(으)ㄹ 거라고. ㉡ sau -(으)려면 nói việc cần làm: -아/어야 합니다."
+    }
+  ]
+}

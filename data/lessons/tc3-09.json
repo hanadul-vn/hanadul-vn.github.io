@@ -1,0 +1,860 @@
+{
+  "id": "tc3-09",
+  "title": "Chuyển nhà",
+  "ko": "이사",
+  "goal": "Tìm nhà, chuyển nhà và làm quen hàng xóm; nói “biết/không biết cách…”, “mong rằng…”, “so với…” và “… nào cũng được”.",
+  "vocab": [
+    {
+      "group": "Tìm nhà",
+      "words": [
+        [
+          "오피스텔",
+          "căn hộ officetel"
+        ],
+        [
+          "전세",
+          "thuê nhà đặt cọc lớn (jeonse)"
+        ],
+        [
+          "계약서",
+          "bản hợp đồng"
+        ],
+        [
+          "세입자",
+          "người thuê nhà"
+        ],
+        [
+          "햇빛이 잘 들다",
+          "nhiều nắng chiếu vào"
+        ],
+        [
+          "남향",
+          "hướng nam"
+        ],
+        [
+          "풀옵션",
+          "đầy đủ nội thất sẵn"
+        ],
+        [
+          "층간 소음",
+          "tiếng ồn giữa các tầng"
+        ],
+        [
+          "평",
+          "pyeong (đơn vị diện tích ≈ 3,3 m²)"
+        ],
+        [
+          "집을 구하다",
+          "tìm thuê nhà"
+        ],
+        [
+          "역세권",
+          "khu gần ga tàu điện"
+        ],
+        [
+          "낡다",
+          "cũ kỹ"
+        ],
+        [
+          "새로 지은 건물",
+          "tòa nhà mới xây"
+        ]
+      ]
+    },
+    {
+      "group": "Chuyển nhà",
+      "words": [
+        [
+          "이삿짐",
+          "đồ đạc chuyển nhà"
+        ],
+        [
+          "이삿짐 센터",
+          "công ty chuyển nhà"
+        ],
+        [
+          "포장 이사",
+          "chuyển nhà trọn gói"
+        ],
+        [
+          "짐을 싸다",
+          "đóng gói đồ"
+        ],
+        [
+          "짐을 풀다",
+          "dỡ đồ"
+        ],
+        [
+          "조립하다",
+          "lắp ráp"
+        ],
+        [
+          "배치하다",
+          "bố trí, kê (đồ đạc)"
+        ],
+        [
+          "전입 신고",
+          "khai báo chuyển đến (cư trú)"
+        ],
+        [
+          "주소를 변경하다",
+          "đổi địa chỉ"
+        ],
+        [
+          "대형 폐기물",
+          "đồ bỏ cồng kềnh"
+        ],
+        [
+          "이사 비용",
+          "chi phí chuyển nhà"
+        ],
+        [
+          "손 없는 날",
+          "ngày tốt (để chuyển nhà)"
+        ]
+      ]
+    },
+    {
+      "group": "Hàng xóm, khu phố",
+      "words": [
+        [
+          "이웃",
+          "hàng xóm"
+        ],
+        [
+          "집들이",
+          "tiệc tân gia"
+        ],
+        [
+          "인사를 드리다",
+          "chào hỏi (kính ngữ)"
+        ],
+        [
+          "떡을 돌리다",
+          "đi biếu bánh tteok"
+        ],
+        [
+          "경비실",
+          "phòng bảo vệ"
+        ],
+        [
+          "관리 사무소",
+          "ban quản lý tòa nhà"
+        ],
+        [
+          "분리수거",
+          "phân loại rác"
+        ],
+        [
+          "편의 시설",
+          "tiện ích"
+        ],
+        [
+          "택배를 맡기다",
+          "gửi nhờ bưu kiện"
+        ],
+        [
+          "윗집",
+          "nhà tầng trên"
+        ],
+        [
+          "아랫집",
+          "nhà tầng dưới"
+        ],
+        [
+          "주민 센터",
+          "trung tâm hành chính phường"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "V -(으)ㄹ 줄 알다/모르다",
+      "title": "biết / không biết cách…",
+      "note": [
+        "Nói về khả năng có được nhờ học, luyện: 운전할 줄 알아요.",
+        "Thân có patchim + -을 줄, không patchim + -ㄹ 줄; thân ㄹ: 만들 줄.",
+        "Khác với -(으)ㄴ/는 줄 알았다 (cứ tưởng) ở Bài 8."
+      ],
+      "examples": [
+        [
+          "저는 운전할 줄 알아요.",
+          "Tôi biết lái xe."
+        ],
+        [
+          "이삿짐 센터에 어떻게 연락할 줄 몰라서 친구에게 물어봤어요.",
+          "Không biết cách liên hệ công ty chuyển nhà nên tôi hỏi bạn."
+        ],
+        [
+          "혼자 가구를 조립할 줄 아세요?",
+          "Bạn có biết tự lắp ráp đồ nội thất không?"
+        ]
+      ],
+      "questions": [
+        {
+          "q": "저는 김치찌개를 ___ 줄 알아요.",
+          "options": [
+            "끓일",
+            "끓이는",
+            "끓인",
+            "끓이기"
+          ],
+          "explain": "Biết cách → -(으)ㄹ 줄 알다."
+        },
+        {
+          "q": "A: 이 세탁기 ___ 줄 아세요? B: 네, 제가 알려 드릴게요.",
+          "options": [
+            "쓸",
+            "쓰는",
+            "쓴",
+            "쓰기"
+          ],
+          "explain": "Biết cách dùng → 쓸 줄 알다."
+        },
+        {
+          "q": "동생은 아직 어려서 자전거를 ___ 줄 몰라요.",
+          "options": [
+            "탈",
+            "타는",
+            "탄",
+            "타기"
+          ],
+          "explain": "Không biết cách → 탈 줄 모르다."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "저는 가구를 조립할 줄 몰라요.",
+            "저는 가구를 조립할 줄 없어요.",
+            "저는 가구를 조립할 줄 안 해요.",
+            "저는 가구를 조립하기 줄 몰라요."
+          ],
+          "explain": "-(으)ㄹ 줄 알다/모르다, không dùng 없다/안 하다."
+        },
+        {
+          "q": "Nghĩa của \"한국에 처음 왔을 때는 지하철을 탈 줄 몰랐어요.\"",
+          "options": [
+            "Lúc mới đến Hàn tôi không biết cách đi tàu điện ngầm.",
+            "Lúc mới đến Hàn tôi không thích đi tàu điện ngầm.",
+            "Lúc mới đến Hàn tôi tưởng không có tàu điện ngầm.",
+            "Lúc mới đến Hàn tôi đi tàu điện ngầm mỗi ngày."
+          ],
+          "explain": "-(으)ㄹ 줄 몰랐다 = (đã) không biết cách."
+        }
+      ]
+    },
+    {
+      "pattern": "V -기(를) 바라다",
+      "title": "mong rằng…, chúc…",
+      "note": [
+        "Bày tỏ mong muốn cho người khác hoặc chúc: 행복하시기를 바랍니다.",
+        "Trong thông báo, -기 바랍니다 là yêu cầu lịch sự: 미리 알려 주시기 바랍니다.",
+        "Văn nói thân mật: -기(를) 바라요 / 바랄게요."
+      ],
+      "examples": [
+        [
+          "새 집에서 행복하게 지내시기를 바랍니다.",
+          "Chúc anh chị sống hạnh phúc ở nhà mới."
+        ],
+        [
+          "이사 날짜를 미리 알려 주시기 바랍니다.",
+          "Mong quý vị báo trước ngày chuyển nhà."
+        ],
+        [
+          "이번 시험에 꼭 합격하기를 바라요.",
+          "Mong bạn nhất định đỗ kỳ thi lần này."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "쓰레기는 정해진 날에만 ___ 바랍니다.",
+          "options": [
+            "버리시기",
+            "버리시는",
+            "버리신",
+            "버리실"
+          ],
+          "explain": "Thông báo, yêu cầu lịch sự → -기 바랍니다."
+        },
+        {
+          "q": "새 회사에서도 좋은 사람들을 많이 ___ 바라요.",
+          "options": [
+            "만나기를",
+            "만나는",
+            "만나서",
+            "만날"
+          ],
+          "explain": "Chúc → -기를 바라요."
+        },
+        {
+          "q": "A: 다음 주에 이사해요. B: 그래요? 이사가 잘 ___ 바랄게요.",
+          "options": [
+            "끝나기를",
+            "끝나는",
+            "끝날",
+            "끝나서"
+          ],
+          "explain": "Mong cho người khác → -기를 바라다."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "모두 건강하시기를 바랍니다.",
+            "모두 건강하시는 바랍니다.",
+            "모두 건강하시기가 바랍니다.",
+            "모두 건강하신 바랍니다."
+          ],
+          "explain": "-기(를) 바랍니다."
+        },
+        {
+          "q": "Nghĩa của \"이사 전날까지 관리비를 내 주시기 바랍니다.\"",
+          "options": [
+            "Mong quý vị đóng phí quản lý muộn nhất vào hôm trước ngày chuyển nhà.",
+            "Phí quản lý sẽ được trả lại khi chuyển nhà.",
+            "Không cần đóng phí quản lý khi chuyển nhà.",
+            "Hôm chuyển nhà mới đóng phí quản lý."
+          ],
+          "explain": "-기 바랍니다 = mong quý vị…"
+        }
+      ]
+    },
+    {
+      "pattern": "N에 비해(서)",
+      "title": "so với N",
+      "note": [
+        "So sánh mức độ với N: 전에 살던 집에 비해서 넓어요.",
+        "Có thể dùng N에 비하면 (nếu so với N).",
+        "Hay đi cùng 더/덜, 훨씬, -(으)ㄴ 편이다."
+      ],
+      "examples": [
+        [
+          "새 집은 전에 살던 집에 비해서 넓어요.",
+          "Nhà mới rộng hơn so với nhà cũ."
+        ],
+        [
+          "이 동네는 서울 시내에 비해 월세가 싼 편이에요.",
+          "Khu này tiền thuê tháng khá rẻ so với nội thành Seoul."
+        ],
+        [
+          "작년에 비해 이사 비용이 많이 올랐어요.",
+          "So với năm ngoái, chi phí chuyển nhà tăng nhiều."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "이 집은 크기___ 월세가 비싸지 않아요.",
+          "options": [
+            "에 비해",
+            "처럼",
+            "바람에",
+            "중에"
+          ],
+          "explain": "So với kích thước → 크기에 비해."
+        },
+        {
+          "q": "역에서 가까운 집은 먼 집___ 비싸요.",
+          "options": [
+            "에 비해서",
+            "이나",
+            "처럼은",
+            "대로"
+          ],
+          "explain": "So với nhà xa → 먼 집에 비해서."
+        },
+        {
+          "q": "A: 새 동네는 어때요? B: 전에 살던 동네___ 조용해서 좋아요.",
+          "options": [
+            "에 비해",
+            "에게",
+            "으로부터",
+            "까지만"
+          ],
+          "explain": "So với khu cũ → 동네에 비해."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "원룸은 아파트에 비해 관리비가 적게 나와요.",
+            "원룸은 아파트에 비해서를 관리비가 적게 나와요.",
+            "원룸은 아파트를 비해 관리비가 적게 나와요.",
+            "원룸은 아파트에서 비해 관리비가 적게 나와요."
+          ],
+          "explain": "Luôn là N에 비해(서)."
+        },
+        {
+          "q": "Nghĩa của \"고향에 비하면 여기는 겨울이 훨씬 추워요.\"",
+          "options": [
+            "So với quê nhà, ở đây mùa đông lạnh hơn nhiều.",
+            "Mùa đông ở quê lạnh hơn ở đây.",
+            "Ở đây và quê nhà lạnh như nhau.",
+            "Ở đây không có mùa đông."
+          ],
+          "explain": "N에 비하면 = nếu so với N."
+        }
+      ]
+    },
+    {
+      "pattern": "아무 N(이)나",
+      "title": "N nào cũng được, bất cứ N nào",
+      "note": [
+        "Không chọn lựa, cái nào cũng được: 아무 때나, 아무 데나, 아무거나, 아무나.",
+        "Danh từ có patchim + 이나, không patchim + 나.",
+        "Phủ định dùng 아무 N도: 아무것도 없어요, 아무도 안 왔어요."
+      ],
+      "examples": [
+        [
+          "아무 때나 놀러 오세요.",
+          "Lúc nào đến chơi cũng được."
+        ],
+        [
+          "짐을 아무 데나 놓으면 안 돼요.",
+          "Không được để đồ bừa ở bất cứ chỗ nào."
+        ],
+        [
+          "배고프니까 아무 음식이나 주세요.",
+          "Đói rồi, cho tôi món gì cũng được."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "A: 뭐 마실래요? B: 저는 ___ 괜찮아요.",
+          "options": [
+            "아무거나",
+            "아무것도",
+            "아무도",
+            "아무 데도"
+          ],
+          "explain": "Cái gì cũng được → 아무거나."
+        },
+        {
+          "q": "쓰레기를 아무 ___ 버리면 안 돼요.",
+          "options": [
+            "데나",
+            "데도",
+            "거도",
+            "때도"
+          ],
+          "explain": "Bất cứ chỗ nào → 아무 데나."
+        },
+        {
+          "q": "이 일은 어렵지 않아서 ___ 할 수 있어요.",
+          "options": [
+            "아무나",
+            "아무도",
+            "아무것도",
+            "아무 데도"
+          ],
+          "explain": "Ai cũng → 아무나."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "주말에는 아무 때나 전화해도 돼요.",
+            "주말에는 아무 때도 전화해도 돼요.",
+            "주말에는 아무 때나를 전화해도 돼요.",
+            "주말에는 아무나 때 전화해도 돼요."
+          ],
+          "explain": "Khẳng định → 아무 때나."
+        },
+        {
+          "q": "Nghĩa của \"이사 첫날이라서 아무것도 없어요.\"",
+          "options": [
+            "Vì là ngày đầu chuyển đến nên chẳng có gì cả.",
+            "Ngày đầu chuyển nhà có gì cũng được.",
+            "Ngày đầu chuyển nhà ai cũng đến.",
+            "Ngày đầu chuyển nhà mua gì cũng được."
+          ],
+          "explain": "아무것도 + phủ định = không… gì cả."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "이사 전날 밤에 짐을 다 ___ 상자에 넣었어요.",
+      "options": [
+        "싸서",
+        "풀어서",
+        "조립해서",
+        "돌려서"
+      ],
+      "explain": "Đóng đồ → 짐을 싸다."
+    },
+    {
+      "q": "새 집에 도착해서 짐을 ___ 하나씩 정리했어요.",
+      "options": [
+        "풀고",
+        "싸고",
+        "구하고",
+        "맡기고"
+      ],
+      "explain": "Dỡ đồ → 짐을 풀다."
+    },
+    {
+      "q": "___ 소음 때문에 밤에 잠을 못 자요. 윗집 아이들이 매일 뛰어요.",
+      "options": [
+        "층간",
+        "남향",
+        "전입",
+        "편의"
+      ],
+      "explain": "Tiếng ồn giữa các tầng → 층간 소음."
+    },
+    {
+      "q": "이사한 후에는 주민 센터에 가서 ___를 해야 해요.",
+      "options": [
+        "전입 신고",
+        "분리수거",
+        "집들이",
+        "포장 이사"
+      ],
+      "explain": "Khai báo cư trú → 전입 신고."
+    },
+    {
+      "q": "새로 산 책상을 혼자 ___ 시간이 오래 걸렸어요.",
+      "options": [
+        "조립하느라고",
+        "구하느라고",
+        "돌리느라고",
+        "맡기느라고"
+      ],
+      "explain": "Lắp ráp → 조립하다."
+    },
+    {
+      "q": "이 방은 남향이라서 ___ 아주 밝아요.",
+      "options": [
+        "햇빛이 잘 들어서",
+        "층간 소음이 있어서",
+        "관리비가 비싸서",
+        "짐을 싸서"
+      ],
+      "explain": "Hướng nam → nhiều nắng."
+    },
+    {
+      "q": "집에 없을 때 온 택배는 아파트 ___에 맡겨 두었어요.",
+      "options": [
+        "경비실",
+        "계약서",
+        "세입자",
+        "역세권"
+      ],
+      "explain": "Phòng bảo vệ → 경비실."
+    },
+    {
+      "q": "짐이 많아서 이번에는 ___ 센터에 맡기기로 했어요.",
+      "options": [
+        "이삿짐",
+        "분리수거",
+        "편의",
+        "주민"
+      ],
+      "explain": "Công ty chuyển nhà → 이삿짐 센터."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 이 집은 월세가 얼마예요? 나: 보증금 천만 원에 월세 오십만 원이고, 관리비는 따로 내셔야 해요.",
+      "q": "Điều nào đúng về căn nhà?",
+      "options": [
+        "Phí quản lý trả riêng",
+        "Không cần đặt cọc",
+        "Tiền thuê tháng 1 triệu won",
+        "Phí quản lý đã gồm trong tiền thuê"
+      ],
+      "explain": "관리비는 따로 내셔야 해요."
+    },
+    {
+      "listen": "가: 이사 준비는 다 했어요? 나: 아직요. 포장 이사를 하려고 하는데 어디에 연락할 줄 몰라서요.",
+      "q": "Người thứ hai gặp khó khăn gì?",
+      "options": [
+        "Không biết liên hệ công ty chuyển nhà ở đâu",
+        "Không có tiền chuyển nhà",
+        "Chưa tìm được nhà mới",
+        "Không biết đóng đồ"
+      ],
+      "explain": "어디에 연락할 줄 몰라서요."
+    },
+    {
+      "listen": "가: 새 집은 어때요? 나: 전에 살던 집에 비해서 좀 좁지만 회사에서 가까워서 좋아요.",
+      "q": "Nhà mới thế nào so với nhà cũ?",
+      "options": [
+        "Hơi chật hơn nhưng gần công ty",
+        "Rộng hơn và gần công ty",
+        "Xa công ty hơn",
+        "Rẻ hơn nhiều"
+      ],
+      "explain": "좀 좁지만 회사에서 가까워서 좋아요."
+    },
+    {
+      "listen": "가: 이번 토요일에 집들이를 하려고 해요. 아무 때나 편할 때 오세요. 나: 고마워요. 그럼 오후에 갈게요.",
+      "q": "Khách được mời đến lúc nào?",
+      "options": [
+        "Lúc nào tiện cũng được",
+        "Đúng 6 giờ tối",
+        "Chủ nhật",
+        "Sáng thứ Bảy"
+      ],
+      "explain": "아무 때나 편할 때 오세요."
+    },
+    {
+      "listen": "가: 안녕하세요, 이번에 502호로 이사 온 사람인데요. 이거 떡인데 좀 드세요. 나: 어머, 고마워요. 앞으로 잘 지내요.",
+      "q": "Người thứ nhất đang làm gì?",
+      "options": [
+        "Chào hàng xóm và biếu bánh tteok",
+        "Mời đến tiệc tân gia",
+        "Hỏi đường đến phòng 502",
+        "Phàn nàn về tiếng ồn"
+      ],
+      "explain": "502호로 이사 온 사람인데요. 이거 떡인데 좀 드세요."
+    }
+  ],
+  "reading": {
+    "passage": "한국에서 집을 구할 때는 보통 부동산에 갑니다. 집을 고를 때는 월세나 보증금뿐만 아니라 관리비가 얼마인지도 확인해야 합니다. 그리고 낮에만 집을 보면 층간 소음이 있는지 알기 어려우니까 저녁에도 한 번 가 보는 것이 좋습니다. 계약서를 쓸 때는 내용을 꼼꼼하게 읽고 모르는 것은 꼭 물어보기 바랍니다.",
+    "passageVi": "Ở Hàn Quốc khi tìm thuê nhà người ta thường đến văn phòng bất động sản. Khi chọn nhà không chỉ xem tiền thuê tháng hay tiền đặt cọc mà còn phải kiểm tra phí quản lý bao nhiêu. Ngoài ra nếu chỉ xem nhà ban ngày thì khó biết có tiếng ồn giữa các tầng không, nên đi xem thêm một lần vào buổi tối thì tốt. Khi viết hợp đồng, mong bạn đọc kỹ nội dung và nhất định hỏi những gì chưa hiểu.",
+    "questions": [
+      {
+        "q": "Theo đoạn văn, vì sao nên đi xem nhà cả buổi tối?",
+        "options": [
+          "Để biết có tiếng ồn giữa các tầng không",
+          "Vì buổi tối giá rẻ hơn",
+          "Vì văn phòng bất động sản chỉ mở buổi tối",
+          "Để gặp chủ nhà"
+        ],
+        "explain": "낮에만 집을 보면 층간 소음이 있는지 알기 어려우니까…"
+      },
+      {
+        "q": "Khi viết hợp đồng nên làm gì?",
+        "options": [
+          "Đọc kỹ và hỏi điều chưa hiểu",
+          "Ký thật nhanh",
+          "Nhờ hàng xóm đọc giúp",
+          "Chỉ xem số tiền"
+        ],
+        "explain": "내용을 꼼꼼하게 읽고 모르는 것은 꼭 물어보기 바랍니다."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu giới thiệu chỗ ở mới của bạn với bạn bè. Dùng N에 비해서, 아무 N(이)나 và -기(를) 바라다.",
+    "samples": [
+      [
+        "지난주에 학교 근처 원룸으로 이사했어요.",
+        "Tuần trước tôi chuyển đến phòng đơn gần trường."
+      ],
+      [
+        "전에 살던 집에 비해서 작지만 햇빛이 잘 들어요.",
+        "So với nhà cũ thì nhỏ hơn nhưng nhiều nắng."
+      ],
+      [
+        "주말에는 아무 때나 놀러 오세요.",
+        "Cuối tuần đến chơi lúc nào cũng được."
+      ],
+      [
+        "새 동네에서도 좋은 일이 많기를 바라요.",
+        "Mong ở khu mới cũng có nhiều chuyện tốt."
+      ]
+    ],
+    "tips": "N에 비해서 + so sánh (더/덜, 훨씬, -(으)ㄴ 편이다). 아무 때나 / 아무 데나 / 아무거나 = … nào cũng được. Mong muốn: -기(를) 바라요 / 바랍니다."
+  },
+  "topik": [
+    {
+      "type": "blank",
+      "q": "저는 혼자 이사를 해 본 적이 없어서 이삿짐을 어떻게 (    ).",
+      "options": [
+        "쌀 줄 몰라요",
+        "싸기 바라요",
+        "싸는 바람이에요",
+        "쌀 줄 알았어요"
+      ],
+      "explain": "Không biết cách → -(으)ㄹ 줄 모르다."
+    },
+    {
+      "type": "blank",
+      "q": "이 동네는 시내(    ) 월세가 싸고 조용해요.",
+      "options": [
+        "에 비해서",
+        "처럼이나",
+        "하는 중에",
+        "아무나"
+      ],
+      "explain": "So với nội thành → N에 비해서."
+    },
+    {
+      "type": "blank",
+      "q": "새 집에서 가족 모두 건강하게 (    ).",
+      "options": [
+        "지내시기를 바랍니다",
+        "지내시는 줄 알았습니다",
+        "지내시는 바람입니다",
+        "지내시는 중입니다"
+      ],
+      "explain": "Lời chúc → -기를 바랍니다."
+    },
+    {
+      "type": "similar",
+      "q": "필요하시면 __아무 때나__ 연락 주세요.",
+      "options": [
+        "언제든지",
+        "절대로",
+        "가끔",
+        "이따가"
+      ],
+      "explain": "아무 때나 ≈ 언제든지."
+    },
+    {
+      "type": "similar",
+      "q": "그 사람은 혼자서 가구를 __조립할 줄 알아요__.",
+      "options": [
+        "조립할 수 있어요",
+        "조립한 적이 있어요",
+        "조립하려고 해요",
+        "조립해야 해요"
+      ],
+      "explain": "-(으)ㄹ 줄 알다 ≈ -(으)ㄹ 수 있다 (khả năng)."
+    },
+    {
+      "type": "notice",
+      "passage": "🏢 행복아파트 관리 사무소 안내\n· 이사하실 때는 3일 전까지 관리 사무소에 알려 주시기 바랍니다.\n· 이사는 오전 9시부터 오후 6시까지만 가능합니다.\n· 엘리베이터 사용료: 1회 2만 원\n· 대형 폐기물은 스티커를 붙여서 버려 주십시오.",
+      "passageVi": "Thông báo của ban quản lý chung cư Hạnh Phúc. Khi chuyển nhà xin báo cho ban quản lý trước 3 ngày. Chỉ được chuyển nhà từ 9 giờ sáng đến 6 giờ chiều. Phí dùng thang máy: 20.000 won/lần. Đồ bỏ cồng kềnh phải dán tem rồi mới bỏ.",
+      "q": "이 글의 내용과 같은 것을 고르십시오.",
+      "options": [
+        "이사하기 3일 전까지 관리 사무소에 알려야 합니다.",
+        "이사는 밤에도 할 수 있습니다.",
+        "엘리베이터는 무료로 사용합니다.",
+        "대형 폐기물은 아무 데나 버려도 됩니다."
+      ],
+      "explain": "이사하실 때는 3일 전까지 관리 사무소에 알려 주시기 바랍니다."
+    },
+    {
+      "type": "order",
+      "passage": "(가) 그래서 주말마다 부동산에 가서 집을 보러 다녔습니다.\n(나) 회사를 옮기게 되어서 회사 근처로 이사하기로 했습니다.\n(다) 드디어 회사까지 걸어서 10분 걸리는 집을 찾았습니다.\n(라) 하지만 마음에 드는 집은 월세가 너무 비쌌습니다.",
+      "passageVi": "(나) Vì chuyển công ty nên tôi quyết định chuyển nhà đến gần công ty. (가) Vì vậy cuối tuần nào tôi cũng đến văn phòng bất động sản đi xem nhà. (라) Nhưng nhà ưng ý thì tiền thuê quá đắt. (다) Cuối cùng tôi đã tìm được căn nhà đi bộ 10 phút là tới công ty.",
+      "q": "다음을 순서대로 맞게 배열한 것을 고르십시오.",
+      "options": [
+        "(나)-(가)-(라)-(다)",
+        "(나)-(라)-(가)-(다)",
+        "(가)-(나)-(다)-(라)",
+        "(나)-(다)-(라)-(가)"
+      ],
+      "explain": "Lý do chuyển (나) → 그래서 đi xem nhà (가) → 하지만 nhà ưng thì đắt (라) → 드디어 tìm được (다)."
+    },
+    {
+      "type": "main",
+      "passage": "새로운 동네로 이사를 가면 이웃과 인사를 나누는 것이 좋습니다. 이웃을 알고 지내면 집에 없을 때 택배를 맡아 주는 등 서로 도울 일이 많습니다. 또 층간 소음 같은 문제가 생겨도 대화로 쉽게 해결할 수 있습니다. 작은 인사가 편안한 생활을 만듭니다.",
+      "passageVi": "Khi chuyển đến khu mới thì nên chào hỏi hàng xóm. Quen biết hàng xóm thì có nhiều việc giúp nhau, như nhận giữ bưu kiện khi mình vắng nhà. Ngoài ra nếu có chuyện như tiếng ồn giữa các tầng cũng dễ giải quyết bằng trò chuyện. Một lời chào nhỏ tạo nên cuộc sống thoải mái.",
+      "q": "다음 글의 중심 생각으로 알맞은 것을 고르십시오.",
+      "options": [
+        "이사 후에 이웃과 인사하고 지내는 것이 좋습니다.",
+        "택배는 이웃에게 맡기면 안 됩니다.",
+        "층간 소음은 해결하기 어렵습니다.",
+        "이사는 자주 하지 않는 것이 좋습니다."
+      ],
+      "explain": "Câu đầu và câu cuối nêu ý chính: chào hỏi hàng xóm."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "남자",
+          "이 집은 보증금이 얼마예요?"
+        ],
+        [
+          "여자",
+          "보증금은 오백만 원이고 월세는 사십만 원이에요. 근처 다른 집에 비해 싼 편이에요."
+        ],
+        [
+          "남자",
+          "관리비는요?"
+        ],
+        [
+          "여자",
+          "관리비는 월세에 포함되어 있어요. 오늘 계약하시면 다음 주부터 들어오실 수 있어요."
+        ]
+      ],
+      "linesVi": "Nam: Nhà này đặt cọc bao nhiêu ạ? Nữ: Đặt cọc 5 triệu won, thuê tháng 400 nghìn won. So với các nhà gần đây thì khá rẻ. Nam: Còn phí quản lý? Nữ: Phí quản lý đã gồm trong tiền thuê tháng. Nếu ký hợp đồng hôm nay thì từ tuần sau anh dọn vào được.",
+      "q": "들은 내용과 같은 것을 고르십시오.",
+      "options": [
+        "관리비는 월세에 포함되어 있습니다.",
+        "이 집은 근처 집에 비해 비싼 편입니다.",
+        "보증금은 사십만 원입니다.",
+        "남자는 오늘 바로 이사할 수 있습니다."
+      ],
+      "explain": "관리비는 월세에 포함되어 있어요."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "여자",
+          "민호 씨, 이사 잘 했어요? 짐은 다 정리했어요?"
+        ],
+        [
+          "남자",
+          "아직요. 상자가 너무 많아서 짐을 반도 못 풀었어요."
+        ],
+        [
+          "여자",
+          "그럼 이번 주말에 제가 도와줄게요. 저 정리 잘하는 편이에요."
+        ],
+        [
+          "남자",
+          "정말요? 고마워요. 끝나고 제가 맛있는 거 살게요."
+        ]
+      ],
+      "linesVi": "Nữ: Min-ho, chuyển nhà ổn chứ? Đồ đạc sắp xếp xong chưa? Nam: Chưa. Thùng nhiều quá, chưa dỡ được một nửa. Nữ: Vậy cuối tuần này tôi giúp cho. Tôi khá giỏi sắp xếp đấy. Nam: Thật à? Cảm ơn nhé. Xong việc tôi sẽ mời món ngon.",
+      "q": "여자가 할 행동으로 알맞은 것을 고르십시오.",
+      "options": [
+        "주말에 남자의 짐 정리를 도와줘요.",
+        "남자에게 이사 선물을 사 줘요.",
+        "이삿짐 센터에 연락해요.",
+        "혼자 이사를 해요."
+      ],
+      "explain": "이번 주말에 제가 도와줄게요."
+    }
+  ],
+  "fillWriting": [
+    {
+      "text": "제목: 이사 인사드립니다\n안녕하세요? 저는 이번에 302호로 이사 온 사람입니다. 이사하는 동안 시끄럽게 해서 ( ㉠ ). 작은 선물을 문 앞에 두고 갑니다. 앞으로 좋은 이웃으로 잘 ( ㉡ ).",
+      "textVi": "Tiêu đề: Xin chào từ nhà mới chuyển đến. Xin chào. Tôi là người mới chuyển đến phòng 302. Trong lúc chuyển nhà đã làm ồn nên ( ㉠ ). Tôi để một món quà nhỏ trước cửa. Mong rằng từ nay chúng ta sẽ ( ㉡ ) như những người hàng xóm tốt.",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "죄송합니다",
+            "정말 죄송했습니다"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "지내기를 바랍니다",
+            "지냈으면 좋겠습니다"
+          ]
+        }
+      ],
+      "tips": "㉠ -아/어서 nêu lý do gây phiền → xin lỗi. ㉡ lời mong muốn trang trọng: -기(를) 바랍니다."
+    },
+    {
+      "text": "요즘 혼자 사는 사람들이 많아지면서 원룸을 찾는 사람이 늘었습니다. 원룸은 아파트에 ( ㉠ ) 월세가 싸고 관리하기도 쉽습니다. 하지만 방이 좁고 옆집 소리가 잘 들리는 단점도 있습니다. 그러니까 원룸을 구할 때는 ( ㉡ ).",
+      "textVi": "Dạo này người sống một mình nhiều lên nên người tìm phòng đơn cũng tăng. Phòng đơn ( ㉠ ) chung cư thì tiền thuê rẻ và dễ quản lý. Nhưng cũng có nhược điểm là phòng chật và dễ nghe tiếng nhà bên. Vì vậy khi tìm phòng đơn thì ( ㉡ ).",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "비해서",
+            "비해"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "직접 가서 꼼꼼하게 확인해야 합니다",
+            "방 크기와 소음을 확인하는 것이 좋습니다"
+          ]
+        }
+      ],
+      "tips": "㉠ N에 비해서 = so với N (아파트에 đã có sẵn 에). ㉡ sau 단점 và 그러니까 → lời khuyên kiểm tra kỹ: -아/어야 합니다 / -는 것이 좋습니다."
+    }
+  ]
+}
