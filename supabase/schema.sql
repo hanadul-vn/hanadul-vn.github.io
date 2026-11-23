@@ -62,3 +62,245 @@ $$;
 
 revoke execute on function public.delete_my_account() from public, anon;
 grant execute on function public.delete_my_account() to authenticated;
+
+-- =====================================================================
+-- Tên hiển thị. Thêm 23/11/2026 (B4).
+-- =====================================================================
+
+-- Tên hiển thị (dùng cho chứng nhận và bảng xếp hạng). Mỗi tài khoản tự sửa dòng của mình.
+create table if not exists public.profiles (
+  user_id uuid primary key references auth.users (id) on delete cascade,
+  display_name text not null,
+  updated_at timestamptz not null default now(),
+  constraint profiles_name_len check (char_length(btrim(display_name)) between 2 and 40),
+  constraint profiles_name_chars check (display_name !~ '[<>{}\\]' and display_name !~ '[[:cntrl:]]')
+);
+drop trigger if exists profiles_touch on public.profiles;
+create trigger profiles_touch before update on public.profiles
+  for each row execute function public.progress_touch();
+alter table public.profiles enable row level security;
+drop policy if exists "profiles: đọc của mình" on public.profiles;
+create policy "profiles: đọc của mình" on public.profiles
+  for select to authenticated using ((select auth.uid()) = user_id);
+drop policy if exists "profiles: thêm của mình" on public.profiles;
+create policy "profiles: thêm của mình" on public.profiles
+  for insert to authenticated with check ((select auth.uid()) = user_id);
+drop policy if exists "profiles: sửa của mình" on public.profiles;
+create policy "profiles: sửa của mình" on public.profiles
+  for update to authenticated using ((select auth.uid()) = user_id) with check ((select auth.uid()) = user_id);
+revoke all on public.profiles from anon, authenticated;
+grant select, insert, update on public.profiles to authenticated;
+
+-- =====================================================================
+-- Chứng nhận hoàn thành cấp độ. Thêm 23/11/2026 (B4).
+-- =====================================================================
+
+-- Mỗi tài khoản nhận tối đa 1 chứng nhận cho mỗi cấp độ (kind = 'level-sc1'…). Mã HD-XXXX-XXXX để ai cũng xác minh được.
+-- Không có quyền thêm/sửa trực tiếp: chỉ cấp qua hàm issue_certificate (kiểm tra tiến độ đã đồng bộ lên server).
+create table if not exists public.certificates (
+  code text primary key,
+  user_id uuid not null references auth.users (id) on delete cascade,
+  kind text not null,
+  title text not null,
+  display_name text not null,
+  detail jsonb not null default '{}'::jsonb,
+  issued_at timestamptz not null default now(),
+  constraint certificates_code_fmt check (code ~ '^HD-[A-Z0-9]{4}-[A-Z0-9]{4}$'),
+  constraint certificates_kind_fmt check (kind ~ '^level-(sc|tc|cc)[0-9]{1,2}$'),
+  constraint certificates_title_len check (char_length(title) between 3 and 80),
+  constraint certificates_one_per_kind unique (user_id, kind)
+);
+alter table public.certificates enable row level security;
+drop policy if exists "certificates: đọc của mình" on public.certificates;
+create policy "certificates: đọc của mình" on public.certificates
+  for select to authenticated using ((select auth.uid()) = user_id);
+drop policy if exists "certificates: xóa của mình" on public.certificates;
+create policy "certificates: xóa của mình" on public.certificates
+  for delete to authenticated using ((select auth.uid()) = user_id);
+revoke all on public.certificates from anon, authenticated;
+grant select, delete on public.certificates to authenticated;
+
+-- Cấp chứng nhận cấp độ p_level (sc1, sc2, tc3…) cho người đang đăng nhập.
+-- p_lessons: mã các bài của cấp độ (web gửi theo data/index.json). Điều kiện: đã đặt tên hiển thị,
+-- mỗi bài đều đạt từ 2 sao trở lên trong tiến độ trên server. Đã có thì trả lại chứng nhận cũ (cập nhật tên nếu đổi).
+create or replace function public.issue_certificate(p_level text, p_lessons text[])
+returns public.certificates
+language plpgsql
+security definer
+set search_path = ''
+as $$
+declare
+  v_uid uuid := auth.uid();
+  v_name text;
+  v_data jsonb;
+  v_kind text := 'level-' || coalesce(p_level, '');
+  v_id text;
+  v_stars int;
+  v_sum int := 0;
+  v_code text;
+  v_abc text := 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  v_row public.certificates;
+  v_title text;
+  i int;
+begin
+  if v_uid is null then raise exception 'Cần đăng nhập' using errcode = '28000'; end if;
+  if coalesce(p_level, '') !~ '^(sc|tc|cc)[0-9]{1,2}$' then raise exception 'Cấp độ không hợp lệ' using errcode = '22023'; end if;
+  -- Tên chứng nhận do server đặt theo mã cấp độ (sc1 → Sơ cấp 1), người dùng không tự đặt được.
+  v_title := 'Hoàn thành ' || case left(p_level, 2) when 'sc' then 'Sơ cấp ' when 'tc' then 'Trung cấp ' else 'Cao cấp ' end || substr(p_level, 3);
+  select display_name into v_name from public.profiles where user_id = v_uid;
+  if v_name is null then raise exception 'Cần đặt tên hiển thị trước' using errcode = 'P0001'; end if;
+  if coalesce(array_length(p_lessons, 1), 0) < 10
+     or (select count(distinct x) from unnest(p_lessons) x) <> array_length(p_lessons, 1) then
+    raise exception 'Danh sách bài không hợp lệ' using errcode = '22023';
+  end if;
+  select data into v_data from public.progress where user_id = v_uid;
+  foreach v_id in array p_lessons loop
+    if v_id !~ ('^' || p_level || '-[a-z0-9-]{1,20}$') then raise exception 'Bài % không thuộc cấp độ', v_id using errcode = '22023'; end if;
+    v_stars := coalesce((v_data -> 'lessons' -> v_id ->> 'stars')::int, 0);
+    if v_stars < 2 then raise exception 'Chưa đạt: bài % mới % sao (cần 2 sao)', v_id, v_stars using errcode = 'P0002'; end if;
+    v_sum := v_sum + coalesce((v_data -> 'lessons' -> v_id ->> 'best')::int, 0);
+  end loop;
+
+  select * into v_row from public.certificates where user_id = v_uid and kind = v_kind;
+  if found then
+    if v_row.display_name <> v_name then
+      update public.certificates set display_name = v_name where code = v_row.code returning * into v_row;
+    end if;
+    return v_row;
+  end if;
+  loop
+    v_code := 'HD-';
+    for i in 1..8 loop
+      v_code := v_code || substr(v_abc, 1 + floor(random() * 32)::int, 1);
+      if i = 4 then v_code := v_code || '-'; end if;
+    end loop;
+    exit when not exists (select 1 from public.certificates where code = v_code);
+  end loop;
+  insert into public.certificates (code, user_id, kind, title, display_name, detail)
+  values (v_code, v_uid, v_kind, v_title, v_name,
+          jsonb_build_object('lessons', array_length(p_lessons, 1), 'avg', round(v_sum::numeric / array_length(p_lessons, 1))))
+  returning * into v_row;
+  return v_row;
+end;
+$$;
+revoke execute on function public.issue_certificate(text, text[]) from public, anon;
+grant execute on function public.issue_certificate(text, text[]) to authenticated;
+
+-- Xác minh công khai theo mã (trang chung-nhan.html). Chỉ trả tên hiển thị, tên chứng nhận, ngày cấp; không có email hay mã tài khoản.
+create or replace function public.verify_certificate(p_code text)
+returns table (code text, kind text, title text, display_name text, detail jsonb, issued_at timestamptz)
+language sql
+stable
+security definer
+set search_path = ''
+as $$
+  select c.code, c.kind, c.title, c.display_name, c.detail, c.issued_at
+  from public.certificates c
+  where c.code = upper(btrim(coalesce(p_code, '')));
+$$;
+revoke execute on function public.verify_certificate(text) from public;
+grant execute on function public.verify_certificate(text) to anon, authenticated;
+
+-- =====================================================================
+-- Bảng xếp hạng tuần (tự chọn tham gia). Thêm 23/11/2026 (B4).
+-- =====================================================================
+
+-- Người học tự bật/tắt ở trang Xếp hạng. Mặc định tắt: không ai bị hiện tên nếu chưa đồng ý.
+alter table public.profiles add column if not exists leaderboard boolean not null default false;
+
+-- XP kiếm được mỗi tuần (tuần bắt đầu thứ Hai 00:00 giờ Việt Nam). Server tự tính từ tiến độ đồng bộ lên:
+-- dòng đầu tiên trong tuần ghi base_xp = XP lúc đó, sau đó xp = XP mới nhất. Điểm tuần = xp - base_xp.
+-- Người dùng không ghi thẳng vào bảng này được.
+create table if not exists public.weekly_xp (
+  user_id uuid not null references auth.users (id) on delete cascade,
+  week date not null,
+  base_xp bigint not null,
+  xp bigint not null,
+  updated_at timestamptz not null default now(),
+  primary key (user_id, week)
+);
+alter table public.weekly_xp enable row level security;
+revoke all on public.weekly_xp from anon, authenticated;
+
+create or replace function public.hanadul_week(p_at timestamptz default now())
+returns date
+language sql
+stable
+set search_path = ''
+as $$ select date_trunc('week', p_at at time zone 'Asia/Ho_Chi_Minh')::date $$;
+
+-- Mỗi lần tiến độ thay đổi: nếu người học đã bật xếp hạng thì cập nhật XP tuần.
+create or replace function public.progress_weekly_xp()
+returns trigger
+language plpgsql
+security definer
+set search_path = ''
+as $$
+declare
+  v_new bigint;
+  v_old bigint;
+begin
+  v_new := greatest(0, coalesce((new.data ->> 'xp')::bigint, 0));
+  if not exists (select 1 from public.profiles where user_id = new.user_id and leaderboard) then return new; end if;
+  v_old := case when tg_op = 'UPDATE' then greatest(0, coalesce((old.data ->> 'xp')::bigint, 0)) else v_new end;
+  insert into public.weekly_xp (user_id, week, base_xp, xp)
+  values (new.user_id, public.hanadul_week(), least(v_old, v_new), v_new)
+  on conflict (user_id, week) do update
+    set xp = greatest(excluded.xp, public.weekly_xp.base_xp), updated_at = now();
+  return new;
+exception when others then
+  return new; -- XP lạ (không phải số) thì bỏ qua, không chặn việc lưu tiến độ
+end;
+$$;
+drop trigger if exists progress_weekly_xp on public.progress;
+create trigger progress_weekly_xp after insert or update of data on public.progress
+  for each row execute function public.progress_weekly_xp();
+
+-- Bật/tắt tham gia. Bật thì ghi mốc XP hiện tại (chỉ tính XP kiếm được từ lúc bật).
+create or replace function public.set_leaderboard(p_on boolean)
+returns boolean
+language plpgsql
+security definer
+set search_path = ''
+as $$
+declare
+  v_uid uuid := auth.uid();
+  v_xp bigint;
+begin
+  if v_uid is null then raise exception 'Cần đăng nhập' using errcode = '28000'; end if;
+  update public.profiles set leaderboard = coalesce(p_on, false) where user_id = v_uid;
+  if not found then raise exception 'Cần đặt tên hiển thị trước' using errcode = 'P0001'; end if;
+  if p_on then
+    select greatest(0, coalesce((data ->> 'xp')::bigint, 0)) into v_xp from public.progress where user_id = v_uid;
+    insert into public.weekly_xp (user_id, week, base_xp, xp)
+    values (v_uid, public.hanadul_week(), coalesce(v_xp, 0), coalesce(v_xp, 0))
+    on conflict (user_id, week) do nothing;
+  end if;
+  return coalesce(p_on, false);
+end;
+$$;
+revoke execute on function public.set_leaderboard(boolean) from public, anon;
+grant execute on function public.set_leaderboard(boolean) to authenticated;
+
+-- Xem bảng xếp hạng (ai cũng xem được): p_ago = 0 tuần này, 1 tuần trước. Chỉ người đã bật và có XP > 0,
+-- chỉ tên hiển thị + XP tuần. Trả top 50, cộng dòng của chính mình nếu nằm ngoài top (is_me).
+create or replace function public.leaderboard_week(p_ago int default 0)
+returns table (rank bigint, display_name text, xp bigint, is_me boolean, week date)
+language sql
+stable
+security definer
+set search_path = ''
+as $$
+  with w as (select public.hanadul_week(now() - make_interval(weeks => least(greatest(coalesce(p_ago, 0), 0), 1))) as wk),
+  r as (
+    select rank() over (order by (x.xp - x.base_xp) desc, x.updated_at) as rank,
+           p.display_name, (x.xp - x.base_xp) as xp, x.user_id = auth.uid() as is_me, x.week
+    from public.weekly_xp x
+    join public.profiles p on p.user_id = x.user_id and p.leaderboard
+    join w on x.week = w.wk
+    where x.xp - x.base_xp > 0
+  )
+  select rank, display_name, xp, is_me, week from r where rank <= 50 or is_me order by rank;
+$$;
+revoke execute on function public.leaderboard_week(int) from public;
+grant execute on function public.leaderboard_week(int) to anon, authenticated;

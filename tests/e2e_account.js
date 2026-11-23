@@ -14,8 +14,16 @@ const srv = {
   rows: {},       // user_id -> {data, version}
   failNext: 0,    // số request REST tiếp theo trả 500
   bumpBeforePatch: 0, // giả lập máy khác ghi chen giữa lúc đọc và ghi
-  calls: []
+  calls: [],
+  profiles: {},   // user_id -> display_name
+  profileFail: 0, // số lần đọc profiles tiếp theo trả 500
+  certs: {},      // code -> chứng nhận (giống bảng certificates)
+  certRefuse: '', // ép issue_certificate báo lỗi này
+  lb: {},         // user_id -> đã tham gia xếp hạng
+  board: { 0: [], 1: [] } // bảng xếp hạng giả theo tuần (p_ago): {rank, display_name, xp, user_id}
 };
+const IDX = JSON.parse(require('fs').readFileSync(require('path').join(__dirname, '..', 'data/index.json'), 'utf8'));
+const LV = (id) => IDX.levels.find((l) => l.id === id).lessons.map((l) => l.id);
 function mkUser(id, email, provider, name) {
   srv.users[id] = { id, email, aud: 'authenticated', role: 'authenticated', app_metadata: { provider }, user_metadata: name ? { full_name: name } : {}, created_at: '2026-11-21T00:00:00Z' };
   return srv.users[id];
@@ -57,11 +65,66 @@ async function handle(route) {
   if (p === '/auth/v1/user') return me ? json(200, me) : json(401, { msg: 'no' });
   if (p === '/auth/v1/logout') return route.fulfill({ status: 204, headers: { 'access-control-allow-origin': '*' } });
 
+  // Xác minh chứng nhận: khách gọi bằng khóa công khai, không cần đăng nhập.
+  if (p === '/rest/v1/rpc/verify_certificate') {
+    const code = String(JSON.parse(req.postData() || '{}').p_code || '').trim().toUpperCase();
+    const c = srv.certs[code];
+    return json(200, c ? [{ code: c.code, kind: c.kind, title: c.title, display_name: c.display_name, detail: c.detail, issued_at: c.issued_at }] : []);
+  }
+  if (p === '/rest/v1/rpc/leaderboard_week') {
+    const ago = JSON.parse(req.postData() || '{}').p_ago || 0;
+    return json(200, (srv.board[ago] || []).filter((r) => srv.lb[r.user_id] !== false).map((r) => ({ rank: r.rank, display_name: r.display_name, xp: r.xp, is_me: !!me && r.user_id === me.id, week: '2026-11-23' })));
+  }
   if (p.startsWith('/rest/v1/')) {
     if (srv.failNext > 0) { srv.failNext--; return json(500, { message: 'server down' }); }
     if (!me) return json(401, { message: 'JWT required' });
+    if (p === '/rest/v1/profiles') {
+      if (method === 'GET' && srv.profileFail > 0) { srv.profileFail--; return json(500, { message: 'profiles down' }); }
+      const single = /vnd\.pgrst\.object/.test(req.headers()['accept'] || '');
+      if (method === 'GET') {
+        const eq = (u.searchParams.get('user_id') || '').replace(/^eq\./, '');
+        const rows = eq === me.id && srv.profiles[me.id] ? [{ display_name: srv.profiles[me.id], leaderboard: !!srv.lb[me.id] }] : [];
+        if (single) return rows.length ? json(200, rows[0]) : json(406, { code: 'PGRST116', message: '0 rows' });
+        return json(200, rows);
+      }
+      if (method === 'POST') {
+        const b = JSON.parse(req.postData()); const row = Array.isArray(b) ? b[0] : b;
+        if (row.user_id !== me.id) return json(403, { code: '42501', message: 'RLS' });
+        const n = String(row.display_name || '');
+        if (n.trim().length < 2 || n.trim().length > 40 || /[<>{}\\]/.test(n)) return json(400, { code: '23514', message: 'new row violates check constraint "profiles_name_len"' });
+        srv.profiles[me.id] = n;
+        return json(201, [{ display_name: n }]);
+      }
+    }
+    if (p === '/rest/v1/certificates' && method === 'GET') {
+      return json(200, Object.values(srv.certs).filter((c) => c.user_id === me.id).map((c) => { const o = Object.assign({}, c); delete o.user_id; return o; }));
+    }
+    if (p === '/rest/v1/rpc/issue_certificate') {
+      // Giống hàm SQL: cần tên, mọi bài từ 2 sao trong tiến độ TRÊN SERVER.
+      const b = JSON.parse(req.postData());
+      if (srv.certRefuse) return json(400, { code: 'P0002', message: srv.certRefuse });
+      if (!srv.profiles[me.id]) return json(400, { code: 'P0001', message: 'Cần đặt tên hiển thị trước' });
+      const lessons = ((srv.rows[me.id] || {}).data || {}).lessons || {};
+      for (const id of b.p_lessons) {
+        const st = (lessons[id] || {}).stars || 0;
+        if (st < 2) return json(400, { code: 'P0002', message: 'Chưa đạt: bài ' + id + ' mới ' + st + ' sao (cần 2 sao)' });
+      }
+      const kind = 'level-' + b.p_level;
+      let c = Object.values(srv.certs).find((x) => x.user_id === me.id && x.kind === kind);
+      if (!c) {
+        const code = 'HD-' + (Object.keys(srv.certs).length + 1 + 'ABC').padStart(4, 'X').slice(0, 4) + '-K7P2';
+        c = srv.certs[code] = { code, user_id: me.id, kind, title: 'Hoàn thành ' + IDX.levels.find((l) => l.id === b.p_level).name, display_name: srv.profiles[me.id], detail: { lessons: b.p_lessons.length, avg: 95 }, issued_at: '2026-11-23T03:00:00+00:00' };
+      }
+      return json(200, c);
+    }
+    if (p === '/rest/v1/rpc/set_leaderboard') {
+      if (!srv.profiles[me.id]) return json(400, { code: 'P0001', message: 'Cần đặt tên hiển thị trước' });
+      srv.lb[me.id] = !!JSON.parse(req.postData()).p_on;
+      return json(200, srv.lb[me.id]);
+    }
     if (p === '/rest/v1/rpc/delete_my_account') {
-      delete srv.rows[me.id]; delete srv.users[me.id];
+      delete srv.rows[me.id]; delete srv.users[me.id]; delete srv.profiles[me.id];
+      for (const k of Object.keys(srv.certs)) if (srv.certs[k].user_id === me.id) delete srv.certs[k];
       return route.fulfill({ status: 204, headers: { 'access-control-allow-origin': '*' } });
     }
     if (p !== '/rest/v1/progress') return json(404, {});
@@ -171,6 +234,9 @@ async function waitSynced(page) {
     await d1.page.waitForSelector('#acct .acct-btn');
     assert.ok(/Đăng nhập/.test(await d1.page.textContent('#acct')));
     assert.strictEqual(d1.sdkLoads.length, 1);
+    await d1.page.goto(BASE + '#/tai-khoan');
+    await d1.page.waitForSelector('#emailForm');
+    assert.strictEqual(await d1.page.locator('#namePanel').count(), 0, 'khách thấy ô tên hiển thị');
     assert.deepStrictEqual(d1.errors, []);
   });
 
@@ -236,6 +302,219 @@ async function waitSynced(page) {
     assert.deepStrictEqual(d2.errors, []);
   });
 
+  await tc('N15', 'Tên hiển thị: chưa lưu thì gợi ý tên Google; không có khung gói/Pro nào', async () => {
+    await d2.page.goto(BASE + '#/tai-khoan');
+    await d2.page.evaluate(() => { const k = 'hanadul:auth'; const v = JSON.parse(localStorage.getItem(k)); v.user.user_metadata = { full_name: 'An Nguyen' }; localStorage.setItem(k, JSON.stringify(v)); });
+    await d2.page.reload();
+    await d2.page.waitForSelector('#displayName');
+    assert.strictEqual(await d2.page.inputValue('#displayName'), 'An Nguyen');
+    assert.ok((await d2.page.textContent('#namePanel')).includes('chưa lưu tên'));
+    assert.ok(!/\bPro\b|trả phí|nâng cấp/i.test(await d2.page.textContent('#app')), 'trang tài khoản nói tới trả phí');
+    assert.deepStrictEqual(d2.errors, []);
+  });
+
+  await tc('N16', 'Tên hiển thị: chặn tên 1 ký tự và có < >, không gọi server; tên đúng lưu lên server, tải lại vẫn còn', async () => {
+    const before = srv.calls.filter((c) => /profiles/.test(c) && /^POST/.test(c)).length;
+    await d2.page.fill('#displayName', 'a');
+    await d2.page.click('#nameForm button');
+    await d2.page.waitForSelector('.name-panel .form-msg.bad');
+    assert.ok(/ít nhất 2/.test(await d2.page.textContent('.name-panel .form-msg')));
+    await d2.page.fill('#displayName', '<b>An</b>');
+    await d2.page.click('#nameForm button');
+    await d2.page.waitForSelector('text=không được có các ký tự');
+    assert.strictEqual(srv.calls.filter((c) => /profiles/.test(c) && /^POST/.test(c)).length, before, 'tên sai vẫn gửi server');
+    await d2.page.fill('#displayName', '  Nguyễn   Văn An  ');
+    await d2.page.click('#nameForm button');
+    await d2.page.waitForSelector('text=Đã lưu tên');
+    assert.strictEqual(srv.profiles[UA], 'Nguyễn Văn An');
+    await d2.page.reload();
+    await d2.page.waitForSelector('#displayName');
+    assert.strictEqual(await d2.page.inputValue('#displayName'), 'Nguyễn Văn An');
+    assert.strictEqual(await d2.page.evaluate(() => window.HD.displayName()), 'Nguyễn Văn An');
+  });
+
+  await tc('N17', 'Đọc tên hiển thị lỗi: báo chưa tải được, phần còn lại của trang vẫn dùng được; Thử lại thì hiện tên', async () => {
+    srv.profileFail = 1;
+    await d2.page.reload();
+    await d2.page.waitForSelector('#nameRetry');
+    assert.ok(await d2.page.locator('#logoutBtn').count(), 'trang tài khoản vỡ');
+    await d2.page.click('#nameRetry');
+    await d2.page.waitForSelector('#displayName');
+    assert.strictEqual(await d2.page.inputValue('#displayName'), 'Nguyễn Văn An');
+    assert.ok(!d2.errors.some((e) => /pageerror/.test(e)), d2.errors.join(' | '));
+    d2.errors.length = 0;
+  });
+
+  await tc('N18', 'Chứng nhận: mỗi cấp độ hiện tiến độ x/N bài đạt 2 sao; cấp độ đang mở thêm bài thì chưa cấp; chưa đủ thì không có nút nhận', async () => {
+    await d2.page.goto(BASE + '#/tai-khoan');
+    await d2.page.waitForSelector('#certPanel .cert-item');
+    for (const lv of IDX.levels) {
+      const t = await d2.page.textContent('.cert-item[data-level="' + lv.id + '"]');
+      if (/^Đủ/.test(lv.status)) assert.ok(new RegExp('\\d+/' + lv.lessons.length + ' bài đạt').test(t), lv.id + ': ' + t);
+      else assert.ok(t.includes('Đang mở thêm bài'), lv.id + ': ' + t);
+    }
+    assert.strictEqual(await d2.page.locator('[data-issue]').count(), 0);
+    assert.ok((await d2.page.textContent('#certPanel')).includes('không phải chứng chỉ TOPIK'));
+  });
+
+  let CODE = '';
+  await tc('N19', 'Chứng nhận: đủ 2 sao mọi bài Sơ cấp 1 nhưng chưa có tên → nhắc lưu tên; có tên → bấm Nhận, đồng bộ trước rồi server cấp mã; có link xem', async () => {
+    const saved = srv.profiles[UA];
+    delete srv.profiles[UA];
+    await d2.page.evaluate((ids) => {
+      const s = JSON.parse(localStorage.getItem('hanadul:v2'));
+      ids.forEach((id) => { s.lessons[id] = { best: 95, stars: 3, last: '2026-11-23' }; });
+      localStorage.setItem('hanadul:v2', JSON.stringify(s));
+    }, LV('sc1'));
+    await d2.page.reload();
+    await d2.page.waitForSelector('#certPanel .cert-item');
+    assert.ok((await d2.page.textContent('.cert-item[data-level="sc1"]')).includes('Lưu tên hiển thị'));
+    srv.profiles[UA] = saved;
+    await d2.page.reload();
+    await d2.page.waitForSelector('[data-issue="sc1"]');
+    // Server đang có bản cũ (bài sc1-05 mới 1 sao): bấm Nhận phải đồng bộ trước thì mới được cấp.
+    srv.rows[UA].data.lessons['sc1-05'] = { best: 55, stars: 1, last: '2026-11-20' };
+    await d2.page.click('[data-issue="sc1"]');
+    await d2.page.waitForSelector('#certMsg:not(.bad)');
+    const c = Object.values(srv.certs).find((x) => x.user_id === UA);
+    CODE = c.code;
+    assert.ok((await d2.page.textContent('#certMsg')).includes(CODE));
+    assert.ok(LV('sc1').every((id) => srv.rows[UA].data.lessons[id].stars === 3), 'chưa đồng bộ trước khi cấp');
+    assert.strictEqual(c.display_name, 'Nguyễn Văn An');
+    assert.ok((await d2.page.textContent('.cert-item[data-level="sc1"]')).includes('Đã nhận'));
+    assert.strictEqual(await d2.page.getAttribute('.cert-item[data-level="sc1"] a', 'href'), 'chung-nhan.html?ma=' + CODE);
+    await d2.page.reload();
+    await d2.page.waitForSelector('.cert-item[data-level="sc1"] a');
+    assert.deepStrictEqual(d2.errors, []);
+  });
+
+  await tc('N20', 'Chứng nhận: server từ chối (tiến độ trên server chưa đủ) → báo rõ bài nào chưa đạt, không vỡ trang', async () => {
+    await d2.page.evaluate((ids) => {
+      const s = JSON.parse(localStorage.getItem('hanadul:v2'));
+      ids.forEach((id) => { s.lessons[id] = { best: 80, stars: 2, last: '2026-11-23' }; });
+      localStorage.setItem('hanadul:v2', JSON.stringify(s));
+    }, LV('sc2'));
+    await d2.page.reload();
+    await d2.page.waitForSelector('[data-issue="sc2"]');
+    srv.certRefuse = 'Chưa đạt: bài sc2-03 mới 1 sao (cần 2 sao)';
+    await d2.page.click('[data-issue="sc2"]');
+    await d2.page.waitForSelector('#certMsg.bad');
+    assert.ok((await d2.page.textContent('#certMsg')).includes('bài sc2-03 mới 1 sao'));
+    assert.ok(await d2.page.locator('[data-issue="sc2"]').isEnabled());
+    srv.certRefuse = '';
+    assert.ok(!d2.errors.some((e) => /pageerror/.test(e)), d2.errors.join(' | '));
+    d2.errors.length = 0;
+  });
+
+  await tc('N21', 'Trang xác minh (khách, không đăng nhập): mã đúng hiện tên, cấp độ, ngày, mã; gõ thường/thừa dấu cách vẫn được; mã sai báo không tìm thấy; sai dạng không gọi server', async () => {
+    const d = await newDevice(browser, { on: true });
+    await d.page.goto(BASE + 'chung-nhan.html?ma=' + CODE);
+    await d.page.waitForSelector('#cert');
+    assert.strictEqual(await d.page.textContent('#certName'), 'Nguyễn Văn An');
+    assert.strictEqual(await d.page.textContent('#certTitle'), 'Sơ cấp 1');
+    assert.strictEqual(await d.page.textContent('#certCode'), CODE);
+    const t = await d.page.textContent('#cert');
+    assert.ok(t.includes(LV('sc1').length + ' bài') && t.includes('23/11/2026') && t.includes('Đã xác minh'), t);
+    assert.ok((await d.page.textContent('main')).includes('không phải'));
+    await d.page.fill('#cvCode', '  ' + CODE.toLowerCase() + ' ');
+    await d.page.click('#cvForm button');
+    await d.page.waitForSelector('#cert');
+    assert.ok(d.page.url().endsWith('?ma=' + CODE), d.page.url());
+    await d.page.fill('#cvCode', 'HD-ZZZZ-ZZZZ');
+    await d.page.click('#cvForm button');
+    await d.page.waitForSelector('text=Không tìm thấy chứng nhận');
+    const n0 = srv.calls.filter((c) => /verify_certificate/.test(c)).length;
+    await d.page.fill('#cvCode', 'abc<script>');
+    await d.page.click('#cvForm button');
+    await d.page.waitForSelector('text=chưa đúng dạng');
+    assert.strictEqual(srv.calls.filter((c) => /verify_certificate/.test(c)).length, n0);
+    assert.deepStrictEqual(d.errors, []);
+    await d.ctx.close();
+    const m = await newDevice(browser, { on: true, viewport: { width: 375, height: 760 } });
+    await m.page.goto(BASE + 'chung-nhan.html?ma=' + CODE);
+    await m.page.waitForSelector('#cert');
+    const over = await m.page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    assert.ok(over <= 0, 'tràn ngang ' + over + 'px');
+    await m.page.screenshot({ path: process.env.SHOTS + '/chung-nhan-dien-thoai.png', fullPage: true });
+    await m.page.emulateMedia({ media: 'print' });
+    assert.ok(await m.page.locator('#printBtn').isHidden(), 'nút In vẫn hiện khi in');
+    await m.ctx.close();
+    const off = await newDevice(browser, {});
+    await off.page.goto(BASE + 'chung-nhan.html?ma=' + CODE);
+    await off.page.waitForSelector('text=chưa mở xác minh');
+    await off.ctx.close();
+  });
+
+  await tc('N22', 'Xếp hạng (khách): xem được bảng tuần này/tuần trước, huy chương top 3, mời đăng nhập, không có nút tham gia; config trống thì báo chưa mở', async () => {
+    srv.board[0] = [
+      { rank: 1, display_name: 'Lan', xp: 1250, user_id: 'x1' }, { rank: 2, display_name: '<b>Hùng</b>', xp: 900, user_id: 'x2' },
+      { rank: 3, display_name: 'Mai', xp: 400, user_id: 'x3' }, { rank: 4, display_name: 'Tú', xp: 30, user_id: 'x4' }];
+    srv.board[1] = [];
+    const d = await newDevice(browser, { on: true });
+    await d.page.goto(BASE + '#/xep-hang');
+    await d.page.waitForSelector('#rankList');
+    assert.strictEqual(await d.page.locator('.rank-row').count(), 4);
+    assert.ok((await d.page.textContent('.rank-row >> nth=0')).includes('🥇'));
+    assert.ok((await d.page.textContent('.rank-row >> nth=0')).includes('1.250 XP'));
+    assert.strictEqual(await d.page.locator('.rank-name b').count(), 0, 'tên không được thoát HTML');
+    assert.ok((await d.page.textContent('#rankMe')).includes('Đăng nhập'));
+    assert.strictEqual(await d.page.locator('#rankJoin').count(), 0);
+    assert.ok(/Tuần \d+\/\d+ – \d+\/\d+/.test(await d.page.textContent('#rankWeek')));
+    await d.page.click('[data-ago="1"]');
+    await d.page.waitForSelector('#rankEmpty');
+    assert.ok((await d.page.textContent('#rankEmpty')).includes('Tuần trước'));
+    await d.page.goto(BASE + '#/');
+    await d.page.waitForSelector('.path .node');
+    assert.strictEqual(await d.page.locator('.rank-card').count(), 0, 'khách thấy thẻ xếp hạng ở trang chủ');
+    assert.deepStrictEqual(d.errors, []);
+    await d.ctx.close();
+    const off = await newDevice(browser, {});
+    await off.page.goto(BASE + '#/xep-hang');
+    await off.page.waitForSelector('text=chưa mở đăng nhập');
+    await off.ctx.close();
+  });
+
+  await tc('N23', 'Xếp hạng (đã đăng nhập): chưa tham gia → nút Tham gia với tên; bấm thì server ghi nhận, tải lại vẫn giữ; hàng của mình nổi bật kể cả ngoài top 50; Rời thì tên biến mất', async () => {
+    await d2.page.goto(BASE + '#/');
+    await d2.page.waitForSelector('.rank-card');
+    await d2.page.click('.rank-card');
+    await d2.page.waitForSelector('#rankJoin');
+    assert.ok((await d2.page.textContent('#rankJoin')).includes('Nguyễn Văn An'));
+    assert.ok((await d2.page.textContent('#rankMe')).includes('công khai'));
+    await d2.page.click('#rankJoin');
+    await d2.page.waitForSelector('#rankLeave');
+    assert.strictEqual(srv.lb[UA], true);
+    assert.ok((await d2.page.textContent('#rankMsg')).includes('Đã tham gia'));
+    srv.board[0].push({ rank: 57, display_name: 'Nguyễn Văn An', xp: 12, user_id: UA });
+    await d2.page.reload();
+    await d2.page.waitForSelector('#rankList .rank-row.me');
+    assert.ok(await d2.page.locator('#rankLeave').count());
+    assert.ok((await d2.page.textContent('.rank-row.me')).includes('Bạn'));
+    assert.strictEqual(await d2.page.locator('.rank-gap').count(), 1);
+    await d2.page.click('#rankLeave');
+    await d2.page.waitForSelector('#rankJoin');
+    assert.strictEqual(srv.lb[UA], false);
+    assert.strictEqual(await d2.page.locator('.rank-row.me').count(), 0);
+    assert.deepStrictEqual(d2.errors, []);
+  });
+
+  await tc('N24', 'Xếp hạng: chưa có tên hiển thị → nhắc đặt tên, không có nút tham gia; điện thoại 375px không tràn ngang', async () => {
+    const saved = srv.profiles[UA];
+    delete srv.profiles[UA];
+    await d2.page.reload();
+    await d2.page.waitForSelector('text=tên hiển thị');
+    await d2.page.waitForTimeout(300);
+    assert.strictEqual(await d2.page.locator('#rankJoin').count(), 0);
+    srv.profiles[UA] = saved;
+    const m = await newDevice(browser, { on: true, viewport: { width: 375, height: 760 } });
+    await m.page.goto(BASE + '#/xep-hang');
+    await m.page.waitForSelector('#rankList');
+    const over = await m.page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    assert.ok(over <= 0, 'tràn ngang ' + over + 'px');
+    await m.page.screenshot({ path: process.env.SHOTS + '/xep-hang-dien-thoai.png', fullPage: true });
+    await m.ctx.close();
+  });
+
   await tc('N7', 'Học song song 2 máy: XP cộng đủ, sổ câu sai gỡ trên máy này thì máy kia gỡ theo', async () => {
     const before = srv.rows[UA].data.xp;
     const gain2 = await answerQuiz(d2.page, 'sc1-02', 0);
@@ -299,6 +578,8 @@ async function waitSynced(page) {
     await d1.page.waitForSelector('#emailForm');
     assert.strictEqual(await store(d1.page), null);
     assert.ok(/Đăng nhập/.test(await d1.page.textContent('#acct')));
+    assert.strictEqual(await d1.page.evaluate(() => window.HD.displayName()), '', 'đăng xuất còn giữ tên');
+    assert.strictEqual(await d1.page.locator('#namePanel').count(), 0);
     assert.strictEqual(srv.rows[UA].data.xp, xp);
     await d1.page.goto(BASE + '#/');
     await d1.page.waitForSelector('.path .node');
@@ -344,6 +625,7 @@ async function waitSynced(page) {
     await d2.page.click('#deleteYes');
     await d2.page.waitForSelector('text=Đã xóa tài khoản');
     assert.ok(!srv.rows[UA] && !srv.users[UA]);
+    assert.ok(!srv.profiles[UA], 'tên còn trên server');
     assert.strictEqual(await store(d2.page), null);
     assert.deepStrictEqual(d2.errors.filter((e) => !/40[13]|Failed to load resource/.test(e)), []);
   });
@@ -371,7 +653,8 @@ async function waitSynced(page) {
       assert.ok(over <= 0, 'tràn ngang ' + over + 'px');
       const bar = await d.page.evaluate(() => { const r = document.querySelector('#acct').getBoundingClientRect(); return r.right; });
       assert.ok(bar <= 360, 'nút tài khoản ra ngoài màn: ' + bar);
-      await d.page.screenshot({ path: process.env.SHOTS + '/tai-khoan-dien-thoai-' + (on ? 'da-dang-nhap' : 'chua-dang-nhap') + '.png' });
+      if (on) await d.page.waitForSelector('#displayName');
+      await d.page.screenshot({ path: process.env.SHOTS + '/tai-khoan-dien-thoai-' + (on ? 'da-dang-nhap' : 'chua-dang-nhap') + '.png', fullPage: true });
       await d.ctx.close();
     }
   });
