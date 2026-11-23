@@ -120,4 +120,32 @@ t('M15 sameData bỏ qua trường chỉ dùng trên máy; hasProgress', () => {
   assert.ok(hasProgress({ days: ['2026-11-21'] }));
 });
 
+
+t('M16 đề thi thử: giữ điểm cao nhất, lượt gần nhất theo thời điểm nộp, số lượt lấy lớn nhất', () => {
+  const local = { exams: { 'doc-01': { best: 70, last: 70, at: 2000, n: 3, ans: '0123', secs: 3000 } } };
+  const remote = { exams: { 'doc-01': { best: 84, last: 60, at: 1000, n: 2, ans: '3210', secs: 4000 }, 'doc-02': { best: 50, last: 50, at: 500, n: 1 } } };
+  const m = merge(local, remote, NOW);
+  assert.deepStrictEqual(m.exams['doc-01'], { best: 84, last: 70, at: 2000, n: 3, ans: '0123', secs: 3000 });
+  assert.strictEqual(m.exams['doc-02'].best, 50);
+  assert.ok(hasProgress({ exams: { x: { best: 10 } } }), 'chỉ có điểm thi thử cũng là có tiến độ');
+  assert.ok(!sameData({ exams: {} }, { exams: { x: { best: 1 } } }));
+});
+
+t('M17 dữ liệu đề thi thử hỏng (không phải object) bị bỏ qua, không làm lỗi', () => {
+  const m = merge({ exams: 'x' }, { exams: { a: 'y', b: { best: 'z', at: 5 } } }, NOW);
+  assert.deepStrictEqual(m.exams.a, { best: 0, n: 0, last: 0, at: 0 });
+  assert.strictEqual(m.exams.b.best, 0);
+});
+
+t('M18 đề Viết: bài viết và điểm tự chấm theo bản tự chấm gần nhất (gat), không theo máy nộp sau', () => {
+  const a = { exams: { 'viet-01': { best: 23, pb: 0, last: 23, at: 1000, gat: 5000, n: 1, secs: 600, texts: { 53: '가나다' }, self: { '53-0': 1 } } } };
+  const b = { exams: { 'viet-01': { best: 5, pb: 0, last: 5, at: 1000, n: 1, secs: 600, texts: { 53: '가나다' }, self: {} } } };
+  const m = merge(b, a, NOW).exams['viet-01'];
+  assert.deepStrictEqual(m, { best: 23, n: 1, last: 23, at: 1000, secs: 600, texts: { 53: '가나다' }, self: { '53-0': 1 }, pb: 0, gat: 5000 });
+  const c = { exams: { 'viet-01': { best: 10, pb: 23, last: 10, at: 9000, n: 2, texts: { 54: '라' }, self: {} } } };
+  const m2 = merge(a, c, NOW).exams['viet-01'];
+  assert.strictEqual(m2.last, 10); assert.strictEqual(m2.best, 23); assert.deepStrictEqual(m2.texts, { 54: '라' }); assert.strictEqual(m2.n, 2);
+  assert.ok(!('texts' in merge({ exams: { d: { best: 1, at: 1 } } }, {}, NOW).exams.d), 'đề Đọc không thêm trường Viết');
+});
+
 console.log(`\n${pass} test pass`);

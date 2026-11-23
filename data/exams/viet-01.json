@@ -1,0 +1,155 @@
+{
+ "id": "viet-01",
+ "title": "Đề thi thử Viết số 1",
+ "part": "viet",
+ "minutes": 50,
+ "note": "Đề tự soạn theo cấu trúc phần Viết TOPIK II (câu 51–54, 50 phút, 100 điểm). Hana Dul không chấm tự động bài viết: bạn so với đáp án và bài mẫu rồi tự chấm theo tiêu chí.",
+ "sets": [
+  {
+   "instruction": "다음 글의 ㉠과 ㉡에 들어갈 말을 각각 한 문장으로 쓰십시오.",
+   "instructionVi": "Viết mỗi chỗ ㉠, ㉡ một câu phù hợp.",
+   "questions": [
+    {
+     "n": 51,
+     "kind": "fill",
+     "points": 10,
+     "passage": "<초대합니다>\n제가 이번 주 토요일에 새집으로 이사를 합니다. 그래서 집들이를 하려고 합니다. 바쁘시겠지만 시간이 되시면 ( ㉠ ). 맛있는 음식을 많이 준비하겠습니다. 저희 집은 지하철역에서 가깝습니다. 혹시 집을 찾기 어려우시면 ( ㉡ ). 역 앞으로 마중을 나가겠습니다.",
+     "passageVi": "<Thư mời> Thứ Bảy tuần này tôi chuyển sang nhà mới nên định làm tiệc tân gia. Dù bận nhưng nếu có thời gian (㉠ mời bạn nhất định đến nhé). Tôi sẽ chuẩn bị nhiều món ngon. Nhà tôi gần ga tàu điện ngầm. Nếu khó tìm nhà thì (㉡ hãy gọi điện cho tôi). Tôi sẽ ra đón trước ga.",
+     "blanks": [
+      {
+       "mark": "㉠",
+       "answers": [
+        "꼭 와 주세요",
+        "와 주세요",
+        "꼭 오세요",
+        "오세요",
+        "와 주시면 좋겠습니다",
+        "꼭 와 주시기 바랍니다",
+        "오시면 좋겠습니다"
+       ]
+      },
+      {
+       "mark": "㉡",
+       "answers": [
+        "저에게 전화해 주세요",
+        "전화해 주세요",
+        "연락해 주세요",
+        "저에게 연락해 주세요",
+        "전화 주세요",
+        "연락 주세요"
+       ]
+      }
+     ],
+     "explain": "㉠: lời mời trang trọng, kết thúc bằng -아/어 주세요 hoặc -(으)시기 바랍니다. ㉡: câu sau \"tôi sẽ ra ga đón\" → nhờ người được mời gọi điện/liên lạc. Câu phải lịch sự (đuôi -(으)세요), đúng ngữ cảnh mới được điểm tối đa."
+    }
+   ]
+  },
+  {
+   "instruction": "다음 글의 ㉠과 ㉡에 들어갈 말을 각각 한 문장으로 쓰십시오.",
+   "instructionVi": "Viết mỗi chỗ ㉠, ㉡ một câu phù hợp.",
+   "questions": [
+    {
+     "n": 52,
+     "kind": "fill",
+     "points": 10,
+     "passage": "사람들은 보통 피곤하면 커피를 마신다. 그러나 커피를 너무 많이 마시면 오히려 잠을 잘 자지 못해서 ( ㉠ ). 따라서 피곤할 때는 커피를 마시기보다 ( ㉡ ). 잠깐 눈을 감고 쉬기만 해도 피로가 많이 풀린다.",
+     "passageVi": "Người ta thường uống cà phê khi mệt. Nhưng uống quá nhiều thì ngược lại ngủ không ngon nên (㉠ có thể còn mệt hơn). Vì vậy khi mệt, thay vì uống cà phê thì (㉡ nên nghỉ ngơi một chút). Chỉ cần nhắm mắt nghỉ một lát cũng đỡ mệt nhiều.",
+     "blanks": [
+      {
+       "mark": "㉠",
+       "answers": [
+        "더 피곤해질 수 있다",
+        "더 피곤해진다",
+        "더 피곤해질 수도 있다",
+        "피로가 더 쌓일 수 있다",
+        "오히려 더 피곤해질 수 있다"
+       ]
+      },
+      {
+       "mark": "㉡",
+       "answers": [
+        "잠깐 쉬는 것이 좋다",
+        "잠시 쉬는 것이 좋다",
+        "잠깐 쉬는 것이 더 좋다",
+        "쉬는 것이 좋다",
+        "휴식을 취하는 것이 좋다",
+        "잠깐 쉬는 게 좋다"
+       ]
+      }
+     ],
+     "explain": "Văn viết dùng đuôi -다. ㉠: \"오히려\" báo hiệu kết quả ngược với mong muốn → mệt hơn. ㉡: \"-기보다\" (thay vì) + câu sau nói nhắm mắt nghỉ → nên nghỉ ngơi (-는 것이 좋다)."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 참고하여 200~300자로 글을 쓰십시오. 단, 글의 제목은 쓰지 마십시오.",
+   "instructionVi": "Dựa vào thông tin sau, viết một đoạn 200–300 chữ. Không viết tiêu đề.",
+   "questions": [
+    {
+     "n": 53,
+     "kind": "chart",
+     "points": 30,
+     "minChars": 200,
+     "maxChars": 300,
+     "q": "다음은 ‘20대가 여가 시간에 하는 일’에 대한 조사 결과이다. 이 내용을 200~300자의 글로 쓰십시오.",
+     "data": "조사 기관: 한국여가연구소\n조사 대상: 20대 남녀 1,000명\n\n[여가 시간에 하는 일]\n2016년 → 텔레비전 시청 45%, 운동 20%, 여행 15%\n2026년 → 동영상 시청 40%, 운동 30%, 여행 20%\n\n[변화 이유]\n• 스마트폰 사용 증가\n• 건강에 대한 관심 증가",
+     "dataVi": "Cơ quan khảo sát: Viện nghiên cứu giải trí Hàn Quốc. Đối tượng: 1.000 nam nữ độ tuổi 20. Việc làm lúc rảnh: năm 2016 xem TV 45%, tập thể dục 20%, du lịch 15%; năm 2026 xem video 40%, tập thể dục 30%, du lịch 20%. Lý do thay đổi: dùng điện thoại thông minh nhiều hơn, quan tâm sức khỏe hơn.",
+     "sample": "한국여가연구소에서 20대 남녀 1,000명을 대상으로 여가 시간에 하는 일에 대해 조사하였다. 조사 결과 2016년에는 텔레비전 시청이 45%로 가장 많았고, 운동이 20%, 여행이 15%로 그 뒤를 이었다. 그런데 2026년에는 동영상 시청이 40%로 1위를 차지했으며 운동은 30%, 여행은 20%로 늘어났다. 이러한 변화는 스마트폰 사용이 증가하고 건강에 대한 관심이 높아졌기 때문인 것으로 보인다.",
+     "rubric": [
+      {
+       "label": "Nội dung",
+       "points": 7,
+       "desc": "Nêu đủ: ai khảo sát, đối tượng; số liệu 2016 và 2026; điều thay đổi; hai lý do. Không thêm ý kiến cá nhân."
+      },
+      {
+       "label": "Bố cục",
+       "points": 7,
+       "desc": "Mở đầu giới thiệu khảo sát → so sánh số liệu → lý do. Có từ nối (그런데, 이러한 변화는…)."
+      },
+      {
+       "label": "Ngôn ngữ",
+       "points": 16,
+       "desc": "Văn viết đuôi -다 (không dùng -아요/-습니다), ngữ pháp và từ vựng đa dạng (차지하다, 늘어나다, -(으)ㄴ 것으로 보인다), đúng chính tả, đủ 200–300 chữ."
+      }
+     ],
+     "tips": "Mẫu câu hay dùng: ~을/를 대상으로 조사하였다 · ~(으)로 가장 많았다 · ~(으)로 그 뒤를 이었다 · ~에서 ~(으)로 늘어났다 · 이러한 변화는 ~기 때문인 것으로 보인다."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 주제로 하여 자신의 생각을 600~700자로 글을 쓰십시오. 단, 문제를 그대로 옮겨 쓰지 마십시오.",
+   "instructionVi": "Viết bài nêu suy nghĩ của bạn về chủ đề sau, 600–700 chữ. Không chép lại đề bài.",
+   "questions": [
+    {
+     "n": 54,
+     "kind": "essay",
+     "points": 50,
+     "minChars": 600,
+     "maxChars": 700,
+     "q": "요즘 혼자 여행을 떠나는 사람들이 많다. 아래의 내용을 중심으로 ‘혼자 하는 여행’에 대한 자신의 생각을 쓰라.",
+     "data": "• 혼자 하는 여행의 장점은 무엇인가?\n• 혼자 하는 여행의 단점은 무엇인가?\n• 자신은 혼자 하는 여행과 함께 하는 여행 중 어느 쪽을 더 좋아하는가? 그 이유는 무엇인가?",
+     "dataVi": "• Ưu điểm của du lịch một mình là gì? • Nhược điểm là gì? • Bạn thích đi một mình hay đi cùng người khác hơn? Vì sao?",
+     "sample": "최근 혼자 여행을 떠나는 사람들이 늘고 있다. 예전에는 여행이라고 하면 가족이나 친구와 함께 가는 것을 당연하게 생각했지만, 이제는 혼자 하는 여행도 하나의 문화로 자리 잡았다.\n혼자 하는 여행의 가장 큰 장점은 모든 것을 자기 마음대로 정할 수 있다는 것이다. 가고 싶은 곳에 가고 먹고 싶은 음식을 먹으며 자신의 속도에 맞춰 여행할 수 있다. 또한 혼자 있는 시간 동안 자신을 돌아보고 새로운 사람들을 만날 기회도 많아진다.\n하지만 단점도 있다. 무엇보다 안전 문제가 걱정된다. 낯선 곳에서 아프거나 사고가 났을 때 도와줄 사람이 없기 때문이다. 그리고 숙박비나 교통비를 혼자 내야 해서 비용이 더 많이 들 수 있다. 아름다운 경치를 보거나 맛있는 음식을 먹을 때 그 기쁨을 나눌 사람이 없어 외로움을 느끼기도 한다.\n나는 혼자 하는 여행보다 함께 하는 여행을 더 좋아한다. 여행에서 가장 오래 기억에 남는 것은 결국 함께한 사람과의 추억이라고 생각하기 때문이다. 친구와 길을 잃고 헤매던 일도 시간이 지나면 웃으며 이야기할 수 있는 소중한 추억이 된다. 물론 가끔은 혼자만의 시간이 필요할 때도 있다. 그러므로 평소에는 소중한 사람들과 함께 여행을 하고, 생각을 정리하고 싶을 때는 짧게 혼자 여행을 떠나는 것도 좋은 방법이라고 생각한다.",
+     "rubric": [
+      {
+       "label": "Nội dung",
+       "points": 12,
+       "desc": "Trả lời đủ cả 3 câu hỏi, mỗi ý có lý do hoặc ví dụ cụ thể, bám đúng chủ đề."
+      },
+      {
+       "label": "Bố cục",
+       "points": 12,
+       "desc": "Có mở bài – thân bài (ưu điểm, nhược điểm) – kết bài (ý kiến của mình); chia đoạn rõ, từ nối hợp lý (또한, 하지만, 그러므로)."
+      },
+      {
+       "label": "Ngôn ngữ",
+       "points": 26,
+       "desc": "Văn viết đuôi -다, ngữ pháp trung–cao cấp đa dạng, từ vựng phù hợp, ít lỗi chính tả, đủ 600–700 chữ."
+      }
+     ],
+     "tips": "Dàn ý gợi ý: Mở bài (xu hướng hiện nay) → Ưu điểm (2 ý) → Nhược điểm (2 ý) → Ý kiến của bạn + lý do → Kết luận. Mỗi phần một đoạn."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "exams": [
+  {
+   "id": "doc-01",
+   "title": "Đề thi thử Đọc số 1",
+   "part": "doc",
+   "icon": "📖",
+   "minutes": 70,
+   "count": 50,
+   "level": "TOPIK II · Đọc"
+  },
+  {
+   "id": "doc-02",
+   "title": "Đề thi thử Đọc số 2",
+   "part": "doc",
+   "icon": "📗",
+   "minutes": 70,
+   "count": 50,
+   "level": "TOPIK II · Đọc"
+  },
+  {
+   "id": "viet-01",
+   "title": "Đề thi thử Viết số 1",
+   "part": "viet",
+   "icon": "✍️",
+   "minutes": 50,
+   "count": 4,
+   "level": "TOPIK II · Viết (câu 51–54)"
+  }
+ ]
+}

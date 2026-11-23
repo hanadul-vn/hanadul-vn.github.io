@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Xác minh chứng nhận – Hana Dul</title>
+  <meta name="description" content="Xác minh chứng nhận hoàn thành cấp độ tiếng Hàn trên Hana Dul bằng mã HD-XXXX-XXXX.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#ff6b5b">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/landing.css">
+  <style>
+    .cv-form { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 6px; }
+    .cv-form input { flex: 1 1 200px; min-width: 0; font: inherit; font-size: 1.05rem; text-transform: uppercase; letter-spacing: .06em; padding: 10px 14px; border-radius: 12px; border: 2px solid var(--line); background: var(--surface); color: var(--text); }
+    .cv-form input:focus { outline: none; border-color: var(--sky); }
+    .cert { position: relative; margin: 22px 0 14px; padding: 34px 26px 26px; text-align: center; border-radius: 22px; background: var(--surface); border: 2px solid var(--sun); box-shadow: var(--shadow-lg); overflow: hidden; overflow-wrap: anywhere; }
+    .cert::before { content: ""; position: absolute; inset: 8px; border: 1px dashed var(--line); border-radius: 16px; pointer-events: none; }
+    .cert-ko { position: absolute; right: -6px; bottom: -28px; font-family: var(--font-ko); font-weight: 900; font-size: 7rem; color: var(--sun-soft); line-height: 1; pointer-events: none; }
+    .cert > *:not(.cert-ko) { position: relative; }
+    .cert-mark { width: 56px; height: 56px; margin: 0 auto 10px; border-radius: 16px; display: grid; place-items: center; font-family: var(--font-ko); font-weight: 900; font-size: 1.6rem; color: #fff; background: linear-gradient(135deg, var(--primary), var(--primary-2)); }
+    .cert-kicker { margin: 0; letter-spacing: .18em; font-weight: 800; font-size: .8rem; color: var(--muted); text-transform: uppercase; }
+    .cert-name { margin: 14px 0 6px; font-size: clamp(1.6rem, 6vw, 2.4rem); letter-spacing: -.02em; line-height: 1.2; }
+    .cert-title { margin: 6px 0 4px; font-size: 1.25rem; font-weight: 800; }
+    .cert-meta { margin: 16px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; color: var(--muted); font-size: .92rem; }
+    .cert-meta b { color: var(--text); }
+    .cert-ok { display: inline-block; margin-top: 16px; padding: 4px 12px; border-radius: 999px; font-weight: 700; font-size: .88rem; color: var(--ok); background: var(--ok-soft); }
+    .cv-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    @media print {
+      .topbar, .footer, .no-print { display: none !important; }
+      body { background: #fff; }
+      .doc { padding: 0; }
+      .cert { box-shadow: none; margin-top: 40px; }
+    }
+  </style>
+</head>
+<body class="landing">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./" aria-label="Hana Dul, vào trang học">
+        <span class="brand-mark ko" aria-hidden="true">하</span>
+        <span class="brand-text">Hana Dul<span class="brand-sub ko">하나 둘</span></span>
+      </a>
+      <nav class="lp-nav"><a href="gioi-thieu.html">Giới thiệu</a><a class="btn small" href="./#/">Học ngay</a></nav>
+    </div>
+  </header>
+  <main class="container narrow doc" id="cv">
+    <h1 class="no-print">Xác minh chứng nhận</h1>
+    <p class="muted no-print">Nhập mã in trên chứng nhận (dạng HD-XXXX-XXXX) để xem chứng nhận có thật do Hana Dul cấp hay không.</p>
+    <form class="cv-form no-print" id="cvForm" novalidate>
+      <label class="sr-only" for="cvCode">Mã chứng nhận</label>
+      <input id="cvCode" name="ma" autocomplete="off" spellcheck="false" maxlength="20" placeholder="HD-XXXX-XXXX">
+      <button class="btn" type="submit">Xác minh</button>
+    </form>
+    <div id="cvOut" role="status" aria-live="polite"></div>
+    <p class="muted small-note">Chứng nhận Hana Dul ghi nhận người học đã hoàn thành các bài của một cấp độ trên trang học miễn phí Hana Dul (mỗi bài đạt từ 2 sao). Đây <b>không phải</b> chứng chỉ TOPIK hay văn bằng chính thức.</p>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="brand-mark small ko" aria-hidden="true">하</span>
+      <div>
+        <p><strong>Hana Dul</strong> · Học tiếng Hàn cho người Việt.</p>
+        <p class="footer-links"><a href="./">Trang học</a> · <a href="gioi-thieu.html">Giới thiệu</a> · <a href="chinh-sach-bao-mat.html">Quyền riêng tư</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/config.js"></script>
+  <script src="assets/site.js"></script>
+  <script>
+  /* Xác minh chứng nhận: gọi hàm verify_certificate của Supabase bằng khóa công khai (chỉ trả tên hiển thị, tên chứng nhận, ngày cấp). */
+  (function () {
+    'use strict';
+    var cfg = window.HANADUL_CONFIG || {};
+    var url = String(cfg.supabaseUrl || '').trim().replace(/\/+$/, '');
+    var key = String(cfg.supabaseKey || '').trim();
+    var on = /^https:\/\//.test(url) && key && !/^sb_secret_/.test(key);
+    var out = document.getElementById('cvOut');
+    var input = document.getElementById('cvCode');
+    function esc(t) { return String(t == null ? '' : t).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+    function norm(c) { return String(c || '').toUpperCase().replace(/\s+/g, ''); }
+    function msg(t, bad) { out.innerHTML = '<p class="form-msg' + (bad ? ' bad' : '') + '">' + t + '</p>'; }
+    function dateVi(s) { var d = new Date(s); return isNaN(d) ? '' : d.getDate() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear(); }
+    function show(c) {
+      var det = c.detail || {};
+      document.title = 'Chứng nhận ' + c.display_name + ' – Hana Dul';
+      out.innerHTML = '<article class="cert" id="cert" aria-label="Chứng nhận">' +
+        '<span class="cert-ko" aria-hidden="true">수료</span>' +
+        '<div class="cert-mark" aria-hidden="true">하</div>' +
+        '<p class="cert-kicker">Chứng nhận hoàn thành</p>' +
+        '<p class="muted" style="margin:14px 0 0">Hana Dul chứng nhận</p>' +
+        '<h2 class="cert-name" id="certName">' + esc(c.display_name) + '</h2>' +
+        '<p class="muted" style="margin:0">đã hoàn thành chương trình tiếng Hàn</p>' +
+        '<p class="cert-title" id="certTitle">' + esc(String(c.title || '').replace(/^Hoàn thành /, '')) + '</p>' +
+        (det.lessons ? '<p class="muted" style="margin:0">' + esc(det.lessons) + ' bài, mỗi bài đạt từ 2 sao' + (det.avg ? ' · điểm trung bình ' + esc(det.avg) + '%' : '') + '</p>' : '') +
+        '<div class="cert-meta"><span>Ngày cấp: <b>' + esc(dateVi(c.issued_at)) + '</b></span><span>Mã: <b id="certCode">' + esc(c.code) + '</b></span></div>' +
+        '<span class="cert-ok">✔ Đã xác minh trên Hana Dul</span></article>' +
+        '<div class="cv-actions no-print"><button type="button" class="btn" id="printBtn">🖨 In / lưu PDF</button><button type="button" class="btn ghost" id="copyBtn">🔗 Sao chép link</button></div>';
+      document.getElementById('printBtn').addEventListener('click', function () { window.print(); });
+      document.getElementById('copyBtn').addEventListener('click', function () {
+        var b = this, link = location.origin + location.pathname + '?ma=' + encodeURIComponent(c.code);
+        (navigator.clipboard ? navigator.clipboard.writeText(link) : Promise.reject()).then(function () { b.textContent = '✅ Đã sao chép'; }, function () { b.textContent = link; });
+      });
+    }
+    function verify(code) {
+      code = norm(code);
+      input.value = code;
+      if (!code) { out.innerHTML = ''; return; }
+      if (!/^HD-[A-Z0-9]{4}-[A-Z0-9]{4}$/.test(code)) { msg('Mã chưa đúng dạng. Mã có dạng HD-XXXX-XXXX (chữ và số).', true); return; }
+      if (!on) { msg('Hana Dul chưa mở xác minh chứng nhận.', true); return; }
+      msg('Đang kiểm tra…');
+      fetch(url + '/rest/v1/rpc/verify_certificate', {
+        method: 'POST',
+        headers: { apikey: key, 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ p_code: code })
+      }).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      }).then(function (rows) {
+        var c = Array.isArray(rows) ? rows[0] : null;
+        if (!c) { msg('❌ Không tìm thấy chứng nhận có mã <b>' + esc(code) + '</b>. Kiểm tra lại mã, hoặc chứng nhận đã bị chủ tài khoản xóa.', true); return; }
+        show(c);
+        if (window.HD && HD.track) HD.track('certificate_verify');
+      }).catch(function () { msg('Không kết nối được. Bạn kiểm tra mạng rồi thử lại nhé.', true); });
+    }
+    document.getElementById('cvForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var code = norm(input.value);
+      history.replaceState(null, '', location.pathname + (code ? '?ma=' + encodeURIComponent(code) : ''));
+      verify(code);
+    });
+    verify(new URLSearchParams(location.search).get('ma'));
+  })();
+  </script>
+</body>
+</html>

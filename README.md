@@ -61,7 +61,24 @@ Không bắt buộc. Bật bằng `supabaseUrl` + `supabaseKey` (khóa công kha
 - Đăng nhập Google hoặc email (link + mã 6 số, không mật khẩu). Màn `#/tai-khoan`: đồng bộ, đăng xuất, xóa tài khoản.
 - Đồng bộ toàn bộ `hanadul:v2` (bài, sao, XP, chuỗi ngày, Sổ câu sai, câu tự viết) vào bảng `progress`. Lần đầu đăng nhập, tiến độ khách trên máy được gộp vào tài khoản.
 - Gộp ([`assets/merge.js`](assets/merge.js)): điểm/sao lấy cao nhất, ngày học hợp lại, XP cộng phần mỗi máy kiếm thêm, Sổ câu sai theo thay đổi mới nhất (có dấu "đã gỡ" để máy khác gỡ theo), câu viết lấy bản sửa sau cùng.
+- Tên hiển thị (bảng `profiles`): khung "Tên hiển thị" ở `#/tai-khoan`, dùng cho chứng nhận và bảng xếp hạng; đọc bằng `HD.displayName()`.
 - Đăng xuất xóa tiến độ khỏi máy đó (vẫn còn trên tài khoản). Thư viện `assets/vendor/supabase-2.118.0.js` (MIT) chỉ tải khi đã bật.
+
+## Đề thi thử TOPIK II
+
+- `#/thi-thu`: danh sách đề; `#/thi-thu/<id>`: giới thiệu; `/lam`: làm bài; `/ket-qua`: điểm và xem lại. Code ở [`assets/exam.js`](assets/exam.js).
+- Miễn phí, không cần đăng nhập. Đồng hồ và chấm điểm chạy trên máy: bài đang làm lưu ở `localStorage` `hanadul:exam-run` (tải lại trang vẫn đếm tiếp, hết giờ tự nộp). Kết quả lưu vào tiến độ `exams` (điểm cao nhất, lượt gần nhất, đáp án đã chọn), đăng nhập thì đồng bộ như bài học. Mỗi câu đúng +2 XP.
+- Dữ liệu: `data/exams/index.json` (danh sách đề) và `data/exams/<id>.json`: `minutes`, `sets` (mỗi bộ có `instruction`, `instructionVi`, tùy chọn `passage` + `passageVi`, `sentence` cho câu chèn ㉠–㉣, và `questions`: `n`, `q`, `options` 4 lựa chọn **giữ nguyên thứ tự**, `answer` là vị trí đúng 0–3, `explain`). Phần gạch chân bọc trong `__…__`. `tools/check_data.py` kiểm tra số câu liên tục, đáp án không dồn về một vị trí.
+- Phần Viết (`"part": "viet"`, câu 51–54, 50 phút, 100 điểm): không chấm bằng AI. Câu 51–52 (`kind: "fill"`, `blanks` mỗi ô có danh sách `answers`): ô khớp một đáp án mẫu (bỏ qua dấu cách, dấu câu) tự được điểm, còn lại người học tự chấm Đúng / Gần đúng / Sai. Câu 53–54 (`kind: "chart"`/`"essay"`, `minChars`–`maxChars`, `data` + `dataVi`, `sample`, `rubric` 3 tiêu chí cộng đủ `points`, `tips`): người học so với bài mẫu rồi tự chấm từng tiêu chí Tốt / Khá / Yếu / Chưa đạt. Đếm chữ tính cả dấu cách, không tính xuống dòng. Bài viết và điểm tự chấm lưu trong `exams[id]` (`texts`, `self`, `gat`), +20 XP mỗi lần nộp có viết.
+
+## Chứng nhận hoàn thành
+
+- Trang Tài khoản có mục **Chứng nhận**: cấp độ đã đủ bài (`status` bắt đầu bằng "Đủ") và mọi bài đạt từ 2 sao thì bấm nhận (cần đăng nhập + tên hiển thị). Web đồng bộ tiến độ trước, rồi gọi `issue_certificate` trên Supabase (server kiểm lại số sao). Miễn phí, không phải chứng chỉ TOPIK.
+- `chung-nhan.html?ma=HD-XXXX-XXXX`: trang xác minh công khai (không cần đăng nhập), in / lưu PDF được. Cài đặt: [`supabase/README.md`](supabase/README.md) mục 9.
+
+## Bảng xếp hạng tuần
+
+- `#/xep-hang` ([`assets/rank.js`](assets/rank.js)): ai cũng xem được; muốn có tên thì đăng nhập, đặt tên hiển thị, bấm Tham gia (mặc định không tham gia). XP tuần do server tính từ tiến độ đã đồng bộ. Cài đặt: [`supabase/README.md`](supabase/README.md) mục 10.
 
 ## Kiểm thử
 
@@ -71,6 +88,7 @@ psql -d <db trống> -f tests/schema_test.sql    # SQL + phân quyền (giả l�
 python3 -m http.server 8765 & SHOTS=/tmp node tests/e2e_account.js   # giao diện tài khoản (cần playwright)
 node tests/e2e_regression.js                   # hồi quy phần học, làm bài, sổ câu sai
 node tests/e2e_contact.js                      # GA4 + form đăng ký/cảm nhận
+node tests/e2e_exam.js                         # đề thi thử (đồng hồ giả lập, không phải chờ 70 phút)
 ```
 
 Các test Playwright giả lập Google Analytics và Formspree (`tests/stub_third_party.js`), nên không gửi số liệu hay email thật.
