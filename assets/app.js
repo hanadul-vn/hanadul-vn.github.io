@@ -208,6 +208,7 @@
     if (parts[0] === 'bai' && parts[1]) return renderLesson(parts[1], parts[2] || 'hoc');
     if (parts[0] === 'so-cau-sai') return renderWrongBook();
     if (parts[0] === 'thi-thu' && HD.renderExam) return HD.renderExam(app, parts.slice(1));
+    if (parts[0] === 'xep-hang' && HD.renderRank) return HD.renderRank(app);
     return renderHome(/^lo-trinh/.test(parts[0]) ? parts[0] : null);
   }
   window.addEventListener('hashchange', function () { route(); });
@@ -281,6 +282,7 @@
       }
       if (HD.accountHomeCard) h += HD.accountHomeCard(!!(s.xp || s.days.length));
       if (HD.examHomeCard) h += HD.examHomeCard(s);
+      if (HD.rankHomeCard) h += HD.rankHomeCard();
 
       if (idx.levels.length > 1) {
         h += '<div id="lo-trinh" class="level-jump" aria-label="Chọn cấp độ">' + idx.levels.map(function (lv) {

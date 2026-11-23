@@ -200,3 +200,107 @@ as $$
 $$;
 revoke execute on function public.verify_certificate(text) from public;
 grant execute on function public.verify_certificate(text) to anon, authenticated;
+
+-- =====================================================================
+-- Bảng xếp hạng tuần (tự chọn tham gia). Thêm 23/11/2026 (B4).
+-- =====================================================================
+
+-- Người học tự bật/tắt ở trang Xếp hạng. Mặc định tắt: không ai bị hiện tên nếu chưa đồng ý.
+alter table public.profiles add column if not exists leaderboard boolean not null default false;
+
+-- XP kiếm được mỗi tuần (tuần bắt đầu thứ Hai 00:00 giờ Việt Nam). Server tự tính từ tiến độ đồng bộ lên:
+-- dòng đầu tiên trong tuần ghi base_xp = XP lúc đó, sau đó xp = XP mới nhất. Điểm tuần = xp - base_xp.
+-- Người dùng không ghi thẳng vào bảng này được.
+create table if not exists public.weekly_xp (
+  user_id uuid not null references auth.users (id) on delete cascade,
+  week date not null,
+  base_xp bigint not null,
+  xp bigint not null,
+  updated_at timestamptz not null default now(),
+  primary key (user_id, week)
+);
+alter table public.weekly_xp enable row level security;
+revoke all on public.weekly_xp from anon, authenticated;
+
+create or replace function public.hanadul_week(p_at timestamptz default now())
+returns date
+language sql
+stable
+set search_path = ''
+as $$ select date_trunc('week', p_at at time zone 'Asia/Ho_Chi_Minh')::date $$;
+
+-- Mỗi lần tiến độ thay đổi: nếu người học đã bật xếp hạng thì cập nhật XP tuần.
+create or replace function public.progress_weekly_xp()
+returns trigger
+language plpgsql
+security definer
+set search_path = ''
+as $$
+declare
+  v_new bigint;
+  v_old bigint;
+begin
+  v_new := greatest(0, coalesce((new.data ->> 'xp')::bigint, 0));
+  if not exists (select 1 from public.profiles where user_id = new.user_id and leaderboard) then return new; end if;
+  v_old := case when tg_op = 'UPDATE' then greatest(0, coalesce((old.data ->> 'xp')::bigint, 0)) else v_new end;
+  insert into public.weekly_xp (user_id, week, base_xp, xp)
+  values (new.user_id, public.hanadul_week(), least(v_old, v_new), v_new)
+  on conflict (user_id, week) do update
+    set xp = greatest(excluded.xp, public.weekly_xp.base_xp), updated_at = now();
+  return new;
+exception when others then
+  return new; -- XP lạ (không phải số) thì bỏ qua, không chặn việc lưu tiến độ
+end;
+$$;
+drop trigger if exists progress_weekly_xp on public.progress;
+create trigger progress_weekly_xp after insert or update of data on public.progress
+  for each row execute function public.progress_weekly_xp();
+
+-- Bật/tắt tham gia. Bật thì ghi mốc XP hiện tại (chỉ tính XP kiếm được từ lúc bật).
+create or replace function public.set_leaderboard(p_on boolean)
+returns boolean
+language plpgsql
+security definer
+set search_path = ''
+as $$
+declare
+  v_uid uuid := auth.uid();
+  v_xp bigint;
+begin
+  if v_uid is null then raise exception 'Cần đăng nhập' using errcode = '28000'; end if;
+  update public.profiles set leaderboard = coalesce(p_on, false) where user_id = v_uid;
+  if not found then raise exception 'Cần đặt tên hiển thị trước' using errcode = 'P0001'; end if;
+  if p_on then
+    select greatest(0, coalesce((data ->> 'xp')::bigint, 0)) into v_xp from public.progress where user_id = v_uid;
+    insert into public.weekly_xp (user_id, week, base_xp, xp)
+    values (v_uid, public.hanadul_week(), coalesce(v_xp, 0), coalesce(v_xp, 0))
+    on conflict (user_id, week) do nothing;
+  end if;
+  return coalesce(p_on, false);
+end;
+$$;
+revoke execute on function public.set_leaderboard(boolean) from public, anon;
+grant execute on function public.set_leaderboard(boolean) to authenticated;
+
+-- Xem bảng xếp hạng (ai cũng xem được): p_ago = 0 tuần này, 1 tuần trước. Chỉ người đã bật và có XP > 0,
+-- chỉ tên hiển thị + XP tuần. Trả top 50, cộng dòng của chính mình nếu nằm ngoài top (is_me).
+create or replace function public.leaderboard_week(p_ago int default 0)
+returns table (rank bigint, display_name text, xp bigint, is_me boolean, week date)
+language sql
+stable
+security definer
+set search_path = ''
+as $$
+  with w as (select public.hanadul_week(now() - make_interval(weeks => least(greatest(coalesce(p_ago, 0), 0), 1))) as wk),
+  r as (
+    select rank() over (order by (x.xp - x.base_xp) desc, x.updated_at) as rank,
+           p.display_name, (x.xp - x.base_xp) as xp, x.user_id = auth.uid() as is_me, x.week
+    from public.weekly_xp x
+    join public.profiles p on p.user_id = x.user_id and p.leaderboard
+    join w on x.week = w.wk
+    where x.xp - x.base_xp > 0
+  )
+  select rank, display_name, xp, is_me, week from r where rank <= 50 or is_me order by rank;
+$$;
+revoke execute on function public.leaderboard_week(int) from public;
+grant execute on function public.leaderboard_week(int) to anon, authenticated;

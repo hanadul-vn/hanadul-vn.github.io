@@ -169,4 +169,76 @@ select code from public.issue_certificate('sc1', array(select 'sc1-' || lpad(i::
 select public.delete_my_account();
 reset role;
 do $$ begin assert (select count(*) from public.certificates) = 0, 'còn chứng nhận sau khi xóa tài khoản'; end $$;
+-- ===== Bảng xếp hạng tuần (B4) =====
+insert into auth.users values ('55555555-5555-5555-5555-555555555555','e@x.vn'), ('66666666-6666-6666-6666-666666666666','f@x.vn'), ('77777777-7777-7777-7777-777777777777','g@x.vn');
+insert into public.progress (user_id, data) values
+  ('55555555-5555-5555-5555-555555555555', '{"xp": 100}'), ('66666666-6666-6666-6666-666666666666', '{"xp": 500}'), ('77777777-7777-7777-7777-777777777777', '{"xp": 50}');
+insert into public.profiles (user_id, display_name) values
+  ('55555555-5555-5555-5555-555555555555', 'Én'), ('66666666-6666-6666-6666-666666666666', 'Phúc'), ('77777777-7777-7777-7777-777777777777', 'Giang');
+-- TC L1: mặc định chưa tham gia → học thêm cũng không lên bảng
+update public.progress set data = '{"xp": 900}' where user_id = '66666666-6666-6666-6666-666666666666';
+do $$ begin
+  assert (select leaderboard from public.profiles where user_id = '66666666-6666-6666-6666-666666666666') = false;
+  assert (select count(*) from public.weekly_xp) = 0, 'chưa bật mà đã ghi XP tuần';
+  assert (select count(*) from public.leaderboard_week(0)) = 0;
+end $$;
+-- TC L2: bật tham gia → chỉ tính XP kiếm được từ lúc bật (không tính XP cũ)
+set role authenticated;
+set request.jwt.claim.sub = '55555555-5555-5555-5555-555555555555'; select public.set_leaderboard(true);
+set request.jwt.claim.sub = '66666666-6666-6666-6666-666666666666'; select public.set_leaderboard(true);
+reset role;
+update public.progress set data = '{"xp": 130}' where user_id = '55555555-5555-5555-5555-555555555555';
+update public.progress set data = '{"xp": 120}' where user_id = '55555555-5555-5555-5555-555555555555'; -- máy cũ ghi đè thấp hơn
+update public.progress set data = '{"xp": 960}' where user_id = '66666666-6666-6666-6666-666666666666';
+do $$ declare r record; begin
+  assert (select count(*) from public.leaderboard_week(0)) = 2, 'phải có 2 người';
+  select * into r from public.leaderboard_week(0) where rank = 1;
+  assert r.display_name = 'Phúc' and r.xp = 60, format('hạng 1 sai: %s %s', r.display_name, r.xp);
+  select * into r from public.leaderboard_week(0) where rank = 2;
+  assert r.display_name = 'Én' and r.xp = 20, format('hạng 2 sai: %s %s', r.display_name, r.xp);
+end $$;
+-- TC L3: is_me đúng người; khách (anon) xem được bảng nhưng không đọc thẳng bảng XP, không bật hộ người khác
+set role authenticated; set request.jwt.claim.sub = '55555555-5555-5555-5555-555555555555';
+do $$ begin
+  assert (select is_me from public.leaderboard_week(0) where display_name = 'Én');
+  assert not (select is_me from public.leaderboard_week(0) where display_name = 'Phúc');
+  begin perform 1 from public.weekly_xp; raise exception 'đọc được weekly_xp'; exception when insufficient_privilege then null; end;
+  begin insert into public.weekly_xp values ('55555555-5555-5555-5555-555555555555', current_date, 0, 99999); raise exception 'tự ghi XP tuần'; exception when insufficient_privilege then null; end;
+end $$;
+reset role;
+set request.jwt.claim.sub = '';
+set role anon;
+do $$ begin
+  assert (select count(*) from public.leaderboard_week(0)) = 2, 'khách không xem được';
+  assert not exists (select 1 from public.leaderboard_week(0) where is_me);
+  begin perform public.set_leaderboard(true); raise exception 'anon bật được'; exception when insufficient_privilege then null; end;
+end $$;
+reset role;
+-- TC L4: chưa có tên hiển thị → không bật được
+insert into auth.users values ('88888888-8888-8888-8888-888888888888','h@x.vn');
+set role authenticated; set request.jwt.claim.sub = '88888888-8888-8888-8888-888888888888';
+do $$ begin begin perform public.set_leaderboard(true); raise exception 'không tên vẫn bật'; exception when others then assert sqlerrm like 'Cần đặt tên%', sqlerrm; end; end $$;
+-- TC L5: tắt tham gia → biến mất khỏi bảng ngay
+set request.jwt.claim.sub = '66666666-6666-6666-6666-666666666666'; select public.set_leaderboard(false);
+reset role;
+do $$ begin
+  assert (select count(*) from public.leaderboard_week(0)) = 1;
+  assert (select display_name from public.leaderboard_week(0)) = 'Én';
+end $$;
+-- TC L6: sang tuần mới → bảng tuần này trống, tuần trước còn; XP lạ không chặn lưu tiến độ
+update public.weekly_xp set week = week - 7;
+do $$ begin
+  assert (select count(*) from public.leaderboard_week(0)) = 0, 'tuần mới chưa trống';
+  assert (select count(*) from public.leaderboard_week(1)) = 1, 'mất tuần trước';
+end $$;
+update public.progress set data = '{"xp": 150}' where user_id = '55555555-5555-5555-5555-555555555555';
+update public.progress set data = '{"xp": "abc"}' where user_id = '55555555-5555-5555-5555-555555555555';
+do $$ begin
+  assert (select xp from public.leaderboard_week(0)) = 30, 'tuần mới tính sai';
+  assert (select data->>'xp' from public.progress where user_id = '55555555-5555-5555-5555-555555555555') = 'abc';
+end $$;
+-- TC L7: xóa tài khoản → mất khỏi bảng
+set role authenticated; set request.jwt.claim.sub = '55555555-5555-5555-5555-555555555555'; select public.delete_my_account();
+reset role;
+do $$ begin assert (select count(*) from public.weekly_xp where user_id = '55555555-5555-5555-5555-555555555555') = 0; end $$;
 \echo 'SCHEMA TESTS PASSED'

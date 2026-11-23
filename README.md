@@ -76,6 +76,10 @@ Không bắt buộc. Bật bằng `supabaseUrl` + `supabaseKey` (khóa công kha
 - Trang Tài khoản có mục **Chứng nhận**: cấp độ đã đủ bài (`status` bắt đầu bằng "Đủ") và mọi bài đạt từ 2 sao thì bấm nhận (cần đăng nhập + tên hiển thị). Web đồng bộ tiến độ trước, rồi gọi `issue_certificate` trên Supabase (server kiểm lại số sao). Miễn phí, không phải chứng chỉ TOPIK.
 - `chung-nhan.html?ma=HD-XXXX-XXXX`: trang xác minh công khai (không cần đăng nhập), in / lưu PDF được. Cài đặt: [`supabase/README.md`](supabase/README.md) mục 9.
 
+## Bảng xếp hạng tuần
+
+- `#/xep-hang` ([`assets/rank.js`](assets/rank.js)): ai cũng xem được; muốn có tên thì đăng nhập, đặt tên hiển thị, bấm Tham gia (mặc định không tham gia). XP tuần do server tính từ tiến độ đã đồng bộ. Cài đặt: [`supabase/README.md`](supabase/README.md) mục 10.
+
 ## Kiểm thử
 
 ```bash

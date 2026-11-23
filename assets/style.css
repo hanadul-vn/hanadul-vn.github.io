@@ -613,3 +613,19 @@ button.ex-opt:hover { border-color: var(--sky); }
 .cert-bar { display: block; height: 6px; border-radius: 99px; background: var(--bg-2); margin-top: 6px; overflow: hidden; }
 .cert-bar span { display: block; height: 100%; background: var(--ok); }
 @media (max-width: 420px) { .cert-item { flex-wrap: wrap; } .cert-item .btn { width: 100%; } }
+/* Bảng xếp hạng tuần (assets/rank.js) */
+.continue.rank-card .emoji { background: var(--sun-soft); }
+.rank-me { margin-top: 16px; text-align: left; }
+.rank-me p { margin: 0 0 10px; }
+.rank-tabs button { font: inherit; font-weight: 700; padding: 8px 16px; border-radius: 12px; border: 0; background: none; color: var(--muted); cursor: pointer; }
+.rank-tabs button[aria-pressed="true"] { background: var(--surface); color: var(--text); box-shadow: 0 1px 4px rgba(0, 0, 0, .08); }
+.rank-list { list-style: none; margin: 8px 0 20px; padding: 0; display: grid; gap: 6px; }
+.rank-row { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.rank-row.top { border-color: var(--sun); }
+.rank-row.me { border: 2px solid var(--sky); background: var(--sky-soft); }
+.rank-n { flex: none; width: 32px; text-align: center; font-weight: 800; font-size: 1.05rem; }
+.rank-name { flex: 1; min-width: 0; font-weight: 700; overflow-wrap: anywhere; }
+.rank-name .tag { font-size: .72rem; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--sky); margin-left: 4px; }
+.rank-xp { flex: none; font-weight: 800; font-variant-numeric: tabular-nums; }
+.rank-gap { text-align: center; color: var(--muted); }
+.rank-empty { margin: 16px 0; }

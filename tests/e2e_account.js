@@ -18,7 +18,9 @@ const srv = {
   profiles: {},   // user_id -> display_name
   profileFail: 0, // số lần đọc profiles tiếp theo trả 500
   certs: {},      // code -> chứng nhận (giống bảng certificates)
-  certRefuse: ''  // ép issue_certificate báo lỗi này
+  certRefuse: '', // ép issue_certificate báo lỗi này
+  lb: {},         // user_id -> đã tham gia xếp hạng
+  board: { 0: [], 1: [] } // bảng xếp hạng giả theo tuần (p_ago): {rank, display_name, xp, user_id}
 };
 const IDX = JSON.parse(require('fs').readFileSync(require('path').join(__dirname, '..', 'data/index.json'), 'utf8'));
 const LV = (id) => IDX.levels.find((l) => l.id === id).lessons.map((l) => l.id);
@@ -69,6 +71,10 @@ async function handle(route) {
     const c = srv.certs[code];
     return json(200, c ? [{ code: c.code, kind: c.kind, title: c.title, display_name: c.display_name, detail: c.detail, issued_at: c.issued_at }] : []);
   }
+  if (p === '/rest/v1/rpc/leaderboard_week') {
+    const ago = JSON.parse(req.postData() || '{}').p_ago || 0;
+    return json(200, (srv.board[ago] || []).filter((r) => srv.lb[r.user_id] !== false).map((r) => ({ rank: r.rank, display_name: r.display_name, xp: r.xp, is_me: !!me && r.user_id === me.id, week: '2026-11-23' })));
+  }
   if (p.startsWith('/rest/v1/')) {
     if (srv.failNext > 0) { srv.failNext--; return json(500, { message: 'server down' }); }
     if (!me) return json(401, { message: 'JWT required' });
@@ -77,7 +83,7 @@ async function handle(route) {
       const single = /vnd\.pgrst\.object/.test(req.headers()['accept'] || '');
       if (method === 'GET') {
         const eq = (u.searchParams.get('user_id') || '').replace(/^eq\./, '');
-        const rows = eq === me.id && srv.profiles[me.id] ? [{ display_name: srv.profiles[me.id] }] : [];
+        const rows = eq === me.id && srv.profiles[me.id] ? [{ display_name: srv.profiles[me.id], leaderboard: !!srv.lb[me.id] }] : [];
         if (single) return rows.length ? json(200, rows[0]) : json(406, { code: 'PGRST116', message: '0 rows' });
         return json(200, rows);
       }
@@ -110,6 +116,11 @@ async function handle(route) {
         c = srv.certs[code] = { code, user_id: me.id, kind, title: 'Hoàn thành ' + IDX.levels.find((l) => l.id === b.p_level).name, display_name: srv.profiles[me.id], detail: { lessons: b.p_lessons.length, avg: 95 }, issued_at: '2026-11-23T03:00:00+00:00' };
       }
       return json(200, c);
+    }
+    if (p === '/rest/v1/rpc/set_leaderboard') {
+      if (!srv.profiles[me.id]) return json(400, { code: 'P0001', message: 'Cần đặt tên hiển thị trước' });
+      srv.lb[me.id] = !!JSON.parse(req.postData()).p_on;
+      return json(200, srv.lb[me.id]);
     }
     if (p === '/rest/v1/rpc/delete_my_account') {
       delete srv.rows[me.id]; delete srv.users[me.id]; delete srv.profiles[me.id];
@@ -432,6 +443,76 @@ async function waitSynced(page) {
     await off.page.goto(BASE + 'chung-nhan.html?ma=' + CODE);
     await off.page.waitForSelector('text=chưa mở xác minh');
     await off.ctx.close();
+  });
+
+  await tc('N22', 'Xếp hạng (khách): xem được bảng tuần này/tuần trước, huy chương top 3, mời đăng nhập, không có nút tham gia; config trống thì báo chưa mở', async () => {
+    srv.board[0] = [
+      { rank: 1, display_name: 'Lan', xp: 1250, user_id: 'x1' }, { rank: 2, display_name: '<b>Hùng</b>', xp: 900, user_id: 'x2' },
+      { rank: 3, display_name: 'Mai', xp: 400, user_id: 'x3' }, { rank: 4, display_name: 'Tú', xp: 30, user_id: 'x4' }];
+    srv.board[1] = [];
+    const d = await newDevice(browser, { on: true });
+    await d.page.goto(BASE + '#/xep-hang');
+    await d.page.waitForSelector('#rankList');
+    assert.strictEqual(await d.page.locator('.rank-row').count(), 4);
+    assert.ok((await d.page.textContent('.rank-row >> nth=0')).includes('🥇'));
+    assert.ok((await d.page.textContent('.rank-row >> nth=0')).includes('1.250 XP'));
+    assert.strictEqual(await d.page.locator('.rank-name b').count(), 0, 'tên không được thoát HTML');
+    assert.ok((await d.page.textContent('#rankMe')).includes('Đăng nhập'));
+    assert.strictEqual(await d.page.locator('#rankJoin').count(), 0);
+    assert.ok(/Tuần \d+\/\d+ – \d+\/\d+/.test(await d.page.textContent('#rankWeek')));
+    await d.page.click('[data-ago="1"]');
+    await d.page.waitForSelector('#rankEmpty');
+    assert.ok((await d.page.textContent('#rankEmpty')).includes('Tuần trước'));
+    await d.page.goto(BASE + '#/');
+    await d.page.waitForSelector('.path .node');
+    assert.strictEqual(await d.page.locator('.rank-card').count(), 0, 'khách thấy thẻ xếp hạng ở trang chủ');
+    assert.deepStrictEqual(d.errors, []);
+    await d.ctx.close();
+    const off = await newDevice(browser, {});
+    await off.page.goto(BASE + '#/xep-hang');
+    await off.page.waitForSelector('text=chưa mở đăng nhập');
+    await off.ctx.close();
+  });
+
+  await tc('N23', 'Xếp hạng (đã đăng nhập): chưa tham gia → nút Tham gia với tên; bấm thì server ghi nhận, tải lại vẫn giữ; hàng của mình nổi bật kể cả ngoài top 50; Rời thì tên biến mất', async () => {
+    await d2.page.goto(BASE + '#/');
+    await d2.page.waitForSelector('.rank-card');
+    await d2.page.click('.rank-card');
+    await d2.page.waitForSelector('#rankJoin');
+    assert.ok((await d2.page.textContent('#rankJoin')).includes('Nguyễn Văn An'));
+    assert.ok((await d2.page.textContent('#rankMe')).includes('công khai'));
+    await d2.page.click('#rankJoin');
+    await d2.page.waitForSelector('#rankLeave');
+    assert.strictEqual(srv.lb[UA], true);
+    assert.ok((await d2.page.textContent('#rankMsg')).includes('Đã tham gia'));
+    srv.board[0].push({ rank: 57, display_name: 'Nguyễn Văn An', xp: 12, user_id: UA });
+    await d2.page.reload();
+    await d2.page.waitForSelector('#rankList .rank-row.me');
+    assert.ok(await d2.page.locator('#rankLeave').count());
+    assert.ok((await d2.page.textContent('.rank-row.me')).includes('Bạn'));
+    assert.strictEqual(await d2.page.locator('.rank-gap').count(), 1);
+    await d2.page.click('#rankLeave');
+    await d2.page.waitForSelector('#rankJoin');
+    assert.strictEqual(srv.lb[UA], false);
+    assert.strictEqual(await d2.page.locator('.rank-row.me').count(), 0);
+    assert.deepStrictEqual(d2.errors, []);
+  });
+
+  await tc('N24', 'Xếp hạng: chưa có tên hiển thị → nhắc đặt tên, không có nút tham gia; điện thoại 375px không tràn ngang', async () => {
+    const saved = srv.profiles[UA];
+    delete srv.profiles[UA];
+    await d2.page.reload();
+    await d2.page.waitForSelector('text=tên hiển thị');
+    await d2.page.waitForTimeout(300);
+    assert.strictEqual(await d2.page.locator('#rankJoin').count(), 0);
+    srv.profiles[UA] = saved;
+    const m = await newDevice(browser, { on: true, viewport: { width: 375, height: 760 } });
+    await m.page.goto(BASE + '#/xep-hang');
+    await m.page.waitForSelector('#rankList');
+    const over = await m.page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    assert.ok(over <= 0, 'tràn ngang ' + over + 'px');
+    await m.page.screenshot({ path: process.env.SHOTS + '/xep-hang-dien-thoai.png', fullPage: true });
+    await m.ctx.close();
   });
 
   await tc('N7', 'Học song song 2 máy: XP cộng đủ, sổ câu sai gỡ trên máy này thì máy kia gỡ theo', async () => {

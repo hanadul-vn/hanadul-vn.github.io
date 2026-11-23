@@ -80,6 +80,13 @@ Chạy lại toàn bộ [`schema.sql`](schema.sql) để có bảng `certificate
 
 Cấp độ chỉ có chứng nhận khi `status` trong `data/index.json` bắt đầu bằng "Đủ" (đã đủ bài). Xóa tài khoản thì chứng nhận mất theo.
 
+## 10. Bảng xếp hạng tuần
+
+Chạy lại toàn bộ [`schema.sql`](schema.sql): thêm cột `profiles.leaderboard` (mặc định tắt), bảng `weekly_xp` và các hàm `set_leaderboard(p_on)`, `leaderboard_week(p_ago)`.
+
+- Server tự tính XP tuần (thứ Hai 0 giờ giờ Việt Nam) bằng trigger trên `progress`: chỉ với người đã bật, chỉ tính XP kiếm được từ lúc bật. Người dùng không ghi thẳng vào `weekly_xp`.
+- `leaderboard_week(0)` tuần này, `(1)` tuần trước: ai cũng xem được, trả top 50 (tên hiển thị + XP tuần) và dòng của chính mình. Tắt tham gia là biến mất ngay.
+
 ## Ghi chú gói miễn phí
 
 - Gói Free: 50.000 người dùng hoạt động/tháng, 500 MB dữ liệu, đủ dư cho giai đoạn đầu (mỗi người học chỉ vài chục KB).

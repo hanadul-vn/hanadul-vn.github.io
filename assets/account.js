@@ -54,6 +54,9 @@
   HD.isSignedIn = function () { return !!user; };
   HD.displayName = function () { return (profile && profile.display_name) || ''; };
   HD.accountReady = function () { return ready; };
+  // Cho các phần khác (bảng xếp hạng) gọi Supabase bằng phiên đang đăng nhập (hoặc khách).
+  HD.sb = function () { return sb; };
+  HD.userId = function () { return user ? user.id : ''; };
 
   // ---------- badge trên thanh trên cùng ----------
   HD.renderAccountBadge = function () {
@@ -431,7 +434,7 @@
     var cur = (profile && profile.display_name) || '';
     var suggest = cur || (function () { var m = user.user_metadata || {}; return m.full_name || m.name || ''; })();
     return h +
-      '<p class="muted">Tên in trên chứng nhận và hiện trên bảng xếp hạng (nếu bạn bật). ' + (cur ? '' : 'Bạn chưa lưu tên.') + '</p>' +
+      '<p class="muted">Tên in trên chứng nhận và hiện trên <a href="#/xep-hang">bảng xếp hạng</a> (nếu bạn bật). ' + (cur ? '' : 'Bạn chưa lưu tên.') + '</p>' +
       '<form class="acct-form" id="nameForm" novalidate><label class="sr-only" for="displayName">Tên hiển thị</label>' +
       '<input id="displayName" name="name" maxlength="40" autocomplete="name" placeholder="Ví dụ: Minh Hoàng" value="' + esc(suggest) + '">' +
       '<button class="btn" type="submit"' + (nameView.busy ? ' disabled' : '') + '>Lưu tên</button></form>' +
