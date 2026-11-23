@@ -11,7 +11,8 @@ const idx = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/index.json'), 'utf8
 const LESSONS = idx.levels.flatMap((lv) => lv.lessons);
 const DATA = {};
 LESSONS.forEach((l) => { DATA[l.id] = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/lessons', l.id + '.json'), 'utf8')); });
-const NEW = ['tc3-07', 'tc3-08', 'tc3-09'];
+const NEW = process.env.NEW ? process.env.NEW.split(',') : ['tc3-07', 'tc3-08', 'tc3-09']; // NEW=tc3-04,tc3-05,tc3-06 để kiểm lại một đợt cũ
+const NEWR = (+NEW[0].slice(-2)) + '–' + (+NEW[NEW.length - 1].slice(-2)); // vd "7–9"
 const SC2 = idx.levels.find((lv) => lv.id === 'sc2').lessons.map((l) => l.id);
 const TC3 = idx.levels.find((lv) => lv.id === 'tc3').lessons.map((l) => l.id);
 const TOTAL = LESSONS.length; // 16 bài Sơ cấp 1 (gồm Hangeul) + 15 bài Sơ cấp 2 + 9 bài Trung cấp 3
@@ -163,7 +164,7 @@ async function noHScroll(page) {
     NEW.forEach((id) => assert(out.includes(id + ':'), 'thiếu ' + id));
   });
 
-  await tc('N02', 'TC3 Bài 7–9 soạn đủ phần: ≥35 từ, ≥8 câu từ trong câu, 3–4 mẫu ngữ pháp ≥5 câu/mẫu, 5 câu nghe, đọc hiểu 2 câu, luyện viết; đủ 6 dạng TOPIK (điền 3, nghĩa gần 2, thông báo 1, sắp xếp 1, đoạn văn 1, hội thoại 2) và 2 bài viết điền ㉠㉡', async () => {
+  await tc('N02', 'TC3 Bài ' + NEWR + ' soạn đủ phần: ≥35 từ, ≥8 câu từ trong câu, 3–4 mẫu ngữ pháp ≥5 câu/mẫu, 5 câu nghe, đọc hiểu 2 câu, luyện viết; đủ 6 dạng TOPIK (điền 3, nghĩa gần 2, thông báo 1, sắp xếp 1, đoạn văn 1, hội thoại 2) và 2 bài viết điền ㉠㉡', async () => {
     const notes = [];
     NEW.forEach((id) => {
       const d = DATA[id];
@@ -184,7 +185,7 @@ async function noHScroll(page) {
     return notes.join(', ');
   });
 
-  await tc('N03', 'Từ vựng TC3 Bài 7–9 không lặp lại từ của Sơ cấp 1 (Hangeul + 15 bài), Sơ cấp 2 (15 bài), TC3 Bài 1–6 và không lặp giữa 3 bài mới', async () => {
+  await tc('N03', 'Từ vựng TC3 Bài ' + NEWR + ' không lặp lại từ của Sơ cấp 1 (Hangeul + 15 bài), Sơ cấp 2 (15 bài), các bài TC3 khác và không lặp giữa 3 bài mới', async () => {
     const old = new Set(OLD.flatMap((id) => (DATA[id].vocab || []).flatMap((g) => g.words.map((w) => norm(w[0])))));
     const seen = new Map(); const dup = [];
     NEW.forEach((id) => DATA[id].vocab.forEach((g) => g.words.forEach((w) => {
@@ -625,7 +626,7 @@ async function noHScroll(page) {
     assert(st.sel.join() === 'sc2' && st.links.join(',') === SC2.join(','), 'tab ' + st.sel);
     assert(Math.abs(st.y - y0) < 20, 'bị cuộn ' + y0 + ' → ' + st.y);
   });
-  await tc('R07', 'Điện thoại 375px: trang chủ (3 khối cấp độ), trang học (gồm ô viết điền) và màn làm bài TC3 Bài 7–9 (gồm câu TOPIK có đoạn văn, hội thoại) + SC2 Bài 15 + SC1 Bài 1 không tràn ngang', async () => {
+  await tc('R07', 'Điện thoại 375px: trang chủ (3 khối cấp độ), trang học (gồm ô viết điền) và màn làm bài TC3 Bài ' + NEWR + ' (gồm câu TOPIK có đoạn văn, hội thoại) + SC2 Bài 15 + SC1 Bài 1 không tràn ngang', async () => {
     const bad = [];
     const p = mob.page;
     await go(p, '#/'); await p.waitForSelector('.hero'); if (!(await noHScroll(p))) bad.push('trang chủ');
