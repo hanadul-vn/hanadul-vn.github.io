@@ -62,3 +62,31 @@ $$;
 
 revoke execute on function public.delete_my_account() from public, anon;
 grant execute on function public.delete_my_account() to authenticated;
+
+-- =====================================================================
+-- Tên hiển thị. Thêm 23/11/2026 (B4).
+-- =====================================================================
+
+-- Tên hiển thị (dùng cho chứng nhận và bảng xếp hạng). Mỗi tài khoản tự sửa dòng của mình.
+create table if not exists public.profiles (
+  user_id uuid primary key references auth.users (id) on delete cascade,
+  display_name text not null,
+  updated_at timestamptz not null default now(),
+  constraint profiles_name_len check (char_length(btrim(display_name)) between 2 and 40),
+  constraint profiles_name_chars check (display_name !~ '[<>{}\\]' and display_name !~ '[[:cntrl:]]')
+);
+drop trigger if exists profiles_touch on public.profiles;
+create trigger profiles_touch before update on public.profiles
+  for each row execute function public.progress_touch();
+alter table public.profiles enable row level security;
+drop policy if exists "profiles: đọc của mình" on public.profiles;
+create policy "profiles: đọc của mình" on public.profiles
+  for select to authenticated using ((select auth.uid()) = user_id);
+drop policy if exists "profiles: thêm của mình" on public.profiles;
+create policy "profiles: thêm của mình" on public.profiles
+  for insert to authenticated with check ((select auth.uid()) = user_id);
+drop policy if exists "profiles: sửa của mình" on public.profiles;
+create policy "profiles: sửa của mình" on public.profiles
+  for update to authenticated using ((select auth.uid()) = user_id) with check ((select auth.uid()) = user_id);
+revoke all on public.profiles from anon, authenticated;
+grant select, insert, update on public.profiles to authenticated;

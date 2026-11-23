@@ -14,7 +14,9 @@ const srv = {
   rows: {},       // user_id -> {data, version}
   failNext: 0,    // số request REST tiếp theo trả 500
   bumpBeforePatch: 0, // giả lập máy khác ghi chen giữa lúc đọc và ghi
-  calls: []
+  calls: [],
+  profiles: {},   // user_id -> display_name
+  profileFail: 0  // số lần đọc profiles tiếp theo trả 500
 };
 function mkUser(id, email, provider, name) {
   srv.users[id] = { id, email, aud: 'authenticated', role: 'authenticated', app_metadata: { provider }, user_metadata: name ? { full_name: name } : {}, created_at: '2026-11-21T00:00:00Z' };
@@ -60,8 +62,26 @@ async function handle(route) {
   if (p.startsWith('/rest/v1/')) {
     if (srv.failNext > 0) { srv.failNext--; return json(500, { message: 'server down' }); }
     if (!me) return json(401, { message: 'JWT required' });
+    if (p === '/rest/v1/profiles') {
+      if (method === 'GET' && srv.profileFail > 0) { srv.profileFail--; return json(500, { message: 'profiles down' }); }
+      const single = /vnd\.pgrst\.object/.test(req.headers()['accept'] || '');
+      if (method === 'GET') {
+        const eq = (u.searchParams.get('user_id') || '').replace(/^eq\./, '');
+        const rows = eq === me.id && srv.profiles[me.id] ? [{ display_name: srv.profiles[me.id] }] : [];
+        if (single) return rows.length ? json(200, rows[0]) : json(406, { code: 'PGRST116', message: '0 rows' });
+        return json(200, rows);
+      }
+      if (method === 'POST') {
+        const b = JSON.parse(req.postData()); const row = Array.isArray(b) ? b[0] : b;
+        if (row.user_id !== me.id) return json(403, { code: '42501', message: 'RLS' });
+        const n = String(row.display_name || '');
+        if (n.trim().length < 2 || n.trim().length > 40 || /[<>{}\\]/.test(n)) return json(400, { code: '23514', message: 'new row violates check constraint "profiles_name_len"' });
+        srv.profiles[me.id] = n;
+        return json(201, [{ display_name: n }]);
+      }
+    }
     if (p === '/rest/v1/rpc/delete_my_account') {
-      delete srv.rows[me.id]; delete srv.users[me.id];
+      delete srv.rows[me.id]; delete srv.users[me.id]; delete srv.profiles[me.id];
       return route.fulfill({ status: 204, headers: { 'access-control-allow-origin': '*' } });
     }
     if (p !== '/rest/v1/progress') return json(404, {});
@@ -171,6 +191,9 @@ async function waitSynced(page) {
     await d1.page.waitForSelector('#acct .acct-btn');
     assert.ok(/Đăng nhập/.test(await d1.page.textContent('#acct')));
     assert.strictEqual(d1.sdkLoads.length, 1);
+    await d1.page.goto(BASE + '#/tai-khoan');
+    await d1.page.waitForSelector('#emailForm');
+    assert.strictEqual(await d1.page.locator('#namePanel').count(), 0, 'khách thấy ô tên hiển thị');
     assert.deepStrictEqual(d1.errors, []);
   });
 
@@ -236,6 +259,49 @@ async function waitSynced(page) {
     assert.deepStrictEqual(d2.errors, []);
   });
 
+  await tc('N15', 'Tên hiển thị: chưa lưu thì gợi ý tên Google; không có khung gói/Pro nào', async () => {
+    await d2.page.goto(BASE + '#/tai-khoan');
+    await d2.page.evaluate(() => { const k = 'hanadul:auth'; const v = JSON.parse(localStorage.getItem(k)); v.user.user_metadata = { full_name: 'An Nguyen' }; localStorage.setItem(k, JSON.stringify(v)); });
+    await d2.page.reload();
+    await d2.page.waitForSelector('#displayName');
+    assert.strictEqual(await d2.page.inputValue('#displayName'), 'An Nguyen');
+    assert.ok((await d2.page.textContent('#namePanel')).includes('chưa lưu tên'));
+    assert.ok(!/\bPro\b|trả phí|nâng cấp/i.test(await d2.page.textContent('#app')), 'trang tài khoản nói tới trả phí');
+    assert.deepStrictEqual(d2.errors, []);
+  });
+
+  await tc('N16', 'Tên hiển thị: chặn tên 1 ký tự và có < >, không gọi server; tên đúng lưu lên server, tải lại vẫn còn', async () => {
+    const before = srv.calls.filter((c) => /profiles/.test(c) && /^POST/.test(c)).length;
+    await d2.page.fill('#displayName', 'a');
+    await d2.page.click('#nameForm button');
+    await d2.page.waitForSelector('.name-panel .form-msg.bad');
+    assert.ok(/ít nhất 2/.test(await d2.page.textContent('.name-panel .form-msg')));
+    await d2.page.fill('#displayName', '<b>An</b>');
+    await d2.page.click('#nameForm button');
+    await d2.page.waitForSelector('text=không được có các ký tự');
+    assert.strictEqual(srv.calls.filter((c) => /profiles/.test(c) && /^POST/.test(c)).length, before, 'tên sai vẫn gửi server');
+    await d2.page.fill('#displayName', '  Nguyễn   Văn An  ');
+    await d2.page.click('#nameForm button');
+    await d2.page.waitForSelector('text=Đã lưu tên');
+    assert.strictEqual(srv.profiles[UA], 'Nguyễn Văn An');
+    await d2.page.reload();
+    await d2.page.waitForSelector('#displayName');
+    assert.strictEqual(await d2.page.inputValue('#displayName'), 'Nguyễn Văn An');
+    assert.strictEqual(await d2.page.evaluate(() => window.HD.displayName()), 'Nguyễn Văn An');
+  });
+
+  await tc('N17', 'Đọc tên hiển thị lỗi: báo chưa tải được, phần còn lại của trang vẫn dùng được; Thử lại thì hiện tên', async () => {
+    srv.profileFail = 1;
+    await d2.page.reload();
+    await d2.page.waitForSelector('#nameRetry');
+    assert.ok(await d2.page.locator('#logoutBtn').count(), 'trang tài khoản vỡ');
+    await d2.page.click('#nameRetry');
+    await d2.page.waitForSelector('#displayName');
+    assert.strictEqual(await d2.page.inputValue('#displayName'), 'Nguyễn Văn An');
+    assert.ok(!d2.errors.some((e) => /pageerror/.test(e)), d2.errors.join(' | '));
+    d2.errors.length = 0;
+  });
+
   await tc('N7', 'Học song song 2 máy: XP cộng đủ, sổ câu sai gỡ trên máy này thì máy kia gỡ theo', async () => {
     const before = srv.rows[UA].data.xp;
     const gain2 = await answerQuiz(d2.page, 'sc1-02', 0);
@@ -299,6 +365,8 @@ async function waitSynced(page) {
     await d1.page.waitForSelector('#emailForm');
     assert.strictEqual(await store(d1.page), null);
     assert.ok(/Đăng nhập/.test(await d1.page.textContent('#acct')));
+    assert.strictEqual(await d1.page.evaluate(() => window.HD.displayName()), '', 'đăng xuất còn giữ tên');
+    assert.strictEqual(await d1.page.locator('#namePanel').count(), 0);
     assert.strictEqual(srv.rows[UA].data.xp, xp);
     await d1.page.goto(BASE + '#/');
     await d1.page.waitForSelector('.path .node');
@@ -344,6 +412,7 @@ async function waitSynced(page) {
     await d2.page.click('#deleteYes');
     await d2.page.waitForSelector('text=Đã xóa tài khoản');
     assert.ok(!srv.rows[UA] && !srv.users[UA]);
+    assert.ok(!srv.profiles[UA], 'tên còn trên server');
     assert.strictEqual(await store(d2.page), null);
     assert.deepStrictEqual(d2.errors.filter((e) => !/40[13]|Failed to load resource/.test(e)), []);
   });
@@ -371,7 +440,8 @@ async function waitSynced(page) {
       assert.ok(over <= 0, 'tràn ngang ' + over + 'px');
       const bar = await d.page.evaluate(() => { const r = document.querySelector('#acct').getBoundingClientRect(); return r.right; });
       assert.ok(bar <= 360, 'nút tài khoản ra ngoài màn: ' + bar);
-      await d.page.screenshot({ path: process.env.SHOTS + '/tai-khoan-dien-thoai-' + (on ? 'da-dang-nhap' : 'chua-dang-nhap') + '.png' });
+      if (on) await d.page.waitForSelector('#displayName');
+      await d.page.screenshot({ path: process.env.SHOTS + '/tai-khoan-dien-thoai-' + (on ? 'da-dang-nhap' : 'chua-dang-nhap') + '.png', fullPage: true });
       await d.ctx.close();
     }
   });

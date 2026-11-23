@@ -31,6 +31,8 @@
   var sync = { state: 'idle', at: 0, error: '' };
   var pushTimer = null, running = null, again = false;
   var view = { step: 'start', email: '', msg: '', bad: false, busy: false, confirmDelete: false };
+  // Tên hiển thị (B4): profileState idle | loading | ok | error.
+  var profile = null, profileState = 'idle', nameView = { msg: '', bad: false, busy: false };
 
   function esc(t) {
     return String(t == null ? '' : t).replace(/[&<>"']/g, function (c) {
@@ -47,6 +49,7 @@
   function track(n, p) { if (HD.track) HD.track(n, p); }
 
   HD.isSignedIn = function () { return !!user; };
+  HD.displayName = function () { return (profile && profile.display_name) || ''; };
   HD.accountReady = function () { return ready; };
 
   // ---------- badge trên thanh trên cùng ----------
@@ -161,6 +164,23 @@
     }
   });
 
+  // ---------- tên hiển thị ----------
+  function loadProfile() {
+    if (!sb || !user) return Promise.resolve();
+    var uid = user.id;
+    profileState = 'loading';
+    return sb.from('profiles').select('display_name').eq('user_id', uid).maybeSingle().then(function (r) {
+      if (!user || user.id !== uid) return;
+      if (r.error) throw r.error;
+      profile = r.data;
+      profileState = 'ok';
+    }).catch(function (err) {
+      console.warn('[Hana Dul] tên hiển thị', err);
+      profile = null; profileState = 'error';
+    }).then(function () { if (/^#\/tai-khoan/.test(location.hash)) rerender(); else refreshApp(); });
+  }
+  HD.loadProfile = loadProfile;
+
   // ---------- khởi động ----------
   function loadSdk() {
     if (window.supabase && window.supabase.createClient) return Promise.resolve();
@@ -195,7 +215,9 @@
     HD.renderAccountBadge();
     if (user && user.id !== before) {
       setTimeout(syncNow, 0);
+      setTimeout(loadProfile, 0);
     }
+    if (!user) { profile = null; profileState = 'idle'; }
   }
 
   function start() {
@@ -210,7 +232,7 @@
       sb.auth.onAuthStateChange(function (event, session) {
         // Không gọi Supabase trực tiếp trong callback này (dễ treo), đẩy sang lượt sau.
         setTimeout(function () {
-          if (event === 'SIGNED_OUT') { user = null; HD.renderAccountBadge(); refreshApp(); return; }
+          if (event === 'SIGNED_OUT') { user = null; profile = null; profileState = 'idle'; HD.renderAccountBadge(); refreshApp(); return; }
           var wasIn = !!user;
           setUser(session && session.user);
           if (event === 'SIGNED_IN' && !wasIn && user) {
@@ -307,6 +329,7 @@
       '<div class="actions"><button type="button" class="btn ghost" id="syncBtn">🔄 Đồng bộ ngay</button>' +
       '<button type="button" class="btn ghost" id="logoutBtn">Đăng xuất</button></div>' +
       '<p class="muted small-note">Đăng xuất sẽ xóa tiến độ khỏi máy này (vẫn còn trong tài khoản), để người khác dùng máy không thấy dữ liệu của bạn.</p></div>';
+    h += nameHtml();
     h += '<details class="danger-zone"' + (view.confirmDelete ? ' open' : '') + '><summary>Xóa tài khoản</summary>' +
       '<p>Xóa vĩnh viễn tài khoản và toàn bộ tiến độ đã lưu trên server. Không khôi phục được.</p>' +
       (view.msg ? '<p class="form-msg' + (view.bad ? ' bad' : '') + '" role="status">' + esc(view.msg) + '</p>' : '') +
@@ -316,6 +339,30 @@
       '</details>';
     return h;
   }
+
+  function nameHtml() {
+    var h = '<section class="panel name-panel" id="namePanel" aria-labelledby="nameTitle"><h2 id="nameTitle">Tên hiển thị</h2>';
+    if (profileState !== 'ok') {
+      return h + '<p class="muted" role="status">' + (profileState === 'error' ? '⚠️ Chưa tải được tên hiển thị. <button type="button" class="linkish" id="nameRetry">Thử lại</button>' : 'Đang tải…') + '</p></section>';
+    }
+    var cur = (profile && profile.display_name) || '';
+    var suggest = cur || (function () { var m = user.user_metadata || {}; return m.full_name || m.name || ''; })();
+    return h +
+      '<p class="muted">Tên in trên chứng nhận và hiện trên bảng xếp hạng (nếu bạn bật). ' + (cur ? '' : 'Bạn chưa lưu tên.') + '</p>' +
+      '<form class="acct-form" id="nameForm" novalidate><label class="sr-only" for="displayName">Tên hiển thị</label>' +
+      '<input id="displayName" name="name" maxlength="40" autocomplete="name" placeholder="Ví dụ: Minh Hoàng" value="' + esc(suggest) + '">' +
+      '<button class="btn" type="submit"' + (nameView.busy ? ' disabled' : '') + '>Lưu tên</button></form>' +
+      (nameView.msg ? '<p class="form-msg' + (nameView.bad ? ' bad' : '') + '" role="status">' + esc(nameView.msg) + '</p>' : '') +
+      '</section>';
+  }
+  // Giống ràng buộc trong supabase/schema.sql (profiles_name_len, profiles_name_chars).
+  function checkName(n) {
+    if (n.length < 2) return 'Tên cần ít nhất 2 ký tự.';
+    if (n.length > 40) return 'Tên tối đa 40 ký tự.';
+    if (/[<>{}\\]|[\u0000-\u001f\u007f]/.test(n)) return 'Tên không được có các ký tự < > { } \\.';
+    return '';
+  }
+  HD.checkDisplayName = checkName;
 
   function rerender() { var app = document.getElementById('app'); if (app && /^#\/tai-khoan/.test(location.hash)) HD.renderAccountPage(app); }
   function say(msg, bad) { view.msg = msg; view.bad = !!bad; }
@@ -361,11 +408,27 @@
     });
     on('backEmail', 'click', function () { view.step = 'start'; say(''); rerender(); });
     on('syncBtn', 'click', function () { syncNow(); });
+    on('nameRetry', 'click', function () { profileState = 'loading'; rerender(); loadProfile(); });
+    on('nameForm', 'submit', function (e) {
+      e.preventDefault();
+      var n = e.target.elements.name.value.replace(/\s+/g, ' ').trim();
+      var bad = checkName(n);
+      if (bad) { nameView = { msg: bad, bad: true, busy: false }; return rerender(); }
+      nameView = { msg: 'Đang lưu…', bad: false, busy: true }; rerender();
+      var uid = user.id;
+      sb.from('profiles').upsert({ user_id: uid, display_name: n }, { onConflict: 'user_id' }).select('display_name').then(function (r) {
+        if (r.error) throw r.error;
+        profile = { display_name: n };
+        nameView = { msg: '✅ Đã lưu tên.', bad: false, busy: false };
+        rerender();
+      }).catch(function (err) { nameView = { msg: errText(err), bad: true, busy: false }; rerender(); });
+    });
     on('logoutBtn', 'click', function () {
       var b = this; b.disabled = true; b.textContent = 'Đang đăng xuất…';
       syncNow().then(function () { return sb.auth.signOut(); }).then(function () {
         try { localStorage.removeItem(STORE_KEY); } catch (e) { /* bỏ qua */ }
-        user = null; sync = { state: 'idle', at: 0, error: '' }; view = { step: 'start', email: '', msg: 'Đã đăng xuất.', bad: false, busy: false, confirmDelete: false };
+        user = null; profile = null; profileState = 'idle'; nameView = { msg: '', bad: false, busy: false };
+        sync = { state: 'idle', at: 0, error: '' }; view = { step: 'start', email: '', msg: 'Đã đăng xuất.', bad: false, busy: false, confirmDelete: false };
         HD.renderAccountBadge();
         refreshApp();
       });
@@ -381,7 +444,8 @@
       }).then(function () {
         try { localStorage.removeItem(STORE_KEY); } catch (e) { /* bỏ qua */ }
         track('account_deleted');
-        user = null; sync = { state: 'idle', at: 0, error: '' };
+        user = null; profile = null; profileState = 'idle';
+        sync = { state: 'idle', at: 0, error: '' };
         view = { step: 'start', email: '', msg: 'Đã xóa tài khoản và dữ liệu trên server.', bad: false, busy: false, confirmDelete: false };
         HD.renderAccountBadge();
         refreshApp();

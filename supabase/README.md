@@ -67,6 +67,10 @@ Merge vào `main` là web có nút **Đăng nhập** (góc trên bên phải) v�
 2. Supabase → **Table Editor → progress**: có 1 dòng, cột `data` có `xp`, `lessons`.
 3. Mở máy/trình duyệt khác, đăng nhập Google cùng email → thấy đúng XP và sao.
 
+## 8. Tên hiển thị
+
+Chạy lại toàn bộ [`schema.sql`](schema.sql) (an toàn, không mất dữ liệu cũ) để có bảng `profiles`: tên hiển thị người học tự đặt ở trang Tài khoản (2–40 ký tự, không có `< > { } \`), dùng cho chứng nhận và bảng xếp hạng. Mỗi tài khoản chỉ đọc/sửa tên của mình; xóa tài khoản thì tên mất theo.
+
 ## Ghi chú gói miễn phí
 
 - Gói Free: 50.000 người dùng hoạt động/tháng, 500 MB dữ liệu, đủ dư cho giai đoạn đầu (mỗi người học chỉ vài chục KB).

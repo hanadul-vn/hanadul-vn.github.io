@@ -507,3 +507,6 @@ button { font: inherit; color: inherit; }
 .danger-zone summary { cursor: pointer; font-weight: 700; color: var(--muted); }
 .danger-zone .actions { justify-content: flex-start; }
 .acct-card .emoji { background: var(--sky-soft); }
+/* Tên hiển thị (trang Tài khoản) */
+.name-panel { margin-top: 14px; text-align: left; }
+.name-panel h2 { font-size: 1.25rem; margin: 0 0 8px; }

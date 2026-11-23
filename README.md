@@ -61,6 +61,7 @@ Không bắt buộc. Bật bằng `supabaseUrl` + `supabaseKey` (khóa công kha
 - Đăng nhập Google hoặc email (link + mã 6 số, không mật khẩu). Màn `#/tai-khoan`: đồng bộ, đăng xuất, xóa tài khoản.
 - Đồng bộ toàn bộ `hanadul:v2` (bài, sao, XP, chuỗi ngày, Sổ câu sai, câu tự viết) vào bảng `progress`. Lần đầu đăng nhập, tiến độ khách trên máy được gộp vào tài khoản.
 - Gộp ([`assets/merge.js`](assets/merge.js)): điểm/sao lấy cao nhất, ngày học hợp lại, XP cộng phần mỗi máy kiếm thêm, Sổ câu sai theo thay đổi mới nhất (có dấu "đã gỡ" để máy khác gỡ theo), câu viết lấy bản sửa sau cùng.
+- Tên hiển thị (bảng `profiles`): khung "Tên hiển thị" ở `#/tai-khoan`, dùng cho chứng nhận và bảng xếp hạng; đọc bằng `HD.displayName()`.
 - Đăng xuất xóa tiến độ khỏi máy đó (vẫn còn trên tài khoản). Thư viện `assets/vendor/supabase-2.118.0.js` (MIT) chỉ tải khi đã bật.
 
 ## Kiểm thử

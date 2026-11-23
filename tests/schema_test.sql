@@ -64,4 +64,37 @@ do $$ begin
   assert (select count(*) from auth.users) = 1, 'A chưa bị xóa / B bị xóa nhầm';
   assert (select count(*) from public.progress) = 0, 'progress của A còn';
 end $$;
+-- ===== Tên hiển thị (B4) =====
+insert into auth.users values ('33333333-3333-3333-3333-333333333333','c@x.vn');
+set role authenticated; set request.jwt.claim.sub = '33333333-3333-3333-3333-333333333333';
+-- TC P9: tự lưu và sửa tên của mình
+insert into public.profiles (user_id, display_name) values ('33333333-3333-3333-3333-333333333333', 'Chi Nguyễn');
+update public.profiles set display_name = '민 Hoàng';
+do $$ begin assert (select display_name from public.profiles) = '민 Hoàng'; end $$;
+-- TC P10: tên quá ngắn / quá dài / có ký tự lạ bị từ chối
+do $$ begin
+  begin update public.profiles set display_name = ' a '; raise exception 'tên 1 ký tự'; exception when check_violation then null; end;
+  begin update public.profiles set display_name = repeat('a', 41); raise exception 'tên 41 ký tự'; exception when check_violation then null; end;
+  begin update public.profiles set display_name = '<script>'; raise exception 'tên có <>'; exception when check_violation then null; end;
+end $$;
+-- TC P11: không tạo/sửa/thấy tên của người khác
+do $$ begin
+  begin insert into public.profiles (user_id, display_name) values ('22222222-2222-2222-2222-222222222222', 'Giả B');
+    raise exception 'tạo tên cho B'; exception when insufficient_privilege then null; end;
+end $$;
+set request.jwt.claim.sub = '22222222-2222-2222-2222-222222222222';
+do $$ begin assert (select count(*) from public.profiles) = 0, 'B thấy tên của C'; end $$;
+update public.profiles set display_name = 'Bị sửa';
+reset role;
+do $$ begin assert (select display_name from public.profiles) = '민 Hoàng', 'B sửa được tên C'; end $$;
+set role anon;
+do $$ begin begin perform 1 from public.profiles; raise exception 'anon đọc profiles'; exception when insufficient_privilege then null; end; end $$;
+reset role;
+-- TC P12: xóa tài khoản C → tên mất theo
+set role authenticated; set request.jwt.claim.sub = '33333333-3333-3333-3333-333333333333';
+select public.delete_my_account();
+reset role;
+do $$ begin
+  assert (select count(*) from public.profiles) = 0, 'còn tên của C';
+end $$;
 \echo 'SCHEMA TESTS PASSED'
