@@ -71,6 +71,15 @@ Merge vào `main` là web có nút **Đăng nhập** (góc trên bên phải) v�
 
 Chạy lại toàn bộ [`schema.sql`](schema.sql) (an toàn, không mất dữ liệu cũ) để có bảng `profiles`: tên hiển thị người học tự đặt ở trang Tài khoản (2–40 ký tự, không có `< > { } \`), dùng cho chứng nhận và bảng xếp hạng. Mỗi tài khoản chỉ đọc/sửa tên của mình; xóa tài khoản thì tên mất theo.
 
+## 9. Chứng nhận hoàn thành
+
+Chạy lại toàn bộ [`schema.sql`](schema.sql) để có bảng `certificates` và 2 hàm:
+
+- `issue_certificate(p_level, p_lessons)`: người học đã đăng nhập, đã đặt tên hiển thị, mọi bài của cấp độ đạt từ 2 sao **trong tiến độ trên server** thì được cấp mã `HD-XXXX-XXXX` (mỗi cấp độ 1 mã, cấp lại trả mã cũ). Tên chứng nhận do server đặt theo mã cấp độ (sc1 → "Hoàn thành Sơ cấp 1"), người dùng không tự sửa, không thêm/sửa thẳng vào bảng được.
+- `verify_certificate(p_code)`: ai cũng gọi được (khóa công khai) để xác minh ở trang `chung-nhan.html?ma=…`; chỉ trả tên hiển thị, tên chứng nhận, số bài, điểm trung bình, ngày cấp.
+
+Cấp độ chỉ có chứng nhận khi `status` trong `data/index.json` bắt đầu bằng "Đủ" (đã đủ bài). Xóa tài khoản thì chứng nhận mất theo.
+
 ## Ghi chú gói miễn phí
 
 - Gói Free: 50.000 người dùng hoạt động/tháng, 500 MB dữ liệu, đủ dư cho giai đoạn đầu (mỗi người học chỉ vài chục KB).

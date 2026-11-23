@@ -39,10 +39,16 @@
     Object.keys(a).concat(Object.keys(b)).forEach(function (id) {
       if (out[id]) return;
       var x = obj(a[id]), y = obj(b[id]);
-      var newer = num(x.at) >= num(y.at) ? x : y;
+      // Bản mới hơn: theo lần nộp (at) hoặc lần tự chấm gần nhất (gat, phần Viết).
+      var tx = Math.max(num(x.at), num(x.gat)), ty = Math.max(num(y.at), num(y.gat));
+      var newer = tx >= ty ? x : y;
       var e = { best: Math.max(num(x.best), num(y.best)), n: Math.max(num(x.n), num(y.n)), last: num(newer.last), at: num(newer.at) };
       if (typeof newer.ans === 'string') e.ans = newer.ans;
       if (num(newer.secs)) e.secs = num(newer.secs);
+      if (newer.texts && typeof newer.texts === 'object') {
+        e.texts = newer.texts; e.self = obj(newer.self); e.pb = num(newer.pb);
+        if (num(newer.gat)) e.gat = num(newer.gat);
+      }
       out[id] = e;
     });
     return out;

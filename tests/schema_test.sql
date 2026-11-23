@@ -97,4 +97,76 @@ reset role;
 do $$ begin
   assert (select count(*) from public.profiles) = 0, 'còn tên của C';
 end $$;
+-- ===== Chứng nhận (B4) =====
+insert into auth.users values ('44444444-4444-4444-4444-444444444444','d@x.vn');
+insert into public.progress (user_id, data) values ('44444444-4444-4444-4444-444444444444',
+  (select jsonb_build_object('lessons', jsonb_object_agg('sc1-' || lpad(i::text, 2, '0'), jsonb_build_object('best', 80 + i, 'stars', case when i = 11 then 1 else 2 end)))
+   from generate_series(1, 11) i));
+set role authenticated; set request.jwt.claim.sub = '44444444-4444-4444-4444-444444444444';
+-- TC C1: chưa đặt tên hiển thị → không cấp
+do $$ begin
+  begin perform public.issue_certificate('sc1', array(select 'sc1-' || lpad(i::text, 2, '0') from generate_series(1, 10) i));
+    raise exception 'cấp khi chưa có tên'; exception when others then assert sqlerrm like 'Cần đặt tên%', sqlerrm; end;
+end $$;
+insert into public.profiles (user_id, display_name) values ('44444444-4444-4444-4444-444444444444', 'Dũng Trần');
+-- TC C2: có bài dưới 2 sao → không cấp, báo rõ bài nào
+do $$ begin
+  begin perform public.issue_certificate('sc1', array(select 'sc1-' || lpad(i::text, 2, '0') from generate_series(1, 11) i));
+    raise exception 'cấp khi bài 11 mới 1 sao'; exception when others then assert sqlerrm like 'Chưa đạt: bài sc1-11 mới 1 sao%', sqlerrm; end;
+end $$;
+-- TC C3: đủ điều kiện → cấp mã HD-XXXX-XXXX, tên do server đặt, có số bài và điểm trung bình
+create temp table cert1 as select * from public.issue_certificate('sc1', array(select 'sc1-' || lpad(i::text, 2, '0') from generate_series(1, 10) i));
+do $$ declare c record; begin
+  select * into c from cert1;
+  assert c.code ~ '^HD-[A-Z0-9]{4}-[A-Z0-9]{4}$', c.code;
+  assert c.title = 'Hoàn thành Sơ cấp 1', c.title;
+  assert c.display_name = 'Dũng Trần';
+  assert c.detail = '{"lessons": 10, "avg": 86}'::jsonb, c.detail::text;
+end $$;
+-- TC C4: cấp lại → cùng mã; đổi tên rồi cấp lại → cùng mã, tên mới
+update public.profiles set display_name = 'Trần Dũng';
+do $$ declare c record; begin
+  select * into c from public.issue_certificate('sc1', array(select 'sc1-' || lpad(i::text, 2, '0') from generate_series(1, 10) i));
+  assert c.code = (select code from cert1), 'mã đổi khi cấp lại';
+  assert c.display_name = 'Trần Dũng';
+  assert (select count(*) from public.certificates) = 1;
+end $$;
+-- TC C5: dữ liệu gửi lên không hợp lệ bị từ chối
+do $$ begin
+  begin perform public.issue_certificate('sc1', array['sc1-01','sc1-02']); raise exception 'ít bài'; exception when others then assert sqlerrm like 'Danh sách bài%', sqlerrm; end;
+  begin perform public.issue_certificate('sc1', array(select 'sc1-01' from generate_series(1, 10))); raise exception 'trùng bài'; exception when others then assert sqlerrm like 'Danh sách bài%', sqlerrm; end;
+  begin perform public.issue_certificate('sc2', array(select 'sc1-' || lpad(i::text, 2, '0') from generate_series(1, 10) i)); raise exception 'bài cấp khác'; exception when others then assert sqlerrm like 'Bài sc1-01 không thuộc%', sqlerrm; end;
+  begin perform public.issue_certificate('topik6', array(select 'sc1-' || lpad(i::text, 2, '0') from generate_series(1, 10) i)); raise exception 'cấp lạ'; exception when others then assert sqlerrm like 'Cấp độ không hợp lệ%', sqlerrm; end;
+end $$;
+-- TC C6: không tự thêm/sửa chứng nhận trực tiếp
+do $$ begin
+  begin insert into public.certificates (code, user_id, kind, title, display_name) values ('HD-AAAA-AAAA', '44444444-4444-4444-4444-444444444444', 'level-sc2', 'Giả', 'X');
+    raise exception 'tự thêm được'; exception when insufficient_privilege then null; end;
+  begin update public.certificates set title = 'TOPIK 6'; raise exception 'tự sửa được'; exception when insufficient_privilege then null; end;
+end $$;
+-- TC C7: người khác không thấy; khách xác minh được theo mã (không phân biệt hoa thường, dấu cách), không đọc thẳng bảng
+set request.jwt.claim.sub = '22222222-2222-2222-2222-222222222222';
+do $$ begin
+  assert (select count(*) from public.certificates) = 0, 'B thấy chứng nhận của D';
+  begin perform public.issue_certificate('sc1', array(select 'sc1-' || lpad(i::text, 2, '0') from generate_series(1, 10) i)); raise exception 'B không tên vẫn được cấp'; exception when others then assert sqlerrm like 'Cần đặt tên%', sqlerrm; end;
+end $$;
+reset role;
+grant select on cert1 to anon;
+set role anon;
+do $$ declare c record; v text := (select code from cert1); begin
+  select * into c from public.verify_certificate('  ' || lower(v) || ' ');
+  assert c.display_name = 'Trần Dũng' and c.title = 'Hoàn thành Sơ cấp 1', 'xác minh sai';
+  assert (select count(*) from public.verify_certificate('HD-0000-0000')) = 0;
+  begin perform 1 from public.certificates; raise exception 'anon đọc bảng certificates'; exception when insufficient_privilege then null; end;
+  begin perform public.issue_certificate('sc1', array['x']); raise exception 'anon cấp được'; exception when insufficient_privilege then null; end;
+end $$;
+reset role;
+-- TC C8: tự xóa chứng nhận của mình; xóa tài khoản thì chứng nhận mất theo
+set role authenticated; set request.jwt.claim.sub = '44444444-4444-4444-4444-444444444444';
+delete from public.certificates;
+do $$ begin assert (select count(*) from public.certificates) = 0, 'không xóa được'; end $$;
+select code from public.issue_certificate('sc1', array(select 'sc1-' || lpad(i::text, 2, '0') from generate_series(1, 10) i)) \gset
+select public.delete_my_account();
+reset role;
+do $$ begin assert (select count(*) from public.certificates) = 0, 'còn chứng nhận sau khi xóa tài khoản'; end $$;
 \echo 'SCHEMA TESTS PASSED'

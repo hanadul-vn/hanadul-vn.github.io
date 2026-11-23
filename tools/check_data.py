@@ -117,6 +117,35 @@ if fb_path.exists():
         err(f"cam-nhan.json: JSON lỗi: {e}")
 
 # Đề thi thử (data/exams): số câu liên tục, 4 lựa chọn khác nhau, đáp án 0–3, có giải thích và bản dịch đoạn văn.
+def check_viet(eid, q):
+    """Câu Viết: fill (51–52) có ô ㉠㉡ + đáp án mẫu; chart/essay (53–54) có bài mẫu đúng độ dài, tiêu chí cộng đủ điểm."""
+    n = q.get("n")
+    if not q.get("points"):
+        err(f"{eid} câu {n}: thiếu điểm")
+    kind = q.get("kind")
+    if kind == "fill":
+        bl = q.get("blanks", [])
+        if not bl or not q.get("passageVi") or not q.get("explain"):
+            err(f"{eid} câu {n}: thiếu ô trống, bản dịch hoặc giải thích")
+        for b in bl:
+            if f"( {b.get('mark')} )" not in q.get("passage", ""):
+                err(f"{eid} câu {n}: đoạn văn không có ô {b.get('mark')}")
+            if not b.get("answers") or any(not str(a).strip() for a in b["answers"]):
+                err(f"{eid} câu {n}: ô {b.get('mark')} thiếu đáp án mẫu")
+    elif kind in ("chart", "essay"):
+        lo, hi = q.get("minChars", 0), q.get("maxChars", 0)
+        c = len(re.sub(r"[\r\n]", "", q.get("sample", "")))
+        if not (0 < lo < hi) or not (lo <= c <= hi):
+            err(f"{eid} câu {n}: bài mẫu {c} ký tự, ngoài khoảng {lo}–{hi}")
+        rb = q.get("rubric", [])
+        if sum(r.get("points", 0) for r in rb) != q.get("points") or any(not r.get("label") or not r.get("desc") for r in rb):
+            err(f"{eid} câu {n}: tiêu chí chấm phải đủ tên, mô tả và cộng đúng {q.get('points')} điểm")
+        if not q.get("q") or not q.get("data") or not q.get("dataVi"):
+            err(f"{eid} câu {n}: thiếu đề, dữ liệu hoặc bản dịch")
+    else:
+        err(f"{eid} câu {n}: kind lạ {kind!r}")
+
+
 ex_dir = ROOT / "data/exams"
 if ex_dir.exists():
     eidx = json.loads((ex_dir / "index.json").read_text(encoding="utf-8"))
@@ -148,6 +177,9 @@ if ex_dir.exists():
             if "㉠" in (st.get("passage") or "") and not st.get("sentence"):
                 err(f"{eid}: câu {st['questions'][0].get('n')} có ㉠㉡ mà thiếu câu cho sẵn")
             for q in st.get("questions", []):
+                if ex.get("part") == "viet":
+                    check_viet(eid, q)
+                    continue
                 o = q.get("options", [])
                 if len(o) != 4 or len(set(o)) != 4 or any(not str(x).strip() for x in o):
                     err(f"{eid} câu {q.get('n')}: cần đúng 4 lựa chọn khác nhau")
@@ -157,6 +189,12 @@ if ex_dir.exists():
                     err(f"{eid} câu {q.get('n')}: thiếu giải thích")
                 if not q.get("q") and not st.get("passage"):
                     err(f"{eid} câu {q.get('n')}: không có câu hỏi lẫn đoạn văn")
+        if ex.get("part") == "viet":
+            tot = sum(q.get("points", 0) for q in qs)
+            if tot != 100:
+                err(f"{eid}: tổng điểm phần Viết phải là 100 (đang {tot})")
+            print(f"{eid}: {len(qs)} câu viết, {ex.get('minutes')} phút, {tot} điểm")
+            continue
         cnt = [sum(1 for q in qs if q.get("answer") == i) for i in range(4)]
         if qs and max(cnt) - min(cnt) > max(3, len(qs) // 8):
             err(f"{eid}: đáp án đúng dồn lệch về một vị trí {cnt}")

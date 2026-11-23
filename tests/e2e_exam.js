@@ -13,6 +13,9 @@ const IDX = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/exams/index.json'),
 const EX = {};
 IDX.exams.forEach((e) => { EX[e.id] = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/exams', e.id + '.json'), 'utf8')); });
 const ID = 'doc-01';
+const DOC = IDX.exams.filter((e) => e.part !== 'viet');
+const VID = 'viet-01';
+const VQ = EX[VID].sets.flatMap((st) => st.questions);
 const QS = EX[ID].sets.flatMap((s) => s.questions);
 const T0 = new Date('2026-11-23T08:00:00+07:00');
 
@@ -228,8 +231,8 @@ async function noOverflow(page, label) {
     await p.evaluate(() => localStorage.removeItem('hanadul:exam-run'));
   });
 
-  await tc('E14', 'Mọi đề trong danh sách: làm đúng hết được trọn điểm (đáp án trong dữ liệu khớp giao diện); danh sách hiện điểm cao nhất', async () => {
-    for (const e of IDX.exams) {
+  await tc('E14', 'Mọi đề Đọc trong danh sách: làm đúng hết được trọn điểm (đáp án trong dữ liệu khớp giao diện); danh sách hiện điểm cao nhất', async () => {
+    for (const e of DOC) {
       await p.goto(BASE + '#/thi-thu/' + e.id);
       await p.click('#startBtn');
       await p.waitForSelector('#examTimer');
@@ -244,7 +247,7 @@ async function noOverflow(page, label) {
     }
     await p.goto(BASE + '#/thi-thu');
     await p.waitForSelector('.exam-item');
-    for (const e of IDX.exams) assert.ok((await p.textContent('.exam-item[data-exam="' + e.id + '"]')).includes('Cao nhất ' + e.count + '/' + e.count), e.id);
+    for (const e of DOC) assert.ok((await p.textContent('.exam-item[data-exam="' + e.id + '"]')).includes('Cao nhất ' + e.count + '/' + e.count), e.id);
   });
 
   await tc('E11', 'Đề không tồn tại / mã lạ: báo không tải được, có link về danh sách, không lỗi JS', async () => {
@@ -284,6 +287,179 @@ async function noOverflow(page, label) {
       await mp.waitForSelector('#scoreRight');
       await noOverflow(mp, 'kết quả');
       await mp.screenshot({ path: SHOTS + '/thi-thu-ket-qua-dien-thoai' + (dark ? '-toi' : '') + '.png', fullPage: false });
+      assert.deepStrictEqual(m.errors, []);
+      await m.ctx.close();
+    }
+  });
+
+  // ---------- phần Viết (câu 51–54) ----------
+  const v = await device(browser);
+  const vp = v.page;
+  const ko = (n) => '가나다라마 바사아자차 '.repeat(Math.ceil(n / 11)).slice(0, n);
+  const vstore = async () => (await store(vp)).exams[VID];
+
+  await tc('V1', 'Viết: trang giới thiệu nêu cách tự chấm; bắt đầu có 4 ô ㉠㉡ + 2 ô viết bài, đếm chữ, đồng hồ 50:00', async () => {
+    await vp.goto(BASE + '#/thi-thu');
+    await vp.waitForSelector('.exam-item[data-exam="' + VID + '"]');
+    assert.ok((await vp.textContent('.exam-item[data-exam="' + VID + '"]')).includes('Chưa làm'));
+    assert.ok(!(await vp.textContent('#app')).includes('sẽ có sớm'));
+    await vp.goto(BASE + '#/thi-thu/' + VID);
+    await vp.waitForSelector('#startBtn');
+    const intro = await vp.textContent('.exam-intro');
+    assert.ok(intro.includes('50 phút') && intro.includes('tự chấm') && intro.includes('100 điểm'), intro);
+    await vp.click('#startBtn');
+    await vp.waitForSelector('#examTimer');
+    assert.strictEqual(await timerSecs(vp), 50 * 60);
+    assert.strictEqual(await vp.locator('.wr-in').count(), 4);
+    assert.strictEqual(await vp.locator('.wr-ta').count(), 2);
+    assert.strictEqual(await vp.locator('.ex-opt').count(), 0);
+    assert.ok((await vp.textContent('#examCount')).includes('0/4'));
+    assert.ok((await vp.textContent('#cnt-53')).includes('200–300'));
+    assert.ok((await vp.textContent('#cnt-54')).includes('600–700'));
+  });
+
+  await tc('V2', 'Viết: gõ tới đâu lưu tới đó; bộ đếm chữ đỏ khi thiếu, xanh khi đủ (không tính xuống dòng); bảng câu đánh dấu câu đã viết', async () => {
+    await vp.fill('[data-key="51-㉠"]', '꼭 와 주세요.');
+    await vp.fill('[data-key="51-㉡"]', '전화해 줘');
+    await vp.fill('[data-key="53"]', ko(150));
+    assert.ok(!(await vp.getAttribute('#cnt-53', 'class')).includes('ok'));
+    assert.ok((await vp.textContent('#cnt-53')).startsWith('150'));
+    await vp.fill('[data-key="53"]', ko(100) + '\n\n' + ko(110));
+    assert.ok((await vp.textContent('#cnt-53')).startsWith('210'), await vp.textContent('#cnt-53'));
+    assert.ok((await vp.getAttribute('#cnt-53', 'class')).includes('ok'));
+    assert.ok((await vp.textContent('#examCount')).includes('2/4'));
+    assert.ok(await vp.locator('[data-jump="51"].on').count());
+    assert.ok(await vp.locator('[data-jump="53"].on').count());
+    assert.ok(!(await vp.locator('[data-jump="52"].on').count()));
+    const r = await run(vp);
+    assert.strictEqual(r.texts['51-㉠'], '꼭 와 주세요.');
+    assert.strictEqual(r.texts['53'].length, 212);
+  });
+
+  await tc('V3', 'Viết: tải lại trang giữa chừng không mất chữ, đồng hồ vẫn chạy tiếp', async () => {
+    await vp.clock.fastForward(5 * 60 * 1000);
+    await vp.reload();
+    await vp.waitForSelector('#examTimer');
+    assert.strictEqual(await vp.inputValue('[data-key="51-㉡"]'), '전화해 줘');
+    assert.ok((await vp.inputValue('[data-key="53"]')).includes('\n\n'));
+    const t = await timerSecs(vp);
+    assert.ok(t <= 45 * 60 && t > 44 * 60, 'giờ ' + t);
+    assert.ok((await vp.textContent('#examCount')).includes('2/4'));
+  });
+
+  await tc('V4', 'Viết: nộp bài → ô khớp đáp án mẫu tự được điểm, còn lại chờ tự chấm; câu bỏ trống 0 điểm; +20 XP; bài đang làm bị xóa', async () => {
+    const xp0 = (await store(vp)).xp || 0;
+    await vp.click('#submitBtn');
+    assert.ok((await vp.textContent('#confirmBox')).includes('Còn 2 câu chưa viết'));
+    await vp.click('#confirmYes');
+    await vp.waitForSelector('#scoreTotal');
+    assert.strictEqual(await vp.textContent('#scoreTotal'), '5');
+    assert.ok((await vp.textContent('#pendingMsg')).includes('Còn 4 mục'));
+    assert.ok((await vp.textContent('[data-item="51-㉠"]')).includes('Khớp đáp án mẫu'));
+    assert.strictEqual(await vp.locator('[data-item="51-㉡"] .sg').count(), 3);
+    assert.ok((await vp.textContent('#r-52')).includes('Bỏ trống'));
+    assert.ok((await vp.textContent('#r-54')).includes('chưa viết câu này'));
+    assert.strictEqual(await vp.locator('#r-54 .sg').count(), 0);
+    assert.ok((await vp.textContent('#r-53 .wr-mine')).length >= 210);
+    assert.ok(await vp.locator('#r-53 details.wr-sample').count());
+    const s = await store(vp);
+    assert.strictEqual(s.xp - xp0, 20);
+    assert.strictEqual(s.exams[VID].last, 5);
+    assert.strictEqual(s.exams[VID].texts['51-㉠'], '꼭 와 주세요.');
+    assert.ok(s.exams[VID].secs >= 300 && s.exams[VID].secs < 320, 'secs ' + s.exams[VID].secs);
+    assert.strictEqual(await run(vp), null);
+    assert.deepStrictEqual(v.errors, []);
+  });
+
+  await tc('V5', 'Viết: tự chấm theo mức → điểm câu, tổng, "đã chấm xong" cập nhật ngay; tải lại vẫn giữ; bấm lại để bỏ; danh sách hiện điểm cao nhất', async () => {
+    await vp.click('[data-k="51-㉡"][data-v="0.6"]');
+    assert.strictEqual(await vp.textContent('#scoreTotal'), '8');
+    assert.strictEqual(await vp.textContent('[data-qpts="51"]'), '8');
+    await vp.click('[data-k="53-0"][data-v="1"]');
+    await vp.click('[data-k="53-1"][data-v="0.6"]');
+    await vp.click('[data-k="53-2"][data-v="0.25"]');
+    assert.strictEqual(await vp.textContent('[data-qpts="53"]'), '15');
+    assert.strictEqual(await vp.textContent('#scoreTotal'), '23');
+    assert.ok((await vp.textContent('#pendingMsg')).includes('Đã chấm xong'));
+    await vp.reload();
+    await vp.waitForSelector('#scoreTotal');
+    assert.strictEqual(await vp.textContent('#scoreTotal'), '23');
+    assert.strictEqual(await vp.getAttribute('[data-k="53-1"][data-v="0.6"]', 'aria-pressed'), 'true');
+    await vp.click('[data-k="53-2"][data-v="0.25"]');
+    assert.strictEqual(await vp.textContent('#scoreTotal'), '19');
+    assert.ok((await vp.textContent('#pendingMsg')).includes('Còn 1 mục'));
+    const e = await vstore();
+    assert.strictEqual(e.last, 19);
+    assert.strictEqual(e.best, 19);
+    assert.strictEqual(e.self['51-㉡'], 0.6);
+    assert.ok(e.gat > e.at);
+    await vp.click('[data-k="53-2"][data-v="0.25"]');
+    await vp.goto(BASE + '#/thi-thu');
+    await vp.waitForSelector('.exam-item');
+    assert.ok((await vp.textContent('.exam-item[data-exam="' + VID + '"]')).includes('Cao nhất 23/100'));
+    await vp.goto(BASE + '#/thi-thu/' + VID);
+    await vp.waitForSelector('#startBtn');
+    assert.ok((await vp.textContent('.exam-intro')).includes('23/100'));
+  });
+
+  await tc('V6', 'Viết: hết giờ tự nộp với chữ đang gõ dở; điểm cao nhất lần trước được giữ', async () => {
+    await vp.click('#startBtn');
+    await vp.waitForSelector('#examTimer');
+    assert.strictEqual(await vp.inputValue('[data-key="53"]'), '');
+    await vp.fill('[data-key="54"]', ko(80));
+    await vp.clock.fastForward(50 * 60 * 1000 + 2000);
+    await vp.waitForSelector('#timeUpMsg');
+    assert.strictEqual(await vp.textContent('#scoreTotal'), '0');
+    assert.ok((await vp.textContent('#pendingMsg')).includes('Còn 3 mục'));
+    const e = await vstore();
+    assert.strictEqual(e.texts['54'], ko(80));
+    assert.strictEqual(e.n, 2);
+    assert.strictEqual(e.best, 23);
+    assert.strictEqual(e.secs, 50 * 60);
+    assert.strictEqual(await run(vp), null);
+  });
+
+  await tc('V7', 'Viết: điền đúng đáp án mẫu (khác dấu cách, dấu câu) ở cả 4 ô → 20/20 điểm tự động; bài mẫu 53–54 đúng độ dài', async () => {
+    await vp.goto(BASE + '#/thi-thu/' + VID);
+    await vp.click('#startBtn');
+    await vp.waitForSelector('#examTimer');
+    for (const q of VQ.filter((x) => x.kind === 'fill')) {
+      for (const [i, b] of q.blanks.entries()) {
+        const a = b.answers[i % b.answers.length];
+        await vp.fill('[data-key="' + q.n + '-' + b.mark + '"]', i ? a.replace(/ /g, '  ') + '.' : a);
+      }
+    }
+    await vp.click('#submitBtn2'); await vp.click('#confirmYes');
+    await vp.waitForSelector('#scoreTotal');
+    assert.strictEqual(await vp.textContent('#scoreTotal'), '20');
+    assert.strictEqual(await vp.locator('.wr-auto').count(), 4);
+    for (const q of VQ.filter((x) => x.kind !== 'fill')) {
+      const c = q.sample.replace(/[\r\n]/g, '').length;
+      assert.ok(c >= q.minChars && c <= q.maxChars, q.n + ': ' + c);
+      assert.ok((await vp.textContent('#r-' + q.n + ' .wr-sample summary')).includes(c + ' ký tự'));
+    }
+    assert.deepStrictEqual(v.errors, []);
+  });
+  await v.ctx.close();
+
+  await tc('V8', 'Viết trên điện thoại 375px (sáng + tối): làm bài, kết quả, tự chấm không tràn ngang', async () => {
+    for (const dark of [false, true]) {
+      const m = await device(browser, { viewport: { width: 375, height: 760 }, dark });
+      const mp = m.page;
+      await mp.goto(BASE + '#/thi-thu/' + VID);
+      await mp.click('#startBtn');
+      await mp.waitForSelector('#examTimer');
+      await mp.fill('[data-key="51-㉠"]', '꼭 와 주세요');
+      await mp.fill('[data-key="53"]', VQ[2].sample);
+      await noOverflow(mp, 'làm bài viết');
+      await mp.locator('#q-53').scrollIntoViewIfNeeded();
+      await mp.screenshot({ path: SHOTS + '/thi-thu-viet-dien-thoai' + (dark ? '-toi' : '') + '.png' });
+      await mp.click('#submitBtn'); await mp.click('#confirmYes');
+      await mp.waitForSelector('#scoreTotal');
+      await mp.click('[data-k="53-0"][data-v="1"]');
+      await noOverflow(mp, 'kết quả viết');
+      await mp.locator('#r-53').scrollIntoViewIfNeeded();
+      await mp.screenshot({ path: SHOTS + '/thi-thu-viet-tu-cham-dien-thoai' + (dark ? '-toi' : '') + '.png' });
       assert.deepStrictEqual(m.errors, []);
       await m.ctx.close();
     }

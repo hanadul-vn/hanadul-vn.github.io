@@ -33,6 +33,9 @@
   var view = { step: 'start', email: '', msg: '', bad: false, busy: false, confirmDelete: false };
   // Tên hiển thị (B4): profileState idle | loading | ok | error.
   var profile = null, profileState = 'idle', nameView = { msg: '', bad: false, busy: false };
+  // Chứng nhận hoàn thành cấp độ (B4): certs = danh sách của mình, levels = cấp độ trong data/index.json.
+  var certs = [], certState = 'idle', levels = null, certView = { msg: '', bad: false, busy: '' };
+  var MIN_STARS = 2;
 
   function esc(t) {
     return String(t == null ? '' : t).replace(/[&<>"']/g, function (c) {
@@ -181,6 +184,79 @@
   }
   HD.loadProfile = loadProfile;
 
+  // ---------- chứng nhận ----------
+  function loadCerts() {
+    if (!sb || !user) return Promise.resolve();
+    var uid = user.id;
+    certState = 'loading';
+    var lv = levels ? Promise.resolve(levels) : HD.lib.loadJSON('data/index.json').then(function (d) { levels = d.levels || []; return levels; });
+    return Promise.all([lv, sb.from('certificates').select('code, kind, title, display_name, detail, issued_at').order('issued_at')]).then(function (res) {
+      if (!user || user.id !== uid) return;
+      if (res[1].error) throw res[1].error;
+      certs = res[1].data || [];
+      certState = 'ok';
+    }).catch(function (err) {
+      console.warn('[Hana Dul] chứng nhận', err);
+      certs = []; certState = 'error';
+    }).then(function () { rerender(); });
+  }
+  // Cấp độ đã đủ bài (status bắt đầu bằng "Đủ") mới có chứng nhận; điều kiện: mọi bài từ 2 sao.
+  function levelDone(lv) { return /^Đủ/.test(lv.status || ''); }
+  function certLink(c) { return 'chung-nhan.html?ma=' + encodeURIComponent(c.code); }
+  function certHtml() {
+    var h = '<section class="panel cert-panel" id="certPanel" aria-labelledby="certTitle"><h2 id="certTitle">🎓 Chứng nhận hoàn thành</h2>';
+    if (certState !== 'ok') {
+      return h + '<p class="muted" role="status">' + (certState === 'error' ? '⚠️ Chưa tải được chứng nhận. <button type="button" class="linkish" id="certRetry">Thử lại</button>' : 'Đang tải…') + '</p></section>';
+    }
+    var local = M.normalize(readLocal());
+    var hasName = !!(profile && profile.display_name);
+    h += '<p class="muted">Học hết một cấp độ, mỗi bài đạt từ ' + MIN_STARS + ' sao là nhận được chứng nhận miễn phí, có mã để người khác xác minh. Đây là chứng nhận học trên Hana Dul, không phải chứng chỉ TOPIK.</p>';
+    if (certView.msg) h += '<p class="form-msg' + (certView.bad ? ' bad' : '') + '" role="status" id="certMsg">' + esc(certView.msg) + '</p>';
+    h += '<ul class="cert-list">';
+    levels.forEach(function (lv) {
+      var c = certs.filter(function (x) { return x.kind === 'level-' + lv.id; })[0];
+      var ids = lv.lessons.map(function (l) { return l.id; });
+      var ok = ids.filter(function (id) { return (local.lessons[id] && local.lessons[id].stars || 0) >= MIN_STARS; }).length;
+      h += '<li class="cert-item" data-level="' + esc(lv.id) + '"><span class="emoji" aria-hidden="true">' + esc(lv.icon || '🎓') + '</span><div class="cert-body"><b>' + esc(lv.name) + '</b><br>';
+      if (c) {
+        h += '<span class="muted">✅ Đã nhận · mã <span class="cert-code">' + esc(c.code) + '</span></span></div>' +
+          '<a class="btn small" href="' + certLink(c) + '" target="_blank" rel="noopener">Xem chứng nhận</a>';
+      } else if (!levelDone(lv)) {
+        h += '<span class="muted">Đang mở thêm bài (' + ids.length + ' bài). Có chứng nhận khi đủ bài.</span></div>';
+      } else if (ok < ids.length) {
+        h += '<span class="muted">' + ok + '/' + ids.length + ' bài đạt từ ' + MIN_STARS + ' sao</span>' +
+          '<span class="cert-bar" aria-hidden="true"><span style="width:' + Math.round(ok / ids.length * 100) + '%"></span></span></div>';
+      } else if (!hasName) {
+        h += '<span class="muted">Đủ điều kiện! Lưu tên hiển thị ở trên để in lên chứng nhận.</span></div>';
+      } else {
+        h += '<span class="muted">Đủ điều kiện nhận chứng nhận.</span></div>' +
+          '<button type="button" class="btn small" data-issue="' + esc(lv.id) + '"' + (certView.busy ? ' disabled' : '') + '>' + (certView.busy === lv.id ? 'Đang cấp…' : 'Nhận chứng nhận') + '</button>';
+      }
+      h += '</li>';
+    });
+    return h + '</ul></section>';
+  }
+  function issueCert(levelId) {
+    var lv = levels.filter(function (x) { return x.id === levelId; })[0];
+    if (!lv) return;
+    certView = { msg: '', bad: false, busy: levelId }; rerender();
+    // Đồng bộ trước để server thấy đúng số sao mới nhất.
+    syncNow().then(function () {
+      return sb.rpc('issue_certificate', { p_level: lv.id, p_lessons: lv.lessons.map(function (l) { return l.id; }) });
+    }).then(function (r) {
+      if (r.error) throw r.error;
+      var c = Array.isArray(r.data) ? r.data[0] : r.data;
+      certs = certs.filter(function (x) { return x.kind !== c.kind; }).concat([c]);
+      certView = { msg: '🎉 Đã cấp chứng nhận ' + lv.name + '. Mã: ' + c.code, bad: false, busy: '' };
+      track('certificate_issue', { level: lv.id });
+      rerender();
+    }).catch(function (err) {
+      var m = (err && err.message) || '';
+      certView = { msg: /^Chưa đạt|^Cần đặt tên/.test(m) ? m + '.' : errText(err), bad: true, busy: '' };
+      rerender();
+    });
+  }
+
   // ---------- khởi động ----------
   function loadSdk() {
     if (window.supabase && window.supabase.createClient) return Promise.resolve();
@@ -216,8 +292,14 @@
     if (user && user.id !== before) {
       setTimeout(syncNow, 0);
       setTimeout(loadProfile, 0);
+      setTimeout(loadCerts, 0);
     }
-    if (!user) { profile = null; profileState = 'idle'; }
+    if (!user) resetUserData();
+  }
+
+  function resetUserData() {
+    profile = null; profileState = 'idle'; nameView = { msg: '', bad: false, busy: false };
+    certs = []; certState = 'idle'; certView = { msg: '', bad: false, busy: '' };
   }
 
   function start() {
@@ -232,7 +314,7 @@
       sb.auth.onAuthStateChange(function (event, session) {
         // Không gọi Supabase trực tiếp trong callback này (dễ treo), đẩy sang lượt sau.
         setTimeout(function () {
-          if (event === 'SIGNED_OUT') { user = null; profile = null; profileState = 'idle'; HD.renderAccountBadge(); refreshApp(); return; }
+          if (event === 'SIGNED_OUT') { user = null; resetUserData(); HD.renderAccountBadge(); refreshApp(); return; }
           var wasIn = !!user;
           setUser(session && session.user);
           if (event === 'SIGNED_IN' && !wasIn && user) {
@@ -330,6 +412,7 @@
       '<button type="button" class="btn ghost" id="logoutBtn">Đăng xuất</button></div>' +
       '<p class="muted small-note">Đăng xuất sẽ xóa tiến độ khỏi máy này (vẫn còn trong tài khoản), để người khác dùng máy không thấy dữ liệu của bạn.</p></div>';
     h += nameHtml();
+    h += certHtml();
     h += '<details class="danger-zone"' + (view.confirmDelete ? ' open' : '') + '><summary>Xóa tài khoản</summary>' +
       '<p>Xóa vĩnh viễn tài khoản và toàn bộ tiến độ đã lưu trên server. Không khôi phục được.</p>' +
       (view.msg ? '<p class="form-msg' + (view.bad ? ' bad' : '') + '" role="status">' + esc(view.msg) + '</p>' : '') +
@@ -409,6 +492,9 @@
     on('backEmail', 'click', function () { view.step = 'start'; say(''); rerender(); });
     on('syncBtn', 'click', function () { syncNow(); });
     on('nameRetry', 'click', function () { profileState = 'loading'; rerender(); loadProfile(); });
+    on('certRetry', 'click', function () { certState = 'loading'; rerender(); loadCerts(); });
+    var cp = app.querySelector('#certPanel');
+    if (cp) cp.addEventListener('click', function (e) { var b = e.target.closest('[data-issue]'); if (b && !certView.busy) issueCert(b.getAttribute('data-issue')); });
     on('nameForm', 'submit', function (e) {
       e.preventDefault();
       var n = e.target.elements.name.value.replace(/\s+/g, ' ').trim();
@@ -427,7 +513,7 @@
       var b = this; b.disabled = true; b.textContent = 'Đang đăng xuất…';
       syncNow().then(function () { return sb.auth.signOut(); }).then(function () {
         try { localStorage.removeItem(STORE_KEY); } catch (e) { /* bỏ qua */ }
-        user = null; profile = null; profileState = 'idle'; nameView = { msg: '', bad: false, busy: false };
+        user = null; resetUserData();
         sync = { state: 'idle', at: 0, error: '' }; view = { step: 'start', email: '', msg: 'Đã đăng xuất.', bad: false, busy: false, confirmDelete: false };
         HD.renderAccountBadge();
         refreshApp();
@@ -444,7 +530,7 @@
       }).then(function () {
         try { localStorage.removeItem(STORE_KEY); } catch (e) { /* bỏ qua */ }
         track('account_deleted');
-        user = null; profile = null; profileState = 'idle';
+        user = null; resetUserData();
         sync = { state: 'idle', at: 0, error: '' };
         view = { step: 'start', email: '', msg: 'Đã xóa tài khoản và dữ liệu trên server.', bad: false, busy: false, confirmDelete: false };
         HD.renderAccountBadge();

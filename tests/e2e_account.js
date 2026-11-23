@@ -16,8 +16,12 @@ const srv = {
   bumpBeforePatch: 0, // giả lập máy khác ghi chen giữa lúc đọc và ghi
   calls: [],
   profiles: {},   // user_id -> display_name
-  profileFail: 0  // số lần đọc profiles tiếp theo trả 500
+  profileFail: 0, // số lần đọc profiles tiếp theo trả 500
+  certs: {},      // code -> chứng nhận (giống bảng certificates)
+  certRefuse: ''  // ép issue_certificate báo lỗi này
 };
+const IDX = JSON.parse(require('fs').readFileSync(require('path').join(__dirname, '..', 'data/index.json'), 'utf8'));
+const LV = (id) => IDX.levels.find((l) => l.id === id).lessons.map((l) => l.id);
 function mkUser(id, email, provider, name) {
   srv.users[id] = { id, email, aud: 'authenticated', role: 'authenticated', app_metadata: { provider }, user_metadata: name ? { full_name: name } : {}, created_at: '2026-11-21T00:00:00Z' };
   return srv.users[id];
@@ -59,6 +63,12 @@ async function handle(route) {
   if (p === '/auth/v1/user') return me ? json(200, me) : json(401, { msg: 'no' });
   if (p === '/auth/v1/logout') return route.fulfill({ status: 204, headers: { 'access-control-allow-origin': '*' } });
 
+  // Xác minh chứng nhận: khách gọi bằng khóa công khai, không cần đăng nhập.
+  if (p === '/rest/v1/rpc/verify_certificate') {
+    const code = String(JSON.parse(req.postData() || '{}').p_code || '').trim().toUpperCase();
+    const c = srv.certs[code];
+    return json(200, c ? [{ code: c.code, kind: c.kind, title: c.title, display_name: c.display_name, detail: c.detail, issued_at: c.issued_at }] : []);
+  }
   if (p.startsWith('/rest/v1/')) {
     if (srv.failNext > 0) { srv.failNext--; return json(500, { message: 'server down' }); }
     if (!me) return json(401, { message: 'JWT required' });
@@ -80,8 +90,30 @@ async function handle(route) {
         return json(201, [{ display_name: n }]);
       }
     }
+    if (p === '/rest/v1/certificates' && method === 'GET') {
+      return json(200, Object.values(srv.certs).filter((c) => c.user_id === me.id).map((c) => { const o = Object.assign({}, c); delete o.user_id; return o; }));
+    }
+    if (p === '/rest/v1/rpc/issue_certificate') {
+      // Giống hàm SQL: cần tên, mọi bài từ 2 sao trong tiến độ TRÊN SERVER.
+      const b = JSON.parse(req.postData());
+      if (srv.certRefuse) return json(400, { code: 'P0002', message: srv.certRefuse });
+      if (!srv.profiles[me.id]) return json(400, { code: 'P0001', message: 'Cần đặt tên hiển thị trước' });
+      const lessons = ((srv.rows[me.id] || {}).data || {}).lessons || {};
+      for (const id of b.p_lessons) {
+        const st = (lessons[id] || {}).stars || 0;
+        if (st < 2) return json(400, { code: 'P0002', message: 'Chưa đạt: bài ' + id + ' mới ' + st + ' sao (cần 2 sao)' });
+      }
+      const kind = 'level-' + b.p_level;
+      let c = Object.values(srv.certs).find((x) => x.user_id === me.id && x.kind === kind);
+      if (!c) {
+        const code = 'HD-' + (Object.keys(srv.certs).length + 1 + 'ABC').padStart(4, 'X').slice(0, 4) + '-K7P2';
+        c = srv.certs[code] = { code, user_id: me.id, kind, title: 'Hoàn thành ' + IDX.levels.find((l) => l.id === b.p_level).name, display_name: srv.profiles[me.id], detail: { lessons: b.p_lessons.length, avg: 95 }, issued_at: '2026-11-23T03:00:00+00:00' };
+      }
+      return json(200, c);
+    }
     if (p === '/rest/v1/rpc/delete_my_account') {
       delete srv.rows[me.id]; delete srv.users[me.id]; delete srv.profiles[me.id];
+      for (const k of Object.keys(srv.certs)) if (srv.certs[k].user_id === me.id) delete srv.certs[k];
       return route.fulfill({ status: 204, headers: { 'access-control-allow-origin': '*' } });
     }
     if (p !== '/rest/v1/progress') return json(404, {});
@@ -300,6 +332,106 @@ async function waitSynced(page) {
     assert.strictEqual(await d2.page.inputValue('#displayName'), 'Nguyễn Văn An');
     assert.ok(!d2.errors.some((e) => /pageerror/.test(e)), d2.errors.join(' | '));
     d2.errors.length = 0;
+  });
+
+  await tc('N18', 'Chứng nhận: mỗi cấp độ hiện tiến độ x/N bài đạt 2 sao; cấp độ đang mở thêm bài thì chưa cấp; chưa đủ thì không có nút nhận', async () => {
+    await d2.page.goto(BASE + '#/tai-khoan');
+    await d2.page.waitForSelector('#certPanel .cert-item');
+    for (const lv of IDX.levels) {
+      const t = await d2.page.textContent('.cert-item[data-level="' + lv.id + '"]');
+      if (/^Đủ/.test(lv.status)) assert.ok(new RegExp('\\d+/' + lv.lessons.length + ' bài đạt').test(t), lv.id + ': ' + t);
+      else assert.ok(t.includes('Đang mở thêm bài'), lv.id + ': ' + t);
+    }
+    assert.strictEqual(await d2.page.locator('[data-issue]').count(), 0);
+    assert.ok((await d2.page.textContent('#certPanel')).includes('không phải chứng chỉ TOPIK'));
+  });
+
+  let CODE = '';
+  await tc('N19', 'Chứng nhận: đủ 2 sao mọi bài Sơ cấp 1 nhưng chưa có tên → nhắc lưu tên; có tên → bấm Nhận, đồng bộ trước rồi server cấp mã; có link xem', async () => {
+    const saved = srv.profiles[UA];
+    delete srv.profiles[UA];
+    await d2.page.evaluate((ids) => {
+      const s = JSON.parse(localStorage.getItem('hanadul:v2'));
+      ids.forEach((id) => { s.lessons[id] = { best: 95, stars: 3, last: '2026-11-23' }; });
+      localStorage.setItem('hanadul:v2', JSON.stringify(s));
+    }, LV('sc1'));
+    await d2.page.reload();
+    await d2.page.waitForSelector('#certPanel .cert-item');
+    assert.ok((await d2.page.textContent('.cert-item[data-level="sc1"]')).includes('Lưu tên hiển thị'));
+    srv.profiles[UA] = saved;
+    await d2.page.reload();
+    await d2.page.waitForSelector('[data-issue="sc1"]');
+    // Server đang có bản cũ (bài sc1-05 mới 1 sao): bấm Nhận phải đồng bộ trước thì mới được cấp.
+    srv.rows[UA].data.lessons['sc1-05'] = { best: 55, stars: 1, last: '2026-11-20' };
+    await d2.page.click('[data-issue="sc1"]');
+    await d2.page.waitForSelector('#certMsg:not(.bad)');
+    const c = Object.values(srv.certs).find((x) => x.user_id === UA);
+    CODE = c.code;
+    assert.ok((await d2.page.textContent('#certMsg')).includes(CODE));
+    assert.ok(LV('sc1').every((id) => srv.rows[UA].data.lessons[id].stars === 3), 'chưa đồng bộ trước khi cấp');
+    assert.strictEqual(c.display_name, 'Nguyễn Văn An');
+    assert.ok((await d2.page.textContent('.cert-item[data-level="sc1"]')).includes('Đã nhận'));
+    assert.strictEqual(await d2.page.getAttribute('.cert-item[data-level="sc1"] a', 'href'), 'chung-nhan.html?ma=' + CODE);
+    await d2.page.reload();
+    await d2.page.waitForSelector('.cert-item[data-level="sc1"] a');
+    assert.deepStrictEqual(d2.errors, []);
+  });
+
+  await tc('N20', 'Chứng nhận: server từ chối (tiến độ trên server chưa đủ) → báo rõ bài nào chưa đạt, không vỡ trang', async () => {
+    await d2.page.evaluate((ids) => {
+      const s = JSON.parse(localStorage.getItem('hanadul:v2'));
+      ids.forEach((id) => { s.lessons[id] = { best: 80, stars: 2, last: '2026-11-23' }; });
+      localStorage.setItem('hanadul:v2', JSON.stringify(s));
+    }, LV('sc2'));
+    await d2.page.reload();
+    await d2.page.waitForSelector('[data-issue="sc2"]');
+    srv.certRefuse = 'Chưa đạt: bài sc2-03 mới 1 sao (cần 2 sao)';
+    await d2.page.click('[data-issue="sc2"]');
+    await d2.page.waitForSelector('#certMsg.bad');
+    assert.ok((await d2.page.textContent('#certMsg')).includes('bài sc2-03 mới 1 sao'));
+    assert.ok(await d2.page.locator('[data-issue="sc2"]').isEnabled());
+    srv.certRefuse = '';
+    assert.ok(!d2.errors.some((e) => /pageerror/.test(e)), d2.errors.join(' | '));
+    d2.errors.length = 0;
+  });
+
+  await tc('N21', 'Trang xác minh (khách, không đăng nhập): mã đúng hiện tên, cấp độ, ngày, mã; gõ thường/thừa dấu cách vẫn được; mã sai báo không tìm thấy; sai dạng không gọi server', async () => {
+    const d = await newDevice(browser, { on: true });
+    await d.page.goto(BASE + 'chung-nhan.html?ma=' + CODE);
+    await d.page.waitForSelector('#cert');
+    assert.strictEqual(await d.page.textContent('#certName'), 'Nguyễn Văn An');
+    assert.strictEqual(await d.page.textContent('#certTitle'), 'Sơ cấp 1');
+    assert.strictEqual(await d.page.textContent('#certCode'), CODE);
+    const t = await d.page.textContent('#cert');
+    assert.ok(t.includes(LV('sc1').length + ' bài') && t.includes('23/11/2026') && t.includes('Đã xác minh'), t);
+    assert.ok((await d.page.textContent('main')).includes('không phải'));
+    await d.page.fill('#cvCode', '  ' + CODE.toLowerCase() + ' ');
+    await d.page.click('#cvForm button');
+    await d.page.waitForSelector('#cert');
+    assert.ok(d.page.url().endsWith('?ma=' + CODE), d.page.url());
+    await d.page.fill('#cvCode', 'HD-ZZZZ-ZZZZ');
+    await d.page.click('#cvForm button');
+    await d.page.waitForSelector('text=Không tìm thấy chứng nhận');
+    const n0 = srv.calls.filter((c) => /verify_certificate/.test(c)).length;
+    await d.page.fill('#cvCode', 'abc<script>');
+    await d.page.click('#cvForm button');
+    await d.page.waitForSelector('text=chưa đúng dạng');
+    assert.strictEqual(srv.calls.filter((c) => /verify_certificate/.test(c)).length, n0);
+    assert.deepStrictEqual(d.errors, []);
+    await d.ctx.close();
+    const m = await newDevice(browser, { on: true, viewport: { width: 375, height: 760 } });
+    await m.page.goto(BASE + 'chung-nhan.html?ma=' + CODE);
+    await m.page.waitForSelector('#cert');
+    const over = await m.page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    assert.ok(over <= 0, 'tràn ngang ' + over + 'px');
+    await m.page.screenshot({ path: process.env.SHOTS + '/chung-nhan-dien-thoai.png', fullPage: true });
+    await m.page.emulateMedia({ media: 'print' });
+    assert.ok(await m.page.locator('#printBtn').isHidden(), 'nút In vẫn hiện khi in');
+    await m.ctx.close();
+    const off = await newDevice(browser, {});
+    await off.page.goto(BASE + 'chung-nhan.html?ma=' + CODE);
+    await off.page.waitForSelector('text=chưa mở xác minh');
+    await off.ctx.close();
   });
 
   await tc('N7', 'Học song song 2 máy: XP cộng đủ, sổ câu sai gỡ trên máy này thì máy kia gỡ theo', async () => {

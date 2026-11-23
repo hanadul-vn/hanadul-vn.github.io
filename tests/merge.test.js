@@ -137,4 +137,15 @@ t('M17 dữ liệu đề thi thử hỏng (không phải object) bị bỏ qua, 
   assert.strictEqual(m.exams.b.best, 0);
 });
 
+t('M18 đề Viết: bài viết và điểm tự chấm theo bản tự chấm gần nhất (gat), không theo máy nộp sau', () => {
+  const a = { exams: { 'viet-01': { best: 23, pb: 0, last: 23, at: 1000, gat: 5000, n: 1, secs: 600, texts: { 53: '가나다' }, self: { '53-0': 1 } } } };
+  const b = { exams: { 'viet-01': { best: 5, pb: 0, last: 5, at: 1000, n: 1, secs: 600, texts: { 53: '가나다' }, self: {} } } };
+  const m = merge(b, a, NOW).exams['viet-01'];
+  assert.deepStrictEqual(m, { best: 23, n: 1, last: 23, at: 1000, secs: 600, texts: { 53: '가나다' }, self: { '53-0': 1 }, pb: 0, gat: 5000 });
+  const c = { exams: { 'viet-01': { best: 10, pb: 23, last: 10, at: 9000, n: 2, texts: { 54: '라' }, self: {} } } };
+  const m2 = merge(a, c, NOW).exams['viet-01'];
+  assert.strictEqual(m2.last, 10); assert.strictEqual(m2.best, 23); assert.deepStrictEqual(m2.texts, { 54: '라' }); assert.strictEqual(m2.n, 2);
+  assert.ok(!('texts' in merge({ exams: { d: { best: 1, at: 1 } } }, {}, NOW).exams.d), 'đề Đọc không thêm trường Viết');
+});
+
 console.log(`\n${pass} test pass`);

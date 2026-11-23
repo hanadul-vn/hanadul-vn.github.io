@@ -69,6 +69,12 @@ Không bắt buộc. Bật bằng `supabaseUrl` + `supabaseKey` (khóa công kha
 - `#/thi-thu`: danh sách đề; `#/thi-thu/<id>`: giới thiệu; `/lam`: làm bài; `/ket-qua`: điểm và xem lại. Code ở [`assets/exam.js`](assets/exam.js).
 - Miễn phí, không cần đăng nhập. Đồng hồ và chấm điểm chạy trên máy: bài đang làm lưu ở `localStorage` `hanadul:exam-run` (tải lại trang vẫn đếm tiếp, hết giờ tự nộp). Kết quả lưu vào tiến độ `exams` (điểm cao nhất, lượt gần nhất, đáp án đã chọn), đăng nhập thì đồng bộ như bài học. Mỗi câu đúng +2 XP.
 - Dữ liệu: `data/exams/index.json` (danh sách đề) và `data/exams/<id>.json`: `minutes`, `sets` (mỗi bộ có `instruction`, `instructionVi`, tùy chọn `passage` + `passageVi`, `sentence` cho câu chèn ㉠–㉣, và `questions`: `n`, `q`, `options` 4 lựa chọn **giữ nguyên thứ tự**, `answer` là vị trí đúng 0–3, `explain`). Phần gạch chân bọc trong `__…__`. `tools/check_data.py` kiểm tra số câu liên tục, đáp án không dồn về một vị trí.
+- Phần Viết (`"part": "viet"`, câu 51–54, 50 phút, 100 điểm): không chấm bằng AI. Câu 51–52 (`kind: "fill"`, `blanks` mỗi ô có danh sách `answers`): ô khớp một đáp án mẫu (bỏ qua dấu cách, dấu câu) tự được điểm, còn lại người học tự chấm Đúng / Gần đúng / Sai. Câu 53–54 (`kind: "chart"`/`"essay"`, `minChars`–`maxChars`, `data` + `dataVi`, `sample`, `rubric` 3 tiêu chí cộng đủ `points`, `tips`): người học so với bài mẫu rồi tự chấm từng tiêu chí Tốt / Khá / Yếu / Chưa đạt. Đếm chữ tính cả dấu cách, không tính xuống dòng. Bài viết và điểm tự chấm lưu trong `exams[id]` (`texts`, `self`, `gat`), +20 XP mỗi lần nộp có viết.
+
+## Chứng nhận hoàn thành
+
+- Trang Tài khoản có mục **Chứng nhận**: cấp độ đã đủ bài (`status` bắt đầu bằng "Đủ") và mọi bài đạt từ 2 sao thì bấm nhận (cần đăng nhập + tên hiển thị). Web đồng bộ tiến độ trước, rồi gọi `issue_certificate` trên Supabase (server kiểm lại số sao). Miễn phí, không phải chứng chỉ TOPIK.
+- `chung-nhan.html?ma=HD-XXXX-XXXX`: trang xác minh công khai (không cần đăng nhập), in / lưu PDF được. Cài đặt: [`supabase/README.md`](supabase/README.md) mục 9.
 
 ## Kiểm thử
 
