@@ -275,6 +275,9 @@ async function noHScroll(page) {
     await go(page, '#/');
     await page.waitForSelector('.level-jump');
     await page.evaluate(() => { document.querySelector('.hero').dataset.mark = '1'; });
+    // Đưa thanh tab vào màn hình trước (ô tra cứu nằm trên tab), để Playwright không tự cuộn khi bấm.
+    await page.evaluate(() => document.querySelector('.level-jump').scrollIntoView({ block: 'center', behavior: 'instant' }));
+    await page.waitForTimeout(100);
     const y0 = await page.evaluate(() => window.scrollY);
     await page.click('.level-jump a[href="#lo-trinh-sc2"]');
     await page.waitForTimeout(800);

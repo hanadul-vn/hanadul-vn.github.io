@@ -76,6 +76,10 @@ def lessons():
 
 def head(title, desc, canonical, depth, extra=""):
     up = "../" * depth
+    # Đang ở địa chỉ cũ thì assets/move.js đưa người học sang tên miền mới kèm tiến độ (cần merge.js trước).
+    # Chỉ nạp khi repo có move.js (nhánh chuyển tên miền).
+    move = (f'  <script src="{up}assets/merge.js"></script>\n  <script src="{up}assets/move.js"></script>\n'
+            if (ROOT / "assets/move.js").exists() else "")
     return f"""<!doctype html>
 <html lang="vi">
 <head>
@@ -96,7 +100,7 @@ def head(title, desc, canonical, depth, extra=""):
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{up}assets/style.css">
   <link rel="stylesheet" href="{up}assets/bai.css">
-{extra}</head>
+{extra}{move}</head>
 <body class="static-lesson" data-base="{up}">
   <!-- Trang sinh tự động bởi tools/build_pages.py từ data/. Đừng sửa tay. -->
   <header class="topbar">
