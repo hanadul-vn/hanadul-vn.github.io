@@ -1,0 +1,913 @@
+{
+  "id": "tc3-05",
+  "title": "Nấu ăn",
+  "ko": "요리",
+  "goal": "Nói về cách nấu món ăn, nguyên liệu và hương vị; nói trình tự “làm xong… rồi”, cách thức/nguyên liệu bằng (으)로, chuyển việc giữa chừng -다가 và trạng từ -게.",
+  "vocab": [
+    {
+      "group": "Cách nấu",
+      "words": [
+        [
+          "볶다",
+          "xào, rang"
+        ],
+        [
+          "삶다",
+          "luộc"
+        ],
+        [
+          "찌다 (음식을)",
+          "hấp"
+        ],
+        [
+          "튀기다",
+          "chiên ngập dầu"
+        ],
+        [
+          "데치다",
+          "chần, trụng"
+        ],
+        [
+          "무치다",
+          "trộn gia vị (rau)"
+        ],
+        [
+          "조리다",
+          "kho, rim"
+        ],
+        [
+          "굽다",
+          "nướng"
+        ]
+      ]
+    },
+    {
+      "group": "Sơ chế",
+      "words": [
+        [
+          "썰다",
+          "thái, cắt lát"
+        ],
+        [
+          "다지다",
+          "băm nhỏ"
+        ],
+        [
+          "껍질을 벗기다",
+          "bóc vỏ, gọt vỏ"
+        ],
+        [
+          "다듬다",
+          "nhặt, sơ chế (rau)"
+        ],
+        [
+          "섞다",
+          "trộn lẫn"
+        ],
+        [
+          "뿌리다",
+          "rắc"
+        ],
+        [
+          "재우다",
+          "ướp"
+        ],
+        [
+          "간을 보다",
+          "nếm thử"
+        ],
+        [
+          "간을 맞추다",
+          "nêm cho vừa"
+        ],
+        [
+          "불을 줄이다",
+          "vặn nhỏ lửa"
+        ],
+        [
+          "약한 불",
+          "lửa nhỏ"
+        ],
+        [
+          "센 불",
+          "lửa to"
+        ]
+      ]
+    },
+    {
+      "group": "Nguyên liệu, gia vị, dụng cụ",
+      "words": [
+        [
+          "재료",
+          "nguyên liệu"
+        ],
+        [
+          "양념",
+          "gia vị ướp, nước sốt"
+        ],
+        [
+          "간장",
+          "nước tương"
+        ],
+        [
+          "된장",
+          "tương đậu"
+        ],
+        [
+          "고추장",
+          "tương ớt"
+        ],
+        [
+          "참기름",
+          "dầu mè"
+        ],
+        [
+          "식초",
+          "giấm"
+        ],
+        [
+          "후추",
+          "hạt tiêu"
+        ],
+        [
+          "마늘",
+          "tỏi"
+        ],
+        [
+          "양파",
+          "hành tây"
+        ],
+        [
+          "대파",
+          "hành boa-rô"
+        ],
+        [
+          "냄비",
+          "nồi"
+        ],
+        [
+          "프라이팬",
+          "chảo"
+        ],
+        [
+          "도마",
+          "thớt"
+        ],
+        [
+          "국자",
+          "cái muôi"
+        ],
+        [
+          "뚜껑",
+          "cái nắp"
+        ],
+        [
+          "큰술",
+          "thìa canh (đơn vị đo)"
+        ],
+        [
+          "작은술",
+          "thìa cà phê (đơn vị đo)"
+        ]
+      ]
+    },
+    {
+      "group": "Hương vị, từ mới khác",
+      "words": [
+        [
+          "느끼하다",
+          "ngấy, béo ngậy"
+        ],
+        [
+          "고소하다",
+          "thơm bùi"
+        ],
+        [
+          "담백하다",
+          "thanh đạm"
+        ],
+        [
+          "바삭하다",
+          "giòn rụm"
+        ],
+        [
+          "쫄깃하다",
+          "dai, giòn dai"
+        ],
+        [
+          "비린내",
+          "mùi tanh"
+        ],
+        [
+          "요리법",
+          "công thức nấu ăn"
+        ],
+        [
+          "식다",
+          "nguội đi"
+        ],
+        [
+          "타다 (음식이)",
+          "bị cháy (thức ăn)"
+        ],
+        [
+          "남다",
+          "còn thừa, còn lại"
+        ],
+        [
+          "전자레인지",
+          "lò vi sóng"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "V -고 나서",
+      "title": "làm xong V rồi…",
+      "note": [
+        "Nhấn mạnh việc trước đã hoàn tất rồi mới đến việc sau.",
+        "Chỉ gắn với động từ; không chia thì ở vế trước (먹고 나서, không nói 먹었고 나서).",
+        "Gần nghĩa -(으)ㄴ 후에."
+      ],
+      "examples": [
+        [
+          "채소를 씻고 나서 썰어요.",
+          "Rửa rau xong rồi thái."
+        ],
+        [
+          "밥을 먹고 나서 설거지를 할게요.",
+          "Ăn cơm xong tôi sẽ rửa bát."
+        ],
+        [
+          "물이 끓고 나서 라면을 넣으세요.",
+          "Nước sôi rồi hãy cho mì vào."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "고기를 양념에 30분쯤 ___ 나서 구우세요.",
+          "options": [
+            "재우고",
+            "재워서",
+            "재운",
+            "재울"
+          ],
+          "explain": "V-고 나서: 재우고 나서."
+        },
+        {
+          "q": "숙제를 다 ___ 친구를 만날 거예요.",
+          "options": [
+            "하고 나서",
+            "했고 나서",
+            "하는 나서",
+            "하나서"
+          ],
+          "explain": "Không chia quá khứ trước -고 나서 → 하고 나서."
+        },
+        {
+          "q": "A: 언제 소금을 넣어요? B: 맛을 한번 ___ 넣으세요.",
+          "options": [
+            "보고 나서",
+            "보다가",
+            "보는 대신",
+            "보기는 해서"
+          ],
+          "explain": "Nếm xong rồi mới cho muối → -고 나서."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "감자 껍질을 벗기고 나서 삶으세요.",
+            "감자 껍질을 벗겼고 나서 삶으세요.",
+            "감자 껍질을 벗기는 나서 삶으세요.",
+            "감자 껍질을 벗기고 나서서 삶으세요."
+          ],
+          "explain": "Động từ nguyên dạng + -고 나서."
+        },
+        {
+          "q": "Nghĩa của \"요리를 다 하고 나서 식탁을 정리했어요.\"",
+          "options": [
+            "Nấu ăn xong rồi tôi dọn bàn.",
+            "Vừa nấu ăn vừa dọn bàn.",
+            "Tôi dọn bàn thay vì nấu ăn.",
+            "Đang nấu thì tôi dọn bàn."
+          ],
+          "explain": "-고 나서 = xong việc trước rồi mới làm việc sau."
+        }
+      ]
+    },
+    {
+      "pattern": "N(으)로",
+      "title": "bằng N (nguyên liệu, cách thức, công cụ)",
+      "note": [
+        "Chỉ nguyên liệu làm ra món: 쌀로 떡을 만들어요.",
+        "Chỉ cách thức/công cụ: 프라이팬으로 볶아요, 전자레인지로 데워요.",
+        "Danh từ có patchim (trừ ㄹ) + 으로; không patchim hoặc patchim ㄹ + 로."
+      ],
+      "examples": [
+        [
+          "이 떡은 쌀로 만들었어요.",
+          "Bánh tteok này làm từ gạo."
+        ],
+        [
+          "남은 음식은 전자레인지로 데워 드세요.",
+          "Đồ ăn thừa hãy hâm bằng lò vi sóng rồi ăn."
+        ],
+        [
+          "간은 소금 대신 간장으로 맞췄어요.",
+          "Tôi nêm bằng nước tương thay vì muối."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "김치찌개는 잘 익은 김치___ 만들어야 맛있어요.",
+          "options": [
+            "로",
+            "으로",
+            "를",
+            "에서"
+          ],
+          "explain": "김치 không patchim → 로."
+        },
+        {
+          "q": "고기는 센 불___ 빨리 구우세요.",
+          "options": [
+            "로",
+            "으로",
+            "에",
+            "를"
+          ],
+          "explain": "불 có patchim ㄹ → 로."
+        },
+        {
+          "q": "두부는 숟가락___ 으깨면 쉬워요.",
+          "options": [
+            "으로",
+            "로",
+            "에게",
+            "하고"
+          ],
+          "explain": "숟가락 có patchim ㄱ → 으로."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "이 소스는 간장하고 설탕으로 만들어요.",
+            "이 소스는 간장하고 설탕로 만들어요.",
+            "이 소스는 간장하고 설탕을 만들어요.",
+            "이 소스는 간장하고 설탕에 만들어요."
+          ],
+          "explain": "설탕 có patchim ㅇ → 으로."
+        },
+        {
+          "q": "Nghĩa của \"오늘은 남은 밥으로 볶음밥을 만들었어요.\"",
+          "options": [
+            "Hôm nay tôi làm cơm rang bằng cơm thừa.",
+            "Hôm nay tôi ăn cơm thừa và cơm rang.",
+            "Hôm nay cơm rang bị thừa.",
+            "Hôm nay tôi không làm cơm rang."
+          ],
+          "explain": "N(으)로 = làm bằng nguyên liệu N."
+        }
+      ]
+    },
+    {
+      "pattern": "V -다가",
+      "title": "đang… thì (chuyển sang việc khác)",
+      "note": [
+        "Việc ở vế trước đang diễn ra thì dừng lại/chuyển sang việc khác.",
+        "Chủ ngữ hai vế giống nhau.",
+        "Có thể rút gọn -다: 요리하다 전화를 받았어요."
+      ],
+      "examples": [
+        [
+          "요리를 하다가 손을 베었어요.",
+          "Đang nấu ăn thì bị đứt tay."
+        ],
+        [
+          "찌개를 끓이다가 불을 줄였어요.",
+          "Đang nấu canh thì tôi vặn nhỏ lửa."
+        ],
+        [
+          "텔레비전을 보다가 잠이 들었어요.",
+          "Đang xem TV thì ngủ quên."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "생선을 ___ 전화를 받아서 조금 탔어요.",
+          "options": [
+            "굽다가",
+            "굽고 나서",
+            "구운 대신",
+            "굽기는 해서"
+          ],
+          "explain": "Đang nướng thì nghe điện thoại → -다가."
+        },
+        {
+          "q": "학교에 ___ 지갑을 놓고 와서 다시 집에 갔어요.",
+          "options": [
+            "가다가",
+            "가고 나서",
+            "간 대신",
+            "가기는"
+          ],
+          "explain": "Đang trên đường thì quay lại → 가다가."
+        },
+        {
+          "q": "A: 왜 손을 다쳤어요? B: 양파를 ___ 칼에 베었어요.",
+          "options": [
+            "썰다가",
+            "썰고 나서",
+            "써는 대신",
+            "썰게"
+          ],
+          "explain": "Đang thái thì bị đứt tay → 썰다가."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "책을 읽다가 잠이 들었어요.",
+            "책을 읽었다가 잠이 들었어요.",
+            "책을 읽는다가 잠이 들었어요.",
+            "책을 읽고 다가 잠이 들었어요."
+          ],
+          "explain": "Đang đọc thì ngủ quên → 읽다가."
+        },
+        {
+          "q": "Nghĩa của \"국을 끓이다가 간을 봤어요.\"",
+          "options": [
+            "Đang nấu canh thì tôi nếm thử.",
+            "Nấu canh xong rồi mới nếm.",
+            "Tôi nếm thay vì nấu canh.",
+            "Tôi không nấu canh."
+          ],
+          "explain": "-다가 = đang làm việc trước thì làm việc khác."
+        }
+      ]
+    },
+    {
+      "pattern": "A -게",
+      "title": "một cách… (biến tính từ thành trạng từ)",
+      "note": [
+        "Gắn vào tính từ để bổ nghĩa cho động từ phía sau: 맛있게 먹다, 짜지 않게 만들다.",
+        "Hay đi với 만들다, 하다, 먹다, 자르다…",
+        "Phủ định: -지 않게 (đừng để…)."
+      ],
+      "examples": [
+        [
+          "고기를 얇게 썰어 주세요.",
+          "Hãy thái thịt mỏng giúp tôi."
+        ],
+        [
+          "너무 짜지 않게 간을 맞추세요.",
+          "Hãy nêm sao cho không quá mặn."
+        ],
+        [
+          "맛있게 드세요.",
+          "Chúc ngon miệng."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "마늘은 아주 ___ 다져 주세요.",
+          "options": [
+            "작게",
+            "작은",
+            "작아서",
+            "작고 나서"
+          ],
+          "explain": "Bổ nghĩa cho động từ 다지다 → 작게."
+        },
+        {
+          "q": "튀김을 ___ 만드는 방법을 알려 주세요.",
+          "options": [
+            "바삭하게",
+            "바삭한",
+            "바삭해서",
+            "바삭하다가"
+          ],
+          "explain": "만들다 + trạng từ → 바삭하게."
+        },
+        {
+          "q": "아이들이 먹을 거니까 ___ 만드세요.",
+          "options": [
+            "맵지 않게",
+            "맵지 않은",
+            "맵지 않아서",
+            "맵지 않다가"
+          ],
+          "explain": "Phủ định trạng từ → -지 않게."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "국이 식지 않게 뚜껑을 덮으세요.",
+            "국이 식지 않은 뚜껑을 덮으세요.",
+            "국이 식지 않다가 뚜껑을 덮으세요.",
+            "국이 식지 않고 나서 뚜껑을 덮으세요."
+          ],
+          "explain": "Để canh không nguội → 식지 않게."
+        },
+        {
+          "q": "Nghĩa của \"이 식당은 음식을 담백하게 만들어요.\"",
+          "options": [
+            "Quán này nấu món ăn thanh đạm.",
+            "Quán này nấu món ăn béo ngậy.",
+            "Quán này không nấu món ăn.",
+            "Quán này bán thực phẩm khô."
+          ],
+          "explain": "담백하게 만들다 = nấu một cách thanh đạm."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "시금치는 끓는 물에 살짝 ___ 무쳐요.",
+      "options": [
+        "데쳐서",
+        "튀겨서",
+        "조려서",
+        "식어서"
+      ],
+      "explain": "Rau chân vịt trụng sơ rồi trộn → 데치다."
+    },
+    {
+      "q": "생선의 ___를 없애려면 레몬즙을 조금 뿌리세요.",
+      "options": [
+        "비린내",
+        "참기름",
+        "뚜껑",
+        "요리법"
+      ],
+      "explain": "Khử mùi tanh của cá → 비린내."
+    },
+    {
+      "q": "찌개가 끓으면 ___을 줄이고 10분 더 끓이세요.",
+      "options": [
+        "불",
+        "도마",
+        "후추",
+        "양념"
+      ],
+      "explain": "불을 줄이다 = vặn nhỏ lửa."
+    },
+    {
+      "q": "다 만들고 나서 소금으로 ___.",
+      "options": [
+        "간을 맞추세요",
+        "껍질을 벗기세요",
+        "비린내가 나요",
+        "식으세요"
+      ],
+      "explain": "Dùng muối để nêm → 간을 맞추다."
+    },
+    {
+      "q": "치킨은 ___ 바삭해요.",
+      "options": [
+        "기름에 튀겨서",
+        "물에 삶아서",
+        "김에 무쳐서",
+        "냉장고에 넣어서"
+      ],
+      "explain": "Gà giòn vì chiên ngập dầu → 튀기다."
+    },
+    {
+      "q": "나물에 ___을 넣으면 고소한 맛이 나요.",
+      "options": [
+        "참기름",
+        "식초",
+        "비린내",
+        "국자"
+      ],
+      "explain": "Vị thơm bùi → dầu mè (참기름)."
+    },
+    {
+      "q": "음식이 ___ 전자레인지로 다시 데웠어요.",
+      "options": [
+        "식어서",
+        "타서",
+        "남아서",
+        "쫄깃해서"
+      ],
+      "explain": "Đồ ăn nguội nên hâm lại → 식다."
+    },
+    {
+      "q": "야채를 썰 때는 ___ 위에서 써세요.",
+      "options": [
+        "도마",
+        "냄비",
+        "뚜껑",
+        "국자"
+      ],
+      "explain": "Thái rau trên thớt → 도마."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 불고기 양념은 어떻게 만들어요? 나: 간장 세 큰술에 설탕하고 다진 마늘을 넣고 섞으면 돼요.",
+      "q": "Nước ướp bulgogi KHÔNG có gì trong số dưới đây?",
+      "options": [
+        "Giấm",
+        "Nước tương",
+        "Đường",
+        "Tỏi băm"
+      ],
+      "explain": "간장, 설탕, 다진 마늘 — không có 식초."
+    },
+    {
+      "listen": "가: 라면 끓이다가 왜 나왔어요? 나: 택배 아저씨가 와서요. 아, 불을 안 껐어요!",
+      "q": "Người nói vừa quên làm gì?",
+      "options": [
+        "Tắt bếp",
+        "Nhận hàng",
+        "Mua mì",
+        "Đóng cửa"
+      ],
+      "explain": "불을 안 껐어요 — quên tắt bếp."
+    },
+    {
+      "listen": "가: 이 국 좀 싱거운 것 같아요. 나: 그럼 소금을 조금 넣고 다시 간을 보세요.",
+      "q": "Món canh có vấn đề gì?",
+      "options": [
+        "Hơi nhạt",
+        "Quá mặn",
+        "Quá cay",
+        "Bị cháy"
+      ],
+      "explain": "싱거운 것 같아요 = hình như hơi nhạt."
+    },
+    {
+      "listen": "가: 감자는 어떻게 해요? 나: 껍질을 벗기고 나서 작게 썰어서 삶으세요.",
+      "q": "Việc làm đầu tiên với khoai tây là gì?",
+      "options": [
+        "Gọt vỏ",
+        "Thái nhỏ",
+        "Luộc",
+        "Chiên"
+      ],
+      "explain": "껍질을 벗기고 나서 → gọt vỏ trước."
+    },
+    {
+      "listen": "가: 이 떡은 뭐로 만들었어요? 나: 쌀로 만들었어요. 그래서 아주 쫄깃해요.",
+      "q": "Bánh được làm từ gì?",
+      "options": [
+        "Gạo",
+        "Bột mì",
+        "Khoai tây",
+        "Đậu"
+      ],
+      "explain": "쌀로 만들었어요."
+    }
+  ],
+  "reading": {
+    "passage": "제가 제일 좋아하는 요리는 김치볶음밥입니다. 먼저 김치와 양파를 작게 썹니다. 프라이팬에 기름을 두르고 김치와 양파를 센 불로 볶습니다. 김치가 다 익고 나서 밥을 넣고 불을 줄입니다. 간장으로 간을 맞추고 마지막에 참기름을 조금 넣으면 고소해집니다. 남은 김치로 쉽게 만들 수 있어서 자주 해 먹습니다.",
+    "passageVi": "Món tôi thích nấu nhất là cơm rang kim chi. Trước hết thái nhỏ kim chi và hành tây. Cho dầu vào chảo rồi xào kim chi và hành tây trên lửa to. Kim chi chín hẳn rồi thì cho cơm vào và vặn nhỏ lửa. Nêm bằng nước tương, cuối cùng cho chút dầu mè thì sẽ thơm bùi. Vì có thể làm dễ dàng bằng kim chi còn thừa nên tôi hay làm ăn.",
+    "questions": [
+      {
+        "q": "Khi nào thì cho cơm vào?",
+        "options": [
+          "Sau khi kim chi chín hẳn",
+          "Trước khi xào kim chi",
+          "Cùng lúc với hành tây",
+          "Sau khi cho dầu mè"
+        ],
+        "explain": "김치가 다 익고 나서 밥을 넣고…"
+      },
+      {
+        "q": "Chọn câu ĐÚNG với đoạn văn.",
+        "options": [
+          "Người viết nêm bằng nước tương",
+          "Người viết luộc kim chi trước",
+          "Phải dùng kim chi mới mua",
+          "Dầu mè cho vào đầu tiên"
+        ],
+        "explain": "간장으로 간을 맞추고…"
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 4–5 câu hướng dẫn nấu một món bạn thích. Dùng -고 나서, N(으)로, -다가 và A-게.",
+    "samples": [
+      [
+        "먼저 양파를 얇게 써세요.",
+        "Trước hết hãy thái hành tây thật mỏng."
+      ],
+      [
+        "고기는 간장으로 만든 양념에 재우세요.",
+        "Ướp thịt bằng nước sốt làm từ nước tương."
+      ],
+      [
+        "고기를 굽다가 양파를 넣으세요.",
+        "Đang nướng thịt thì cho hành tây vào."
+      ],
+      [
+        "다 익고 나서 참기름을 조금 뿌리면 고소해요.",
+        "Chín hết rồi rắc chút dầu mè sẽ thơm bùi."
+      ]
+    ],
+    "tips": "Trình tự: -고 나서. Nguyên liệu/dụng cụ: N(으)로. Đang làm thì chuyển việc: -다가. Cách làm: tính từ + -게 (얇게, 작게, 맵지 않게)."
+  },
+  "topik": [
+    {
+      "type": "blank",
+      "q": "손을 깨끗이 (    ) 요리를 시작하세요.",
+      "options": [
+        "씻고 나서",
+        "씻다가",
+        "씻는 대신",
+        "씻기는 해서"
+      ],
+      "explain": "Rửa tay xong rồi mới nấu → -고 나서."
+    },
+    {
+      "type": "blank",
+      "q": "어제 요리를 (    ) 손가락을 데었어요.",
+      "options": [
+        "하다가",
+        "하고 나서",
+        "한 덕분에",
+        "할 생각이라서"
+      ],
+      "explain": "Đang nấu thì bị bỏng → -다가."
+    },
+    {
+      "type": "blank",
+      "q": "아이가 먹기 좋게 고기를 (    ) 잘라 주세요.",
+      "options": [
+        "작게",
+        "작은",
+        "작아서",
+        "작다가"
+      ],
+      "explain": "Bổ nghĩa cho 자르다 → 작게."
+    },
+    {
+      "type": "similar",
+      "q": "재료를 모두 __준비하고 나서__ 불을 켜세요.",
+      "options": [
+        "준비한 후에",
+        "준비하다가",
+        "준비하는 동안",
+        "준비하기 전에"
+      ],
+      "explain": "-고 나서 ≈ -(으)ㄴ 후에."
+    },
+    {
+      "type": "similar",
+      "q": "음식이 __식지 않게__ 뚜껑을 덮어 두세요.",
+      "options": [
+        "식지 않도록",
+        "식어서",
+        "식기 전에",
+        "식으면"
+      ],
+      "explain": "-지 않게 ≈ -지 않도록 (để không…)."
+    },
+    {
+      "type": "notice",
+      "passage": "👩‍🍳 주말 요리 교실\n“30분 만에 만드는 한국 가정식”\n· 매주 토요일 오전 10시\n· 재료는 모두 준비해 드립니다. 앞치마만 가져오세요.\n· 만든 음식은 포장해 가실 수 있습니다.",
+      "passageVi": "Lớp nấu ăn cuối tuần “Cơm nhà Hàn Quốc nấu trong 30 phút”. 10 giờ sáng thứ Bảy hằng tuần. Nguyên liệu đã được chuẩn bị sẵn, chỉ cần mang tạp dề. Món làm xong có thể gói mang về.",
+      "q": "이 글의 내용과 같은 것을 고르십시오.",
+      "options": [
+        "재료를 따로 사 오지 않아도 됩니다.",
+        "요리 교실은 매일 열립니다.",
+        "만든 음식은 가져갈 수 없습니다.",
+        "앞치마를 빌려줍니다."
+      ],
+      "explain": "재료는 모두 준비해 드립니다."
+    },
+    {
+      "type": "order",
+      "passage": "(가) 물이 끓고 나서 면과 수프를 넣습니다.\n(나) 먼저 냄비에 물 500ml를 붓습니다.\n(다) 그리고 센 불로 물을 끓입니다.\n(라) 3분쯤 더 끓이다가 마지막에 달걀을 넣으면 완성입니다.",
+      "passageVi": "(나) Trước hết đổ 500 ml nước vào nồi. (다) Rồi đun sôi nước trên lửa to. (가) Nước sôi rồi cho mì và gói súp vào. (라) Đun thêm khoảng 3 phút, cuối cùng cho trứng vào là xong.",
+      "q": "다음을 순서대로 맞게 배열한 것을 고르십시오.",
+      "options": [
+        "(나)-(다)-(가)-(라)",
+        "(나)-(가)-(다)-(라)",
+        "(다)-(나)-(가)-(라)",
+        "(가)-(나)-(라)-(다)"
+      ],
+      "explain": "먼저 (나) → 그리고 (다) → 끓고 나서 (가) → 마지막에 (라)."
+    },
+    {
+      "type": "main",
+      "passage": "요즘은 바빠서 요리를 하는 대신 음식을 사 먹는 사람이 많습니다. 하지만 집에서 직접 요리를 하면 재료를 고를 수 있고 짜지 않게 만들 수 있습니다. 간단한 음식이라도 일주일에 몇 번은 직접 만들어 먹어 보는 게 좋습니다.",
+      "passageVi": "Dạo này nhiều người bận nên mua đồ ăn thay vì tự nấu. Nhưng nấu ở nhà thì có thể tự chọn nguyên liệu và nấu không quá mặn. Dù là món đơn giản, mỗi tuần nên tự nấu ăn vài lần.",
+      "q": "다음 글의 중심 생각으로 알맞은 것을 고르십시오.",
+      "options": [
+        "가끔은 집에서 직접 요리해 먹는 것이 좋습니다.",
+        "바쁠 때는 음식을 사 먹어야 합니다.",
+        "집에서 만든 음식은 너무 짭니다.",
+        "요리는 어려워서 배우기 힘듭니다."
+      ],
+      "explain": "일주일에 몇 번은 직접 만들어 먹어 보는 게 좋습니다."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "남자",
+          "냄새가 좋네요. 뭐 만들어요?"
+        ],
+        [
+          "여자",
+          "된장찌개요. 그런데 맛이 좀 싱거운 것 같아요."
+        ],
+        [
+          "남자",
+          "제가 간을 볼까요? 음, 된장을 조금 더 넣으면 되겠어요."
+        ],
+        [
+          "여자",
+          "그래요? 그럼 된장을 넣고 나서 불을 줄일게요."
+        ]
+      ],
+      "linesVi": "Nam: Thơm quá. Đang nấu gì vậy? Nữ: Canh tương đậu. Nhưng hình như vị hơi nhạt. Nam: Để tôi nếm thử nhé? Ừm, cho thêm chút tương đậu là được. Nữ: Thế à? Vậy cho tương đậu xong tôi sẽ vặn nhỏ lửa.",
+      "q": "여자가 할 행동으로 알맞은 것을 고르십시오.",
+      "options": [
+        "된장을 더 넣어요.",
+        "소금을 넣어요.",
+        "찌개를 새로 끓여요.",
+        "불을 꺼요."
+      ],
+      "explain": "된장을 넣고 나서 불을 줄일게요."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "여자",
+          "민수 씨, 어제 집들이 음식 혼자 다 만들었어요?"
+        ],
+        [
+          "남자",
+          "네, 그런데 생선을 굽다가 친구 전화를 받아서 좀 탔어요."
+        ],
+        [
+          "여자",
+          "아이고, 그래서 어떻게 했어요?"
+        ],
+        [
+          "남자",
+          "탄 생선 대신에 마트에서 산 튀김을 냈어요. 다들 맛있게 먹었어요."
+        ]
+      ],
+      "linesVi": "Nữ: Min-su, hôm qua anh tự nấu hết đồ ăn tân gia à? Nam: Ừ, nhưng đang nướng cá thì nghe điện thoại bạn nên hơi bị cháy. Nữ: Trời, thế anh làm sao? Nam: Tôi dọn đồ chiên mua ở siêu thị thay cho cá cháy. Mọi người đều ăn ngon lành.",
+      "q": "들은 내용과 같은 것을 고르십시오.",
+      "options": [
+        "남자는 생선을 굽다가 전화를 받았습니다.",
+        "남자는 생선을 맛있게 구웠습니다.",
+        "친구가 음식을 같이 만들었습니다.",
+        "손님들이 튀김을 먹지 않았습니다."
+      ],
+      "explain": "생선을 굽다가 친구 전화를 받아서 좀 탔어요."
+    }
+  ],
+  "fillWriting": [
+    {
+      "text": "제목: 요리 동아리 회원 모집\n요리를 좋아하는 학생 여러분, 같이 요리하지 않겠습니까? 저희 동아리는 매주 금요일에 모여서 ( ㉠ ). 요리를 잘 못해도 괜찮습니다. 재료비는 한 달에 만 원입니다. 관심이 있는 분은 이번 주까지 ( ㉡ ).",
+      "textVi": "Tiêu đề: Tuyển thành viên câu lạc bộ nấu ăn. Các bạn sinh viên yêu nấu ăn, cùng nấu ăn nhé? Câu lạc bộ chúng tôi tối thứ Sáu hằng tuần gặp nhau và ( ㉠ ). Nấu chưa giỏi cũng không sao. Tiền nguyên liệu 10.000 won/tháng. Ai quan tâm thì trong tuần này ( ㉡ ).",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "같이 요리를 합니다",
+            "한국 음식을 만듭니다"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "신청해 주십시오",
+            "연락해 주십시오"
+          ]
+        }
+      ],
+      "tips": "㉠ nói hoạt động của câu lạc bộ (모여서 + V). ㉡ là lời đề nghị cuối thông báo: -아/어 주십시오 / -(으)십시오."
+    },
+    {
+      "text": "볶음밥을 맛있게 만드는 방법은 간단합니다. 먼저 채소를 작게 썹니다. 그리고 프라이팬에 채소를 볶습니다. 채소가 다 익고 나서 ( ㉠ ). 이때 불이 너무 세면 밥이 탈 수 있으니까 ( ㉡ ).",
+      "textVi": "Cách làm cơm rang ngon rất đơn giản. Trước hết thái nhỏ rau củ. Rồi xào rau củ trên chảo. Rau chín hẳn rồi thì ( ㉠ ). Lúc này nếu lửa to quá cơm có thể bị cháy, nên ( ㉡ ).",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "밥을 넣고 같이 볶습니다",
+            "밥을 넣습니다"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "불을 줄이는 게 좋습니다",
+            "약한 불로 볶으세요"
+          ]
+        }
+      ],
+      "tips": "Trình tự -고 나서 → ㉠ là bước tiếp theo: cho cơm vào. -(으)니까 nêu lý do → ㉡ là lời khuyên: 불을 줄이다 / 약한 불로."
+    }
+  ]
+}

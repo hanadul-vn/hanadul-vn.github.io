@@ -1,0 +1,812 @@
+{
+  "id": "tc3-04",
+  "title": "Mua sắm",
+  "ko": "쇼핑",
+  "goal": "Nói về mua sắm, giảm giá, đổi trả và đánh giá sản phẩm; nói “thay vì…”, “bù lại…” và “thì cũng có… nhưng…”.",
+  "vocab": [
+    {
+      "group": "Giá cả, thanh toán",
+      "words": [
+        [
+          "정가",
+          "giá niêm yết, giá gốc"
+        ],
+        [
+          "할인 쿠폰",
+          "phiếu giảm giá"
+        ],
+        [
+          "적립하다",
+          "tích (điểm)",
+          "포인트를 적립하다"
+        ],
+        [
+          "포인트",
+          "điểm thưởng"
+        ],
+        [
+          "일시불",
+          "trả một lần"
+        ],
+        [
+          "할부",
+          "trả góp"
+        ],
+        [
+          "무이자",
+          "không lãi suất"
+        ],
+        [
+          "계산대",
+          "quầy thanh toán"
+        ],
+        [
+          "사은품",
+          "quà tặng kèm"
+        ],
+        [
+          "배송비",
+          "phí giao hàng"
+        ]
+      ]
+    },
+    {
+      "group": "Đổi trả, hàng hóa",
+      "words": [
+        [
+          "반품하다",
+          "trả lại hàng"
+        ],
+        [
+          "품절되다",
+          "hết hàng"
+        ],
+        [
+          "재고",
+          "hàng tồn kho"
+        ],
+        [
+          "불량품",
+          "hàng lỗi"
+        ],
+        [
+          "흠집",
+          "vết xước"
+        ],
+        [
+          "얼룩",
+          "vết bẩn, vết ố"
+        ],
+        [
+          "정품",
+          "hàng chính hãng"
+        ],
+        [
+          "가짜",
+          "đồ giả"
+        ],
+        [
+          "중고품",
+          "đồ cũ, hàng đã qua sử dụng"
+        ],
+        [
+          "장바구니",
+          "giỏ hàng"
+        ]
+      ]
+    },
+    {
+      "group": "Nhận xét sản phẩm",
+      "words": [
+        [
+          "품질",
+          "chất lượng"
+        ],
+        [
+          "실용적",
+          "thiết thực, tiện dùng"
+        ],
+        [
+          "세련되다",
+          "sành điệu, tinh tế"
+        ],
+        [
+          "촌스럽다",
+          "quê mùa, lỗi thời"
+        ],
+        [
+          "헐렁하다",
+          "rộng thùng thình"
+        ],
+        [
+          "꽉 끼다",
+          "chật bó",
+          "옷이 꽉 끼다"
+        ],
+        [
+          "유행이 지나다",
+          "lỗi mốt"
+        ],
+        [
+          "바느질",
+          "đường may"
+        ]
+      ]
+    },
+    {
+      "group": "Từ mới khác",
+      "words": [
+        [
+          "충동구매",
+          "mua sắm bốc đồng"
+        ],
+        [
+          "알뜰하다",
+          "chi tiêu khéo, tằn tiện"
+        ],
+        [
+          "꼼꼼하다",
+          "kỹ lưỡng, tỉ mỉ"
+        ],
+        [
+          "후기",
+          "bài nhận xét, review"
+        ],
+        [
+          "별점",
+          "điểm sao đánh giá"
+        ],
+        [
+          "매장",
+          "cửa hàng, gian hàng"
+        ],
+        [
+          "단골",
+          "khách quen"
+        ],
+        [
+          "구입하다",
+          "mua (trang trọng)"
+        ],
+        [
+          "망설이다",
+          "do dự, chần chừ"
+        ],
+        [
+          "낭비하다",
+          "lãng phí"
+        ],
+        [
+          "홈쇼핑",
+          "mua hàng qua TV"
+        ],
+        [
+          "직거래",
+          "giao dịch trực tiếp"
+        ],
+        [
+          "가격 대비",
+          "so với giá tiền"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "N 대신(에)",
+      "title": "thay cho N, thay vì N",
+      "note": [
+        "Dùng một thứ khác thay thế cho N.",
+        "Có thể bỏ 에: 커피 대신 차. Cũng dùng với người: 제가 친구 대신 왔어요.",
+        "N 대신에 N을/를 + V: dùng cái này thay cho cái kia."
+      ],
+      "examples": [
+        [
+          "현금 대신 카드로 계산할게요.",
+          "Tôi sẽ thanh toán bằng thẻ thay vì tiền mặt."
+        ],
+        [
+          "오늘은 밥 대신에 빵을 먹었어요.",
+          "Hôm nay tôi ăn bánh mì thay cho cơm."
+        ],
+        [
+          "사장님 대신 제가 회의에 갔어요.",
+          "Tôi đi họp thay giám đốc."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "배송비가 비싸서 택배 ___ 직접 가지러 갔어요.",
+          "options": [
+            "대신",
+            "덕분에",
+            "밖에",
+            "처럼"
+          ],
+          "explain": "Không dùng giao hàng mà tự đi lấy → 택배 대신."
+        },
+        {
+          "q": "커피를 많이 마셔서 오늘은 커피 대신에 ___ 마실게요.",
+          "options": [
+            "녹차를",
+            "녹차가",
+            "녹차는 대신",
+            "녹차 대신"
+          ],
+          "explain": "N 대신에 N을/를 V: 커피 대신에 녹차를 마시다."
+        },
+        {
+          "q": "A: 내일 회의에 못 가요. B: 그럼 제가 민수 씨 ___ 갈게요.",
+          "options": [
+            "대신",
+            "밖에",
+            "때문에",
+            "보다"
+          ],
+          "explain": "Đi thay người khác → N 대신."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "일시불 대신 할부로 샀어요.",
+            "일시불 대신을 할부로 샀어요.",
+            "일시불이 대신 할부로 샀어요.",
+            "일시불 대신한 할부로 샀어요."
+          ],
+          "explain": "N 대신 + N(으)로: mua trả góp thay vì trả một lần."
+        },
+        {
+          "q": "Nghĩa của \"새 책 대신에 중고품을 샀어요.\"",
+          "options": [
+            "Tôi mua sách cũ thay vì sách mới.",
+            "Tôi mua cả sách mới và sách cũ.",
+            "Tôi bán sách cũ để mua sách mới.",
+            "Tôi không mua sách nào."
+          ],
+          "explain": "대신에 = thay cho."
+        }
+      ]
+    },
+    {
+      "pattern": "A/V -(으)ㄴ/는 대신(에)",
+      "title": "thay vì…; bù lại…",
+      "note": [
+        "Nghĩa 1: thay vì làm V thì làm việc khác (오늘은 요리하는 대신 시켜 먹어요).",
+        "Nghĩa 2: có mặt này nhưng bù lại có mặt kia (값이 싼 대신 품질이 안 좋아요).",
+        "Động từ hiện tại -는 대신, quá khứ -(으)ㄴ 대신; tính từ -(으)ㄴ 대신."
+      ],
+      "examples": [
+        [
+          "이 가방은 비싼 대신에 아주 튼튼해요.",
+          "Cái túi này đắt nhưng bù lại rất bền."
+        ],
+        [
+          "주말에 일한 대신 월요일에 쉬어요.",
+          "Vì đã làm cuối tuần nên bù lại được nghỉ thứ Hai."
+        ],
+        [
+          "백화점에 가는 대신 인터넷으로 샀어요.",
+          "Thay vì đi trung tâm thương mại, tôi mua qua mạng."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "이 옷은 값이 ___ 대신에 품질이 별로예요.",
+          "options": [
+            "싼",
+            "싸는",
+            "쌀",
+            "싸서"
+          ],
+          "explain": "Tính từ → -(으)ㄴ 대신: 싼 대신."
+        },
+        {
+          "q": "오늘은 요리를 ___ 대신 음식을 시켜 먹을까요?",
+          "options": [
+            "하는",
+            "한",
+            "할",
+            "해서"
+          ],
+          "explain": "Động từ hiện tại → -는 대신."
+        },
+        {
+          "q": "어제 늦게까지 ___ 대신 오늘은 일찍 퇴근해요.",
+          "options": [
+            "일한",
+            "일하는",
+            "일할",
+            "일하고"
+          ],
+          "explain": "Việc đã xảy ra (hôm qua) → -(으)ㄴ 대신."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "온라인 쇼핑은 편한 대신에 직접 입어 볼 수 없어요.",
+            "온라인 쇼핑은 편하는 대신에 직접 입어 볼 수 없어요.",
+            "온라인 쇼핑은 편할 대신에 직접 입어 볼 수 없어요.",
+            "온라인 쇼핑은 편해서 대신에 직접 입어 볼 수 없어요."
+          ],
+          "explain": "편하다 là tính từ → 편한 대신."
+        },
+        {
+          "q": "Nghĩa của \"이 집은 음식이 맛있는 대신에 좀 비싸요.\"",
+          "options": [
+            "Quán này ngon nhưng bù lại hơi đắt.",
+            "Quán này vì ngon nên rẻ.",
+            "Quán này không ngon mà còn đắt.",
+            "Thay vì ăn ở quán này, hãy nấu ở nhà."
+          ],
+          "explain": "-는 대신에: có mặt tốt nhưng đi kèm mặt khác."
+        }
+      ]
+    },
+    {
+      "pattern": "A/V -기는 하다",
+      "title": "thì cũng… (nhưng…)",
+      "note": [
+        "Công nhận một phần, sau đó nói ý trái lại (thường có 지만/는데 theo sau).",
+        "Lặp lại động/tính từ: 비싸기는 비싸요 = đắt thì có đắt (nhưng…).",
+        "Quá khứ: -기는 했다 (사기는 샀는데…)."
+      ],
+      "examples": [
+        [
+          "이 신발이 예쁘기는 해요. 그런데 너무 불편해요.",
+          "Đôi giày này đẹp thì có đẹp. Nhưng đi rất khó chịu."
+        ],
+        [
+          "세일을 하기는 했지만 별로 싸지 않았어요.",
+          "Có giảm giá thật nhưng cũng không rẻ lắm."
+        ],
+        [
+          "옷을 사기는 샀는데 아직 한 번도 안 입었어요.",
+          "Mua thì đã mua rồi nhưng chưa mặc lần nào."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "A: 그 가방 비싸요? B: 비싸___ 해요. 그런데 품질이 정말 좋아요.",
+          "options": [
+            "기는",
+            "는데",
+            "고는",
+            "지는"
+          ],
+          "explain": "Công nhận một phần → -기는 하다."
+        },
+        {
+          "q": "인터넷으로 주문하___ 했는데 아직 안 왔어요.",
+          "options": [
+            "기는",
+            "기가",
+            "는 게",
+            "기도록"
+          ],
+          "explain": "Đặt thì đã đặt rồi nhưng… → -기는 했는데."
+        },
+        {
+          "q": "A: 백화점 세일에 갔어요? B: 가기는 ___ 사람이 너무 많아서 그냥 왔어요.",
+          "options": [
+            "갔는데",
+            "가는데",
+            "갈 건데",
+            "가서"
+          ],
+          "explain": "Lặp lại động từ: 가기는 갔는데."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "이 옷이 예쁘기는 한데 좀 꽉 껴요.",
+            "이 옷이 예쁘기는 하는데 좀 꽉 껴요.",
+            "이 옷이 예쁜 기는 한데 좀 꽉 껴요.",
+            "이 옷이 예쁘기가 한데 좀 꽉 껴요."
+          ],
+          "explain": "Tính từ: -기는 한데 (하다 dạng tính từ → 한데)."
+        },
+        {
+          "q": "Nghĩa của \"할인 쿠폰이 있기는 있었는데 기간이 지났어요.\"",
+          "options": [
+            "Phiếu giảm giá thì có đấy nhưng đã hết hạn.",
+            "Tôi chưa từng có phiếu giảm giá.",
+            "Phiếu giảm giá vẫn còn dùng được.",
+            "Tôi muốn có phiếu giảm giá."
+          ],
+          "explain": "-기는 -았/었는데 = có thì có… nhưng."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "이 냉장고는 36개월 ___로 살 수 있어요.",
+      "options": [
+        "무이자 할부",
+        "일시불",
+        "정가",
+        "재고"
+      ],
+      "explain": "Trả góp 36 tháng không lãi → 무이자 할부."
+    },
+    {
+      "q": "인기가 많아서 그 운동화는 벌써 ___.",
+      "options": [
+        "품절됐어요",
+        "적립했어요",
+        "반품했어요",
+        "망설였어요"
+      ],
+      "explain": "Bán chạy → hết hàng: 품절되다."
+    },
+    {
+      "q": "받은 옷에 ___이 있어서 반품했어요.",
+      "options": [
+        "얼룩",
+        "포인트",
+        "사은품",
+        "단골"
+      ],
+      "explain": "Lý do trả hàng → có vết bẩn (얼룩)."
+    },
+    {
+      "q": "물건을 살 때 다른 사람들이 쓴 ___를 꼭 읽어요.",
+      "options": [
+        "후기",
+        "계산대",
+        "할부",
+        "흠집"
+      ],
+      "explain": "Đọc nhận xét của người khác → 후기."
+    },
+    {
+      "q": "필요 없는 물건을 갑자기 사는 ___을 하지 마세요.",
+      "options": [
+        "충동구매",
+        "직거래",
+        "정품",
+        "재고"
+      ],
+      "explain": "Mua bốc đồng → 충동구매."
+    },
+    {
+      "q": "제 동생은 아주 ___ 같은 물건도 가장 싼 곳을 찾아서 사요.",
+      "options": [
+        "알뜰해서",
+        "촌스러워서",
+        "헐렁해서",
+        "세련돼서"
+      ],
+      "explain": "Khéo chi tiêu → 알뜰하다."
+    },
+    {
+      "q": "살을 빼서 바지가 너무 ___.",
+      "options": [
+        "헐렁해요",
+        "꽉 껴요",
+        "꼼꼼해요",
+        "실용적이에요"
+      ],
+      "explain": "Gầy đi → quần rộng: 헐렁하다."
+    },
+    {
+      "q": "이 가방은 가볍고 수납 공간이 많아서 아주 ___이에요.",
+      "options": [
+        "실용적",
+        "촌스러운 것",
+        "충동구매",
+        "불량품"
+      ],
+      "explain": "Nhẹ, nhiều ngăn → thiết thực, tiện dùng: 실용적."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 이 원피스 얼마예요? 나: 정가는 십만 원인데 지금 세일해서 칠만 원이에요.",
+      "q": "Giá chiếc váy bây giờ là bao nhiêu?",
+      "options": [
+        "70.000 won",
+        "100.000 won",
+        "17.000 won",
+        "107.000 won"
+      ],
+      "explain": "지금 세일해서 칠만 원이에요."
+    },
+    {
+      "listen": "가: 어제 산 신발이 좀 작아요. 나: 그럼 한 치수 큰 걸로 교환해 드릴게요. 영수증 있으세요?",
+      "q": "Nhân viên cần gì để đổi hàng?",
+      "options": [
+        "Hóa đơn",
+        "Thẻ tín dụng",
+        "Phiếu giảm giá",
+        "Giấy tờ tùy thân"
+      ],
+      "explain": "영수증 있으세요?"
+    },
+    {
+      "listen": "가: 그 노트북 샀어요? 나: 사기는 샀는데 배송이 늦어서 아직 못 받았어요.",
+      "q": "Tình trạng chiếc laptop thế nào?",
+      "options": [
+        "Đã mua nhưng chưa nhận được",
+        "Chưa mua vì đắt",
+        "Đã nhận và đang dùng",
+        "Đã trả lại"
+      ],
+      "explain": "사기는 샀는데 아직 못 받았어요."
+    },
+    {
+      "listen": "가: 시장이 백화점보다 싸요? 나: 네, 싼 대신에 카드를 못 쓰는 가게가 좀 있어요.",
+      "q": "Điểm bất tiện của chợ là gì?",
+      "options": [
+        "Có tiệm không nhận thẻ",
+        "Giá đắt hơn",
+        "Hàng kém chất lượng",
+        "Xa nhà"
+      ],
+      "explain": "싼 대신에 카드를 못 쓰는 가게가 좀 있어요."
+    },
+    {
+      "listen": "가: 오늘 마트에 갈 거예요? 나: 아니요, 마트에 가는 대신에 인터넷으로 주문하려고 해요.",
+      "q": "Người nói định làm gì?",
+      "options": [
+        "Đặt hàng qua mạng",
+        "Đi siêu thị",
+        "Đi chợ",
+        "Không mua gì"
+      ],
+      "explain": "마트에 가는 대신에 인터넷으로 주문하려고 해요."
+    }
+  ],
+  "reading": {
+    "passage": "요즘은 매장에 가는 대신 인터넷으로 물건을 사는 사람이 많습니다. 인터넷 쇼핑은 가격을 쉽게 비교할 수 있고 후기도 읽을 수 있어서 편리합니다. 하지만 편한 대신에 충동구매를 하기 쉽습니다. 장바구니에 물건을 넣고 바로 사지 말고 하루쯤 기다려 보십시오. 다음 날에도 필요하면 그때 사도 늦지 않습니다.",
+    "passageVi": "Dạo này nhiều người mua hàng qua mạng thay vì đến cửa hàng. Mua sắm trực tuyến tiện vì dễ so sánh giá và đọc được nhận xét. Nhưng tiện thì tiện, bù lại rất dễ mua bốc đồng. Hãy cho hàng vào giỏ rồi đừng mua ngay, thử đợi khoảng một ngày. Sang hôm sau vẫn cần thì lúc đó mua cũng chưa muộn.",
+    "questions": [
+      {
+        "q": "Theo đoạn văn, điểm bất lợi của mua sắm qua mạng là gì?",
+        "options": [
+          "Dễ mua bốc đồng",
+          "Không so sánh được giá",
+          "Không đọc được nhận xét",
+          "Phí giao hàng đắt"
+        ],
+        "explain": "편한 대신에 충동구매를 하기 쉽습니다."
+      },
+      {
+        "q": "Người viết khuyên gì?",
+        "options": [
+          "Cho vào giỏ hàng rồi đợi khoảng một ngày",
+          "Chỉ mua ở cửa hàng",
+          "Đọc thật nhiều nhận xét",
+          "Mua ngay khi thấy rẻ"
+        ],
+        "explain": "하루쯤 기다려 보십시오."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu kể về một món đồ bạn đã mua: ưu điểm, nhược điểm và lời khuyên. Dùng -(으)ㄴ/는 대신(에), N 대신 và -기는 하다.",
+    "samples": [
+      [
+        "이 운동화는 비싼 대신에 아주 편해요.",
+        "Đôi giày này đắt nhưng bù lại rất êm."
+      ],
+      [
+        "디자인이 좀 촌스럽기는 해요.",
+        "Kiểu dáng thì cũng hơi quê một chút."
+      ],
+      [
+        "그래도 매장에 가는 대신 인터넷으로 사서 포인트를 많이 적립했어요.",
+        "Dù vậy, vì mua qua mạng thay vì đến cửa hàng nên tôi tích được nhiều điểm."
+      ],
+      [
+        "충동구매 대신 후기를 꼼꼼하게 읽고 사세요.",
+        "Thay vì mua bốc đồng, hãy đọc kỹ nhận xét rồi hãy mua."
+      ]
+    ],
+    "tips": "Bù lại: tính từ -(으)ㄴ 대신, động từ -는 대신. Thay cho N: N 대신(에). Công nhận một phần rồi nói ý ngược: -기는 하다 + 지만/는데."
+  },
+  "topik": [
+    {
+      "type": "blank",
+      "q": "이 가방은 값이 (    ) 품질이 아주 좋아요.",
+      "options": [
+        "비싼 대신에",
+        "비싼 덕분에",
+        "비싸는 길에",
+        "비쌀 생각이라서"
+      ],
+      "explain": "Đắt nhưng bù lại chất lượng tốt → -(으)ㄴ 대신에."
+    },
+    {
+      "type": "blank",
+      "q": "A: 그 영화 재미있었어요? B: (    ) 좀 길었어요.",
+      "options": [
+        "재미있기는 했는데",
+        "재미있는 대신",
+        "재미있게 돼서",
+        "재미있을 생각인데"
+      ],
+      "explain": "Công nhận một phần rồi nói ý ngược → -기는 했는데."
+    },
+    {
+      "type": "blank",
+      "q": "오늘은 너무 피곤해서 요리를 (    ) 배달 음식을 시켰어요.",
+      "options": [
+        "하는 대신",
+        "하는 덕분에",
+        "하기는 해서",
+        "하게 돼서"
+      ],
+      "explain": "Thay vì nấu → -는 대신."
+    },
+    {
+      "type": "similar",
+      "q": "옷이 __예쁘기는 하지만__ 너무 비싸서 안 샀어요.",
+      "options": [
+        "예쁘지만",
+        "예뻐서",
+        "예쁘니까",
+        "예쁘면"
+      ],
+      "explain": "-기는 하지만 ≈ -지만 (nhấn mạnh công nhận một phần)."
+    },
+    {
+      "type": "similar",
+      "q": "오늘은 __현금 대신에__ 카드로 계산했어요.",
+      "options": [
+        "현금으로 내지 않고",
+        "현금을 많이 내고",
+        "현금하고 같이",
+        "현금이 없어서"
+      ],
+      "explain": "N 대신에 = không dùng N mà dùng cái khác → 현금으로 내지 않고."
+    },
+    {
+      "type": "notice",
+      "passage": "🛍️ 하나마트 겨울 정기 세일\n· 기간: 12월 1일 ~ 12월 7일\n· 전 품목 20~50% 할인\n· 5만 원 이상 구매 시 사은품 증정\n· 세일 상품은 교환·반품이 안 됩니다.",
+      "passageVi": "Siêu thị Hana – đợt giảm giá mùa đông. Thời gian: 1/12 – 7/12. Giảm 20–50% tất cả mặt hàng. Mua từ 50.000 won tặng quà. Hàng giảm giá không được đổi hay trả.",
+      "q": "이 글의 내용과 같은 것을 고르십시오.",
+      "options": [
+        "세일 상품은 반품할 수 없습니다.",
+        "세일은 한 달 동안 합니다.",
+        "모든 손님에게 사은품을 줍니다.",
+        "일부 상품만 할인합니다."
+      ],
+      "explain": "세일 상품은 교환·반품이 안 됩니다."
+    },
+    {
+      "type": "order",
+      "passage": "(가) 그래서 다음 날 바로 반품 신청을 했습니다.\n(나) 지난주에 인터넷으로 겨울 코트를 샀습니다.\n(다) 그런데 받아 보니까 소매에 큰 얼룩이 있었습니다.\n(라) 다행히 배송비 없이 새 코트로 받을 수 있었습니다.",
+      "passageVi": "(나) Tuần trước tôi mua áo khoác mùa đông qua mạng. (다) Nhưng nhận về thì thấy tay áo có vết bẩn lớn. (가) Vì vậy ngay hôm sau tôi đăng ký trả hàng. (라) May là tôi được nhận áo mới mà không mất phí giao hàng.",
+      "q": "다음을 순서대로 맞게 배열한 것을 고르십시오.",
+      "options": [
+        "(나)-(다)-(가)-(라)",
+        "(나)-(가)-(다)-(라)",
+        "(다)-(나)-(라)-(가)",
+        "(가)-(다)-(나)-(라)"
+      ],
+      "explain": "Mua hàng (나) → phát hiện lỗi 그런데 (다) → 그래서 trả hàng (가) → kết quả (라)."
+    },
+    {
+      "type": "main",
+      "passage": "물건을 싸게 사는 것도 중요하지만 오래 쓸 수 있는지가 더 중요합니다. 싼 물건을 자주 사면 결국 돈을 더 많이 쓰게 됩니다. 조금 비싸도 품질이 좋은 물건을 사서 오래 쓰는 것이 알뜰한 소비입니다.",
+      "passageVi": "Mua rẻ cũng quan trọng nhưng dùng được lâu hay không còn quan trọng hơn. Hay mua đồ rẻ thì rốt cuộc lại tốn nhiều tiền hơn. Hơi đắt một chút nhưng mua đồ chất lượng tốt rồi dùng lâu mới là tiêu dùng khéo.",
+      "q": "다음 글의 중심 생각으로 알맞은 것을 고르십시오.",
+      "options": [
+        "품질이 좋은 물건을 사서 오래 쓰는 것이 좋습니다.",
+        "물건은 무조건 싸게 사야 합니다.",
+        "비싼 물건은 품질이 나쁩니다.",
+        "물건을 자주 바꾸는 것이 좋습니다."
+      ],
+      "explain": "품질이 좋은 물건을 사서 오래 쓰는 것이 알뜰한 소비입니다."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "남자",
+          "어서 오세요. 뭘 도와드릴까요?"
+        ],
+        [
+          "여자",
+          "어제 여기서 이 바지를 샀는데 좀 꽉 껴서요. 한 치수 큰 걸로 바꿀 수 있나요?"
+        ],
+        [
+          "남자",
+          "죄송하지만 그 사이즈는 지금 품절됐어요. 대신에 다음 주에 다시 들어와요."
+        ],
+        [
+          "여자",
+          "그럼 그냥 환불해 주세요."
+        ],
+        [
+          "남자",
+          "네, 영수증하고 결제하신 카드를 주시겠어요?"
+        ]
+      ],
+      "linesVi": "Nam (nhân viên): Xin mời vào. Tôi giúp gì được ạ? Nữ: Hôm qua tôi mua chiếc quần này ở đây nhưng hơi chật. Đổi sang cỡ lớn hơn một số được không? Nam: Xin lỗi, cỡ đó hiện hết hàng rồi. Bù lại tuần sau sẽ có hàng về. Nữ: Vậy hoàn tiền cho tôi luôn nhé. Nam: Vâng, chị cho tôi xin hóa đơn và thẻ đã thanh toán.",
+      "q": "들은 내용과 같은 것을 고르십시오.",
+      "options": [
+        "여자는 바지를 환불하려고 합니다.",
+        "여자는 큰 사이즈로 교환했습니다.",
+        "바지는 너무 헐렁했습니다.",
+        "큰 사이즈는 내일 들어옵니다."
+      ],
+      "explain": "그럼 그냥 환불해 주세요."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "여자",
+          "민수 씨, 그 노트북 새로 샀어요?"
+        ],
+        [
+          "남자",
+          "아니요, 새 제품 대신에 중고품을 샀어요. 반값이었어요."
+        ],
+        [
+          "여자",
+          "괜찮아요? 중고는 고장이 나기 쉽잖아요."
+        ],
+        [
+          "남자",
+          "흠집이 조금 있기는 한데 잘 돼요. 저도 처음에는 망설였어요."
+        ]
+      ],
+      "linesVi": "Nữ: Min-su, anh mới mua laptop à? Nam: Không, tôi mua đồ cũ thay vì máy mới. Giá chỉ bằng một nửa. Nữ: Có ổn không? Đồ cũ dễ hỏng mà. Nam: Có vài vết xước thật nhưng chạy tốt. Lúc đầu tôi cũng do dự.",
+      "q": "남자에 대한 내용으로 맞는 것을 고르십시오.",
+      "options": [
+        "중고 노트북을 반값에 샀습니다.",
+        "새 노트북을 정가에 샀습니다.",
+        "노트북이 자주 고장 납니다.",
+        "노트북에 흠집이 전혀 없습니다."
+      ],
+      "explain": "새 제품 대신에 중고품을 샀어요. 반값이었어요."
+    }
+  ],
+  "fillWriting": [
+    {
+      "text": "제목: 반품 문의\n안녕하세요? 지난주에 이 쇼핑몰에서 운동화를 샀습니다. 그런데 신발 옆에 흠집이 있어서 ( ㉠ ). 반품하려면 어떻게 해야 합니까? 그리고 배송비는 ( ㉡ )? 빠른 답변 부탁드립니다.",
+      "textVi": "Tiêu đề: Hỏi về trả hàng. Xin chào. Tuần trước tôi mua giày thể thao ở trang này. Nhưng bên hông giày có vết xước nên ( ㉠ ). Muốn trả hàng thì phải làm thế nào? Và phí giao hàng thì ( ㉡ )? Mong sớm nhận được trả lời.",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "반품하고 싶습니다",
+            "반품을 하려고 합니다"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "누가 냅니까",
+            "제가 내야 합니까"
+          ]
+        }
+      ],
+      "tips": "Câu sau hỏi cách trả hàng → ㉠ là mong muốn trả hàng (-고 싶습니다). ㉡ kết thúc bằng dấu hỏi → câu hỏi về phí: 누가 냅니까 / 제가 내야 합니까."
+    },
+    {
+      "text": "인터넷 쇼핑은 집에서 쉽게 물건을 살 수 있어서 편리합니다. 하지만 편리한 대신에 ( ㉠ ). 그래서 옷이나 신발을 살 때는 사이즈가 맞지 않는 경우가 많습니다. 이런 문제를 줄이려면 ( ㉡ ).",
+      "textVi": "Mua sắm qua mạng tiện vì có thể mua hàng dễ dàng ở nhà. Nhưng tiện thì tiện, bù lại ( ㉠ ). Vì vậy khi mua quần áo, giày dép hay gặp trường hợp không vừa cỡ. Muốn giảm vấn đề này thì ( ㉡ ).",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "직접 입어 볼 수 없습니다",
+            "물건을 직접 볼 수 없습니다"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "다른 사람의 후기를 꼼꼼하게 읽는 것이 좋습니다",
+            "사이즈표를 잘 확인해야 합니다"
+          ]
+        }
+      ],
+      "tips": "편리한 대신에 → ㉠ nêu nhược điểm, câu sau nói về chuyện không vừa cỡ → không thử trực tiếp được. -(으)려면 → ㉡ là lời khuyên: -는 것이 좋습니다 / -아/어야 합니다."
+    }
+  ]
+}

@@ -273,7 +273,7 @@
       "icon": "🌳",
       "prefix": true,
       "subtitle": "Ngữ pháp trung cấp, làm quen dạng đề TOPIK II",
-      "status": "Đang mở 3 bài",
+      "status": "Đang mở 6 bài",
       "lessons": [
         {
           "id": "tc3-01",
@@ -298,6 +298,30 @@
           "ko": "건강",
           "summary": "-는 게 좋다 · -아/어 보이다 · -(으)ㄴ/는 것 같다",
           "icon": "💪"
+        },
+        {
+          "id": "tc3-04",
+          "no": "4",
+          "title": "Mua sắm",
+          "ko": "쇼핑",
+          "summary": "N 대신(에) · -(으)ㄴ/는 대신(에) · -기는 하다",
+          "icon": "🛍️"
+        },
+        {
+          "id": "tc3-05",
+          "no": "5",
+          "title": "Nấu ăn",
+          "ko": "요리",
+          "summary": "-고 나서 · (으)로 · -다가 · -게",
+          "icon": "🍳"
+        },
+        {
+          "id": "tc3-06",
+          "no": "6",
+          "title": "Ngân hàng",
+          "ko": "은행",
+          "summary": "-기 쉽다 · -는 동안 · -(으)려면",
+          "icon": "🏦"
         }
       ]
     }
