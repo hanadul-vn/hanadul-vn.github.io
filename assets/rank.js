@@ -72,6 +72,7 @@
       return;
     }
     if (!HD.accountReady() || !HD.sb()) {
+      if (HD.ensureAccount) HD.ensureAccount();
       app.innerHTML = '<div class="container narrow">' + hero() + '<p class="muted" style="margin-top:16px">Đang tải…</p></div>';
       return; // account.js gọi HD.refresh khi sẵn sàng
     }
@@ -132,10 +133,11 @@
   }
 
   HD.renderRank = render;
-  // Thẻ ở trang chủ (chỉ khi đã đăng nhập, để khách không bị rối).
+  // Thẻ ở trang chủ: ai cũng xem được bảng; khách được mời xem, người đã đăng nhập vào thẳng.
   HD.rankHomeCard = function () {
-    if (!HD.accountOn || !HD.isSignedIn || !HD.isSignedIn()) return '';
+    if (!HD.accountOn) return '';
+    var signed = HD.isSignedIn && HD.isSignedIn();
     return '<a class="continue rank-card" href="#/xep-hang"><span class="emoji">🏆</span>' +
-      '<span><span class="label">Tuần ' + weekLabel(0) + '</span><br><span class="title">Bảng xếp hạng tuần</span></span><span class="go">→</span></a>';
+      '<span><span class="label">' + (signed ? 'Tuần ' + weekLabel(0) : 'Ai học chăm nhất tuần này?') + '</span><br><span class="title">Bảng xếp hạng tuần</span></span><span class="go">→</span></a>';
   };
 })();
