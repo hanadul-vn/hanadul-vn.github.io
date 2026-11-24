@@ -5,139 +5,117 @@
   "goal": "Giao dịch ở ngân hàng: mở tài khoản, gửi/rút/chuyển tiền, mất thẻ; nói “dễ…”, “trong lúc…” và “muốn… thì…”.",
   "vocab": [
     {
-      "group": "Tài khoản, thẻ",
+      "group": "Tiền",
       "words": [
         [
-          "계좌",
-          "tài khoản (ngân hàng)"
+          "현금",
+          "tiền mặt"
         ],
         [
-          "개설하다",
-          "mở (tài khoản)",
-          "계좌를 개설하다"
+          "동전",
+          "tiền xu"
         ],
         [
-          "체크카드",
-          "thẻ ghi nợ"
+          "지폐",
+          "tiền giấy"
         ],
         [
-          "잔액",
-          "số dư"
+          "수표",
+          "séc, ngân phiếu"
         ],
         [
-          "금액",
-          "số tiền"
+          "천 원짜리",
+          "tờ 1.000 won"
         ],
         [
-          "비밀번호를 입력하다",
-          "nhập mật khẩu"
-        ],
-        [
-          "분실하다",
-          "đánh mất"
-        ],
-        [
-          "재발급",
-          "cấp lại"
-        ],
-        [
-          "정지하다",
-          "khóa, tạm ngừng",
-          "카드를 정지하다"
-        ],
-        [
-          "인터넷 뱅킹",
-          "ngân hàng trực tuyến"
+          "잔돈",
+          "tiền lẻ"
         ]
       ]
     },
     {
-      "group": "Giao dịch",
+      "group": "Ở ngân hàng",
       "words": [
         [
-          "입금하다",
-          "nộp tiền vào tài khoản"
-        ],
-        [
-          "출금하다",
-          "rút tiền"
-        ],
-        [
-          "이체하다",
-          "chuyển khoản"
-        ],
-        [
-          "해외 송금",
-          "chuyển tiền ra nước ngoài"
-        ],
-        [
-          "환율",
-          "tỷ giá"
-        ],
-        [
-          "수수료",
-          "phí dịch vụ"
-        ],
-        [
-          "이자",
-          "tiền lãi"
-        ],
-        [
-          "예금",
-          "tiền gửi"
-        ],
-        [
-          "적금",
-          "tiết kiệm gửi góp hằng tháng"
-        ],
-        [
-          "대출",
-          "khoản vay"
-        ],
-        [
-          "만기",
-          "đáo hạn"
-        ],
-        [
-          "현금 인출기",
-          "máy rút tiền ATM"
-        ]
-      ]
-    },
-    {
-      "group": "Ở quầy giao dịch",
-      "words": [
-        [
-          "창구",
-          "quầy giao dịch"
-        ],
-        [
-          "번호표",
-          "phiếu số thứ tự"
+          "도장",
+          "con dấu"
         ],
         [
           "신분증",
           "giấy tờ tùy thân"
         ],
         [
-          "도장",
-          "con dấu"
+          "계좌 번호",
+          "số tài khoản"
         ],
         [
-          "서명하다",
-          "ký tên"
+          "현금자동입출금기",
+          "máy rút/nộp tiền tự động (ATM)"
         ],
         [
-          "신청서",
-          "đơn đăng ký"
+          "입금",
+          "việc nộp tiền vào tài khoản"
         ],
         [
-          "작성하다",
-          "điền, viết (giấy tờ)"
+          "출금",
+          "việc rút tiền"
         ],
         [
-          "영업시간",
-          "giờ làm việc (giao dịch)"
+          "계좌 이체",
+          "chuyển khoản"
+        ],
+        [
+          "잔액 조회",
+          "tra số dư"
+        ],
+        [
+          "통장 정리",
+          "in cập nhật sổ tài khoản"
+        ]
+      ]
+    },
+    {
+      "group": "Nghiệp vụ ngân hàng",
+      "words": [
+        [
+          "예금하다",
+          "gửi tiền vào ngân hàng"
+        ],
+        [
+          "대출하다",
+          "vay tiền"
+        ],
+        [
+          "통장을 개설하다",
+          "mở sổ tài khoản"
+        ],
+        [
+          "적금을 들다",
+          "gửi tiết kiệm góp hằng tháng"
+        ],
+        [
+          "수수료를 내다",
+          "trả phí dịch vụ"
+        ],
+        [
+          "공과금을 내다",
+          "nộp tiền điện, nước…"
+        ],
+        [
+          "자동이체를 하다",
+          "cài đặt chuyển khoản tự động"
+        ],
+        [
+          "텔레뱅킹을 하다",
+          "giao dịch ngân hàng qua điện thoại"
+        ],
+        [
+          "인터넷뱅킹을 하다",
+          "giao dịch ngân hàng qua mạng"
+        ],
+        [
+          "동전을 교환하다",
+          "đổi tiền xu"
         ]
       ]
     },
@@ -145,44 +123,64 @@
       "group": "Từ mới khác",
       "words": [
         [
-          "저축하다",
-          "để dành, gửi tiết kiệm"
+          "가계부를 쓰다",
+          "ghi sổ thu chi gia đình"
         ],
         [
-          "지폐",
-          "tiền giấy"
+          "공과금",
+          "các khoản phí công ích (điện, nước, thuế…)"
         ],
         [
-          "잔돈",
-          "tiền lẻ"
+          "도둑맞다",
+          "bị trộm"
         ],
         [
-          "보이스피싱",
-          "lừa đảo qua điện thoại"
+          "분실",
+          "sự đánh mất"
         ],
         [
-          "개인 정보",
-          "thông tin cá nhân"
+          "분실신고",
+          "khai báo mất đồ"
         ],
         [
-          "유출되다",
-          "bị rò rỉ"
+          "뽑다",
+          "rút ra, lấy ra (số thứ tự)"
         ],
         [
-          "속다",
-          "bị lừa"
+          "수입",
+          "thu nhập"
         ],
         [
-          "피해",
-          "thiệt hại"
+          "신청서",
+          "đơn đăng ký"
         ],
         [
-          "급하다",
-          "gấp, vội"
+          "용돈 기입장",
+          "sổ ghi tiền tiêu vặt"
         ],
         [
-          "실수하다",
-          "nhầm lẫn, sơ suất"
+          "자동 납부",
+          "thanh toán tự động"
+        ],
+        [
+          "저금통",
+          "ống heo tiết kiệm"
+        ],
+        [
+          "절반",
+          "một nửa"
+        ],
+        [
+          "지로용지",
+          "giấy báo nộp tiền (hóa đơn)"
+        ],
+        [
+          "지출",
+          "khoản chi"
+        ],
+        [
+          "함부로",
+          "tùy tiện, bừa bãi"
         ]
       ]
     }
@@ -416,84 +414,84 @@
   ],
   "usage": [
     {
-      "q": "은행에 들어가면 먼저 ___를 뽑고 기다리세요.",
+      "q": "은행에 들어가면 먼저 번호표를 ___ 기다리세요.",
       "options": [
-        "번호표",
-        "잔액",
-        "이자",
-        "만기"
+        "뽑고",
+        "적고",
+        "내고",
+        "바꾸고"
       ],
       "explain": "Lấy số thứ tự → 번호표를 뽑다."
     },
     {
-      "q": "한국 돈을 베트남 돈으로 바꿀 때는 오늘 ___을 확인하세요.",
+      "q": "전기 요금 같은 ___은 자동이체를 하면 편해요.",
       "options": [
-        "환율",
+        "공과금",
+        "용돈",
+        "수표",
+        "저금통"
+      ],
+      "explain": "Tiền điện, nước… → 공과금."
+    },
+    {
+      "q": "지갑을 ___ 경찰서에 분실신고를 했어요.",
+      "options": [
+        "도둑맞아서",
+        "예금해서",
+        "개설해서",
+        "교환해서"
+      ],
+      "explain": "Bị trộm ví → báo mất: 도둑맞다."
+    },
+    {
+      "q": "이번 달은 ___보다 지출이 많아서 걱정이에요.",
+      "options": [
+        "수입",
+        "잔돈",
         "도장",
-        "창구",
-        "대출"
+        "지로용지"
       ],
-      "explain": "Đổi tiền → xem tỷ giá (환율)."
+      "explain": "Thu nhập ít hơn chi tiêu → 수입."
     },
     {
-      "q": "다른 은행으로 이체하면 ___가 500원 있어요.",
+      "q": "돈을 아끼려면 매일 ___ 쓰는 게 좋아요.",
       "options": [
-        "수수료",
-        "적금",
-        "지폐",
-        "신청서"
+        "가계부를",
+        "통장 정리를",
+        "신분증을",
+        "수수료를"
       ],
-      "explain": "Phí khi chuyển khoản → 수수료."
+      "explain": "Ghi chép chi tiêu hằng ngày → 가계부를 쓰다."
     },
     {
-      "q": "지갑을 잃어버려서 바로 카드를 ___.",
+      "q": "아이가 동전을 모아서 ___에 넣었어요.",
       "options": [
-        "정지했어요",
-        "입금했어요",
-        "저축했어요",
-        "개설했어요"
+        "저금통",
+        "현금자동입출금기",
+        "계좌 번호",
+        "도장"
       ],
-      "explain": "Mất ví → khóa thẻ ngay: 정지하다."
+      "explain": "Bỏ tiền xu vào ống heo → 저금통."
     },
     {
-      "q": "모르는 사람이 전화로 계좌 번호를 물어보면 ___일 수 있으니까 조심하세요.",
+      "q": "모르는 사람에게 계좌 번호를 ___ 알려 주지 마세요.",
       "options": [
-        "보이스피싱",
-        "인터넷 뱅킹",
-        "적금",
-        "체크카드"
+        "함부로",
+        "절반",
+        "자동",
+        "덜"
       ],
-      "explain": "Lừa đảo qua điện thoại → 보이스피싱."
+      "explain": "Đừng tùy tiện cho người lạ biết → 함부로."
     },
     {
-      "q": "이 ___는 3년 후에 만기가 돼요.",
+      "q": "월급의 ___은 적금에 넣고 나머지로 생활해요.",
       "options": [
-        "적금",
-        "번호표",
-        "도장",
-        "잔돈"
+        "절반",
+        "지출",
+        "분실",
+        "잔액 조회"
       ],
-      "explain": "Sổ tiết kiệm góp có ngày đáo hạn → 적금."
-    },
-    {
-      "q": "집을 사려고 은행에서 ___을 받았어요.",
-      "options": [
-        "대출",
-        "잔액",
-        "환율",
-        "서명"
-      ],
-      "explain": "Vay ngân hàng → 대출을 받다."
-    },
-    {
-      "q": "신청서를 다 쓰고 나서 맨 아래에 ___.",
-      "options": [
-        "서명해 주세요",
-        "분실해 주세요",
-        "출금해 주세요",
-        "유출해 주세요"
-      ],
-      "explain": "Ký tên cuối đơn → 서명하다."
+      "explain": "Một nửa lương → 절반."
     }
   ],
   "listening": [
