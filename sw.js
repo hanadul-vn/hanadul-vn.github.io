@@ -5,7 +5,7 @@
    - Dịch vụ ngoài khác (tài khoản Supabase, Google Analytics, form góp ý) đi thẳng, không lưu.
    Nút "Tải tất cả bài" ở #/ung-dung (assets/pwa.js) ghi thẳng vào DATA_CACHE. */
 'use strict';
-var VERSION = '2026-11-23a';
+var VERSION = '2026-11-24a';
 var CORE_CACHE = 'hd-core-' + VERSION;
 var DATA_CACHE = 'hd-data-v1';
 var FONT_CACHE = 'hd-fonts-v1';
@@ -47,7 +47,8 @@ self.addEventListener('fetch', function (e) {
   var url = new URL(req.url);
   if (url.origin === self.location.origin) {
     e.respondWith(fetch(req).then(function (res) {
-      if (res && res.ok && res.type === 'basic') {
+      // Chỉ lưu bản đầy đủ (200); phản hồi một phần (206, khi trình duyệt tua âm thanh) không lưu được.
+      if (res && res.status === 200 && res.type === 'basic') {
         var copy = res.clone();
         caches.open(cacheFor(url)).then(function (c) { c.put(req, copy); });
       }

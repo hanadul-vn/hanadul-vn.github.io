@@ -1,0 +1,55 @@
+name: Tạo âm thanh đề Nghe
+
+# Chạy tay: tab Actions → "Tạo âm thanh đề Nghe" → Run workflow.
+# Dùng Google Cloud Text-to-Speech (giọng Chirp 3 HD), key trong Secret GOOGLE_TTS_API_KEY.
+# Kết quả được đẩy lên nhánh ghi ở ô "branch" (không đẩy thẳng vào main), sau đó mở PR từ nhánh đó.
+on:
+  workflow_dispatch:
+    inputs:
+      exams:
+        description: 'Mã đề, cách nhau dấu phẩy (all = mọi đề Nghe)'
+        default: 'all'
+      force:
+        description: 'Đọc lại cả file đã có'
+        type: boolean
+        default: false
+      rate:
+        description: 'Tốc độ đọc (1.0 = bình thường)'
+        default: '1.0'
+      branch:
+        description: 'Nhánh nhận file âm thanh'
+        default: 'tts-audio'
+
+permissions:
+  contents: write
+
+jobs:
+  tts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Cài ffmpeg
+        run: command -v ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+      - name: Tạo âm thanh
+        env:
+          GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+          EXAMS: ${{ inputs.exams }}
+          FORCE: ${{ inputs.force }}
+          TTS_RATE: ${{ inputs.rate }}
+        run: python3 tools/tts/gen_audio.py --exams "$EXAMS" $([ "$FORCE" = "true" ] && echo --force)
+      - name: Kiểm tra dữ liệu
+        run: python3 tools/check_data.py
+      - name: Đẩy lên nhánh
+        env:
+          BRANCH: ${{ inputs.branch }}
+        run: |
+          case "$BRANCH" in main|"") echo "Không đẩy thẳng vào main"; exit 1;; esac
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$BRANCH"
+          git add data/audio data/exams
+          if git diff --cached --quiet; then echo "Không có gì mới"; exit 0; fi
+          git commit -m "Âm thanh đề Nghe (Google TTS Chirp 3 HD)"
+          # Chạy trên chính nhánh đó thì đẩy thường; chạy từ nhánh khác thì ghi đè nhánh nhận.
+          if [ "$BRANCH" = "$GITHUB_REF_NAME" ]; then git push origin "$BRANCH"; else git push -f origin "$BRANCH"; fi
+          echo "Đã đẩy lên nhánh $BRANCH"

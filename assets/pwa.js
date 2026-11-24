@@ -78,7 +78,14 @@
       var urls = ['data/index.json', 'data/placement.json', 'data/exams/index.json'];
       L.allLessons(r[0]).forEach(function (x) { urls.push('data/lessons/' + x.lesson.id + '.json'); });
       (r[1].exams || []).forEach(function (e) { urls.push('data/exams/' + e.id + '.json'); });
-      return { urls: urls, lessons: L.allLessons(r[0]).length };
+      // Đề Nghe có âm thanh thu sẵn: tải luôn file âm thanh để làm đề khi không có mạng.
+      var nghe = (r[1].exams || []).filter(function (e) { return e.part === 'nghe'; });
+      return Promise.all(nghe.map(function (e) {
+        return L.loadJSON('data/exams/' + e.id + '.json').then(function (ex) {
+          var au = ex.audio;
+          if (au && au.dir) (au.files || []).concat(au.sample ? [au.sample] : []).forEach(function (f) { urls.push(au.dir + '/' + f); });
+        }, function () { /* tải đề lỗi thì bỏ qua âm thanh */ });
+      })).then(function () { return { urls: urls, lessons: L.allLessons(r[0]).length }; });
     });
   }
   function countCached(urls) {
