@@ -273,7 +273,7 @@
       "icon": "🌳",
       "prefix": true,
       "subtitle": "Ngữ pháp trung cấp, làm quen dạng đề TOPIK II",
-      "status": "Đang mở 9 bài",
+      "status": "Đang mở 12 bài",
       "lessons": [
         {
           "id": "tc3-01",
@@ -346,6 +346,30 @@
           "ko": "이사",
           "summary": "-(으)ㄹ 줄 알다/모르다 · -기 바라다 · N에 비해서 · 아무 N(이)나",
           "icon": "📦"
+        },
+        {
+          "id": "tc3-13",
+          "no": "13",
+          "title": "Ước mơ, hy vọng",
+          "ko": "희망",
+          "summary": "-아/어 가다 · -아/어 오다 · -아/어야겠다 · -았/었으면 좋겠다",
+          "icon": "🌟"
+        },
+        {
+          "id": "tc3-14",
+          "no": "14",
+          "title": "Phim ảnh và phim truyền hình",
+          "ko": "영화와 드라마",
+          "summary": "(아무리) -아/어도 · -거든(요) · -던데(요)",
+          "icon": "🎬"
+        },
+        {
+          "id": "tc3-15",
+          "no": "15",
+          "title": "Phép lịch sự và quy tắc",
+          "ko": "예절과 규칙",
+          "summary": "N대로 · -(으)ㄴ/는 대로 · -지 않으면 안 되다 · -(으)려던 참이다",
+          "icon": "🙇"
         }
       ]
     }
