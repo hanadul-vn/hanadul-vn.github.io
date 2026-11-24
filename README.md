@@ -95,6 +95,13 @@ Không bắt buộc. Bật bằng `supabaseUrl` + `supabaseKey` (khóa công kha
 - `assets/share.js`: ảnh 1080×1080 vẽ bằng canvas trên máy người học (kết quả bài, Ôn hôm nay, đề thi thử, huy hiệu, trang chứng nhận). Điện thoại có Web Share thì chia sẻ thẳng sang Facebook/Zalo; máy tính tải ảnh về.
 - Cả ba đồng bộ theo tài khoản qua `assets/merge.js`; không cần đổi SQL.
 
+## Xếp lớp, thẻ từ, chính tả, đề Nghe, cài app
+
+- `assets/placement.js` (`#/xep-lop`, `#/xep-lop/ket-qua`): kiểm tra xếp lớp. Dữ liệu `data/placement.json`: `pass` (số câu đúng để lên phần sau) và `blocks` theo cấp (`sc1` → `sc2` → `tc3` → `topik`), mỗi câu có `l` (mã bài dạy kiến thức đó, hoặc `"topik"`), `q`, `options` (đáp án đúng đứng đầu), `explain`, tùy chọn `passage`. Phần nào đúng dưới `pass` thì dừng, gợi ý cấp đó từ bài sớm nhất có câu sai; qua hết thì gợi ý Trung cấp + đề thi thử. Không cộng XP, không ghi Sổ câu sai. Kết quả lưu `placement` (`level`, `lesson`, `at`, `score`, `weak`) và nút "Bắt đầu học" ở trang chủ đi thẳng tới bài được gợi ý. Thêm cấp mới: thêm phần vào `blocks` (giữ thứ tự dễ → khó).
+- `assets/cards.js`: mỗi bài có thêm chế độ **🃏 Thẻ từ** (`#/bai/<id>/the-tu`, lật thẻ, Đã nhớ / Chưa nhớ, chọn mặt trước Hàn→Việt hoặc Việt→Hàn) và **🎧 Chính tả** (`#/bai/<id>/chinh-ta`, máy đọc 10 từ, người học gõ lại; so khớp bỏ qua dấu cách, dấu câu, phần trong ngoặc, chấp nhận chữ đem đọc ở phần tử thứ 3 của từ). Học xong cộng XP, giữ chuỗi ngày và đưa từ của bài vào Ôn hôm nay. Không cần thêm dữ liệu.
+- Đề thi thử **Nghe** (`"part": "nghe"` trong `data/exams/`): mỗi bộ câu có `lines` (`[người nói, câu]`, người nói `남자`/`여자` thì đọc giọng trầm/cao, máy có nhiều giọng tiếng Hàn thì chọn giọng nam/nữ) và `linesVi`; `plays` = số lần nghe tối đa mỗi đoạn khi làm bài (mặc định 2; số lượt đã nghe lưu trong bài đang làm). Âm thanh là giọng đọc có sẵn của trình duyệt (Web Speech API): miễn phí, không cần file âm thanh, nhưng giọng máy, tốc độ đều, không có tiếng động như đề thật; máy chưa cài giọng tiếng Hàn thì đọc sai giọng (trang giới thiệu đề có nút Nghe thử và báo khi thiếu giọng). Đề 1 rút gọn 30 câu / 35 phút, không có câu chọn tranh.
+- Cài app (PWA): `manifest.webmanifest`, biểu tượng `assets/icon-*.png`, `sw.js` (service worker ở thư mục gốc) và `assets/pwa.js` (đăng ký, nút Cài app khi trình duyệt cho phép, trang `#/ung-dung`). Cùng tên miền luôn lấy bản mới qua mạng trước, mất mạng mới dùng bản đã lưu, nên cập nhật web không bị kẹt bản cũ. Bài đã mở tự được lưu; nút "Tải tất cả bài" ở `#/ung-dung` lưu toàn bộ `data/` (~1–2 MB). File mới mà trang chủ cần thì thêm vào `CORE` trong `sw.js` và đổi `VERSION`. Kiểm thử tự động (`navigator.webdriver`) không đăng ký service worker trừ khi trang đặt `window.__HD_SW_TEST = true` (test cũ chặn request qua Playwright, service worker sẽ đi vòng qua).
+
 ## Kiểm thử
 
 ```bash
@@ -105,6 +112,7 @@ node tests/e2e_regression.js                   # hồi quy phần học, làm b�
 node tests/e2e_contact.js                      # GA4 + form đăng ký/cảm nhận
 node tests/e2e_exam.js                         # đề thi thử (đồng hồ giả lập, không phải chờ 70 phút)
 node tests/e2e_review.js                       # Ôn hôm nay, huy hiệu, ảnh chia sẻ
+node tests/e2e_dot_d.js                        # xếp lớp, thẻ từ, chính tả, đề Nghe, cài app + offline
 ```
 
 Các test Playwright giả lập Google Analytics và Formspree (`tests/stub_third_party.js`), nên không gửi số liệu hay email thật.

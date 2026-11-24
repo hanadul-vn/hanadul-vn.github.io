@@ -154,14 +154,26 @@
 
   // Cho assets/exam.js (đề thi thử) dùng chung.
   HD.lib = { esc: esc, ko: ko, koq: koq, loadJSON: loadJSON, readStore: readStore, writeStore: writeStore, renderStats: renderStats, today: today, toast: toast, streakOf: streakOf,
-    shuffle: shuffle, getIndex: getIndex, allLessons: allLessons, fullName: fullName, runQuiz: function (o) { return runQuiz(o); } };
+    shuffle: shuffle, getIndex: getIndex, allLessons: allLessons, fullName: fullName, runQuiz: function (o) { return runQuiz(o); },
+    findLesson: findLesson, lessonName: lessonName, lessonHero: function (d, f) { return lessonHero(d, f); }, seg: function (id, cur) { return seg(id, cur); },
+    speak: function (t, r) { return speak(t, r); }, speakLines: function (l, r) { return speakLines(l, r); }, speakBtn: function (t) { return speakBtn(t); },
+    starsHtml: starsHtml, fail: function (e) { return fail(e); } };
   HD.setCleanup = function (fn) { cleanup = fn; };
 
   // ---------- speech ----------
-  var koVoice = null;
+  var koVoice = null, koVoices = [];
   function pickVoice() {
     if (!('speechSynthesis' in window)) return;
-    koVoice = speechSynthesis.getVoices().filter(function (v) { return /^ko/i.test(v.lang); })[0] || null;
+    koVoices = speechSynthesis.getVoices().filter(function (v) { return /^ko/i.test(v.lang); });
+    koVoice = koVoices[0] || null;
+  }
+  // Giọng nam/nữ cho hội thoại: máy có nhiều giọng tiếng Hàn thì chọn theo tên, không thì đổi cao độ.
+  var MALE_VOICE = /injoon|hyunsu|bongjin|gookmin|seoyeon-m|male|남/i;
+  function voiceFor(female) {
+    if (koVoices.length < 2) return null;
+    var m = koVoices.filter(function (v) { return MALE_VOICE.test(v.name); });
+    var f = koVoices.filter(function (v) { return !MALE_VOICE.test(v.name); });
+    return (female ? f[0] : m[0]) || null;
   }
   if ('speechSynthesis' in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
   var warnedVoice = false;
@@ -185,8 +197,11 @@
       if (who.indexOf(l[0]) < 0) who.push(l[0]);
       var u = new SpeechSynthesisUtterance(l[1]);
       u.lang = 'ko-KR'; u.rate = rate || 0.9;
-      u.pitch = who.indexOf(l[0]) % 2 ? 1.35 : 0.85;
-      if (koVoice) u.voice = koVoice;
+      // Người nói ghi rõ 남자/여자 (đề Nghe) thì theo giới tính, còn lại xen kẽ theo thứ tự xuất hiện.
+      var female = /여자|여$|^W$/.test(l[0]) ? true : /남자|남$|^M$/.test(l[0]) ? false : who.indexOf(l[0]) % 2 === 1;
+      var v = voiceFor(female);
+      u.pitch = v ? 1 : female ? 1.35 : 0.85;
+      if (v || koVoice) u.voice = v || koVoice;
       speechSynthesis.speak(u);
     });
   }
@@ -220,6 +235,8 @@
     if (parts[0] === 'huy-hieu' && HD.renderBadges) return HD.renderBadges(app);
     if (parts[0] === 'thi-thu' && HD.renderExam) return HD.renderExam(app, parts.slice(1));
     if (parts[0] === 'xep-hang' && HD.renderRank) return HD.renderRank(app);
+    if (parts[0] === 'xep-lop' && HD.renderPlacement) return HD.renderPlacement(app, parts.slice(1));
+    if (parts[0] === 'ung-dung' && HD.renderAppPage) return HD.renderAppPage(app);
     return renderHome(/^lo-trinh/.test(parts[0]) ? parts[0] : null);
   }
   window.addEventListener('hashchange', function () { route(); });
@@ -295,7 +312,10 @@
   // Tên kèm cấp độ (từ Sơ cấp 2 trở đi) để không nhầm "Bài 1" của hai cấp.
   function fullName(x) { return x.level && x.level.prefix ? x.level.name + ' · ' + lessonName(x.lesson) : lessonName(x.lesson); }
   function fail(err) {
-    app.innerHTML = '<div class="container narrow" style="padding:40px 16px"><h1>Không tải được nội dung</h1><p class="muted">' + esc(err.message || err) + '</p><p><a href="#/">Về trang chủ</a></p></div>';
+    var off = navigator.onLine === false;
+    app.innerHTML = '<div class="container narrow" style="padding:40px 16px"><h1>' + (off ? '📴 Đang không có mạng' : 'Không tải được nội dung') + '</h1><p class="muted">' +
+      (off ? 'Phần này chưa được lưu trên máy. Có mạng lại thì mở lại; muốn học offline, vào <a href="#/ung-dung">Cài app, học offline</a> để tải hết bài về máy.' : esc(err.message || err)) +
+      '</p><p><a href="#/">Về trang chủ</a></p></div>';
   }
 
   // ---------- home ----------
@@ -304,7 +324,11 @@
     getIndex().then(function (idx) {
       var s = readStore();
       var all = allLessons(idx);
-      var nextUp = all.filter(function (x) { return !(s.lessons[x.lesson.id] && s.lessons[x.lesson.id].best >= 70); })[0] || all[all.length - 1];
+      var todo = all.filter(function (x) { return !(s.lessons[x.lesson.id] && s.lessons[x.lesson.id].best >= 70); });
+      // Đã làm bài xếp lớp: bắt đầu từ bài được gợi ý (bỏ qua các bài trước đó chưa làm).
+      var pl = s.placement && s.placement.lesson;
+      var pi = pl ? all.map(function (x) { return x.lesson.id; }).indexOf(pl) : -1;
+      var nextUp = (pi >= 0 && todo.filter(function (x) { return all.indexOf(x) >= pi; })[0]) || todo[0] || all[all.length - 1];
       var lastId = s.last && all.filter(function (x) { return x.lesson.id === s.last; })[0];
       var startHref = '#/bai/' + nextUp.lesson.id;
 
@@ -330,6 +354,7 @@
           '<span><span class="label">Bài gần nhất' + (lp ? ' · đúng ' + lp.best + '%' : '') + '</span><br><span class="title">' + esc(fullName(lastId)) + '</span></span><span class="go">→</span></a>';
       }
 
+      if (HD.placementHomeCard) h += HD.placementHomeCard(s);
       if (HD.reviewHomeCard) h += HD.reviewHomeCard(s);
       var nw = wrongCount(s);
       if (nw) {
@@ -340,6 +365,7 @@
       if (HD.examHomeCard) h += HD.examHomeCard(s);
       if (HD.rankHomeCard) h += HD.rankHomeCard();
       if (HD.badgeHomeCard) h += HD.badgeHomeCard(s);
+      if (HD.pwaHomeCard) h += HD.pwaHomeCard();
 
       var tabs = idx.levels.length > 1;
       // Mặc định tab cấp đầu (Sơ cấp 1); link #lo-trinh-<cấp> mở đúng tab.
@@ -398,6 +424,7 @@
       var found = findLesson(res[0], id);
       var data = res[1];
       if (tab === 'lam-bai') return renderQuizStart(data, found);
+      if ((tab === 'the-tu' || tab === 'chinh-ta') && HD.renderCards) return HD.renderCards(app, data, found, tab);
       renderStudy(data, found);
     }).catch(fail);
   }
@@ -420,7 +447,9 @@
   }
   function seg(id, cur) {
     return '<nav class="seg" aria-label="Chế độ"><a href="#/bai/' + esc(id) + '"' + (cur === 'hoc' ? ' aria-current="page"' : '') + '>📖 Học</a>' +
-      '<a href="#/bai/' + esc(id) + '/lam-bai"' + (cur === 'lam-bai' ? ' aria-current="page"' : '') + '>✏️ Làm bài</a></nav>';
+      '<a href="#/bai/' + esc(id) + '/lam-bai"' + (cur === 'lam-bai' ? ' aria-current="page"' : '') + '>✏️ Làm bài</a>' +
+      (HD.renderCards ? '<a href="#/bai/' + esc(id) + '/the-tu"' + (cur === 'the-tu' ? ' aria-current="page"' : '') + '>🃏 Thẻ từ</a>' +
+        '<a href="#/bai/' + esc(id) + '/chinh-ta"' + (cur === 'chinh-ta' ? ' aria-current="page"' : '') + '>🎧 Chính tả</a>' : '') + '</nav>';
   }
 
   function renderStudy(data, found) {

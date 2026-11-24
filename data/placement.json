@@ -1,0 +1,300 @@
+{
+ "pass": 4,
+ "note": "Bài kiểm tra xếp lớp tự soạn: 4 phần, mỗi phần 6 câu. Đạt từ 4/6 câu thì lên phần tiếp theo.",
+ "blocks": [
+  {
+   "level": "sc1",
+   "name": "Sơ cấp 1",
+   "sub": "Chữ Hangeul, câu đơn giản",
+   "questions": [
+    {
+     "l": "sc1-00",
+     "q": "Chữ 한국 đọc là gì?",
+     "options": [
+      "han-guk",
+      "han-gul",
+      "ham-guk",
+      "hang-jung"
+     ],
+     "explain": "한 = han, 국 = guk (ㄱ cuối đọc như “k”). 한국 = Hàn Quốc."
+    },
+    {
+     "l": "sc1-01",
+     "q": "저는 베트남 사람(    ).",
+     "options": [
+      "입니다",
+      "에서",
+      "을",
+      "와"
+     ],
+     "explain": "N입니다 = là N. “Tôi là người Việt Nam.”"
+    },
+    {
+     "l": "sc1-03",
+     "q": "도서관(    ) 책을 읽습니다.",
+     "options": [
+      "에서",
+      "을",
+      "와",
+      "도"
+     ],
+     "explain": "N에서 chỉ nơi diễn ra hành động: đọc sách Ở thư viện."
+    },
+    {
+     "l": "sc1-06",
+     "q": "어제 친구를 (    ).",
+     "options": [
+      "만났어요",
+      "만날 거예요",
+      "만나세요",
+      "만납시다"
+     ],
+     "explain": "어제 (hôm qua) → thì quá khứ -았/었어요."
+    },
+    {
+     "l": "sc1-07",
+     "q": "“Tôi muốn đi Hàn Quốc.” là câu nào?",
+     "options": [
+      "한국에 가고 싶어요.",
+      "한국에 가지 않아요.",
+      "한국에서 갔어요.",
+      "한국에 갈까요?"
+     ],
+     "explain": "-고 싶다 = muốn làm gì; đi tới nơi nào dùng N에 가다."
+    },
+    {
+     "l": "sc1-13",
+     "q": "배가 (    ) 밥을 먹었어요.",
+     "options": [
+      "고파서",
+      "고프지만",
+      "고플까요",
+      "고프러"
+     ],
+     "explain": "-아/어서 chỉ lý do: Vì đói bụng nên đã ăn cơm."
+    }
+   ]
+  },
+  {
+   "level": "sc2",
+   "name": "Sơ cấp 2",
+   "sub": "Nối câu, định ngữ, kinh nghiệm",
+   "questions": [
+    {
+     "l": "sc2-02",
+     "q": "비가 (    ) 우산을 가져가세요.",
+     "options": [
+      "오니까",
+      "오지만",
+      "오려고",
+      "오거나"
+     ],
+     "explain": "-(으)니까 chỉ lý do, đi được với câu mệnh lệnh -(으)세요: Vì trời mưa nên hãy mang ô."
+    },
+    {
+     "l": "sc2-04",
+     "q": "이것은 어제 백화점에서 (    ) 옷이에요.",
+     "options": [
+      "산",
+      "사는",
+      "살",
+      "사고"
+     ],
+     "explain": "Động từ + -(으)ㄴ bổ nghĩa cho danh từ ở quá khứ: cái áo (đã) mua hôm qua."
+    },
+    {
+     "l": "sc2-05",
+     "q": "시간이 (    ) 같이 영화를 봐요.",
+     "options": [
+      "있으면",
+      "있어서",
+      "있지만",
+      "있거나"
+     ],
+     "explain": "-(으)면 = nếu: Nếu có thời gian thì cùng xem phim nhé."
+    },
+    {
+     "l": "sc2-08",
+     "q": "“Bạn hãy thử ăn món này một lần.” là câu nào?",
+     "options": [
+      "이 음식을 한번 먹어 보세요.",
+      "이 음식을 먹지 마세요.",
+      "이 음식을 먹어 주세요.",
+      "이 음식을 먹기 전에 오세요."
+     ],
+     "explain": "-아/어 보다 = thử làm; -아/어 보세요 = hãy thử."
+    },
+    {
+     "l": "sc2-11",
+     "q": "저는 제주도에 (    ) 적이 있어요.",
+     "options": [
+      "가 본",
+      "가는",
+      "갈",
+      "가고"
+     ],
+     "explain": "-(으)ㄴ 적이 있다 = đã từng. 가 본 적이 있다 = đã từng đi (thử)."
+    },
+    {
+     "l": "sc2-10",
+     "q": "Câu nào đúng với nội dung?",
+     "options": [
+      "Dạo này thời tiết đã trở nên lạnh.",
+      "Dạo này thời tiết vẫn nóng.",
+      "Thời tiết sẽ lạnh từ tuần sau.",
+      "Hôm qua lạnh nhưng hôm nay ấm."
+     ],
+     "explain": "추워졌어요 = 춥다 + -아/어지다 (trở nên) + quá khứ: đã trở nên lạnh.",
+     "passage": "요즘 날씨가 많이 추워졌어요. 따뜻한 옷을 입으세요."
+    }
+   ]
+  },
+  {
+   "level": "tc3",
+   "name": "Trung cấp 3",
+   "sub": "Ngữ pháp trung cấp thường gặp",
+   "questions": [
+    {
+     "l": "tc3-01",
+     "q": "회사가 집에서 멀어서 매일 지하철을 타게 (    ).",
+     "options": [
+      "됐어요",
+      "했어요",
+      "봤어요",
+      "줬어요"
+     ],
+     "explain": "-게 되다 = rốt cuộc thành ra, được/bị đưa đến chỗ phải làm: vì công ty xa nhà nên thành ra ngày nào cũng đi tàu điện."
+    },
+    {
+     "l": "tc3-02",
+     "q": "친구가 도와준 (    ) 일을 빨리 끝냈어요.",
+     "options": [
+      "덕분에",
+      "대신에",
+      "동안에",
+      "바람에"
+     ],
+     "explain": "-(으)ㄴ 덕분에 = nhờ (kết quả tốt). -는 바람에 dùng cho kết quả xấu, 대신에 = thay vì, 동안에 = trong lúc."
+    },
+    {
+     "l": "tc3-03",
+     "q": "얼굴이 많이 (    ). 무슨 일 있어요?",
+     "options": [
+      "피곤해 보여요",
+      "피곤하려고 해요",
+      "피곤해도 돼요",
+      "피곤하기로 했어요"
+     ],
+     "explain": "A -아/어 보이다 = trông có vẻ: Trông bạn mệt lắm, có chuyện gì à?"
+    },
+    {
+     "l": "tc3-06",
+     "q": "제가 (    ) 고양이 좀 돌봐 주세요.",
+     "options": [
+      "여행하는 동안",
+      "여행한 덕분에",
+      "여행하는 바람에",
+      "여행하기 쉽게"
+     ],
+     "explain": "V -는 동안 = trong khi/trong thời gian: Trong lúc tôi đi du lịch, nhờ bạn trông giúp con mèo."
+    },
+    {
+     "l": "tc3-08",
+     "q": "늦잠을 (    ) 수업에 늦었어요.",
+     "options": [
+      "자는 바람에",
+      "자기 위해서",
+      "자도록",
+      "자는 대신에"
+     ],
+     "explain": "V -는 바람에 = vì (sự việc bất ngờ) nên kết quả không tốt: Vì ngủ quên nên đến lớp muộn."
+    },
+    {
+     "l": "tc3-07",
+     "q": "제 동생은 성격이 __조용한 편이에요__.",
+     "options": [
+      "대체로 조용해요",
+      "전혀 조용하지 않아요",
+      "조용해지려고 해요",
+      "조용할 줄 알았어요"
+     ],
+     "explain": "-(으)ㄴ 편이다 = thuộc loại, nhìn chung là: em tôi nhìn chung là trầm tính."
+    }
+   ]
+  },
+  {
+   "level": "topik",
+   "name": "TOPIK II",
+   "sub": "Ngữ pháp, đọc hiểu mức TOPIK II cấp 3–4",
+   "questions": [
+    {
+     "l": "topik",
+     "q": "열심히 준비한 (    ) 좋은 결과가 나올 거예요.",
+     "options": [
+      "만큼",
+      "채로",
+      "김에",
+      "대로"
+     ],
+     "explain": "-(으)ㄴ 만큼 = tương xứng với: Đã chuẩn bị chăm chỉ bao nhiêu thì kết quả sẽ tốt bấy nhiêu."
+    },
+    {
+     "l": "topik",
+     "q": "그 식당은 음식이 맛있을 (    ) 가격도 싸요.",
+     "options": [
+      "뿐만 아니라",
+      "지라도",
+      "텐데",
+      "까 봐"
+     ],
+     "explain": "-(으)ㄹ 뿐만 아니라 = không những… mà còn: Quán đó không những ngon mà giá còn rẻ."
+    },
+    {
+     "l": "topik",
+     "q": "누구나 처음에는 실수하기 (    ).",
+     "options": [
+      "마련이에요",
+      "위해서예요",
+      "때문이에요",
+      "전이에요"
+     ],
+     "explain": "-기 마련이다 = đương nhiên sẽ, ai cũng vậy: Ai lúc đầu cũng có lúc mắc lỗi."
+    },
+    {
+     "l": "topik",
+     "q": "__일찍 출발했더라면__ 늦지 않았을 텐데.",
+     "options": [
+      "일찍 출발했으면",
+      "일찍 출발해서",
+      "일찍 출발하느라고",
+      "일찍 출발하자마자"
+     ],
+     "explain": "-았/었더라면 = giá mà đã… (giả định trái với quá khứ), gần nghĩa -았/었으면."
+    },
+    {
+     "l": "topik",
+     "q": "비가 (    ) 등산을 갔어요.",
+     "options": [
+      "오는데도",
+      "오는 김에",
+      "오는 대로",
+      "오는 만큼"
+     ],
+     "explain": "-는데도 = mặc dù… vẫn: Dù trời mưa vẫn đi leo núi."
+    },
+    {
+     "l": "topik",
+     "q": "Ý chính của đoạn văn là gì?",
+     "options": [
+      "Nên tập thể dục đều đặn mỗi ngày một ít.",
+      "Nên tập thật nhiều trong một lần.",
+      "Tập thể dục làm người ta dễ mệt.",
+      "Vì sức khỏe nên bỏ tập thể dục."
+     ],
+     "explain": "Đoạn văn nói tập một ít mà đều đặn tốt hơn tập dồn một lần, vì quá sức thì dễ mệt rồi bỏ cuộc.",
+     "passage": "운동은 한꺼번에 많이 하는 것보다 매일 조금씩 꾸준히 하는 것이 건강에 더 도움이 된다. 처음부터 무리하면 쉽게 지치고 포기하게 되기 때문이다."
+    }
+   ]
+  }
+ ]
+}

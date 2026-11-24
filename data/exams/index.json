@@ -19,6 +19,15 @@
    "level": "TOPIK II · Đọc"
   },
   {
+   "id": "nghe-01",
+   "title": "Đề thi thử Nghe số 1",
+   "part": "nghe",
+   "icon": "🎧",
+   "minutes": 35,
+   "count": 30,
+   "level": "TOPIK II · Nghe (rút gọn)"
+  },
+  {
    "id": "viet-01",
    "title": "Đề thi thử Viết số 1",
    "part": "viet",

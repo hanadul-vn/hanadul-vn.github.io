@@ -32,7 +32,8 @@
       exams: obj(s.exams),
       srs: obj(s.srs),
       srsLog: obj(s.srsLog),
-      badges: obj(s.badges)
+      badges: obj(s.badges),
+      placement: obj(s.placement)
     };
   }
 
@@ -155,7 +156,8 @@
       exams: mergeExams(a.exams, b.exams),
       srs: mergeSrs(a.srs, b.srs),
       srsLog: mergeMax(a.srsLog, b.srsLog),
-      badges: mergeBadges(a.badges, b.badges)
+      badges: mergeBadges(a.badges, b.badges),
+      placement: num(a.placement.at) >= num(b.placement.at) ? a.placement : b.placement
     };
   }
 

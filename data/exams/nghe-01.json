@@ -1,0 +1,820 @@
+{
+ "id": "nghe-01",
+ "title": "Đề thi thử Nghe số 1",
+ "part": "nghe",
+ "minutes": 35,
+ "plays": 2,
+ "note": "Đề tự soạn theo các dạng câu phần Nghe TOPIK II, rút gọn còn 30 câu / 35 phút (đề thật 50 câu / 60 phút), không có câu chọn tranh. Không phải đề thi chính thức. Âm thanh là giọng đọc máy của trình duyệt.",
+ "sets": [
+  {
+   "instruction": "다음을 듣고 이어질 수 있는 말로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Nghe và chọn câu nói tiếp theo phù hợp nhất.",
+   "lines": [
+    [
+     "남자",
+     "이번 주말에 같이 등산 갈래요?"
+    ],
+    [
+     "여자",
+     "좋아요. 그런데 몇 시에 만날까요?"
+    ]
+   ],
+   "linesVi": "Nam: Cuối tuần này đi leo núi cùng nhau không? — Nữ: Được đấy. Nhưng mấy giờ mình gặp nhau?",
+   "questions": [
+    {
+     "n": 1,
+     "options": [
+      "아침 일곱 시에 학교 앞에서 만나요.",
+      "등산을 자주 가는 편이에요.",
+      "지난 주말에 산에 다녀왔어요.",
+      "날씨가 좋아서 다행이에요."
+     ],
+     "answer": 0,
+     "explain": "Người nữ hỏi giờ hẹn nên câu tiếp theo phải trả lời thời gian, địa điểm gặp: 7 giờ sáng trước cổng trường."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 이어질 수 있는 말로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Nghe và chọn câu nói tiếp theo phù hợp nhất.",
+   "lines": [
+    [
+     "여자",
+     "그 책 다 읽었어요?"
+    ],
+    [
+     "남자",
+     "아니요, 아직 반밖에 못 읽었어요."
+    ]
+   ],
+   "linesVi": "Nữ: Anh đọc xong cuốn sách đó chưa? — Nam: Chưa, mới đọc được có một nửa thôi.",
+   "questions": [
+    {
+     "n": 2,
+     "options": [
+      "그 책은 서점에서 샀어요.",
+      "벌써 다 읽었군요.",
+      "책을 읽는 게 좋아요.",
+      "그럼 다 읽고 나서 빌려 주세요."
+     ],
+     "answer": 3,
+     "explain": "Người nam chưa đọc xong (반밖에 = mới được một nửa) nên người nữ hẹn: đọc xong rồi cho mượn. “벌써 다 읽었군요” trái với nội dung."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 이어질 수 있는 말로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Nghe và chọn câu nói tiếp theo phù hợp nhất.",
+   "lines": [
+    [
+     "남자",
+     "손님, 이 신발 한번 신어 보시겠어요?"
+    ],
+    [
+     "여자",
+     "네, 그런데 조금 작은 것 같아요."
+    ]
+   ],
+   "linesVi": "Nam: Quý khách mang thử đôi giày này xem ạ? — Nữ: Vâng, nhưng hình như hơi chật.",
+   "questions": [
+    {
+     "n": 3,
+     "options": [
+      "신발이 정말 예쁘네요.",
+      "이 신발은 어제 샀어요.",
+      "그럼 한 치수 큰 걸로 갖다 드릴게요.",
+      "작은 신발은 없어요?"
+     ],
+     "answer": 2,
+     "explain": "Khách nói giày hơi nhỏ, người bán sẽ đề nghị mang cỡ lớn hơn (-아/어 드릴게요: tôi sẽ làm giúp)."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 이어질 수 있는 말로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Nghe và chọn câu nói tiếp theo phù hợp nhất.",
+   "lines": [
+    [
+     "여자",
+     "회의 자료 준비 다 됐어요?"
+    ],
+    [
+     "남자",
+     "거의 다 했는데 복사만 하면 돼요."
+    ]
+   ],
+   "linesVi": "Nữ: Tài liệu họp chuẩn bị xong hết chưa? — Nam: Gần xong rồi, chỉ còn photo nữa thôi.",
+   "questions": [
+    {
+     "n": 4,
+     "options": [
+      "회의가 벌써 끝났어요.",
+      "그럼 복사는 제가 할게요.",
+      "자료를 아직 시작 안 했군요.",
+      "복사기를 새로 샀어요."
+     ],
+     "answer": 1,
+     "explain": "Chỉ còn việc photo (복사만 하면 되다) nên người nữ đề nghị giúp phần photo. “아직 시작 안 했군요” sai vì đã gần xong."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 이어질 수 있는 말로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Nghe và chọn câu nói tiếp theo phù hợp nhất.",
+   "lines": [
+    [
+     "남자",
+     "요즘 왜 이렇게 피곤해 보여요?"
+    ],
+    [
+     "여자",
+     "시험 때문에 매일 늦게 자서 그래요."
+    ]
+   ],
+   "linesVi": "Nam: Dạo này sao trông em mệt thế? — Nữ: Vì thi cử nên ngày nào cũng ngủ muộn.",
+   "questions": [
+    {
+     "n": 5,
+     "options": [
+      "시험이 끝나면 푹 쉬세요.",
+      "저는 시험을 잘 봤어요.",
+      "일찍 자서 피곤하지 않아요.",
+      "시험이 언제 시작했어요?"
+     ],
+     "answer": 0,
+     "explain": "Người nữ mệt vì ôn thi, câu đáp hợp lý là lời khuyên: thi xong thì nghỉ ngơi cho khỏe."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 여자가 이어서 할 행동으로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Nghe và chọn việc người phụ nữ sẽ làm tiếp theo.",
+   "lines": [
+    [
+     "남자",
+     "수미 씨, 내일 발표 자료 확인했어요?"
+    ],
+    [
+     "여자",
+     "아직이요. 지금 바로 볼게요."
+    ],
+    [
+     "남자",
+     "그리고 발표 끝나고 손님들께 드릴 음료수도 좀 주문해 주세요."
+    ],
+    [
+     "여자",
+     "네, 자료부터 확인하고 주문할게요."
+    ]
+   ],
+   "linesVi": "Nam: Sumi, cô kiểm tra tài liệu thuyết trình ngày mai chưa? — Nữ: Chưa ạ, tôi xem ngay đây. — Nam: Và đặt giúp nước uống mời khách sau buổi thuyết trình nhé. — Nữ: Vâng, tôi kiểm tra tài liệu trước rồi đặt.",
+   "questions": [
+    {
+     "n": 6,
+     "options": [
+      "음료수를 주문한다.",
+      "발표를 한다.",
+      "손님에게 전화한다.",
+      "발표 자료를 확인한다."
+     ],
+     "answer": 3,
+     "explain": "“자료부터 확인하고 주문할게요”: việc làm TRƯỚC là kiểm tra tài liệu, đặt nước là việc sau."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 여자가 이어서 할 행동으로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Nghe và chọn việc người phụ nữ sẽ làm tiếp theo.",
+   "lines": [
+    [
+     "여자",
+     "택배 좀 보내려고 왔는데요."
+    ],
+    [
+     "남자",
+     "상자 안에 깨지기 쉬운 물건이 있나요?"
+    ],
+    [
+     "여자",
+     "네, 컵이 들어 있어요."
+    ],
+    [
+     "남자",
+     "그럼 먼저 이 종이에 내용물을 적어 주세요."
+    ]
+   ],
+   "linesVi": "Nữ: Tôi đến gửi bưu kiện. — Nam: Trong hộp có đồ dễ vỡ không ạ? — Nữ: Có, có cốc bên trong. — Nam: Vậy trước tiên chị ghi đồ bên trong vào tờ giấy này.",
+   "questions": [
+    {
+     "n": 7,
+     "options": [
+      "컵을 산다.",
+      "상자를 연다.",
+      "종이에 물건 이름을 쓴다.",
+      "돈을 낸다."
+     ],
+     "answer": 2,
+     "explain": "Nhân viên yêu cầu “먼저 이 종이에 내용물을 적어 주세요” nên việc tiếp theo là ghi tên đồ vật vào giấy."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 여자가 이어서 할 행동으로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Nghe và chọn việc người phụ nữ sẽ làm tiếp theo.",
+   "lines": [
+    [
+     "남자",
+     "도서관에서 빌린 책, 오늘까지 반납해야 하지요?"
+    ],
+    [
+     "여자",
+     "맞아요. 그런데 숙제 때문에 아직 필요한데요."
+    ],
+    [
+     "남자",
+     "그럼 인터넷으로 반납 날짜를 연장할 수 있어요."
+    ],
+    [
+     "여자",
+     "그래요? 지금 바로 해 볼게요."
+    ]
+   ],
+   "linesVi": "Nam: Sách mượn thư viện phải trả trong hôm nay nhỉ? — Nữ: Đúng vậy. Nhưng em vẫn còn cần cho bài tập. — Nam: Thế thì có thể gia hạn ngày trả qua mạng đấy. — Nữ: Vậy à? Em làm ngay đây.",
+   "questions": [
+    {
+     "n": 8,
+     "options": [
+      "도서관에 책을 반납한다.",
+      "인터넷으로 반납 날짜를 연장한다.",
+      "숙제를 제출한다.",
+      "새 책을 빌린다."
+     ],
+     "answer": 1,
+     "explain": "“지금 바로 해 볼게요” là làm theo gợi ý gia hạn ngày trả qua mạng (연장하다)."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 여자가 이어서 할 행동으로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Nghe và chọn việc người phụ nữ sẽ làm tiếp theo.",
+   "lines": [
+    [
+     "여자",
+     "저녁에 손님이 오시는데 뭘 준비하면 좋을까요?"
+    ],
+    [
+     "남자",
+     "과일하고 음료수는 내가 사 올게요."
+    ],
+    [
+     "여자",
+     "고마워요. 그럼 나는 청소를 먼저 하고 요리를 시작할게요."
+    ],
+    [
+     "남자",
+     "그래요. 다녀올게요."
+    ]
+   ],
+   "linesVi": "Nữ: Tối nay có khách, nên chuẩn bị gì đây? — Nam: Hoa quả với nước uống để anh đi mua. — Nữ: Cảm ơn anh. Vậy em dọn dẹp trước rồi bắt đầu nấu ăn. — Nam: Ừ, anh đi đây.",
+   "questions": [
+    {
+     "n": 9,
+     "options": [
+      "집을 청소한다.",
+      "과일을 사러 간다.",
+      "요리를 시작한다.",
+      "손님에게 연락한다."
+     ],
+     "answer": 0,
+     "explain": "“청소를 먼저 하고 요리를 시작할게요”: việc làm ngay là dọn nhà. Mua hoa quả là việc của người nam."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 들은 내용과 같은 것을 고르십시오.",
+   "instructionVi": "Nghe và chọn câu đúng với nội dung đã nghe.",
+   "lines": [
+    [
+     "여자",
+     "이번 주 토요일에 시청 앞 광장에서 책 나눔 행사가 열립니다. 집에서 읽지 않는 책을 가져오시면 다른 책으로 바꿔 갈 수 있습니다. 행사는 오전 열 시부터 오후 네 시까지이며 참가비는 없습니다."
+    ]
+   ],
+   "linesVi": "Nữ: Thứ Bảy tuần này, tại quảng trường trước tòa thị chính có sự kiện chia sẻ sách. Mang sách không đọc ở nhà đến có thể đổi lấy sách khác. Sự kiện từ 10 giờ sáng đến 4 giờ chiều, không mất phí tham gia.",
+   "questions": [
+    {
+     "n": 10,
+     "options": [
+      "행사는 일요일에 열린다.",
+      "책을 사야 행사에 참가할 수 있다.",
+      "행사는 저녁까지 계속된다.",
+      "행사는 무료로 참가할 수 있다."
+     ],
+     "answer": 3,
+     "explain": "참가비는 없습니다 = không mất phí → tham gia miễn phí. Sự kiện vào thứ Bảy, kết thúc 4 giờ chiều, chỉ cần mang sách cũ đến đổi."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 들은 내용과 같은 것을 고르십시오.",
+   "instructionVi": "Nghe và chọn câu đúng với nội dung đã nghe.",
+   "lines": [
+    [
+     "남자",
+     "이번에 이사한 집은 어때요?"
+    ],
+    [
+     "여자",
+     "회사에서 가까워서 좋아요. 걸어서 십 분밖에 안 걸려요."
+    ],
+    [
+     "남자",
+     "그럼 출근 시간이 많이 줄었겠네요."
+    ],
+    [
+     "여자",
+     "네, 대신 집이 전보다 좀 좁아요."
+    ]
+   ],
+   "linesVi": "Nam: Nhà mới chuyển đến thế nào? — Nữ: Gần công ty nên thích lắm. Đi bộ chỉ mất 10 phút. — Nam: Vậy thời gian đi làm giảm nhiều rồi nhỉ. — Nữ: Vâng, nhưng bù lại nhà hơi chật hơn trước.",
+   "questions": [
+    {
+     "n": 11,
+     "options": [
+      "여자는 지하철로 출근한다.",
+      "새집은 전보다 넓다.",
+      "여자의 새집은 회사에서 가깝다.",
+      "남자가 이사를 했다."
+     ],
+     "answer": 2,
+     "explain": "회사에서 가까워서 = gần công ty, đi bộ 10 phút. Nhà mới 좁다 (chật) hơn trước; người chuyển nhà là người nữ."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 들은 내용과 같은 것을 고르십시오.",
+   "instructionVi": "Nghe và chọn câu đúng với nội dung đã nghe.",
+   "lines": [
+    [
+     "여자",
+     "손님, 이 세탁기는 이번 주까지 이십 퍼센트 할인 중입니다."
+    ],
+    [
+     "남자",
+     "배달도 해 주나요?"
+    ],
+    [
+     "여자",
+     "네, 배달은 무료이고 설치도 해 드립니다."
+    ],
+    [
+     "남자",
+     "그럼 이걸로 할게요."
+    ]
+   ],
+   "linesVi": "Nữ: Thưa quý khách, máy giặt này đang giảm 20% đến hết tuần này. — Nam: Có giao hàng không ạ? — Nữ: Có, giao miễn phí và lắp đặt giúp luôn. — Nam: Vậy tôi lấy cái này.",
+   "questions": [
+    {
+     "n": 12,
+     "options": [
+      "할인은 다음 달까지다.",
+      "세탁기는 무료로 배달된다.",
+      "설치는 따로 돈을 내야 한다.",
+      "남자는 세탁기를 사지 않았다."
+     ],
+     "answer": 1,
+     "explain": "배달은 무료 = giao miễn phí. Giảm giá đến hết tuần này, lắp đặt cũng làm giúp, và người nam quyết định mua (이걸로 할게요)."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 들은 내용과 같은 것을 고르십시오.",
+   "instructionVi": "Nghe và chọn câu đúng với nội dung đã nghe.",
+   "lines": [
+    [
+     "남자",
+     "승객 여러분께 안내 말씀 드립니다. 이 열차는 선로 점검으로 인해 약 십 분 정도 늦게 출발하겠습니다. 이용에 불편을 드려 죄송합니다."
+    ]
+   ],
+   "linesVi": "Nam: Xin thông báo tới quý hành khách. Do kiểm tra đường ray, chuyến tàu này sẽ khởi hành muộn khoảng 10 phút. Xin lỗi vì sự bất tiện.",
+   "questions": [
+    {
+     "n": 13,
+     "options": [
+      "열차가 늦게 출발한다.",
+      "열차 운행이 취소되었다.",
+      "승객들은 다른 열차로 갈아타야 한다.",
+      "열차가 십 분 일찍 도착한다."
+     ],
+     "answer": 0,
+     "explain": "늦게 출발하겠습니다 = sẽ khởi hành muộn (khoảng 10 phút). Tàu không bị hủy, không phải đổi tàu."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 들은 내용과 같은 것을 고르십시오.",
+   "instructionVi": "Nghe và chọn câu đúng với nội dung đã nghe.",
+   "lines": [
+    [
+     "여자",
+     "요즘 한국어 공부는 어떻게 하고 있어요?"
+    ],
+    [
+     "남자",
+     "매일 아침 삼십 분씩 한국 뉴스를 들어요. 처음에는 어려웠는데 지금은 조금씩 들려요."
+    ],
+    [
+     "여자",
+     "대단하네요. 저도 해 봐야겠어요."
+    ]
+   ],
+   "linesVi": "Nữ: Dạo này anh học tiếng Hàn thế nào? — Nam: Sáng nào anh cũng nghe tin tức Hàn 30 phút. Lúc đầu khó, giờ thì nghe ra được từng chút. — Nữ: Giỏi quá. Em cũng phải thử mới được.",
+   "questions": [
+    {
+     "n": 14,
+     "options": [
+      "남자는 지금도 뉴스가 전혀 안 들린다.",
+      "여자는 이미 뉴스로 공부하고 있다.",
+      "남자는 저녁에 한국어를 공부한다.",
+      "남자는 매일 아침 뉴스를 듣는다."
+     ],
+     "answer": 3,
+     "explain": "매일 아침 삼십 분씩 뉴스를 들어요 = sáng nào cũng nghe tin tức 30 phút. Giờ đã nghe được chút ít; người nữ mới định thử (해 봐야겠어요)."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 남자의 중심 생각으로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Nghe và chọn suy nghĩ chính của người đàn ông.",
+   "lines": [
+    [
+     "여자",
+     "주말에도 일을 해요?"
+    ],
+    [
+     "남자",
+     "네, 요즘 일이 많아서요. 그런데 너무 무리하면 오히려 일이 잘 안 되더라고요. 일주일에 하루는 꼭 쉬어야 할 것 같아요."
+    ]
+   ],
+   "linesVi": "Nữ: Cuối tuần anh cũng làm việc à? — Nam: Ừ, dạo này nhiều việc. Nhưng làm quá sức thì ngược lại việc lại không suôn sẻ. Chắc một tuần phải nghỉ hẳn một ngày.",
+   "questions": [
+    {
+     "n": 15,
+     "options": [
+      "주말에는 일을 많이 해야 한다.",
+      "일이 많으면 회사를 옮겨야 한다.",
+      "일을 잘하려면 쉬는 시간도 필요하다.",
+      "쉬는 날에는 운동을 해야 한다."
+     ],
+     "answer": 2,
+     "explain": "Ý chính nằm ở câu cuối: 일주일에 하루는 꼭 쉬어야 할 것 같아요 — làm quá sức thì hiệu quả kém, cần có thời gian nghỉ."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 남자의 중심 생각으로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Nghe và chọn suy nghĩ chính của người đàn ông.",
+   "lines": [
+    [
+     "여자",
+     "아이에게 휴대폰을 사 줄까 해요."
+    ],
+    [
+     "남자",
+     "아직 초등학생인데 좀 이르지 않아요? 사 주기 전에 하루에 얼마나 쓸지 아이와 약속부터 정하는 게 좋을 것 같아요."
+    ]
+   ],
+   "linesVi": "Nữ: Em định mua điện thoại cho con. — Nam: Mới học tiểu học, chẳng phải hơi sớm sao? Trước khi mua nên cùng con thống nhất trước mỗi ngày được dùng bao lâu.",
+   "questions": [
+    {
+     "n": 16,
+     "options": [
+      "초등학생에게 휴대폰은 꼭 필요하다.",
+      "휴대폰을 사 주기 전에 사용 규칙을 정해야 한다.",
+      "휴대폰은 비싼 것을 사야 한다.",
+      "아이와 함께 휴대폰을 고르는 게 좋다."
+     ],
+     "answer": 1,
+     "explain": "약속부터 정하는 게 좋을 것 같아요 = nên thỏa thuận (quy tắc dùng) trước. -(으)ㄹ까 하다: đang định."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 남자의 중심 생각으로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Nghe và chọn suy nghĩ chính của người đàn ông.",
+   "lines": [
+    [
+     "여자",
+     "회의를 왜 아침 일찍 해요?"
+    ],
+    [
+     "남자",
+     "오후에는 다들 바쁘잖아요. 아침에 짧게 회의를 하면 하루 일을 계획하기에도 좋고 시간도 아낄 수 있어요."
+    ]
+   ],
+   "linesVi": "Nữ: Sao lại họp sớm vào buổi sáng vậy? — Nam: Buổi chiều ai cũng bận mà. Họp ngắn vào buổi sáng vừa tiện lên kế hoạch cho cả ngày, vừa tiết kiệm thời gian.",
+   "questions": [
+    {
+     "n": 17,
+     "options": [
+      "회의는 아침에 짧게 하는 것이 효율적이다.",
+      "회의는 오후에 길게 해야 한다.",
+      "회의를 자주 할 필요가 없다.",
+      "아침에는 일을 하지 않는 게 좋다."
+     ],
+     "answer": 0,
+     "explain": "Người nam nêu lợi ích của họp ngắn buổi sáng: dễ lên kế hoạch, tiết kiệm thời gian → hiệu quả."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 남자의 중심 생각으로 가장 알맞은 것을 고르십시오.",
+   "instructionVi": "Nghe và chọn suy nghĩ chính của người đàn ông.",
+   "lines": [
+    [
+     "여자",
+     "이 식당은 음식이 좀 늦게 나오네요."
+    ],
+    [
+     "남자",
+     "주문을 받은 다음에 바로 만들어서 그래요. 조금 기다리더라도 신선한 음식을 먹는 게 더 낫다고 생각해요."
+    ]
+   ],
+   "linesVi": "Nữ: Quán này lên món hơi chậm nhỉ. — Nam: Vì nhận gọi món xong mới làm ngay. Anh nghĩ dù phải chờ chút nhưng được ăn đồ tươi thì vẫn hơn.",
+   "questions": [
+    {
+     "n": 18,
+     "options": [
+      "음식은 빨리 나와야 한다.",
+      "이 식당은 음식 값이 비싸다.",
+      "다른 식당으로 가는 게 좋겠다.",
+      "조금 늦어도 신선한 음식이 더 좋다."
+     ],
+     "answer": 3,
+     "explain": "-더라도 = dù… thì: 조금 기다리더라도 신선한 음식을 먹는 게 더 낫다 — dù chờ một chút, đồ ăn tươi vẫn tốt hơn."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 물음에 답하십시오.",
+   "instructionVi": "Nghe và trả lời câu hỏi.",
+   "lines": [
+    [
+     "남자",
+     "이번에 회사에서 점심시간 걷기 프로그램을 시작했다면서요?"
+    ],
+    [
+     "여자",
+     "네, 점심을 먹고 이십 분 동안 회사 근처를 같이 걷는 거예요."
+    ],
+    [
+     "남자",
+     "참가하는 사람이 많아요?"
+    ],
+    [
+     "여자",
+     "처음에는 열 명 정도였는데, 소화도 잘되고 오후에 덜 졸리다는 이야기가 퍼져서 지금은 오십 명이 넘어요."
+    ]
+   ],
+   "linesVi": "Nam: Nghe nói công ty mới bắt đầu chương trình đi bộ giờ trưa à? — Nữ: Vâng, ăn trưa xong cùng nhau đi bộ quanh công ty 20 phút. — Nam: Có nhiều người tham gia không? — Nữ: Lúc đầu khoảng 10 người, nhưng vì lan truyền chuyện tiêu hóa tốt hơn, chiều đỡ buồn ngủ nên giờ đã hơn 50 người.",
+   "questions": [
+    {
+     "n": 19,
+     "q": "두 사람이 무엇에 대해 이야기하고 있는지 고르십시오.",
+     "options": [
+      "회사 근처의 새 식당",
+      "오후 회의 시간 변경",
+      "회사의 점심시간 걷기 프로그램",
+      "새로 들어온 직원"
+     ],
+     "answer": 2,
+     "explain": "Cả đoạn nói về chương trình đi bộ giờ trưa (점심시간 걷기 프로그램) của công ty."
+    },
+    {
+     "n": 20,
+     "q": "들은 내용과 같은 것을 고르십시오.",
+     "options": [
+      "걷기는 점심을 먹기 전에 한다.",
+      "프로그램 참가자가 처음보다 늘었다.",
+      "걷기는 한 시간 동안 한다.",
+      "참가자는 지금 열 명 정도이다."
+     ],
+     "answer": 1,
+     "explain": "Lúc đầu 10 người, nay hơn 50 người → số người tăng. Đi bộ SAU bữa trưa (먹고), trong 20 phút."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 물음에 답하십시오.",
+   "instructionVi": "Nghe và trả lời câu hỏi.",
+   "lines": [
+    [
+     "남자",
+     "어떤 봉사 활동을 하고 계세요?"
+    ],
+    [
+     "여자",
+     "매주 토요일마다 동네 도서관에서 아이들에게 책을 읽어 주고 있어요. 처음에는 아이들이 집중을 못 해서 힘들었는데, 목소리를 바꿔 가며 재미있게 읽어 주니까 아이들이 아주 좋아하더라고요. 봉사를 하면서 오히려 제가 더 많이 배우고 있다는 생각이 들어요."
+    ]
+   ],
+   "linesVi": "Nam: Chị đang làm hoạt động tình nguyện gì vậy? — Nữ: Thứ Bảy hằng tuần tôi đọc sách cho các em nhỏ ở thư viện khu phố. Lúc đầu các em không tập trung nên vất vả, nhưng khi tôi đổi giọng đọc cho vui thì các em rất thích. Làm tình nguyện, tôi thấy chính mình mới là người học được nhiều hơn.",
+   "questions": [
+    {
+     "n": 21,
+     "q": "여자의 중심 생각으로 가장 알맞은 것을 고르십시오.",
+     "options": [
+      "봉사를 하면서 자신도 많은 것을 배운다.",
+      "아이들은 책 읽기를 싫어한다.",
+      "봉사는 주말에만 해야 한다.",
+      "도서관에 책이 더 필요하다."
+     ],
+     "answer": 0,
+     "explain": "Câu cuối là ý chính: 봉사를 하면서 오히려 제가 더 많이 배우고 있다."
+    },
+    {
+     "n": 22,
+     "q": "들은 내용과 같은 것을 고르십시오.",
+     "options": [
+      "아이들은 처음부터 집중을 잘했다.",
+      "여자는 학교에서 봉사를 한다.",
+      "여자는 아이들에게 노래를 가르친다.",
+      "여자는 토요일마다 봉사를 한다."
+     ],
+     "answer": 3,
+     "explain": "매주 토요일마다 = thứ Bảy hằng tuần, ở thư viện khu phố (không phải trường học). Lúc đầu các em không tập trung."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 물음에 답하십시오.",
+   "instructionVi": "Nghe và trả lời câu hỏi.",
+   "lines": [
+    [
+     "남자",
+     "요즘 혼자 사는 사람이 늘면서 혼자 밥을 먹는 사람도 많아졌습니다. 그래서 식당들도 혼자 온 손님을 위한 자리를 따로 만들고, 양이 적은 메뉴를 내놓고 있습니다. 전문가들은 이런 변화가 앞으로도 계속될 것이라고 봅니다."
+    ]
+   ],
+   "linesVi": "Nam: Dạo này số người sống một mình tăng nên người ăn cơm một mình cũng nhiều lên. Vì vậy các quán ăn làm riêng chỗ ngồi cho khách đi một mình và đưa ra thực đơn suất nhỏ. Các chuyên gia cho rằng thay đổi này sẽ còn tiếp diễn.",
+   "questions": [
+    {
+     "n": 23,
+     "q": "무엇에 대한 내용인지 고르십시오.",
+     "options": [
+      "가족과 함께 식사하는 방법",
+      "식당 음식 값이 오른 이유",
+      "혼자 밥을 먹는 사람이 늘면서 생긴 식당의 변화",
+      "건강하게 요리하는 방법"
+     ],
+     "answer": 2,
+     "explain": "Đoạn tin nói về thay đổi của quán ăn khi người ăn một mình tăng lên."
+    },
+    {
+     "n": 24,
+     "q": "들은 내용과 같은 것을 고르십시오.",
+     "options": [
+      "혼자 사는 사람이 줄고 있다.",
+      "식당들이 양이 적은 메뉴를 내놓고 있다.",
+      "혼자 온 손님은 식당에 들어갈 수 없다.",
+      "전문가들은 이 변화가 곧 끝날 것이라고 본다."
+     ],
+     "answer": 1,
+     "explain": "양이 적은 메뉴를 내놓고 있습니다 = đưa ra món suất nhỏ. Người sống một mình TĂNG; chuyên gia cho rằng thay đổi còn TIẾP DIỄN."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 물음에 답하십시오.",
+   "instructionVi": "Nghe và trả lời câu hỏi.",
+   "lines": [
+    [
+     "여자",
+     "이번 축제 때 쓰레기가 너무 많이 나올까 봐 걱정이에요."
+    ],
+    [
+     "남자",
+     "그래서 올해는 일회용 컵 대신 개인 컵을 가져오면 음료를 할인해 주기로 했어요."
+    ],
+    [
+     "여자",
+     "좋은 생각이네요. 그런데 사람들이 컵을 잘 가져올까요?"
+    ],
+    [
+     "남자",
+     "미리 홍보를 많이 하고, 컵이 없는 사람에게는 다시 쓸 수 있는 컵을 빌려줄 거예요."
+    ]
+   ],
+   "linesVi": "Nữ: Em lo lễ hội lần này sẽ thải ra quá nhiều rác. — Nam: Vì vậy năm nay ai mang cốc cá nhân thay cho cốc dùng một lần sẽ được giảm giá đồ uống. — Nữ: Ý hay đấy. Nhưng mọi người có chịu mang cốc không nhỉ? — Nam: Sẽ quảng bá nhiều từ trước, và ai không có cốc thì cho mượn cốc dùng lại được.",
+   "questions": [
+    {
+     "n": 25,
+     "q": "남자가 하는 말의 의도로 알맞은 것을 고르십시오.",
+     "options": [
+      "쓰레기를 줄이기 위한 방법을 설명하려고",
+      "축제 날짜를 알리려고",
+      "음료 가격을 올리려고",
+      "축제 참가를 거절하려고"
+     ],
+     "answer": 0,
+     "explain": "Người nam giải thích các cách giảm rác: giảm giá khi mang cốc riêng, quảng bá, cho mượn cốc."
+    },
+    {
+     "n": 26,
+     "q": "들은 내용과 같은 것을 고르십시오.",
+     "options": [
+      "올해 축제에서는 음료를 팔지 않는다.",
+      "컵이 없는 사람은 음료를 살 수 없다.",
+      "일회용 컵을 더 많이 준비했다.",
+      "개인 컵을 가져오면 음료를 할인받는다."
+     ],
+     "answer": 3,
+     "explain": "개인 컵을 가져오면 음료를 할인해 주기로 했어요 = mang cốc riêng được giảm giá. Người không có cốc được cho mượn cốc."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 물음에 답하십시오.",
+   "instructionVi": "Nghe và trả lời câu hỏi.",
+   "lines": [
+    [
+     "남자",
+     "재택근무를 시작한 지 일 년이 됐는데 어때요?"
+    ],
+    [
+     "여자",
+     "출퇴근 시간이 없어져서 좋아요. 그런데 집에서 일하다 보니까 일과 생활의 경계가 흐려지더라고요."
+    ],
+    [
+     "남자",
+     "그럼 어떻게 해결했어요?"
+    ],
+    [
+     "여자",
+     "일하는 공간을 따로 정하고, 저녁 여섯 시가 되면 컴퓨터를 꼭 꺼요. 이렇게 규칙을 정해 두니까 훨씬 나아졌어요."
+    ]
+   ],
+   "linesVi": "Nam: Làm việc tại nhà được một năm rồi, thấy thế nào? — Nữ: Không phải đi lại nên thích. Nhưng làm ở nhà mãi thì ranh giới giữa công việc và sinh hoạt bị mờ đi. — Nam: Vậy chị giải quyết thế nào? — Nữ: Tôi chọn riêng một chỗ để làm việc, cứ 6 giờ tối là tắt máy tính. Đặt quy tắc như vậy nên đỡ hơn nhiều.",
+   "questions": [
+    {
+     "n": 27,
+     "q": "여자의 중심 생각으로 가장 알맞은 것을 고르십시오.",
+     "options": [
+      "재택근무는 하지 않는 게 좋다.",
+      "출퇴근 시간이 길어서 힘들다.",
+      "집에서 일할 때는 일과 생활을 나누는 규칙이 필요하다.",
+      "저녁에도 일을 해야 한다."
+     ],
+     "answer": 2,
+     "explain": "Người nữ cho rằng đặt quy tắc tách công việc và sinh hoạt giúp mọi việc tốt hơn."
+    },
+    {
+     "n": 28,
+     "q": "들은 내용과 같은 것을 고르십시오.",
+     "options": [
+      "여자는 재택근무를 한 지 한 달이 됐다.",
+      "여자는 저녁 여섯 시에 컴퓨터를 끈다.",
+      "여자는 지금 회사로 출근한다.",
+      "여자는 일하는 장소를 정하지 않았다."
+     ],
+     "answer": 1,
+     "explain": "저녁 여섯 시가 되면 컴퓨터를 꼭 꺼요 = cứ 6 giờ tối là tắt máy tính. Đã làm tại nhà được một năm và có chỗ làm việc riêng."
+    }
+   ]
+  },
+  {
+   "instruction": "다음을 듣고 물음에 답하십시오.",
+   "instructionVi": "Nghe và trả lời câu hỏi.",
+   "lines": [
+    [
+     "여자",
+     "잠을 잘 자려면 잠들기 한 시간 전부터는 휴대폰을 보지 않는 것이 좋습니다. 휴대폰 화면의 밝은 빛이 우리 뇌를 깨어 있게 만들기 때문입니다. 대신 가벼운 스트레칭을 하거나 책을 읽으면 몸이 자연스럽게 쉴 준비를 하게 됩니다."
+    ]
+   ],
+   "linesVi": "Nữ: Muốn ngủ ngon thì từ một tiếng trước khi ngủ không nên xem điện thoại. Vì ánh sáng mạnh của màn hình làm não chúng ta tỉnh táo. Thay vào đó, giãn cơ nhẹ hoặc đọc sách thì cơ thể sẽ tự nhiên chuẩn bị nghỉ ngơi.",
+   "questions": [
+    {
+     "n": 29,
+     "q": "무엇에 대한 내용인지 고르십시오.",
+     "options": [
+      "잠을 잘 자기 위한 방법",
+      "휴대폰을 싸게 사는 방법",
+      "운동을 오래 하는 방법",
+      "책을 빨리 읽는 방법"
+     ],
+     "answer": 0,
+     "explain": "Bài nói đưa lời khuyên để ngủ ngon (잠을 잘 자려면…)."
+    },
+    {
+     "n": 30,
+     "q": "들은 내용과 같은 것을 고르십시오.",
+     "options": [
+      "자기 직전에 휴대폰을 보면 좋다.",
+      "스트레칭은 잠에 방해가 된다.",
+      "책을 읽으면 뇌가 더 깨어난다.",
+      "휴대폰의 밝은 빛은 잠을 방해한다."
+     ],
+     "answer": 3,
+     "explain": "Ánh sáng màn hình làm não tỉnh táo → cản trở giấc ngủ. Giãn cơ, đọc sách giúp cơ thể chuẩn bị nghỉ."
+    }
+   ]
+  }
+ ]
+}

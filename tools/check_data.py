@@ -146,6 +146,25 @@ def check_viet(eid, q):
         err(f"{eid} câu {n}: kind lạ {kind!r}")
 
 
+# Bài kiểm tra xếp lớp (data/placement.json): mỗi câu gắn bài có thật (hoặc "topik"), 4 lựa chọn khác nhau, có giải thích.
+pl_file = ROOT / "data/placement.json"
+if pl_file.exists():
+    pl = json.loads(pl_file.read_text(encoding="utf-8"))
+    ids = {l["id"] for lv in json.loads((ROOT / "data/index.json").read_text(encoding="utf-8"))["levels"] for l in lv["lessons"]}
+    if not pl.get("blocks") or not isinstance(pl.get("pass"), int):
+        err("placement.json: thiếu blocks hoặc pass")
+    for b in pl.get("blocks", []):
+        qs = b.get("questions", [])
+        if not b.get("level") or not b.get("name") or len(qs) < pl.get("pass", 0):
+            err(f"placement.json: phần {b.get('name')!r} thiếu level/name hoặc ít câu hơn mức đạt")
+        for q in qs:
+            o = q.get("options", [])
+            if len(o) != 4 or len(set(o)) != 4 or not q.get("q") or not q.get("explain"):
+                err(f"placement.json: câu {q.get('q')!r} cần đề, 4 lựa chọn khác nhau và giải thích")
+            if q.get("l") != "topik" and q.get("l") not in ids:
+                err(f"placement.json: câu {q.get('q')!r} gắn bài không có {q.get('l')!r}")
+    print(f"placement.json: {sum(len(b.get('questions', [])) for b in pl.get('blocks', []))} câu, {len(pl.get('blocks', []))} phần")
+
 ex_dir = ROOT / "data/exams"
 if ex_dir.exists():
     eidx = json.loads((ex_dir / "index.json").read_text(encoding="utf-8"))
@@ -172,6 +191,10 @@ if ex_dir.exists():
         for st in ex.get("sets", []):
             if not st.get("instruction") or not st.get("instructionVi"):
                 err(f"{eid}: bộ câu {st['questions'][0].get('n')} thiếu lời dẫn")
+            if ex.get("part") == "nghe":
+                ln = st.get("lines") or []
+                if not ln or not st.get("linesVi") or any(len(x) != 2 or not str(x[0]).strip() or not str(x[1]).strip() for x in ln):
+                    err(f"{eid}: câu {st['questions'][0].get('n')} (Nghe) cần lời thoại lines [người nói, câu] và bản dịch linesVi")
             if st.get("passage") and not st.get("passageVi"):
                 err(f"{eid}: câu {st['questions'][0].get('n')} có đoạn văn mà thiếu bản dịch")
             if "㉠" in (st.get("passage") or "") and not st.get("sentence"):
@@ -187,7 +210,7 @@ if ex_dir.exists():
                     err(f"{eid} câu {q.get('n')}: answer phải là 0–3")
                 if not q.get("explain"):
                     err(f"{eid} câu {q.get('n')}: thiếu giải thích")
-                if not q.get("q") and not st.get("passage"):
+                if not q.get("q") and not st.get("passage") and not st.get("lines"):
                     err(f"{eid} câu {q.get('n')}: không có câu hỏi lẫn đoạn văn")
         if ex.get("part") == "viet":
             tot = sum(q.get("points", 0) for q in qs)

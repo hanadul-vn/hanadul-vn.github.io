@@ -166,4 +166,13 @@ t('M20 Số từ ôn theo ngày lấy số lớn hơn; huy hiệu hợp lại, n
   assert.ok(sameData(m, merge(m, m, NOW)), 'gộp lặp lại không đổi');
 });
 
+t('M21 Kết quả xếp lớp: lấy lần làm mới hơn (at); bên chưa làm giữ bên đã làm', () => {
+  const a = { placement: { level: 'sc1', lesson: 'sc1-05', at: 1000 } };
+  const b = { placement: { level: 'tc3', lesson: 'tc3-01', at: 3000 } };
+  assert.strictEqual(merge(a, b, NOW).placement.lesson, 'tc3-01');
+  assert.strictEqual(merge(b, a, NOW).placement.lesson, 'tc3-01');
+  assert.strictEqual(merge({}, a, NOW).placement.lesson, 'sc1-05');
+  assert.deepStrictEqual(merge({}, {}, NOW).placement, {});
+});
+
 console.log(`\n${pass} test pass`);

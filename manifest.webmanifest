@@ -1,0 +1,23 @@
+{
+  "name": "Hana Dul – Học tiếng Hàn miễn phí",
+  "short_name": "Hana Dul",
+  "description": "Học tiếng Hàn từng bước từ Hangeul tới TOPIK II: từ vựng, ngữ pháp, trắc nghiệm có giải thích, thẻ từ, chép chính tả, đề thi thử. Miễn phí.",
+  "lang": "vi",
+  "id": "./",
+  "start_url": "./?app=1",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff8f2",
+  "theme_color": "#ff6b5b",
+  "categories": ["education"],
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Ôn hôm nay", "url": "./#/on-tap", "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Đề thi thử", "url": "./#/thi-thu", "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
