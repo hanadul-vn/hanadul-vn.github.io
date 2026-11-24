@@ -273,7 +273,7 @@
       "icon": "🌳",
       "prefix": true,
       "subtitle": "Ngữ pháp trung cấp, làm quen dạng đề TOPIK II",
-      "status": "Đang mở 12 bài",
+      "status": "Đủ 15 bài",
       "lessons": [
         {
           "id": "tc3-01",
@@ -346,6 +346,30 @@
           "ko": "이사",
           "summary": "-(으)ㄹ 줄 알다/모르다 · -기 바라다 · N에 비해서 · 아무 N(이)나",
           "icon": "📦"
+        },
+        {
+          "id": "tc3-10",
+          "no": "10",
+          "title": "Du lịch",
+          "ko": "여행",
+          "summary": "-다고 하다 · -냐고 하다 · -(으)ㄹ까 하다",
+          "icon": "✈️"
+        },
+        {
+          "id": "tc3-11",
+          "no": "11",
+          "title": "Nỗi lo",
+          "ko": "고민",
+          "summary": "반말 · N아/야 · -다(가) 보면",
+          "icon": "💭"
+        },
+        {
+          "id": "tc3-12",
+          "no": "12",
+          "title": "Internet",
+          "ko": "인터넷",
+          "summary": "-(으)ㅁ · -(으)라고 하다 · -자고 하다",
+          "icon": "💻"
         },
         {
           "id": "tc3-13",

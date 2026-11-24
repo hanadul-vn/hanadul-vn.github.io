@@ -131,7 +131,7 @@ async function newPage(browser, opts = {}) {
     const src = JSON.parse(fs.readFileSync(path.join(tmp, 'data/lessons/tc3-01.json'), 'utf8'));
     src.id = 'tc3-99'; src.ko = '시험용'; src.vocab = [{ group: 'Thử', words: [['시험용단어', 'từ thử nghiệm riêng']] }];
     fs.writeFileSync(path.join(tmp, 'data/lessons/tc3-99.json'), JSON.stringify(src));
-    const prevId = ix.levels[ix.levels.length - 1].lessons.slice(-1)[0].id; // bài cuối hiện tại
+    const lastId = ix.levels[ix.levels.length - 1].lessons.slice(-1)[0].id; // bài cuối hiện tại
     ix.levels[ix.levels.length - 1].lessons.push({ id: 'tc3-99', no: '99', title: 'Bài thử', ko: '시험용', summary: 'thử', icon: '🧪' });
     fs.writeFileSync(path.join(tmp, 'data/index.json'), JSON.stringify(ix));
     let stale = false;
@@ -142,7 +142,7 @@ async function newPage(browser, opts = {}) {
     assert(fs.readFileSync(path.join(tmp, 'sitemap.xml'), 'utf8').includes('/bai/tc3-99/'), 'sitemap thiếu');
     assert(fs.readFileSync(path.join(tmp, 'bai/index.html'), 'utf8').includes('href="tc3-99/"'), '/bai/ thiếu');
     assert(fs.readFileSync(path.join(tmp, 'data/search.json'), 'utf8').includes('시험용단어'), 'chỉ mục thiếu');
-    assert(fs.readFileSync(path.join(tmp, 'bai/' + prevId + '/index.html'), 'utf8').includes('href="../tc3-99/"'), 'bài trước không trỏ sang bài mới');
+    assert(fs.readFileSync(path.join(tmp, 'bai', lastId, 'index.html'), 'utf8').includes('href="../tc3-99/"'), 'bài trước không trỏ sang bài mới');
     fs.rmSync(path.join(tmp, 'data/lessons/tc3-99.json'));
     ix.levels[ix.levels.length - 1].lessons.pop();
     fs.writeFileSync(path.join(tmp, 'data/index.json'), JSON.stringify(ix));

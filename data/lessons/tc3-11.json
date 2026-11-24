@@ -1,0 +1,935 @@
+{
+  "id": "tc3-11",
+  "title": "Nỗi lo",
+  "ko": "고민",
+  "goal": "Kể và hỏi về nỗi lo, xin và đưa lời khuyên; nói trống không (반말) với bạn thân, gọi tên thân mật và nói “cứ… thì sẽ…”.",
+  "vocab": [
+    {
+      "group": "Nỗi lo, mâu thuẫn",
+      "words": [
+        [
+          "고민이 생기다",
+          "nảy sinh nỗi lo"
+        ],
+        [
+          "고민을 해결하다",
+          "giải quyết nỗi lo"
+        ],
+        [
+          "갈등을 겪다",
+          "trải qua mâu thuẫn"
+        ],
+        [
+          "갈등이 생기다",
+          "nảy sinh mâu thuẫn"
+        ],
+        [
+          "갈등을 해소하다",
+          "hóa giải mâu thuẫn"
+        ],
+        [
+          "갈등을 극복하다",
+          "vượt qua mâu thuẫn"
+        ],
+        [
+          "스트레스가 쌓이다",
+          "căng thẳng dồn nén"
+        ],
+        [
+          "불면증",
+          "chứng mất ngủ"
+        ],
+        [
+          "우울증",
+          "chứng trầm cảm"
+        ]
+      ]
+    },
+    {
+      "group": "Cảm xúc",
+      "words": [
+        [
+          "자신감이 있다",
+          "tự tin"
+        ],
+        [
+          "자신감을 잃다",
+          "mất tự tin"
+        ],
+        [
+          "초조하다",
+          "sốt ruột, bồn chồn"
+        ],
+        [
+          "긴장되다",
+          "hồi hộp, căng thẳng"
+        ],
+        [
+          "두렵다",
+          "sợ hãi"
+        ],
+        [
+          "불안하다",
+          "bất an"
+        ]
+      ]
+    },
+    {
+      "group": "Tư vấn",
+      "words": [
+        [
+          "상담 센터",
+          "trung tâm tư vấn"
+        ],
+        [
+          "상담사",
+          "chuyên viên tư vấn"
+        ],
+        [
+          "상담을 받다",
+          "được tư vấn"
+        ],
+        [
+          "조언을 구하다",
+          "xin lời khuyên"
+        ],
+        [
+          "진로 문제",
+          "chuyện định hướng tương lai"
+        ],
+        [
+          "이성 문제",
+          "chuyện tình cảm nam nữ"
+        ],
+        [
+          "인간관계 문제",
+          "chuyện quan hệ với mọi người"
+        ],
+        [
+          "취업 문제",
+          "chuyện tìm việc làm"
+        ],
+        [
+          "경제적 문제",
+          "chuyện tiền bạc"
+        ],
+        [
+          "가정 문제",
+          "chuyện gia đình"
+        ]
+      ]
+    },
+    {
+      "group": "Từ mới: danh từ",
+      "words": [
+        [
+          "경쟁",
+          "sự cạnh tranh"
+        ],
+        [
+          "공고",
+          "thông báo (tuyển dụng)"
+        ],
+        [
+          "관계",
+          "mối quan hệ"
+        ],
+        [
+          "관리",
+          "sự quản lý"
+        ],
+        [
+          "기법",
+          "kỹ thuật, phương pháp"
+        ],
+        [
+          "눈높이",
+          "mức kỳ vọng, tiêu chuẩn đặt ra"
+        ],
+        [
+          "리포트",
+          "bài báo cáo (bài tập)"
+        ],
+        [
+          "반응",
+          "phản ứng"
+        ],
+        [
+          "발달",
+          "sự phát triển"
+        ],
+        [
+          "부담",
+          "gánh nặng, áp lực"
+        ],
+        [
+          "부적응",
+          "sự không thích nghi"
+        ],
+        [
+          "사연",
+          "câu chuyện tâm sự"
+        ],
+        [
+          "사이버",
+          "trên mạng (cyber)"
+        ],
+        [
+          "삶",
+          "cuộc sống"
+        ],
+        [
+          "심리",
+          "tâm lý"
+        ],
+        [
+          "역할",
+          "vai trò"
+        ],
+        [
+          "이미지",
+          "hình ảnh"
+        ],
+        [
+          "인턴",
+          "thực tập sinh"
+        ],
+        [
+          "자격",
+          "tư cách, điều kiện"
+        ],
+        [
+          "제도",
+          "chế độ, hệ thống"
+        ],
+        [
+          "채용",
+          "sự tuyển dụng"
+        ],
+        [
+          "코너",
+          "chuyên mục, góc"
+        ],
+        [
+          "표정",
+          "nét mặt"
+        ]
+      ]
+    },
+    {
+      "group": "Từ mới: động từ, tính từ, phó từ",
+      "words": [
+        [
+          "개발하다",
+          "phát triển, khai thác"
+        ],
+        [
+          "관련되다",
+          "có liên quan"
+        ],
+        [
+          "구분되다",
+          "được phân chia"
+        ],
+        [
+          "권하다",
+          "khuyên, mời"
+        ],
+        [
+          "끌다",
+          "kéo, thu hút"
+        ],
+        [
+          "늘다",
+          "tăng lên"
+        ],
+        [
+          "때로",
+          "đôi khi"
+        ],
+        [
+          "떠올리다",
+          "nhớ lại, nghĩ đến"
+        ],
+        [
+          "떨치다",
+          "rũ bỏ, gạt đi"
+        ],
+        [
+          "반영하다",
+          "phản ánh"
+        ],
+        [
+          "부딪치다",
+          "va chạm, đụng phải"
+        ],
+        [
+          "사소하다",
+          "nhỏ nhặt"
+        ],
+        [
+          "심각하다",
+          "nghiêm trọng"
+        ],
+        [
+          "오히려",
+          "ngược lại, trái lại"
+        ],
+        [
+          "유리하다",
+          "có lợi"
+        ],
+        [
+          "저절로",
+          "tự nhiên, tự động"
+        ],
+        [
+          "전문적",
+          "mang tính chuyên môn"
+        ],
+        [
+          "제대로",
+          "cho đúng, ra hồn"
+        ],
+        [
+          "털어놓다",
+          "thổ lộ, giãi bày"
+        ],
+        [
+          "평범하다",
+          "bình thường, bình dị"
+        ],
+        [
+          "폭넓다",
+          "rộng, sâu rộng"
+        ],
+        [
+          "푹",
+          "(ngủ, nghỉ) thật say, thật kỹ"
+        ],
+        [
+          "피하다",
+          "tránh"
+        ],
+        [
+          "훨씬",
+          "hơn hẳn"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "반말 (-아/어, -야)",
+      "title": "nói trống không thân mật (반말)",
+      "note": [
+        "Nói với bạn thân, người nhỏ tuổi hơn: bỏ -요 ở đuôi -아/어요 (가요 → 가, 먹어요 → 먹어, 했어요 → 했어, 갈 거예요 → 갈 거야).",
+        "Danh từ: -이에요/예요 → -이야/야 (학생이야, 친구야); 아니에요 → 아니야. 네/아니요 → 응/아니.",
+        "Rủ: -자 (같이 가자), cấm: -지 마 (걱정하지 마). Xưng hô: 저 → 나, 제가 → 내가, 저희 → 우리; gọi người nghe là 너 (네가 thường đọc 니가)."
+      ],
+      "examples": [
+        [
+          "요즘 무슨 고민 있어? 표정이 안 좋아.",
+          "Dạo này có chuyện gì lo à? Nét mặt không tốt lắm."
+        ],
+        [
+          "아니야, 그냥 리포트 때문에 잠을 못 잤어.",
+          "Không có gì, chỉ là vì bài báo cáo nên không ngủ được."
+        ],
+        [
+          "너무 걱정하지 마. 주말에 같이 영화 보러 가자.",
+          "Đừng lo quá. Cuối tuần đi xem phim với tớ đi."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "(친구에게) 어제 왜 전화 안 ___?",
+          "options": [
+            "했어",
+            "했어요",
+            "했습니다",
+            "하세요"
+          ],
+          "explain": "Với bạn thân → bỏ 요: 했어."
+        },
+        {
+          "q": "(친구에게) 이건 내 ___. 네 건 저기 있어.",
+          "options": [
+            "거야",
+            "거예요",
+            "것입니다",
+            "거요"
+          ],
+          "explain": "Danh từ không patchim + 야."
+        },
+        {
+          "q": "(친구에게) 시험 끝나면 같이 놀러 ___.",
+          "options": [
+            "가자",
+            "가요",
+            "갑시다",
+            "가세요"
+          ],
+          "explain": "Rủ rê kiểu 반말 → -자."
+        },
+        {
+          "q": "Câu nào ĐÚNG? (nói với bạn thân)",
+          "options": [
+            "나도 그 문제 때문에 고민이 많아.",
+            "저도 그 문제 때문에 고민이 많아.",
+            "나도 그 문제 때문에 고민이 많아요야.",
+            "나는 그 문제 때문에 고민이 많습니다야."
+          ],
+          "explain": "반말: 저 → 나, đuôi -아/어."
+        },
+        {
+          "q": "Nghĩa của \"그런 사소한 일로 걱정하지 마.\"",
+          "options": [
+            "Đừng lo vì chuyện nhỏ nhặt như thế.",
+            "Hãy lo chuyện nhỏ nhặt như thế.",
+            "Tôi đã lo vì chuyện nhỏ nhặt.",
+            "Chuyện nhỏ nhặt thì phải lo."
+          ],
+          "explain": "-지 마 = đừng (반말 của -지 마세요)."
+        }
+      ]
+    },
+    {
+      "pattern": "N아/야",
+      "title": "gọi tên thân mật (này…, …ơi)",
+      "note": [
+        "Gắn sau tên để gọi bạn bè, em, người nhỏ tuổi: tên có patchim + 아 (민준아), không patchim + 야 (지수야).",
+        "Chỉ dùng với người thân thiết, đi cùng 반말. Với người lớn hoặc chưa thân dùng N 씨, chức danh + 님.",
+        "Khi kể về người đó (không gọi), tên có patchim thường thêm 이: 민준이가, 민준이는."
+      ],
+      "examples": [
+        [
+          "지수야, 무슨 일 있어?",
+          "Ji-su ơi, có chuyện gì à?"
+        ],
+        [
+          "민준아, 이거 좀 도와줘.",
+          "Min-jun à, giúp tớ cái này với."
+        ],
+        [
+          "수진아, 너무 초조해하지 마. 잘될 거야.",
+          "Su-jin ơi, đừng bồn chồn quá. Sẽ ổn thôi."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "___, 밥 먹었어?",
+          "options": [
+            "하은아",
+            "하은야",
+            "하은이야",
+            "하은 씨야"
+          ],
+          "explain": "하은 có patchim → 아."
+        },
+        {
+          "q": "___, 내일 시간 있어?",
+          "options": [
+            "민호야",
+            "민호아",
+            "민호이야",
+            "민호요"
+          ],
+          "explain": "민호 không patchim → 야."
+        },
+        {
+          "q": "(선생님께) ___, 상담 좀 받고 싶어요.",
+          "options": [
+            "선생님",
+            "선생님아",
+            "선생님야",
+            "선생아"
+          ],
+          "explain": "Với người lớn không dùng 아/야 → 선생님."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "유진아, 이번 주말에 뭐 해?",
+            "유진야, 이번 주말에 뭐 해?",
+            "유진아, 이번 주말에 뭐 하십니까?",
+            "유진이야, 이번 주말에 뭐 해?"
+          ],
+          "explain": "유진 có patchim → 유진아 + 반말."
+        },
+        {
+          "q": "Nghĩa của \"서연아, 고민 있으면 나한테 털어놔.\"",
+          "options": [
+            "Seo-yeon ơi, có chuyện lo thì kể với tớ nhé.",
+            "Seo-yeon có chuyện lo nên đã kể với tớ.",
+            "Tớ có chuyện lo nên kể với Seo-yeon.",
+            "Seo-yeon ơi, đừng kể chuyện lo với tớ."
+          ],
+          "explain": "N아 = gọi tên; 털어놔 = thổ lộ đi."
+        }
+      ]
+    },
+    {
+      "pattern": "V -다(가) 보면",
+      "title": "cứ… thì sẽ…",
+      "note": [
+        "Nếu cứ tiếp tục làm việc gì một thời gian thì sẽ có kết quả/phát hiện ở vế sau: 자꾸 연습하다 보면 잘하게 될 거예요.",
+        "Gắn vào thân động từ, không chia thì: 살다 보면, 듣다 보면. Vế sau thường là -게 되다, -(으)ㄹ 거예요, -(으)ㄹ 수 있다, hiện tại chung.",
+        "Khác -다가 (Bài 5: đang làm thì chuyển sang việc khác): -다 보면 nhấn mạnh làm lặp lại, lâu dần."
+      ],
+      "examples": [
+        [
+          "한국 드라마를 자꾸 보다 보면 듣기 실력이 늘 거예요.",
+          "Cứ xem phim Hàn thường xuyên thì khả năng nghe sẽ tăng lên."
+        ],
+        [
+          "살다 보면 힘든 일도 생기고 좋은 일도 생겨요.",
+          "Sống thì sẽ có chuyện khó khăn và cũng có chuyện vui."
+        ],
+        [
+          "친구와 자주 이야기하다 보면 갈등도 저절로 해소될 거예요.",
+          "Cứ thường xuyên nói chuyện với bạn thì mâu thuẫn cũng sẽ tự được hóa giải."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "처음에는 어렵지만 매일 ___ 익숙해질 거예요.",
+          "options": [
+            "연습하다 보면",
+            "연습했다 보면",
+            "연습하다가는",
+            "연습하려면"
+          ],
+          "explain": "Cứ luyện mỗi ngày thì… → -다 보면."
+        },
+        {
+          "q": "이 일을 ___ 내가 정말 좋아하는 일이 뭔지 알게 돼요.",
+          "options": [
+            "하다 보면",
+            "한다 보면",
+            "하면서 보면",
+            "할 보면"
+          ],
+          "explain": "Thân động từ + -다 보면, không chia thì."
+        },
+        {
+          "q": "A: 발표할 때 너무 긴장돼요. B: 발표를 여러 번 ___ 자신감이 생길 거예요.",
+          "options": [
+            "하다 보면",
+            "하기 전에",
+            "하는 바람에",
+            "할까 하면"
+          ],
+          "explain": "Lặp lại nhiều lần → dần có tự tin."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "이 노래를 계속 듣다 보면 좋아질 거예요.",
+            "이 노래를 계속 들었다 보면 좋아질 거예요.",
+            "이 노래를 계속 듣다 보면 좋아졌어요 어제.",
+            "이 노래를 계속 들다 보면 좋아질 거예요."
+          ],
+          "explain": "듣다 + -다 보면 (thân không đổi), vế sau tương lai."
+        },
+        {
+          "q": "Nghĩa của \"사람을 만나다 보면 때로 갈등이 생길 수도 있어요.\"",
+          "options": [
+            "Gặp gỡ người khác thì đôi khi cũng có thể nảy sinh mâu thuẫn.",
+            "Vì gặp người khác nên chắc chắn có mâu thuẫn.",
+            "Đang gặp người thì bỏ đi vì mâu thuẫn.",
+            "Muốn gặp người khác thì phải tránh mâu thuẫn."
+          ],
+          "explain": "-다 보면 + -(으)ㄹ 수도 있다."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "요즘 잠을 잘 못 자서 병원에 갔더니 ___이라고 했어요.",
+      "options": [
+        "불면증",
+        "공고",
+        "코너",
+        "인턴"
+      ],
+      "explain": "Không ngủ được → 불면증."
+    },
+    {
+      "q": "혼자 고민하지 말고 친구에게 ___ 보세요.",
+      "options": [
+        "털어놓아",
+        "떨쳐",
+        "피해",
+        "구분되어"
+      ],
+      "explain": "Thổ lộ nỗi lo → 털어놓다."
+    },
+    {
+      "q": "일이 많아서 ___ 주말에는 운동으로 풀어요.",
+      "options": [
+        "스트레스가 쌓이면",
+        "자신감이 있으면",
+        "갈등을 극복하면",
+        "표정이 밝으면"
+      ],
+      "explain": "Căng thẳng dồn lại → 스트레스가 쌓이다."
+    },
+    {
+      "q": "전문적인 도움이 필요하면 학교 ___에 가 보세요.",
+      "options": [
+        "상담 센터",
+        "사이버",
+        "리포트",
+        "눈높이"
+      ],
+      "explain": "Nơi tư vấn → 상담 센터."
+    },
+    {
+      "q": "면접에서 떨어진 후에 ___ 다시 시작하기가 두려웠어요.",
+      "options": [
+        "자신감을 잃어서",
+        "자신감이 있어서",
+        "조언을 구해서",
+        "푹 쉬어서"
+      ],
+      "explain": "Mất tự tin → 자신감을 잃다."
+    },
+    {
+      "q": "그건 ___ 문제니까 너무 걱정하지 마세요.",
+      "options": [
+        "사소한",
+        "심각한",
+        "전문적인",
+        "폭넓은"
+      ],
+      "explain": "Chuyện nhỏ → 사소하다."
+    },
+    {
+      "q": "어제 너무 피곤해서 열 시간 동안 ___ 잤어요.",
+      "options": [
+        "푹",
+        "훨씬",
+        "오히려",
+        "때로"
+      ],
+      "explain": "Ngủ say → 푹 자다."
+    },
+    {
+      "q": "룸메이트와 생활 습관 때문에 ___ 대화로 해결했어요.",
+      "options": [
+        "갈등이 생겼지만",
+        "고민을 해결했지만",
+        "상담사가 됐지만",
+        "채용됐지만"
+      ],
+      "explain": "Nảy sinh mâu thuẫn → 갈등이 생기다."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 너 요즘 왜 그렇게 표정이 어두워? 나: 취업 문제 때문에 고민이 많아. 지원한 회사에서 연락이 안 와.",
+      "q": "Người thứ hai lo chuyện gì?",
+      "options": [
+        "Tìm việc làm",
+        "Chuyện gia đình",
+        "Chuyện tình cảm",
+        "Sức khỏe"
+      ],
+      "explain": "취업 문제 때문에 고민이 많아."
+    },
+    {
+      "listen": "가: 지수야, 시험 때문에 너무 긴장돼. 나: 걱정하지 마. 열심히 공부했으니까 잘할 거야.",
+      "q": "Người thứ hai nói gì?",
+      "options": [
+        "Động viên bạn đừng lo",
+        "Khuyên bạn bỏ thi",
+        "Rủ bạn đi chơi",
+        "Nói mình cũng chưa học"
+      ],
+      "explain": "걱정하지 마… 잘할 거야."
+    },
+    {
+      "listen": "가: 상담 센터에 가 봤어요? 나: 네, 상담사 선생님이 제 이야기를 잘 들어 주셔서 마음이 훨씬 편해졌어요.",
+      "q": "Sau khi được tư vấn người thứ hai thấy thế nào?",
+      "options": [
+        "Thấy nhẹ lòng hơn hẳn",
+        "Càng lo hơn",
+        "Không có thay đổi gì",
+        "Muốn đổi chuyên viên"
+      ],
+      "explain": "마음이 훨씬 편해졌어요."
+    },
+    {
+      "listen": "가: 한국 생활에 적응하기가 너무 힘들어요. 나: 처음에는 다 그래요. 한국 친구들을 자주 만나다 보면 괜찮아질 거예요.",
+      "q": "Người thứ hai khuyên gì?",
+      "options": [
+        "Thường xuyên gặp bạn Hàn thì sẽ ổn",
+        "Về nước nghỉ một thời gian",
+        "Đi khám bác sĩ",
+        "Ở nhà học thêm"
+      ],
+      "explain": "자주 만나다 보면 괜찮아질 거예요."
+    },
+    {
+      "listen": "가: 민준아, 어제 왜 연락 안 했어? 나: 미안해. 휴대폰을 집에 두고 나와서 못 했어.",
+      "q": "Vì sao Min-jun không liên lạc?",
+      "options": [
+        "Để quên điện thoại ở nhà",
+        "Điện thoại hỏng",
+        "Đang giận bạn",
+        "Bận học"
+      ],
+      "explain": "휴대폰을 집에 두고 나와서…"
+    }
+  ],
+  "reading": {
+    "passage": "라디오 프로그램 ‘마음 상담소’에는 매주 많은 사연이 옵니다. 지난주에는 대학생 한 명이 진로 문제로 고민하고 있다는 사연을 보냈습니다. 부모님은 안정적인 회사에 들어가기를 바라지만 자신은 그림을 그리는 일을 하고 싶다고 했습니다. 진행자는 혼자 결정하기 어려우면 그 분야에서 일하는 사람에게 조언을 구해 보는 것이 좋다고 권했습니다. 그리고 부모님과 솔직하게 이야기하다 보면 서로를 더 이해하게 될 거라고 말했습니다.",
+    "passageVi": "Chương trình radio ‘Phòng tư vấn tâm hồn’ mỗi tuần nhận được nhiều câu chuyện tâm sự. Tuần trước, một sinh viên gửi tâm sự rằng mình đang lo lắng về chuyện định hướng tương lai. Bạn ấy nói bố mẹ mong mình vào một công ty ổn định nhưng bản thân lại muốn làm công việc vẽ tranh. Người dẫn chương trình khuyên nếu khó tự quyết định thì hãy thử xin lời khuyên từ người làm trong lĩnh vực đó. Và nói rằng cứ nói chuyện thẳng thắn với bố mẹ thì sẽ hiểu nhau hơn.",
+    "questions": [
+      {
+        "q": "Sinh viên lo lắng về điều gì?",
+        "options": [
+          "Định hướng tương lai khác mong muốn của bố mẹ",
+          "Không có tiền học",
+          "Mâu thuẫn với bạn cùng phòng",
+          "Bị mất ngủ"
+        ],
+        "explain": "진로 문제로 고민… 부모님은 안정적인 회사… 자신은 그림을…"
+      },
+      {
+        "q": "Người dẫn chương trình khuyên gì?",
+        "options": [
+          "Xin lời khuyên người trong ngành và nói chuyện thẳng thắn với bố mẹ",
+          "Làm theo ý bố mẹ",
+          "Bỏ học để vẽ tranh",
+          "Đến trung tâm tư vấn ngay"
+        ],
+        "explain": "조언을 구해 보는 것이 좋다고… 솔직하게 이야기하다 보면…"
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu tin nhắn 반말 gửi một người bạn đang có nỗi lo: gọi tên bạn bằng N아/야, hỏi thăm và động viên bằng -다 보면.",
+    "samples": [
+      [
+        "지수야, 요즘 많이 힘들지?",
+        "Ji-su à, dạo này mệt lắm phải không?"
+      ],
+      [
+        "고민이 있으면 나한테 다 털어놔.",
+        "Có chuyện lo gì thì cứ kể hết với tớ."
+      ],
+      [
+        "처음에는 어렵지만 계속 하다 보면 잘될 거야.",
+        "Lúc đầu thì khó nhưng cứ làm tiếp thì sẽ ổn thôi."
+      ],
+      [
+        "이번 주말에 같이 맛있는 거 먹으러 가자.",
+        "Cuối tuần này đi ăn món ngon với tớ nhé."
+      ]
+    ],
+    "tips": "Gọi tên: có patchim + 아, không patchim + 야. 반말: bỏ 요, 저 → 나, 이에요 → 이야. Rủ: -자, khuyên đừng: -지 마. Động viên: V-다 보면 + -(으)ㄹ 거야."
+  },
+  "topik": [
+    {
+      "type": "blank",
+      "q": "외국 생활이 처음에는 힘들지만 (    ) 익숙해질 거예요.",
+      "options": [
+        "지내다 보면",
+        "지내기 위해서",
+        "지내는 바람에",
+        "지낸다고 하면"
+      ],
+      "explain": "Cứ sống một thời gian thì sẽ quen → -다 보면."
+    },
+    {
+      "type": "blank",
+      "q": "고민이 있을 때 혼자 (    ) 주변 사람에게 이야기해 보세요.",
+      "options": [
+        "참지 말고",
+        "참다 보면",
+        "참을까 하고",
+        "참는 대신에"
+      ],
+      "explain": "Đừng chịu đựng một mình mà… → -지 말고."
+    },
+    {
+      "type": "blank",
+      "q": "요즘 스트레스가 많이 (    ) 잠을 잘 못 자요.",
+      "options": [
+        "쌓여서",
+        "쌓이다 보면",
+        "쌓일까 해서",
+        "쌓이자고"
+      ],
+      "explain": "Nêu lý do → -아/어서."
+    },
+    {
+      "type": "similar",
+      "q": "친구에게 고민을 __털어놓았더니__ 마음이 편해졌어요.",
+      "options": [
+        "솔직하게 이야기했더니",
+        "숨겼더니",
+        "잊어버렸더니",
+        "해결했더니"
+      ],
+      "explain": "털어놓다 ≈ thổ lộ thật lòng."
+    },
+    {
+      "type": "similar",
+      "q": "그 일을 계속 생각하면 __오히려__ 더 불안해져요.",
+      "options": [
+        "반대로",
+        "드디어",
+        "벌써",
+        "아마"
+      ],
+      "explain": "오히려 ≈ ngược lại."
+    },
+    {
+      "type": "notice",
+      "passage": "💬 한빛대학교 학생 상담 센터\n· 상담 내용: 진로, 학교생활 부적응, 인간관계, 스트레스 관리\n· 상담 시간: 평일 오전 10시 ~ 오후 5시\n· 신청: 홈페이지 또는 전화 (02-123-4567)\n· 모든 상담 내용은 비밀이 보장되며 비용은 무료입니다.",
+      "passageVi": "Trung tâm tư vấn sinh viên trường Đại học Hanbit. Nội dung: định hướng, không thích nghi với đời sống học đường, quan hệ, quản lý căng thẳng. Giờ tư vấn: ngày thường 10 giờ sáng – 5 giờ chiều. Đăng ký: trang chủ hoặc điện thoại. Mọi nội dung tư vấn được giữ bí mật và miễn phí.",
+      "q": "이 글의 내용과 같은 것을 고르십시오.",
+      "options": [
+        "상담 비용은 내지 않아도 됩니다.",
+        "주말에도 상담을 받을 수 있습니다.",
+        "상담 신청은 직접 방문해야만 합니다.",
+        "상담 내용은 다른 학생에게 알려 줍니다."
+      ],
+      "explain": "비용은 무료입니다."
+    },
+    {
+      "type": "order",
+      "passage": "(가) 그래서 용기를 내서 학교 상담 센터를 찾아갔습니다.\n(나) 한국에 처음 왔을 때 친구가 없어서 매일 불안하고 외로웠습니다.\n(다) 상담사 선생님의 조언 덕분에 지금은 친구도 많이 생겼습니다.\n(라) 그런 생활이 계속되자 밤에 잠도 잘 못 자게 되었습니다.",
+      "passageVi": "(나) Khi mới đến Hàn Quốc tôi không có bạn nên ngày nào cũng bất an và cô đơn. (라) Cuộc sống như thế kéo dài nên ban đêm tôi cũng không ngủ được. (가) Vì vậy tôi lấy hết can đảm tìm đến trung tâm tư vấn của trường. (다) Nhờ lời khuyên của chuyên viên tư vấn mà giờ tôi đã có nhiều bạn.",
+      "q": "다음을 순서대로 맞게 배열한 것을 고르십시오.",
+      "options": [
+        "(나)-(라)-(가)-(다)",
+        "(나)-(가)-(라)-(다)",
+        "(가)-(나)-(라)-(다)",
+        "(나)-(다)-(라)-(가)"
+      ],
+      "explain": "Hoàn cảnh (나) → hậu quả mất ngủ (라) → 그래서 đi tư vấn (가) → kết quả tốt (다)."
+    },
+    {
+      "type": "main",
+      "passage": "고민이 생기면 많은 사람들이 혼자 해결하려고 합니다. 다른 사람에게 이야기하는 것이 부담이 되기 때문입니다. 그러나 고민을 혼자 오래 가지고 있으면 작은 문제도 심각하게 느껴질 수 있습니다. 믿을 만한 사람에게 이야기하기만 해도 마음이 가벼워지고 문제를 해결할 방법이 보이기도 합니다.",
+      "passageVi": "Khi có nỗi lo, nhiều người muốn tự giải quyết một mình vì nói với người khác là gánh nặng. Nhưng nếu giữ nỗi lo một mình lâu thì chuyện nhỏ cũng có thể thấy nghiêm trọng. Chỉ cần kể với người đáng tin thôi là lòng nhẹ đi và đôi khi còn thấy cách giải quyết vấn đề.",
+      "q": "다음 글의 중심 생각으로 알맞은 것을 고르십시오.",
+      "options": [
+        "고민이 있을 때는 다른 사람에게 이야기하는 것이 도움이 됩니다.",
+        "고민은 혼자 해결하는 것이 가장 좋습니다.",
+        "작은 문제는 신경 쓰지 않아도 됩니다.",
+        "다른 사람의 고민을 들어 주는 것은 부담이 됩니다."
+      ],
+      "explain": "그러나… → ý chính: chia sẻ nỗi lo với người khác giúp ích."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "여자",
+          "민수야, 너 피곤해 보여. 무슨 일 있어?"
+        ],
+        [
+          "남자",
+          "요즘 밤에 잠이 안 와. 누워도 계속 이런저런 생각이 나."
+        ],
+        [
+          "여자",
+          "자기 전에 휴대폰을 보지 말고 가볍게 산책해 봐. 그러다 보면 좀 나아질 거야."
+        ],
+        [
+          "남자",
+          "그래? 오늘부터 한번 해 볼게."
+        ]
+      ],
+      "linesVi": "Nữ: Min-su à, trông cậu mệt quá. Có chuyện gì à? Nam: Dạo này đêm tớ không ngủ được. Nằm xuống mà cứ nghĩ đủ thứ. Nữ: Trước khi ngủ đừng xem điện thoại, thử đi dạo nhẹ xem. Cứ thế thì sẽ đỡ hơn. Nam: Vậy à? Từ hôm nay tớ sẽ thử.",
+      "q": "들은 내용과 같은 것을 고르십시오.",
+      "options": [
+        "남자는 요즘 잠을 잘 못 잡니다.",
+        "여자는 불면증 때문에 병원에 다닙니다.",
+        "남자는 매일 밤 운동을 합니다.",
+        "여자는 남자에게 커피를 권했습니다."
+      ],
+      "explain": "요즘 밤에 잠이 안 와."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "남자",
+          "요즘 진로 문제 때문에 고민이 많다고 들었어요."
+        ],
+        [
+          "여자",
+          "네, 졸업이 다가오는데 무슨 일을 해야 할지 모르겠어요."
+        ],
+        [
+          "남자",
+          "학교 상담 센터에서 진로 상담도 해 준대요. 전문 상담사가 있어서 도움이 많이 된대요."
+        ],
+        [
+          "여자",
+          "그래요? 몰랐어요. 다음 주에 한번 가 볼까 해요."
+        ]
+      ],
+      "linesVi": "Nam: Tôi nghe nói dạo này chị lo nhiều về chuyện định hướng tương lai. Nữ: Vâng, sắp tốt nghiệp mà không biết nên làm việc gì. Nam: Nghe nói trung tâm tư vấn của trường cũng tư vấn hướng nghiệp. Có chuyên viên nên giúp được nhiều lắm. Nữ: Vậy à? Tôi không biết. Tuần sau tôi định thử đến đó.",
+      "q": "여자가 할 행동으로 알맞은 것을 고르십시오.",
+      "options": [
+        "다음 주에 상담 센터에 가서 상담을 받습니다.",
+        "친구와 진로 문제로 이야기합니다.",
+        "인턴 공고를 찾아봅니다.",
+        "부모님께 전화를 합니다."
+      ],
+      "explain": "Nữ: 다음 주에 한번 가 볼까 해요 → định đi trung tâm tư vấn."
+    }
+  ],
+  "fillWriting": [
+    {
+      "text": "지민아, 오랜만이야. 잘 지내? 나는 요즘 회사 일 때문에 스트레스가 많이 ( ㉠ ). 그래서 이번 주말에 바다에 가서 바람을 좀 쐬고 싶어. 너도 시간 있으면 같이 ( ㉡ ). 연락 기다릴게.",
+      "textVi": "Ji-min à, lâu rồi không gặp. Cậu khỏe không? Dạo này tớ ( ㉠ ) nhiều căng thẳng vì việc công ty. Nên cuối tuần này tớ muốn ra biển hóng gió chút. Cậu có thời gian thì ( ㉡ ) cùng nhé. Tớ chờ tin.",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "쌓였어",
+            "쌓인 것 같아"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "가자",
+            "갈래?"
+          ]
+        }
+      ],
+      "tips": "Thư 반말 gửi bạn (지민아). ㉠ 스트레스가 쌓이다 chia 반말 quá khứ: 쌓였어. ㉡ rủ rê 반말: -자 / -(으)ㄹ래?"
+    },
+    {
+      "text": "사람들과 함께 지내다 보면 갈등이 생기는 것은 자연스러운 일입니다. 중요한 것은 갈등을 피하지 않고 ( ㉠ ) 것입니다. 서로 생각이 다를 때는 먼저 상대방의 이야기를 끝까지 들어야 합니다. 그렇게 하면 갈등이 생겨도 ( ㉡ ).",
+      "textVi": "Sống cùng mọi người thì việc nảy sinh mâu thuẫn là chuyện tự nhiên. Điều quan trọng là không né tránh mâu thuẫn mà ( ㉠ ). Khi suy nghĩ khác nhau thì trước hết phải nghe đối phương nói đến hết. Làm như vậy thì dù có mâu thuẫn cũng ( ㉡ ).",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "대화로 해결하는",
+            "잘 해소하는"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "쉽게 해결할 수 있습니다",
+            "관계가 나빠지지 않습니다"
+          ]
+        }
+      ],
+      "tips": "㉠ trước 것 cần định ngữ -는: 해결하는 / 해소하는. ㉡ kết quả tốt của việc lắng nghe: -(으)ㄹ 수 있습니다."
+    }
+  ]
+}

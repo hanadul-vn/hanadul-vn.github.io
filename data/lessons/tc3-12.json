@@ -1,0 +1,822 @@
+{
+  "id": "tc3-12",
+  "title": "Internet",
+  "ko": "인터넷",
+  "goal": "Dùng internet, email và phần mềm soạn thảo; viết ghi chú ngắn bằng -(으)ㅁ, thuật lại lời “bảo hãy…” và lời rủ “rủ cùng…”.",
+  "vocab": [
+    {
+      "group": "Internet",
+      "words": [
+        [
+          "사이트",
+          "trang web"
+        ],
+        [
+          "블로그",
+          "blog"
+        ],
+        [
+          "홈페이지",
+          "trang chủ"
+        ],
+        [
+          "웹 문서",
+          "tài liệu trên web"
+        ],
+        [
+          "동영상",
+          "video"
+        ],
+        [
+          "검색",
+          "sự tìm kiếm"
+        ],
+        [
+          "댓글",
+          "bình luận"
+        ]
+      ]
+    },
+    {
+      "group": "Email",
+      "words": [
+        [
+          "보내기",
+          "gửi đi"
+        ],
+        [
+          "답 메일",
+          "thư trả lời"
+        ],
+        [
+          "받기",
+          "nhận thư"
+        ],
+        [
+          "전체 메일",
+          "thư gửi tất cả mọi người"
+        ],
+        [
+          "전달하기",
+          "chuyển tiếp"
+        ],
+        [
+          "이메일 주소",
+          "địa chỉ email"
+        ]
+      ]
+    },
+    {
+      "group": "Phần mềm soạn thảo",
+      "words": [
+        [
+          "복사하기",
+          "sao chép"
+        ],
+        [
+          "잘라내기",
+          "cắt (cut)"
+        ],
+        [
+          "오려두기",
+          "cắt để dán chỗ khác"
+        ],
+        [
+          "붙이기",
+          "dán"
+        ],
+        [
+          "불러오기",
+          "mở tệp đã lưu"
+        ],
+        [
+          "저장하기",
+          "lưu"
+        ],
+        [
+          "삭제하기",
+          "xóa"
+        ],
+        [
+          "되돌리기",
+          "hoàn tác"
+        ],
+        [
+          "인쇄하기",
+          "in"
+        ],
+        [
+          "글씨 크기",
+          "cỡ chữ"
+        ],
+        [
+          "글씨 모양",
+          "kiểu chữ, phông chữ"
+        ],
+        [
+          "문단 모양",
+          "định dạng đoạn văn"
+        ]
+      ]
+    },
+    {
+      "group": "Từ mới trong bài",
+      "words": [
+        [
+          "궁궐",
+          "cung điện"
+        ],
+        [
+          "대출",
+          "sự cho mượn (sách), khoản vay"
+        ],
+        [
+          "돌리다",
+          "xoay, chuyển (cho người khác)"
+        ],
+        [
+          "마무리하다",
+          "hoàn tất, làm nốt"
+        ],
+        [
+          "민속박물관",
+          "bảo tàng dân gian"
+        ],
+        [
+          "빠뜨리다",
+          "bỏ sót, đánh rơi"
+        ],
+        [
+          "보고서 작성",
+          "việc viết báo cáo"
+        ],
+        [
+          "분실물 센터",
+          "trung tâm đồ thất lạc"
+        ],
+        [
+          "설문 조사",
+          "khảo sát, điều tra bằng phiếu hỏi"
+        ],
+        [
+          "야경",
+          "cảnh đêm"
+        ],
+        [
+          "유인물",
+          "tài liệu phát tay"
+        ],
+        [
+          "연기되다",
+          "bị hoãn"
+        ],
+        [
+          "적응",
+          "sự thích nghi"
+        ],
+        [
+          "제출하다",
+          "nộp"
+        ],
+        [
+          "참가비",
+          "phí tham gia"
+        ],
+        [
+          "참고 자료",
+          "tài liệu tham khảo"
+        ],
+        [
+          "찻집",
+          "quán trà"
+        ],
+        [
+          "추천하다",
+          "giới thiệu, đề cử"
+        ],
+        [
+          "취소되다",
+          "bị hủy"
+        ],
+        [
+          "한식당",
+          "nhà hàng món Hàn"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "A/V -(으)ㅁ",
+      "title": "danh từ hóa (ghi chú, thông báo ngắn)",
+      "note": [
+        "Biến động từ/tính từ thành danh từ; hay dùng để kết thúc câu ngắn gọn trong ghi chú, tin nhắn công việc, thông báo, biểu mẫu.",
+        "Thân có patchim + -음 (있음, 없음, 먹음), không patchim + -ㅁ (감, 바쁨); thân ㄹ + -ㅁ (만들다 → 만듦, 살다 → 삶). Quá khứ: -았/었음 (제출했음).",
+        "Cũng dùng trong câu: N이/가 -(으)ㅁ을 알다/느끼다 (그가 바쁨을 알았다). Danh từ gốc: 웃다 → 웃음, 꿈꾸다 → 꿈."
+      ],
+      "examples": [
+        [
+          "회의 장소가 3층으로 변경됨.",
+          "Địa điểm họp đã đổi sang tầng 3."
+        ],
+        [
+          "보고서는 금요일까지 이메일로 제출할 것. 늦으면 받지 않음.",
+          "Báo cáo nộp qua email trước thứ Sáu. Nộp muộn không nhận."
+        ],
+        [
+          "오늘 할 일: 자료 검색함, 보고서 작성 아직 못 함.",
+          "Việc hôm nay: đã tìm tài liệu, chưa viết báo cáo."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "(메모) 내일 회의 ___. 모두 참고하세요.",
+          "options": [
+            "없음",
+            "없음니다",
+            "없슴",
+            "없기"
+          ],
+          "explain": "Thân có patchim + -음: 없음."
+        },
+        {
+          "q": "(공지) 이번 주 토요일 도서관 휴관. 대출은 다음 주부터 ___.",
+          "options": [
+            "가능함",
+            "가능하음",
+            "가능해음",
+            "가능하기"
+          ],
+          "explain": "하다 → 함."
+        },
+        {
+          "q": "(메모) 민수 씨가 오후 3시에 ___. 전화 부탁.",
+          "options": [
+            "전화했음",
+            "전화했슴",
+            "전화하음",
+            "전화했기"
+          ],
+          "explain": "Quá khứ -았/었음."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "이번 설문 조사는 학생들의 생활을 알기 위해 만듦.",
+            "이번 설문 조사는 학생들의 생활을 알기 위해 만들음.",
+            "이번 설문 조사는 학생들의 생활을 알기 위해 만드음.",
+            "이번 설문 조사는 학생들의 생활을 알기 위해 만들기음."
+          ],
+          "explain": "Thân ㄹ + -ㅁ: 만듦."
+        },
+        {
+          "q": "Nghĩa của \"참가비 없음. 누구나 참여할 수 있음.\"",
+          "options": [
+            "Không có phí tham gia. Ai cũng có thể tham gia.",
+            "Phải trả phí tham gia. Chỉ một số người tham gia được.",
+            "Hỏi xem có phí tham gia không.",
+            "Đừng tham gia vì không có phí."
+          ],
+          "explain": "-(으)ㅁ dùng trong thông báo ngắn."
+        }
+      ]
+    },
+    {
+      "pattern": "V -(으)라고 하다",
+      "title": "bảo (ai) hãy… (thuật lại mệnh lệnh, đề nghị)",
+      "note": [
+        "Thuật lại câu mệnh lệnh/yêu cầu: 선생님이 숙제를 내라고 하셨어요. Thân có patchim + -으라고 (읽으라고), không patchim/ㄹ + -라고 (가라고, 만들라고).",
+        "Cấm: -지 말라고 하다 (늦지 말라고 했어요).",
+        "주다: xin cho chính người nói → 달라고 (저에게 도와 달라고 했어요 = bảo giúp tôi); cho người thứ ba → 주라고 (동생에게 책을 주라고 했어요). Nói gọn: -(으)래요 (= -(으)라고 해요)."
+      ],
+      "examples": [
+        [
+          "교수님께서 리포트를 이메일로 제출하라고 하셨어요.",
+          "Giáo sư bảo nộp bài báo cáo qua email."
+        ],
+        [
+          "친구가 사이트 주소를 보내 달라고 했어요.",
+          "Bạn tôi nhờ gửi cho cậu ấy địa chỉ trang web."
+        ],
+        [
+          "엄마가 밤늦게 동영상을 보지 말라고 하셨어요.",
+          "Mẹ bảo đừng xem video khuya."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "선생님이 내일까지 이 책을 ___ 하셨어요.",
+          "options": [
+            "읽으라고",
+            "읽는다고",
+            "읽자고",
+            "읽냐고"
+          ],
+          "explain": "Mệnh lệnh, thân có patchim + -으라고."
+        },
+        {
+          "q": "팀장님이 회의 자료를 모든 직원에게 ___ 하셨어요.",
+          "options": [
+            "전달하라고",
+            "전달한다고",
+            "전달하자고",
+            "전달하냐고"
+          ],
+          "explain": "Thuật yêu cầu → -(으)라고 하다."
+        },
+        {
+          "q": "친구가 저에게 노트북을 좀 빌려 ___ 했어요.",
+          "options": [
+            "달라고",
+            "주라고",
+            "주자고",
+            "준다고"
+          ],
+          "explain": "Xin cho chính người nói → 달라고."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "의사 선생님이 컴퓨터를 너무 오래 하지 말라고 했어요.",
+            "의사 선생님이 컴퓨터를 너무 오래 하지 마라고 했어요.",
+            "의사 선생님이 컴퓨터를 너무 오래 안 하라고 했어요.",
+            "의사 선생님이 컴퓨터를 너무 오래 하지 말자고 했어요."
+          ],
+          "explain": "Cấm → -지 말라고 하다."
+        },
+        {
+          "q": "Nghĩa của \"과장님이 보고서를 다시 써 오래요.\"",
+          "options": [
+            "Trưởng phòng bảo viết lại báo cáo rồi mang đến.",
+            "Trưởng phòng nói đã viết lại báo cáo.",
+            "Trưởng phòng rủ cùng viết lại báo cáo.",
+            "Trưởng phòng hỏi đã viết lại báo cáo chưa."
+          ],
+          "explain": "-(으)래요 = -(으)라고 해요."
+        }
+      ]
+    },
+    {
+      "pattern": "V -자고 하다",
+      "title": "rủ… (thuật lại lời rủ)",
+      "note": [
+        "Thuật lại câu rủ rê -(으)ㅂ시다 / -자 / -(으)ㄹ까요?: 친구가 같이 점심을 먹자고 했어요. Gắn thẳng vào thân động từ, không phân biệt patchim.",
+        "Phủ định: -지 말자고 하다 (오늘은 나가지 말자고 했어요).",
+        "Nói gọn: -재요 (= -자고 해요). Tổng hợp: kể -다고, hỏi -냐고, bảo -(으)라고, rủ -자고."
+      ],
+      "examples": [
+        [
+          "동료가 퇴근 후에 한식당에 가자고 했어요.",
+          "Đồng nghiệp rủ sau giờ làm đi nhà hàng món Hàn."
+        ],
+        [
+          "친구가 이번 주말에 궁궐 야경을 보러 가자고 했어요.",
+          "Bạn tôi rủ cuối tuần này đi ngắm cảnh đêm ở cung điện."
+        ],
+        [
+          "형이 비가 오니까 오늘은 나가지 말자고 했어요.",
+          "Anh tôi bảo trời mưa nên hôm nay đừng ra ngoài."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "친구가 시험이 끝나면 같이 ___ 했어요.",
+          "options": [
+            "여행 가자고",
+            "여행 가라고",
+            "여행 간다고",
+            "여행 가냐고"
+          ],
+          "explain": "Lời rủ → -자고 하다."
+        },
+        {
+          "q": "A: 수진 씨가 뭐래요? B: 내일 찻집에서 ___.",
+          "options": [
+            "만나재요",
+            "만나래요",
+            "만난대요",
+            "만나냬요"
+          ],
+          "explain": "-재요 = -자고 해요 (rủ gặp)."
+        },
+        {
+          "q": "동생이 날씨가 추우니까 오늘은 ___ 했어요.",
+          "options": [
+            "나가지 말자고",
+            "나가지 말라고 자고",
+            "안 나가자고 말고",
+            "나가자고 말고"
+          ],
+          "explain": "Rủ đừng làm → -지 말자고 하다."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "민호가 저녁에 같이 숙제를 하자고 했어요.",
+            "민호가 저녁에 같이 숙제를 하으자고 했어요.",
+            "민호가 저녁에 같이 숙제를 한자고 했어요.",
+            "민호가 저녁에 같이 숙제를 했자고 했어요."
+          ],
+          "explain": "Thân động từ + -자고, không chia thì."
+        },
+        {
+          "q": "Nghĩa của \"동아리 친구들이 설문 조사를 같이 하자고 했어요.\"",
+          "options": [
+            "Bạn trong câu lạc bộ rủ cùng làm khảo sát.",
+            "Bạn trong câu lạc bộ bảo tôi làm khảo sát một mình.",
+            "Bạn trong câu lạc bộ nói đã làm khảo sát.",
+            "Bạn trong câu lạc bộ hỏi có làm khảo sát không."
+          ],
+          "explain": "-자고 하다 = rủ."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "모르는 단어가 있으면 인터넷에서 ___해 보세요.",
+      "options": [
+        "검색",
+        "인쇄",
+        "대출",
+        "야경"
+      ],
+      "explain": "Tìm trên mạng → 검색하다."
+    },
+    {
+      "q": "이 글에 ___이 100개나 달렸어요.",
+      "options": [
+        "댓글",
+        "유인물",
+        "참가비",
+        "궁궐"
+      ],
+      "explain": "Bình luận dưới bài viết → 댓글."
+    },
+    {
+      "q": "문서를 다 쓴 다음에 꼭 ___를 누르세요. 안 그러면 다 없어져요.",
+      "options": [
+        "저장하기",
+        "삭제하기",
+        "잘라내기",
+        "받기"
+      ],
+      "explain": "Lưu tệp → 저장하기."
+    },
+    {
+      "q": "실수로 글을 지웠을 때는 ___를 누르면 돼요.",
+      "options": [
+        "되돌리기",
+        "인쇄하기",
+        "보내기",
+        "전달하기"
+      ],
+      "explain": "Hoàn tác → 되돌리기."
+    },
+    {
+      "q": "팀장님께 받은 메일을 동료들에게 ___했어요.",
+      "options": [
+        "전달",
+        "검색",
+        "삭제",
+        "적응"
+      ],
+      "explain": "Gửi tiếp thư đã nhận → 전달하다."
+    },
+    {
+      "q": "비 때문에 오늘 야외 행사가 다음 주로 ___.",
+      "options": [
+        "연기되었어요",
+        "제출했어요",
+        "추천했어요",
+        "마무리했어요"
+      ],
+      "explain": "Bị hoãn → 연기되다."
+    },
+    {
+      "q": "지하철에 가방을 두고 내려서 ___에 연락했어요.",
+      "options": [
+        "분실물 센터",
+        "민속박물관",
+        "한식당",
+        "찻집"
+      ],
+      "explain": "Mất đồ → 분실물 센터."
+    },
+    {
+      "q": "보고서를 쓸 때 인터넷에서 찾은 ___를 함께 정리했어요.",
+      "options": [
+        "참고 자료",
+        "답 메일",
+        "글씨 크기",
+        "문단 모양"
+      ],
+      "explain": "Tài liệu tham khảo → 참고 자료."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 과제는 어떻게 내요? 나: 교수님이 금요일까지 이메일로 보내라고 하셨어요.",
+      "q": "Nộp bài tập thế nào?",
+      "options": [
+        "Gửi email trước thứ Sáu",
+        "Nộp trực tiếp trên lớp",
+        "Đăng lên blog",
+        "Nộp sau thứ Sáu"
+      ],
+      "explain": "금요일까지 이메일로 보내라고 하셨어요."
+    },
+    {
+      "listen": "가: 민지 씨가 뭐래요? 나: 주말에 같이 민속박물관에 가자고 했어요.",
+      "q": "Min-ji đã rủ gì?",
+      "options": [
+        "Cuối tuần cùng đi bảo tàng dân gian",
+        "Cùng đi quán trà",
+        "Cùng làm báo cáo",
+        "Cùng xem video"
+      ],
+      "explain": "같이 민속박물관에 가자고 했어요."
+    },
+    {
+      "listen": "가: 파일을 열었는데 글씨가 너무 작아요. 나: 위에 있는 글씨 크기를 눌러서 바꿔 보세요.",
+      "q": "Người thứ hai hướng dẫn gì?",
+      "options": [
+        "Đổi cỡ chữ",
+        "In tài liệu",
+        "Xóa tệp",
+        "Gửi lại email"
+      ],
+      "explain": "글씨 크기를 눌러서 바꿔 보세요."
+    },
+    {
+      "listen": "가: 이번 설문 조사에 참가하면 뭘 받을 수 있어요? 나: 참가비는 없고 끝나면 커피 쿠폰을 드려요.",
+      "q": "Điều nào đúng?",
+      "options": [
+        "Không mất phí, xong được phiếu cà phê",
+        "Phải trả phí tham gia",
+        "Được tiền mặt",
+        "Chỉ nhân viên được tham gia"
+      ],
+      "explain": "참가비는 없고… 커피 쿠폰을 드려요."
+    },
+    {
+      "listen": "가: 이메일 주소를 잘못 써서 메일이 안 갔나 봐요. 나: 그럼 주소를 다시 확인하고 한 번 더 보내 보세요.",
+      "q": "Vì sao thư không gửi được?",
+      "options": [
+        "Viết sai địa chỉ email",
+        "Tệp quá nặng",
+        "Mạng bị lỗi",
+        "Chưa lưu thư"
+      ],
+      "explain": "이메일 주소를 잘못 써서…"
+    }
+  ],
+  "reading": {
+    "passage": "요즘은 인터넷으로 모르는 것을 쉽게 찾을 수 있습니다. 하지만 인터넷에 있는 정보가 모두 정확한 것은 아닙니다. 그래서 선생님은 리포트를 쓸 때 블로그나 댓글보다는 믿을 수 있는 사이트의 자료를 참고하라고 하셨습니다. 또 다른 사람의 글을 복사해서 붙이지 말고 자기 생각으로 다시 쓰라고 하셨습니다.",
+    "passageVi": "Dạo này có thể dễ dàng tìm điều mình chưa biết qua internet. Nhưng không phải thông tin nào trên mạng cũng chính xác. Vì vậy thầy giáo bảo khi viết báo cáo thì nên tham khảo tài liệu ở các trang web đáng tin hơn là blog hay bình luận. Thầy cũng bảo đừng sao chép rồi dán bài của người khác mà hãy viết lại bằng suy nghĩ của mình.",
+    "questions": [
+      {
+        "q": "Thầy giáo bảo tham khảo tài liệu ở đâu?",
+        "options": [
+          "Trang web đáng tin cậy",
+          "Blog cá nhân",
+          "Phần bình luận",
+          "Bất cứ đâu"
+        ],
+        "explain": "믿을 수 있는 사이트의 자료를 참고하라고…"
+      },
+      {
+        "q": "Điều nào thầy giáo dặn KHÔNG được làm?",
+        "options": [
+          "Sao chép và dán bài của người khác",
+          "Tìm kiếm trên mạng",
+          "Viết bằng suy nghĩ của mình",
+          "Đọc tài liệu tham khảo"
+        ],
+        "explain": "복사해서 붙이지 말고…"
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu thuật lại những gì người khác bảo và rủ bạn trong tuần này, rồi thêm 1 dòng ghi chú ngắn bằng -(으)ㅁ.",
+    "samples": [
+      [
+        "팀장님이 금요일까지 보고서를 마무리하라고 하셨어요.",
+        "Trưởng nhóm bảo hoàn tất báo cáo trước thứ Sáu."
+      ],
+      [
+        "동료가 끝나고 같이 한식당에 가자고 했어요.",
+        "Đồng nghiệp rủ xong việc cùng đi nhà hàng món Hàn."
+      ],
+      [
+        "친구는 회의 자료를 보내 달라고 했어요.",
+        "Bạn tôi nhờ gửi tài liệu họp cho cậu ấy."
+      ],
+      [
+        "메모: 보고서 작성 완료함. 월요일 제출 예정.",
+        "Ghi chú: đã viết xong báo cáo. Dự kiến nộp thứ Hai."
+      ]
+    ],
+    "tips": "Bảo: V-(으)라고 / -지 말라고 하다; nhờ cho mình: -아/어 달라고. Rủ: V-자고 / -지 말자고 하다. Ghi chú: -(으)ㅁ (있음, 함, 했음)."
+  },
+  "topik": [
+    {
+      "type": "blank",
+      "q": "선생님께서 시험 시간에 휴대폰을 (    ) 하셨어요.",
+      "options": [
+        "끄라고",
+        "끄자고",
+        "끈다고",
+        "끄냐고"
+      ],
+      "explain": "Thuật lại yêu cầu của thầy → -(으)라고 하다."
+    },
+    {
+      "type": "blank",
+      "q": "친구가 오늘은 피곤하니까 일찍 (    ) 했어요.",
+      "options": [
+        "들어가자고",
+        "들어가냐고",
+        "들어갈까",
+        "들어감"
+      ],
+      "explain": "Lời rủ → -자고 하다."
+    },
+    {
+      "type": "blank",
+      "q": "(공지) 우천으로 인해 오늘 행사가 (    ).",
+      "options": [
+        "취소됨",
+        "취소되자고",
+        "취소하라고",
+        "취소됐냐고"
+      ],
+      "explain": "Thông báo ngắn → -(으)ㅁ."
+    },
+    {
+      "type": "similar",
+      "q": "동생이 저한테 이 동영상을 같이 __보재요__.",
+      "options": [
+        "보자고 해요",
+        "보라고 해요",
+        "본다고 해요",
+        "보냐고 해요"
+      ],
+      "explain": "-재요 = -자고 해요."
+    },
+    {
+      "type": "similar",
+      "q": "과장님이 유인물을 회의 전에 __나눠 주래요__.",
+      "options": [
+        "나눠 주라고 해요",
+        "나눠 주자고 해요",
+        "나눠 준다고 해요",
+        "나눠 주냐고 해요"
+      ],
+      "explain": "-(으)래요 = -(으)라고 해요."
+    },
+    {
+      "type": "notice",
+      "passage": "📢 한빛도서관 홈페이지 이용 안내\n· 자료 검색과 대출 예약은 회원 가입 후 가능함\n· 대출 기간: 2주 (1회 연장 가능)\n· 전자책은 집에서도 무료로 볼 수 있음\n· 매월 마지막 주 월요일 휴관",
+      "passageVi": "Hướng dẫn dùng trang chủ thư viện Hanbit. Tìm tài liệu và đặt mượn sách được sau khi đăng ký thành viên. Thời hạn mượn: 2 tuần (gia hạn 1 lần). Sách điện tử xem miễn phí cả ở nhà. Nghỉ thứ Hai tuần cuối mỗi tháng.",
+      "q": "이 글의 내용과 같은 것을 고르십시오.",
+      "options": [
+        "회원 가입을 해야 대출 예약을 할 수 있습니다.",
+        "책은 한 달 동안 빌릴 수 있습니다.",
+        "전자책은 도서관에서만 볼 수 있습니다.",
+        "도서관은 매주 월요일에 쉽니다."
+      ],
+      "explain": "대출 예약은 회원 가입 후 가능함."
+    },
+    {
+      "type": "order",
+      "passage": "(가) 그래서 홈페이지에 들어가서 신청 방법을 검색해 봤습니다.\n(나) 친구가 이번 주말에 열리는 한국 요리 체험 행사에 같이 가자고 했습니다.\n(다) 신청서를 쓰고 참가비를 내니까 확인 메일이 왔습니다.\n(라) 그런데 행사에 참가하려면 인터넷으로 미리 신청해야 한다고 했습니다.",
+      "passageVi": "(나) Bạn tôi rủ cùng đi sự kiện trải nghiệm nấu món Hàn tổ chức cuối tuần này. (라) Nhưng nghe nói muốn tham gia thì phải đăng ký trước qua mạng. (가) Vì vậy tôi vào trang chủ tìm cách đăng ký. (다) Viết đơn và đóng phí tham gia xong thì có thư xác nhận đến.",
+      "q": "다음을 순서대로 맞게 배열한 것을 고르십시오.",
+      "options": [
+        "(나)-(라)-(가)-(다)",
+        "(나)-(가)-(라)-(다)",
+        "(라)-(나)-(가)-(다)",
+        "(나)-(다)-(가)-(라)"
+      ],
+      "explain": "Bạn rủ (나) → 그런데 phải đăng ký trước (라) → 그래서 tìm cách đăng ký (가) → đăng ký xong (다)."
+    },
+    {
+      "type": "main",
+      "passage": "인터넷 댓글은 다른 사람과 생각을 나눌 수 있는 좋은 방법입니다. 하지만 얼굴이 보이지 않는다고 해서 다른 사람에게 상처를 주는 말을 쉽게 쓰는 사람들이 있습니다. 댓글도 직접 만나서 하는 말과 같습니다. 글을 쓰기 전에 읽는 사람의 마음을 한 번 더 생각해야 합니다.",
+      "passageVi": "Bình luận trên mạng là cách tốt để chia sẻ suy nghĩ với người khác. Nhưng có những người vì không thấy mặt mà dễ dàng viết lời làm tổn thương người khác. Bình luận cũng giống như lời nói khi gặp trực tiếp. Trước khi viết phải nghĩ thêm một lần về cảm xúc của người đọc.",
+      "q": "다음 글의 중심 생각으로 알맞은 것을 고르십시오.",
+      "options": [
+        "댓글을 쓸 때도 읽는 사람을 배려해야 합니다.",
+        "인터넷에는 댓글을 쓰지 않는 것이 좋습니다.",
+        "댓글은 생각을 나누는 데 도움이 되지 않습니다.",
+        "얼굴이 보이지 않으면 무슨 말이든 해도 됩니다."
+      ],
+      "explain": "Hai câu cuối nêu ý chính: nghĩ cho người đọc khi viết bình luận."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "남자",
+          "어떡하지요? 컴퓨터가 갑자기 꺼졌어요."
+        ],
+        [
+          "여자",
+          "쓰던 보고서는 저장했어요?"
+        ],
+        [
+          "남자",
+          "아니요, 거의 다 썼는데 저장을 안 했어요."
+        ],
+        [
+          "여자",
+          "그 프로그램은 자동 저장 기능이 있으니까 다시 켜서 불러오기를 눌러 보세요."
+        ]
+      ],
+      "linesVi": "Nam: Làm sao đây? Máy tính tự nhiên tắt mất. Nữ: Báo cáo đang viết anh lưu chưa? Nam: Chưa, gần viết xong rồi mà chưa lưu. Nữ: Phần mềm đó có chức năng tự lưu, anh bật lại rồi bấm mở tệp thử xem.",
+      "q": "들은 내용과 같은 것을 고르십시오.",
+      "options": [
+        "남자는 파일을 저장하지 않았습니다.",
+        "여자는 남자의 파일을 삭제했습니다.",
+        "남자는 보고서를 이미 제출했습니다.",
+        "여자는 컴퓨터를 고치러 갑니다."
+      ],
+      "explain": "저장을 안 했어요."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "남자",
+          "지영 씨, 내일 회의 자료 준비됐어요?"
+        ],
+        [
+          "여자",
+          "네, 방금 마무리했어요. 인쇄해서 나눠 드릴까요?"
+        ],
+        [
+          "남자",
+          "아니요, 팀장님이 종이를 아끼자고 하셔서요. 전체 메일로 보내 달래요."
+        ],
+        [
+          "여자",
+          "알겠습니다. 지금 바로 보낼게요."
+        ]
+      ],
+      "linesVi": "Nam: Ji-yeong, tài liệu họp ngày mai chuẩn bị xong chưa? Nữ: Rồi ạ, vừa làm xong. Tôi in ra phát cho mọi người nhé? Nam: Không, trưởng nhóm rủ mọi người tiết kiệm giấy. Anh ấy nhờ gửi thư cho tất cả. Nữ: Vâng ạ. Tôi gửi ngay bây giờ.",
+      "q": "여자가 할 행동으로 알맞은 것을 고르십시오.",
+      "options": [
+        "회의 자료를 전체 메일로 보냅니다.",
+        "회의를 취소합니다.",
+        "회의 자료를 인쇄합니다.",
+        "팀장님께 전화를 합니다."
+      ],
+      "explain": "팀장님이 전체 메일로 보내라고 하셨어요 → nữ: 지금 바로 보낼게요."
+    }
+  ],
+  "fillWriting": [
+    {
+      "text": "제목: 동아리 모임 장소 변경\n회원 여러분, 이번 주 금요일 모임 장소가 학생회관 2층으로 ( ㉠ ). 회장님이 모임에 오기 전에 첨부한 유인물을 미리 ( ㉡ ) 하셨습니다. 그럼 금요일에 만납시다.",
+      "textVi": "Tiêu đề: Đổi địa điểm sinh hoạt câu lạc bộ. Các thành viên thân mến, địa điểm sinh hoạt thứ Sáu tuần này ( ㉠ ) tầng 2 nhà sinh viên. Chủ nhiệm ( ㉡ ) tài liệu đính kèm trước khi đến buổi sinh hoạt. Hẹn gặp vào thứ Sáu.",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "바뀌었습니다",
+            "변경되었습니다"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "읽어 오라고",
+            "읽어 보라고"
+          ]
+        }
+      ],
+      "tips": "㉠ địa điểm bị đổi → bị động 바뀌다 / 변경되다, quá khứ trang trọng. ㉡ thuật lại yêu cầu của chủ nhiệm trước 하셨습니다 → -(으)라고."
+    },
+    {
+      "text": "요즘은 종이 대신 컴퓨터로 문서를 작성하는 사람이 많습니다. 컴퓨터로 문서를 쓰면 틀린 부분을 쉽게 고칠 수 있고, 같은 내용을 다시 쓸 필요 없이 ( ㉠ ) 됩니다. 하지만 갑자기 컴퓨터가 꺼지면 쓴 내용이 모두 사라질 수 있습니다. 그러니까 문서를 쓰는 중간중간에 ( ㉡ ).",
+      "textVi": "Dạo này nhiều người soạn văn bản bằng máy tính thay cho giấy. Viết bằng máy tính thì dễ sửa phần sai, và không cần viết lại cùng một nội dung mà chỉ cần ( ㉠ ). Nhưng nếu máy tính tắt đột ngột thì nội dung đã viết có thể mất hết. Vì vậy trong lúc viết văn bản nên ( ㉡ ).",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "복사해서 붙이면",
+            "복사하기와 붙이기를 하면"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "자주 저장해야 합니다",
+            "저장하는 것이 좋습니다"
+          ]
+        }
+      ],
+      "tips": "㉠ trước 되다 cần -(으)면 (chỉ cần… là được): 복사해서 붙이면 됩니다. ㉡ sau 그러니까 → lời khuyên lưu thường xuyên: -아/어야 합니다 / -는 것이 좋습니다."
+    }
+  ]
+}
