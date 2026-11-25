@@ -1,0 +1,1016 @@
+{
+  "id": "tc3-13",
+  "title": "Ước mơ, hy vọng",
+  "ko": "희망",
+  "goal": "Nói về ước mơ, hướng đi tương lai, hoạt động tình nguyện và thành công; dùng “dần dần…”, “(đã) … đến nay”, “phải … thôi” và “ước gì…”.",
+  "vocab": [
+    {
+      "group": "Ước mơ, hy vọng",
+      "words": [
+        [
+          "꿈이 있다",
+          "có ước mơ"
+        ],
+        [
+          "꿈을 가지다",
+          "mang trong mình ước mơ"
+        ],
+        [
+          "희망적이다",
+          "đầy hy vọng, lạc quan"
+        ],
+        [
+          "꿈을 키우다",
+          "nuôi dưỡng ước mơ"
+        ],
+        [
+          "꿈을 나누다",
+          "chia sẻ ước mơ"
+        ],
+        [
+          "희망을 잃다",
+          "mất hy vọng"
+        ],
+        [
+          "꿈을 펼치다",
+          "thực hiện, mở rộng ước mơ"
+        ]
+      ]
+    },
+    {
+      "group": "Tương lai, hướng đi",
+      "words": [
+        [
+          "장래 희망",
+          "nguyện vọng tương lai (muốn làm nghề gì)"
+        ],
+        [
+          "진로",
+          "con đường, hướng đi tương lai"
+        ],
+        [
+          "진로를 정하다",
+          "chọn hướng đi tương lai"
+        ],
+        [
+          "취업하다",
+          "đi làm, có việc làm"
+        ],
+        [
+          "진학하다",
+          "học lên (cấp cao hơn)"
+        ],
+        [
+          "유학을 가다",
+          "đi du học"
+        ],
+        [
+          "적성에 맞다",
+          "hợp với năng khiếu, sở trường"
+        ],
+        [
+          "경험을 쌓다",
+          "tích lũy kinh nghiệm"
+        ]
+      ]
+    },
+    {
+      "group": "Hoạt động tình nguyện",
+      "words": [
+        [
+          "봉사 활동을 하다",
+          "làm hoạt động tình nguyện"
+        ],
+        [
+          "기부를 하다",
+          "quyên góp, ủng hộ"
+        ],
+        [
+          "자원봉사를 하다",
+          "làm tình nguyện viên"
+        ],
+        [
+          "자원봉사자",
+          "tình nguyện viên"
+        ],
+        [
+          "양로원",
+          "viện dưỡng lão"
+        ],
+        [
+          "고아원",
+          "trại trẻ mồ côi"
+        ],
+        [
+          "시각장애인",
+          "người khiếm thị"
+        ],
+        [
+          "청각장애인",
+          "người khiếm thính"
+        ],
+        [
+          "신체장애인",
+          "người khuyết tật vận động"
+        ],
+        [
+          "장애인 복지 시설",
+          "cơ sở phúc lợi cho người khuyết tật"
+        ],
+        [
+          "보람이 있다",
+          "có ý nghĩa, đáng công"
+        ],
+        [
+          "보람을 느끼다",
+          "cảm thấy việc mình làm có ý nghĩa"
+        ]
+      ]
+    },
+    {
+      "group": "Thành công, thất bại",
+      "words": [
+        [
+          "성공하다",
+          "thành công"
+        ],
+        [
+          "성공을 거두다",
+          "đạt được thành công"
+        ],
+        [
+          "성공 비결",
+          "bí quyết thành công"
+        ],
+        [
+          "꿈을 이루다",
+          "đạt được ước mơ"
+        ],
+        [
+          "실패하다",
+          "thất bại"
+        ],
+        [
+          "노력하다",
+          "nỗ lực"
+        ],
+        [
+          "좌절하다",
+          "nản lòng, suy sụp"
+        ],
+        [
+          "용기를 가지다",
+          "có can đảm"
+        ],
+        [
+          "어려움을 극복하다",
+          "vượt qua khó khăn"
+        ]
+      ]
+    },
+    {
+      "group": "Từ mới trong bài",
+      "words": [
+        [
+          "각종",
+          "các loại, đủ loại"
+        ],
+        [
+          "교육자",
+          "nhà giáo dục"
+        ],
+        [
+          "구체적으로",
+          "một cách cụ thể"
+        ],
+        [
+          "금메달을 따다",
+          "giành huy chương vàng"
+        ],
+        [
+          "기도",
+          "sự cầu nguyện"
+        ],
+        [
+          "당첨되다",
+          "trúng (thưởng, xổ số)"
+        ],
+        [
+          "동시통역사",
+          "phiên dịch viên song song (cabin)"
+        ],
+        [
+          "몸무게",
+          "cân nặng"
+        ],
+        [
+          "백만장자",
+          "triệu phú"
+        ],
+        [
+          "복권",
+          "vé số"
+        ],
+        [
+          "분야",
+          "lĩnh vực"
+        ],
+        [
+          "비결",
+          "bí quyết"
+        ],
+        [
+          "비만 클리닉",
+          "phòng khám giảm béo"
+        ],
+        [
+          "시설",
+          "cơ sở vật chất, trang thiết bị"
+        ],
+        [
+          "실제로",
+          "trên thực tế, thật sự"
+        ],
+        [
+          "실제 크기",
+          "kích thước thật"
+        ],
+        [
+          "안마",
+          "xoa bóp, mát-xa"
+        ],
+        [
+          "역할 놀이",
+          "trò chơi đóng vai"
+        ],
+        [
+          "연구",
+          "nghiên cứu"
+        ],
+        [
+          "연예인",
+          "người nổi tiếng trong giới giải trí"
+        ],
+        [
+          "원서",
+          "đơn đăng ký (xin học, xin việc)"
+        ],
+        [
+          "의학계",
+          "giới y học"
+        ],
+        [
+          "인내하다",
+          "nhẫn nại, chịu đựng"
+        ],
+        [
+          "인턴사원",
+          "nhân viên thực tập"
+        ],
+        [
+          "적합하다",
+          "phù hợp"
+        ],
+        [
+          "직장",
+          "nơi làm việc"
+        ],
+        [
+          "최초",
+          "đầu tiên, sớm nhất"
+        ],
+        [
+          "충격",
+          "cú sốc"
+        ],
+        [
+          "취업 준비",
+          "chuẩn bị xin việc"
+        ],
+        [
+          "치료하다",
+          "điều trị, chữa"
+        ],
+        [
+          "평생",
+          "cả đời"
+        ],
+        [
+          "피아니스트",
+          "nghệ sĩ piano"
+        ],
+        [
+          "현실적이다",
+          "thực tế"
+        ],
+        [
+          "협동성",
+          "tinh thần hợp tác"
+        ],
+        [
+          "회복되다",
+          "hồi phục"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "A/V -아/어 가다",
+      "title": "dần dần…, (tiếp tục) … dần về sau",
+      "note": [
+        "Diễn tả trạng thái hay hành động đang tiếp diễn, thay đổi dần từ bây giờ về sau: 숙제가 다 끝나 가요 (sắp xong).",
+        "Thân có ㅏ/ㅗ + -아 가다, còn lại + -어 가다, 하다 → 해 가다.",
+        "-아/어 가면서: vừa làm vừa tiếp tục việc khác (쉬어 가면서 일해요)."
+      ],
+      "examples": [
+        [
+          "이제 숙제가 거의 다 끝나 가요.",
+          "Bài tập giờ sắp xong hết rồi."
+        ],
+        [
+          "몸이 빨리 회복되어 가서 다행이에요.",
+          "May là cơ thể đang hồi phục nhanh."
+        ],
+        [
+          "너무 무리하지 말고 쉬어 가면서 하세요.",
+          "Đừng quá sức, vừa làm vừa nghỉ nhé."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "밥이 다 ___ 가니까 조금만 기다리세요.",
+          "options": [
+            "되어",
+            "되고",
+            "될",
+            "된"
+          ],
+          "explain": "Cơm sắp chín → 되어 가다."
+        },
+        {
+          "q": "A: 유학 준비는 잘 돼요? B: 네, 이제 거의 다 ___.",
+          "options": [
+            "끝나 가요",
+            "끝나 와요",
+            "끝나 줘요",
+            "끝나 놓아요"
+          ],
+          "explain": "Sắp xong (tiến về phía trước) → -아/어 가다."
+        },
+        {
+          "q": "수술 후에 아버지 건강이 점점 ___ 가요.",
+          "options": [
+            "좋아져",
+            "좋아지고",
+            "좋아질",
+            "좋아진"
+          ],
+          "explain": "Dần dần tốt lên → 좋아져 가다."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "좀 쉬어 가면서 하세요.",
+            "좀 쉬어 가고서 하세요.",
+            "좀 쉬 가면서 하세요.",
+            "좀 쉬어 와면서 하세요."
+          ],
+          "explain": "쉬다 → 쉬어 가면서 (vừa nghỉ vừa làm)."
+        },
+        {
+          "q": "Nghĩa của \"회의가 거의 끝나 가니까 조금만 기다려 주세요.\"",
+          "options": [
+            "Cuộc họp sắp xong rồi nên chờ một chút nhé.",
+            "Cuộc họp đã xong từ lâu.",
+            "Cuộc họp vừa mới bắt đầu.",
+            "Cuộc họp bị hủy nên đừng chờ."
+          ],
+          "explain": "끝나 가다 = sắp kết thúc."
+        }
+      ]
+    },
+    {
+      "pattern": "V -아/어 오다",
+      "title": "(đã) … từ trước đến nay",
+      "note": [
+        "Diễn tả hành động hay trạng thái kéo dài từ quá khứ đến hiện tại.",
+        "Thường đi với 지금까지, 그동안, …동안, 어릴 때부터.",
+        "Hay dùng ở thì quá khứ -아/어 왔다 hoặc tiếp diễn -아/어 오고 있다."
+      ],
+      "examples": [
+        [
+          "취업 준비 때문에 3년 동안 외국어를 공부해 왔어요.",
+          "Vì chuẩn bị xin việc nên tôi đã học ngoại ngữ suốt 3 năm nay."
+        ],
+        [
+          "어릴 때부터 의사가 되는 꿈을 키워 왔어요.",
+          "Từ nhỏ tôi đã nuôi ước mơ làm bác sĩ."
+        ],
+        [
+          "지금까지 일해 온 직장을 떠나게 됐어요.",
+          "Tôi phải rời nơi làm việc mình đã gắn bó đến nay."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "저는 10년 동안 이 회사에서 ___ 왔어요.",
+          "options": [
+            "일해",
+            "일하고",
+            "일할",
+            "일하게"
+          ],
+          "explain": "Làm việc từ 10 năm trước đến nay → 일해 오다."
+        },
+        {
+          "q": "어릴 때부터 가수가 되는 꿈을 ___ 왔어요.",
+          "options": [
+            "키워",
+            "키우고",
+            "키울",
+            "키운"
+          ],
+          "explain": "Nuôi ước mơ từ nhỏ đến giờ → 키워 오다."
+        },
+        {
+          "q": "A: 여행 비용은 어떻게 마련했어요? B: 1년 동안 아르바이트를 ___.",
+          "options": [
+            "해 왔어요",
+            "해 가요",
+            "할 거예요",
+            "하려고 해요"
+          ],
+          "explain": "Đã làm thêm suốt 1 năm đến nay → 해 왔어요."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "지금까지 모아 온 돈으로 노트북을 샀어요.",
+            "지금까지 모아 간 돈으로 노트북을 샀어요.",
+            "지금까지 모아 오는 돈으로 노트북을 샀어요.",
+            "지금까지 모아 올 돈으로 노트북을 샀어요."
+          ],
+          "explain": "Từ trước đến nay (đã xong) → -아/어 온 + N."
+        },
+        {
+          "q": "Nghĩa của \"저는 그동안 혼자서 이 문제를 고민해 왔어요.\"",
+          "options": [
+            "Bấy lâu nay tôi đã một mình trăn trở về chuyện này.",
+            "Từ giờ tôi sẽ một mình suy nghĩ chuyện này.",
+            "Tôi chưa từng nghĩ về chuyện này.",
+            "Tôi vừa mới biết chuyện này."
+          ],
+          "explain": "-아/어 왔다 = đã … từ trước đến nay."
+        }
+      ]
+    },
+    {
+      "pattern": "V -아/어야겠다",
+      "title": "phải … thôi (người nói tự quyết)",
+      "note": [
+        "Người nói bày tỏ quyết tâm hay ý định phải làm gì, thường sau khi nhận ra một tình huống.",
+        "Chủ ngữ thường là người nói. 하다 → 해야겠다; phủ định: -지 말아야겠다.",
+        "Mạnh hơn -(으)ㄹ 거예요 vì có cảm giác “nhất định phải”."
+      ],
+      "examples": [
+        [
+          "내일부터는 일찍 일어나야겠어요.",
+          "Từ mai phải dậy sớm thôi."
+        ],
+        [
+          "시험이 얼마 안 남았으니까 열심히 공부해야겠다.",
+          "Còn ít ngày nữa là thi, phải học chăm thôi."
+        ],
+        [
+          "건강을 위해서 단 음식을 줄여야겠어요.",
+          "Vì sức khỏe, tôi phải giảm đồ ngọt thôi."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "살이 많이 쪄서 오늘부터 운동을 ___.",
+          "options": [
+            "해야겠어요",
+            "한 편이에요",
+            "하는 길이에요",
+            "할 줄 알아요"
+          ],
+          "explain": "Tự quyết phải làm → -아/어야겠다."
+        },
+        {
+          "q": "A: 내일 비가 온대요. B: 그럼 우산을 ___.",
+          "options": [
+            "챙겨야겠네요",
+            "챙긴 덕분이에요",
+            "챙기는 중이었어요",
+            "챙기기 쉬워요"
+          ],
+          "explain": "Nghe tin mưa → quyết định mang ô."
+        },
+        {
+          "q": "졸업이 얼마 안 남았으니까 이제 진로를 ___.",
+          "options": [
+            "정해야겠어요",
+            "정해 왔어요",
+            "정할 줄 알았어요",
+            "정하는 바람이에요"
+          ],
+          "explain": "Sắp tốt nghiệp → phải quyết hướng đi."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "이제부터 돈을 아껴 써야겠어요.",
+            "이제부터 돈을 아껴 쓰야겠어요.",
+            "이제부터 돈을 아껴 써겠어요.",
+            "이제부터 돈을 아껴 쓰어야겠어요."
+          ],
+          "explain": "쓰다 → 써야겠다 (ㅡ rơi)."
+        },
+        {
+          "q": "Nghĩa của \"꿈을 이루려면 더 노력해야겠어요.\"",
+          "options": [
+            "Muốn đạt ước mơ thì tôi phải cố gắng hơn nữa.",
+            "Tôi đã đạt được ước mơ nhờ cố gắng.",
+            "Tôi không cần cố gắng nữa.",
+            "Có lẽ người khác phải cố gắng hơn."
+          ],
+          "explain": "-아/어야겠다 = (tôi) phải … thôi."
+        }
+      ]
+    },
+    {
+      "pattern": "A/V -았/었으면 좋겠다",
+      "title": "ước gì…, mong là…",
+      "note": [
+        "Bày tỏ mong muốn về điều chưa xảy ra hoặc trái với hiện tại.",
+        "Dùng đuôi quá khứ -았/었 dù nói về tương lai; nghĩa mạnh hơn -(으)면 좋겠다.",
+        "Danh từ: N였으면 / N이었으면 좋겠다."
+      ],
+      "examples": [
+        [
+          "이번 시험에 꼭 합격했으면 좋겠어요.",
+          "Mong là lần này nhất định thi đỗ."
+        ],
+        [
+          "우리 가족이 모두 건강했으면 좋겠어요.",
+          "Ước gì cả nhà tôi đều khỏe mạnh."
+        ],
+        [
+          "나중에 제 가게를 가졌으면 좋겠어요.",
+          "Mong sau này có cửa hàng riêng."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "이번 방학에는 친구들하고 여행을 ___ 좋겠어요.",
+          "options": [
+            "갔으면",
+            "가니까",
+            "가도록",
+            "가서"
+          ],
+          "explain": "Mong muốn → -았/었으면 좋겠다."
+        },
+        {
+          "q": "A: 새해 소원이 뭐예요? B: 우리 가족이 모두 ___ 좋겠어요.",
+          "options": [
+            "건강했으면",
+            "건강해서",
+            "건강하게",
+            "건강한데"
+          ],
+          "explain": "Ước mong → 건강했으면 좋겠다."
+        },
+        {
+          "q": "내일 소풍 가는데 날씨가 ___ 좋겠다.",
+          "options": [
+            "맑았으면",
+            "맑아서",
+            "맑아도",
+            "맑고"
+          ],
+          "explain": "Mong trời quang → 맑았으면 좋겠다."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "취직이 빨리 됐으면 좋겠어요.",
+            "취직이 빨리 됬으면 좋겠어요.",
+            "취직이 빨리 되었면 좋겠어요.",
+            "취직이 빨리 됐으면 좋겠어서요요."
+          ],
+          "explain": "되다 + 었 = 되었/됐 (không viết 됬)."
+        },
+        {
+          "q": "Nghĩa của \"시간이 좀 더 있었으면 좋겠어요.\"",
+          "options": [
+            "Ước gì có thêm chút thời gian.",
+            "Tôi có nhiều thời gian lắm.",
+            "Lẽ ra tôi nên dành thời gian.",
+            "Thời gian trôi nhanh quá."
+          ],
+          "explain": "-았/었으면 좋겠다 = ước gì."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "고등학교를 졸업하고 대학교에 ___ 공부를 더 하고 싶어요.",
+      "options": [
+        "진학해서",
+        "좌절해서",
+        "실패해서",
+        "당첨돼서"
+      ],
+      "explain": "Học lên đại học → 진학하다."
+    },
+    {
+      "q": "주말마다 양로원에서 할머니, 할아버지를 돕는 ___ 활동을 해요.",
+      "options": [
+        "봉사",
+        "연구",
+        "기도",
+        "안마"
+      ],
+      "explain": "Giúp đỡ không lương → 봉사 활동."
+    },
+    {
+      "q": "힘들었지만 아이들을 도와주고 나니까 ___을 느꼈어요.",
+      "options": [
+        "보람",
+        "충격",
+        "실패",
+        "몸무게"
+      ],
+      "explain": "Thấy việc mình làm có ý nghĩa → 보람을 느끼다."
+    },
+    {
+      "q": "그 선수는 올림픽에서 금메달을 ___.",
+      "options": [
+        "땄어요",
+        "이뤘어요",
+        "거뒀어요",
+        "쌓았어요"
+      ],
+      "explain": "Giành huy chương → 메달을 따다."
+    },
+    {
+      "q": "여러 번 실패했지만 포기하지 않고 결국 꿈을 ___.",
+      "options": [
+        "이루었어요",
+        "잃었어요",
+        "나눴어요",
+        "당첨됐어요"
+      ],
+      "explain": "Đạt ước mơ → 꿈을 이루다."
+    },
+    {
+      "q": "회사에 들어가기 전에 인턴으로 일하면서 경험을 ___ 싶어요.",
+      "options": [
+        "쌓고",
+        "따고",
+        "거두고",
+        "맞고"
+      ],
+      "explain": "Tích lũy kinh nghiệm → 경험을 쌓다."
+    },
+    {
+      "q": "이 일은 제 ___에 잘 맞아서 일하는 게 즐거워요.",
+      "options": [
+        "적성",
+        "진로",
+        "비결",
+        "평생"
+      ],
+      "explain": "Hợp năng khiếu → 적성에 맞다."
+    },
+    {
+      "q": "복권에 ___ 돈을 모두 기부했대요.",
+      "options": [
+        "당첨돼서",
+        "도전해서",
+        "극복해서",
+        "회복돼서"
+      ],
+      "explain": "Trúng xổ số → 복권에 당첨되다."
+    },
+    {
+      "q": "가난을 ___ 성공한 사업가의 이야기가 책으로 나왔어요.",
+      "options": [
+        "극복하고",
+        "좌절하고",
+        "기부하고",
+        "치료하고"
+      ],
+      "explain": "Vượt qua nghèo khó → 극복하다."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 졸업 후에 뭐 할 거예요? 나: 아직 진로를 못 정했어요. 이제 정말 정해야겠어요.",
+      "q": "Người thứ hai đang thế nào?",
+      "options": [
+        "Chưa quyết được hướng đi sau tốt nghiệp",
+        "Đã xin được việc",
+        "Sắp đi du học",
+        "Đã đăng ký học cao học"
+      ],
+      "explain": "아직 진로를 못 정했어요."
+    },
+    {
+      "listen": "가: 다리는 좀 어때요? 나: 덕분에 많이 나아 가요. 다음 주면 걸을 수 있을 거예요.",
+      "q": "Chân của người thứ hai thế nào?",
+      "options": [
+        "Đang dần khỏi",
+        "Càng ngày càng đau",
+        "Đã khỏi hẳn",
+        "Phải phẫu thuật"
+      ],
+      "explain": "많이 나아 가요 = đang dần khỏi."
+    },
+    {
+      "listen": "가: 이번 주말에 고아원에 봉사 활동 하러 가는데 같이 갈래요? 나: 좋아요. 저도 전부터 해 보고 싶었어요.",
+      "q": "Cuối tuần hai người sẽ làm gì?",
+      "options": [
+        "Làm tình nguyện ở trại trẻ mồ côi",
+        "Đến viện dưỡng lão",
+        "Đi quyên góp tiền",
+        "Đi phỏng vấn xin việc"
+      ],
+      "explain": "고아원에 봉사 활동 하러 가는데…"
+    },
+    {
+      "listen": "가: 수진 씨는 꿈이 뭐예요? 나: 저는 동시통역사가 됐으면 좋겠어요. 그래서 5년 동안 영어와 중국어를 공부해 왔어요.",
+      "q": "Ước mơ của Su-jin là gì?",
+      "options": [
+        "Trở thành phiên dịch viên song song",
+        "Trở thành giáo viên tiếng Anh",
+        "Đi du học Trung Quốc",
+        "Mở công ty riêng"
+      ],
+      "explain": "동시통역사가 됐으면 좋겠어요."
+    },
+    {
+      "listen": "가: 그 가수의 성공 비결이 뭐래요? 나: 실패해도 좌절하지 않고 매일 열 시간씩 연습한 거래요.",
+      "q": "Bí quyết thành công của ca sĩ đó là gì?",
+      "options": [
+        "Không nản khi thất bại, ngày nào cũng tập 10 tiếng",
+        "Gia đình giàu có",
+        "Gặp may",
+        "Ngủ đủ 10 tiếng mỗi ngày"
+      ],
+      "explain": "실패해도 좌절하지 않고 매일 열 시간씩 연습한 거래요."
+    }
+  ],
+  "reading": {
+    "passage": "저는 대학교 1학년 때 처음으로 장애인 복지 시설에서 자원봉사를 했습니다. 처음에는 무엇을 해야 할지 몰라서 힘들었지만 시간이 지나면서 일이 점점 익숙해져 갔습니다. 특히 시각장애인 학생에게 책을 읽어 주는 일에 큰 보람을 느꼈습니다. 그래서 저는 그때부터 특수 교사가 되는 꿈을 키워 왔습니다. 앞으로 더 많은 학생들을 도울 수 있었으면 좋겠습니다.",
+    "passageVi": "Năm nhất đại học, lần đầu tiên tôi làm tình nguyện ở một cơ sở phúc lợi cho người khuyết tật. Lúc đầu không biết phải làm gì nên vất vả, nhưng thời gian trôi qua tôi dần quen việc. Đặc biệt tôi thấy rất ý nghĩa khi đọc sách cho học sinh khiếm thị. Vì thế từ đó tôi nuôi ước mơ trở thành giáo viên giáo dục đặc biệt. Tôi mong sau này có thể giúp được nhiều học sinh hơn nữa.",
+    "questions": [
+      {
+        "q": "Người viết thấy ý nghĩa nhất khi làm việc gì?",
+        "options": [
+          "Đọc sách cho học sinh khiếm thị",
+          "Dọn dẹp cơ sở phúc lợi",
+          "Dạy tiếng Anh cho trẻ em",
+          "Quyên góp tiền"
+        ],
+        "explain": "시각장애인 학생에게 책을 읽어 주는 일에 큰 보람을 느꼈습니다."
+      },
+      {
+        "q": "Ước mơ của người viết là gì?",
+        "options": [
+          "Trở thành giáo viên giáo dục đặc biệt",
+          "Mở cơ sở phúc lợi riêng",
+          "Trở thành bác sĩ mắt",
+          "Đi du học sau khi tốt nghiệp"
+        ],
+        "explain": "특수 교사가 되는 꿈을 키워 왔습니다."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu về ước mơ của bạn. Dùng -아/어 오다, -아/어야겠다 và -았/었으면 좋겠다.",
+    "samples": [
+      [
+        "저는 어릴 때부터 선생님이 되는 꿈을 키워 왔어요.",
+        "Từ nhỏ tôi đã nuôi ước mơ làm giáo viên."
+      ],
+      [
+        "그래서 지금 대학교에서 교육학을 공부하고 있어요.",
+        "Vì vậy bây giờ tôi đang học ngành sư phạm."
+      ],
+      [
+        "꿈을 이루려면 경험을 더 쌓아야겠어요.",
+        "Muốn đạt ước mơ thì tôi phải tích lũy thêm kinh nghiệm."
+      ],
+      [
+        "나중에 아이들에게 희망을 주는 선생님이 됐으면 좋겠어요.",
+        "Mong sau này trở thành giáo viên mang lại hy vọng cho trẻ em."
+      ]
+    ],
+    "tips": "-아/어 왔다: việc kéo dài đến nay. -아/어야겠다: quyết tâm của bản thân. -았/었으면 좋겠다: mong ước (dùng quá khứ dù nói về tương lai)."
+  },
+  "topik": [
+    {
+      "type": "blank",
+      "q": "취업 준비 때문에 1년 동안 매일 영어를 (    ).",
+      "options": [
+        "공부해 왔어요",
+        "공부하는 길이에요",
+        "공부할 줄 알아요",
+        "공부하기 쉬워요"
+      ],
+      "explain": "1년 동안 (đến nay) → -아/어 왔다."
+    },
+    {
+      "type": "blank",
+      "q": "숙제가 거의 다 (    ) 조금만 기다려 줄래?",
+      "options": [
+        "끝나 가니까",
+        "끝나 왔으니까",
+        "끝나야겠으니까",
+        "끝났으면 좋겠으니까"
+      ],
+      "explain": "Sắp xong → 끝나 가다."
+    },
+    {
+      "type": "blank",
+      "q": "다음 달이 시험이니까 오늘부터 열심히 (    ).",
+      "options": [
+        "공부해야겠어요",
+        "공부해 왔어요",
+        "공부한 덕분이에요",
+        "공부하는 중이었어요"
+      ],
+      "explain": "오늘부터 + quyết tâm → -아/어야겠다."
+    },
+    {
+      "type": "similar",
+      "q": "이번 시험에 꼭 __합격했으면 좋겠어요__.",
+      "options": [
+        "합격하기를 바라요",
+        "합격할 줄 알았어요",
+        "합격해야 했어요",
+        "합격한 적이 있어요"
+      ],
+      "explain": "-았/었으면 좋겠다 ≈ -기를 바라다."
+    },
+    {
+      "type": "similar",
+      "q": "여러 번 실패했지만 결국 __꿈을 이루었어요__.",
+      "options": [
+        "원하던 일을 하게 되었어요",
+        "꿈을 포기했어요",
+        "꿈을 꾸기 시작했어요",
+        "꿈이 바뀌었어요"
+      ],
+      "explain": "꿈을 이루다 = đạt được điều mình mong muốn."
+    },
+    {
+      "type": "notice",
+      "passage": "🙋 자원봉사자 모집\n· 활동: 양로원 어르신들과 산책하기, 이야기 나누기\n· 기간: 3월~6월, 매주 토요일 오전 10시~12시\n· 대상: 고등학생 이상 누구나\n· 신청: 3월 2일까지 이메일로 신청\n※ 봉사 시간 확인서를 드립니다.",
+      "passageVi": "Tuyển tình nguyện viên. Hoạt động: đi dạo, trò chuyện với các cụ ở viện dưỡng lão. Thời gian: tháng 3–6, thứ Bảy hằng tuần 10–12 giờ sáng. Đối tượng: từ học sinh cấp 3 trở lên. Đăng ký: qua email trước ngày 2/3. Có cấp giấy xác nhận giờ tình nguyện.",
+      "q": "이 글의 내용과 같은 것을 고르십시오.",
+      "options": [
+        "봉사 활동을 하면 확인서를 받을 수 있습니다.",
+        "평일에 활동합니다.",
+        "중학생도 신청할 수 있습니다.",
+        "전화로 신청해야 합니다."
+      ],
+      "explain": "※ 봉사 시간 확인서를 드립니다."
+    },
+    {
+      "type": "order",
+      "passage": "(가) 그래서 작은 회사에서 일하면서 경험을 쌓아 왔습니다.\n(나) 저는 졸업 후 방송국 PD가 되려고 여러 번 원서를 냈습니다.\n(다) 그리고 올해 드디어 꿈꾸던 방송국에 합격했습니다.\n(라) 하지만 경험이 부족해서 계속 떨어졌습니다.",
+      "passageVi": "(나) Sau khi tốt nghiệp tôi nộp đơn nhiều lần để làm PD đài truyền hình. (라) Nhưng vì thiếu kinh nghiệm nên liên tục trượt. (가) Vì thế tôi vừa làm ở công ty nhỏ vừa tích lũy kinh nghiệm. (다) Và năm nay cuối cùng tôi đã đỗ vào đài truyền hình mơ ước.",
+      "q": "다음을 순서대로 맞게 배열한 것을 고르십시오.",
+      "options": [
+        "(나)-(라)-(가)-(다)",
+        "(나)-(가)-(라)-(다)",
+        "(라)-(나)-(가)-(다)",
+        "(나)-(라)-(다)-(가)"
+      ],
+      "explain": "Mở đầu (나) nộp đơn → 하지만 trượt (라) → 그래서 tích kinh nghiệm (가) → 그리고 đỗ (다)."
+    },
+    {
+      "type": "main",
+      "passage": "꿈을 크게 가지는 것도 좋지만 구체적으로 계획을 세우는 것이 더 중요합니다. '언젠가 성공하겠지'라고 생각만 하면 꿈은 점점 멀어져 갑니다. 무엇을 언제까지 할지 정하고 작은 목표부터 하나씩 이루어 가면 꿈에 가까워질 수 있습니다.",
+      "passageVi": "Có ước mơ lớn cũng tốt nhưng lập kế hoạch cụ thể còn quan trọng hơn. Nếu chỉ nghĩ “rồi sẽ có ngày thành công” thì ước mơ sẽ dần xa. Nếu quyết định làm gì đến khi nào và lần lượt đạt từng mục tiêu nhỏ thì có thể đến gần ước mơ.",
+      "q": "다음 글의 중심 생각으로 알맞은 것을 고르십시오.",
+      "options": [
+        "꿈을 이루려면 구체적인 계획을 세워야 합니다.",
+        "꿈은 크면 클수록 좋습니다.",
+        "성공하려면 운이 필요합니다.",
+        "작은 목표는 중요하지 않습니다."
+      ],
+      "explain": "Câu đầu nêu ý chính: lập kế hoạch cụ thể quan trọng hơn."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "남자",
+          "지민 씨, 요즘 어떻게 지내요?"
+        ],
+        [
+          "여자",
+          "다음 달에 미국으로 유학을 가게 돼서 준비하고 있어요."
+        ],
+        [
+          "남자",
+          "와, 축하해요. 준비는 다 됐어요?"
+        ],
+        [
+          "여자",
+          "거의 다 되어 가요. 이제 비자만 받으면 돼요."
+        ]
+      ],
+      "linesVi": "Nam: Ji-min, dạo này thế nào? Nữ: Tháng sau tôi đi du học Mỹ nên đang chuẩn bị. Nam: Ồ, chúc mừng nhé. Chuẩn bị xong hết chưa? Nữ: Sắp xong rồi. Giờ chỉ cần nhận visa là được.",
+      "q": "들은 내용과 같은 것을 고르십시오.",
+      "options": [
+        "여자는 비자만 받으면 됩니다.",
+        "여자는 유학 준비를 아직 시작하지 않았습니다.",
+        "남자는 미국으로 유학을 갑니다.",
+        "여자는 이미 비자를 받았습니다."
+      ],
+      "explain": "이제 비자만 받으면 돼요."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "여자",
+          "민수 씨, 이번에 봉사상을 받았다면서요?"
+        ],
+        [
+          "남자",
+          "네, 3년 동안 주말마다 고아원에서 아이들에게 공부를 가르쳐 왔어요."
+        ],
+        [
+          "여자",
+          "대단해요. 저도 봉사 활동을 해 보고 싶은데 어떻게 시작하면 돼요?"
+        ],
+        [
+          "남자",
+          "구청 홈페이지에서 신청하면 돼요. 이따가 주소를 보내 줄게요."
+        ]
+      ],
+      "linesVi": "Nữ: Min-su, nghe nói lần này anh nhận giải tình nguyện à? Nam: Ừ, 3 năm nay cuối tuần nào tôi cũng dạy học cho trẻ ở trại mồ côi. Nữ: Giỏi quá. Tôi cũng muốn thử làm tình nguyện, bắt đầu thế nào nhỉ? Nam: Đăng ký trên trang web của quận là được. Lát nữa tôi gửi địa chỉ cho.",
+      "q": "남자가 할 행동으로 알맞은 것을 고르십시오.",
+      "options": [
+        "여자에게 홈페이지 주소를 보내 줍니다.",
+        "여자를 고아원에 데려갑니다.",
+        "구청에 전화합니다.",
+        "상을 받으러 갑니다."
+      ],
+      "explain": "이따가 주소를 보내 줄게요."
+    }
+  ],
+  "fillWriting": [
+    {
+      "text": "제목: 자원봉사자를 찾습니다\n저희 복지관에서는 매주 토요일 시각장애인에게 책을 읽어 줄 자원봉사자를 ( ㉠ ). 봉사 경험이 없어도 괜찮습니다. 관심이 있으신 분은 이번 달 말까지 ( ㉡ ).",
+      "textVi": "Tiêu đề: Tìm tình nguyện viên. Trung tâm phúc lợi chúng tôi ( ㉠ ) tình nguyện viên đọc sách cho người khiếm thị vào thứ Bảy hằng tuần. Chưa có kinh nghiệm cũng không sao. Ai quan tâm xin ( ㉡ ) trước cuối tháng này.",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "찾고 있습니다",
+            "모집합니다"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "신청해 주시기 바랍니다",
+            "연락해 주십시오"
+          ]
+        }
+      ],
+      "tips": "㉠ tiêu đề 찾습니다 → đang tìm: -고 있습니다. ㉡ lời đề nghị trang trọng cuối thông báo: -아/어 주시기 바랍니다 / -아/어 주십시오."
+    },
+    {
+      "text": "사람들은 성공한 사람을 보면 보통 운이 좋았다고 생각합니다. 그러나 성공한 사람들은 대부분 오랫동안 꾸준히 ( ㉠ ). 그러므로 우리도 꿈을 이루고 싶다면 실패해도 포기하지 말고 계속 ( ㉡ ).",
+      "textVi": "Thấy người thành công, người ta thường nghĩ họ may mắn. Nhưng phần lớn người thành công đã ( ㉠ ) bền bỉ trong thời gian dài. Vì vậy nếu chúng ta cũng muốn đạt ước mơ thì dù thất bại cũng đừng bỏ cuộc mà phải tiếp tục ( ㉡ ).",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "노력해 왔습니다",
+            "노력해 온 사람들입니다"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "도전해야 합니다",
+            "노력해야 합니다"
+          ]
+        }
+      ],
+      "tips": "㉠ 오랫동안 꾸준히 → việc kéo dài đến nay: -아/어 왔습니다. ㉡ sau 그러므로 → kết luận, lời khuyên: -아/어야 합니다."
+    }
+  ]
+}

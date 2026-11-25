@@ -1,0 +1,792 @@
+{
+  "id": "tc3-15",
+  "title": "Phép lịch sự và quy tắc",
+  "ko": "예절과 규칙",
+  "goal": "Nói về phép lịch sự, quy tắc nơi công cộng và luật lệ; dùng “theo như…”, “nhất định phải…” và “đang định … thì”.",
+  "vocab": [
+    {
+      "group": "Chuẩn mực xã hội",
+      "words": [
+        [
+          "예의",
+          "lễ nghĩa, phép lịch sự"
+        ],
+        [
+          "법",
+          "pháp luật"
+        ],
+        [
+          "도덕",
+          "đạo đức"
+        ]
+      ]
+    },
+    {
+      "group": "Lễ phép",
+      "words": [
+        [
+          "예절을 지키다",
+          "giữ lễ phép"
+        ],
+        [
+          "예절을 안 지키다",
+          "không giữ lễ phép"
+        ],
+        [
+          "예절 바르다",
+          "lễ phép, đúng mực"
+        ],
+        [
+          "예의가 없다",
+          "vô lễ, bất lịch sự"
+        ],
+        [
+          "예의에 어긋나다",
+          "trái phép lịch sự"
+        ],
+        [
+          "실례가 되다",
+          "thành ra thất lễ"
+        ]
+      ]
+    },
+    {
+      "group": "Quy tắc, luật lệ",
+      "words": [
+        [
+          "규칙을 지키다",
+          "tuân thủ quy tắc"
+        ],
+        [
+          "질서가 있다",
+          "có trật tự, nề nếp"
+        ],
+        [
+          "규칙을 어기다",
+          "vi phạm quy tắc"
+        ],
+        [
+          "법을 위반하다",
+          "vi phạm pháp luật"
+        ],
+        [
+          "규칙에 어긋나다",
+          "trái quy tắc"
+        ],
+        [
+          "피해를 주다",
+          "gây thiệt hại, làm phiền"
+        ]
+      ]
+    },
+    {
+      "group": "Từ mới trong bài",
+      "words": [
+        [
+          "결근",
+          "nghỉ làm (vắng mặt ở cơ quan)"
+        ],
+        [
+          "공경하다",
+          "cung kính, kính trọng"
+        ],
+        [
+          "공동생활",
+          "sinh hoạt chung, sống tập thể"
+        ],
+        [
+          "공연장",
+          "nơi biểu diễn, nhà hát"
+        ],
+        [
+          "관공서",
+          "cơ quan nhà nước"
+        ],
+        [
+          "낙서",
+          "vẽ bậy, viết bậy"
+        ],
+        [
+          "대중교통",
+          "giao thông công cộng"
+        ],
+        [
+          "무리하다",
+          "quá sức, quá đáng"
+        ],
+        [
+          "번호표",
+          "phiếu số thứ tự"
+        ],
+        [
+          "불쾌감",
+          "cảm giác khó chịu"
+        ],
+        [
+          "비밀",
+          "bí mật"
+        ],
+        [
+          "수저",
+          "thìa và đũa"
+        ],
+        [
+          "악수",
+          "bắt tay"
+        ],
+        [
+          "양보하다",
+          "nhường"
+        ],
+        [
+          "외박",
+          "ngủ qua đêm ở ngoài"
+        ],
+        [
+          "이어폰",
+          "tai nghe"
+        ],
+        [
+          "진동",
+          "chế độ rung"
+        ],
+        [
+          "창피하다",
+          "xấu hổ, mất mặt"
+        ],
+        [
+          "청하다",
+          "xin, đề nghị"
+        ],
+        [
+          "흡연실",
+          "phòng hút thuốc"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "N대로 / V-(으)ㄴ/는 대로",
+      "title": "theo (như)…, đúng như…",
+      "note": [
+        "N대로: làm theo N (규칙대로, 순서대로, 마음대로).",
+        "V-(으)ㄴ 대로 (việc đã xảy ra) / V-는 대로 (việc đang diễn ra): làm giống như vậy. Viết cách: 배운 대로, 말하는 대로.",
+        "Lưu ý: V-는 대로 còn có nghĩa “ngay khi” (도착하는 대로 연락할게요)."
+      ],
+      "examples": [
+        [
+          "규칙대로 줄을 서서 기다려 주세요.",
+          "Xin xếp hàng chờ theo quy định."
+        ],
+        [
+          "선생님이 말씀하신 대로 해 보세요.",
+          "Hãy làm thử đúng như thầy đã nói."
+        ],
+        [
+          "배운 대로 웃어른께 두 손으로 드렸어요.",
+          "Tôi đã đưa bằng hai tay cho người lớn đúng như đã học."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "도서관에서는 정해진 규칙___ 조용히 해야 해요.",
+          "options": [
+            "대로",
+            "에서",
+            "까지",
+            "부터"
+          ],
+          "explain": "Theo quy tắc → 규칙대로."
+        },
+        {
+          "q": "A: 이 서류는 어떻게 써요? B: 여기 예시에 ___ 대로 쓰면 돼요.",
+          "options": [
+            "적힌",
+            "적힐",
+            "적히기",
+            "적혀"
+          ],
+          "explain": "Theo điều đã ghi sẵn → 적힌 대로."
+        },
+        {
+          "q": "번호표를 뽑고 순서___ 기다려 주십시오.",
+          "options": [
+            "대로",
+            "처럼",
+            "보다",
+            "마다"
+          ],
+          "explain": "Theo thứ tự → 순서대로."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "선생님이 가르쳐 주신 대로 인사했어요.",
+            "선생님이 가르쳐 주신대로서 인사했어요.",
+            "선생님이 가르쳐 주실 대로 인사했어요.",
+            "선생님이 가르쳐 주시는 대로를 인사했어요."
+          ],
+          "explain": "Việc đã dạy trước đó → -(으)ㄴ 대로."
+        },
+        {
+          "q": "Nghĩa của \"남의 물건을 마음대로 쓰면 안 돼요.\"",
+          "options": [
+            "Không được tự ý dùng đồ của người khác.",
+            "Phải hỏi ý kiến trước khi cho mượn đồ.",
+            "Có thể dùng đồ của người khác thoải mái.",
+            "Đừng cho người khác mượn đồ."
+          ],
+          "explain": "마음대로 = tùy ý, tự ý."
+        }
+      ]
+    },
+    {
+      "pattern": "A/V -지 않으면 안 되다",
+      "title": "không … thì không được (nhất định phải)",
+      "note": [
+        "Phủ định hai lần để nhấn mạnh nghĩa vụ, mạnh hơn -아/어야 하다.",
+        "Gắn sau thân động từ, tính từ: 지키지 않으면 안 돼요.",
+        "Quá khứ: -지 않으면 안 됐어요."
+      ],
+      "examples": [
+        [
+          "공공장소에서는 질서를 지키지 않으면 안 돼요.",
+          "Ở nơi công cộng nhất định phải giữ trật tự."
+        ],
+        [
+          "내일까지 원서를 내지 않으면 안 돼요.",
+          "Nhất định phải nộp đơn trước ngày mai."
+        ],
+        [
+          "어른 앞에서는 예의를 지키지 않으면 안 됩니다.",
+          "Trước mặt người lớn nhất định phải giữ lễ phép."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "회의에 늦으면 안 되니까 지금 ___ 않으면 안 돼요.",
+          "options": [
+            "출발하지",
+            "출발하고",
+            "출발해서",
+            "출발하면"
+          ],
+          "explain": "-지 않으면 안 되다."
+        },
+        {
+          "q": "도서관 책은 다음 주까지 ___ 안 돼요.",
+          "options": [
+            "돌려주지 않으면",
+            "돌려주면",
+            "돌려줘도",
+            "돌려줬거든요"
+          ],
+          "explain": "Nhất định phải trả → -지 않으면 안 되다."
+        },
+        {
+          "q": "A: 이 약은 꼭 먹어야 돼요? B: 네, 하루에 세 번 ___.",
+          "options": [
+            "먹지 않으면 안 돼요",
+            "먹지 않아도 돼요",
+            "먹으면 안 돼요",
+            "먹을 줄 몰라요"
+          ],
+          "explain": "Bắt buộc uống → -지 않으면 안 돼요."
+        },
+        {
+          "q": "'여기서는 신발을 벗지 않으면 안 돼요.'와 뜻이 같은 것은?",
+          "options": [
+            "신발을 벗어야 해요",
+            "신발을 벗으면 안 돼요",
+            "신발을 안 벗어도 돼요",
+            "신발을 벗을 수 없어요"
+          ],
+          "explain": "-지 않으면 안 되다 ≈ -아/어야 하다."
+        },
+        {
+          "q": "Nghĩa của \"다른 사람에게 피해를 주지 않으려면 규칙을 지키지 않으면 안 돼요.\"",
+          "options": [
+            "Muốn không làm phiền người khác thì nhất định phải giữ quy tắc.",
+            "Giữ quy tắc thì sẽ làm phiền người khác.",
+            "Không cần giữ quy tắc nếu không làm phiền ai.",
+            "Quy tắc gây phiền cho người khác."
+          ],
+          "explain": "-지 않으면 안 되다 = nhất định phải."
+        }
+      ]
+    },
+    {
+      "pattern": "V -(으)려던 참이다",
+      "title": "đang định … thì (vừa đúng lúc)",
+      "note": [
+        "Người nói vừa định làm việc gì thì có chuyện trùng hợp xảy ra hoặc người khác nhắc đến đúng việc đó.",
+        "Thân có patchim + -으려던 참이다; không patchim hoặc ㄹ + -려던 참이다. Chỉ dùng với động từ.",
+        "Hay đi với 마침, 막, 그렇지 않아도; thường ở dạng -(으)려던 참이었어요."
+      ],
+      "examples": [
+        [
+          "A: 같이 점심 먹을래요? B: 좋아요. 저도 마침 먹으려던 참이었어요.",
+          "A: Ăn trưa cùng không? B: Được. Tôi cũng đang định đi ăn."
+        ],
+        [
+          "그렇지 않아도 지금 전화하려던 참이었어요.",
+          "Tôi cũng đang định gọi điện đây."
+        ],
+        [
+          "막 나가려던 참에 손님이 왔어요.",
+          "Vừa định ra ngoài thì có khách đến."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "A: 창문 좀 닫아 줄래요? B: 네, 저도 ___ 참이었어요.",
+          "options": [
+            "닫으려던",
+            "닫는",
+            "닫을",
+            "닫았던"
+          ],
+          "explain": "Đang định đóng → 닫으려던 참."
+        },
+        {
+          "q": "A: 커피 한잔할래요? B: 좋아요. 마침 저도 ___.",
+          "options": [
+            "마시려던 참이었어요",
+            "마신 적이 있어요",
+            "마실 줄 알았어요",
+            "마시던데요"
+          ],
+          "explain": "마침 + đang định → -(으)려던 참이었어요."
+        },
+        {
+          "q": "그렇지 않아도 선생님께 ___ 참이었는데 먼저 연락을 주셨네요.",
+          "options": [
+            "전화드리려던",
+            "전화드린",
+            "전화드리는",
+            "전화드리기"
+          ],
+          "explain": "그렇지 않아도 + -(으)려던 참."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "막 자려던 참이었어요.",
+            "막 자으려던 참이었어요.",
+            "막 잤려던 참이었어요.",
+            "막 자려든 참이었어요."
+          ],
+          "explain": "Không patchim → -려던 참."
+        },
+        {
+          "q": "Nghĩa của \"A: 밥 먹었어요? B: 아니요, 지금 막 먹으려던 참이에요.\"",
+          "options": [
+            "Chưa, tôi đang định ăn đây.",
+            "Rồi, tôi vừa ăn xong.",
+            "Chưa, tôi không muốn ăn.",
+            "Chưa, tôi ăn sau nhé."
+          ],
+          "explain": "-(으)려던 참이다 = đang định … thì."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "지하철에서 큰 소리로 통화하는 것은 다른 사람에게 ___ 줘요.",
+      "options": [
+        "피해를",
+        "질서를",
+        "예의를",
+        "낙서를"
+      ],
+      "explain": "Làm phiền người khác → 피해를 주다."
+    },
+    {
+      "q": "어른께 물건을 드릴 때 한 손으로 드리면 ___가 돼요.",
+      "options": [
+        "실례",
+        "도덕",
+        "진동",
+        "번호표"
+      ],
+      "explain": "Thất lễ → 실례가 되다."
+    },
+    {
+      "q": "공연장에서는 휴대폰을 ___으로 바꿔 주세요.",
+      "options": [
+        "진동",
+        "악수",
+        "수저",
+        "결근"
+      ],
+      "explain": "Chế độ rung → 진동."
+    },
+    {
+      "q": "법을 ___ 사람은 벌금을 내야 해요.",
+      "options": [
+        "위반한",
+        "공경한",
+        "양보한",
+        "청한"
+      ],
+      "explain": "Vi phạm luật → 법을 위반하다."
+    },
+    {
+      "q": "버스에서 할머니께 자리를 ___.",
+      "options": [
+        "양보했어요",
+        "청했어요",
+        "공경했어요",
+        "어겼어요"
+      ],
+      "explain": "Nhường ghế → 자리를 양보하다."
+    },
+    {
+      "q": "은행에 가면 먼저 ___를 뽑고 기다려요.",
+      "options": [
+        "번호표",
+        "수저",
+        "이어폰",
+        "낙서"
+      ],
+      "explain": "Phiếu số thứ tự → 번호표."
+    },
+    {
+      "q": "몸이 아파서 어제 회사를 ___했어요.",
+      "options": [
+        "결근",
+        "외박",
+        "악수",
+        "낙서"
+      ],
+      "explain": "Nghỉ làm → 결근하다."
+    },
+    {
+      "q": "담배는 건물 밖 ___에서만 피울 수 있어요.",
+      "options": [
+        "흡연실",
+        "관공서",
+        "공연장",
+        "상영관"
+      ],
+      "explain": "Phòng hút thuốc → 흡연실."
+    },
+    {
+      "q": "한국에는 웃어른을 ___ 문화가 있어요.",
+      "options": [
+        "공경하는",
+        "위반하는",
+        "결근하는",
+        "양보받는"
+      ],
+      "explain": "Kính trọng người lớn → 공경하다."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 여기서 사진을 찍어도 돼요? 나: 죄송하지만 공연장 안에서는 사진 촬영이 안 됩니다.",
+      "q": "Điều nào đúng?",
+      "options": [
+        "Không được chụp ảnh trong nhà hát",
+        "Được chụp ảnh tự do",
+        "Phải mua vé riêng mới chụp được",
+        "Chỉ được chụp không bật đèn"
+      ],
+      "explain": "공연장 안에서는 사진 촬영이 안 됩니다."
+    },
+    {
+      "listen": "가: 저기요, 이어폰 소리를 좀 줄여 주시겠어요? 나: 아, 죄송합니다. 소리가 그렇게 큰 줄 몰랐어요.",
+      "q": "Người thứ nhất yêu cầu gì?",
+      "options": [
+        "Vặn nhỏ tiếng tai nghe",
+        "Tắt điện thoại",
+        "Nhường ghế",
+        "Xuống xe"
+      ],
+      "explain": "이어폰 소리를 좀 줄여 주시겠어요?"
+    },
+    {
+      "listen": "가: 우리 기숙사는 밤 12시까지 들어오지 않으면 안 돼요. 외박하려면 미리 신청해야 하고요. 나: 아, 그렇군요.",
+      "q": "Quy định của ký túc xá là gì?",
+      "options": [
+        "Phải về trước 12 giờ đêm",
+        "Ngủ ngoài không cần xin phép",
+        "Phải về trước 10 giờ tối",
+        "Ký túc xá không có quy định"
+      ],
+      "explain": "밤 12시까지 들어오지 않으면 안 돼요."
+    },
+    {
+      "listen": "가: 민수 씨, 내일 회의 자료 보냈어요? 나: 아, 그렇지 않아도 지금 막 보내려던 참이었어요.",
+      "q": "Min-su đang thế nào?",
+      "options": [
+        "Vừa định gửi tài liệu thì được hỏi",
+        "Đã gửi tài liệu hôm qua",
+        "Quên mất tài liệu",
+        "Không muốn gửi tài liệu"
+      ],
+      "explain": "지금 막 보내려던 참이었어요."
+    },
+    {
+      "listen": "가: 한국에서는 어른과 식사할 때 어른이 먼저 수저를 드신 다음에 먹는 게 예절이에요. 나: 그렇군요. 앞으로 배운 대로 할게요.",
+      "q": "Phép lịch sự khi ăn với người lớn là gì?",
+      "options": [
+        "Chờ người lớn cầm thìa đũa trước rồi mới ăn",
+        "Người trẻ ăn trước",
+        "Không dùng thìa đũa",
+        "Người lớn phải rót nước trước"
+      ],
+      "explain": "어른이 먼저 수저를 드신 다음에 먹는 게 예절이에요."
+    }
+  ],
+  "reading": {
+    "passage": "공동생활을 할 때는 지켜야 할 규칙이 있습니다. 아파트에서 밤늦게 세탁기를 돌리거나 뛰면 이웃에게 피해를 줄 수 있습니다. 또 쓰레기는 정해진 날에 정해진 방법대로 버리지 않으면 안 됩니다. 이런 규칙들이 처음에는 불편할 수 있지만 모두가 지키면 함께 편하게 살 수 있습니다.",
+    "passageVi": "Khi sống tập thể có những quy tắc phải giữ. Ở chung cư, nếu khuya rồi còn chạy máy giặt hay chạy nhảy thì có thể làm phiền hàng xóm. Ngoài ra rác nhất định phải bỏ vào đúng ngày, theo đúng cách đã quy định. Những quy tắc này lúc đầu có thể bất tiện nhưng nếu mọi người cùng giữ thì có thể sống cùng nhau thoải mái.",
+    "questions": [
+      {
+        "q": "Theo đoạn văn, việc gì có thể làm phiền hàng xóm?",
+        "options": [
+          "Chạy máy giặt hay chạy nhảy lúc khuya",
+          "Chào hỏi hàng xóm",
+          "Bỏ rác đúng ngày",
+          "Đóng cửa sổ buổi tối"
+        ],
+        "explain": "밤늦게 세탁기를 돌리거나 뛰면 이웃에게 피해를 줄 수 있습니다."
+      },
+      {
+        "q": "Câu nào đúng với đoạn văn?",
+        "options": [
+          "Rác phải bỏ đúng ngày, đúng cách quy định",
+          "Quy tắc sống chung luôn thoải mái ngay từ đầu",
+          "Có thể bỏ rác bất cứ lúc nào",
+          "Chỉ cần một vài người giữ quy tắc là đủ"
+        ],
+        "explain": "정해진 날에 정해진 방법대로 버리지 않으면 안 됩니다."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu về phép lịch sự hoặc quy tắc ở nước bạn. Dùng N대로 / -(으)ㄴ 대로, -지 않으면 안 되다 và -(으)려던 참이다.",
+    "samples": [
+      [
+        "베트남에서는 어른을 만나면 먼저 인사하지 않으면 안 돼요.",
+        "Ở Việt Nam gặp người lớn thì nhất định phải chào trước."
+      ],
+      [
+        "식사할 때도 어른이 먼저 드신 다음에 먹어요.",
+        "Khi ăn cũng đợi người lớn ăn trước rồi mới ăn."
+      ],
+      [
+        "저는 어릴 때 부모님이 가르쳐 주신 대로 행동하려고 해요.",
+        "Tôi cố gắng cư xử đúng như bố mẹ dạy từ nhỏ."
+      ],
+      [
+        "마침 한국 예절에 대해 알아보려던 참이었는데 이번 수업이 정말 도움이 됐어요.",
+        "Tôi đang định tìm hiểu phép lịch sự của Hàn thì bài học này rất có ích."
+      ]
+    ],
+    "tips": "N대로 / V-(으)ㄴ 대로: theo như. -지 않으면 안 되다: nhất định phải. -(으)려던 참이다: đang định … thì, hay đi với 마침, 그렇지 않아도."
+  },
+  "topik": [
+    {
+      "type": "blank",
+      "q": "공연이 시작되면 휴대폰을 (    ).",
+      "options": [
+        "끄지 않으면 안 됩니다",
+        "끄지 않아도 됩니다",
+        "끄려던 참입니다",
+        "끄던데요"
+      ],
+      "explain": "Quy định bắt buộc → -지 않으면 안 되다."
+    },
+    {
+      "type": "blank",
+      "q": "A: 같이 저녁 먹으러 갈래요? B: 좋아요. 저도 마침 (    ).",
+      "options": [
+        "나가려던 참이었어요",
+        "나가지 않으면 안 돼요",
+        "나가 왔어요",
+        "나가던데요"
+      ],
+      "explain": "마침 + đang định → -(으)려던 참이었어요."
+    },
+    {
+      "type": "blank",
+      "q": "처음 오신 분은 안내문에 (    ) 신청서를 써 주십시오.",
+      "options": [
+        "적힌 대로",
+        "적히려던 참에",
+        "적혀도",
+        "적히거든요"
+      ],
+      "explain": "Theo điều đã ghi → -(으)ㄴ 대로."
+    },
+    {
+      "type": "similar",
+      "q": "어른 앞에서 다리를 꼬고 앉는 것은 __예의에 어긋나요__.",
+      "options": [
+        "예의가 없는 행동이에요",
+        "예의를 잘 지키는 거예요",
+        "규칙대로 하는 거예요",
+        "질서가 있는 거예요"
+      ],
+      "explain": "예의에 어긋나다 ≈ 예의가 없다."
+    },
+    {
+      "type": "similar",
+      "q": "그렇지 않아도 지금 __전화하려던 참이었어요__.",
+      "options": [
+        "막 전화하려고 했어요",
+        "전화할 수 없었어요",
+        "벌써 전화했어요",
+        "전화하기 싫었어요"
+      ],
+      "explain": "-(으)려던 참이다 ≈ 막 -(으)려고 했다."
+    },
+    {
+      "type": "notice",
+      "passage": "📚 시립 도서관 이용 규칙\n· 열람실에서는 휴대폰을 진동으로 해 주십시오.\n· 음식물은 1층 휴게실에서만 드실 수 있습니다.\n· 책은 2주 동안 빌릴 수 있습니다.\n· 책에 낙서를 하면 같은 책으로 바꿔 주셔야 합니다.",
+      "passageVi": "Quy định thư viện thành phố. Trong phòng đọc xin để điện thoại ở chế độ rung. Đồ ăn chỉ được dùng ở phòng nghỉ tầng 1. Sách được mượn trong 2 tuần. Nếu viết vẽ bậy vào sách thì phải đền một quyển giống vậy.",
+      "q": "이 글의 내용과 같은 것을 고르십시오.",
+      "options": [
+        "책에 낙서를 하면 같은 책으로 바꿔 줘야 합니다.",
+        "열람실에서 음식을 먹을 수 있습니다.",
+        "책은 한 달 동안 빌릴 수 있습니다.",
+        "열람실에서는 휴대폰을 꼭 꺼야 합니다."
+      ],
+      "explain": "책에 낙서를 하면 같은 책으로 바꿔 주셔야 합니다."
+    },
+    {
+      "type": "order",
+      "passage": "(가) 그래서 그다음부터는 배운 대로 두 손으로 드리고 있습니다.\n(나) 한국에 처음 왔을 때 저는 한국의 예절을 잘 몰랐습니다.\n(다) 그때 친구가 어른께는 두 손으로 드려야 한다고 알려 주었습니다.\n(라) 한번은 할머니께 한 손으로 물건을 드렸는데 할머니께서 놀라셨습니다.",
+      "passageVi": "(나) Khi mới đến Hàn, tôi không biết rõ phép lịch sự của Hàn Quốc. (라) Có lần tôi đưa đồ cho một cụ bà bằng một tay, cụ đã ngạc nhiên. (다) Lúc đó bạn tôi bảo phải đưa cho người lớn bằng hai tay. (가) Vì thế từ đó tôi đưa bằng hai tay đúng như đã học.",
+      "q": "다음을 순서대로 맞게 배열한 것을 고르십시오.",
+      "options": [
+        "(나)-(라)-(다)-(가)",
+        "(나)-(다)-(라)-(가)",
+        "(라)-(나)-(가)-(다)",
+        "(나)-(가)-(다)-(라)"
+      ],
+      "explain": "Mở đầu (나) chưa biết lễ nghi → 한번은 sự cố (라) → 그때 bạn chỉ (다) → 그래서 làm theo (가)."
+    },
+    {
+      "type": "main",
+      "passage": "나라마다 예절이 다릅니다. 한 나라에서는 예의 바른 행동이 다른 나라에서는 실례가 될 수도 있습니다. 그러므로 외국에 가기 전에 그 나라의 예절을 미리 알아 두면 실수를 줄일 수 있습니다.",
+      "passageVi": "Mỗi nước có phép lịch sự khác nhau. Hành động lịch sự ở nước này có thể thành thất lễ ở nước khác. Vì vậy trước khi ra nước ngoài, nếu tìm hiểu trước phép lịch sự của nước đó thì có thể bớt sai sót.",
+      "q": "다음 글의 중심 생각으로 알맞은 것을 고르십시오.",
+      "options": [
+        "외국에 가기 전에 그 나라의 예절을 알아 두는 것이 좋습니다.",
+        "모든 나라의 예절은 같습니다.",
+        "외국에서는 실수를 해도 괜찮습니다.",
+        "자기 나라의 예절만 지키면 됩니다."
+      ],
+      "explain": "Câu cuối nêu ý chính: nên tìm hiểu trước phép lịch sự của nước sắp đến."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "남자",
+          "저, 여기는 금연 구역이라서 담배를 피우시면 안 됩니다."
+        ],
+        [
+          "여자",
+          "아, 죄송해요. 몰랐어요. 그럼 어디에서 피울 수 있어요?"
+        ],
+        [
+          "남자",
+          "건물 뒤에 흡연실이 있습니다. 그쪽을 이용해 주세요."
+        ],
+        [
+          "여자",
+          "네, 알겠습니다."
+        ]
+      ],
+      "linesVi": "Nam: Xin lỗi, đây là khu vực cấm hút thuốc nên chị không được hút ạ. Nữ: Ôi, xin lỗi. Tôi không biết. Vậy hút ở đâu được ạ? Nam: Sau tòa nhà có phòng hút thuốc. Chị dùng chỗ đó nhé. Nữ: Vâng, tôi biết rồi.",
+      "q": "들은 내용과 같은 것을 고르십시오.",
+      "options": [
+        "건물 뒤에 흡연실이 있습니다.",
+        "여자는 금연 구역인 것을 알고 있었습니다.",
+        "이곳에서는 담배를 피워도 됩니다.",
+        "남자는 담배를 피우고 있습니다."
+      ],
+      "explain": "건물 뒤에 흡연실이 있습니다."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "여자",
+          "민수 씨, 내일 부장님 댁 집들이에 가지요?"
+        ],
+        [
+          "남자",
+          "네, 그런데 뭘 사 가야 할지 모르겠어요."
+        ],
+        [
+          "여자",
+          "보통 휴지나 세제를 많이 사 가요."
+        ],
+        [
+          "남자",
+          "아, 그렇군요. 그럼 퇴근하고 마트에 들러서 휴지를 사야겠어요."
+        ]
+      ],
+      "linesVi": "Nữ: Min-su, mai anh đi tân gia nhà trưởng phòng đúng không? Nam: Ừ, nhưng không biết nên mua gì mang đến. Nữ: Thường người ta hay mua giấy vệ sinh hoặc nước giặt. Nam: À, thế à. Vậy tan làm tôi phải ghé siêu thị mua giấy vệ sinh thôi.",
+      "q": "남자가 할 행동으로 알맞은 것을 고르십시오.",
+      "options": [
+        "퇴근 후에 마트에서 휴지를 삽니다.",
+        "오늘 부장님 댁에 갑니다.",
+        "부장님께 전화합니다.",
+        "세제를 선물로 받습니다."
+      ],
+      "explain": "퇴근하고 마트에 들러서 휴지를 사야겠어요."
+    }
+  ],
+  "fillWriting": [
+    {
+      "text": "제목: 열람실 이용 안내\n요즘 열람실에서 큰 소리로 통화하는 분들이 있어서 다른 이용자들이 불편을 느끼고 있습니다. 열람실에서는 통화를 ( ㉠ ). 전화가 오면 밖에 나가서 받아 주십시오. 모두가 편하게 공부할 수 있도록 규칙을 ( ㉡ ).",
+      "textVi": "Tiêu đề: Hướng dẫn sử dụng phòng đọc. Gần đây có người nói chuyện điện thoại to trong phòng đọc khiến người khác khó chịu. Trong phòng đọc ( ㉠ ) gọi điện. Có điện thoại thì xin ra ngoài nghe. Để mọi người học thoải mái, xin ( ㉡ ) quy tắc.",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "하시면 안 됩니다",
+            "하지 마십시오"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "지켜 주시기 바랍니다",
+            "꼭 지켜 주십시오"
+          ]
+        }
+      ],
+      "tips": "㉠ cấm đoán trong thông báo: -(으)시면 안 됩니다 / -지 마십시오. ㉡ lời đề nghị cuối thông báo: -아/어 주시기 바랍니다."
+    },
+    {
+      "text": "한국에서는 나이가 많은 사람에게 존댓말을 씁니다. 처음 만난 사람에게 반말을 하면 ( ㉠ ). 그래서 한국 사람들은 처음 만나면 나이를 묻는 경우가 많습니다. 외국인도 한국 사람과 잘 지내려면 이런 예절을 ( ㉡ ).",
+      "textVi": "Ở Hàn Quốc người ta dùng kính ngữ với người lớn tuổi hơn. Nếu nói trống không với người mới gặp thì ( ㉠ ). Vì vậy người Hàn khi mới gặp thường hỏi tuổi. Người nước ngoài muốn hòa hợp với người Hàn thì cũng ( ㉡ ) phép lịch sự này.",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "실례가 됩니다",
+            "예의에 어긋납니다"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "알아 두지 않으면 안 됩니다",
+            "알아 두는 것이 좋습니다"
+          ]
+        }
+      ],
+      "tips": "㉠ hậu quả của việc nói trống không → 실례가 되다 / 예의에 어긋나다. ㉡ -(으)려면 + nghĩa vụ: -지 않으면 안 됩니다 / -는 것이 좋습니다."
+    }
+  ]
+}

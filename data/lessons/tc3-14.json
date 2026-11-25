@@ -1,0 +1,865 @@
+{
+  "id": "tc3-14",
+  "title": "Phim ảnh và phim truyền hình",
+  "ko": "영화와 드라마",
+  "goal": "Nói về phim, đặt vé, rạp chiếu và cảm nhận sau khi xem; dùng “dù … đến mấy cũng”, “vì … mà (giải thích)” và “thấy … đấy”.",
+  "vocab": [
+    {
+      "group": "Phim, phim truyền hình",
+      "words": [
+        [
+          "배우",
+          "diễn viên"
+        ],
+        [
+          "탤런트",
+          "diễn viên truyền hình"
+        ],
+        [
+          "감독",
+          "đạo diễn"
+        ],
+        [
+          "주인공",
+          "nhân vật chính"
+        ],
+        [
+          "조연",
+          "vai phụ"
+        ],
+        [
+          "역할을 맡다",
+          "nhận vai, đảm nhận vai"
+        ],
+        [
+          "대사",
+          "lời thoại"
+        ],
+        [
+          "장면",
+          "cảnh (phim)"
+        ],
+        [
+          "줄거리",
+          "cốt truyện"
+        ],
+        [
+          "배경음악",
+          "nhạc nền"
+        ],
+        [
+          "연기를 잘하다",
+          "diễn xuất giỏi"
+        ],
+        [
+          "인기가 없다",
+          "không được ưa chuộng"
+        ],
+        [
+          "실감 나다",
+          "chân thực như thật"
+        ],
+        [
+          "촬영하다",
+          "quay phim, chụp"
+        ],
+        [
+          "출연하다",
+          "tham gia diễn, xuất hiện (phim, chương trình)"
+        ]
+      ]
+    },
+    {
+      "group": "Thể loại phim",
+      "words": [
+        [
+          "만화 영화",
+          "phim hoạt hình"
+        ],
+        [
+          "판타지 영화",
+          "phim giả tưởng"
+        ],
+        [
+          "공상 과학 영화",
+          "phim khoa học viễn tưởng"
+        ]
+      ]
+    },
+    {
+      "group": "Ở rạp chiếu phim",
+      "words": [
+        [
+          "예매하다",
+          "đặt (vé) trước"
+        ],
+        [
+          "개봉하다",
+          "khởi chiếu, ra rạp"
+        ],
+        [
+          "매진되다",
+          "bán hết vé"
+        ],
+        [
+          "관람하다",
+          "xem (phim, biểu diễn)"
+        ],
+        [
+          "관람객",
+          "khán giả"
+        ],
+        [
+          "예고편",
+          "đoạn giới thiệu phim (trailer)"
+        ],
+        [
+          "상영관",
+          "phòng chiếu"
+        ],
+        [
+          "조조",
+          "suất chiếu sớm buổi sáng"
+        ],
+        [
+          "심야 영화",
+          "phim chiếu khuya"
+        ],
+        [
+          "시사회",
+          "buổi chiếu ra mắt"
+        ],
+        [
+          "영화표",
+          "vé xem phim"
+        ],
+        [
+          "회",
+          "tập (phim bộ)"
+        ]
+      ]
+    },
+    {
+      "group": "Cảm nhận về phim",
+      "words": [
+        [
+          "감동적이다",
+          "cảm động"
+        ],
+        [
+          "오싹하다",
+          "rợn người, ớn lạnh"
+        ],
+        [
+          "끔찍하다",
+          "khủng khiếp, ghê rợn"
+        ],
+        [
+          "폭력적이다",
+          "bạo lực"
+        ],
+        [
+          "인상적이다",
+          "ấn tượng"
+        ],
+        [
+          "기억에 남다",
+          "đọng lại trong ký ức, đáng nhớ"
+        ]
+      ]
+    },
+    {
+      "group": "Từ mới trong bài",
+      "words": [
+        [
+          "각각",
+          "từng cái, mỗi"
+        ],
+        [
+          "감상문",
+          "bài cảm nhận"
+        ],
+        [
+          "관람평",
+          "lời bình sau khi xem"
+        ],
+        [
+          "나뉘다",
+          "được chia ra"
+        ],
+        [
+          "등급",
+          "cấp, hạng (độ tuổi xem)"
+        ],
+        [
+          "무엇이든지",
+          "bất cứ cái gì"
+        ],
+        [
+          "배경",
+          "bối cảnh"
+        ],
+        [
+          "사투리",
+          "tiếng địa phương"
+        ],
+        [
+          "실생활",
+          "cuộc sống thực tế"
+        ],
+        [
+          "유치하다",
+          "trẻ con, ấu trĩ"
+        ],
+        [
+          "일상생활",
+          "cuộc sống thường ngày"
+        ],
+        [
+          "자연스럽게",
+          "một cách tự nhiên"
+        ],
+        [
+          "제한하다",
+          "hạn chế, giới hạn"
+        ],
+        [
+          "즐겨 보다",
+          "thích xem, hay xem"
+        ],
+        [
+          "차지하다",
+          "chiếm (vị trí, tỉ lệ)"
+        ],
+        [
+          "흥행",
+          "doanh thu phòng vé, sự ăn khách"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "(아무리) A/V -아/어도",
+      "title": "dù … đến mấy cũng",
+      "note": [
+        "Vế trước là điều kiện, vế sau kết quả không thay đổi; 아무리 nhấn mạnh mức độ.",
+        "Thân có ㅏ/ㅗ + -아도, còn lại + -어도, 하다 → 해도.",
+        "Danh từ: N여도 / N이어도 (배우여도, 학생이어도)."
+      ],
+      "examples": [
+        [
+          "아무리 바빠도 주말에는 영화를 봐요.",
+          "Dù bận đến mấy cuối tuần tôi vẫn xem phim."
+        ],
+        [
+          "그 영화는 아무리 봐도 재미있어요.",
+          "Phim đó xem bao nhiêu lần cũng hay."
+        ],
+        [
+          "대사를 아무리 외워도 자꾸 잊어버려요.",
+          "Học thuộc lời thoại đến mấy cũng cứ quên."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "표를 사려고 아무리 ___ 결국 못 샀어요.",
+          "options": [
+            "기다려도",
+            "기다려서",
+            "기다리니까",
+            "기다리면"
+          ],
+          "explain": "Dù chờ đến mấy cũng không mua được → -아/어도."
+        },
+        {
+          "q": "그 드라마는 아무리 ___ 질리지 않아요.",
+          "options": [
+            "봐도",
+            "보면",
+            "봐서",
+            "보고"
+          ],
+          "explain": "Xem bao nhiêu cũng không chán → 봐도."
+        },
+        {
+          "q": "아무리 ___ 끔찍한 장면이 나오는 영화는 안 봐요.",
+          "options": [
+            "재미있어도",
+            "재미있어서",
+            "재미있으니까",
+            "재미있으면"
+          ],
+          "explain": "Dù hay đến mấy cũng không xem → -아/어도."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "아무리 피곤해도 이 드라마는 꼭 봐요.",
+            "아무리 피곤하면 이 드라마는 꼭 봐요.",
+            "아무리 피곤해서 이 드라마는 꼭 봐요.",
+            "아무리 피곤하니까 이 드라마는 꼭 봐요."
+          ],
+          "explain": "아무리 đi với -아/어도."
+        },
+        {
+          "q": "Nghĩa của \"아무리 인기가 많은 배우여도 연기를 못하면 금방 잊혀요.\"",
+          "options": [
+            "Diễn viên dù nổi tiếng đến đâu mà diễn dở thì cũng sớm bị quên.",
+            "Diễn viên nổi tiếng thì diễn giỏi.",
+            "Diễn viên diễn dở thì không được nổi tiếng.",
+            "Người ta không bao giờ quên diễn viên nổi tiếng."
+          ],
+          "explain": "N여도 = dù là N."
+        }
+      ]
+    },
+    {
+      "pattern": "A/V -거든(요)",
+      "title": "vì… mà, … đấy (giải thích lý do)",
+      "note": [
+        "Văn nói: giải thích lý do hay hoàn cảnh mà người nghe chưa biết.",
+        "Quá khứ: -았/었거든요; danh từ: N(이)거든요.",
+        "Cũng dùng để mở đầu câu chuyện, sau đó kể tiếp: 제가 어제 시사회에 갔거든요. 그런데…"
+      ],
+      "examples": [
+        [
+          "A: 왜 그렇게 졸려요? B: 어젯밤에 드라마를 다섯 회나 봤거든요.",
+          "A: Sao buồn ngủ thế? B: Vì tối qua tôi xem tận năm tập phim."
+        ],
+        [
+          "이 영화 꼭 보세요. 배경음악이 정말 좋거든요.",
+          "Nhất định xem phim này nhé. Nhạc nền hay lắm đấy."
+        ],
+        [
+          "제가 지난주에 시사회에 갔거든요. 거기서 그 배우를 직접 봤어요.",
+          "Tuần trước tôi đi buổi chiếu ra mắt. Ở đó tôi được thấy tận mắt diễn viên ấy."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "A: 왜 그 영화를 안 봐요? B: 공포 영화를 ___.",
+          "options": [
+            "싫어하거든요",
+            "싫어해도",
+            "싫어했으면 좋겠어요",
+            "싫어하는 대로요"
+          ],
+          "explain": "Giải thích lý do → -거든요."
+        },
+        {
+          "q": "A: 주말에 영화 보러 갈래요? B: 미안해요. 주말에 ___.",
+          "options": [
+            "약속이 있거든요",
+            "약속이 있어도",
+            "약속이 있었으면 좋겠어요",
+            "약속이 있을 줄 알아요"
+          ],
+          "explain": "Từ chối kèm lý do → -거든요."
+        },
+        {
+          "q": "A: 그 표를 어떻게 구했어요? B: 한 달 전에 미리 ___.",
+          "options": [
+            "예매했거든요",
+            "예매하거든요",
+            "예매해도",
+            "예매해야겠어요"
+          ],
+          "explain": "Lý do trong quá khứ → -았/었거든요."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "오늘은 일찍 갈게요. 내일 시험이거든요.",
+            "오늘은 일찍 갈게요. 내일 시험거든요.",
+            "오늘은 일찍 갈게요. 내일 시험이는거든요.",
+            "오늘은 일찍 갈게요. 내일 시험이거던요."
+          ],
+          "explain": "Danh từ có patchim + 이거든요."
+        },
+        {
+          "q": "Nghĩa của \"이 드라마 꼭 보세요. 줄거리가 정말 재미있거든요.\"",
+          "options": [
+            "Nhất định xem phim này nhé. Cốt truyện hay lắm đấy.",
+            "Đừng xem phim này vì cốt truyện chán.",
+            "Tôi chưa xem phim này nên không biết.",
+            "Phim này hay nhưng cốt truyện hơi dài."
+          ],
+          "explain": "-거든요 = giải thích lý do khuyên xem."
+        }
+      ]
+    },
+    {
+      "pattern": "A/V -던데(요)",
+      "title": "thấy… đấy (kể lại điều tự mình thấy)",
+      "note": [
+        "Kể lại điều chính mình đã thấy hay trải nghiệm trong quá khứ, thường kèm ngạc nhiên hoặc ý hơi khác với người nghe.",
+        "Gắn vào thân động từ, tính từ: 좋던데요, 많던데요; danh từ: N(이)던데요.",
+        "Giữa câu, -던데 nêu bối cảnh rồi nói tiếp: 그 영화 재미있던데 같이 볼래요?"
+      ],
+      "examples": [
+        [
+          "A: 그 영화 어땠어요? B: 생각보다 재미있던데요.",
+          "A: Phim đó thế nào? B: Tôi thấy hay hơn tôi nghĩ đấy."
+        ],
+        [
+          "어제 가 보니까 극장에 사람이 정말 많던데요.",
+          "Hôm qua đến thì thấy rạp đông người lắm."
+        ],
+        [
+          "그 배우 연기를 정말 잘하던데요.",
+          "Thấy diễn viên đó diễn giỏi thật đấy."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "A: 새로 나온 영화 봤어요? 어땠어요? B: 배우들 연기가 정말 ___.",
+          "options": [
+            "좋던데요",
+            "좋았으면 좋겠어요",
+            "좋을 줄 알아요",
+            "좋으려던 참이에요"
+          ],
+          "explain": "Kể điều mình thấy → -던데요."
+        },
+        {
+          "q": "A: 영화관에 사람 많았어요? B: 네, 평일인데도 사람이 ___.",
+          "options": [
+            "많던데요",
+            "많아도",
+            "많아야겠어요",
+            "많으려던 참이에요"
+          ],
+          "explain": "Điều tự mình thấy → 많던데요."
+        },
+        {
+          "q": "A: 그 드라마 정말 슬프대요. B: 그래요? 저는 어제 봤는데 별로 안 ___.",
+          "options": [
+            "슬프던데요",
+            "슬퍼도",
+            "슬퍼야겠어요",
+            "슬프려던 참이에요"
+          ],
+          "explain": "Trải nghiệm khác với điều người kia nói → -던데요."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "어제 보니까 민수 씨가 노래를 잘하던데요.",
+            "어제 보니까 민수 씨가 노래를 잘하던요.",
+            "어제 보니까 민수 씨가 노래를 잘하든데요.",
+            "어제 보니까 민수 씨가 노래를 잘하던대요."
+          ],
+          "explain": "Viết đúng là -던데요 (던 + 데요)."
+        },
+        {
+          "q": "Nghĩa của \"그 식당 가 봤는데 생각보다 비싸던데요.\"",
+          "options": [
+            "Tôi đi thử quán đó rồi, thấy đắt hơn tôi nghĩ đấy.",
+            "Nghe nói quán đó rẻ lắm.",
+            "Tôi định đi quán đó vì rẻ.",
+            "Quán đó chắc sẽ đắt."
+          ],
+          "explain": "-던데요 = điều tự mình thấy."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "이 영화는 다음 주 목요일에 전국 극장에서 ___.",
+      "options": [
+        "개봉해요",
+        "매진돼요",
+        "출연해요",
+        "촬영해요"
+      ],
+      "explain": "Ra rạp → 개봉하다."
+    },
+    {
+      "q": "주말 표는 벌써 다 ___ 평일 표만 남았어요.",
+      "options": [
+        "매진돼서",
+        "개봉해서",
+        "관람해서",
+        "출연해서"
+      ],
+      "explain": "Hết vé → 매진되다."
+    },
+    {
+      "q": "그 배우는 이번 드라마에서 의사 역할을 ___.",
+      "options": [
+        "맡았어요",
+        "거뒀어요",
+        "쌓았어요",
+        "땄어요"
+      ],
+      "explain": "Nhận vai → 역할을 맡다."
+    },
+    {
+      "q": "영화 시작 전에 다음 달에 개봉하는 영화의 ___을 보여 줬어요.",
+      "options": [
+        "예고편",
+        "감상문",
+        "매표소",
+        "사투리"
+      ],
+      "explain": "Trailer → 예고편."
+    },
+    {
+      "q": "아침 일찍 보는 ___ 영화는 값이 싸요.",
+      "options": [
+        "조조",
+        "시사회",
+        "사투리",
+        "관람객"
+      ],
+      "explain": "Suất sớm buổi sáng → 조조."
+    },
+    {
+      "q": "이 영화는 너무 ___ 장면이 많아서 아이들이 보기에 안 좋아요.",
+      "options": [
+        "폭력적인",
+        "감동적인",
+        "인상적인",
+        "자연스러운"
+      ],
+      "explain": "Không hợp cho trẻ → 폭력적이다."
+    },
+    {
+      "q": "그 영화는 화면이 커서 정말 ___.",
+      "options": [
+        "실감 나요",
+        "매진돼요",
+        "개봉해요",
+        "나뉘어요"
+      ],
+      "explain": "Như thật → 실감 나다."
+    },
+    {
+      "q": "부산이 배경인 영화라서 배우들이 부산 ___로 이야기해요.",
+      "options": [
+        "사투리",
+        "등급",
+        "관람평",
+        "예고편"
+      ],
+      "explain": "Tiếng địa phương → 사투리."
+    },
+    {
+      "q": "영화를 보고 나서 인터넷에 짧은 ___을 남겼어요.",
+      "options": [
+        "관람평",
+        "예매",
+        "상영관",
+        "조연"
+      ],
+      "explain": "Lời bình sau khi xem → 관람평."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 이번 주 토요일 저녁 7시 영화 두 장 주세요. 나: 죄송합니다. 그 시간은 매진됐습니다. 9시 표는 있습니다.",
+      "q": "Điều nào đúng?",
+      "options": [
+        "Suất 7 giờ đã bán hết vé",
+        "Suất 9 giờ đã hết vé",
+        "Khách mua 3 vé",
+        "Phim chiếu vào Chủ nhật"
+      ],
+      "explain": "그 시간은 매진됐습니다."
+    },
+    {
+      "listen": "가: 어제 본 영화 어땠어요? 나: 줄거리는 좀 유치하던데 배경음악은 정말 좋던데요.",
+      "q": "Người thứ hai thấy phim thế nào?",
+      "options": [
+        "Cốt truyện hơi trẻ con nhưng nhạc nền rất hay",
+        "Cốt truyện rất hay",
+        "Nhạc nền dở",
+        "Diễn viên đóng dở"
+      ],
+      "explain": "줄거리는 좀 유치하던데 배경음악은 정말 좋던데요."
+    },
+    {
+      "listen": "가: 민수 씨, 왜 이렇게 피곤해 보여요? 나: 어젯밤에 드라마를 열 회나 봤거든요.",
+      "q": "Vì sao Min-su mệt?",
+      "options": [
+        "Tối qua xem liền 10 tập phim",
+        "Tối qua làm thêm giờ",
+        "Đi xem phim chiếu khuya",
+        "Quay phim đến sáng"
+      ],
+      "explain": "드라마를 열 회나 봤거든요."
+    },
+    {
+      "listen": "가: 공포 영화 좋아해요? 나: 아니요, 아무리 유명한 영화여도 무서운 영화는 못 봐요.",
+      "q": "Người thứ hai thế nào?",
+      "options": [
+        "Không xem được phim kinh dị dù phim nổi tiếng",
+        "Rất thích phim kinh dị",
+        "Chỉ xem phim kinh dị nổi tiếng",
+        "Hay xem phim kinh dị với bạn"
+      ],
+      "explain": "아무리 유명한 영화여도 무서운 영화는 못 봐요."
+    },
+    {
+      "listen": "가: 이 영화는 몇 살부터 볼 수 있어요? 나: 15세 관람가라서 15세가 안 된 학생은 부모님과 같이 봐야 돼요.",
+      "q": "Điều nào đúng về phim này?",
+      "options": [
+        "Phim dành cho người từ 15 tuổi",
+        "Phim dành cho mọi lứa tuổi",
+        "Chỉ người từ 19 tuổi được xem",
+        "Học sinh dưới 15 tuổi không thể xem dù có bố mẹ đi cùng"
+      ],
+      "explain": "15세 관람가 = từ 15 tuổi; dưới 15 tuổi phải đi cùng bố mẹ."
+    }
+  ],
+  "reading": {
+    "passage": "요즘은 영화관에 가지 않고 집에서 드라마나 영화를 즐겨 보는 사람이 많아졌습니다. 인터넷으로 보면 아무 때나 원하는 작품을 볼 수 있고 표를 예매할 필요도 없기 때문입니다. 하지만 영화관을 계속 찾는 사람들도 있습니다. 큰 화면과 좋은 소리로 보면 액션 장면이 훨씬 실감 나기 때문입니다. 한 관람객은 \"집에서 보면 편하지만 영화관에서 본 장면이 더 기억에 남던데요.\"라고 말했습니다.",
+    "passageVi": "Dạo này nhiều người không ra rạp mà thích xem phim truyện, phim điện ảnh ở nhà. Vì xem trên mạng thì lúc nào cũng xem được tác phẩm mình muốn, lại không cần đặt vé trước. Nhưng cũng có người vẫn tiếp tục ra rạp. Vì xem bằng màn hình lớn và âm thanh tốt thì cảnh hành động chân thực hơn nhiều. Một khán giả nói: “Xem ở nhà thì tiện nhưng tôi thấy cảnh xem ở rạp đọng lại lâu hơn.”",
+    "questions": [
+      {
+        "q": "Vì sao nhiều người xem phim ở nhà?",
+        "options": [
+          "Lúc nào cũng xem được tác phẩm mình muốn",
+          "Vé xem phim quá đắt",
+          "Rạp chiếu phim ở xa",
+          "Ở nhà màn hình lớn hơn"
+        ],
+        "explain": "아무 때나 원하는 작품을 볼 수 있고…"
+      },
+      {
+        "q": "Vì sao vẫn có người ra rạp?",
+        "options": [
+          "Màn hình lớn, âm thanh tốt nên cảnh hành động chân thực hơn",
+          "Ở rạp được xem miễn phí",
+          "Phim chỉ chiếu ở rạp",
+          "Họ không biết xem phim trên mạng"
+        ],
+        "explain": "큰 화면과 좋은 소리로 보면 액션 장면이 훨씬 실감 나기 때문입니다."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu giới thiệu một bộ phim bạn thích. Dùng -던데요, -거든요 và 아무리 -아/어도.",
+    "samples": [
+      [
+        "지난주에 가족 영화 한 편을 봤어요.",
+        "Tuần trước tôi đã xem một bộ phim gia đình."
+      ],
+      [
+        "주인공의 연기가 정말 자연스럽던데요.",
+        "Tôi thấy diễn xuất của nhân vật chính tự nhiên lắm."
+      ],
+      [
+        "이 영화 꼭 보세요. 배경음악이 정말 좋거든요.",
+        "Nhất định xem phim này nhé. Nhạc nền hay lắm đấy."
+      ],
+      [
+        "아무리 바빠도 이 영화는 영화관에서 보는 게 좋아요.",
+        "Dù bận đến mấy thì phim này cũng nên xem ở rạp."
+      ]
+    ],
+    "tips": "-던데요: kể điều chính mình thấy. -거든요: giải thích lý do (văn nói). 아무리 -아/어도: dù … đến mấy cũng."
+  },
+  "topik": [
+    {
+      "type": "blank",
+      "q": "이 영화는 (    ) 지루하지 않아요.",
+      "options": [
+        "아무리 여러 번 봐도",
+        "아무리 여러 번 보니까",
+        "여러 번 봤거든요",
+        "여러 번 보던데요"
+      ],
+      "explain": "Dù xem nhiều lần cũng không chán → 아무리 -아/어도."
+    },
+    {
+      "type": "blank",
+      "q": "A: 왜 그 배우를 좋아해요? B: 연기를 정말 (    ).",
+      "options": [
+        "잘하거든요",
+        "잘해도",
+        "잘했으면 좋겠어요",
+        "잘하려던 참이에요"
+      ],
+      "explain": "Trả lời 왜 bằng lý do → -거든요."
+    },
+    {
+      "type": "blank",
+      "q": "어제 그 드라마 첫 회를 봤는데 생각보다 (    ).",
+      "options": [
+        "재미있던데요",
+        "재미있어도",
+        "재미있어야겠어요",
+        "재미있는 대로요"
+      ],
+      "explain": "Kể điều tự mình thấy → -던데요."
+    },
+    {
+      "type": "similar",
+      "q": "주말 표는 이미 __매진됐어요__.",
+      "options": [
+        "다 팔렸어요",
+        "개봉했어요",
+        "할인했어요",
+        "예매해야 해요"
+      ],
+      "explain": "매진되다 = bán hết."
+    },
+    {
+      "type": "similar",
+      "q": "그 영화의 마지막 장면이 오래 __기억에 남아요__.",
+      "options": [
+        "잊히지 않아요",
+        "생각나지 않아요",
+        "지루해요",
+        "무서워요"
+      ],
+      "explain": "기억에 남다 ≈ 잊히지 않다."
+    },
+    {
+      "type": "notice",
+      "passage": "🎬 한빛시네마 관람료 안내\n· 조조 영화(오전 10시 이전 시작): 6,000원\n· 심야 영화(밤 11시 이후 시작): 7,000원\n· 일반: 12,000원\n· 인터넷으로 예매하시면 1,000원 할인\n※ 상영 시작 10분 후에는 입장할 수 없습니다.",
+      "passageVi": "Bảng giá vé rạp Hanbit. Suất sớm (bắt đầu trước 10 giờ sáng): 6.000 won. Suất khuya (sau 11 giờ đêm): 7.000 won. Thường: 12.000 won. Đặt vé trên mạng giảm 1.000 won. Sau khi chiếu 10 phút thì không được vào.",
+      "q": "이 글의 내용과 같은 것을 고르십시오.",
+      "options": [
+        "인터넷으로 예매하면 1,000원 싸게 볼 수 있습니다.",
+        "심야 영화가 가장 쌉니다.",
+        "영화가 시작되고 20분 후에도 들어갈 수 있습니다.",
+        "조조 영화는 오전 11시에 시작합니다."
+      ],
+      "explain": "인터넷으로 예매하시면 1,000원 할인."
+    },
+    {
+      "type": "order",
+      "passage": "(가) 그런데 막상 보니까 줄거리도 탄탄하고 배우들의 연기도 훌륭했습니다.\n(나) 지난 주말에 친구가 추천한 영화를 봤습니다.\n(다) 그래서 다른 사람들에게도 꼭 보라고 추천하고 싶습니다.\n(라) 처음에는 제목이 유치해서 별로 기대하지 않았습니다.",
+      "passageVi": "(나) Cuối tuần trước tôi xem bộ phim bạn giới thiệu. (라) Lúc đầu thấy tên phim trẻ con nên không mấy kỳ vọng. (가) Nhưng khi xem thật thì cốt truyện chặt chẽ, diễn viên diễn rất hay. (다) Vì vậy tôi muốn giới thiệu mọi người nhất định xem.",
+      "q": "다음을 순서대로 맞게 배열한 것을 고르십시오.",
+      "options": [
+        "(나)-(라)-(가)-(다)",
+        "(나)-(가)-(라)-(다)",
+        "(라)-(나)-(다)-(가)",
+        "(나)-(다)-(라)-(가)"
+      ],
+      "explain": "Xem phim bạn giới thiệu (나) → lúc đầu không kỳ vọng (라) → 그런데 thực tế hay (가) → 그래서 muốn giới thiệu (다)."
+    },
+    {
+      "type": "main",
+      "passage": "영화에는 관람 등급이 있습니다. 폭력적이거나 끔찍한 장면이 많은 영화는 어린이가 볼 수 없도록 제한합니다. 어떤 사람들은 이것이 불편하다고 생각하지만 어린이들을 보호하려면 등급을 꼭 지켜야 합니다.",
+      "passageVi": "Phim có phân loại độ tuổi. Phim có nhiều cảnh bạo lực hay ghê rợn bị hạn chế để trẻ em không xem được. Có người cho rằng điều này bất tiện nhưng muốn bảo vệ trẻ em thì nhất định phải tuân thủ phân loại.",
+      "q": "다음 글의 중심 생각으로 알맞은 것을 고르십시오.",
+      "options": [
+        "어린이를 보호하기 위해 영화 등급을 지켜야 합니다.",
+        "모든 영화는 누구나 볼 수 있어야 합니다.",
+        "폭력적인 영화는 만들지 말아야 합니다.",
+        "영화 등급은 불편해서 없애야 합니다."
+      ],
+      "explain": "Câu cuối nêu ý chính: phải tuân thủ phân loại độ tuổi để bảo vệ trẻ em."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "여자",
+          "민호 씨, 주말에 개봉한 그 액션 영화 봤어요?"
+        ],
+        [
+          "남자",
+          "네, 어제 봤어요. 장면들이 정말 실감 나던데요."
+        ],
+        [
+          "여자",
+          "그래요? 저도 보고 싶은데 표가 있을까요?"
+        ],
+        [
+          "남자",
+          "주말은 거의 매진이에요. 평일 저녁에 가 보세요."
+        ]
+      ],
+      "linesVi": "Nữ: Min-ho, anh xem bộ phim hành động mới ra rạp cuối tuần chưa? Nam: Rồi, tôi xem hôm qua. Thấy các cảnh chân thực lắm. Nữ: Vậy à? Tôi cũng muốn xem, không biết còn vé không? Nam: Cuối tuần gần như hết vé rồi. Chị đi tối ngày thường xem.",
+      "q": "들은 내용과 같은 것을 고르십시오.",
+      "options": [
+        "남자는 어제 그 영화를 봤습니다.",
+        "여자는 그 영화를 이미 봤습니다.",
+        "주말 표가 많이 남아 있습니다.",
+        "남자는 영화가 지루했다고 말했습니다."
+      ],
+      "explain": "네, 어제 봤어요."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "남자",
+          "수진 씨, 내일 저녁에 같이 영화 볼래요?"
+        ],
+        [
+          "여자",
+          "내일은 안 돼요. 동생 졸업식이 있거든요."
+        ],
+        [
+          "남자",
+          "그럼 토요일은 어때요?"
+        ],
+        [
+          "여자",
+          "토요일은 좋아요. 제가 지금 바로 표를 예매할게요."
+        ]
+      ],
+      "linesVi": "Nam: Su-jin, tối mai đi xem phim cùng không? Nữ: Mai thì không được. Vì có lễ tốt nghiệp của em tôi. Nam: Vậy thứ Bảy thì sao? Nữ: Thứ Bảy được. Tôi đặt vé ngay bây giờ nhé.",
+      "q": "여자가 할 행동으로 알맞은 것을 고르십시오.",
+      "options": [
+        "영화표를 예매합니다.",
+        "동생과 영화를 봅니다.",
+        "내일 저녁에 영화를 봅니다.",
+        "남자에게 표를 받습니다."
+      ],
+      "explain": "제가 지금 바로 표를 예매할게요."
+    }
+  ],
+  "fillWriting": [
+    {
+      "text": "제목: 영화 동아리 회원 모집\n저희 동아리는 매주 금요일에 모여서 영화를 보고 이야기를 ( ㉠ ). 영화를 좋아하는 사람이라면 누구나 환영합니다. 가입하고 싶은 분은 이번 주 금요일까지 동아리방으로 ( ㉡ ).",
+      "textVi": "Tiêu đề: Tuyển thành viên câu lạc bộ phim. Câu lạc bộ chúng tôi tụ họp vào thứ Sáu hằng tuần để xem phim và ( ㉠ ). Ai thích phim đều được chào đón. Người muốn tham gia xin ( ㉡ ) phòng câu lạc bộ trước thứ Sáu tuần này.",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "나눕니다",
+            "나누고 있습니다"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "와 주십시오",
+            "와 주시기 바랍니다"
+          ]
+        }
+      ],
+      "tips": "㉠ 이야기를 나누다 = trò chuyện, văn thông báo dùng -ㅂ니다. ㉡ lời mời trang trọng: -아/어 주십시오 / -아/어 주시기 바랍니다."
+    },
+    {
+      "text": "영화를 고를 때 관람평을 참고하는 사람이 많습니다. 다른 사람들의 평가를 보면 재미없는 영화를 고를 가능성이 ( ㉠ ). 하지만 관람평이 아무리 ( ㉡ ) 나에게는 재미없을 수도 있습니다. 사람마다 좋아하는 영화가 다르기 때문입니다.",
+      "textVi": "Nhiều người tham khảo lời bình khi chọn phim. Xem đánh giá của người khác thì khả năng chọn phải phim chán ( ㉠ ). Nhưng lời bình ( ㉡ ) thì phim vẫn có thể chán với mình. Vì mỗi người thích một kiểu phim khác nhau.",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "줄어듭니다",
+            "적어집니다"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "좋아도",
+            "좋더라도"
+          ]
+        }
+      ],
+      "tips": "㉠ 가능성이 + giảm đi: 줄어들다 / 적어지다. ㉡ 아무리 đi với -아/어도 → 좋아도."
+    }
+  ]
+}
