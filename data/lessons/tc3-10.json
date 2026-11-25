@@ -1,0 +1,831 @@
+{
+  "id": "tc3-10",
+  "title": "Du lịch",
+  "ko": "여행",
+  "goal": "Lên kế hoạch và kể về chuyến du lịch; thuật lại lời người khác “nói rằng…”, “hỏi rằng…” và nói “đang định…”.",
+  "vocab": [
+    {
+      "group": "Loại hình du lịch",
+      "words": [
+        [
+          "수학여행",
+          "chuyến đi tham quan của trường"
+        ],
+        [
+          "패키지여행",
+          "du lịch trọn gói theo tour"
+        ],
+        [
+          "크루즈 여행",
+          "du lịch bằng tàu biển"
+        ],
+        [
+          "골프 여행",
+          "chuyến đi chơi gôn"
+        ]
+      ]
+    },
+    {
+      "group": "Điểm đến",
+      "words": [
+        [
+          "초원",
+          "đồng cỏ, thảo nguyên"
+        ],
+        [
+          "국립공원",
+          "vườn quốc gia"
+        ],
+        [
+          "유적지",
+          "khu di tích"
+        ],
+        [
+          "고궁",
+          "cung điện cổ"
+        ],
+        [
+          "사찰",
+          "chùa chiền"
+        ],
+        [
+          "온천",
+          "suối nước nóng"
+        ],
+        [
+          "계곡",
+          "khe suối trong núi"
+        ],
+        [
+          "사막",
+          "sa mạc"
+        ],
+        [
+          "델타",
+          "vùng châu thổ"
+        ],
+        [
+          "석회암 동굴",
+          "hang động đá vôi"
+        ]
+      ]
+    },
+    {
+      "group": "Lịch trình",
+      "words": [
+        [
+          "계획을 세우다",
+          "lập kế hoạch"
+        ],
+        [
+          "일정을 짜다",
+          "sắp xếp lịch trình"
+        ],
+        [
+          "변경하다",
+          "thay đổi (lịch, kế hoạch)"
+        ],
+        [
+          "도착하다",
+          "đến nơi"
+        ],
+        [
+          "출국하다",
+          "xuất cảnh"
+        ],
+        [
+          "입국하다",
+          "nhập cảnh"
+        ]
+      ]
+    },
+    {
+      "group": "Giấy tờ, chỗ ở, mùa du lịch",
+      "words": [
+        [
+          "여권",
+          "hộ chiếu"
+        ],
+        [
+          "비자",
+          "thị thực (visa)"
+        ],
+        [
+          "항공권",
+          "vé máy bay"
+        ],
+        [
+          "여행자수표",
+          "séc du lịch"
+        ],
+        [
+          "여행자 보험",
+          "bảo hiểm du lịch"
+        ],
+        [
+          "숙박 시설",
+          "cơ sở lưu trú"
+        ],
+        [
+          "성수기",
+          "mùa cao điểm"
+        ],
+        [
+          "비수기",
+          "mùa vắng khách"
+        ],
+        [
+          "세계 문화유산",
+          "di sản văn hóa thế giới"
+        ]
+      ]
+    },
+    {
+      "group": "Từ mới trong bài",
+      "words": [
+        [
+          "고객",
+          "khách hàng"
+        ],
+        [
+          "곡창지대",
+          "vựa lúa"
+        ],
+        [
+          "나룻배",
+          "đò, thuyền nhỏ"
+        ],
+        [
+          "당일",
+          "ngay trong ngày"
+        ],
+        [
+          "동반",
+          "đi cùng, đồng hành"
+        ],
+        [
+          "문화유산",
+          "di sản văn hóa"
+        ],
+        [
+          "뽑히다",
+          "được chọn, được bình chọn"
+        ],
+        [
+          "야외",
+          "ngoài trời"
+        ],
+        [
+          "운전면허",
+          "bằng lái xe"
+        ],
+        [
+          "유용하다",
+          "hữu ích"
+        ],
+        [
+          "이동 수단",
+          "phương tiện di chuyển"
+        ],
+        [
+          "인기를 끌다",
+          "được nhiều người ưa chuộng"
+        ],
+        [
+          "일교차",
+          "chênh lệch nhiệt độ ngày đêm"
+        ],
+        [
+          "입술 보호제",
+          "son dưỡng môi"
+        ],
+        [
+          "자외선 차단제",
+          "kem chống nắng"
+        ],
+        [
+          "피로 회복",
+          "hồi phục khỏi mệt mỏi"
+        ],
+        [
+          "해수욕",
+          "tắm biển"
+        ]
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "A/V -다고 하다",
+      "title": "nói rằng… (thuật lại câu kể)",
+      "note": [
+        "Thuật lại lời người khác (gián tiếp). Động từ: thân có patchim + -는다고, không patchim/ㄹ + -ㄴ다고 (먹는다고, 간다고, 산다고).",
+        "Tính từ, 있다/없다 + -다고 (좋다고, 재미있다고). Danh từ + (이)라고 (학생이라고, 의사라고); 아니다 → 아니라고.",
+        "Quá khứ -았/었다고, tương lai -(으)ㄹ 거라고 / -겠다고. Nói gọn: -대요 (= -다고 해요), N(이)래요."
+      ],
+      "examples": [
+        [
+          "민수 씨가 이번 방학에 제주도에 간다고 했어요.",
+          "Min-su nói kỳ nghỉ này sẽ đi đảo Jeju."
+        ],
+        [
+          "일기 예보에서 내일은 일교차가 크다고 해요.",
+          "Dự báo thời tiết nói ngày mai chênh lệch nhiệt độ ngày đêm lớn."
+        ],
+        [
+          "친구가 그 사찰은 세계 문화유산이라고 했어요.",
+          "Bạn tôi nói ngôi chùa đó là di sản văn hóa thế giới."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "가이드가 내일 아침 8시에 호텔에서 ___ 했어요.",
+          "options": [
+            "출발한다고",
+            "출발하다고",
+            "출발하라고",
+            "출발하냐고"
+          ],
+          "explain": "Động từ không patchim + -ㄴ다고 하다."
+        },
+        {
+          "q": "지수 씨가 그 온천은 물이 아주 ___ 했어요.",
+          "options": [
+            "좋다고",
+            "좋는다고",
+            "좋ㄴ다고",
+            "좋으라고"
+          ],
+          "explain": "Tính từ + -다고 하다."
+        },
+        {
+          "q": "친구가 여기가 유명한 ___ 했어요.",
+          "options": [
+            "유적지라고",
+            "유적지다고",
+            "유적지는다고",
+            "유적지냐고"
+          ],
+          "explain": "Danh từ không patchim + 라고 하다."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "동생이 어제 여권을 잃어버렸다고 했어요.",
+            "동생이 어제 여권을 잃어버린다고 했어요.",
+            "동생이 어제 여권을 잃어버렸냐고 했어요.",
+            "동생이 어제 여권을 잃어버리다고 했어요."
+          ],
+          "explain": "Việc đã xảy ra → -았/었다고 하다."
+        },
+        {
+          "q": "Nghĩa của \"성수기라서 항공권이 비싸대요.\"",
+          "options": [
+            "Nghe nói vì là mùa cao điểm nên vé máy bay đắt.",
+            "Vì là mùa cao điểm nên hãy mua vé máy bay đắt.",
+            "Hỏi xem mùa cao điểm vé máy bay có đắt không.",
+            "Tôi định mua vé máy bay mùa cao điểm."
+          ],
+          "explain": "-대요 = -다고 해요: thuật lại điều nghe được."
+        }
+      ]
+    },
+    {
+      "pattern": "A/V -냐고 하다",
+      "title": "hỏi rằng… (thuật lại câu hỏi)",
+      "note": [
+        "Thuật lại câu hỏi của người khác. Động từ, tính từ, 있다/없다 + -냐고 하다/묻다 (가냐고, 먹냐고, 좋냐고, 있냐고).",
+        "Văn viết, trang trọng: động từ -느냐고, tính từ -(으)냐고 (먹느냐고, 작으냐고). Danh từ + (이)냐고 (학생이냐고).",
+        "Quá khứ -았/었냐고. Thân ㄹ rụng ㄹ: 살다 → 사냐고, 멀다 → 머냐고. Nói gọn: -냬요 (= -냐고 해요)."
+      ],
+      "examples": [
+        [
+          "직원이 여권을 가지고 왔냐고 물었어요.",
+          "Nhân viên hỏi tôi có mang hộ chiếu theo không."
+        ],
+        [
+          "어머니가 숙소가 공항에서 머냐고 하셨어요.",
+          "Mẹ hỏi chỗ ở có xa sân bay không."
+        ],
+        [
+          "친구가 저한테 이번 여행이 패키지여행이냐고 물어봤어요.",
+          "Bạn hỏi tôi chuyến này có phải du lịch theo tour không."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "가이드가 우리에게 점심을 ___ 물었어요.",
+          "options": [
+            "먹었냐고",
+            "먹었다고",
+            "먹으라고",
+            "먹자고"
+          ],
+          "explain": "Thuật lại câu hỏi (quá khứ) → -았/었냐고."
+        },
+        {
+          "q": "친구가 제주도 날씨가 ___ 물어봤어요.",
+          "options": [
+            "어떠냐고",
+            "어떻다고",
+            "어떠라고",
+            "어떻자고"
+          ],
+          "explain": "Câu hỏi 어때요? → 어떠냐고 (ㅎ bất quy tắc)."
+        },
+        {
+          "q": "직원이 저에게 이 가방이 제 ___ 물었어요.",
+          "options": [
+            "거냐고",
+            "거라고",
+            "거다고",
+            "거자고"
+          ],
+          "explain": "Danh từ không patchim + 냐고: 제 거예요? → 제 거냐고."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "호텔 직원이 몇 시에 도착하냐고 물었어요.",
+            "호텔 직원이 몇 시에 도착하다고 물었어요.",
+            "호텔 직원이 몇 시에 도착하라고 물었어요.",
+            "호텔 직원이 몇 시에 도착한냐고 물었어요."
+          ],
+          "explain": "Câu hỏi → -냐고 묻다."
+        },
+        {
+          "q": "Nghĩa của \"동생이 저한테 어디에 사냐고 물었어요.\"",
+          "options": [
+            "Em tôi hỏi tôi sống ở đâu.",
+            "Em tôi nói đang sống ở đâu đó.",
+            "Em tôi bảo tôi hãy sống ở đâu đó.",
+            "Em tôi rủ tôi sống ở đó."
+          ],
+          "explain": "살다 → 사냐고: hỏi sống ở đâu."
+        }
+      ]
+    },
+    {
+      "pattern": "V -(으)ㄹ까 하다",
+      "title": "đang định…, tính là…",
+      "note": [
+        "Nói dự định chưa chắc chắn, vẫn đang cân nhắc: 여름에 바다에 갈까 해요.",
+        "Thân có patchim + -을까, không patchim/ㄹ + -ㄹ까 (먹을까, 갈까, 만들까). Hay đi với 이번에, 주말에, -(으)ㄹ까 생각 중이다.",
+        "Nhẹ hơn -(으)ㄹ 생각이다 / -(으)려고 하다 (đã quyết). Chỉ dùng cho ý định của người nói (hoặc hỏi người nghe), quá khứ: -(으)ㄹ까 했는데 (đã định… nhưng)."
+      ],
+      "examples": [
+        [
+          "이번 연휴에 온천에 갈까 해요.",
+          "Kỳ nghỉ này tôi định đi suối nước nóng."
+        ],
+        [
+          "비수기에 여행을 갈까 하는데 어디가 좋을까요?",
+          "Tôi tính đi du lịch vào mùa vắng khách, đi đâu thì hay?"
+        ],
+        [
+          "기차를 탈까 했는데 표가 없어서 버스를 탔어요.",
+          "Đã định đi tàu nhưng hết vé nên đi xe buýt."
+        ]
+      ],
+      "questions": [
+        {
+          "q": "방학에 친구들하고 국립공원에 ___ 해요.",
+          "options": [
+            "가 볼까",
+            "가 볼게",
+            "가 보라고",
+            "가 본다고"
+          ],
+          "explain": "Dự định chưa chắc → -(으)ㄹ까 하다."
+        },
+        {
+          "q": "주말에 집에서 김밥을 ___ 해요.",
+          "options": [
+            "만들까",
+            "만들을까",
+            "만드을까",
+            "만들어까"
+          ],
+          "explain": "Thân ㄹ + -ㄹ까: 만들까."
+        },
+        {
+          "q": "A: 휴가 때 뭐 할 거예요? B: 글쎄요, 섬에서 낚시나 ___ 해요.",
+          "options": [
+            "할까",
+            "하냐고",
+            "하자고",
+            "한다고"
+          ],
+          "explain": "Ý định đang cân nhắc → 할까 해요."
+        },
+        {
+          "q": "Câu nào ĐÚNG?",
+          "options": [
+            "택시를 탈까 했는데 길이 막혀서 지하철을 탔어요.",
+            "택시를 탈까 하는데 어제 지하철을 탔어요.",
+            "택시를 탈까 했어서 지하철을 탔어요.",
+            "택시를 타을까 했는데 지하철을 탔어요."
+          ],
+          "explain": "Đã định… nhưng → -(으)ㄹ까 했는데."
+        },
+        {
+          "q": "Nghĩa của \"올해는 혼자 배낭을 메고 여행을 떠날까 해요.\"",
+          "options": [
+            "Năm nay tôi đang định đeo ba lô đi du lịch một mình.",
+            "Năm nay tôi đã đi du lịch ba lô một mình.",
+            "Nghe nói năm nay có người đi du lịch ba lô một mình.",
+            "Năm nay tôi không muốn đi du lịch một mình."
+          ],
+          "explain": "-(으)ㄹ까 하다 = đang định."
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "q": "여행 가기 전에 날짜와 장소를 정해서 ___.",
+      "options": [
+        "일정을 짰어요",
+        "입국했어요",
+        "뽑혔어요",
+        "도착했어요"
+      ],
+      "explain": "Sắp xếp lịch trình → 일정을 짜다."
+    },
+    {
+      "q": "공항에서 ___를 보여 주고 비행기를 탔어요.",
+      "options": [
+        "여권",
+        "초원",
+        "계곡",
+        "사막"
+      ],
+      "explain": "Giấy tờ khi đi máy bay → 여권."
+    },
+    {
+      "q": "여름에는 ___라서 숙소와 항공권이 다 비싸요.",
+      "options": [
+        "성수기",
+        "비수기",
+        "당일",
+        "야외"
+      ],
+      "explain": "Mùa đông khách, giá đắt → 성수기."
+    },
+    {
+      "q": "햇빛이 강하니까 바닷가에 가기 전에 ___를 꼭 바르세요.",
+      "options": [
+        "자외선 차단제",
+        "여행자수표",
+        "나룻배",
+        "운전면허"
+      ],
+      "explain": "Chống nắng → 자외선 차단제."
+    },
+    {
+      "q": "이 지역은 산과 바다의 ___가 커서 아침저녁으로 추워요.",
+      "options": [
+        "일교차",
+        "곡창지대",
+        "동반",
+        "고객"
+      ],
+      "explain": "Chênh lệch nhiệt độ ngày đêm → 일교차."
+    },
+    {
+      "q": "다리가 없어서 강을 건널 때 작은 ___를 탔어요.",
+      "options": [
+        "나룻배",
+        "델타",
+        "온천",
+        "고궁"
+      ],
+      "explain": "Thuyền nhỏ qua sông → 나룻배."
+    },
+    {
+      "q": "그 섬은 경치가 아름다워서 관광객들 사이에서 ___ 있어요.",
+      "options": [
+        "인기를 끌고",
+        "출국하고",
+        "변경하고",
+        "뽑히고"
+      ],
+      "explain": "Được ưa chuộng → 인기를 끌다."
+    },
+    {
+      "q": "갑자기 일이 생겨서 여행 날짜를 다음 주로 ___.",
+      "options": [
+        "변경했어요",
+        "도착했어요",
+        "입국했어요",
+        "유용했어요"
+      ],
+      "explain": "Đổi ngày → 변경하다."
+    }
+  ],
+  "listening": [
+    {
+      "listen": "가: 이번 여름에 어디 가요? 나: 아직 못 정했어요. 바다에 갈까 하는데 성수기라서 숙소가 비싸요.",
+      "q": "Người thứ hai đang định đi đâu?",
+      "options": [
+        "Đi biển nhưng phòng đắt",
+        "Đi suối nước nóng",
+        "Đi leo núi",
+        "Ở nhà vì không có thời gian"
+      ],
+      "explain": "바다에 갈까 하는데 성수기라서 숙소가 비싸요."
+    },
+    {
+      "listen": "가: 수진 씨는 이번 여행에 같이 가요? 나: 아니요, 회사 일이 바빠서 못 간다고 했어요.",
+      "q": "Su-jin thế nào?",
+      "options": [
+        "Không đi được vì bận việc công ty",
+        "Sẽ đi cùng",
+        "Đi một mình",
+        "Đã về nước"
+      ],
+      "explain": "회사 일이 바빠서 못 간다고 했어요."
+    },
+    {
+      "listen": "가: 공항 직원이 뭐라고 했어요? 나: 짐이 몇 개냐고 물어보고 여권도 확인했어요.",
+      "q": "Nhân viên sân bay đã hỏi gì?",
+      "options": [
+        "Có mấy kiện hành lý",
+        "Đi đâu",
+        "Ở khách sạn nào",
+        "Mấy giờ bay"
+      ],
+      "explain": "짐이 몇 개냐고 물어보고…"
+    },
+    {
+      "listen": "가: 당일 여행으로 갈 수 있는 곳 좀 추천해 주세요. 나: 기차로 한 시간 거리에 계곡이 있는데 여름에 가기 좋아요.",
+      "q": "Người thứ hai giới thiệu nơi nào?",
+      "options": [
+        "Khe suối cách một giờ tàu",
+        "Bãi biển xa",
+        "Sa mạc",
+        "Đảo phải đi máy bay"
+      ],
+      "explain": "기차로 한 시간 거리에 계곡이 있는데…"
+    },
+    {
+      "listen": "가: 이번 패키지여행에는 여행자 보험이 포함돼 있어요? 나: 네, 보험료는 상품 가격에 들어 있어요.",
+      "q": "Điều nào đúng?",
+      "options": [
+        "Bảo hiểm du lịch đã gồm trong giá tour",
+        "Phải mua bảo hiểm riêng",
+        "Tour không có bảo hiểm",
+        "Bảo hiểm miễn phí cho trẻ em thôi"
+      ],
+      "explain": "보험료는 상품 가격에 들어 있어요."
+    }
+  ],
+  "reading": {
+    "passage": "요즘 여행을 계획하는 사람들 사이에서 ‘당일 여행’이 인기를 끌고 있습니다. 숙박 시설을 예약할 필요가 없어서 비용이 적게 들고, 바쁜 직장인도 주말에 부담 없이 떠날 수 있기 때문입니다. 여행사 직원은 당일 여행을 갈 때는 이동 시간이 너무 길지 않은 곳을 고르는 것이 좋다고 말합니다. 또 산이나 계곡은 일교차가 크니까 얇은 겉옷을 꼭 챙기는 것이 좋다고 했습니다.",
+    "passageVi": "Dạo này trong số những người lên kế hoạch du lịch, ‘du lịch trong ngày’ đang được ưa chuộng. Vì không cần đặt chỗ lưu trú nên tốn ít chi phí, và người đi làm bận rộn cũng có thể đi vào cuối tuần mà không thấy nặng nề. Nhân viên công ty du lịch nói khi đi du lịch trong ngày thì nên chọn nơi thời gian di chuyển không quá dài. Họ cũng nói vì núi hay khe suối chênh lệch nhiệt độ lớn nên nhất định nên mang theo áo khoác mỏng.",
+    "questions": [
+      {
+        "q": "Vì sao du lịch trong ngày được ưa chuộng?",
+        "options": [
+          "Không cần đặt chỗ ở nên tốn ít tiền",
+          "Vì có nhiều tour giảm giá",
+          "Vì chỉ đi máy bay",
+          "Vì công ty bắt buộc đi"
+        ],
+        "explain": "숙박 시설을 예약할 필요가 없어서 비용이 적게 들고…"
+      },
+      {
+        "q": "Nhân viên du lịch khuyên điều gì?",
+        "options": [
+          "Chọn nơi di chuyển không quá lâu và mang áo khoác mỏng",
+          "Đi vào mùa cao điểm",
+          "Đặt khách sạn thật sớm",
+          "Chỉ đi biển"
+        ],
+        "explain": "이동 시간이 너무 길지 않은 곳… 얇은 겉옷을 꼭 챙기는 것이 좋다고 했습니다."
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "Viết 3–4 câu về kế hoạch du lịch sắp tới và lời người khác nói về nơi đó. Dùng -(으)ㄹ까 하다, -다고 하다 và -냐고 하다.",
+    "samples": [
+      [
+        "이번 가을에 가족과 경주에 갈까 해요.",
+        "Mùa thu này tôi định đi Gyeongju với gia đình."
+      ],
+      [
+        "친구가 경주에는 유적지가 많아서 볼 것이 많다고 했어요.",
+        "Bạn tôi nói Gyeongju có nhiều di tích nên có nhiều thứ để xem."
+      ],
+      [
+        "어머니는 기차로 가냐고 물으셨어요.",
+        "Mẹ hỏi có đi bằng tàu không."
+      ],
+      [
+        "가을은 일교차가 크다고 해서 겉옷을 챙길 거예요.",
+        "Nghe nói mùa thu chênh lệch nhiệt độ lớn nên tôi sẽ mang áo khoác."
+      ]
+    ],
+    "tips": "Kế hoạch chưa chắc: -(으)ㄹ까 해요. Thuật lời kể: V-ㄴ/는다고, A-다고, N(이)라고 했어요. Thuật câu hỏi: -냐고 물었어요/하셨어요."
+  },
+  "topik": [
+    {
+      "type": "blank",
+      "q": "이번 연휴에는 사람이 많을 것 같아서 집에서 (    ).",
+      "options": [
+        "쉴까 해요",
+        "쉬냐고 해요",
+        "쉰다고 물어요",
+        "쉬라고 해요"
+      ],
+      "explain": "Ý định của mình, chưa chắc → -(으)ㄹ까 하다."
+    },
+    {
+      "type": "blank",
+      "q": "뉴스에서 다음 주부터 항공권 가격이 (    ).",
+      "options": [
+        "오른다고 했어요",
+        "오를까 했어요",
+        "오르냐고 했어요",
+        "오르자고 했어요"
+      ],
+      "explain": "Thuật lại tin nghe được → -ㄴ/는다고 하다."
+    },
+    {
+      "type": "blank",
+      "q": "호텔 직원이 저에게 몇 박을 (    ) 물었어요.",
+      "options": [
+        "묵을 거냐고",
+        "묵을 거라고",
+        "묵을까",
+        "묵자고"
+      ],
+      "explain": "Thuật lại câu hỏi → -냐고 묻다."
+    },
+    {
+      "type": "similar",
+      "q": "이번 휴가에는 크루즈 여행을 __해 볼까 해요__.",
+      "options": [
+        "해 볼 생각이에요",
+        "해 본 적이 있어요",
+        "해 보라고 했어요",
+        "해 봤다고 해요"
+      ],
+      "explain": "-(으)ㄹ까 하다 ≈ -(으)ㄹ 생각이다 (dự định)."
+    },
+    {
+      "type": "similar",
+      "q": "그 국립공원은 경치가 __아름답대요__.",
+      "options": [
+        "아름답다고 해요",
+        "아름다울까 해요",
+        "아름답냐고 해요",
+        "아름다워 보여요"
+      ],
+      "explain": "-대요 = -다고 해요."
+    },
+    {
+      "type": "notice",
+      "passage": "✈️ 한빛여행사 가을 특가 안내\n· 상품: 2박 3일 제주 패키지여행 (항공권 + 숙박 + 아침 식사)\n· 가격: 1인 39만 원 (여행자 보험 포함)\n· 출발: 10월 중 매주 금요일\n· 어린이 동반 시 1인 5만 원 할인",
+      "passageVi": "Thông báo ưu đãi mùa thu của công ty du lịch Hanbit. Sản phẩm: tour trọn gói Jeju 3 ngày 2 đêm (vé máy bay + phòng + bữa sáng). Giá: 390.000 won/người (gồm bảo hiểm du lịch). Khởi hành: thứ Sáu hằng tuần trong tháng 10. Đi cùng trẻ em giảm 50.000 won/người.",
+      "q": "이 글의 내용과 같은 것을 고르십시오.",
+      "options": [
+        "여행자 보험료는 가격에 포함되어 있습니다.",
+        "이 상품은 매일 출발합니다.",
+        "점심과 저녁 식사가 모두 포함됩니다.",
+        "어른만 할인을 받을 수 있습니다."
+      ],
+      "explain": "가격: 1인 39만 원 (여행자 보험 포함)."
+    },
+    {
+      "type": "order",
+      "passage": "(가) 그런데 출발 일주일 전에 태풍이 온다는 뉴스를 들었습니다.\n(나) 친구와 함께 여름 방학에 섬으로 여행을 갈까 하고 계획을 세웠습니다.\n(다) 그래서 여행 날짜를 다음 달로 변경했습니다.\n(라) 우리는 일정을 짜고 숙소와 배표를 미리 예약했습니다.",
+      "passageVi": "(나) Tôi cùng bạn lập kế hoạch đang định đi đảo vào kỳ nghỉ hè. (라) Chúng tôi sắp xếp lịch trình và đặt trước chỗ ở, vé tàu. (가) Nhưng một tuần trước khi đi, chúng tôi nghe tin có bão. (다) Vì vậy đã đổi ngày đi sang tháng sau.",
+      "q": "다음을 순서대로 맞게 배열한 것을 고르십시오.",
+      "options": [
+        "(나)-(라)-(가)-(다)",
+        "(나)-(가)-(라)-(다)",
+        "(라)-(나)-(다)-(가)",
+        "(나)-(다)-(가)-(라)"
+      ],
+      "explain": "Lập kế hoạch (나) → đặt trước (라) → 그런데 nghe tin bão (가) → 그래서 đổi ngày (다)."
+    },
+    {
+      "type": "main",
+      "passage": "여행지에서 유명한 곳만 찾아다니면 사진은 많이 남지만 기억에 남는 것은 별로 없습니다. 하루 정도는 일정을 짜지 말고 천천히 걸으면서 그 지역 사람들의 생활을 보는 것이 좋습니다. 시장에서 음식을 먹어 보고 현지 사람들과 이야기를 나누면 그곳을 더 깊이 알게 됩니다.",
+      "passageVi": "Ở nơi du lịch nếu chỉ tìm đến những chỗ nổi tiếng thì còn lại nhiều ảnh nhưng ít điều đáng nhớ. Nên có khoảng một ngày không xếp lịch, thong thả đi bộ và ngắm đời sống người dân nơi đó. Ăn thử ở chợ và trò chuyện với người địa phương thì sẽ hiểu nơi đó sâu hơn.",
+      "q": "다음 글의 중심 생각으로 알맞은 것을 고르십시오.",
+      "options": [
+        "여행할 때 여유를 가지고 현지 생활을 경험하는 것이 좋습니다.",
+        "여행할 때는 유명한 곳에서 사진을 많이 찍어야 합니다.",
+        "여행 일정은 하루도 빠짐없이 짜야 합니다.",
+        "시장 음식은 비싸니까 먹지 않는 것이 좋습니다."
+      ],
+      "explain": "Ý chính ở câu 2–3: dành thời gian thong thả trải nghiệm đời sống địa phương."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "남자",
+          "수미 씨, 휴가 계획은 세웠어요?"
+        ],
+        [
+          "여자",
+          "네, 이번에는 사람이 적은 비수기에 갈까 해요. 11월쯤이요."
+        ],
+        [
+          "남자",
+          "좋네요. 그때는 항공권도 싸대요."
+        ],
+        [
+          "여자",
+          "맞아요. 그래서 다음 주에 항공권을 알아볼 거예요."
+        ]
+      ],
+      "linesVi": "Nam: Su-mi, đã lên kế hoạch nghỉ phép chưa? Nữ: Rồi, lần này tôi định đi vào mùa vắng khách, khoảng tháng 11. Nam: Hay đấy. Nghe nói lúc đó vé máy bay cũng rẻ. Nữ: Đúng vậy. Nên tuần sau tôi sẽ tìm hiểu vé máy bay.",
+      "q": "들은 내용과 같은 것을 고르십시오.",
+      "options": [
+        "여자는 비수기에 여행을 가려고 합니다.",
+        "여자는 이미 항공권을 샀습니다.",
+        "남자는 다음 달에 해외여행을 갑니다.",
+        "여자는 성수기에만 휴가를 낼 수 있습니다."
+      ],
+      "explain": "비수기에 갈까 해요."
+    },
+    {
+      "type": "dialog",
+      "lines": [
+        [
+          "여자",
+          "다음 주에 출국하지요? 준비는 다 했어요?"
+        ],
+        [
+          "남자",
+          "네, 항공권하고 숙소는 다 예약했어요."
+        ],
+        [
+          "여자",
+          "여권 유효 기간은 확인했어요? 6개월 이상 남아야 입국할 수 있다고 해요."
+        ],
+        [
+          "남자",
+          "아, 그건 생각 못 했어요. 지금 바로 확인해 볼게요."
+        ]
+      ],
+      "linesVi": "Nữ: Tuần sau anh xuất cảnh nhỉ? Chuẩn bị xong hết chưa? Nam: Rồi, vé máy bay và chỗ ở đã đặt hết. Nữ: Anh kiểm tra hạn hộ chiếu chưa? Nghe nói phải còn trên 6 tháng mới nhập cảnh được. Nam: À, cái đó tôi chưa nghĩ tới. Tôi sẽ kiểm tra ngay bây giờ.",
+      "q": "남자가 할 행동으로 알맞은 것을 고르십시오.",
+      "options": [
+        "여권 유효 기간을 확인합니다.",
+        "비자를 받으러 대사관에 갑니다.",
+        "여행을 취소합니다.",
+        "여행자수표를 삽니다."
+      ],
+      "explain": "Nữ nhắc kiểm tra hạn hộ chiếu; nam: 지금 바로 확인해 볼게요."
+    }
+  ],
+  "fillWriting": [
+    {
+      "text": "제목: 수학여행 일정 변경 안내\n학부모님께, 다음 주에 큰 비가 ( ㉠ ) 수학여행 일정을 변경하게 되었습니다. 출발 날짜는 다음 달 3일로 바뀌었습니다. 다른 일정은 그대로이니 궁금한 점이 있으시면 담임 선생님께 ( ㉡ ).",
+      "textVi": "Tiêu đề: Thông báo đổi lịch chuyến tham quan của trường. Kính gửi phụ huynh, vì ( ㉠ ) tuần sau có mưa lớn nên lịch chuyến tham quan được thay đổi. Ngày khởi hành đổi sang ngày 3 tháng sau. Các lịch khác giữ nguyên, nếu có thắc mắc xin ( ㉡ ) giáo viên chủ nhiệm.",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "온다고 해서",
+            "내린다고 해서"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "연락해 주시기 바랍니다",
+            "문의해 주십시오"
+          ]
+        }
+      ],
+      "tips": "㉠ thuật lại dự báo + lý do: -ㄴ/는다고 해서. ㉡ lời đề nghị trang trọng trong thông báo: -아/어 주시기 바랍니다 / -(으)십시오."
+    },
+    {
+      "text": "요즘 혼자 여행을 떠나는 사람이 많아지고 있습니다. 혼자 여행하면 다른 사람의 일정에 맞출 필요가 없어서 ( ㉠ ) 다닐 수 있습니다. 하지만 아프거나 사고가 났을 때 도와줄 사람이 없습니다. 그러니까 혼자 여행을 갈 때는 출발 전에 꼭 ( ㉡ ).",
+      "textVi": "Dạo này người đi du lịch một mình ngày càng nhiều. Đi một mình thì không cần theo lịch của người khác nên có thể ( ㉠ ) đi. Nhưng khi ốm hay gặp tai nạn thì không có ai giúp. Vì vậy khi đi du lịch một mình, trước khi khởi hành nhất định ( ㉡ ).",
+      "blanks": [
+        {
+          "mark": "㉠",
+          "answers": [
+            "자유롭게",
+            "마음대로"
+          ]
+        },
+        {
+          "mark": "㉡",
+          "answers": [
+            "여행자 보험에 가입해야 합니다",
+            "가족에게 일정을 알려 주는 것이 좋습니다"
+          ]
+        }
+      ],
+      "tips": "㉠ trạng từ -게 bổ nghĩa 다니다 (tự do). ㉡ sau 하지만 + 그러니까 → lời khuyên chuẩn bị an toàn: -아/어야 합니다 / -는 것이 좋습니다."
+    }
+  ]
+}
