@@ -1,7 +1,8 @@
 /* Đề thi thử TOPIK II (phần Đọc, phần Nghe và phần Viết 51–54): làm như thi thật, có tính giờ, nộp bài xem điểm và giải thích.
    Miễn phí, không cần đăng nhập. Giờ đếm và chấm điểm ngay trên máy; bài đang làm lưu ở localStorage
    (tải lại trang, đóng tab vẫn đếm tiếp). Kết quả lưu vào tiến độ (hanadul:v2 → exams), đăng nhập thì đồng bộ theo.
-   Phần Nghe: lời thoại đọc bằng giọng có sẵn của trình duyệt (Web Speech API, miễn phí), mỗi đoạn nghe tối đa ex.plays lần khi làm bài.
+   Phần Nghe: phát file âm thanh thu sẵn (ex.audio, giọng Google Chirp 3 HD, tạo bằng tools/tts/gen_audio.py); đề chưa có file
+   hoặc tải file lỗi thì đọc lời thoại bằng giọng có sẵn của trình duyệt (Web Speech API). Mỗi đoạn nghe tối đa ex.plays lần khi làm bài.
    Phần Viết: 51–52 so khớp với đáp án mẫu, 53–54 người học tự chấm theo tiêu chí và bài mẫu (không chấm bằng AI).
    Cần assets/app.js (HD.lib, HD.setCleanup). */
 (function () {
@@ -65,7 +66,35 @@
       return '<p><b class="ko">' + esc(l[0]) + ':</b> <span class="ko">' + esc(l[1]) + '</span></p>';
     }).join('') + '</details>' + (st.linesVi ? '<details class="ex-vi"><summary>Dịch lời thoại</summary><p>' + L().ko(st.linesVi) + '</p></details>' : '');
   }
-  function stopAudio() { try { if (window.speechSynthesis) speechSynthesis.cancel(); } catch (e) { /* không có giọng đọc */ } }
+  // Âm thanh thu sẵn: tải trước thành blob để bấm là phát ngay (iPhone chặn phát nếu phải chờ tải) và học offline.
+  var player = null, blobs = {};
+  function audioUrl(ex, name) { return ex.audio && name ? ex.audio.dir + '/' + name : ''; }
+  function setUrl(ex, si) { return audioUrl(ex, ex.audio && ex.audio.files && ex.audio.files[si]); }
+  function preloadAudio(ex) {
+    if (!ex.audio || !window.fetch || !window.URL || !URL.createObjectURL) return;
+    (ex.audio.files || []).forEach(function (f) {
+      var u = audioUrl(ex, f);
+      if (blobs[u]) return;
+      blobs[u] = 'loading';
+      fetch(u).then(function (r) { if (!r.ok) throw new Error(r.status); return r.blob(); })
+        .then(function (b) { blobs[u] = URL.createObjectURL(b); }, function () { delete blobs[u]; });
+    });
+  }
+  // Phát file u; không phát được (thiếu file, mất mạng, trình duyệt chặn) thì gọi fallback (giọng trình duyệt).
+  function playUrl(u, fallback) {
+    stopAudio();
+    if (!u || typeof Audio === 'undefined') return fallback();
+    var a = new Audio(blobs[u] && blobs[u] !== 'loading' ? blobs[u] : u), done = false;
+    player = a;
+    var fb = function () { if (done || player !== a) return; done = true; player = null; fallback(); };
+    a.addEventListener('error', fb);
+    try { var p = a.play(); if (p && p.catch) p.catch(function (e) { if (!e || e.name !== 'AbortError') fb(); }); } catch (e) { fb(); }
+  }
+  function playSet(ex, si) { var st = ex.sets[si]; playUrl(setUrl(ex, si), function () { L().speakLines(st.lines, 0.95); }); }
+  function stopAudio() {
+    if (player) { try { player.pause(); } catch (e) { /* đã dừng */ } player = null; }
+    try { if (window.speechSynthesis) speechSynthesis.cancel(); } catch (e) { /* không có giọng đọc */ }
+  }
   function flat(ex) {
     var out = [];
     ex.sets.forEach(function (st, si) { st.questions.forEach(function (q) { out.push({ q: q, set: st, si: si }); }); });
@@ -151,7 +180,7 @@
         h += '<li><a class="exam-item" href="#/thi-thu/' + esc(e.id) + '" data-exam="' + esc(e.id) + '"><span class="emoji" aria-hidden="true">' + esc(e.icon || '📖') + '</span>' +
           '<span class="exam-item-body"><b>' + esc(e.title) + '</b><br><span class="muted">' + e.count + ' câu · ' + e.minutes + ' phút' + (e.level ? ' · ' + esc(e.level) : '') + '</span></span>' + status + '</a></li>';
       });
-      h += '</ul><p class="muted small-note">Đề do Hana Dul tự soạn theo cấu trúc đề TOPIK II, không phải đề thi chính thức. Phần Viết: bạn tự chấm theo đáp án, tiêu chí và bài mẫu. Phần Nghe: âm thanh là giọng đọc máy của trình duyệt.</p></div>';
+      h += '</ul><p class="muted small-note">Đề do Hana Dul tự soạn theo cấu trúc đề TOPIK II, không phải đề thi chính thức. Phần Viết: bạn tự chấm theo đáp án, tiêu chí và bài mẫu. Phần Nghe: âm thanh là giọng đọc AI thu sẵn, máy không tải được thì dùng giọng đọc của trình duyệt.</p></div>';
       app.innerHTML = h;
     }).catch(function (err) { failMsg(app, err); });
   }
@@ -170,7 +199,9 @@
       '<li>⏱ Có <b>' + ex.minutes + ' phút</b> cho ' + total + ' câu. Đồng hồ vẫn chạy khi bạn tải lại trang hay đóng tab.</li>' +
       (isNghe(ex)
         ? '<li>🎧 Bật loa hoặc đeo tai nghe. Bấm 🔊 ở mỗi đoạn để nghe; mỗi đoạn nghe tối đa <b>' + maxPlays(ex) + ' lần</b>, nghe xong chọn ① ② ③ ④.</li>' +
-          '<li>🤖 Âm thanh là giọng đọc có sẵn của trình duyệt (miễn phí, không cần tải). Nghe sẽ hơi máy móc và không có tiếng động như đề thật; máy chưa có giọng tiếng Hàn thì hãy cài thêm (Android: Cài đặt › Chuyển văn bản thành giọng nói; iPhone: Cài đặt › Trợ năng › Nội dung được đọc).</li>' +
+          (ex.audio
+            ? '<li>🎙️ Âm thanh là giọng đọc AI tự nhiên thu sẵn (giọng nam, giọng nữ riêng), không có tiếng động như đề thật. Mất mạng giữa chừng thì đoạn chưa tải sẽ đọc bằng giọng của trình duyệt.</li>'
+            : '<li>🤖 Âm thanh là giọng đọc có sẵn của trình duyệt (miễn phí, không cần tải). Nghe sẽ hơi máy móc và không có tiếng động như đề thật; máy chưa có giọng tiếng Hàn thì hãy cài thêm (Android: Cài đặt › Chuyển văn bản thành giọng nói; iPhone: Cài đặt › Trợ năng › Nội dung được đọc).</li>') +
           '<li>📤 Hết giờ bài tự nộp. Mỗi câu đúng 2 điểm (tối đa ' + total * 2 + '). Nộp xong xem lời thoại, bản dịch, giải thích và nghe lại thoải mái.</li>' +
           '<li id="ttsCheck" class="muted"></li>'
         : isViet(ex)
@@ -197,7 +228,13 @@
     else if (r) h += '<p class="muted" style="margin-top:12px">Lần trước: <b>' + r.last + '/' + total + '</b> câu đúng · cao nhất ' + r.best + '/' + total + ' · <a href="#/thi-thu/' + esc(ex.id) + '/ket-qua">Xem lại bài đã nộp</a></p>';
     app.innerHTML = h + '</div></div>';
     var tc = document.getElementById('ttsCheck');
-    if (tc) {
+    if (tc && ex.audio) {
+      tc.innerHTML = '✅ Đề có giọng đọc thu sẵn. <button type="button" class="slow" data-sample="1">🔊 Nghe thử</button>';
+      tc.querySelector('[data-sample]').addEventListener('click', function () {
+        playUrl(audioUrl(ex, ex.audio.sample), function () { L().speak('안녕하세요. 듣기 시험을 시작하겠습니다.'); });
+      });
+      HD.setCleanup(stopAudio);
+    } else if (tc) {
       var hasVoice = function () { return window.speechSynthesis && speechSynthesis.getVoices().some(function (v) { return /^ko/i.test(v.lang); }); };
       var paint = function () {
         tc.innerHTML = !window.speechSynthesis ? '⚠️ Trình duyệt này không đọc to được. Hãy mở bằng Chrome, Safari hoặc Edge bản mới.'
@@ -272,6 +309,7 @@
     var iv = setInterval(tick, 1000);
     function stop() { clearInterval(iv); document.body.classList.remove('exam-mode'); stopAudio(); }
     HD.setCleanup(stop);
+    if (isNghe(ex)) preloadAudio(ex);
     paintCount(); tick();
 
     root.addEventListener('click', function (e) {
@@ -286,7 +324,7 @@
         if (used >= maxPlays(ex)) { L().toast('Đoạn này đã nghe đủ ' + maxPlays(ex) + ' lần.'); return; }
         run.plays[si] = used + 1;
         writeRun(run);
-        L().speakLines(ex.sets[si].lines, 0.95);
+        playSet(ex, si);
         var left = maxPlays(ex) - run.plays[si];
         root.querySelector('[data-left="' + si + '"]').textContent = left > 0 ? 'Còn ' + left + ' lượt nghe' : 'Đã hết lượt nghe';
         if (left <= 0) pb.disabled = true;
@@ -423,9 +461,10 @@
     });
     app.querySelector('.exam-review').addEventListener('click', function (e) {
       var rb = e.target.closest('[data-replay]');
-      if (rb) L().speakLines(ex.sets[rb.getAttribute('data-replay')].lines, 0.95);
+      if (rb) playSet(ex, +rb.getAttribute('data-replay'));
     });
     HD.setCleanup(stopAudio);
+    if (isNghe(ex)) preloadAudio(ex);
     app.querySelector('.ex-filter').addEventListener('click', function (e) {
       var b = e.target.closest('[data-f]');
       if (!b) return;

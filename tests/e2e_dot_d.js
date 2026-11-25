@@ -31,6 +31,11 @@ async function device(browser, opts) {
   await require('./stub_third_party')(ctx);
   await ctx.route(/fonts\.(googleapis|gstatic)\.com/, (r) => r.abort());
   await ctx.route(/supabase\.co\//, (r) => r.abort());
+  // Các case L0x kiểm đường đọc bằng giọng trình duyệt: bỏ âm thanh thu sẵn (đường đó do tests/e2e_tts.js kiểm).
+  await ctx.route('**/data/exams/nghe-01.json', async (route) => {
+    const r = await route.fetch(); const j = await r.json(); delete j.audio;
+    route.fulfill({ response: r, body: JSON.stringify(j) });
+  });
   if (!opts.sw) {
     await ctx.route('**/assets/config.js', async (route) => {
       const r = await route.fetch();

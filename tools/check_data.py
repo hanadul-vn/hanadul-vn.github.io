@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Kiểm tra dữ liệu bài học: JSON hợp lệ, đủ trường, không trùng đáp án."""
+import hashlib
 import json
 import re
 import sys
@@ -212,6 +213,27 @@ if ex_dir.exists():
                     err(f"{eid} câu {q.get('n')}: thiếu giải thích")
                 if not q.get("q") and not st.get("passage") and not st.get("lines"):
                     err(f"{eid} câu {q.get('n')}: không có câu hỏi lẫn đoạn văn")
+        # Âm thanh thu sẵn (tools/tts/gen_audio.py): mỗi bộ câu 1 file, tên file chứa hash lời thoại hiện tại.
+        au = ex.get("audio")
+        if au is not None:
+            ad = ROOT / str(au.get("dir", ""))
+            if ex.get("part") != "nghe" or au.get("dir") != f"data/audio/{eid}":
+                err(f"{eid}: audio.dir phải là data/audio/{eid} và chỉ dùng cho đề Nghe")
+            fl = au.get("files") or []
+            if len(fl) != len(ex.get("sets", [])):
+                err(f"{eid}: audio có {len(fl)} file, đề có {len(ex.get('sets', []))} bộ câu")
+            for i, (st, name) in enumerate(zip(ex.get("sets", []), fl)):
+                h = hashlib.sha1(json.dumps(st.get("lines"), ensure_ascii=False).encode("utf-8")).hexdigest()[:8]
+                if name != f"{i + 1:02d}-{h}.mp3":
+                    err(f"{eid}: file âm thanh bộ {i + 1} ({name}) không khớp lời thoại hiện tại, chạy lại tools/tts/gen_audio.py")
+                elif not (ad / name).is_file():
+                    err(f"{eid}: thiếu file âm thanh {au.get('dir')}/{name}")
+            if not au.get("sample") or not (ad / str(au.get("sample"))).is_file():
+                err(f"{eid}: thiếu file Nghe thử {au.get('sample')!r}")
+            if ad.is_dir():
+                extra = sorted(p.name for p in ad.iterdir() if p.name not in set(fl) | {au.get("sample")})
+                if extra:
+                    err(f"{eid}: file thừa trong {au.get('dir')}: {', '.join(extra[:3])}")
         if ex.get("part") == "viet":
             tot = sum(q.get("points", 0) for q in qs)
             if tot != 100:
